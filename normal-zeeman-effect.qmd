@@ -1,0 +1,22 @@
+---
+title: "2.5 · The normal Zeeman effect"
+subtitle: "Lorentz model"
+---
+
+[⬆ Lorentz model](lorentz-model.qmd) · [⬅ Self-consistent Maxwell-equation solution](maxwell-equation-approach.qmd)
+
+## Learning objectives
+
+To be added.
+
+## Electron motion in a magnetic field
+
+Content to be added.
+
+## Spectral-line splitting
+
+Content to be added.
+
+## Check your understanding
+
+To be added.

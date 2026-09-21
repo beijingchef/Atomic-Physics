@@ -1,0 +1,17 @@
+:root { --course-accent: #176b78; }
+body { color: #263746; }
+h1, h2, h3 { color: #18354a; }
+a { color: var(--course-accent); text-underline-offset: 0.18em; }
+.quarto-title-banner { background: #f3f6f8; }
+main { padding-bottom: 3rem; }
+h2 { margin-top: 2rem; }
+.grid > div { border-top: 2px solid #c9dce1; padding-top: 0.5rem; }
+.navbar-brand { font-weight: 600; }
+table { font-size: 0.95rem; }
+figcaption,
+.figure-caption,
+.quarto-figure-caption,
+.subfigure-caption {
+  color: #000;
+  opacity: 1;
+}

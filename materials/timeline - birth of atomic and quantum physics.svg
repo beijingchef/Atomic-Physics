@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="4300" height="3220" viewBox="0 0 4300 3220">
+<defs>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-opacity="0.14"/></filter>
+<style>
+.title{font-family:Arial,Helvetica,sans-serif;font-size:74px;font-weight:700;fill:#111}
+.subtitle{font-family:Arial,Helvetica,sans-serif;font-size:38px;fill:#555}
+.axis{stroke:#242424;stroke-width:6}.tick{stroke:#555;stroke-width:2.5}
+.year{font-family:Arial,Helvetica,sans-serif;font-size:38px;fill:#333}
+.cardYear{font-family:Arial,Helvetica,sans-serif;font-size:39px;font-weight:700;fill:white}
+.person{font-family:Arial,Helvetica,sans-serif;font-size:43px;font-weight:700;fill:#171717}
+.milestone{font-family:Arial,Helvetica,sans-serif;font-size:40px;fill:#333}
+.legend{font-family:Arial,Helvetica,sans-serif;font-size:60px;font-weight:650;fill:#333}
+</style></defs>
+<rect width="100%" height="100%" fill="#FAFAF8"/>
+<text x="170" y="635" class="title">Birth of Atomic Physics and Quantum Mechanics</text>
+<text x="170" y="710" class="subtitle">Key theoretical and experimental milestones, 1885–1928</text>
+<line x1="170" y1="2150" x2="4130" y2="2150" class="axis"/>
+<line x1="256.1" y1="2124" x2="256.1" y2="2176" class="tick"/>
+<text x="256.1" y="2224" text-anchor="middle" class="year">1885</text>
+<line x1="342.2" y1="2138" x2="342.2" y2="2162" class="tick"/>
+<line x1="428.3" y1="2138" x2="428.3" y2="2162" class="tick"/>
+<line x1="514.3" y1="2138" x2="514.3" y2="2162" class="tick"/>
+<line x1="600.4" y1="2138" x2="600.4" y2="2162" class="tick"/>
+<line x1="686.5" y1="2124" x2="686.5" y2="2176" class="tick"/>
+<text x="686.5" y="2224" text-anchor="middle" class="year">1890</text>
+<line x1="772.6" y1="2138" x2="772.6" y2="2162" class="tick"/>
+<line x1="858.7" y1="2138" x2="858.7" y2="2162" class="tick"/>
+<line x1="944.8" y1="2138" x2="944.8" y2="2162" class="tick"/>
+<line x1="1030.9" y1="2138" x2="1030.9" y2="2162" class="tick"/>
+<line x1="1117.0" y1="2124" x2="1117.0" y2="2176" class="tick"/>
+<text x="1117.0" y="2224" text-anchor="middle" class="year">1895</text>
+<line x1="1203.0" y1="2138" x2="1203.0" y2="2162" class="tick"/>
+<line x1="1289.1" y1="2138" x2="1289.1" y2="2162" class="tick"/>
+<line x1="1375.2" y1="2138" x2="1375.2" y2="2162" class="tick"/>
+<line x1="1461.3" y1="2138" x2="1461.3" y2="2162" class="tick"/>
+<line x1="1547.4" y1="2124" x2="1547.4" y2="2176" class="tick"/>
+<text x="1547.4" y="2224" text-anchor="middle" class="year">1900</text>
+<line x1="1633.5" y1="2138" x2="1633.5" y2="2162" class="tick"/>
+<line x1="1719.6" y1="2138" x2="1719.6" y2="2162" class="tick"/>
+<line x1="1805.7" y1="2138" x2="1805.7" y2="2162" class="tick"/>
+<line x1="1891.7" y1="2138" x2="1891.7" y2="2162" class="tick"/>
+<line x1="1977.8" y1="2124" x2="1977.8" y2="2176" class="tick"/>
+<text x="1977.8" y="2224" text-anchor="middle" class="year">1905</text>
+<line x1="2063.9" y1="2138" x2="2063.9" y2="2162" class="tick"/>
+<line x1="2150.0" y1="2138" x2="2150.0" y2="2162" class="tick"/>
+<line x1="2236.1" y1="2138" x2="2236.1" y2="2162" class="tick"/>
+<line x1="2322.2" y1="2138" x2="2322.2" y2="2162" class="tick"/>
+<line x1="2408.3" y1="2124" x2="2408.3" y2="2176" class="tick"/>
+<text x="2408.3" y="2224" text-anchor="middle" class="year">1910</text>
+<line x1="2494.3" y1="2138" x2="2494.3" y2="2162" class="tick"/>
+<line x1="2580.4" y1="2138" x2="2580.4" y2="2162" class="tick"/>
+<line x1="2666.5" y1="2138" x2="2666.5" y2="2162" class="tick"/>
+<line x1="2752.6" y1="2138" x2="2752.6" y2="2162" class="tick"/>
+<line x1="2838.7" y1="2124" x2="2838.7" y2="2176" class="tick"/>
+<text x="2838.7" y="2224" text-anchor="middle" class="year">1915</text>
+<line x1="2924.8" y1="2138" x2="2924.8" y2="2162" class="tick"/>
+<line x1="3010.9" y1="2138" x2="3010.9" y2="2162" class="tick"/>
+<line x1="3097.0" y1="2138" x2="3097.0" y2="2162" class="tick"/>
+<line x1="3183.0" y1="2138" x2="3183.0" y2="2162" class="tick"/>
+<line x1="3269.1" y1="2124" x2="3269.1" y2="2176" class="tick"/>
+<text x="3269.1" y="2224" text-anchor="middle" class="year">1920</text>
+<line x1="3355.2" y1="2138" x2="3355.2" y2="2162" class="tick"/>
+<line x1="3441.3" y1="2138" x2="3441.3" y2="2162" class="tick"/>
+<line x1="3527.4" y1="2138" x2="3527.4" y2="2162" class="tick"/>
+<line x1="3613.5" y1="2138" x2="3613.5" y2="2162" class="tick"/>
+<line x1="3699.6" y1="2124" x2="3699.6" y2="2176" class="tick"/>
+<text x="3699.6" y="2224" text-anchor="middle" class="year">1925</text>
+<line x1="3785.7" y1="2138" x2="3785.7" y2="2162" class="tick"/>
+<line x1="3871.7" y1="2138" x2="3871.7" y2="2162" class="tick"/>
+<line x1="3957.8" y1="2138" x2="3957.8" y2="2162" class="tick"/>
+<line x1="4043.9" y1="2138" x2="4043.9" y2="2162" class="tick"/>
+<line x1="4130.0" y1="2124" x2="4130.0" y2="2176" class="tick"/>
+<text x="4130.0" y="2224" text-anchor="middle" class="year">1930</text>
+<line x1="256.1" y1="2150" x2="256.1" y2="2035.0" stroke="#B04A5A" stroke-width="3.5" opacity="0.78"/>
+<circle cx="256.1" cy="2150" r="10" fill="#B04A5A" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="1117.0" y1="2150" x2="1117.0" y2="2265.0" stroke="#C47A2C" stroke-width="3.5" opacity="0.78"/>
+<circle cx="1117.0" cy="2150" r="10" fill="#C47A2C" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="1203.0" y1="2150" x2="1203.0" y2="2475.0" stroke="#B04A5A" stroke-width="3.5" opacity="0.78"/>
+<circle cx="1203.0" cy="2150" r="10" fill="#B04A5A" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="1289.1" y1="2150" x2="1289.1" y2="2685.0" stroke="#2E7D6E" stroke-width="3.5" opacity="0.78"/>
+<circle cx="1289.1" cy="2150" r="10" fill="#2E7D6E" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="1289.1" y1="2150" x2="1289.1" y2="2035.0" stroke="#B04A5A" stroke-width="3.5" opacity="0.78"/>
+<circle cx="1289.1" cy="2150" r="10" fill="#B04A5A" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="1547.4" y1="2150" x2="1547.4" y2="1825.0" stroke="#6B5FB5" stroke-width="3.5" opacity="0.78"/>
+<circle cx="1547.4" cy="2150" r="10" fill="#6B5FB5" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="1977.8" y1="2150" x2="1977.8" y2="2035.0" stroke="#C47A2C" stroke-width="3.5" opacity="0.78"/>
+<circle cx="1977.8" cy="2150" r="10" fill="#C47A2C" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="1977.8" y1="2150" x2="1977.8" y2="1615.0" stroke="#4B6F9C" stroke-width="3.5" opacity="0.78"/>
+<circle cx="1977.8" cy="2150" r="10" fill="#4B6F9C" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="2150.0" y1="2150" x2="2150.0" y2="1825.0" stroke="#6B5FB5" stroke-width="3.5" opacity="0.78"/>
+<circle cx="2150.0" cy="2150" r="10" fill="#6B5FB5" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="2322.2" y1="2150" x2="2322.2" y2="2265.0" stroke="#2E7D6E" stroke-width="3.5" opacity="0.78"/>
+<circle cx="2322.2" cy="2150" r="10" fill="#2E7D6E" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="2494.3" y1="2150" x2="2494.3" y2="2475.0" stroke="#2E7D6E" stroke-width="3.5" opacity="0.78"/>
+<circle cx="2494.3" cy="2150" r="10" fill="#2E7D6E" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="2666.5" y1="2150" x2="2666.5" y2="2035.0" stroke="#2E7D6E" stroke-width="3.5" opacity="0.78"/>
+<circle cx="2666.5" cy="2150" r="10" fill="#2E7D6E" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="2752.6" y1="2150" x2="2752.6" y2="2685.0" stroke="#2E7D6E" stroke-width="3.5" opacity="0.78"/>
+<circle cx="2752.6" cy="2150" r="10" fill="#2E7D6E" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="2838.7" y1="2150" x2="2838.7" y2="2265.0" stroke="#C47A2C" stroke-width="3.5" opacity="0.78"/>
+<circle cx="2838.7" cy="2150" r="10" fill="#C47A2C" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="3010.9" y1="2150" x2="3010.9" y2="1825.0" stroke="#B04A5A" stroke-width="3.5" opacity="0.78"/>
+<circle cx="3010.9" cy="2150" r="10" fill="#B04A5A" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="3441.3" y1="2150" x2="3441.3" y2="2265.0" stroke="#C47A2C" stroke-width="3.5" opacity="0.78"/>
+<circle cx="3441.3" cy="2150" r="10" fill="#C47A2C" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="3441.3" y1="2150" x2="3441.3" y2="2475.0" stroke="#6B5FB5" stroke-width="3.5" opacity="0.78"/>
+<circle cx="3441.3" cy="2150" r="10" fill="#6B5FB5" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="3527.4" y1="2150" x2="3527.4" y2="2035.0" stroke="#6B5FB5" stroke-width="3.5" opacity="0.78"/>
+<circle cx="3527.4" cy="2150" r="10" fill="#6B5FB5" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="3613.5" y1="2150" x2="3613.5" y2="1825.0" stroke="#6B5FB5" stroke-width="3.5" opacity="0.78"/>
+<circle cx="3613.5" cy="2150" r="10" fill="#6B5FB5" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="3699.6" y1="2150" x2="3699.6" y2="1615.0" stroke="#6B5FB5" stroke-width="3.5" opacity="0.78"/>
+<circle cx="3699.6" cy="2150" r="10" fill="#6B5FB5" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="3699.6" y1="2150" x2="3699.6" y2="1405.0" stroke="#2E7D6E" stroke-width="3.5" opacity="0.78"/>
+<circle cx="3699.6" cy="2150" r="10" fill="#2E7D6E" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="3785.7" y1="2150" x2="3785.7" y2="1195.0" stroke="#6B5FB5" stroke-width="3.5" opacity="0.78"/>
+<circle cx="3785.7" cy="2150" r="10" fill="#6B5FB5" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="3871.7" y1="2150" x2="3871.7" y2="2685.0" stroke="#2E7D6E" stroke-width="3.5" opacity="0.78"/>
+<circle cx="3871.7" cy="2150" r="10" fill="#2E7D6E" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="3871.7" y1="2150" x2="3871.7" y2="985.0" stroke="#6B5FB5" stroke-width="3.5" opacity="0.78"/>
+<circle cx="3871.7" cy="2150" r="10" fill="#6B5FB5" stroke="#FAFAF8" stroke-width="3"/>
+<line x1="3957.8" y1="2150" x2="3957.8" y2="775.0" stroke="#6B5FB5" stroke-width="3.5" opacity="0.78"/>
+<circle cx="3957.8" cy="2150" r="10" fill="#6B5FB5" stroke="#FAFAF8" stroke-width="3"/>
+<g filter="url(#shadow)"><rect x="28.6" y="1850.0" width="455" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="28.6" y="1850.0" width="118" height="56" rx="16" fill="#B04A5A"/>
+<rect x="28.6" y="1918.0" width="8" height="117" fill="#B04A5A" opacity="0.9"/>
+<text x="87.6" y="1891.0" text-anchor="middle" class="cardYear">1885</text>
+<text x="165.6" y="1893.0" class="person" style="font-size:43px">Balmer</text>
+<text x="54.6" y="1970.0" class="milestone">Hydrogen spectrum</text>
+<text x="54.6" y="2010.0" class="milestone">formula</text>
+<g filter="url(#shadow)"><rect x="889.5" y="2265.0" width="455" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="889.5" y="2265.0" width="118" height="56" rx="16" fill="#C47A2C"/>
+<rect x="889.5" y="2333.0" width="8" height="117" fill="#C47A2C" opacity="0.9"/>
+<text x="948.5" y="2306.0" text-anchor="middle" class="cardYear">1895</text>
+<text x="1026.5" y="2308.0" class="person" style="font-size:43px">Röntgen</text>
+<text x="915.5" y="2385.0" class="milestone">Discovery of X-rays</text>
+<g filter="url(#shadow)"><rect x="975.5" y="2475.0" width="455" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="975.5" y="2475.0" width="118" height="56" rx="16" fill="#B04A5A"/>
+<rect x="975.5" y="2543.0" width="8" height="117" fill="#B04A5A" opacity="0.9"/>
+<text x="1034.5" y="2516.0" text-anchor="middle" class="cardYear">1896</text>
+<text x="1112.5" y="2518.0" class="person" style="font-size:43px">Zeeman</text>
+<text x="1001.5" y="2595.0" class="milestone">Zeeman effect</text>
+<g filter="url(#shadow)"><rect x="1061.6" y="2685.0" width="455" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="1061.6" y="2685.0" width="118" height="56" rx="16" fill="#2E7D6E"/>
+<rect x="1061.6" y="2753.0" width="8" height="117" fill="#2E7D6E" opacity="0.9"/>
+<text x="1120.6" y="2726.0" text-anchor="middle" class="cardYear">1897</text>
+<text x="1198.6" y="2728.0" class="person" style="font-size:43px">Thomson</text>
+<text x="1087.6" y="2805.0" class="milestone">Electron discovered</text>
+<g filter="url(#shadow)"><rect x="1061.6" y="1850.0" width="455" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="1061.6" y="1850.0" width="118" height="56" rx="16" fill="#B04A5A"/>
+<rect x="1061.6" y="1918.0" width="8" height="117" fill="#B04A5A" opacity="0.9"/>
+<text x="1120.6" y="1891.0" text-anchor="middle" class="cardYear">1897</text>
+<text x="1198.6" y="1893.0" class="person" style="font-size:43px">Lorentz</text>
+<text x="1087.6" y="1970.0" class="milestone">Zeeman theory; electron</text>
+<text x="1087.6" y="2010.0" class="milestone">oscillator</text>
+<g filter="url(#shadow)"><rect x="1319.9" y="1640.0" width="455" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="1319.9" y="1640.0" width="118" height="56" rx="16" fill="#6B5FB5"/>
+<rect x="1319.9" y="1708.0" width="8" height="117" fill="#6B5FB5" opacity="0.9"/>
+<text x="1378.9" y="1681.0" text-anchor="middle" class="cardYear">1900</text>
+<text x="1456.9" y="1683.0" class="person" style="font-size:43px">Planck</text>
+<text x="1345.9" y="1760.0" class="milestone">Energy quanta; Planck</text>
+<text x="1345.9" y="1800.0" class="milestone">constant</text>
+<g filter="url(#shadow)"><rect x="1750.3" y="1850.0" width="455" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="1750.3" y="1850.0" width="118" height="56" rx="16" fill="#C47A2C"/>
+<rect x="1750.3" y="1918.0" width="8" height="117" fill="#C47A2C" opacity="0.9"/>
+<text x="1809.3" y="1891.0" text-anchor="middle" class="cardYear">1905</text>
+<text x="1887.3" y="1893.0" class="person" style="font-size:43px">Einstein</text>
+<text x="1776.3" y="1970.0" class="milestone">Light quanta;</text>
+<text x="1776.3" y="2010.0" class="milestone">photoelectric effect</text>
+<g filter="url(#shadow)"><rect x="1750.3" y="1430.0" width="455" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="1750.3" y="1430.0" width="118" height="56" rx="16" fill="#4B6F9C"/>
+<rect x="1750.3" y="1498.0" width="8" height="117" fill="#4B6F9C" opacity="0.9"/>
+<text x="1809.3" y="1471.0" text-anchor="middle" class="cardYear">1905</text>
+<text x="1887.3" y="1473.0" class="person" style="font-size:43px">Einstein</text>
+<text x="1776.3" y="1550.0" class="milestone">Special relativity</text>
+<g filter="url(#shadow)"><rect x="1922.5" y="1640.0" width="455" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="1922.5" y="1640.0" width="118" height="56" rx="16" fill="#6B5FB5"/>
+<rect x="1922.5" y="1708.0" width="8" height="117" fill="#6B5FB5" opacity="0.9"/>
+<text x="1981.5" y="1681.0" text-anchor="middle" class="cardYear">1907</text>
+<text x="2059.5" y="1683.0" class="person" style="font-size:43px">Einstein</text>
+<text x="1948.5" y="1760.0" class="milestone">Quantum specific heat</text>
+<g filter="url(#shadow)"><rect x="2094.7" y="2265.0" width="540" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="2094.7" y="2265.0" width="118" height="56" rx="16" fill="#2E7D6E"/>
+<rect x="2094.7" y="2333.0" width="8" height="117" fill="#2E7D6E" opacity="0.9"/>
+<text x="2153.7" y="2306.0" text-anchor="middle" class="cardYear">1909</text>
+<text x="2231.7" y="2308.0" class="person" style="font-size:43px">Geiger &amp; Marsden</text>
+<text x="2120.7" y="2385.0" class="milestone">Alpha-particle</text>
+<text x="2120.7" y="2425.0" class="milestone">scattering</text>
+<g filter="url(#shadow)"><rect x="2266.8" y="2475.0" width="455" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="2266.8" y="2475.0" width="118" height="56" rx="16" fill="#2E7D6E"/>
+<rect x="2266.8" y="2543.0" width="8" height="117" fill="#2E7D6E" opacity="0.9"/>
+<text x="2325.8" y="2516.0" text-anchor="middle" class="cardYear">1911</text>
+<text x="2403.8" y="2518.0" class="person" style="font-size:43px">Rutherford</text>
+<text x="2292.8" y="2595.0" class="milestone">Atomic nucleus</text>
+<g filter="url(#shadow)"><rect x="2439.0" y="1850.0" width="455" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="2439.0" y="1850.0" width="118" height="56" rx="16" fill="#2E7D6E"/>
+<rect x="2439.0" y="1918.0" width="8" height="117" fill="#2E7D6E" opacity="0.9"/>
+<text x="2498.0" y="1891.0" text-anchor="middle" class="cardYear">1913</text>
+<text x="2576.0" y="1893.0" class="person" style="font-size:43px">Bohr</text>
+<text x="2465.0" y="1970.0" class="milestone">Bohr atom; hydrogen</text>
+<text x="2465.0" y="2010.0" class="milestone">spectrum</text>
+<g filter="url(#shadow)"><rect x="2525.1" y="2685.0" width="475" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="2525.1" y="2685.0" width="118" height="56" rx="16" fill="#2E7D6E"/>
+<rect x="2525.1" y="2753.0" width="8" height="117" fill="#2E7D6E" opacity="0.9"/>
+<text x="2584.1" y="2726.0" text-anchor="middle" class="cardYear">1914</text>
+<text x="2662.1" y="2728.0" class="person" style="font-size:43px">Franck &amp; Hertz</text>
+<text x="2551.1" y="2805.0" class="milestone">Atomic energy levels</text>
+<g filter="url(#shadow)"><rect x="2646.2" y="2265.0" width="455" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="2646.2" y="2265.0" width="118" height="56" rx="16" fill="#C47A2C"/>
+<rect x="2646.2" y="2333.0" width="8" height="117" fill="#C47A2C" opacity="0.9"/>
+<text x="2705.2" y="2306.0" text-anchor="middle" class="cardYear">1915</text>
+<text x="2783.2" y="2308.0" class="person" style="font-size:43px">Millikan</text>
+<text x="2672.2" y="2385.0" class="milestone">Photoelectric law</text>
+<text x="2672.2" y="2425.0" class="milestone">verified</text>
+<g filter="url(#shadow)"><rect x="2783.4" y="1640.0" width="455" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="2783.4" y="1640.0" width="118" height="56" rx="16" fill="#B04A5A"/>
+<rect x="2783.4" y="1708.0" width="8" height="117" fill="#B04A5A" opacity="0.9"/>
+<text x="2842.4" y="1681.0" text-anchor="middle" class="cardYear">1917</text>
+<text x="2920.4" y="1683.0" class="person" style="font-size:43px">Einstein</text>
+<text x="2809.4" y="1760.0" class="milestone">Spontaneous &amp;</text>
+<text x="2809.4" y="1800.0" class="milestone">stimulated emission</text>
+<g filter="url(#shadow)"><rect x="3213.8" y="2265.0" width="455" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="3213.8" y="2265.0" width="118" height="56" rx="16" fill="#C47A2C"/>
+<rect x="3213.8" y="2333.0" width="8" height="117" fill="#C47A2C" opacity="0.9"/>
+<text x="3272.8" y="2306.0" text-anchor="middle" class="cardYear">1922</text>
+<text x="3350.8" y="2308.0" class="person" style="font-size:43px">Compton</text>
+<text x="3239.8" y="2385.0" class="milestone">Compton scattering</text>
+<g filter="url(#shadow)"><rect x="3213.8" y="2475.0" width="495" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="3213.8" y="2475.0" width="118" height="56" rx="16" fill="#6B5FB5"/>
+<rect x="3213.8" y="2543.0" width="8" height="117" fill="#6B5FB5" opacity="0.9"/>
+<text x="3272.8" y="2516.0" text-anchor="middle" class="cardYear">1922</text>
+<text x="3350.8" y="2518.0" class="person" style="font-size:43px">Stern &amp; Gerlach</text>
+<text x="3239.8" y="2595.0" class="milestone">Space quantization</text>
+<g filter="url(#shadow)"><rect x="3299.9" y="1850.0" width="455" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="3299.9" y="1850.0" width="118" height="56" rx="16" fill="#6B5FB5"/>
+<rect x="3299.9" y="1918.0" width="8" height="117" fill="#6B5FB5" opacity="0.9"/>
+<text x="3358.9" y="1891.0" text-anchor="middle" class="cardYear">1923</text>
+<text x="3436.9" y="1893.0" class="person" style="font-size:43px">de Broglie</text>
+<text x="3325.9" y="1970.0" class="milestone">Matter waves</text>
+<g filter="url(#shadow)"><rect x="3386.0" y="1640.0" width="455" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="3386.0" y="1640.0" width="118" height="56" rx="16" fill="#6B5FB5"/>
+<rect x="3386.0" y="1708.0" width="8" height="117" fill="#6B5FB5" opacity="0.9"/>
+<text x="3445.0" y="1681.0" text-anchor="middle" class="cardYear">1924</text>
+<text x="3523.0" y="1683.0" class="person" style="font-size:43px">Pauli</text>
+<text x="3412.0" y="1760.0" class="milestone">Exclusion principle</text>
+<g filter="url(#shadow)"><rect x="3472.1" y="1430.0" width="650" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="3472.1" y="1430.0" width="118" height="56" rx="16" fill="#6B5FB5"/>
+<rect x="3472.1" y="1498.0" width="8" height="117" fill="#6B5FB5" opacity="0.9"/>
+<text x="3531.1" y="1471.0" text-anchor="middle" class="cardYear">1925</text>
+<text x="3609.1" y="1473.0" class="person" style="font-size:37px">Heisenberg, Born &amp; Jordan</text>
+<text x="3498.1" y="1550.0" class="milestone">Matrix mechanics</text>
+<g filter="url(#shadow)"><rect x="3472.1" y="1220.0" width="580" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="3472.1" y="1220.0" width="118" height="56" rx="16" fill="#2E7D6E"/>
+<rect x="3472.1" y="1288.0" width="8" height="117" fill="#2E7D6E" opacity="0.9"/>
+<text x="3531.1" y="1261.0" text-anchor="middle" class="cardYear">1925</text>
+<text x="3609.1" y="1263.0" class="person" style="font-size:37px">Uhlenbeck &amp; Goudsmit</text>
+<text x="3498.1" y="1340.0" class="milestone">Electron spin</text>
+<g filter="url(#shadow)"><rect x="3558.2" y="1010.0" width="455" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="3558.2" y="1010.0" width="118" height="56" rx="16" fill="#6B5FB5"/>
+<rect x="3558.2" y="1078.0" width="8" height="117" fill="#6B5FB5" opacity="0.9"/>
+<text x="3617.2" y="1051.0" text-anchor="middle" class="cardYear">1926</text>
+<text x="3695.2" y="1053.0" class="person" style="font-size:43px">Schrödinger</text>
+<text x="3584.2" y="1130.0" class="milestone">Wave mechanics</text>
+<g filter="url(#shadow)"><rect x="3644.2" y="2685.0" width="570" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="3644.2" y="2685.0" width="118" height="56" rx="16" fill="#2E7D6E"/>
+<rect x="3644.2" y="2753.0" width="8" height="117" fill="#2E7D6E" opacity="0.9"/>
+<text x="3703.2" y="2726.0" text-anchor="middle" class="cardYear">1927</text>
+<text x="3781.2" y="2728.0" class="person" style="font-size:43px">Davisson &amp; Germer</text>
+<text x="3670.2" y="2805.0" class="milestone">Electron diffraction</text>
+<g filter="url(#shadow)"><rect x="3644.2" y="800.0" width="455" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="3644.2" y="800.0" width="118" height="56" rx="16" fill="#6B5FB5"/>
+<rect x="3644.2" y="868.0" width="8" height="117" fill="#6B5FB5" opacity="0.9"/>
+<text x="3703.2" y="841.0" text-anchor="middle" class="cardYear">1927</text>
+<text x="3781.2" y="843.0" class="person" style="font-size:43px">Heisenberg</text>
+<text x="3670.2" y="920.0" class="milestone">Uncertainty principle</text>
+<g filter="url(#shadow)"><rect x="3730.3" y="590.0" width="455" height="185" rx="18" fill="white" stroke="#D8D8D2" stroke-width="1.7" fill-opacity="0.90"/></g>
+<rect x="3730.3" y="590.0" width="118" height="56" rx="16" fill="#6B5FB5"/>
+<rect x="3730.3" y="658.0" width="8" height="117" fill="#6B5FB5" opacity="0.9"/>
+<text x="3789.3" y="631.0" text-anchor="middle" class="cardYear">1928</text>
+<text x="3867.3" y="633.0" class="person" style="font-size:43px">Dirac</text>
+<text x="3756.3" y="710.0" class="milestone">Dirac equation</text>
+<circle cx="190" cy="835" r="18" fill="#2E7D6E"/><text x="220" y="853" class="legend">Atomic structure</text>
+<circle cx="900" cy="835" r="18" fill="#B04A5A"/><text x="930" y="853" class="legend">Atom–light</text>
+<circle cx="1450" cy="835" r="18" fill="#C47A2C"/><text x="1480" y="853" class="legend">Light</text>
+<circle cx="1815" cy="835" r="18" fill="#6B5FB5"/><text x="1845" y="853" class="legend">Quantum theory</text>
+</svg>

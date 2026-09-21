@@ -1,0 +1,72 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+    - schedule.qmd
+    - topics.qmd
+    - assignments.qmd
+    - resources.qmd
+    - part-1.qmd
+    - discovery-electron.qmd
+    - lorentz-model.qmd
+    - dipole-radiation.qmd
+    - lorentz-oscillator.qmd
+    - optical-dispersion.qmd
+    - maxwell-equation-approach.qmd
+    - normal-zeeman-effect.qmd
+    - part-2.qmd
+    - part-3.qmd
+
+website:
+  title: "Atomic Physics · 2026"
+  description: "An undergraduate atomic physics course."
+  search: true
+  page-navigation: true
+  page-footer: "Atomic Physics · 2026"
+  sidebar:
+    style: floating
+    collapse-level: 3
+    contents:
+      - text: "Course information"
+        href: index.qmd
+      - text: "Schedule"
+        href: schedule.qmd
+      - text: "Topics"
+        href: topics.qmd
+      - text: "Assignments"
+        href: assignments.qmd
+      - text: "Resources"
+        href: resources.qmd
+      - section: "Part 1 · Historical development"
+        href: part-1.qmd
+        contents:
+          - text: "1 · Discovery of the electron"
+            href: discovery-electron.qmd
+          - section: "2 · Lorentz model"
+            href: lorentz-model.qmd
+            contents:
+              - text: "2.1 · Electric dipole radiation"
+                href: dipole-radiation.qmd
+              - text: "2.2 · The Lorentz oscillator"
+                href: lorentz-oscillator.qmd
+              - text: "2.3 · Optical effects - thin sheets solution"
+                href: optical-dispersion.qmd
+              - text: "2.4 · Self-consistent Maxwell-equation solution"
+                href: maxwell-equation-approach.qmd
+              - text: "2.5 · The normal Zeeman effect"
+                href: normal-zeeman-effect.qmd
+      - section: "Part 2 · Elements of quantum mechanics"
+        href: part-2.qmd
+      - section: "Part 3 · Atomic structure and external fields"
+        href: part-3.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    include-after-body: equation-references.html
+    toc: true
+    link-external-newwindow: true
+
+lang: en

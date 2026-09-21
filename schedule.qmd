@@ -1,0 +1,11 @@
+# Schedule {.unnumbered}
+
+Two meetings per week; each meeting consists of two 45-minute periods.
+
+## Topic schedule
+
+| Topic | Allocation | Dates | Preparation |
+|:--|:--|:--|:--|
+| [Lorentz model](lorentz-model.qmd) | Four periods over two meetings | To be announced | To be added |
+
+<!-- Add subsequent topics and confirmed dates here. -->

@@ -1,0 +1,16 @@
+---
+title: "Part 1 · Historical development"
+---
+
+Follow the experiments and ideas that transformed the atom from a useful hypothesis into a physical system with an internal structure.
+
+## Learning objectives
+
+To be added.
+
+## Topics
+
+- [Chapter 1 · Discovery of the electron](discovery-electron.qmd)
+- [Chapter 2 · Lorentz model](lorentz-model.qmd)
+
+<!-- Add further topic links here. -->

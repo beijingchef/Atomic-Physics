@@ -1,0 +1,40 @@
+---
+title: "2 · Lorentz model"
+subtitle: "Part 1 · Historical development"
+---
+
+This chapter develops the Lorentz model step by step: first the radiation from an oscillating dipole, then the driven electron oscillator, and finally the way many such oscillators scatter, absorb, and slow light.
+
+## Learning objectives
+
+To be added.
+
+## Topics
+
+### 2.1 Electric dipole radiation
+
+[Electric dipole radiation](dipole-radiation.qmd) to study the spherical-coordinate geometry, retarded fields, far-field Poynting vector, and radiated power.
+
+### 2.2 The Lorentz oscillator
+
+[The Lorentz oscillator](lorentz-oscillator.qmd) to study driven motion, resonance, phase, and radiation damping.
+
+### 2.3 Optical effects - thin sheets solution
+
+[Optical effects - thin sheets solution](optical-dispersion.qmd) to see how driven electrons scatter light and change its speed and attenuation in matter.
+
+### 2.4 Self-consistent Maxwell-equation solution
+
+[Self-consistent Maxwell-equation solution](maxwell-equation-approach.qmd) for the self-consistent Maxwell-equation treatment.
+
+### 2.5 The normal Zeeman effect
+
+[The normal Zeeman effect](normal-zeeman-effect.qmd) connects the classical electron model to the splitting of spectral lines in a magnetic field.
+
+## References
+
+To be added.
+
+## After-class homework
+
+To be added. See [Assignments](assignments.qmd) for deadlines and submission instructions.

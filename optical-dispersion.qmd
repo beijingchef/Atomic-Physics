@@ -1,0 +1,252 @@
+---
+title: "2.3 · Optical effects - thin sheets solution"
+subtitle: "Lorentz model · How bound electrons reshape light"
+---
+## Physical starting point
+Here is the key picture: light shakes the bound electrons, and those electrons radiate their own waves. The transmitted wave is the coherent sum of the original wave and all those small reradiated waves. Their phase changes the refractive index; their energy loss produces attenuation. Because an electron's amplitude and phase depend on the driving frequency, the refractive index also depends on frequency. This frequency dependence of the real part of the refractive index, $n'=n'(\omega)$, is called **optical dispersion**. It is why different colors can travel with different phase velocities and separate in a prism. This follows the physical route of [Feynman Volume I, Chapter 31](https://www.feynmanlectures.caltech.edu/I_31.html), using the convention $e^{-i\omega t}$.
+
+Consider a dilute, isotropic, nonmagnetic medium containing $N$ identical oscillators per unit volume. Neglect local-field corrections, so each oscillator is driven approximately by the macroscopic field. The incident wave propagates along $+x$ and is polarized along $z$:
+$$
+\mathbf E_{\mathrm{inc}}(x,t)=\operatorname{Re}\left[E_0e^{i (k_0x-\omega t)}\right]\hat{\mathbf z},\qquad k_0=\frac{\omega}{c},
+$$ {#eq-incident-wave}
+where $k_0$ is the vacuum wave number; it is the quantity denoted $k$ on the [dipole-radiation](dipole-radiation.qmd). Watch a point of constant phase: as time increases, it moves toward larger $x$, so the wave travels in the $+x$ direction.
+
+For compact notation, define the time-independent complex spatial amplitude, or **phasor**, by
+$$
+\widetilde E(x)=E_0e^{ik_0x}
+$$ {#eq-electric-field-phasor}
+The physical electric field is recovered by attaching the time factor $e^{-i\omega t}$ and taking the real part:
+$$
+E(x,t)=\operatorname{Re}\!\left[\widetilde E(x)e^{-i\omega t}\right].
+$$ {#eq-physical-field-from-complex}
+
+Thus, later in this page, $\widetilde E$ denotes the scalar $z$-component of the complex electric-field amplitude. The corresponding vector is $\widetilde{\mathbf E}=\widetilde E\hat{\mathbf z}$.
+
+The **polarization** $P(t)$ is the electric dipole moment per unit volume along $z$. For $N$ identical dipoles per unit volume, $P(t)=Np(t)$, where $p(t)$ is the dipole moment of one oscillator. Here the position is held fixed; when needed, we write $P(x,t)$ explicitly. 
+
+We use the same complex-amplitude convention for the electron displacement, dipole moment, and polarization:
+$$
+z(t)=\operatorname{Re}[\widetilde z e^{-i\omega t}],\qquad
+p(t)=\operatorname{Re}[\widetilde p e^{-i\omega t}],\qquad
+P(t)=\operatorname{Re}[\widetilde P e^{-i\omega t}].
+$$ {#eq-optical-complex-amplitudes}
+Here $\widetilde p=-e\widetilde z$, $\widetilde{\mathbf p}=\widetilde p\hat{\mathbf z}$, and $\widetilde{\mathbf P}=\widetilde P\hat{\mathbf z}$. In other words, a tilde always marks a time-independent complex amplitude, while boldface distinguishes a vector from its scalar $z$-component.
+
+<!--
+Throughout this page, $\gamma$ is the amplitude damping rate: the oscillator equation contains $2\gamma\dot z$, and the free-oscillation amplitude decays as $e^{-\gamma t}$. In the weak-damping, near-resonance limit, $\gamma$ is the power resonance HWHM and $2\gamma$ is its FWHM. The same convention applies to $\gamma_j$, $\gamma_{\mathrm{nr}}$, and $\gamma_{\mathrm{rad}}$.
+-->
+
+For one bound electron, define the **single-dipole polarizability** $\alpha(\omega)$ by
+$$
+\widetilde p=\alpha(\omega)\widetilde E.
+$$ {#eq-single-dipole-polarizability-definition}
+where
+$$
+\begin{aligned}
+\alpha(\omega)&=\frac{e^2}{m(\omega_0^2-\omega^2-2i\gamma\omega)}\\
+&\simeq-\frac{e^2}{2m\omega_0(\Delta+i\gamma)}
+\end{aligned}
+$$ {#eq-polarizability}
+
+For a medium containing $N$ identical dipoles per unit volume, the scalar $z$-component of the polarization amplitude is
+$$
+\widetilde P=N\widetilde p=N\alpha\widetilde E.
+$$ {#eq-polarization-from-alpha}
+Define the dimensionless electric susceptibility $\chi$ by
+$$
+\widetilde P=\epsilon_0\chi\widetilde E.
+$$ {#eq-susceptibility-definition}
+
+Comparing @eq-polarization-from-alpha and @eq-susceptibility-definition gives
+$$
+\boxed{\chi(\omega)=\frac{N\alpha(\omega)}{\epsilon_0}}.
+$$ {#eq-chi-alpha-relation}
+Using  @eq-polarizability, we have
+$$
+\begin{aligned}
+\chi(\omega)
+=&\frac{Ne^2}{\epsilon_0 m}\frac{1}{\omega_0^2-\omega^2-2i\gamma\omega}\\
+\simeq&-\frac{Ne^2}{2\epsilon_0m\omega_0}\frac{1}{\Delta+i\gamma}.
+\end{aligned}
+$$ {#eq-susceptibility-lorentz}
+
+
+
+Notice $\alpha$ is the response of one dipole, while $\chi$ is the macroscopic electric susceptibility of the medium.
+
+
+
+## Low-density media: light scattered by fluctuations
+Shine a narrow beam through clean air and look from the side. Most of the light continues forward, yet a faint glow reaches your eye. Where did that sideways light come from?
+
+Air looks uniform on everyday scales, but it is made of moving molecules. In one tiny region there may momentarily be a few more molecules than average; in a neighboring region, a few fewer. These random microscopic density fluctuations prevent the molecular radiation from cancelling perfectly in every direction. The remaining radiation is the light scattered by air.
+
+In end of last section we have found out  how strongly **one** molecule scatters the incident radiation. We already know from dipole radiation that the molecule does not radiate equally in all directions. To describe both the strength and the angular pattern, we introduce the **differential scattering cross section** by
+$$
+\frac{dP_{\mathrm{sca}}}{d\Omega}
+=I_{\mathrm{inc}}\frac{d\sigma_{\mathrm{sca}}}{d\Omega}.
+$$ {#eq-differential-cross-section-definition}
+On the left, $dP_{\mathrm{sca}}/d\Omega$ is the power radiated into one unit of solid angle. On the right, $I_{\mathrm{inc}}$ is the incident power per unit area. Their ratio, $d\sigma_{\mathrm{sca}}/d\Omega$, therefore has units of area per steradian. It answers a practical question: **how much incident light does one molecule redirect toward a chosen direction?**
+
+Let $\vartheta$ be the angle measured from the induced dipole axis. Using the [dipole-radiation angular pattern](#eq-angular-power) and $k_0=\omega/c$ gives
+$$
+\frac{d\sigma_{\mathrm{sca}}}{d\Omega}
+=\frac{k_0^4|\alpha|^2}{16\pi^2\epsilon_0^2}\sin^2\vartheta.
+$$ {#eq-differential-dipole-scattering}
+The factor $\sin^2\vartheta$ draws the familiar dipole pattern: there is no radiation along the dipole axis and the radiation is strongest perpendicular to it. Integrating over the full solid angle give us back the scattering cross section:
+$$
+\sigma_{\mathrm{sca}}
+=\int\frac{d\sigma_{\mathrm{sca}}}{d\Omega}\,d\Omega
+=\frac{k_0^4|\alpha|^2}{6\pi\epsilon_0^2}.
+$$ {#eq-single-dipole-scattering}
+The total scattered power is consequently
+$$
+P_{\mathrm{sca}}=I_{\mathrm{inc}}\sigma_{\mathrm{sca}}.
+$$ {#eq-total-scattered-power}
+
+Although $\sigma_{\mathrm{sca}}$ has units of area, it is not generally the molecule's geometrical area. Think of it as an **effective target area for scattering**. A larger value means that the molecule intercepts and redirects a larger share of the beam. Because this area measures an optical response, it depends on frequency and can become much larger near resonance.
+
+This interpretation becomes concrete for a beam of cross-sectional area $A$ passing through a thin gas layer of thickness $\Delta x$. The layer contains $NA\Delta x$ molecules. For very small $\Delta x$, we can assume they don't overlap and thus they scatter independently. The fraction of incident power scattered by the layer is
+$$
+\frac{\Delta P_{\mathrm{sca}}}{P_{\mathrm{inc}}}
+=N\sigma_{\mathrm{sca}}\Delta x.
+$$ {#eq-thin-gas-scattering-fraction}
+Notice that the beam area $A$ cancels. The combination $N\sigma_{\mathrm{sca}}$ has units of inverse length and tells us how rapidly scattering removes light from the incident beam. Its inverse, $1/(N\sigma_{\mathrm{sca}})$, is the average distance light travels before a scattering event in this independent-scatterer picture.
+
+For visible light in air, the molecular polarizability changes only slowly with frequency. Equation @eq-single-dipole-scattering then gives $\sigma_{\mathrm{sca}}\propto k_0^4\propto\omega^4$. Blue light has a higher frequency than red light, so air scatters it much more strongly. This is Rayleigh scattering, the reason a clear daytime sky looks blue.
+
+Away from the forward direction, randomly placed molecules contribute different phases, so their fields do not build a single strong wave. The exact forward direction is special. Put a molecule at position $x$ and an observer farther ahead at $x_{\mathrm{obs}}$. The incident wave reaches the molecule with phase $k_0x$, and the scattered wave accumulates an additional propagation phase $k_0(x_{\mathrm{obs}}-x)$ on its way to the observer. The induced dipole also has the response phase $\phi_\alpha$, the phase of the complex polarizability $\alpha$. The scattered wave therefore arrives with total phase
+$$
+k_0x+k_0(x_{\mathrm{obs}}-x)+\phi_\alpha
+=k_0x_{\mathrm{obs}}+\phi_\alpha,
+$$ {#eq-forward-phase-cancellation}
+which is independent of the molecule's position $x$. A molecule farther along the beam is driven at a later phase, but its radiation travels a correspondingly shorter distance. These two changes cancel, so the forward-scattered waves from identical molecules have the same phase **as one another** and add coherently.
+
+In a dilute gas, the number of molecules per unit volume is small, so the added forward field and its accumulated phase shift due to $\phi_\alpha$ are usually tiny over a short distance. For that reason, we can often neglect the collective phase effect when first discussing scattering by individual density fluctuations. The phase shift is not exactly zero—it can still be measured over a sufficiently long distance—but it is much more prominent in a denser medium.
+
+## Higher-density media: collective optical response
+
+Now pack many more dipoles into a wavelength-sized volume. Each individual forward contribution may still be weak, but there are many more of them per unit distance. Their response phases accumulate quickly, so the collective phase effect can no longer be ignored. This is the origin of the refractive index that we develop below.
+
+The dipoles respond to light of different frequencies differently: both their amplitude and their phase change, especially near resonance. The accumulated phase delay therefore changes too. In macroscopic language, the medium's refractive index varies with frequency—this is dispersion. The microscopic oscillator response and the macroscopic separation of colors are two views of the same effect.
+
+Trying to follow the radiation from every molecule separately quickly becomes hopeless, but interference gives us a shortcut. In a uniform bulk medium, most sideways contributions cancel one another. The coherent forward contribution survives and joins the original wave.
+
+The added field can do two things. One part shifts the phase, making the wavefront fall behind its position in vacuum; we describe that delay with the refractive index. Another part reduces the amplitude when energy leaves the coherent beam; we describe that effect with attenuation. Increasing the density strengthens both effects because more dipoles contribute during each small step through the material.
+
+In the thin sheets approximation below, we make a upgrade the Feynman's approach by allowing each sheet feels the total field of the incident radiation plus all the  induced radiation from previous sheets.
+
+### thin sheets approximation
+Slice the medium into thin sheets. For the sheet between $x$ and $x+dx$, $\widetilde P(x)$ is the complex amplitude of the dipole moment per unit volume, with $P(x,t)=\operatorname{Re}[\widetilde P(x)e^{-i\omega t}]$. Its response to the local field is
+$$
+\widetilde P(x)=\epsilon_0 \chi \widetilde E(x)
+$$
+The polarization per unit area of this thin slice is therefore
+$${\widetilde P}_s={\widetilde P}(x) dx=\epsilon_0\chi{\widetilde E}(x) dx.$$ 
+A plane sheet of oscillating polarization radiates equally forward and backward. For the $e^{-i\omega t}$ convention, the forward-radiated electric field right outside the slice is
+$${\widetilde E}_s (x+dx)=i\frac{k_0}{2\epsilon_0}{\widetilde P}_s=i\frac{k_0 dx \chi}{2}{\widetilde E}(x)
+$$
+This equation says the total field at $x$, which is ${\widetilde E}(x)$, causes the dipole sheet with thickness $dx$ to generate an induced field at $x+dx$, which is ${\widetilde E}_s (x+dx)$.
+
+Thus the total field at $x+dx$ should be the sum of $\widetilde E(x)$ propagated by a distance $dx$ and the induced field $\widetilde E_s(x+dx)$,
+$$
+\begin{aligned}
+\widetilde E(x+dx)
+=&\widetilde E(x)e^{ik_0 dx}+i\frac{k_0 dx \chi}{2}{\widetilde E}(x)\\
+=&\widetilde E(x)\left(1+{ik_0 dx}+ik_0 dx\frac{\chi}{2}\right)\\
+=&\widetilde E(x)\left[1+{ik_0 dx}\left(1+\frac{\chi}{2}\right)\right].
+\end{aligned}
+$$ {#eq-total-field-sum}
+Therefore
+$$
+\frac{\widetilde E(x+dx)-\widetilde E(x)}{dx}=ik_0\left( 1+\frac{\chi}{2}\right)\widetilde E(x)
+$$
+The solution of the above differential equation is 
+$$
+\widetilde E(x) = \widetilde E(0)e^{ik_0 x(1+\chi/2)}
+$${#eq-accumulated-field}
+
+To identify the refractive index, compare @eq-accumulated-field with a wave in a medium with a index of refraction $n$,
+$$
+\widetilde E(x) = \widetilde E(0) e^{i n k_0 x}
+$$ {#eq-medium-wave-compare}
+We see that  
+$$
+n=1+\frac{\chi}{2}.
+$$ {#eq-refractive-index}
+
+Because susceptibility is a complex number, the index of refraction is also complex
+$$
+n=n'+in'',
+$$ {#eq-complex-index-definition}
+where  
+$$
+n'=1+\frac{\chi'}{2}\simeq -\frac{Ne^2}{4\epsilon_0m\omega_0}
+\frac{\Delta}{\Delta^2+\gamma^2},\qquad
+n''=\frac{\chi''}{2}\simeq\frac{Ne^2}{4\epsilon_0m\omega_0}
+\frac{\gamma}{\Delta^2+\gamma^2}.
+$$ {#eq-index-components}
+Thus the field in the medium becomes
+$$
+\widetilde E(x)=E_0e^{ink_0x}
+=E_0e^{in'k_0x}e^{-n''k_0x}.
+$$ {#eq-field-in-medium}
+From @eq-field-in-medium, the physical meaning of two parts of @eq-index-components becomes clear: the real part $n'$ controls phase accumulation, thus, represents the commonly-known refractive index, while the imaginary part $n''$ brings attenuation. 
+
+### Transmitted intensity and Absorption cross sections
+In @eq-field-in-medium, the factor $e^{-n''k_0x}$ reduces the field amplitude. Intensity is proportional to amplitude squared, so the Beer--Lambert law can be written directly with the extinction cross section:
+$$
+I(x)=I(0)e^{-2k_0n'' x},
+$$ {#eq-beer-law}
+where the factor of two in appears because squaring the field amplitude doubles the exponent.
+
+We can rewrite @eq-beer-law as 
+$$
+I(x)=I(0)e^{-N\sigma_{\mathrm{abs}}x}
+$$
+where
+$$
+\sigma_{\mathrm{abs}}=\frac{2k_0n''}{N}=\frac{e^2}{2\epsilon_0mc}
+\frac{\gamma}{\Delta^2+\gamma^2}.
+$$
+$\sigma_{\mathrm{abs}}$ has units of area and is therefore named absorption cross section. The product $N\sigma_{\mathrm{ext}}$ has units of inverse length and measures how quickly scattering and absorption remove energy from the coherent beam. Surface reflection is omitted here.
+
+## Dispersion and Absorption -- two sides of the same coin
+Equation @eq-index-components lets us watch dispersion unfold as we sweep the light frequency through resonance. The rapid change of the real part of the refractive index is the dispersive curve in the left panel below. When $dn'/d\omega>0$, the real part of the refractive index increases with frequency; this is called **normal dispersion**. Very close to this resonance, the curve instead has $dn'/d\omega<0$; this is called **anomalous dispersion**. The anomalous region is not an unrelated surprise: it appears where the oscillator phase is turning most rapidly. 
+
+The absorption cross section reaches its maximum in the same neighborhood, reminding us that strong dispersion and strong absorption are linked parts of one resonant response. Real materials contain many resonances, so distant resonances provide a slowly varying background to the feature shown here.
+
+
+![Near-resonance dispersion and absorption. The normalized index correction is $(n'-1)/C$, where $C=Ne^2/(4\epsilon_0m\omega_0\gamma)$ is the natural size of the resonant index change. The normalized absorption cross section is $\sigma_{\mathrm{abs}}/\sigma_{\mathrm{abs,res}}$, where $\sigma_{\mathrm{abs,res}}$ is its value at $\Delta=0$. Removing these scale factors leaves universal line shapes that depend only on $\Delta/\gamma$.](images/dispersion-absorption.svg){#fig-dispersion fig-alt="Two panels plotted against detuning over damping rate show the real refractive-index correction divided by its natural resonance scale and the absorption cross section divided by its value at resonance."}
+
+Our thin-sheets model is a good approximation. It induced fields are included in the **final total field** and their forward scattering are also used to drive other sheets, but it ignored the backward scatterings of those sheets, which also contributes to the total field at location before them.
+The Maxwell-equation method discussed in the next section will give us a real self-consistent solution, which shows that $n^2=1+\chi$. Expanding the square root for $|\chi|\ll1$ to the first order gives $n\simeq1+\chi/2$, exactly the same result as the thin-sheets approximation.
+
+### Several resonances
+
+A real world atom have many spectral lines or resonances, $\omega_j$. Its polarizability can be written as
+$$
+\alpha(\omega)=-\Sigma_j
+\frac{e^2f_j}{2m\omega_j}\frac{1}{\Delta_j+i\gamma_j}.
+$$ {#eq-multiple-resonances}
+where $\Delta_j=\omega-\omega_j$.
+
+### Oscillator strength
+Experiments show that for single-valence-electron atoms, its polarizability $\alpha_j(\omega)$ near a spectral line $j$ is found to be
+$$
+\alpha_j(\omega)=f_j\,\alpha_{\mathrm{L},j}(\omega),
+$$ {#eq-oscillator-strength-polarizability}
+where $\alpha_{\mathrm{L},j}$ is the theoretical polarizability of a Lorentz oscillator and $f_j$ is a dimensionless number named **absorption oscillator strength** of transition $j$. The oscillator strength a empirical value representing the relative strength of measured polarizability to the theoretical prediction of the Lorentz model. 
+
+Nowadays the theoretical value of $f_j$ can be calculated by Quantum mechanics. It is found that $0<f_j<1$ for an individual transition, while $f_j$ of all transitions of the valence electron, including the continuum, sum to approximately unity.
+
+## Check your understanding
+
+1. How can adding radiation from electrons change the phase of the transmitted wave?
+2. Why is the intensity decay constant twice the field-amplitude decay constant?
+3. Can the incident beam lose energy when no energy is converted into heat?
+
+## Reading
+
+- [Feynman, Volume I, Chapter 31: The Origin of the Refractive Index](https://www.feynmanlectures.caltech.edu/I_31.html).
+- [Feynman, Volume I, Chapter 32: Radiation Damping. Light Scattering](https://www.feynmanlectures.caltech.edu/I_32.html).

@@ -1,0 +1,19 @@
+---
+toc: false
+---
+
+# Topics {.unnumbered}
+
+## [Part 1 · Historical development](part-1.qmd)
+
+The historical development of atomic physics and quantum mechanics up to the Dirac equation.
+
+- [Lorentz model](lorentz-model.qmd)
+
+## [Part 2 · Elements of quantum mechanics](part-2.qmd)
+
+Topic list to be added.
+
+## [Part 3 · Atomic structure and external fields](part-3.qmd)
+
+Atomic structure and its interaction with external fields. Topic list to be added.

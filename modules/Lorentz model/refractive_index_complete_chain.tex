@@ -1,0 +1,227 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+
+\begin{document}
+
+\section*{Complete Chain from the Lorentz Oscillator to Wave Propagation}
+
+Using the convention
+\begin{equation}
+E(z,t)\propto e^{i(kz-\omega t)},
+\end{equation}
+the complete chain begins with the Lorentz oscillator equation
+\begin{equation}
+m\ddot{x}+m\gamma\dot{x}+m\omega_0^2x=-eE.
+\end{equation}
+
+The induced dipole moment is
+\begin{equation}
+p=\alpha(\omega)E,
+\end{equation}
+with
+\begin{equation}
+\alpha(\omega)
+=
+\frac{e^2/m}
+{\omega_0^2-\omega^2-i\gamma\omega}.
+\end{equation}
+
+For an atomic number density \(N\), the macroscopic polarization is
+\begin{equation}
+P=Np=N\alpha E.
+\end{equation}
+
+Using the definition
+\begin{equation}
+P=\epsilon_0\tilde{\chi}E,
+\end{equation}
+the complex electric susceptibility is
+\begin{equation}
+\tilde{\chi}
+=
+\chi'+i\chi''
+=
+\frac{N\alpha}{\epsilon_0}.
+\end{equation}
+
+Maxwell's wave equation in the medium is
+\begin{equation}
+\nabla^2E
+-
+\frac{1+\tilde{\chi}}{c^2}
+\frac{\partial^2E}{\partial t^2}
+=0.
+\end{equation}
+
+For a plane wave,
+\begin{equation}
+E(z,t)=E_0e^{i(\tilde{k}z-\omega t)},
+\end{equation}
+the wave equation gives
+\begin{equation}
+\tilde{k}^2
+=
+\frac{\omega^2}{c^2}(1+\tilde{\chi}).
+\end{equation}
+
+Define the complex refractive index by
+\begin{equation}
+\tilde{n}=n'+in'',
+\end{equation}
+so that
+\begin{equation}
+\tilde{n}^2=1+\tilde{\chi}.
+\end{equation}
+
+The complex wave number is therefore
+\begin{equation}
+\tilde{k}
+=
+k_0\tilde{n}
+=
+k_0(n'+in''),
+\end{equation}
+where
+\begin{equation}
+k_0=\frac{\omega}{c}.
+\end{equation}
+
+\section*{Final Expression for the Electric Field}
+
+Substituting the complex wave number into the plane-wave expression gives
+\begin{equation}
+E(z,t)
+=
+E_0
+e^{i[k_0(n'+in'')z-\omega t]}.
+\end{equation}
+
+Separating the real and imaginary parts gives the key result
+\begin{equation}
+\boxed{
+E(z,t)
+=
+E_0
+e^{-k_0n''z}
+e^{i(k_0n'z-\omega t)}
+}.
+\end{equation}
+
+Equivalently,
+\begin{equation}
+E(z,t)
+=
+E_0
+\exp\!\left(-\frac{\omega n''}{c}z\right)
+\exp\!\left[
+i\left(
+\frac{\omega n'}{c}z-\omega t
+\right)
+\right].
+\end{equation}
+
+The real and imaginary parts of the refractive index have the meanings
+\begin{equation}
+n' \rightarrow \text{phase propagation / refraction},
+\end{equation}
+and
+\begin{equation}
+n'' \rightarrow \text{absorption / attenuation}.
+\end{equation}
+
+Since intensity is proportional to the squared field amplitude,
+\begin{equation}
+I(z)=I_0e^{-2k_0n''z},
+\end{equation}
+so the absorption coefficient is
+\begin{equation}
+\alpha_{\mathrm{abs}}
+=
+2k_0n''
+=
+\frac{2\omega n''}{c}.
+\end{equation}
+
+
+\section*{Note on the Complex Representation of the Electric Field}
+
+The physical electric field is real.  It is often convenient, however, to represent a sinusoidal field by a complex quantity,
+\begin{equation}
+E_{\mathrm{phys}}(z,t)
+=
+\operatorname{Re}\!\left[
+\tilde{E}(z,t)
+\right],
+\end{equation}
+where, for example,
+\begin{equation}
+\tilde{E}(z,t)
+=
+E_0 e^{i(kz-\omega t)}.
+\end{equation}
+
+This replacement is valid for linear equations with real physical coefficients because differentiation and linear superposition commute with taking the real part.  Thus one may solve Maxwell's equations using the complex field and take the real part only at the end.
+
+When the refractive index is complex,
+\begin{equation}
+\tilde{n}=n'+in'',
+\end{equation}
+the complex field
+\begin{equation}
+\tilde{E}(z,t)
+=
+E_0 e^{-k_0n''z}
+e^{i(k_0n'z-\omega t)}
+\end{equation}
+is only a mathematical representation.  The measurable electric field is
+\begin{equation}
+E_{\mathrm{phys}}(z,t)
+=
+\operatorname{Re}\!\left[\tilde{E}(z,t)\right]
+=
+E_0 e^{-k_0n''z}
+\cos\!\left(k_0n'z-\omega t\right).
+\end{equation}
+
+Care is required in nonlinear problems: in general,
+\begin{equation}
+\operatorname{Re}\!\left[\tilde{E}^{\,2}\right]
+\neq
+\left(\operatorname{Re}\tilde{E}\right)^2,
+\end{equation}
+so nonlinear quantities must be formed from the real physical field, or handled with the appropriate complex-amplitude formalism.
+
+\section*{Compact Summary}
+
+The complete chain is
+\begin{equation}
+E
+\rightarrow
+x
+\rightarrow
+p
+\rightarrow
+P
+\rightarrow
+\tilde{\chi}=\chi'+i\chi''
+\rightarrow
+\tilde{n}=n'+in''
+\rightarrow
+\tilde{k}=k_0\tilde{n}.
+\end{equation}
+
+The final propagation law is
+\begin{equation}
+\boxed{
+E(z,t)
+=
+E_0
+e^{-k_0n''z}
+e^{i(k_0n'z-\omega t)}
+}.
+\end{equation}
+
+\end{document}

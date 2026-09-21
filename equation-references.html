@@ -1,0 +1,19 @@
+<script>
+(() => {
+  const formatEquationReferences = () => {
+  document.querySelectorAll('a.quarto-xref[href^="#eq-"]').forEach((link) => {
+    const match = link.textContent.trim().match(/^(?:Equation|Eq\.)\s*(\d+)$/);
+    if (match) link.textContent = `Eq. (${match[1]})`;
+  });
+  };
+
+  document.addEventListener("DOMContentLoaded", formatEquationReferences);
+  window.addEventListener("load", formatEquationReferences);
+
+  new MutationObserver(formatEquationReferences).observe(document.documentElement, {
+    childList: true,
+    subtree: true,
+    characterData: true
+  });
+})();
+</script>

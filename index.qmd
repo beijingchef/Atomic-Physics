@@ -1,0 +1,35 @@
+---
+subtitle: "2026 · Second-year undergraduate course"
+toc: false
+---
+
+# Atomic Physics {.unnumbered}
+
+Explore the development of atomic physics, the foundations of quantum mechanics, and the structure of atoms and their interaction with external fields.
+
+## Course materials
+
+::: {.grid}
+::: {.g-col-12 .g-col-md-6}
+### [Schedule](schedule.qmd)
+Meeting plans and preparation deadlines.
+:::
+::: {.g-col-12 .g-col-md-6}
+### [Topics](topics.qmd)
+Notes and activities organized into three course parts.
+:::
+::: {.g-col-12 .g-col-md-6}
+### [Assignments](assignments.qmd)
+Before-class preparation and after-class homework.
+:::
+::: {.g-col-12 .g-col-md-6}
+### [Resources](resources.qmd)
+Reading, mathematical refreshers, and reference materials.
+:::
+:::
+
+## How we learn
+
+We meet twice a week, with two 45-minute periods per meeting. Prepare before class, work through questions together during class, and consolidate your understanding afterward.
+
+Materials will be added as the course develops.

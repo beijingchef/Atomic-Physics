@@ -1,0 +1,48 @@
+Suppose
+$$
+\mathbf{E}(x,y,z)
+=
+E_x(x,y,z)\hat{\mathbf{x}}
++
+E_y(x,y,z)\hat{\mathbf{y}}
++
+E_z(x,y,z)\hat{\mathbf{z}}.
+\tag{1}
+$$
+The Laplacian operator is
+$$
+\nabla^2
+=
+\frac{\partial^2}{\partial x^2}
++
+\frac{\partial^2}{\partial y^2}
++
+\frac{\partial^2}{\partial z^2}.
+\tag{2}
+$$
+Therefore,
+$$
+\nabla^2\mathbf{E}
+=
+(\nabla^2 E_x)\hat{\mathbf{x}}
++
+(\nabla^2 E_y)\hat{\mathbf{y}}
++
+(\nabla^2 E_z)\hat{\mathbf{z}}.
+\tag{3}
+$$
+If
+$$
+\mathbf{E}(x,t)
+=
+E_0 e^{i(kx-\omega t)}\hat{\mathbf{z}},
+\tag{5}
+$$
+then there is only a $z$ component, and the field depends spatially only on $x$. Hence,
+$$
+\nabla^2\mathbf{E}
+=
+\frac{\partial^2\mathbf{E}}{\partial x^2}
+=-k^2\mathbf{E}.
+\tag{6}
+$$

@@ -1,0 +1,306 @@
+---
+title: "2.2 · The Lorentz oscillator"
+subtitle: "Lorentz model · Driven motion, resonance, and radiation damping"
+---
+
+Think of a bound electron as a tiny mass on a spring. An electric wave pushes it back and forth, the binding force pulls it home, and damping drains energy from the motion. This simple picture will let us understand resonance, linewidth, absorption, and scattering with one equation.
+
+## Frictionless oscillator
+Start with the simplest oscillator: a mass $m$ attached to an ideal spring of stiffness $k$, with no friction and no external driving force. If $z(t)$ is its displacement from equilibrium, Newton's second law gives
+$$
+\ddot z+\omega_0^2z=0.
+$$ {#eq-free-oscillator}
+where $\omega_0=\sqrt{k/m}$ is the natural angular frequency of the oscillator.
+The solution is
+$$
+z(t)=A\cos(\omega_0t+\varphi),
+$$ {#eq-free-solution}
+where $A$ is the oscillation amplitude and $\varphi$ is fixed by the initial conditions. The angular frequency $\omega_0$ is the oscillator's natural, or resonant, frequency. With no friction, the mechanical energy
+$$
+U=\frac12m\dot z^2+\frac12m\omega_0^2z^2
+$$ {#eq-free-energy}
+remains constant. The oscillator keeps moving forever because it has no way to lose energy.
+This ideal model cannot describe a bound electron completely. An oscillating charge radiates, so its mechanical energy cannot remain constant forever. We now build that radiation loss into the oscillator's equation of motion.
+
+## A radiativaly damped electron oscillator
+
+The [dipole-radiation result](#eq-larmor-power) gives the instantaneous power radiated by a nonrelativistic electron:
+$$
+P_{\mathrm{rad}}(t)=\frac{e^2[\ddot z(t)]^2}{6\pi\epsilon_0c^3}.
+$$ {#eq-radiated-power-instantaneous}
+For nearly monochromatic motion $z(t)=A(t)\cos(\omega t+\varphi)$, where $A(t)$ is a decaying amplitude. In optical phenomena, because $\omega_0$ is so large, the decay rate of $A$ is much smaller than $\omega_0$. Thus we can treat $A$ as a constant within one oscillation cycle, and the cycle average of $[\ddot z(t)]^2$ becomes $\omega^4A^2/2$. Therefore,
+$$
+\langle P_{\mathrm{rad}}\rangle
+=\frac{e^2\omega^4A^2}{12\pi\epsilon_0c^3}.
+$$ {#eq-radiated-power}
+Equation @eq-radiated-power tells us exactly how quickly radiation carries energy away, but it has not yet been included in the oscillator equation. Near one narrow resonance, we can represent this loss by an effective force proportional to velocity,
+$$
+F_{\mathrm{rad}}=-2m\gamma_{\mathrm{rad}}\dot z.
+$$ {#eq-effective-radiation-force}
+This force removes mechanical energy at the instantaneous rate 
+$$P_{\mathrm{loss}}=2m\gamma_{\mathrm{rad}}\dot z^2.$$
+For harmonic motion, a cycle average gives $\langle\dot z^2\rangle=\omega^2A^2/2$, so its average loss rate is
+$$
+\langle P_{\mathrm{loss}}\rangle
+=2m\gamma_{\mathrm{rad}}\langle\dot z^2\rangle
+=m\gamma_{\mathrm{rad}}\omega^2A^2.
+$$ {#eq-effective-radiation-loss}
+
+The mechanical energy lost by the electron must equal the electromagnetic energy radiated. Equating @eq-effective-radiation-loss and @eq-radiated-power gives
+$$
+\gamma_{\mathrm{rad}}
+=\frac{e^2\omega^2}{12\pi\epsilon_0mc^3}.
+$$ {#eq-radiation-damping}
+The free electron oscillator, now able to account for its own radiation loss, obeys
+$$
+\ddot z+2\gamma_{\mathrm{rad}}\dot z+\omega_0^2z=0.
+$$ {#eq-damped-oscillator}
+
+For weak radiation damping, $\gamma_{\mathrm{rad}}\ll\omega_0$, its solution is
+$$
+z(t)=A_0e^{-\gamma_{\mathrm{rad}}t}
+\cos(\omega_dt+\varphi),
+\qquad
+\omega_d=\sqrt{\omega_0^2-\gamma_{\mathrm{rad}}^2}.
+$$ {#eq-damped-solution}
+The electron still oscillates, but its amplitude shrinks because each cycle launches a little energy into space. The amplitude-decay time is $1/\gamma_{\mathrm{rad}}$, and the cycle-averaged mechanical energy decays as $e^{-2\gamma_{\mathrm{rad}}t}$.
+
+This energy decay rate $2\gamma_\mathrm{rad}$ corresponds to the rate of spontaneous emission of an excited atom. For an optical transition of wavelength $\lambda_0=589~\mathrm{nm}$, $\omega_0=2\pi c/\lambda_0 \simeq 3.2\times 10^{15}~\mathrm{s}^{-1}$ and 
+$$
+2\gamma_\mathrm{rad}=\frac{e^2\omega^2}{6\pi\epsilon_0mc^3}=6.4\times10^7\mathrm{s}^{-1}.
+$$
+First of all it is indeed much smaller than $\omega_0$ as we have assumed. Sodium atom's strongest spectral line is at 589 nm, and its spontaneous emission rate is measured to be $6.15 \times 10^7 \mathrm{s}^{-1}$, which is not bad.
+
+The velocity-dependent force in @eq-effective-radiation-force is an effective near-harmonic description, chosen to reproduce the correct average radiated power. The exact radiation-reaction force is not an ordinary friction force at every instant. For the narrow-resonance motion studied here, however, @eq-damped-oscillator provides the simple energy-consistent equation we need.
+
+## A bound electron in an oscillating electric field
+
+Now we add a spatially uniform driving electromagnetic wave field over the electron oscillator. By spatially uniform, we mean that the oscillator's amplitude is much smaller than the wavelength of the electromagnetic wave, so at any instant electric field experienced by the electron is independent of the electron's displacement.
+$$
+\mathbf E(t)
+=\operatorname{Re}\!\left[\widetilde{\mathbf E}e^{-i\omega t}\right]
+=E_0\cos(\omega t)\,\hat{\mathbf z},
+\qquad
+\widetilde{\mathbf E}=\widetilde E\hat{\mathbf z}=E_0\hat{\mathbf z}.
+$$ {#eq-driving-field}
+In @eq-driving-field, $E_0$ is the real, positive peak electric-field strength, $\omega$ is the driving angular frequency, and $\hat{\mathbf z}$ is the unit vector along the polarization. We have chosen the time origin so that the field phasor $\widetilde E$ is real and equals $E_0$. A tilde marks a time-independent complex amplitude and boldface marks a vector. The equation of motion for the scalar displacement $z(t)$ is therefore
+$$
+\ddot z+2\gamma\dot z+\omega_0^2z=-\frac{eE_0}{m}\cos(\omega t).
+$$ {#eq-equation-motion}
+The physical dipole moment is $\mathbf p(t)=p(t)\hat{\mathbf z}$, where $p(t)=-ez(t)$ and $e>0$. Multiplying @eq-equation-motion by $-e$ gives the equation of motion for the induced dipole moment:
+$$
+\ddot p+2\gamma\dot p+\omega_0^2p=\frac{e^2E_0}{m}\cos(\omega t).
+$$ {#eq-dipole-equation-motion}
+
+### Steady-state dipole solution
+
+After the transient motion has decayed, the dipole oscillates at the driving frequency. Write
+$$
+p(t)=\operatorname{Re}\!\left[\widetilde p e^{-i\omega t}\right].
+$$ {#eq-complex-ansatz}
+Here $\widetilde p$ is a time-independent complex amplitude; the physical dipole moment is the real part. Because @eq-dipole-equation-motion is linear with real coefficients, we can solve it using the complex driving field $E_0e^{-i\omega t}$ and take the real part at the end.
+
+Differentiation becomes multiplication by $-i\omega$. Substitution into @eq-dipole-equation-motion therefore gives
+$$
+(\omega_0^2-\omega^2-2i\gamma\omega)\widetilde p=\frac{e^2E_0}{m},
+\qquad
+\widetilde p=\frac{e^2E_0}{m(\omega_0^2-\omega^2-2i\gamma\omega)}.
+$$ {#eq-complex-equation}
+
+#### Weak-damping near-resonance approximation
+Define the detuning and assume weak damping and near-resonant driving:
+$$
+\Delta=\omega-\omega_0,\qquad |\Delta|,\gamma\ll\omega_0.
+$$ {#eq-detuning}
+Positive detuning means driving above resonance; negative detuning means below resonance. No particular ratio between $|\Delta|$ and $\gamma$ is assumed. Using
+$$
+\omega_0^2-\omega^2-2i\gamma\omega\simeq-2\omega_0(\Delta+i\gamma),
+$$ {#eq-resonant-denominator}
+we obtain
+$$
+\widetilde p\simeq-\frac{e^2E_0}{2m\omega_0(\Delta+i\gamma)}
+=\frac{e^2E_0}{2m\omega_0}\frac{-\Delta+i\gamma}{\Delta^2+\gamma^2}.
+$$ {#eq-complex-dipole}
+
+Using @eq-complex-ansatz, we obtain the steady state solution of $p(t)$,
+$$
+p(t)=p_{\parallel}\cos(\omega t)+p_{\perp}\sin(\omega t),
+$$ {#eq-component-decomposition}
+where the in-phase component $p_{\parallel}$ and the quadrature component $p_{\perp}$  are
+$$
+p_{\parallel}=-\frac{e^2E_0\Delta}{2m\omega_0(\Delta^2+\gamma^2)},
+\qquad
+p_{\perp}=\frac{e^2E_0\gamma}{2m\omega_0(\Delta^2+\gamma^2)}.
+$$ {#eq-component-amplitudes}
+The in-phase component changes sign at resonance, while the quadrature component is positive and reaches its maximum there.
+
+We can also write $p(t)$ in its amplitude--phase form,
+$$
+p(t)=p_0 \cos\!\left[\omega t-\delta_p\right],
+$$ {#eq-near-resonance-amplitude-phase}
+where $p_0=|\widetilde p|$ and phase lag $\delta_p=\arg\widetilde p$,
+$$
+p_0 =\frac{e^2E_0}{2m\omega_0\sqrt{\Delta^2+\gamma^2}},
+\qquad
+\delta_p =\operatorname{atan2}(\gamma,-\Delta).
+$$ {#eq-amplitude-phase-definitions}
+
+The two forms of $p(t)$ are related by
+$$
+p_{\parallel}=p_0\cos\delta_p,\qquad p_{\perp}=p_0\sin\delta_p \\
+p_0=\sqrt{p_{\parallel}^2+p_{\perp}^2},\qquad \delta_p=\operatorname{atan2}(p_{\perp},p_{\parallel}).
+$$
+
+The exact solution are given in the [appendix](#sec-exact-dipole-solution).
+
+### Comments on the phase lag
+The two-argument inverse tangent $\operatorname{atan2}(y,x)=\arg(x+iy)$ uses the signs of both arguments to select the correct quadrant, unlike $\arctan(y/x)$. For example, $\operatorname{atan2}(1,1)=\pi/4$, while $\operatorname{atan2}(-1,-1)=-3\pi/2$
+
+For $\gamma>0$, $\delta_p$ is the dipole's phase lag behind the field:
+
+- **Below resonance, $\omega<\omega_0$:** $\qquad0<\delta_p<\pi/2$, approaching $0$ for $|\Delta|\gg \gamma$ (in phase).
+- **At resonance, $\omega=\omega_0$:** $\qquad\delta_p=\pi/2$ (a quarter-cycle lag).
+- **Above resonance, $\omega>\omega_0$:** $\qquad\pi/2<\delta_p<\pi$, approaching $\pi$ for $|\Delta|\gg \gamma$ (opposite phase).
+
+For $\gamma=0$, **Zero damping:** the driven response is in phase below resonance and opposite in phase above it. At exact resonance, $\operatorname{atan2}(0,0)$ is undefined and no bounded steady state exists. 
+
+### Resonance curve
+
+Let $p_{00}$ denote the value of the dipole amplitude $p_0$ at $\omega=\omega_0$:
+$$
+p_{00}\equiv p_0(\omega_0)=\frac{e^2E_0}{2m\omega_0\gamma}.
+$$ {#eq-resonant-amplitude}
+Within the near-resonance approximation, this is the peak amplitude. For constant damping, the exact amplitude peaks slightly below $\omega_0$, at $\sqrt{\omega_0^2-2\gamma^2}$; this small shift is neglected when $\gamma\ll\omega_0$.
+
+A static field of the same strength produces
+$$
+p_{\mathrm{static}}=\frac{e^2E_0}{m\omega_0^2},
+\qquad
+\frac{p_{00}}{p_{\mathrm{static}}}=\frac{\omega_0}{2\gamma}.
+$$ {#eq-resonance-amplification}
+Weak damping therefore allows a much larger dipole response at resonance than in a static field.
+
+The normalized near-resonance response is
+$$
+\frac{p_0}{p_{00}}\simeq\frac{1}{\sqrt{1+(\Delta/\gamma)^2}},
+\qquad
+\frac{\delta_p}{\pi}\simeq\frac{\operatorname{atan2}(1,-\Delta/\gamma)}{\pi},
+$$ {#eq-normalized-amplitude}
+and the normalized components are
+$$
+\frac{p_{\parallel}}{p_{00}}\simeq-\frac{\Delta/\gamma}{1+(\Delta/\gamma)^2},
+\qquad
+\frac{p_{\perp}}{p_{00}}\simeq\frac{1}{1+(\Delta/\gamma)^2}.
+$$ {#eq-normalized-components}
+
+![Normalized dipole amplitude $p_0/p_{00}$, phase lag $\delta_p/\pi$, and in-phase and quadrature dipole components versus $\Delta/\gamma$. The half-power points are at $\Delta/\gamma=\pm1$. The four panels show the universal near-resonance response for $\gamma\ll\omega_0$.](images/lorentz-resonance.svg){#fig-lorentz-resonance fig-alt="Four dipole response plots versus detuning over gamma: amplitude peaking at one, phase lag rising through one-half, in-phase component changing from positive to negative, and positive Lorentzian quadrature component."}
+
+At resonance, @fig-lorentz-resonance gives $p_0=p_{00}$, $\delta_p=\pi/2$, $p_{\parallel}=0$, and $p_{\perp}=p_{00}$, so $p(t)=p_{00}\sin\omega t$. Below resonance the in-phase component is positive; above resonance it is negative. The plotted range $|\Delta|\leq10\gamma$ is understood to remain within $|\Delta|\ll\omega_0$. At $\Delta=\pm\gamma$, $p_0=p_{00}/\sqrt2$, giving half the resonant power in this approximation.
+
+### Polarizability
+
+The electric polarizability $\alpha$ is the induced dipole moment per unit applied field, defined by 
+$$
+\widetilde p=\alpha(\omega)E_0.
+$$
+Thus
+$$
+\begin{aligned}
+\alpha(\omega)&=\frac{e^2}{m(\omega_0^2-\omega^2-2i\gamma\omega)}\\
+&\simeq\frac{e^2}{2m\omega_0}\frac{-\Delta+i\gamma}{\Delta^2+\gamma^2}.
+\end{aligned}
+$$ {#eq-polarizability-near-resonance}
+Since $E_0$ is real and positive,
+$$
+\delta_p=\arg\alpha=\operatorname{atan2}(\operatorname{Im}\alpha,\operatorname{Re}\alpha).
+$$ {#eq-phase-relation}
+The real part of $\alpha$ determines the in-phase dipole component, and its imaginary part determines the quadrature component and the mean energy transferred from the field.
+
+### Energy loss due to damping
+
+The mechanical energy $U$ is the sum of the electron’s kinetic energy and the elastic potential energy of its binding:
+$$
+U=\frac12m\dot z^2+\frac12m\omega_0^2z^2.
+$$ {#eq-mechanical-energy}
+Multiplying @eq-equation-motion by $m\dot z$ and recognizing the derivative of @eq-mechanical-energy gives
+$$
+\frac{dU}{dt}=-eE(t)\dot z-2m\gamma\dot z^2.
+$$ {#eq-energy-balance}
+In @eq-energy-balance, energy has only two doors: the electric field can bring it in, and damping can carry it away. We define the positive damping loss rate as
+$$
+P_{\mathrm{loss}}(t)=2m\gamma\dot z^2(t).
+$$ {#eq-instantaneous-loss}
+Averaging @eq-instantaneous-loss over one cycle, substituting $A=p_0/e$ with $p_0$ from @eq-amplitude-phase-definitions, and using $\omega\simeq\omega_0$ gives
+$$
+\langle P_{\mathrm{loss}}\rangle
+=\frac{m\gamma\omega^2p_0^2}{e^2}
+=\frac{e^2E_0^2\omega^2}{4m\omega_0^2}\frac{\gamma}{\Delta^2+\gamma^2}.
+$$ {#eq-mean-loss}
+
+One can also derive the energy supplied by the driving field
+$$
+\langle P_{\mathrm{supply}}\rangle=\langle -eE(t)\dot z\rangle=\frac{\omega E_0^2}{2}\operatorname{Im}\alpha(\omega)=\frac{e^2E_0^2\omega}{4m\omega_0}\frac{\gamma}{\Delta^2+\gamma^2}.
+$$ {#eq-mean-supply-polarizability}
+Here $\operatorname{Im}\alpha$ denotes the imaginary part of the polarizability. In steady state, the average of @eq-energy-balance has $\langle dU/dt\rangle=0$, so the mean supplied power equals the mean loss.
+
+### scattering cross section
+We can rewrite the radiation loss as
+$$
+\langle P_{\mathrm{rad}}\rangle=
+\frac{\omega^4p_0^2}{12\pi\epsilon_0c^3}=\frac{\omega^4|\alpha|^2E^2_0}{12\pi\epsilon_0c^3}=\frac{\omega^4|\alpha|^2}{6\pi c^4}I_\mathrm{inc}=\frac{k_0^4|\alpha|^2}{6\pi}I_\mathrm{inc}.
+$$ {#eq-mean-scattering}
+where
+$$
+I_\mathrm{inc}=\frac{cE^2_0}{2\epsilon_0}
+$$
+is just the intensity of the incoming radiation. Writing in this form tells us that the power radiated by the dipole all comes from driving electric wave or the incident radiation. The incoming radiation goes in one direction, the induced radiation of the  dipole goes nearly in all directions, so it looks like the incident radiation is scattered by the dipole oscillator. 
+We see that factor next to $I_\mathrm{inc}$ in @eq-mean-scattering has a dimension of area, and we call it "scattering cross section".
+$$
+\sigma_\mathrm{sca}\equiv\frac{k_0^4|\alpha|^2}{6\pi}
+$$
+It describe the effective area expanded by the dipole oscillator, that scatters the incoming radiation.
+
+## Check your understanding
+
+1. Derive @eq-mean-supply-polarizability.
+2. In steady state, where does the energy supplied by the driving field go?
+3. If the driving force is proportional to $\sin(\omega t)$, what is its complex notation?
+
+## Reading
+
+[Feynman, Volume I, Chapter 32](https://www.feynmanlectures.caltech.edu/I_32.html) connects the driven-electron model with radiation damping and scattering. The equations above use $e^{-i\omega t}$ throughout.
+
+## Appendix: Exact steady-state dipole solution {#sec-exact-dipole-solution}
+
+The following forms follow from @eq-complex-equation without the weak-damping or near-resonance approximation. They describe the steady-state response after transients have decayed.
+
+### In-phase and quadrature form
+
+Taking the real part of $\widetilde p e^{-i\omega t}$ gives
+$$
+    p(t)=p_{\parallel}\cos(\omega t)+p_{\perp}\sin(\omega t)
+$$ {#eq-exact-dipole-components}
+where the in-phase component $p_{\parallel}$ and the quadrature component $p_{\perp}$  are
+$$
+p_{\parallel}=\frac{e^2E_0}{m}
+\frac{\omega_0^2-\omega^2}{(\omega_0^2-\omega^2)^2+4\gamma^2\omega^2},
+\qquad
+p_{\perp}=\frac{e^2E_0}{m}
+\frac{2\gamma\omega}{(\omega_0^2-\omega^2)^2+4\gamma^2\omega^2}.
+$$ {#eq-exact-component-amplitudes}
+Their near-resonance limits are @eq-component-amplitudes.
+
+### Amplitude--phase form
+
+We can also write $p(t)$ in the amplitude--phase form,
+$$
+p(t)=p_0\cos(\omega t-\delta_p),
+\qquad
+p_0=|\widetilde p|
+=\frac{e^2E_0}{m\sqrt{(\omega_0^2-\omega^2)^2+4\gamma^2\omega^2}},
+$$ {#eq-dipole-amplitude-phase}
+with phase lag
+$$
+\delta_p=\operatorname{atan2}\!\left(2\gamma\omega,\,\omega_0^2-\omega^2\right),
+\qquad 0<\delta_p<\pi.
+$$ {#eq-dipole-phase}
