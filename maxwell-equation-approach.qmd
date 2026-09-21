@@ -2,6 +2,10 @@
 title: "2.4 · Self-consistent Maxwell-equation solution"
 subtitle: "A self-consistent Maxwell-equation approach"
 ---
+The [thin-sheet approximation](optical-dispersion.qmd) gives an intuitive picture of how light propagates through a dielectric, but it also raises a question of self-consistency. The electric field $\mathbf E$ induces a polarization $\mathbf P$, and that polarization radiates a field that modifies $\mathbf E$. The modified field changes $\mathbf P$ again. Tracking this back-and-forth interaction sheet by sheet quickly becomes cumbersome once we go beyond the simplifying assumptions of the thin-sheet treatment.
+
+Can we find a self-consistent relation between $\mathbf P$ and $\mathbf E$ that automatically accounts for this feedback? **Yes: Maxwell's equations already provide the connection between polarization and the electric field it produces.** Combined with the Lorentz oscillator model, which tells us how the field drives the polarization, they form a coupled system for $\mathbf E$ and $\mathbf P$. Solving these equations together accounts for their mutual interaction without repeatedly adding successive field corrections by hand.
+
 We derive the complex refractive index of a dielectric using two ingredients: Maxwell's equations and the Lorentz electron-oscillator model. The logic is
 $$
 \text{Maxwell wave equation}
