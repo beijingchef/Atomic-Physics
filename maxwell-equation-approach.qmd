@@ -136,17 +136,19 @@ $$
 +k_0^2
 \left[1+\chi(\omega)\right]\widetilde{\mathbf E}=0.
 $$ {#eq-frequency-wave}
-For a plane wave propagating along $+x$ with its electric field polarized along $z$, choose the phase origin so that $E_0$ is real and positive. Its complex spatial amplitude is
+We seek a plane-wave solution of @eq-frequency-wave propagating along $+x$ with its electric field polarized along $z$. Choose the phase origin so that $E_0$ is real and positive, and write the complex spatial amplitude as
 $$
 \widetilde{\mathbf E}(x)
 =E_0e^{ikx}\hat{\mathbf z},
 $$ {#eq-plane-wave}
-substitution into @eq-frequency-wave gives
+The wave number $k$ is not arbitrary: it must make @eq-plane-wave satisfy @eq-frequency-wave. Since $\nabla^2\widetilde{\mathbf E}=-k^2\widetilde{\mathbf E}$ for this plane wave, substitution into @eq-frequency-wave gives the dispersion relation
 $$
 k^2
 =k_0^2
 \left[1+\chi(\omega)\right].
 $$ {#eq-dispersion-k}
+
+Thus @eq-plane-wave is a solution of @eq-frequency-wave provided that $k$ satisfies @eq-dispersion-k. This relation determines the allowed wave number from the material's susceptibility $\chi(\omega)$.
 
 Define the refractive index by
 $$
