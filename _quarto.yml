@@ -58,7 +58,7 @@ website:
                 href: normal-zeeman-effect.qmd
       - section: "Part 2 · Elements of quantum mechanics"
         href: part-2.qmd
-      - section: "Part 3 · Atomic structure and external fields"
+      - section: "Part 3 · Atomic Structure and Interactions with External Fields"
         href: part-3.qmd
 
 format:

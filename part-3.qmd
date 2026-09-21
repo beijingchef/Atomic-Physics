@@ -2,8 +2,7 @@
 title: "Part 3 · Atomic structure and external fields"
 ---
 
-Atomic structure and its interaction with external fields.
-
+Atomic Structure and Interactions with External Fields
 ## Learning objectives
 
 To be added.
