@@ -32,12 +32,15 @@ fig.savefig(root/'images/lorentz-resonance.pdf')
 plt.close(fig)
 dopt=np.linspace(-10,10,2001)
 index_shape=-dopt/(1+dopt*dopt)
-absorption_shape=1/(1+dopt*dopt)
+imaginary_index_shape=1/(1+dopt*dopt)
 fig,ax=plt.subplots(1,2,figsize=(10,3.7),layout='constrained')
-ax[0].plot(dopt,index_shape,color='#176b78');ax[0].axhline(0,color='.7',lw=1);ax[0].set_ylabel(r'Normalized index correction')
-ax[1].plot(dopt,absorption_shape,color='#b44832');ax[1].set_ylabel(r'Normalized absorption $\sigma_{\rm abs}/\sigma_{\rm abs,res}$')
+ax[0].plot(dopt,index_shape,color='#176b78');ax[0].axhline(0,color='.7',lw=1);ax[0].set_ylabel(r'Normalized real index correction')
+ax[1].plot(dopt,imaginary_index_shape,color='#b44832');ax[1].set_ylabel(r"Normalized imaginary index $n''/C$")
 for a in ax:
     a.set_xlabel(r'Detuning $\Delta/\gamma$');a.axvline(0,color='.7',ls=':',lw=1);a.grid(alpha=.16)
-assert np.all(absorption_shape>=0) and absorption_shape[1000]==1
-fig.savefig(root/'images/dispersion-absorption.svg');plt.close(fig)
-print('Plots created; resonance peaks and absorption sign verified.')
+assert np.all(imaginary_index_shape>=0) and imaginary_index_shape[1000]==1
+# Embed glyph outlines so browsers render mathematical primes correctly.
+with matplotlib.rc_context({'svg.fonttype': 'path'}):
+    fig.savefig(root/'images/dispersion-absorption.svg')
+plt.close(fig)
+print('Plots created; resonance peaks and imaginary-index sign verified.')

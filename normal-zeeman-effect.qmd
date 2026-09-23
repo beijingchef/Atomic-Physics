@@ -3,8 +3,6 @@ title: "2.5 · The normal Zeeman effect"
 subtitle: "Lorentz model"
 ---
 
-[⬆ Lorentz model](lorentz-model.qmd) · [⬅ Self-consistent Maxwell-equation solution](maxwell-equation-approach.qmd)
-
 ## Learning objectives
 
 To be added.

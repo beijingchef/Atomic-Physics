@@ -128,9 +128,9 @@ p(t)=p_{\parallel}\cos(\omega t)+p_{\perp}\sin(\omega t),
 $$ {#eq-component-decomposition}
 where the in-phase component $p_{\parallel}$ and the quadrature component $p_{\perp}$  are
 $$
-p_{\parallel}=-\frac{e^2E_0\Delta}{2m\omega_0(\Delta^2+\gamma^2)},
+p_{\parallel}=\Re[\widetilde p]=\frac{e^2E_0}{2m\omega_0}\frac{-\Delta}{\Delta^2+\gamma^2},
 \qquad
-p_{\perp}=\frac{e^2E_0\gamma}{2m\omega_0(\Delta^2+\gamma^2)}.
+p_{\perp}=\Im[\widetilde p]=\frac{e^2E_0}{2m\omega_0}\frac{\gamma}{\Delta^2+\gamma^2}.
 $$ {#eq-component-amplitudes}
 The in-phase component changes sign at resonance, while the quadrature component is positive and reaches its maximum there.
 

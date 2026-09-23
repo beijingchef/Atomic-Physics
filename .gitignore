@@ -1,6 +1,7 @@
 .quarto/
 _site/
 .vscode/
+modules/
 
 /.quarto/
 **/*.quarto_ipynb
