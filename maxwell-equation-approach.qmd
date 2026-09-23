@@ -2,147 +2,112 @@
 title: "2.4 · Self-consistent Maxwell-equation solution"
 subtitle: "A self-consistent Maxwell-equation approach"
 ---
+
 The [thin-sheet approximation](optical-dispersion.qmd) gives an intuitive picture of how light propagates through a dielectric, but it also raises a question of self-consistency. The electric field $\mathbf E$ induces a polarization $\mathbf P$, and that polarization radiates a field that modifies $\mathbf E$. The modified field changes $\mathbf P$ again. Tracking this back-and-forth interaction sheet by sheet quickly becomes cumbersome once we go beyond the simplifying assumptions of the thin-sheet treatment.
 
 Can we find a self-consistent relation between $\mathbf P$ and $\mathbf E$ that automatically accounts for this feedback? **Yes: Maxwell's equations already provide the connection between polarization and the electric field it produces.** Combined with the Lorentz oscillator model, which tells us how the field drives the polarization, they form a coupled system for $\mathbf E$ and $\mathbf P$. Solving these equations together accounts for their mutual interaction without repeatedly adding successive field corrections by hand.
 
-We derive the complex refractive index of a dielectric using two ingredients: Maxwell's equations and the Lorentz electron-oscillator model. The logic is
-$$
+We derive the complex refractive index of a dielectric using two ingredients: Maxwell's equations and the Lorentz electron-oscillator model. The logic is $$
 \text{Maxwell wave equation}
 \longrightarrow
 \text{Lorentz oscillator}
 \longrightarrow \widetilde{\mathbf P}(\omega)
 \longrightarrow \chi(\omega)
 \longrightarrow n(\omega).
-$$
-Throughout this page, ordinary time-dependent symbols denote physical, real quantities. A tilde denotes a time-independent complex amplitude at frequency $\omega$. Because the light is polarized along $z$, we write
-$$
+$$ Throughout this page, ordinary time-dependent symbols denote physical, real quantities. A tilde denotes a time-independent complex amplitude at frequency $\omega$. Because the light is polarized along $z$, we write $$
 \mathbf E(x,t)=\operatorname{Re}\!\left[\widetilde E(x)e^{-i\omega t}\right]\hat{\mathbf z},
 \qquad
 \widetilde{\mathbf E}(x)=\widetilde E(x)\hat{\mathbf z}.
-$$ {#eq-maxwell-complex-convention}
-Thus $\widetilde E$ is the scalar $z$-component of the complex field amplitude, whereas $\widetilde{\mathbf E}$ is the corresponding vector. We use the same convention for the dipole moment and polarization.
+$$ {#eq-maxwell-complex-convention} Thus $\widetilde E$ is the scalar $z$-component of the complex field amplitude, whereas $\widetilde{\mathbf E}$ is the corresponding vector. We use the same convention for the dipole moment and polarization.
 
 ## General wave equation in a medium
 
 ### Maxwell equations
-In a material medium, Maxwell's equations are
-$$
+
+In a material medium, Maxwell's equations are $$
 \boldsymbol{\nabla}\cdot\mathbf D=\rho_f,
-$$ {#eq-gauss-electric}
-$$
+$$ {#eq-gauss-electric} $$
 \boldsymbol{\nabla}\cdot\mathbf B=0,
-$$ {#eq-gauss-magnetic}
-$$
+$$ {#eq-gauss-magnetic} $$
 \boldsymbol{\nabla}\times\mathbf E
 =-\frac{\partial\mathbf B}{\partial t},
-$$ {#eq-faraday}
-$$
+$$ {#eq-faraday} $$
 \boldsymbol{\nabla}\times\mathbf H
 =\mathbf J_f+\frac{\partial\mathbf D}{\partial t}.
-$$ {#eq-ampere-maxwell}
-The electric displacement is
-$$
+$$ {#eq-ampere-maxwell} The electric displacement is $$
 \mathbf D=\epsilon_0\mathbf E+\mathbf P,
-$$ {#eq-displacement}
-where $\mathbf P$ is the polarization of the medium. For a nonmagnetic medium,
-$$
+$$ {#eq-displacement} where $\mathbf P$ is the polarization of the medium. For a nonmagnetic medium, $$
 \mathbf B=\mu_0\mathbf H.
 $$ {#eq-nonmagnetic-medium}
 
 ### Wave equation with polarization
 
-Consider a region with no free charge and no free current,
-$$
+Consider a region with no free charge and no free current, $$
 \rho_f=0,
 \qquad
 \mathbf J_f=0.
-$$ {#eq-no-free-sources}
-Take the curl of Faraday's law, @eq-faraday:
-$$
+$$ {#eq-no-free-sources} Take the curl of Faraday's law, @eq-faraday: $$
 \boldsymbol{\nabla}\times
 \left(\boldsymbol{\nabla}\times\mathbf E\right)
 =-\frac{\partial}{\partial t}
 \left(\boldsymbol{\nabla}\times\mathbf B\right).
-$$ {#eq-curl-faraday}
-Using @eq-nonmagnetic-medium and the Ampere-Maxwell law, @eq-ampere-maxwell,
-$$
+$$ {#eq-curl-faraday} Using @eq-nonmagnetic-medium and the Ampere-Maxwell law, @eq-ampere-maxwell, $$
 \boldsymbol{\nabla}\times
 \left(\boldsymbol{\nabla}\times\mathbf E\right)
 =-\mu_0\frac{\partial^2\mathbf D}{\partial t^2}.
-$$ {#eq-curl-wave-step}
-Use the vector identity
-$$
+$$ {#eq-curl-wave-step} Use the vector identity $$
 \boldsymbol{\nabla}\times
 \left(\boldsymbol{\nabla}\times\mathbf E\right)
 =
 \boldsymbol{\nabla}
 \left(\boldsymbol{\nabla}\cdot\mathbf E\right)
 -\nabla^2\mathbf E.
-$$ {#eq-vector-identity}
-For a homogeneous dielectric with no free charge, $\boldsymbol{\nabla}\cdot\mathbf D=0$. If the dielectric response is spatially uniform, this gives $\boldsymbol{\nabla}\cdot\mathbf E=0$. Therefore @eq-curl-wave-step becomes
-$$
+$$ {#eq-vector-identity} For a homogeneous dielectric with no free charge, $\boldsymbol{\nabla}\cdot\mathbf D=0$. If the dielectric response is spatially uniform, this gives $\boldsymbol{\nabla}\cdot\mathbf E=0$. Therefore @eq-curl-wave-step becomes $$
 \nabla^2\mathbf E
 -\mu_0\frac{\partial^2\mathbf D}{\partial t^2}=0.
-$$ {#eq-wave-D}
-Substituting @eq-displacement gives
-$$
+$$ {#eq-wave-D} Substituting @eq-displacement gives $$
 \boxed{
 \nabla^2\mathbf E
 -\frac{1}{c^2}\frac{\partial^2\mathbf E}{\partial t^2}
 =\mu_0\frac{\partial^2\mathbf P}{\partial t^2}
 },
-$$ {#eq-wave-polarization}
-where
-$$
+$$ {#eq-wave-polarization} where $$
 c^2=\frac{1}{\mu_0\epsilon_0}.
-$$ {#eq-speed-light}
-@eq-wave-polarization is the general wave equation we will use for a homogeneous, nonmagnetic dielectric with no free charges or currents. At this point we have not yet assumed any specific relation between $\mathbf P$ and $\mathbf E$. We now obtain that relation from the Lorentz oscillator model.
+$$ {#eq-speed-light} @eq-wave-polarization is the general wave equation we will use for a homogeneous, nonmagnetic dielectric with no free charges or currents. At this point we have not yet assumed any specific relation between $\mathbf P$ and $\mathbf E$. We now obtain that relation from the Lorentz oscillator model.
 
 #### $\nabla^2\mathbf E$ for a plane wave
+
 {{< include vector-calculus.qmd >}}
 
 ## Lorentz electron-oscillator model
 
-Consider a bound electron of charge $-e$, mass $m$, natural frequency $\omega_0$, and damping constant $\gamma$. Its electric dipole moment along the polarization direction is $p=-ez$, where $z$ is the electron's displacement from equilibrium. The equation of motion for the dipole moment is
-$$
+Consider a bound electron of charge $-e$, mass $m$, natural frequency $\omega_0$, and damping constant $\gamma$. Its electric dipole moment along the polarization direction is $p=-ez$, where $z$ is the electron's displacement from equilibrium. The equation of motion for the dipole moment is $$
 \ddot{p}+2\gamma\dot{p}+\omega_0^2p=\frac{e^2}{m}E(t).
-$$ {#eq-lorentz-oscillator}
-A crucial point is the meaning of the driving field $E(t)$ in @eq-lorentz-oscillator. In the present Maxwell-equation treatment, we seek a **self-consistent field inside the medium**. Therefore, neglecting microscopic local-field corrections, $E(t)$ is the **total macroscopic electric field in the material**: the field that remains after the incident field and the fields produced by all of the polarized atoms have combined. It is not assumed in advance to be the unperturbed vacuum incident field.
+$$ {#eq-lorentz-oscillator} A crucial point is the meaning of the driving field $E(t)$ in @eq-lorentz-oscillator. In the present Maxwell-equation treatment, we seek a **self-consistent field inside the medium**. Therefore, neglecting microscopic local-field corrections, $E(t)$ is the **total macroscopic electric field in the material**: the field that remains after the incident field and the fields produced by all of the polarized atoms have combined. It is not assumed in advance to be the unperturbed vacuum incident field.
 
-It is useful to compare this with the [thin-sheet derivation](optical-dispersion.qmd). In that approximation, the oscillators in **every sheet** are driven  by the **unperturbed vacuum field** plus the total induced field radiated by the sheets on its left side, neglecting radiations from the sheet on its right side.
+It is useful to compare this with the [thin-sheet derivation](optical-dispersion.qmd). In that approximation, the oscillators in **every sheet** are driven by the **unperturbed vacuum field** plus the total induced field radiated by the sheets on its left side, neglecting radiations from the sheet on its right side.
 
-The Maxwell-equation treatment is different. Here $E(t)$ in @eq-lorentz-oscillator is the **self-consistent macroscopic field inside the medium**, and the polarization generated by the medium is part of the same field that drives the oscillators. 
+The Maxwell-equation treatment is different. Here $E(t)$ in @eq-lorentz-oscillator is the **self-consistent macroscopic field inside the medium**, and the polarization generated by the medium is part of the same field that drives the oscillators.
 
 ## From polarization to the complex refractive index
-For harmonic time dependence $e^{-i\omega t}$, @eq-lorentz-oscillator gives the dipole response
-$$
+
+For harmonic time dependence $e^{-i\omega t}$, @eq-lorentz-oscillator gives the dipole response $$
 \widetilde{\mathbf p}(x)=\alpha(\omega)\widetilde{\mathbf E}(x),
 \qquad
 \alpha(\omega)=\frac{e^2}{m(\omega_0^2-\omega^2-2i\gamma\omega)}.
-$$ {#eq-polarization-response}
-Here $\widetilde{\mathbf p}(x)=\widetilde p(x)\hat{\mathbf z}$. For $N$ oscillators per unit volume, the polarization is
-$$
+$$ {#eq-polarization-response} Here $\widetilde{\mathbf p}(x)=\widetilde p(x)\hat{\mathbf z}$. For $N$ oscillators per unit volume, the polarization is $$
 \widetilde{\mathbf P}(x)=N\widetilde{\mathbf p}(x)
 =\epsilon_0\chi(\omega)\widetilde{\mathbf E}(x).
-$$ {#eq-linear-polarization-vector}
-Define the vacuum wave number as
-$$
+$$ {#eq-linear-polarization-vector} Define the vacuum wave number as $$
 k_0=\frac{\omega}{c}.
-$$ {#eq-vacuum-wave-number}
-Substituting the polarization relation into @eq-wave-polarization gives
-$$
+$$ {#eq-vacuum-wave-number} Substituting the polarization relation into @eq-wave-polarization gives $$
 \nabla^2\widetilde{\mathbf E}
 +k_0^2
 \left[1+\chi(\omega)\right]\widetilde{\mathbf E}=0.
-$$ {#eq-frequency-wave}
-We seek a plane-wave solution of @eq-frequency-wave propagating along $+x$ with its electric field polarized along $z$. Choose the phase origin so that $E_0$ is real and positive, and write the complex spatial amplitude as
-$$
+$$ {#eq-frequency-wave} We seek a plane-wave solution of @eq-frequency-wave propagating along $+x$ with its electric field polarized along $z$. Choose the phase origin so that $E_0$ is real and positive, and write the complex spatial amplitude as $$
 \widetilde{\mathbf E}(x)
 =E_0e^{ikx}\hat{\mathbf z},
-$$ {#eq-plane-wave}
-The wave number $k$ is not arbitrary: it must make @eq-plane-wave satisfy @eq-frequency-wave. Since $\nabla^2\widetilde{\mathbf E}=-k^2\widetilde{\mathbf E}$ for this plane wave, substitution into @eq-frequency-wave gives the dispersion relation
-$$
+$$ {#eq-plane-wave} The wave number $k$ is not arbitrary: it must make @eq-plane-wave satisfy @eq-frequency-wave. Since $\nabla^2\widetilde{\mathbf E}=-k^2\widetilde{\mathbf E}$ for this plane wave, substitution into @eq-frequency-wave gives the dispersion relation $$
 k^2
 =k_0^2
 \left[1+\chi(\omega)\right].
@@ -150,60 +115,44 @@ $$ {#eq-dispersion-k}
 
 Thus @eq-plane-wave is a solution of @eq-frequency-wave provided that $k$ satisfies @eq-dispersion-k. This relation determines the allowed wave number from the material's susceptibility $\chi(\omega)$.
 
-Define the refractive index by
-$$
+Define the refractive index by $$
 k=nk_0.
-$$ {#eq-index-definition}
-Then
-$$
-\boxed{n^2(\omega)=1+\chi(\omega)}.
+$$ {#eq-index-definition} Then $$
+\boxed{n^2(\omega)=1+\chi(\omega)=1+\frac{N\alpha}{2\epsilon_0}}.
 $$ {#eq-index-susceptibility}
 
-Because $\chi(\omega)$ is complex, the refractive index is also complex. Write
-$$
+Because $\chi(\omega)$ is complex, the refractive index is also complex. Write $$
 n=n'+in'',
-$$ {#eq-complex-index}
-where
-$$
+$$ {#eq-complex-index} where $$
 n'=\mathrm{Re}\left[\sqrt{1+\chi}\right],\qquad n''=\mathrm{Im}\left[\sqrt{1+\chi}\right].
 $$
 
 ## Propagation and absorption
 
-Using @eq-index-definition and @eq-complex-index, the complex wave number is
-$$
+Using @eq-index-definition and @eq-complex-index, the complex wave number is $$
 k=k_0(n'+in'').
 $$ {#eq-complex-wave-number}
 
-Therefore the complex plane wave @eq-plane-wave becomes
-$$
+Therefore the complex plane wave @eq-plane-wave becomes $$
 \widetilde E(x)
 =E_0
 \exp\left(-k_0n''x\right)
 \exp\left(ik_0n'x\right).
-$$ {#eq-complex-propagating-field}
-Taking the real part gives the physical electric field,
-$$
+$$ {#eq-complex-propagating-field} Taking the real part gives the physical electric field, $$
 \boxed{
 E(x,t)
 =E_0
 \exp\left(-k_0n''x\right)
 \cos\left(k_0n'x-\omega t\right)
 }.
-$$ {#eq-physical-field}
-Thus $n'$ determines the phase velocity and dispersion, while $n''$ determines attenuation and absorption.
+$$ {#eq-physical-field} Thus $n'$ determines the phase velocity and dispersion, while $n''$ determines attenuation and absorption.
 
-Since the cycle-averaged intensity is proportional to $|\widetilde E|^2$, @eq-complex-propagating-field gives
-$$
+Since the cycle-averaged intensity is proportional to $|\widetilde E|^2$, @eq-complex-propagating-field gives $$
 I(x)=I_0
 \exp\left(-2k_0n''x\right).
-$$ {#eq-intensity-decay}
-For a medium containing $N$ absorbers per unit volume, define the absorption cross section $\sigma_{\mathrm{abs}}$ through the Beer--Lambert law
-$$
+$$ {#eq-intensity-decay} For a medium containing $N$ absorbers per unit volume, define the absorption cross section $\sigma_{\mathrm{abs}}$ through the Beer--Lambert law $$
 I(x)=I_0e^{-N\sigma_{\mathrm{abs}}x}.
-$$ {#eq-beer-cross-section}
-Comparing @eq-intensity-decay and @eq-beer-cross-section gives
-$$
+$$ {#eq-beer-cross-section} Comparing @eq-intensity-decay and @eq-beer-cross-section gives $$
 \boxed{
 \sigma_{\mathrm{abs}}
 =\frac{2k_0n''}{N}
@@ -212,52 +161,36 @@ $$ {#eq-absorption-cross-section-index}
 
 ## Dilute-medium approximation
 
-If
-$$
+If $$
 |\chi|\ll1,
-$$ {#eq-small-susceptibility}
-then from @eq-index-susceptibility,
-$$
+$$ {#eq-small-susceptibility} then from @eq-index-susceptibility, $$
 n=\sqrt{1+\chi}
 \simeq1+\frac{\chi}{2}.
-$$ {#eq-index-expansion}
-Therefore,
-$$
+$$ {#eq-index-expansion} Therefore, $$
 \boxed{
 n'\simeq1+\frac{\chi'}{2}
 },
-$$ {#eq-index-real-approx}
-and
-$$
+$$ {#eq-index-real-approx} and $$
 \boxed{
 n''\simeq\frac{\chi''}{2}
 }.
-$$ {#eq-index-imag-approx}
-This is what we obtained from the thin sheets approximation.
+$$ {#eq-index-imag-approx} This is what we obtained from the thin sheets approximation.
 
 ## Summary
 
-The general Maxwell wave equation in a dielectric is @eq-wave-polarization,
-$$
+The general Maxwell wave equation in a dielectric is @eq-wave-polarization, $$
 \nabla^2\mathbf E
 -\frac{1}{c^2}\frac{\partial^2\mathbf E}{\partial t^2}
 =\mu_0\frac{\partial^2\mathbf P}{\partial t^2}.
-$$
-The Lorentz oscillator @eq-lorentz-oscillator then gives the polarization response @eq-polarization-response. This naturally defines the complex susceptibility through @eq-linear-polarization-vector,
-$$
+$$ The Lorentz oscillator @eq-lorentz-oscillator then gives the polarization response @eq-polarization-response. This naturally defines the complex susceptibility through @eq-linear-polarization-vector, $$
 \widetilde{\mathbf P}(x)
 =\epsilon_0\chi(\omega)\widetilde{\mathbf E}(x).
-$$ 
-where
-$$
+$$ where $$
 \begin{aligned}
 \chi(\omega)
 =&\frac{Ne^2}{\epsilon_0 m(\omega_0^2-\omega^2-2i\gamma\omega)}\\
 \simeq&-\frac{Ne^2}{2\epsilon_0m\omega_0}\frac{1}{\Delta+i\gamma}.
 \end{aligned}
-$$
-Substituting this constitutive relation back into the Maxwell wave equation gives
-$$
+$$ Substituting this constitutive relation back into the Maxwell wave equation gives $$
 \boxed{n^2(\omega)=1+\chi(\omega)}.
-$$
-The damping term produces a phase lag between the electron motion and the driving electric field. This makes $\chi$ complex. Through Maxwell's wave equation, the refractive index also becomes complex: its real part describes phase propagation and dispersion, while its imaginary part describes absorption.
+$$ The damping term produces a phase lag between the electron motion and the driving electric field. This makes $\chi$ complex. Through Maxwell's wave equation, the refractive index also becomes complex: its real part describes phase propagation and dispersion, while its imaginary part describes absorption.

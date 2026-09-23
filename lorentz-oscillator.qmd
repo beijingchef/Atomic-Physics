@@ -9,11 +9,9 @@ Think of a bound electron as a tiny mass on a spring. An electric wave pushes it
 
 Start with the simplest oscillator: a mass $m$ attached to an ideal spring of stiffness $k$, with no friction and no external driving force. If $z(t)$ is its displacement from equilibrium, Newton's second law gives $$
 \ddot z+\omega_0^2z=0.
-$$ {#eq-free-oscillator} where $\omega_0=\sqrt{k/m}$ is the natural angular frequency of the oscillator. The solution is 
-$$
+$$ {#eq-free-oscillator} where $\omega_0=\sqrt{k/m}$ is the natural angular frequency of the oscillator. The solution is $$
 z(t)=A\cos(\omega_0t+\varphi),
-$$ {#eq-free-solution} where $A$ is the oscillation amplitude and $\varphi$ is fixed by the initial conditions. The angular frequency $\omega_0$ is the oscillator's natural, or resonant, frequency. With no friction, the mechanical energy 
-$$
+$$ {#eq-free-solution} where $A$ is the oscillation amplitude and $\varphi$ is fixed by the initial conditions. The angular frequency $\omega_0$ is the oscillator's natural, or resonant, frequency. With no friction, the mechanical energy $$
 U=\frac12m\dot z^2+\frac12m\omega_0^2z^2
 $$ {#eq-free-energy} remains constant. The oscillator keeps moving forever because it has no way to lose energy. This ideal model cannot describe a bound electron completely. An oscillating charge radiates, so its mechanical energy cannot remain constant forever. We now build that radiation loss into the oscillator's equation of motion.
 

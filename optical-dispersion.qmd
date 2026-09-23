@@ -134,7 +134,7 @@ To identify the refractive index, compare @eq-accumulated-field with a wave in a
 \widetilde E(x) = \widetilde E(0) e^{i n k_0 x}
 $$ {#eq-medium-wave-compare} We see that\
 $$
-n=1+\frac{\chi}{2}.
+n=1+\frac{\chi}{2}=1+\frac{N\alpha}{2\epsilon_0}.
 $$ {#eq-refractive-index}
 
 Because susceptibility is a complex number, the index of refraction is also complex $$
@@ -157,7 +157,7 @@ I(x)=I(0)e^{-2k_0n'' x}.
 $$ {#eq-beer-law} We can rewrite @eq-beer-law as $$
 I(x)=I(0)e^{-N\sigma_{\mathrm{abs}}x}
 $$ where $$
-\sigma_{\mathrm{abs}}=\frac{2k_0n''}{N}=\frac{k_0\chi''}{N}=\frac{k_0 \alpha''(\omega)}{\epsilon_0}=\frac{e^2}{2\epsilon_0mc}
+\sigma_{\mathrm{abs}}=\frac{2k_0n''}{N}=\frac{k_0 \alpha''(\omega)}{\epsilon_0}=\frac{e^2}{2\epsilon_0mc}
 \frac{\gamma}{\Delta^2+\gamma^2}.
 $$ $\sigma_{\mathrm{abs}}$ has units of area and is therefore named absorption cross section. The product $N\sigma_{\mathrm{ext}}$ has units of inverse length and measures how quickly scattering and absorption remove energy from the coherent beam. Surface reflection is omitted here.
 
