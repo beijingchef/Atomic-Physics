@@ -15,6 +15,7 @@ project:
     - optical-dispersion.qmd
     - maxwell-equation-approach.qmd
     - normal-zeeman-effect.qmd
+    - lorentz-exercises.qmd
     - part-2.qmd
     - part-3.qmd
 
@@ -56,6 +57,8 @@ website:
                 href: maxwell-equation-approach.qmd
               - text: "2.5 · The normal Zeeman effect"
                 href: normal-zeeman-effect.qmd
+              - text: "Exercises"
+                href: lorentz-exercises.qmd
       - section: "Part 2 · Elements of quantum mechanics"
         href: part-2.qmd
       - section: "Part 3 · Atomic Structure and Interactions with External Fields"

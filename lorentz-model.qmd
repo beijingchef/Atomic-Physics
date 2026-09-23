@@ -35,6 +35,6 @@ To be added.
 
 To be added.
 
-## After-class homework
+## Exercises {.unnumbered}
 
-To be added. See [Assignments](assignments.qmd) for deadlines and submission instructions.
+[Exercises](lorentz-exercises.qmd) contains five problems and two in-depth project assignments covering this chapter. See [Assignments](assignments.qmd) for deadlines and submission instructions.

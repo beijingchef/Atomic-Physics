@@ -1,0 +1,113 @@
+---
+title: "Exercises"
+subtitle: "Lorentz model · Problems and in-depth projects"
+number-sections: false
+---
+
+These exercises accompany the [Lorentz model](lorentz-model.qmd) chapter. Show your reasoning, state approximations, and check units and limiting cases. Use SI units, $e>0$ for the magnitude of the electron charge, the time convention $e^{-i\omega t}$, and $\Delta=\omega-\omega_0$. The damping term is $2\gamma \dot z$, so $\gamma$ is the amplitude decay rate.
+
+## Exercise problems
+
+### Problem 1 · Where does a dipole radiate?
+
+A dipole $\mathbf p(t)=p_0\cos(\omega t)\hat{\mathbf z}$ radiates into vacuum. In the radiation zone, its cycle-averaged angular distribution is
+
+$$
+\frac{d\langle P\rangle}{d\Omega}
+=\frac{p_0^2\omega^4}{32\pi^2\epsilon_0c^3}\sin^2\theta,
+$$
+
+where $\theta$ is measured from the dipole axis.
+
+1.  Integrate over solid angle to obtain the total radiated power. Explain why the solid-angle element is $\sin\theta\,d\theta\,d\phi$.
+2.  Find the fraction of the total power emitted into the equatorial belt $\pi/3\leq\theta\leq2\pi/3$. Compare it with the fraction of solid angle occupied by that belt.
+
+### Problem 2 · Radiation damping and lifetime
+
+An electron oscillates freely with natural wavelength $\lambda_0=589\,\mathrm{nm}$, where $\omega_0=2\pi c/\lambda_0$. Treat radiation damping as weak and use the slowly varying amplitude $A(t)$.
+
+1.  Calculate the amplitude decay time and energy decay time. Use $e=1.602\times10^{-19}\,\mathrm C$, $m=9.109\times10^{-31}\,\mathrm{kg}$, $\epsilon_0=8.854\times10^{-12}\,\mathrm{F\,m^{-1}}$, and $c=2.998\times10^8\,\mathrm{m\,s^{-1}}$.
+
+2.  Add a nonradiative amplitude damping rate $\gamma_{\mathrm{nr}}=3\gamma_{\mathrm{rad}}$. Find the new energy lifetime and the fraction of the initial energy eventually emitted as radiation, assuming both rates remain constant.
+
+### Problem 3 · Driven motion, phase, and energy balance
+
+A bound electron is driven by $E(t)=E_0\cos\omega t$. Its dipole moment obeys
+
+$$
+\ddot p+2\gamma\dot p+\omega_0^2p=\frac{e^2}{m}E(t).
+$$
+
+1.  Derive the exact complex polarizability $\alpha(\omega)=\widetilde p/E_0$. Separate its real and imaginary parts and identify their signs below and above resonance.
+2.  In the limit $|\Delta|,\gamma\ll\omega_0$, obtain the in-phase and quadrature dipole components. Evaluate both components, the amplitude, and the phase lag at $\Delta=-\gamma,0,+\gamma$, using the resonant amplitude as your normalization.
+3.  Calculate $\langle E\dot p\rangle$ and show, using the **exact** response, that it equals the mean damping loss $2m\gamma\langle\dot z^2\rangle$, where $p=-ez$.
+4.  Find the frequency that maximizes the exact displacement amplitude for weak damping. Compare it with the frequency that maximizes the mean power supplied when $E_0$ and $\gamma$ are constant. Explain why the two maxima need not coincide.
+
+### Problem 4 · From one oscillator to a refractive index
+
+Consider a homogeneous, nonmagnetic glass slab of thickness $L=1.0\,\mathrm{cm}$. At the vacuum wavelength $\lambda=600\,\mathrm{nm}$, take its effective macroscopic susceptibility to be $\chi=1.25+3.0\times10^{-6}i$. These illustrative values describe a weakly absorbing, glass-like dielectric with a refractive index close to $1.5$; they are not measured data for a specific glass. Use the given susceptibility directly, without applying an additional local-field correction. Consider the wave *inside* the glass; omit entrance and exit reflections.
+
+1.  Using $n^2=1+\chi$ for a transverse plane wave. Calculate the passive branch of $n=n'+in''$ and compare it with $n\simeq1+\chi/2$. Report the absolute errors in $n'$ and $n''$. Is the dilute-medium approximation justified for this glass?
+2.  Find the excess phase relative to vacuum, $(n'-1)k_0L$, and the intensity ratio $I(L)/I(0)=\exp(-2k_0n''L)$, with $k_0=2\pi/\lambda$. Repeat with the approximate index.
+
+### Problem 5 · Classical normal Zeeman splitting
+
+Place an isotropically bound electron in a static field $\mathbf B_0=B_0\hat{\mathbf z}$. Neglect damping initially. Its free motion satisfies
+
+$$
+m\ddot{\mathbf r}=-m\omega_0^2\mathbf r-e\dot{\mathbf r}\times\mathbf B_0.
+$$
+
+Define $\omega_c=eB_0/m$ and assume $\omega_c\ll\omega_0$.
+
+1.  For $B_0=1.0\,\mathrm T$ and $\lambda_0=589\,\mathrm{nm}$, calculate the frequency shift of each side component in hertz and its approximate wavelength shift. Distinguish a side-to-center separation from the full side-to-side separation.
+2.  How can you use Zeeman effect to determination the sign of the osillating charge.
+
+```{=html}
+<!--
+## In-depth project assignments
+
+### Project 1 · When does the dilute-medium approximation fail?
+
+**Aim:** connect the microscopic oscillator response to measurable phase and attenuation, and quantify the limits of the thin-sheet approximation.
+
+Use the dimensionless variables $u=\omega/\omega_0$, $g=\gamma/\omega_0$, and $s=Ne^2/(\epsilon_0m\omega_0^2)$, giving
+
+$$
+\chi(u)=\frac{s}{1-u^2-2igu},\qquad
+n_{\mathrm{exact}}=\sqrt{1+\chi},\qquad
+n_{\mathrm{dilute}}=1+\frac{\chi}{2}.
+$$
+
+Take $g=0.01$, compare $s=10^{-4},10^{-3},10^{-2},10^{-1}$, and study $0.8\leq u\leq1.2$. Choose the square-root branch continuously so that $n''\geq0$ and $n\to1$ at high frequency.
+
+1.  Implement both index calculations and plot $n'$ and $n''$ for each density parameter. Resolve the resonance with a sufficiently fine frequency grid and demonstrate convergence by refining it.
+2.  Map where $|n_{\mathrm{dilute}}-n_{\mathrm{exact}}|/|n_{\mathrm{exact}}|<1\%$. Relate this condition to $|\chi|$, and explain why a small density parameter alone does not guarantee accuracy near resonance.
+3.  For dimensionless propagation lengths $\ell=\omega_0L/c=1,10,100$, calculate the internal propagation factor $H=\exp(inu\ell)$. Compare the intensity transmission $|H|^2$ and excess phase $(n'-1)u\ell$ predicted by the two models. Use logarithmic transmission or optical depth when attenuation is very strong; avoid relative errors formed by dividing by a nearly zero transmission.
+4.  Find an example where a small index error produces a substantial phase or transmission error after propagation. Explain the role of accumulated propagation distance.
+5.  Extend the calculation to a slab in vacuum at normal incidence, including Fresnel reflection and repeated internal reflections. Derive or justify the slab transmission amplitude, check the zero-thickness and vacuum limits, and compare the result with propagation alone. In the lossless limit, verify $R+T=1$; for a passive lossy slab, verify $R+T\leq1$.
+
+**Deliverables:** a reproducible script or notebook, labeled figures, and a 4–6 page report explaining the derivation, numerical checks, and physical conclusions. Clearly distinguish internal propagation from transmission through both slab boundaries, and discuss which microscopic assumptions may fail as density increases.
+
+### Project 2 · A classical spectrum in a magnetic field
+
+**Aim:** build a polarization-resolved Lorentz model and investigate when magnetic splitting can be resolved.
+
+Extend Problem 5 to a damped, driven electron:
+
+$$
+\ddot{\mathbf r}+2\gamma\dot{\mathbf r}+\omega_0^2\mathbf r
+=-\frac{e}{m}\left[\mathbf E(t)+\dot{\mathbf r}\times\mathbf B_0\right].
+$$
+
+Use $\mathbf B_0=B_0\hat{\mathbf z}$, $\lambda_0=589\,\mathrm{nm}$, $\gamma/\omega_0=10^{-5}$, and $b=\omega_c/(2\gamma)=0,0.5,1,2,5$. Treat these as illustrative classical parameters rather than a complete model of a particular atomic transition.
+
+1.  Derive the polarizability tensor in Cartesian coordinates and diagonalize the transverse response in a circular basis. State your definitions of the two circular polarization vectors and verify that the zero-field limit reproduces the scalar Lorentz polarizability.
+2.  Compute spectra of the cycle-averaged supplied power $\langle P\rangle=(\omega/2)\operatorname{Im}(\widetilde{\mathbf E}^{\,*}\cdot\widetilde{\mathbf p})$ for fixed field amplitude. Compare $x$-polarized, $z$-polarized, and both circularly polarized drives over $|\Delta|\leq10\gamma$. Explain which modes each drive excites.
+3.  Convert the chosen values of $b$ into magnetic fields. For the $x$-polarized spectrum, define a practical criterion for two resolved peaks and determine its threshold numerically. Compare peak separation with linewidth and test sensitivity to frequency-grid spacing.
+4.  Calculate the far-field radiation for selected driven modes using $\widetilde{\mathbf E}_{\mathrm{rad}}\propto\hat{\mathbf n}\times(\widetilde{\mathbf p}\times\hat{\mathbf n})$. Analyze observations parallel and perpendicular to the magnetic field, including the effect of a linear polarization analyzer. Distinguish selective excitation of one mode from an incoherent ensemble of independently excited modes.
+5.  Discuss the limits of this classical prediction: which features of the normal Zeeman pattern follow from the model, and which require quantum energy levels, selection rules, or electron spin? Explain why a constant phenomenological damping rate does not automatically separate radiative loss from heating.
+
+**Deliverables:** a reproducible script or notebook, polarization-resolved spectra and radiation plots, and a 4–6 page report containing the tensor derivation, validation checks, resolution criterion, and physical interpretation. Include a short comparison of the scalar zero-field model and the magnetic-field response.
+-->
+```
