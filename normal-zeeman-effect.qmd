@@ -1,20 +1,228 @@
 ---
 title: "2.5 · The normal Zeeman effect"
-subtitle: "Lorentz model"
+subtitle: "Lorentz model · Magnetic splitting and polarization"
 ---
+
+Without a magnetic field, an isotropic Lorentz oscillator has the same natural frequency in every direction. A static magnetic field changes this: motion parallel to the field keeps its original frequency, while two circular motions perpendicular to the field acquire different frequencies. Their dipole radiation gives the three components of the **normal Zeeman effect**.
+
+We will derive the frequency shifts and then use the [dipole-radiation result](dipole-radiation.qmd) to understand why the observed spectrum and polarization depend on the viewing direction. **SI units** are used throughout.
 
 ## Learning objectives
 
-To be added.
+- Obtain the three normal modes of a bound electron in a uniform magnetic field.
+- Derive the weak-field shifts $\Delta\omega=\pm eB/(2m)$ and distinguish angular frequency from ordinary frequency.
+- Explain the transverse triplet, the longitudinal doublet, and their polarization.
+- Identify what the classical Lorentz model explains and where a quantum description is needed.
 
 ## Electron motion in a magnetic field
 
-Content to be added.
+Treat an electron of charge $-e$ ($e>0$) and mass $m$ as a three-dimensional harmonic oscillator with an isotropic restoring force $-m\omega_0^2\mathbf r$. Its positive binding center is fixed at the origin, so its electric dipole moment is $\mathbf p=-e\mathbf r$.
+
+Apply a uniform, static magnetic field $$
+\mathbf B_0=B\hat{\mathbf z},\qquad B>0.
+$$ Define the **Larmor angular frequency** $$
+\omega_L=\frac{eB}{2m}.
+$$ {#eq-zeeman-larmor} We consider free oscillations after excitation. To find their frequencies, neglect damping; weak damping can later give each spectral component a finite linewidth. Newton's equation, including the magnetic Lorentz force, is $$
+m\ddot{\mathbf r}=-m\omega_0^2\mathbf r-e\dot{\mathbf r}\times\mathbf B_0.
+$$ {#eq-zeeman-motion} Since $\dot{\mathbf r}\times\mathbf B_0=B(\dot y,-\dot x,0)$ and $eB/m=2\omega_L$, the component equations are $$
+\begin{aligned}
+\ddot x+\omega_0^2x&=-2\omega_L\dot y,\\
+\ddot y+\omega_0^2y&=+2\omega_L\dot x,\\
+\ddot z+\omega_0^2z&=0.
+\end{aligned}
+$$ {#eq-zeeman-components} The field couples the $x$ and $y$ motions but leaves the $z$ motion unchanged. The magnetic force does no work because $\dot{\mathbf r}\cdot(\dot{\mathbf r}\times\mathbf B_0)=0$: it changes the trajectory and its frequencies without supplying mechanical energy.
+
+### Motion parallel to the field
+
+The third equation immediately gives $$
+z(t)=A_z\cos(\omega_0t+\varphi_z).
+$$ {#eq-zeeman-parallel} This linear oscillation produces an unshifted spectral component at $\omega_0$. It is called the $\pi$ component.
+
+### Two circular motions perpendicular to the field
+
+A natural guess is **uniform circular motion in the** $xy$ plane, centered on the binding center. For such a motion, the velocity is perpendicular to $\mathbf r$ and lies perpendicular to $\mathbf B_0$. The magnetic force $-e\dot{\mathbf r}\times\mathbf B_0$ is therefore radial: it points either inward or outward, depending on the sense of rotation. The spring force is also radial and always points inward. Their sum can provide exactly the centripetal force required for circular motion, making the guess self-consistent at the appropriate frequency.
+
+Write the circular motion as $$
+x(t)=A\cos(\omega t),\qquad
+y(t)=A\sin(\omega t).
+$$ {#eq-zeeman-circular-ansatz} Here $A>0$ is the radius. Allow $\omega$ to be signed: positive $\omega$ gives motion from the positive $x$ axis toward positive $y$, while negative $\omega$ gives the opposite rotation. The physical oscillation frequency is $|\omega|$.
+
+For either circular motion, $$
+\ddot{\mathbf r}=-\omega^2\mathbf r,
+\qquad
+-e\dot{\mathbf r}\times\mathbf B_0=-eB\omega\mathbf r.
+$$ {#eq-zeeman-radial-force} Taking inward as positive, the radial force balance is therefore $$
+\underbrace{m\omega^2A}_{\text{required centripetal force}}
+=\underbrace{m\omega_0^2A}_{\text{spring force}}
++\underbrace{eB\omega A}_{\text{magnetic contribution}}.
+$$ {#eq-zeeman-centripetal-balance}
+
+Defining $$\omega_L \equiv \frac{eB}{2m}$$ gives $$
+\omega^2-2\omega_L\omega-\omega_0^2=0.
+$$ {#eq-zeeman-frequency-equation} Solving this quadratic directly gives two signed roots: $$
+\boxed{\omega=\omega_L\pm\sqrt{\omega_0^2+\omega_L^2}}.
+$$ {#eq-zeeman-signed-roots} One root is positive and the other negative, so they describe opposite rotations. Taking their absolute values gives the two positive angular frequencies: $$
+\omega^{+}=\sqrt{\omega_0^2+\omega_L^2}+\omega_L,
+\qquad
+\omega^{-}=\sqrt{\omega_0^2+\omega_L^2}-\omega_L.
+$$ {#eq-zeeman-exact-frequencies} Thus the three independent modes are one linear oscillation along $z$ and two oppositely rotating circular oscillations in the $xy$ plane. General motion is a superposition of these modes. The circular modes produce the two $\sigma$ components.
+
+For the positive root, the magnetic force points inward and increases the frequency. For the negative root, it points outward and decreases the frequency magnitude.
 
 ## Spectral-line splitting
 
-Content to be added.
+For a weak magnetic field, $\omega_L\ll\omega_0$. Expanding @eq-zeeman-exact-frequencies gives $$
+\begin{aligned}
+\omega^{+}&=\omega_0+\omega_L+\frac{\omega_L^2}{2\omega_0}+\cdots,\\
+\omega^{-}&=\omega_0-\omega_L+\frac{\omega_L^2}{2\omega_0}+\cdots.
+\end{aligned}
+$$ To first order in $B$, these two circular modes and the unchanged $z$ mode give the three emitted angular frequencies $$
+\boxed{\omega_0-\omega_L,\qquad\omega_0,\qquad\omega_0+\omega_L}.
+$$ {#eq-zeeman-triplet} This is the normal Zeeman triplet. Equal spacing about $\omega_0$ is a first-order result; the exact classical transverse frequencies also have a small common upward shift of order $B^2$.
+
+Why do the mechanical frequencies become spectral lines? Each mode contributes to $\mathbf p(t)=-e\mathbf r(t)$, and its radiation field is proportional to $\ddot{\mathbf p}(t_r)$. Differentiation changes the amplitude and phase but preserves the oscillation frequency. An ensemble with all three modes excited can therefore emit all three components, subject to the viewing geometry below.
+
+With $\nu=\omega/(2\pi)$, the magnitude of the shift of either side component from the central line is $$
+\boxed{\Delta\nu=\frac{\omega_L}{2\pi}=\frac{eB}{4\pi m}}.
+$$ {#eq-zeeman-frequency-shift} The adjacent-component separation is $\Delta\nu$; the separation of the two outer components is twice as large. For small shifts, $\lambda=c/\nu$ gives the wavelength-shift magnitude $$
+|\Delta\lambda|\simeq\frac{\lambda_0^2}{c}\Delta\nu
+=\frac{eB\lambda_0^2}{4\pi mc}.
+$$ {#eq-zeeman-wavelength-shift} The higher-frequency component has the shorter wavelength. Equal frequency spacing corresponds only approximately to equal wavelength spacing.
+
+For an electron, $\Delta\nu/B\simeq14.0~\mathrm{GHz\,T^{-1}}$. At $B=1.00~\mathrm T$, a line near $\lambda_0=500~\mathrm{nm}$ has side components displaced by about $0.0117~\mathrm{nm}$ from the center. This is a small wavelength separation, so resolving it requires sufficiently narrow lines and adequate spectrometer resolution.
+
+## Viewing direction and polarization
+
+The dipole radiation field in observation direction $\hat{\mathbf n}$ is $$
+\mathbf E_{\mathrm{rad}}(R,t)=
+\frac{1}{4\pi\epsilon_0c^2R}
+\hat{\mathbf n}\times\left[\hat{\mathbf n}\times\ddot{\mathbf p}(t-R/c)\right].
+$$ {#eq-zeeman-radiation-projection} Here $R$ is the distance to the observer. The double cross product selects the part of the dipole acceleration perpendicular to the line of sight, with an overall minus sign. Consequently, the observed polarization follows the transverse projection of each mode.
+
+### Looking perpendicular to the magnetic field
+
+Take the line of sight along $x$, with $\mathbf B_0$ along $z$.
+
+- The $\pi$ mode oscillates along $z$. Its radiation is linearly polarized **parallel to** $\mathbf B_0$.
+- Each $\sigma$ mode rotates in the $xy$ plane. Its $x$ component is along the line of sight and contributes no radiation toward this observer. The remaining $y$ component gives linear polarization **perpendicular to** $\mathbf B_0$.
+
+All three components can be observed: this is the **transverse Zeeman triplet**. A linear polarizer with its transmission axis parallel to $\mathbf B_0$ selects the central line; turning it through $90^\circ$ selects the two side lines.
+
+### Looking along the magnetic field
+
+Now take the line of sight along $z$.
+
+- The $\pi$ mode points along the line of sight. A linear dipole does not radiate along its axis, so the central component is absent.
+- Both circular modes lie entirely in the observer's transverse plane. Their electric fields rotate in opposite senses, giving **opposite circular polarizations**.
+
+Only the two shifted components remain: this is the **longitudinal Zeeman doublet**, whose separation is $2\Delta\nu$. Reversing the viewing direction reverses the apparent sense of rotation, so a handedness label must always specify its convention.
+
+| Observation direction | Visible components | Polarization |
+|:-----------------------|:-----------------------|:-----------------------|
+| Perpendicular to $\mathbf B_0$ | Central $\pi$ line and two shifted $\sigma$ lines | $\pi$: linear, parallel to $\mathbf B_0$; $\sigma$: linear, perpendicular to $\mathbf B_0$ |
+| Parallel to $\mathbf B_0$ | Two shifted $\sigma$ lines | Opposite circular polarizations |
+
+At intermediate viewing angles the $\sigma$ components are generally elliptically polarized. Component intensities also depend on mode excitation; the three-mode decomposition alone does not require equal observed line strengths.
+
+## What the Lorentz model explains
+
+The classical calculation explains the normal triplet's linear dependence on $B$, the magnitude $eB/(2m)$ of its angular-frequency shifts, and the polarization seen from different directions. It connects spectral splitting directly to the magnetic force on a moving electron.
+
+Actual atomic emission involves transitions between quantum energy levels. In the weak-field quantum description, a magnetic sublevel shifts by $\Delta E=g_J\mu_B M_JB$, where $\mu_B=e\hbar/(2m)$. For singlet levels ($S=0$), the normal pattern follows from orbital magnetism: the allowed changes in magnetic quantum number give photon-energy shifts $0$ and $\pm\mu_BB$, consistent with the classical result $\hbar\omega_L=\mu_BB$. Electron spin and different level $g$ factors produce more general, historically called **anomalous**, Zeeman patterns that this spinless oscillator cannot explain. See the [NIST account of the Zeeman effect](https://www.nist.gov/pml/atomic-spectroscopy-compendium-basic-ideas-notation-data-and-formulas/atomic-spectroscopy-zeeman) for the quantum description.
 
 ## Check your understanding
 
-To be added.
+1.  A normal oscillation, or normal mode, is a motion in which all coordinates oscillate at one frequency, with fixed amplitude ratios and phase differences.
+2.  Why is the frequency of the $z$ mode unchanged, although the electron is in a magnetic field?
+3.  Why are circular motions, rather than separate $x$ and $y$ oscillations, the transverse normal modes?
+4.  At $B=0.50~\mathrm T$, what are the adjacent-component separation in frequency?
+5.  Why does the central line disappear when the source is viewed along the field? How would you isolate it when viewing perpendicular to the field?
+6.  How can a magnetic field change the oscillation frequencies while doing no work on the electron?
+
+::: {.callout-note collapse="true" title="Answers"}
+1.  Motion along $\mathbf B_0$ has $\dot{\mathbf r}\times\mathbf B_0=0$, so only the original restoring force acts.
+2.  The magnetic force couples $x$ and $y$. A circular motion maintains a fixed amplitude ratio and phase difference between them and oscillates at one frequency.
+3.  About $7.0~\mathrm{GHz}$ between adjacent components and $14.0~\mathrm{GHz}$ between the outer components.
+4.  The $z$ dipole has zero radiation along its axis. In transverse observation, a linear polarizer parallel to $\mathbf B_0$ selects the central line.
+5.  The magnetic force is perpendicular to velocity. It changes the trajectory and the relation between its period and radius without changing the total mechanical energy of the undamped oscillator.
+:::
+
+## Appendix: normal modes from a complex eigenvalue problem
+
+Here we solve the coupled linear differential equations without assuming the shapes of the normal modes. We retain the same undamped, isotropic oscillator and the definition $\omega_L=eB/(2m)$.
+
+### Complex notation and the harmonic ansatz
+
+Write the real displacement as the real part of a complex solution and use a constant-amplitude harmonic ansatz: $$
+\mathbf r(t)=\operatorname{Re}\!\left[\widetilde{\mathbf r}\,e^{-i\omega t}\right],
+\qquad
+\widetilde{\mathbf r}=\begin{pmatrix}X\\Y\\Z\end{pmatrix}.
+$$ {#eq-zeeman-eigen-ansatz} The complex constants $X,Y,Z$ contain both amplitudes and relative phases. This is the steady harmonic ansatz: $d/dt$ becomes $-i\omega$ and $d^2/dt^2$ becomes $-\omega^2$. Here we are finding free normal oscillations, so the frequency is an unknown eigenvalue; there is no external drive selecting it. With no damping, these motions persist rather than being approached through decay of a transient.
+
+Substitute into @eq-zeeman-components and define $D(\omega)=\omega_0^2-\omega^2$. The differential equations become the homogeneous algebraic system $$
+\begin{aligned}
+DX-2i\omega_L\omega Y&=0,\\
+2i\omega_L\omega X+DY&=0,\\
+DZ&=0.
+\end{aligned}
+$$ Equivalently, $$
+\underbrace{\begin{pmatrix}
+D&-2i\omega_L\omega&0\\
+2i\omega_L\omega&D&0\\
+0&0&D
+\end{pmatrix}}_{\mathsf M(\omega)}
+\begin{pmatrix}X\\Y\\Z\end{pmatrix}=\mathbf 0.
+$$ {#eq-zeeman-eigen-matrix} This is a **quadratic eigenvalue problem** in $\omega$.
+
+### Find the eigenfrequencies
+
+A nonzero displacement requires $\det\mathsf M(\omega)=0$. Evaluating the determinant gives $$
+\begin{aligned}
+\det\mathsf M(\omega)
+&=D\left(D^2-4\omega_L^2\omega^2\right)\\
+&=D\left(D+2\omega_L\omega\right)
+\left(D-2\omega_L\omega\right)=0.
+\end{aligned}
+$$ {#eq-zeeman-characteristic} There are three positive-frequency solutions: $$
+\begin{aligned}
+D=0&\quad\Longrightarrow\quad \omega=\omega_0,\\
+D+2\omega_L\omega=0&\quad\Longrightarrow\quad
+\omega=\omega^{+}=\sqrt{\omega_0^2+\omega_L^2}+\omega_L,\\
+D-2\omega_L\omega=0&\quad\Longrightarrow\quad
+\omega=\omega^{-}=\sqrt{\omega_0^2+\omega_L^2}-\omega_L.
+\end{aligned}
+$$ {#eq-zeeman-eigenfrequencies}
+
+### Find the eigenvectors and the three eigen-oscillations
+
+For $B>0$, substitute each positive frequency back into @eq-zeeman-eigen-matrix.
+
+**The unshifted mode,** $\omega=\omega_0$. Here $D=0$, so the transverse equations require $X=Y=0$, while $Z$ is arbitrary. Choose $$
+\mathbf e_0=\begin{pmatrix}0\\0\\1\end{pmatrix},
+\qquad
+\mathbf r_0(t)=A_0\hat{\mathbf z}\cos\omega_0t.
+$$ {#eq-zeeman-eigenvector-zero} This is the linear oscillation along the magnetic field that produces the $\pi$ component.
+
+**The higher-frequency mode,** $\omega=\omega^{+}$. Here $D=-2\omega_L\omega^{+}$, so the first row gives $X+iY=0$, or $Y=iX$. Also $Z=0$. Choose $$
+\mathbf e_+=\frac{1}{\sqrt2}\begin{pmatrix}1\\i\\0\end{pmatrix}.
+$$ {#eq-zeeman-eigenvector-plus} Since $\operatorname{Re}[i e^{-i\omega t}]=\sin\omega t$, a real motion in this mode is $$
+\mathbf r_+(t)=A_+\left[\hat{\mathbf x}\cos(\omega^{+}t)
++\hat{\mathbf y}\sin(\omega^{+}t)\right].
+$$ It describes a circle, with motion from positive $x$ toward positive $y$.
+
+**The lower-frequency mode,** $\omega=\omega^{-}$. Here $D=2\omega_L\omega^{-}$, giving $X-iY=0$, or $Y=-iX$, and $Z=0$. Choose $$
+\mathbf e_-=\frac{1}{\sqrt2}\begin{pmatrix}1\\-i\\0\end{pmatrix},
+\qquad
+\mathbf r_-(t)=A_-\left[\hat{\mathbf x}\cos(\omega^{-}t)
+-\hat{\mathbf y}\sin(\omega^{-}t)\right].
+$$ {#eq-zeeman-eigenvector-minus} This circle rotates in the opposite sense. The two circular eigen-oscillations produce the $\sigma$ components. The real amplitudes $A_0,A_+,A_-$ above are arbitrary; we have set the initial phases to zero only to display the trajectories clearly.
+
+### General solution and the usual first-order eigenvalue form
+
+The three eigenvectors give the complete real solution: $$
+\boxed{\mathbf r(t)=\operatorname{Re}\!\left[
+c_0\mathbf e_0e^{-i\omega_0t}
++c_+\mathbf e_+e^{-i\omega^{+}t}
++c_-\mathbf e_-e^{-i\omega^{-}t}
+\right]}.
+$$ {#eq-zeeman-eigen-expansion} The three complex constants $c_0,c_+,c_-$ provide six real constants, exactly enough to specify the initial position and velocity in three dimensions. Thus no additional normal oscillations are needed. At $B=0$, all three frequencies coincide.

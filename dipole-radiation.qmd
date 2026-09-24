@@ -2,7 +2,32 @@
 title: "2.1 · Electric dipole radiation"
 subtitle: "Lorentz model · Classical radiation in vacuum"
 ---
-Picture two opposite charges moving relative to each other, or as a simple special case, one charge moving while the opposite charge remains fixed at the origin. Their electric field cannot rearrange everywhere at once, the changing dipole moment produces a time-dependent electromagnetic field, part of which travels outward as radiation. On this page, we will follow that wave from the moving dipole to its fields, energy flux, and total radiated power. **SI units** are used throughout.
+## What is the electric dipole moment?
+
+For a discrete distribution of charges $q_i$ at positions $\mathbf r_i(t)$, the **electric dipole moment** is
+$$
+\boxed{\mathbf p(t)=\sum_{i=1}^{N}q_i\mathbf r_i(t)}.
+$$ {#eq-discrete-dipole-moment}
+Each position vector is measured from the same chosen origin. The dipole moment is a vector with SI units $\mathrm{C\,m}$; the charges in the sum include their signs.
+
+### One charge fixed at the origin, the other moving
+
+Put a charge $-q$ at the origin and let a charge $+q$ move at position $\mathbf d(t)$, where $q>0$. Then
+$$
+\mathbf p(t)=(-q)\mathbf 0+(+q)\mathbf d(t)=q\mathbf d(t).
+$$ {#eq-two-charge-dipole-moment}
+Thus the dipole moment points from the negative charge to the positive charge. For an atom modeled as a fixed positive charge $+e$ at the origin and an electron at $\mathbf r_e(t)$, the same definition gives $\mathbf p(t)=-e\mathbf r_e(t)$.
+
+### Even a single charge can have a dipole moment
+
+For just one charge $q$ at position $\mathbf r_q(t)$, the sum has only one term:
+$$
+\boxed{\mathbf p(t)=q\mathbf r_q(t)}.
+$$ {#eq-single-charge-dipole-moment}
+This is nonzero whenever the charge is away from the chosen origin. A single charge need not form a pair to have a dipole moment **relative to an origin**. 
+For a neutral distribution ($Q=\sum_i q_i=0$), the dipole moment is independent of the origin. For a single nonzero charge, it depends on the origin. 
+
+But as to the time derivative of the dipole moment, the position of the origin does not matter.
 
 ## Geometry and assumptions
 
