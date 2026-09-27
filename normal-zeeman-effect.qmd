@@ -42,22 +42,17 @@ $$ {#eq-zeeman-parallel} This linear oscillation produces an unshifted spectral 
 
 A natural guess is **uniform circular motion in the** $xy$ plane, centered on the binding center. For such a motion, the velocity is perpendicular to $\mathbf r$ and lies perpendicular to $\mathbf B_0$. The magnetic force $-e\dot{\mathbf r}\times\mathbf B_0$ is therefore radial: it points either inward or outward, depending on the sense of rotation. The spring force is also radial and always points inward. Their sum can provide exactly the centripetal force required for circular motion, making the guess self-consistent at the appropriate frequency.
 
-Write the circular motion as $$
-x(t)=A\cos(\omega t),\qquad
-y(t)=A\sin(\omega t).
-$$ {#eq-zeeman-circular-ansatz} Here $A>0$ is the radius. Allow $\omega$ to be signed: positive $\omega$ gives motion from the positive $x$ axis toward positive $y$, while negative $\omega$ gives the opposite rotation. The physical oscillation frequency is $|\omega|$.
-
-For either circular motion, $$
+Allow $\omega$ to be signed: positive $\omega$ gives motion from the positive $x$ axis toward positive $y$, while negative $\omega$ gives the opposite rotation. The physical oscillation frequency is $|\omega|$. For either circular motion, $$
 \ddot{\mathbf r}=-\omega^2\mathbf r,
 \qquad
 -e\dot{\mathbf r}\times\mathbf B_0=-eB\omega\mathbf r.
 $$ {#eq-zeeman-radial-force} Taking inward as positive, the radial force balance is therefore $$
-\underbrace{m\omega^2A}_{\text{required centripetal force}}
-=\underbrace{m\omega_0^2A}_{\text{spring force}}
-+\underbrace{eB\omega A}_{\text{magnetic contribution}}.
+\underbrace{m\omega^2r}_{\text{required centripetal force}}
+=\underbrace{m\omega_0^2r}_{\text{spring force}}
++\underbrace{eB\omega r}_{\text{magnetic contribution}}.
 $$ {#eq-zeeman-centripetal-balance}
 
-Defining $$\omega_L \equiv \frac{eB}{2m}$$ gives $$
+Defining $$\omega_L \equiv \frac{eB}{2m}$$ @eq-zeeman-centripetal-balance gives $$
 \omega^2-2\omega_L\omega-\omega_0^2=0.
 $$ {#eq-zeeman-frequency-equation} Solving this quadratic directly gives two signed roots: $$
 \boxed{\omega=\omega_L\pm\sqrt{\omega_0^2+\omega_L^2}}.
