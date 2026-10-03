@@ -1,34 +1,38 @@
 # Vectors and Quantum States
 
-Many people contributed to quantum mechanics through different approaches, including numerous false starts. Following the historical route is therefore not the most efficient way to learn the subject. We will begin directly with the basic principles of modern quantum mechanics.
+Quantum mechanics grew out of many researchers' ideas, experiments, and false starts. We could retrace that history, but there is a more direct way into the subject: begin with a simple experiment and let its results guide us toward the principles of modern quantum mechanics.
 
-By the end of this chapter, you should be able to distinguish spatial vectors from quantum state vectors, calculate inner products in a complex vector space, and express the same state vector in different orthonormal bases. We will use spin-1/2 states as a physical example throughout.
+Our starting point is a particle with just two possible spin outcomes. By the end of this chapter, you should be able to distinguish spatial vectors from quantum state vectors, calculate inner products in a complex vector space, and express the same state vector in different orthonormal bases. Spin-1/2 states will give these mathematical ideas a physical setting.
 
 ## The Stern–Gerlach experiment
 
-Spin angular momentum ${\bf{S}}$ is an intrinsic property of a microscopic particle, like its charge or mass. Charge and mass are scalars, whereas spin is a vector: although its magnitude is fixed, its projection along a spatial direction can vary and is quantized. Particles whose spin projection can take only $+ \frac{\hbar}{2}$ or $- \frac{\hbar}{2}$ are called spin-1/2 particles, such as electrons, neutrons, and protons. Such two-state systems are the simplest quantum systems and provide a direct route to the central ideas of quantum mechanics. To avoid repeatedly writing $\frac{\hbar}{2}$, we define a new quantity ${\bf{\sigma }}$:
+Spin angular momentum ${\bf{S}}$ is an intrinsic property of a microscopic particle, just as charge and mass are. Charge and mass are scalars, whereas spin is a vector. Its magnitude is fixed, but its projection along a chosen spatial direction can take different, quantized values. For electrons, neutrons, and protons, there are just two possibilities: $+ \frac{\hbar}{2}$ or $- \frac{\hbar}{2}$. These are spin-1/2 particles. A system with only two spin outcomes gives us a simple place to begin exploring quantum mechanics. To avoid repeatedly writing $\frac{\hbar}{2}$, we define a new quantity ${\bf{\sigma }}$:
 
 $$
 {\bf{S}} \equiv \frac{\hbar }{2}{\bf{\sigma }}
 $$ {#eq-zeqnnum505139}
 
-Let the unit vector ${\bf{n}}$ specify a spatial direction, and let ${\sigma _n} \equiv {\bf{\sigma }} \cdot {\bf{n}}$ denote the projection of ${\bf{\sigma }}$ along ${\bf{n}}$. Measuring ${\sigma _n}$ for a spin-1/2 particle can give only $+ 1$ or $- 1$.
+Choose a direction in space and label it with the unit vector ${\bf{n}}$. The quantity ${\sigma _n} \equiv {\bf{\sigma }} \cdot {\bf{n}}$ is the projection of ${\bf{\sigma }}$ along ${\bf{n}}$. When we measure ${\sigma _n}$ for a spin-1/2 particle, there are only two possible answers: $+ 1$ or $- 1$.
 
-A Stern–Gerlach (SG) apparatus measures a particle's spin projection using a strong magnetic-field gradient. Particles emerge at distinct positions along the gradient direction, each exit corresponding to a different spin projection along that direction.[^01-vectors-and-quantum-states-1] A spin-$1/2$ particle has only two possible exits, corresponding to ${\sigma _n} = \pm 1$. Suppose a source continuously emits spin-1/2 particles with random spin orientations. We make the beam sufficiently weak that particles pass one by one through the entire apparatus and do not interact. We then perform the experiments illustrated in @fig-sg-sequences.
+A Stern–Gerlach (SG) apparatus turns these spin outcomes into separate outgoing paths. A strong magnetic-field gradient deflects the particles, and each exit corresponds to a different spin projection along the gradient direction.[^01-vectors-and-quantum-states-1] A spin-$1/2$ particle has only two possible exits, corresponding to ${\sigma _n} = \pm 1$. Imagine a source continuously emitting spin-1/2 particles with random spin orientations. We make the beam weak enough that particles travel through the apparatus one at a time and do not interact with one another. We can now arrange the apparatuses as shown in @fig-sg-sequences and follow what happens to the particles.
 
 [^01-vectors-and-quantum-states-1]: A Stern–Gerlach apparatus directly measures the magnetic moment $\mu$, with $\mu =\gamma S$, where $\gamma$ is a constant.
 
+Before reading the result of each experiment, pause and make a prediction. Keep track of what has been measured and which outgoing beam is allowed to continue.
+
 ![The source on the left emits particles with random spin orientations. Each box represents a $\sigma_n$ detector. The percentages to its right give the probabilities that a measurement of $\sigma_n$ yields $+1$ or $-1$.](assets/image15.png){#fig-sg-sequences width="537px"}
 
-**Experiment 1.** Place an SG apparatus immediately after the source, with its field gradient along $z$, to measure ${\sigma _z}$. Particles from the random source leave through its positive and negative exits with equal probability. If we block the ${\sigma _z} = - 1$ exit, only particles with ${\sigma _z} = + 1$ pass through the “$+1$” exit. Place a second, identically oriented apparatus after the first apparatus's “$+1$” exit and measure ${\sigma _z}$ again. All particles ($100\%$) give ${\sigma _z} = + 1$. Similarly, selecting ${\sigma _z} = - 1$ after the first apparatus and placing the second at its “$-1$” exit gives ${\sigma _z} = - 1$ for all particles ($100\%$). Rotating both detectors to the same arbitrary direction ${\bf{n}}$ preserves this agreement. Thus, even in the quantum world, a measurement result can be reproduced. Measuring ${\sigma _n}$ also provides a way to prepare particles with ${\sigma _n} = + 1$ or $- 1$.
+**Experiment 1.** Place an SG apparatus immediately after the source, with its field gradient along $z$, to measure ${\sigma _z}$. Particles from the random source leave through the positive and negative exits with equal probability. Now block the ${\sigma _z} = - 1$ exit. Only particles with ${\sigma _z} = + 1$ continue through the “$+1$” exit. Place a second apparatus, oriented in the same direction, after the first apparatus's “$+1$” exit and measure ${\sigma _z}$ again. This time there is no split: every particle ($100\%$) gives ${\sigma _z} = + 1$. Similarly, selecting ${\sigma _z} = - 1$ at the first apparatus and placing the second at its “$-1$” exit gives ${\sigma _z} = - 1$ for every particle ($100\%$). The same agreement holds when both detectors point along any direction ${\bf{n}}$. So a measurement result can be repeated. We have also gained a practical tool: measuring ${\sigma _n}$ allows us to prepare particles with ${\sigma _n} = + 1$ or $- 1$.
 
-**Experiment 2.** Reverse the orientation of the second ${\sigma _z}$ apparatus relative to the first. Particles emerging from the first apparatus's “$+1$” exit now all emerge from the second apparatus's “$-1$” exit [^01-vectors-and-quantum-states-2], and vice versa. The measured quantity changes sign when the detector is reversed, suggesting vector behavior.
+**Experiment 2.** Turn the second ${\sigma _z}$ apparatus around so that it points in the opposite direction to the first. Every particle leaving the first apparatus's “$+1$” exit now leaves the second apparatus's “$-1$” exit[^01-vectors-and-quantum-states-2], and vice versa. Reversing the detector reverses the sign of the result, just as we would expect for a vector projection.
 
 [^01-vectors-and-quantum-states-2]: The force on the particle is ${F}_{z}\propto {\sigma }_{z}\frac{\partial {B}_{z}}{\partial z}$. The $z$ axis is fixed. Reversing the detector along $z$ reverses both the magnetic-field gradient convention and ${B}_{z}$, so the sign of the gradient of ${B}_{z}$ remains unchanged. The sign of the particle's ${\sigma }_{z}$ does not depend on detector orientation, so ${F}_{z}$ is unchanged and the particle still leaves through the upper exit. However, the exits marked $+1$ and $-1$ have exchanged places, so the particle now exits through $-1$. We need not know the detector's internal operation: its scale labels values of ${\sigma }_{z}$. Experiment shows that oppositely oriented detectors assign opposite signs to the same measured quantity.
 
-**Experiment 3.** First use a ${\sigma _z}$ apparatus to select particles with ${\sigma _z} = + 1$, and then measure ${\sigma _x}$. We find ${\sigma _x} = + 1$ for 50% of the particles, and ${\sigma _x} = - 1$ for $50\%$. Classical reasoning would suggest that the upper outgoing beam has both ${\sigma _z} = + 1$ and ${\sigma _x} = + 1$, while the lower beam has both ${\sigma _z} = + 1$ and ${\sigma _x} = - 1$.
+**Experiment 3.** First use a ${\sigma _z}$ apparatus to select particles with ${\sigma _z} = + 1$. Then turn to a different direction and measure ${\sigma _x}$. The beam splits evenly: ${\sigma _x} = + 1$ for 50% of the particles and ${\sigma _x} = - 1$ for $50\%$. A natural classical picture is that we have simply sorted the particles by another property. On that picture, particles in the upper outgoing beam have both ${\sigma _z} = + 1$ and ${\sigma _x} = + 1$, while those in the lower beam have both ${\sigma _z} = + 1$ and ${\sigma _x} = - 1$.
 
-**Experiment 4.** After the second apparatus in Experiment 3, select particles with ${\sigma _x} = + 1$ and pass them through a third apparatus measuring ${\sigma _z}$. The preceding classical argument predicts ${\sigma _z} = + 1$ with certainty. Instead, half the particles give ${\sigma _z} = + 1$ and half give ${\sigma _z} = - 1$. Selecting ${\sigma _x} = - 1$ after the second apparatus and moving the third, ${\sigma _z}$-measuring apparatus to its “$-1$” exit again produces ${\sigma _z} = + 1$ and ${\sigma _z} = - 1$ with equal probabilities. The crucial change is the insertion of a measurement of ${\sigma _x}$ between two measurements of ${\sigma _z}$. Measuring ${\sigma _x}$ completely destroys the previously acquired information about ${\sigma _z}$. This is not a peculiarity of SG apparatus: any method of measuring the ${\bf{\sigma }}$ projection has the same consequence. The values of ${\sigma }_{x}$ and ${\sigma }_{z}$ cannot both be definite for a particle.
+Hold on to that prediction. The next experiment puts it to the test.
+
+**Experiment 4.** After the second apparatus in Experiment 3, select particles with ${\sigma _x} = + 1$ and send them through a third apparatus measuring ${\sigma _z}$. Our classical picture predicts ${\sigma _z} = + 1$ every time. But the particles do something else: half give ${\sigma _z} = + 1$ and half give ${\sigma _z} = - 1$. Try the other beam. Select ${\sigma _x} = - 1$ after the second apparatus and move the third, ${\sigma _z}$-measuring apparatus to its “$-1$” exit. Once again, ${\sigma _z} = + 1$ and ${\sigma _z} = - 1$ occur with equal probabilities. Compare this with Experiment 1. The crucial change is a measurement of ${\sigma _x}$ between two measurements of ${\sigma _z}$. Measuring ${\sigma _x}$ completely destroys the previously acquired information about ${\sigma _z}$. This is not a peculiarity of the SG apparatus: any method of measuring the ${\bf{\sigma }}$ projection has the same consequence. A particle cannot have definite values of both ${\sigma }_{x}$ and ${\sigma }_{z}$.
 
 ![](assets/image46.png){width="554px"}
 
@@ -36,79 +40,100 @@ A Stern–Gerlach (SG) apparatus measures a particle's spin projection using a s
 Figure 1.2. Recombination of the two SG paths.
 :::
 
-**Experiment 5.** Previously, we moved the next detector to align it with each exit of the preceding one. For convenience, we now use magnets as a beam combiner, merging particles entering at different heights into a single outgoing line. Place it between the second and third apparatuses of Experiment 4, as in Figure 1.2. **Experiments 5.1–5.2:** block one exit of the second apparatus to select ${\sigma }_{x}=-1$ or $+1$, and send the selected particles through the combiner into the ${\sigma }_{z}$ detector. As before, ${\sigma }_{z}=+1$ and $-1$ each occur with probability $50\%$. **Experiment 5.3:** remove the blocking plate so that particles from either exit pass through the combiner into the ${\sigma }_{z}$ detector. Classical reasoning says that each “$\pm 1$” exit of the ${\sigma }_{x}$ detector is taken with probability $50\%$, and that particles from either exit subsequently give $\pm 1$ in the ${\sigma }_{z}$ detector with probability $50\%$. Opening both exits should therefore still give each ${\sigma }_{z}=\pm 1$ result with probability $50\%$. In fact, every measurement of ${\sigma }_{z}$ gives $+1$! Experiments 4 and 5 show that when the result of ${\sigma }_{x}$ cannot be known, the probability of ${\sigma }_{z}=+1$ is $100\%$, whereas making the result of ${\sigma }_{x}$ knowable gives the two ${\sigma }_{z}=\pm 1$ results with probability $50\%$ each.
+**Experiment 5.** Previously, we moved the next detector to align it with each exit of the preceding one. For convenience, we now use magnets as a beam combiner, merging particles entering at different heights into a single outgoing line. Place it between the second and third SG apparatuses of Experiment 4, as in Figure 1.2. **Experiments 5.1–5.2:** block one exit of the second apparatus to select ${\sigma }_{x}=-1$ or $+1$, and send the selected particles through the combiner into the ${\sigma }_{z}$ detector. As before, ${\sigma }_{z}=+1$ and $-1$ each occur with probability $50\%$. **Experiment 5.3:** remove the blocking plate so that particles from either exit pass through the combiner into the ${\sigma }_{z}$ detector. Classical reasoning says that each “$\pm 1$” exit of the ${\sigma }_{x}$ detector is taken with probability $50\%$, and that particles from either exit subsequently give $\pm 1$ in the ${\sigma }_{z}$ detector with probability $50\%$. Opening both exits should therefore still give each ${\sigma }_{z}=\pm 1$ result with probability $50\%$. In fact, every measurement of ${\sigma }_{z}$ gives $+1$! Experiments 4 and 5 show that when the result of ${\sigma }_{x}$ cannot be known, the probability of ${\sigma }_{z}=+1$ is $100\%$, whereas making the result of ${\sigma }_{x}$ knowable gives the two ${\sigma }_{z}=\pm 1$ results with probability $50\%$ each.
 
-These observations may seem astonishing, but they describe how the world works. The familiar behavior of the classical world arises as a macroscopic average over enormous numbers of interacting particles.
+At this point, resist the urge to force the results into a familiar classical picture. They are the observations our theory must explain. The familiar behavior of the classical world emerges on a macroscopic scale, where enormous numbers of particles interact.
 
 Experimentally, suppose two directions ${\bf{n}}$ and ${\bf{m}}$ make an angle $\theta$. First measure the projection of ${\bf{\sigma }}$ along ${\bf{n}}$, obtaining ${\sigma _n} = + 1$, and then measure ${\sigma _m}$, the projection of ${\bf{\sigma }}$ along ${\bf{m}}$. The probabilities of ${\sigma _m} = + 1$ and $- 1$ are ${\cos ^2}(\frac{\theta}{2})$ and ${\sin ^2}(\frac{\theta}{2})$, respectively. Experiment 1 has $\theta=0$, Experiment 2 has $\theta=\pi$, and Experiment 3 has $\theta=\pi/2$. These probabilities give the mean value $( + 1) \cdot {\cos ^2}(\frac{\theta}{2}) + ( - 1) \cdot {\sin ^2}(\frac{\theta}{2}) = \cos (\theta )$ for ${\sigma _m}$. Although individual measurements of ${\bf{\sigma }}$ have unfamiliar outcomes, the average of ${\bf{\sigma }}$ behaves like a classical vector. The mean of ${\bf{\sigma }}$ is also called the **spin-polarization vector**.
 
-We now develop the basic rules of quantum mechanics and then return to explain these experiments.
+Keep these experiments in mind as we turn to the mathematics. We will build the language of quantum mechanics step by step, then return to the puzzles that brought us here.
 
 ## Vector spaces
 
-In classical mechanics, the state of a physical system at time $t$ is described by the values of its dynamical variables for every particle. For example, the position and momentum of particle $i$ are ${x}_{i}\left( t\right) ,{p}_{i}\left( t\right)$; angular momentum, kinetic energy, and potential energy are functions of positions and momenta. Knowing all these values at an instant supplies complete information about the system. The state evolves according to Newton's second law, continually updating the quantities $\left\{ {x}_{i}\left( t\right) ,{p}_{i}\left( t\right) ,\cdots \right\}$. Mathematically, a classical state is described by these functions of time. Einstein famously said that he did not believe God played dice. In classical mechanics, statistical predictions are needed only when our information or computational power is incomplete. In principle, an observer who knew every particle's state at one instant and had unlimited computational power could predict the system's state at any past or future time with unlimited precision. This is classical determinism.
+In classical mechanics, a system's state at time $t$ is described by the collection of values of its dynamical variables at that instant. Imagine taking a complete snapshot of the system: for each particle, you record its position and momentum. For particle $i$, these are ${x}_{i}\left( t\right) ,{p}_{i}\left( t\right)$. Angular momentum, kinetic energy, and potential energy can then be calculated from the positions and momenta. The collection $\left\{ {x}_{i}\left( t\right) ,{p}_{i}\left( t\right) ,\cdots \right\}$ describes the classical state, and Newton's second law determines how it changes with time.
 
-In quantum mechanics, even the spin projections of a single isolated electron along two nonparallel directions cannot both be definite. Experiments show that classical mechanics is a macroscopic approximation to quantum mechanics, whose laws underlie the world we know. Certain pairs of observables are generally incompatible, including position and its corresponding momentum component, different angular-momentum components, and kinetic and potential energy for a nonconstant potential. Consequently, the state of a system cannot be described by assigning definite values to all its dynamical variables at one time. We must reconsider the relation between a physical state and its dynamical variables.
+Einstein famously said that he did not believe God played dice. In classical mechanics, we use statistical predictions because our information or computational resources are limited. In principle, an observer with complete knowledge of every particle's state at one instant and unlimited computational resources could predict the system's state at any past or future time with unlimited precision. This is **classical determinism**.
 
-In quantum mechanics, the system's state is called a **quantum state**, while its dynamical variables are called **observables**. They are different kinds of objects. Given the state at one instant, the Schrödinger equation determines its subsequent evolution. However, the state gives only the probabilities of the possible values of observables. What mathematical objects should represent states and observables? A central contribution of Heisenberg, Schrödinger, Dirac, and others was to find a precise mathematical language for quantum mechanics. Several equivalent formulations exist. We use the concise and general Dirac–von Neumann formulation; Heisenberg's matrix mechanics and Schrödinger's wave mechanics are concrete realizations of it.
+Now try to take the same kind of snapshot of a quantum system. Even a single isolated electron cannot have definite spin projections along two nonparallel directions. Certain pairs of observables are generally incompatible, including position and its corresponding momentum component, and different angular-momentum components. A list of definite values for all dynamical variables therefore cannot describe a quantum state. We need a different mathematical description. Experiments show that this quantum description also underlies classical mechanics, which emerges as a macroscopic approximation.
 
-The relationship between observables and quantum states is the relationship between operators and vectors.
+In quantum mechanics, we distinguish a system's **quantum state** from its dynamical variables, called **observables**. Given the state at one instant, the Schrödinger equation determines how it evolves. Although the evolution of the state is deterministic and the state contains the maximal information of the system it describes, what we can tell about the measurement outcome of a observable of the system is mostly probabilistic. Heisenberg, Schrödinger, Dirac, and others developed the mathematical language needed to express this distinction. Several equivalent formulations exist. We will use the concise and general Dirac–von Neumann formulation; Heisenberg's matrix mechanics and Schrödinger's wave mechanics are concrete realizations of it.
 
-**Quantum postulate for pure states.** A pure quantum state contains all the information supplied by quantum mechanics about a system at a given instant. It is represented by a nonzero vector in a complex vector space equipped with an inner product. We normally choose this vector to have unit norm. Multiplying a normalized state vector by an overall phase factor $e^{i\alpha}$ does not change the physical state. Thus different vectors can represent the same physical state. Statistical mixtures require a more general description, which we will not develop here.
+The mathematical starting point is simple: in quantum mechanics quantum states are represented by vectors and observables by operators. This chapter develops the vectors; the next introduces the operators.
 
-The word *vector* can refer either to an ordinary vector in three-dimensional Cartesian space or to an abstract state vector, which can cause confusion. We will distinguish **spatial vectors**, referring to physical three-dimensional space, from **state vectors**, representing quantum states. The underlying space is called the system's **state space**, or **Hilbert space**. A Hilbert space is an inner-product vector space that is complete: every Cauchy sequence in its norm converges to a vector in the space. Completeness is automatic for the finite-dimensional inner-product spaces used in this chapter; it becomes important when we study spaces of functions.
+**Quantum postulate for pure states.** A pure quantum state contains all the information supplied by quantum mechanics about a system at a given instant. It is represented by a nonzero vector in a complex vector space equipped with an inner product. We normally choose this vector to have unit norm. Multiplying a normalized state vector by an overall phase factor $e^{i\alpha}$ does not change the physical state.
 
-Dirac introduced the notation $\lvert\text{vector name}\rangle$ for a vector and called it a **ket**.
+When you hear *vector*, you may picture an arrow in three-dimensional space. Keep that familiar picture, but make room for a second meaning: a vector can also represent a quantum state. We will call vectors in physical three-dimensional space **spatial vectors** and vectors representing quantum states **state vectors**. The latter belong to the system's **state space**, or **Hilbert space**.
 
-For example, write $|+z\rangle$ for the state prepared by selecting the $\sigma_z=+1$ exit of an SG apparatus and $|-z\rangle$ for the state prepared by selecting the $\sigma_z=-1$ exit. These are state vectors, not spatial vectors pointing along the $z$ axis. We will use them to connect the vector-space rules to the spin experiments.
+Dirac gave state vectors their own notation: $\lvert\text{vector name}\rangle$. A vector written this way is called a **ket**. The symbols may look unfamiliar at first, but they obey the vector-space rules we are about to use.
+
+For example, write $|+z\rangle$ for the state prepared by selecting the $\sigma_z=+1$ exit of an SG apparatus and $|-z\rangle$ for the state prepared by selecting the $\sigma_z=-1$ exit. These are state vectors, not spatial vectors pointing along the $z$ axis. A spatial vector has a well-defined length and direction, but state vector is an abstract identity representing the quantum state. Their distinctions will become clearer in the future.
 
 Some useful vector-space identities are:
 
 $$
-\begin{aligned}\text{Commutativity:}\quad &\lvert\psi_\alpha\rangle+\lvert\psi_\beta\rangle=\lvert\psi_\beta\rangle+\lvert\psi_\alpha\rangle\\\text{Complex scalars:}\quad &c\lvert\psi\rangle=\lvert\psi\rangle c\\\text{Distributivity:}\quad &(c_1+c_2)\lvert\psi\rangle=c_1\lvert\psi\rangle+c_2\lvert\psi\rangle\\&c(\lvert\psi_\alpha\rangle+\lvert\psi_\beta\rangle)=c\lvert\psi_\alpha\rangle+c\lvert\psi_\beta\rangle\end{aligned}
+\begin{aligned}
+\text{Commutativity:}\quad &\lvert\psi_\alpha\rangle+\lvert\psi_\beta\rangle=\lvert\psi_\beta\rangle+\lvert\psi_\alpha\rangle\\
+\text{Associativity:}\quad &(\lvert\psi_\alpha\rangle+\lvert\psi_\beta\rangle)+\lvert\psi_\gamma\rangle
+=\lvert\psi_\alpha\rangle+(\lvert\psi_\beta\rangle+\lvert\psi_\gamma\rangle)\\
+\text{Complex scalars:}\quad &c\lvert\psi\rangle=\lvert\psi\rangle c\\
+\text{Scalar associativity:}\quad &c_1(c_2\lvert\psi\rangle)=(c_1c_2)\lvert\psi\rangle\\
+\text{Scalar identity:}\quad &1\lvert\psi\rangle=\lvert\psi\rangle\\
+\text{Distributivity:}\quad &(c_1+c_2)\lvert\psi\rangle=c_1\lvert\psi\rangle+c_2\lvert\psi\rangle\\
+&c(\lvert\psi_\alpha\rangle+\lvert\psi_\beta\rangle)=c\lvert\psi_\alpha\rangle+c\lvert\psi_\beta\rangle
+\end{aligned}
 $$ {#eq-zeqnnum995300}
 
-Here $c,{c_1},{c_2}$ are complex numbers. These properties are natural and easy to remember. The precise definitions of vector addition and multiplication by a complex number will be specified in concrete examples.
+Here $c,{c_1},{c_2}$ are complex numbers. Read these identities as rules for working with vectors: we can change the order or grouping of addition and distribute scalar multiplication over a sum. The examples below will show what these operations look like in practice.
 
-Vector addition is also associative, every vector has an additive inverse, and scalar multiplication obeys $c_1(c_2|\psi\rangle)=(c_1c_2)|\psi\rangle$ and $1|\psi\rangle=|\psi\rangle$. A vector space is closed under addition and scalar multiplication.
+A vector space is closed under addition and scalar multiplication: these operations always produce another vector in the same space.
 
-**Zero vector.** Every vector space contains a special zero vector, denoted $\left\vert  {{\rm{null}}} \right\rangle$, which may be thought of as having zero length. It is defined by the following condition for every vector $|\psi\rangle$:
+**Zero vector.** Every vector space contains a special zero vector, $\left\vert  {{\rm{null}}} \right\rangle$, which may be thought of as having zero length. It is defined by the following condition for every vector $|\psi\rangle$:
 
 $$
 \left\vert  {{\rm{null}}} \right\rangle + |\psi\rangle = |\psi\rangle , \qquad  \qquad  0|\psi\rangle = \left\vert  {{\rm{null}}} \right\rangle
 $$ {#eq-zeqnnum835984}
 
-If $|\psi_1\rangle$ and $|\psi_2\rangle$ belong to the same vector space, their linear combination $|\psi\rangle=c_1|\psi_1\rangle+c_2|\psi_2\rangle$ belongs to that space as well. A set of vectors is **linearly dependent** if some linear combination of them equals the zero vector with coefficients that are not all zero. In particular, the set $\{|\psi\rangle,|\psi_1\rangle,|\psi_2\rangle\}$ is dependent because $|\psi\rangle-c_1|\psi_1\rangle-c_2|\psi_2\rangle=0$. This does not imply that $|\psi_1\rangle$ and $|\psi_2\rangle$ are dependent on their own.
+The zero vector is needed for vector addition and cancellation, but represents no physical state.
 
-The zero vector belongs to the Hilbert space but represents no physical state. The normalized vectors alone do not form a vector space: adding two normalized vectors does not generally give another normalized vector. A nonzero sum can be normalized to represent a pure state.
+If $|\psi_1\rangle$ and $|\psi_2\rangle$ belong to the same vector space, their linear combination $|\psi\rangle=c_1|\psi_1\rangle+c_2|\psi_2\rangle$ belongs to that space as well. A set of vectors is **linearly dependent** if some linear combination of them equals the zero vector with coefficients that are not all zero. In particular, the set $\{|\psi\rangle,|\psi_1\rangle,|\psi_2\rangle\}$ is dependent because $|\psi\rangle-c_1|\psi_1\rangle-c_2|\psi_2\rangle=0$.
 
 ## Examples of complex linear vector spaces
 
-A complex linear vector space is an abstract concept. The following examples make it concrete. Decide which collections of mathematical objects form such spaces, paying attention to how vector addition and scalar multiplication are defined.
+The word *vector* may bring an arrow to mind, but a vector space can contain other kinds of objects. What matters is how those objects add and how they multiply by scalars. In each example below, check that adding two members or multiplying a member by a complex number keeps us within the collection.
 
-**Example 1: all complex column matrices with** $n$ components.
+**Example 1: complex column matrices with** $n$ components.
 
-Each complex column matrix with $n$ components is a vector. Any linear combination of two such $n$-component columns is again a column with $n$ components. Indeed, column matrices are among the most common representations of quantum states.
+Start with something familiar: a column of $n$ complex numbers. Add two such $n$-component columns entry by entry, or multiply every entry by the same complex number. The result is still a column with $n$ components. Thus, these columns form a complex vector space and will become a useful way to represent quantum states.
 
 $$
 \begin{pmatrix}a_1\\a_2\\a_3\\\vdots\\a_n\end{pmatrix},\quad a_i\in\mathbb C;\qquad\lvert\mathrm{null}\rangle=\begin{pmatrix}0\\0\\0\\\vdots\\0\end{pmatrix}
 $$ {#eq-ch01-p0170}
 
-**Example 2: all solutions of a homogeneous linear differential equation.**
+**Example 2: solutions of a homogeneous linear differential equation.**
 
-For example, consider all solutions of
+Now consider a different kind of object: a function that solves the equation
 
 $$
 \frac{{{d^2}}}{{d{t^2}}}x(t) + 2\beta \frac{d}{{dt}}x(t) + \omega _0^2x(t) = 0
 $$ {#eq-ch01-p0173}
 
-Here we allow complex-valued solutions on a fixed time interval. If ${x_1}(t)$ and ${x_2}(t)$ are solutions, any complex linear combination of them is also a solution. The collection of solutions forms a complex vector space. Restricting the solutions to real-valued functions would instead give a real vector space.
+Here we allow complex-valued solutions. If ${x_1}(t)$ and ${x_2}(t)$ are solutions, any complex linear combination of them is also a solution. Thus, the collection of solutions forms a complex vector space. Restricting the solutions to real-valued functions would instead give a real vector space.
 
 ## Bras and inner products
 
-Once an inner product has been chosen, a ket $|\psi\rangle$ has a corresponding **bra**, written $\langle\psi|$. In a Hilbert space, each ket has a unique corresponding bra, and conversely. Kets and bras each form a complex vector space, but the correspondence between them is **antilinear**: coefficients are complex-conjugated when a ket is converted to its bra.
+So far, we can add vectors and multiply them by complex numbers. To discuss their lengths and how they relate to one another, we need another operation. Think of the dot product of two Cartesian vectors: it takes two vectors and returns a number.
 
-The bra space corresponding to a ket space is specified by the following duality rules:
+An **inner product** generalizes this idea to complex vector spaces. It is a rule that assigns a complex number to each ordered pair of vectors. To qualify as an inner product, the rule must satisfy three conditions: linearity in the second vector, conjugate symmetry when the vectors are exchanged, and positive definiteness when a vector is paired with itself. We will write these conditions explicitly below. Together, they let us define length and orthogonality in the space.
+
+Dirac introduced a neat notation for this operation. To write the inner product of $|\varphi\rangle$ and $|\psi\rangle$, we write the first vector as a **bra**, $\langle\varphi|$, and place it next to the second vector's ket. The two brackets fit together:
+
+$$
+\langle \varphi|  \cdot |\psi\rangle \equiv \langle \varphi|\psi\rangle = c
+$$ {#eq-zeqnnum133573}
+
+Here $c$ is the resulting complex number. The inner product supplies the rule for calculating it; the bra–ket notation gives us a compact way to write it. A bra is the dual object associated with a ket. For now, we can work with this correspondence through the rules below; the column-matrix example will make it concrete.
+
+Kets and bras each form a complex vector space. The correspondence between them is **antilinear**: when we convert a ket into its corresponding bra, we take the complex conjugate of each coefficient. The conversion rules are
 
 $$
 \begin{aligned}
@@ -119,19 +144,7 @@ c_1|\alpha\rangle+c_2|\beta\rangle
 \end{aligned}
 $$ {#eq-zeqnnum136783}
 
-If bras and kets correspond one to one, why introduce bras? Duality allows two vectors to produce a number. Just as the dot product of two Cartesian vectors is a real number, the **inner product** of two vectors in a complex vector space is a complex number, written
-
-$$
-\langle \varphi|  \cdot |\psi\rangle \equiv \langle \varphi|\psi\rangle = c
-$$ {#eq-zeqnnum133573}
-
-If $|\varphi\rangle$ is normalized, $\langle\varphi|\psi\rangle$ is the coefficient of the orthogonal projection of $|\psi\rangle$ along $|\varphi\rangle$. For an arbitrary nonzero $|\varphi\rangle$, the projection vector is
-
-$$
-\frac{\langle\varphi|\psi\rangle}{\langle\varphi|\varphi\rangle}|\varphi\rangle.
-$$
-
-The inner product obeys the following rules.
+We can now express the defining properties of the inner product in bra–ket notation.
 
 **Distributivity:**
 
@@ -145,13 +158,13 @@ $$
 \langle \varphi|\psi\rangle = \langle \psi|\varphi\rangle *
 $$ {#eq-zeqnnum921664}
 
-From @eq-zeqnnum921664, the inner product of a vector with itself must be real.
+Now apply conjugate symmetry, @eq-zeqnnum921664, to a vector paired with itself. The result equals its own complex conjugate, so it must be real:
 
 $$
 \langle \psi|\psi\rangle = \langle \psi|\psi\rangle *
 $$ {#eq-ch01-p0188}
 
-We further require
+To make this quantity behave like a squared length, we also require
 
 $$
 \langle \psi|\psi\rangle \ge 0
@@ -169,9 +182,9 @@ $$
 \left\vert  {\tilde \psi } \right\rangle = \frac{{|\psi\rangle }}{{\sqrt {\langle \psi|\psi\rangle } }}
 $$ {#eq-ch01-p0194}
 
-For a concrete example, take $|\chi\rangle=\begin{pmatrix}1\\i\end{pmatrix}$. Its bra is $\langle\chi|=\begin{pmatrix}1&-i\end{pmatrix}$, so $\langle\chi|\chi\rangle=1+(-i)i=2$. The normalized ket is therefore $|\chi\rangle/\sqrt{2}$. The minus sign in the bra comes from complex conjugation; transposing alone would give an incorrect inner product.
+Try a concrete example: $|\chi\rangle=\begin{pmatrix}1\\i\end{pmatrix}$. To obtain its bra, turn the column into a row and take the complex conjugate of each entry. This gives $\langle\chi|=\begin{pmatrix}1&-i\end{pmatrix}$, so $\langle\chi|\chi\rangle=1+(-i)i=2$. Divide by the square root of this squared norm to obtain the normalized ket $|\chi\rangle/\sqrt{2}$. Notice the minus sign in the bra: it comes from complex conjugation. Simply turning the column into a row would give the wrong inner product.
 
-The concrete rules for bras, kets, and inner products depend on the representation of the vectors. Consider the following example.
+Let us put the bra–ket notation to work with column matrices. Here we can see every step of the calculation.
 
 **Example.** We know that complex column matrices form a complex linear vector space. How can their inner product produce a number and satisfy all the rules from @eq-zeqnnum133573 to @eq-zeqnnum281628? In linear algebra, multiplying a row matrix by a column matrix gives a number. Thus, if a column represents a ket, its conjugate-transpose row represents the dual bra. For example,
 
@@ -185,7 +198,7 @@ $$
 \langle \phi|\psi\rangle = \left( {\begin{array}{*{20}{c}} {a_1^*}&{a_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{b_1}}\\ {{b_2}} \end{array}} \right) = a_1^*{b_1} + a_2^*{b_2}
 $$ {#eq-zeqnnum248635}
 
-These definitions of bras, kets, and inner products satisfy all the required properties, including @eq-zeqnnum921664.
+These definitions satisfy all the required properties. Check conjugate symmetry, @eq-zeqnnum921664, explicitly by reversing the two vectors:
 
 $$
 \langle \psi|\phi\rangle = \left( {\begin{array}{*{20}{c}} {b_1^*}&{b_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{a_1}}\\ {{a_2}} \end{array}} \right) = b_1^*{a_1} + b_2^*{a_2} = {({b_1}a_1^* + {b_2}a_2^*)^*} = {\langle \phi|\psi\rangle ^*}
@@ -199,25 +212,25 @@ $$
 {\bf{v}} = \left( {{\bf{x}} \cdot {\bf{v}}} \right){\bf{x}} + \left( {{\bf{y}} \cdot {\bf{v}}} \right){\bf{y}} + \left( {{\bf{z}} \cdot {\bf{v}}} \right){\bf{z}} = {v_x}{\bf{x}} + {v_y}{\bf{y}} + {v_z}{\bf{z}}
 $$ {#eq-ch01-p0204}
 
-The three components of ${\bf{v}}$ can also be written as a column matrix:
+We can collect the three components of ${\bf{v}}$ into a column matrix:
 
 $$
 {\bf{v}} = \left( {\begin{array}{*{20}{c}} {{v_x}}\\ {{v_y}}\\ {{v_z}} \end{array}} \right){\rm{ = }}\left( {\begin{array}{*{20}{c}} {{\bf{x}} \cdot {\bf{v}}}\\ {{\bf{y}} \cdot {\bf{v}}}\\ {{\bf{z}} \cdot {\bf{v}}} \end{array}} \right)
 $$ {#eq-ch01-p0206}
 
-The matrix entries—the components of ${\bf{v}}$—depend on the coordinate system. Rotating the ${\bf{x}},{\bf{y}},{\bf{z}}$ axes changes the components of ${\bf{v}}$. The coordinate unit vectors, however, always have the following column representations in their own coordinate system:
+Picture a fixed vector ${\bf{v}}$ while you rotate the coordinate axes. Rotating the ${\bf{x}},{\bf{y}},{\bf{z}}$ axes changes the components of ${\bf{v}}$, even though the vector itself stays fixed. In their own coordinate system, the coordinate unit vectors always have the following column representations:
 
 $$
 {\bf{x}} = \left( {\begin{array}{*{20}{c}} 1\\ 0\\ 0 \end{array}} \right), \qquad  {\bf{y}} = \left( {\begin{array}{*{20}{c}} 0\\ 1\\ 0 \end{array}} \right), \qquad  {\bf{z}} = \left( {\begin{array}{*{20}{c}} 0\\ 0\\ 1 \end{array}} \right)
 $$ {#eq-ch01-p0208}
 
-We now extend these concepts to vector spaces. Two nonzero vectors $|\psi\rangle$ and $|\phi\rangle$ are **orthogonal** if their inner product vanishes, $\langle \psi\vert \phi\rangle = 0$. The dimension is the maximum number of mutually orthogonal vectors. In the space of two-component columns, the inner product defined in @eq-zeqnnum248635 allows infinitely many orthogonal pairs; here are three pairs of normalized vectors:
+We can carry this familiar geometry into an inner-product vector space. Two nonzero vectors $|\psi\rangle$ and $|\phi\rangle$ are **orthogonal** if their inner product vanishes, $\langle \psi\vert \phi\rangle = 0$. The dimension is the maximum number of mutually orthogonal nonzero vectors. Using the inner product defined in @eq-zeqnnum248635, we can find infinitely many orthogonal pairs of two-component columns. Here are three pairs of normalized vectors:
 
 $$
 \left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right),\;\;\left( {\begin{array}{*{20}{c}} 0\\ 1 \end{array}} \right); \qquad  \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ 1 \end{array}} \right),\;\;\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ { - 1} \end{array}} \right); \qquad  \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ i \end{array}} \right),\;\;\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ { - i} \end{array}} \right)
 $$ {#eq-zeqnnum282640}
 
-Once one such pair is chosen, no third nonzero column vector is orthogonal to both. The vector space of two-component columns therefore has dimension two.
+Choose any one of these pairs and try to find a third nonzero column vector orthogonal to both members. There is no room for one: the vector space of two-component columns has dimension two.
 
 A **basis** is a linearly independent set of vectors that spans the space; it need not be orthogonal or normalized. A set of $N$ mutually orthogonal, normalized vectors in an $N$-dimensional inner-product space forms a **complete orthonormal basis**. We use orthonormal bases throughout this chapter. For any two vectors $|i\rangle,|j\rangle$ in such a basis,
 
@@ -239,7 +252,7 @@ $$
 |\psi\rangle = \sum\limits_i {{a_i}|i\rangle }
 $$ {#eq-ch01-p0218}
 
-Here ${a_i}$ is a complex number giving the component of $|\psi\rangle$ along $|i\rangle$. Taking the inner product with a basis vector $\langle j|$ on both sides gives
+Here ${a_i}$ is the complex coefficient of $|\psi\rangle$ along $|i\rangle$. To find a particular coefficient, apply the bra $\langle j|$ to both sides. Orthogonality removes every term except the one we want:
 
 $$
 \langle j|\psi\rangle = \sum\limits_i {\langle j| {a_i}|i\rangle } = \sum\limits_i {{a_i}\langle j|i\rangle } = \sum\limits_i {{a_i}{\delta _{ij}}} = {a_j}
@@ -259,21 +272,21 @@ $$ {#eq-ch01-p0224}
 
 ## Matrix representations of vectors
 
-Just as a Cartesian vector can be written as a column, the expansion @eq-zeqnnum935342 of a state vector has a column-matrix representation:
+Once we have chosen a basis, we can gather the expansion coefficients in @eq-zeqnnum935342 into a column. This gives a concrete representation of the state vector:
 
 $$
 \lvert\psi\rangle=\begin{pmatrix}\langle 1\vert\psi\rangle\\\langle 2\vert\psi\rangle\\\vdots\\\langle N\vert\psi\rangle\end{pmatrix}
 $$ {#eq-zeqnnum343100}
 
-Each basis vector, expressed in its own complete basis, has the column representation
+In this basis, each basis vector has one unit entry and zeros everywhere else:
 
 $$
 |1\rangle = \left( {\begin{array}{*{20}{c}} 1\\ 0\\ \vdots \\ 0 \end{array}} \right), \qquad  |2\rangle = \left( {\begin{array}{*{20}{c}} 0\\ 1\\ \vdots \\ 0 \end{array}} \right), \qquad  \cdots \qquad  |N\rangle = \left( {\begin{array}{*{20}{c}} 0\\ 0\\ \vdots \\ 1 \end{array}} \right)
 $$ {#eq-ch01-p0229}
 
-The entries of a vector's matrix representation depend on the chosen basis. Columns expressed in different bases cannot be combined directly in matrix calculations.
+Always keep track of the basis attached to a column. Changing the basis changes the entries, so columns written in different bases must first be converted to a common basis before we combine them in a matrix calculation.
 
-**Worked example: changing the basis.** In the $z$ basis, let
+**Worked example: changing the basis.** Let us describe one state using two different sets of coordinates. In the $z$ basis, take
 
 $$
 |\psi\rangle=\frac{\sqrt{3}}{2}|+z\rangle+\frac{1}{2}|-z\rangle,
@@ -281,7 +294,7 @@ $$
 [|\psi\rangle]_z=\begin{pmatrix}\sqrt{3}/2\\1/2\end{pmatrix}.
 $$
 
-Choose a second orthonormal basis
+Now choose a second orthonormal basis:
 
 $$
 |u\rangle=\frac{|+z\rangle+|-z\rangle}{\sqrt{2}},
@@ -298,9 +311,9 @@ $$
 [|\psi\rangle]_{uv}=\begin{pmatrix}(\sqrt{3}+1)/(2\sqrt{2})\\(\sqrt{3}-1)/(2\sqrt{2})\end{pmatrix}.
 $$
 
-The coefficients have changed, but the state vector has not. Its squared norm is $3/4+1/4=1$ in the first basis and $[(\sqrt{3}+1)^2+(\sqrt{3}-1)^2]/8=1$ in the second. The bracketed notation identifies the basis used for each column representation.
+Compare the two columns: their entries differ, yet they describe the same state vector. As a check, calculate its squared norm in each basis. We obtain $3/4+1/4=1$ in the first and $[(\sqrt{3}+1)^2+(\sqrt{3}-1)^2]/8=1$ in the second. The bracketed notation tells us which basis each column uses.
 
-The following comparison between Cartesian vectors and abstract state vectors may help make the latter more familiar.
+Use the following comparison to connect the new notation to the Cartesian vectors you already know:
 
 $$
 \begin{array}{*{20}{c}} {\text{Cartesian space}}&{{\text{ }} \to {\text{ }}}&{\text{Vector space}} \\ {\text{Dot product}:{\mathbf{a}} \cdot {\mathbf{b}} = {\mathbf{b}} \cdot {\mathbf{a}}}&{}&{\text{Inner product}:\;\langle \phi\vert \psi\rangle = {{\langle \psi\vert \phi\rangle }^*}} \\ {\text{Perpendicular}:{\mathbf{a}} \cdot {\mathbf{b}} = 0}&{}&{\text{Orthogonal}:\;\langle \psi\vert \phi\rangle = 0} \\ {\text{Coordinate unit vectors}{\mathbf{\hat x}},{\mathbf{\hat y}},{\mathbf{\hat z}}}&{}&{\text{Basis vectors}{\text{ }}\left\{ {\vert i\rangle } \right\}} \\ {\text{Coordinate system}}&{}&{\text{Complete basis}(\text{basis})} \\ {\text{Coordinates}:{\mathbf{v}} = \left( {\begin{array}{*{20}{c}} {{\mathbf{\hat x}} \cdot {\mathbf{v}}} \\ {{\mathbf{\hat y}} \cdot {\mathbf{v}}} \\ {{\mathbf{\hat z}} \cdot {\mathbf{v}}} \end{array}} \right)}&{}&{\text{Basis expansion}:|\psi\rangle = \left( {\begin{array}{*{20}{c}} {\langle 1|\psi\rangle } \\ {\langle 2|\psi\rangle } \\ \vdots \\ {\langle N|\psi\rangle } \end{array}} \right)} \end{array}
@@ -310,7 +323,7 @@ $$ {#eq-ch01-p0232}
 
 **Warm-up.** Given $|\chi\rangle=\begin{pmatrix}2\\i\end{pmatrix}$ and $|\eta\rangle=\begin{pmatrix}1\\1\end{pmatrix}$, write their bras, calculate $\langle\chi|\eta\rangle$ and $\langle\eta|\chi\rangle$, and normalize $|\chi\rangle$. Check conjugate symmetry.
 
-**1.1.** Determine whether each of the following collections forms a complex vector space under the usual addition and scalar multiplication. Here we are asking about vector-space structure, without requiring an inner product or completeness.
+**1.1.** Test each collection below: does it form a complex vector space under the usual addition and scalar multiplication? Focus on the vector-space rules; an inner product and completeness are not required.
 
 - All complex numbers.
 
@@ -338,4 +351,4 @@ $$
 \left\vert  {{\beta _1}} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\vert {\alpha _1}\rangle + i\vert {\alpha _2}\rangle } \right), \qquad  \left\vert  {{\beta _2}} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\vert {\alpha _1}\rangle - i\vert {\alpha _2}\rangle } \right)
 $$ {#eq-ch01-p0248}
 
-Find the expansion of $|\psi\rangle$ in the second basis, using two different methods.
+Express $|\psi\rangle$ in the second basis using two different methods, and check that your answers agree.
