@@ -1,0 +1,127 @@
+# Appendices
+
+## Comparing Three Infinitesimal Operators: Time Evolution, Translation, and Rotation
+
+Infinitesimal time evolution and energy: energy (interactions) generates time evolution.
+
+$$
+\begin{array}{l} \hat U\left( {dt} \right) = \hat I - i\frac{{\hat H}}{\hbar }dt\\ \hat U\left( {dt} \right)\left\vert  {\psi \left( t \right)} \right\rangle = \left\vert  {\psi \left( {t + dt} \right)} \right\rangle \\ \hat H\left\vert  {\psi \left( t \right)} \right\rangle = i\hbar \frac{\partial }{{\partial t}}\left\vert  {\psi \left( t \right)} \right\rangle \end{array}
+$$ {#eq-zeqnnum507946}
+
+Infinitesimal spatial translation and momentum: momentum generates translations.
+
+$$
+\begin{array}{l} \hat \Gamma \left( {dx} \right) = \hat I - i\frac{{\hat P}}{\hbar }dx\\ \hat \Gamma \left( {dx} \right)\left\vert  x \right\rangle = \left\vert  {x + dx} \right\rangle \\ \left\langle x \right\vert \hat P\left\vert  \psi \right\rangle = - i\hbar \frac{\partial }{{\partial x}}\left\langle {x} \mathrel{\left \vert  {\vphantom {x \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \end{array}
+$$ {#eq-zeqnnum118491}
+
+Infinitesimal spatial rotation and orbital angular momentum: angular momentum generates rotations.
+
+$$
+\begin{array}{l} \hat D\left( {{\bf{z}},d\phi } \right) = \hat I - i\frac{{{{\hat L}_z}}}{\hbar }d\phi \\ \hat D\left( {{\bf{z}},d\phi } \right)\left\vert  {r,\theta ,\phi } \right\rangle = \left\vert  {r,\theta ,\phi + d\phi } \right\rangle \\ \left\langle {\bf{x}} \right\vert {{\hat L}_z}\left\vert  \psi \right\rangle = - i\hbar \frac{\partial }{{\partial \phi }}\left\langle {{\bf{x}}} \mathrel{\left \vert  {\vphantom {{\bf{x}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \end{array}
+$$ {#eq-zeqnnum858885}
+
+Here $\left\vert  {\bf{x}} \right\rangle \equiv \left\vert  {x,y,z} \right\rangle \equiv \left\vert  {r,\theta ,\phi } \right\rangle$.
+
+The derivations are similar. Why does $i\hbar$ have a positive sign in the energy expression, while $i\hbar$ has a negative sign in the momentum and angular-momentum expressions?
+
+The Schrödinger equation @eq-zeqnnum507946 is independent of representation, whereas @eq-zeqnnum118491 and @eq-zeqnnum858885 are position-representation formulas. In Schrödinger quantum mechanics, time is a parameter but position is an observable. The Schrödinger equation follows directly from the action of time evolution on a general state vector. The spatial formulas instead follow from translation and rotation of position basis vectors. Directly evolving a state and changing its basis have opposite effects on its components, accounting for the minus sign.
+
+## Connecting Discrete and Continuous Representations
+
+Two examples illustrate qualitatively how matrices in a discrete representation become operators and wavefunctions in a continuous representation.
+
+Formally, we may write a quantum state $\left\vert  \psi \right\rangle$ as a column matrix in the continuous position representation:
+
+$$
+\begin{array}{c} \left\vert  \psi \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} \vdots \\ {\psi (x - \delta x)}\\ {\psi (x)}\\ {\psi (x + \delta x)}\\ \vdots \end{array}} \right)\sqrt {\delta x} {\rm{,}} & \\ \left\langle \psi \right\vert  \buildrel\textstyle.\over= \sqrt {\delta x} \left( {\begin{array}{*{20}{c}} \cdots &{{\psi ^*}(x - \delta x)}&{{\psi ^*}(x)}&{{\psi ^*}(x + \delta x)}& \cdots \end{array}} \right) \end{array}
+$$ {#eq-ch11-p2366}
+
+$$
+\left\langle {\psi } \mathrel{\left \vert  {\vphantom {\psi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \mathop {\lim }\limits_{\delta x \to 0} \sum\limits_{n = - \infty }^\infty {{{\left\vert  {\psi (x + n\delta x)} \right\vert }^2}\delta x} = \int\limits_{ - \infty }^\infty {{{\left\vert  {\psi (x)} \right\vert }^2}dx} = 1
+$$ {#eq-ch11-p2367}
+
+We can also express momentum as an infinite-dimensional continuous matrix:
+
+$$
+\begin{array}{c} - i\hbar \left( {\begin{array}{*{20}{c}} {}&{}&{}&{}&{}&{}\\ {}& \ddots &{}&{}&{}&{}\\ \cdots &{ - \frac{1}{{2\delta x}}}&0&{\frac{1}{{2\delta x}}}&0& \cdots \\ \cdots &0&{ - \frac{1}{{2\delta x}}}&0&{\frac{1}{{2\delta x}}}& \cdots \\ {}&{}&{}&{}& \ddots &{}\\ {}&{}&{}&{}&{}&{} \end{array}} \right)\left( {\begin{array}{*{20}{c}} \vdots \\ {\psi (x - \delta x)}\\ {\psi (x)}\\ {\psi (x + \delta x)}\\ {\psi (x + 2\delta x)}\\ \vdots \end{array}} \right)\\ = - i\hbar \left( {\begin{array}{*{20}{c}} \vdots \\ {\frac{{\psi (x + \delta x) - \psi (x - \delta x)}}{{2\delta x}}}\\ {\frac{{\psi (x + 2\delta x) - \psi (x)}}{{2\delta x}}}\\ \vdots \end{array}} \right) = - i\hbar \left( {\begin{array}{*{20}{c}} \vdots \\ {{{\left. {\frac{{d\psi }}{{dx}}} \right\vert }_x}}\\ {{{\left. {\frac{{d\psi }}{{dx}}} \right\vert }_{x + \delta x}}}\\ \vdots \end{array}} \right) = - i\hbar \frac{d}{{dx}}\psi (x) \end{array}
+$$ {#eq-ch11-p2369}
+
+## Properties of Pauli Operators
+
+https://en.wikipedia.org/wiki/Pauli_matrices
+
+$$
+{\sigma _x} \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} 0&1\\ 1&0 \end{array}} \right),{\rm{ }}{\sigma _y} \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} 0&{ - i}\\ i&0 \end{array}} \right),{\rm{ }}{\sigma _z} \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} 1&0\\ 0&{ - 1} \end{array}} \right)
+$$ {#eq-ch11-p2373}
+
+$$
+\sigma _x^2 = \sigma _y^2 = \sigma _z^2 = - i{\sigma _x}{\sigma _y}{\sigma _z}I
+$$ {#eq-ch11-p2374}
+
+$$
+{\sigma _x}{\sigma _y}{\rm{ + }}{\sigma _y}{\sigma _x} = 0 \qquad  \qquad  ({\rm{and cyclically)}}
+$$ {#eq-ch11-p2375}
+
+$$
+{\sigma _a}{\sigma _b} = {\delta _{ab}}I + i{\varepsilon _{abc}}{\sigma _c}
+$$ {#eq-ch11-p2376}
+
+## Poisson Brackets
+
+The classical Poisson bracket $\left\{ {} \right\}$ is defined by
+
+$$
+{\rm{\{ }}F,G\} = \sum\limits_j {\left( {\frac{{\partial F}}{{\partial {q_j}}}\frac{{\partial G}}{{\partial {p_j}}} - \frac{{\partial F}}{{\partial {p_j}}}\frac{{\partial G}}{{\partial {q_j}}}} \right)}
+$$ {#eq-zeqnnum452342}
+
+Here ${q_j},{p_j}$ are the generalized position and momentum of particle $j$.
+
+The equation of motion of a dynamical quantity $F$ is
+
+$$
+\frac{{dF}}{{dt}} = \left\{ {F,H} \right\} + \frac{{\partial F}}{{\partial t}}
+$$ {#eq-ch11-p2383}
+
+The quantum commutator corresponding to a classical Poisson bracket is
+
+$$
+\left\{ {\;\;\;,\;\;\;} \right\} \to \frac{{[\;\;\;,\;\;\;]}}{{i\hbar }}
+$$ {#eq-ch11-p2385}
+
+For example,
+
+$$
+\left\{ {x,p} \right\} = 1 \to \frac{{[\hat x,\hat p]}}{{i\hbar }} = 1
+$$ {#eq-ch11-p2387}
+
+## The Heisenberg Picture
+
+If $\hat H$ has no explicit time dependence,
+
+$$
+\hat U(t) = \exp \left( {\frac{{ - i\hat Ht}}{\hbar }} \right)
+$$ {#eq-ch11-p2390}
+
+We usually use the Schrödinger picture, in which states evolve with time. In the Heisenberg picture, the state is held fixed:
+
+$$
+\vert {\psi (t)}\rangle = \vert {\psi (0)}\rangle = \vert \psi\rangle
+$$ {#eq-ch11-p2392}
+
+The observables evolve instead:
+
+$$
+{\hat A_{\rm{H}}}(t) = {\hat U^\dag }(t){\hat A_{\rm{S}}}\hat U(t)
+$$ {#eq-zeqnnum996065}
+
+Subscripts S and H denote the Schrödinger and Heisenberg pictures. From @eq-zeqnnum996065, clearly ${\hat A_{\rm{H}}}(0) = {\hat A_{\rm{S}}}$, while the energy operator remains constant in the Heisenberg picture: ${\hat H_{\rm{H}}}(t) = {\hat H_{\rm{S}}} = \hat H$.
+
+If $\hat A$ has no explicit time dependence,
+
+$$
+\frac{d}{{dt}}{\hat A_{\rm{H}}} = \frac{1}{{i\hbar }}[{\hat A_{\rm{H}}},\hat H]
+$$ {#eq-ch11-p2397}
+
+$$
+\begin{array}{c} \left\langle {{E_j}} \right\vert {{{\hat A}_{\rm{H}}}}(t)\left\vert  {{E_k}} \right\rangle = \left\langle {{E_j}} \right\vert {{U^\dag }(t){{\hat A}_{\rm{S}}}U(t)}\left\vert  {{E_k}} \right\rangle \\ = \exp \left[ {\frac{{i({E_j} - {E_k})}}{\hbar }} \right]\left\langle {{E_j}} \right\vert {{{\hat A}_{\rm{H}}}(0)}\left\vert  {{E_k}} \right\rangle \end{array}
+$$ {#eq-ch11-p2398}

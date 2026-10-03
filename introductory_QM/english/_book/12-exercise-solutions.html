@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>12&nbsp; Exercise Solutions – Introduction to Quantum Mechanics</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./11-appendices.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-631496449bf32ff9b0bb69a6bfd9195d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="assets/mathjax/tex-svg.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./12-exercise-solutions.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Exercise Solutions</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Introduction to Quantum Mechanics</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-vectors-and-quantum-states.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Vectors and Quantum States</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Operators</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-quantum-measurement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Quantum Measurement</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-commutation-relations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Commutation Relations of Observables</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-time-evolution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Time Evolution</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-transitions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-continuous-observables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Continuous Observables</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-angular-momentum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Angular Momentum</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-coupling-angular-momenta.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Coupling Two Angular Momenta</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-topics-in-atomic-physics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Topics in Atomic Physics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-appendices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Appendices</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-exercise-solutions.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Exercise Solutions</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#exercises-for-chapter-1" id="toc-exercises-for-chapter-1" class="nav-link active" data-scroll-target="#exercises-for-chapter-1"><span class="header-section-number">12.1</span> Exercises for Chapter 1</a></li>
+  <li><a href="#exercises-for-chapter-2" id="toc-exercises-for-chapter-2" class="nav-link" data-scroll-target="#exercises-for-chapter-2"><span class="header-section-number">12.2</span> Exercises for Chapter 2</a></li>
+  <li><a href="#exercises-for-chapter-3" id="toc-exercises-for-chapter-3" class="nav-link" data-scroll-target="#exercises-for-chapter-3"><span class="header-section-number">12.3</span> Exercises for Chapter 3</a></li>
+  <li><a href="#exercises-for-chapter-4" id="toc-exercises-for-chapter-4" class="nav-link" data-scroll-target="#exercises-for-chapter-4"><span class="header-section-number">12.4</span> Exercises for Chapter 4</a></li>
+  <li><a href="#exercises-for-chapter-5" id="toc-exercises-for-chapter-5" class="nav-link" data-scroll-target="#exercises-for-chapter-5"><span class="header-section-number">12.5</span> Exercises for Chapter 5</a></li>
+  <li><a href="#exercises-for-chapter-6" id="toc-exercises-for-chapter-6" class="nav-link" data-scroll-target="#exercises-for-chapter-6"><span class="header-section-number">12.6</span> Exercises for Chapter 6</a></li>
+  <li><a href="#exercises-for-chapter-7" id="toc-exercises-for-chapter-7" class="nav-link" data-scroll-target="#exercises-for-chapter-7"><span class="header-section-number">12.7</span> Exercises for Chapter 7</a></li>
+  <li><a href="#exercises-for-chapter-8" id="toc-exercises-for-chapter-8" class="nav-link" data-scroll-target="#exercises-for-chapter-8"><span class="header-section-number">12.8</span> Exercises for Chapter 8</a></li>
+  <li><a href="#exercises-for-chapter-9" id="toc-exercises-for-chapter-9" class="nav-link" data-scroll-target="#exercises-for-chapter-9"><span class="header-section-number">12.9</span> Exercises for Chapter 9</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Exercise Solutions</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="exercises-for-chapter-1" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="exercises-for-chapter-1"><span class="header-section-number">12.1</span> Exercises for Chapter 1</h2>
+<p><strong>1.1</strong> Decide whether each of the following forms a Hilbert space.</p>
+<ul>
+<li><p>All complex numbers.</p></li>
+<li><p>All vectors in three-dimensional Cartesian space.</p></li>
+<li><p>Solutions <span class="math inline">\(\psi (x)\)</span> of the following equation, where <span class="math inline">\(E\)</span> is real and <span class="math inline">\(V(x)\)</span> is a finite continuous function of <span class="math inline">\(x\)</span>.</p></li>
+</ul>
+<p><span id="eq-ch12-p2407"><span class="math display">\[
+\left[ { - \frac{{{\hbar ^2}}}{{2m}}\frac{{{d^2}}}{{d{x^2}}} + V(x)} \right]\psi (x) = E\psi (x)
+\tag{12.1}\]</span></span></p>
+<ol type="a">
+<li>Yes. (b) A real linear space, not a complex linear space. (c) Yes.</li>
+</ol>
+<p><strong>1.2</strong> Prove that <span class="math inline">\(\left\langle {\alpha } \mathrel{\left \vert  {\vphantom {\alpha \alpha }} \right. \kern-1.2pt } {\alpha } \right\rangle \left\langle {\beta } \mathrel{\left \vert  {\vphantom {\beta \beta }} \right. \kern-1.2pt } {\beta } \right\rangle \ge {\left\vert  {\left\langle {\alpha } \mathrel{\left \vert  {\vphantom {\alpha \beta }} \right. \kern-1.2pt } {\beta } \right\rangle } \right\vert ^2}\)</span>.</p>
+<p>Hint: Construct a suitable <span class="math inline">\(\vert \psi \rangle\)</span> as a linear combination of <span class="math inline">\(\vert \alpha\rangle\)</span> and <span class="math inline">\(\vert \beta\rangle\)</span>, and use <a href="01-vectors-and-quantum-states.html#eq-zeqnnum281628" class="quarto-xref">Equation&nbsp;<span>1.11</span></a>, <span class="math inline">\(\left\langle {\psi } \mathrel{\left \vert  {\vphantom {\psi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \ge 0\)</span>.</p>
+<p>Solution: Let <span class="math inline">\(\vert \psi\rangle = \left( {\langle \beta\vert \beta\rangle \vert \alpha\rangle - \langle \beta\vert \alpha\rangle \vert \beta\rangle } \right)\)</span>.</p>
+<p><strong>1.3</strong> A two-dimensional vector <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> expands in the basis <span class="math inline">\(\left\{ {\vert {\alpha _1}\rangle ,\vert {\alpha _2}\rangle } \right\}\)</span> as</p>
+<p><span id="eq-ch12-p2414"><span class="math display">\[
+\vert \psi \rangle = \vert {\alpha _1}\rangle + 3\vert {\alpha _3}\rangle
+\tag{12.2}\]</span></span></p>
+<p>Another basis <span class="math inline">\(\left\{ {\vert {\beta _1}\rangle ,\vert {\beta _2}\rangle } \right\}\)</span> satisfies</p>
+<p><span id="eq-ch12-p2416"><span class="math display">\[
+\left\vert  {{\beta _1}} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\vert {\alpha _1}\rangle + i\vert {\alpha _2}\rangle } \right), \qquad  \left\vert  {{\beta _2}} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\vert {\alpha _1}\rangle - i\vert {\alpha _2}\rangle } \right)
+\tag{12.3}\]</span></span></p>
+<p>Find the expansion of <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> in the latter basis.</p>
+<p>Solution, method 1: Express <span class="math inline">\(\vert {\alpha _i}\rangle\)</span> in terms of <span class="math inline">\(\vert {\beta _i}\rangle\)</span> and substitute into the expression for <span class="math inline">\(\vert \psi\rangle\)</span>.</p>
+<p>Method 2: Use matrices. First write <span class="math inline">\(\vert \psi \rangle\)</span> and <span class="math inline">\(\vert {\beta _i}\rangle\)</span> in the <span class="math inline">\(\alpha\)</span> basis:</p>
+<p><span id="eq-ch12-p2420"><span class="math display">\[
+\left\vert  \psi \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} 1\\ 3 \end{array}} \right), \qquad  \left\vert  {{\beta _1}} \right\rangle \buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ i \end{array}} \right), \qquad  \left\vert  {{\beta _2}} \right\rangle \buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ { - i} \end{array}} \right)
+\tag{12.4}\]</span></span></p>
+<p>Use the relation between bra and ket matrices:</p>
+<p><span id="eq-ch12-p2422"><span class="math display">\[
+\left\langle {{\beta _1}} \right\vert  = \frac{1}{{\sqrt 2 }}\left( {1,\; - i} \right), \qquad  \left\langle {{\beta _2}} \right\vert  = \frac{1}{{\sqrt 2 }}\left( {1,\; + i} \right)
+\tag{12.5}\]</span></span></p>
+<p>Finally, by <a href="01-vectors-and-quantum-states.html#eq-zeqnnum935342" class="quarto-xref">Equation&nbsp;<span>1.25</span></a>, the matrix of <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> in the <span class="math inline">\(\beta\)</span> basis is</p>
+<p><span id="eq-ch12-p2424"><span class="math display">\[
+\left\vert  \psi \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {{{\beta _1}}} \mathrel{\left \vert  {\vphantom {{{\beta _1}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }\\ {\left\langle {{{\beta _2}}} \mathrel{\left \vert  {\vphantom {{{\beta _2}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \end{array}} \right){\rm{ = }}\left( {\begin{array}{*{20}{c}} {\frac{1}{{\sqrt 2 }}\left( {1, - i} \right)\left( {\begin{array}{*{20}{c}} 1\\ 3 \end{array}} \right)}\\ {\frac{1}{{\sqrt 2 }}\left( {1,i} \right)\left( {\begin{array}{*{20}{c}} 1\\ 3 \end{array}} \right)} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\frac{{1 - 3i}}{{\sqrt 2 }}}\\ {\frac{{1 + 3i}}{{\sqrt 2 }}} \end{array}} \right)
+\tag{12.6}\]</span></span></p>
+</section>
+<section id="exercises-for-chapter-2" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="exercises-for-chapter-2"><span class="header-section-number">12.2</span> Exercises for Chapter 2</h2>
+<p><strong>2.1</strong> Let {<span class="math inline">\(\left\vert  U \right\rangle ,\left\vert  D \right\rangle\)</span>} be a basis of a two-dimensional vector space. The basis vectors have matrices</p>
+<p><span id="eq-ch12-p2427"><span class="math display">\[
+\vert U\rangle = \left( {\begin{array}{*{20}{c}} {\langle U\vert U\rangle }\\ {\langle D\vert U\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right), \qquad  \vert D\rangle = \left( {\begin{array}{*{20}{c}} {\langle U\vert D\rangle }\\ {\langle D\vert D\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0\\ 1 \end{array}} \right),
+\tag{12.7}\]</span></span></p>
+<p>Three operators <span class="math inline">\(\hat A,\hat B,\hat C\)</span> have the following properties:</p>
+<p><span id="eq-ch12-p2429"><span class="math display">\[
+\begin{array}{l} \hat A\vert U\rangle = \vert D\rangle , &amp; \hat A\vert D\rangle = \vert U\rangle \\ \hat B\vert U\rangle = i\vert D\rangle , &amp; \hat B\vert D\rangle = - i\vert U\rangle \\ \hat C\vert U\rangle = \vert U\rangle , &amp; \hat C\vert D\rangle = - \vert D\rangle \end{array}
+\tag{12.8}\]</span></span></p>
+<p>Write their matrices in this basis.</p>
+<p><span id="eq-ch12-p2431"><span class="math display">\[
+\hat A \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\langle U\vert {\hat A}\vert U\rangle }&amp;{\langle U\vert {\hat A}\vert D\rangle }\\ {\langle D\vert {\hat A}\vert U\rangle }&amp;{\langle D\vert {\hat A}\vert D\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\langle U\vert D\rangle }&amp;{\langle U\vert U\rangle }\\ {\langle D\vert D\rangle }&amp;{\langle D\vert U\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0&amp;1\\ 1&amp;0 \end{array}} \right)
+\tag{12.9}\]</span></span></p>
+<p>Similarly,</p>
+<p><span id="eq-ch12-p2433"><span class="math display">\[
+\begin{array}{l} \hat B \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {i\langle U\vert D\rangle }&amp;{ - i\langle U\vert U\rangle }\\ {i\langle D\vert D\rangle }&amp;{ - i\langle D\vert U\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0&amp;{ - i}\\ i&amp;0 \end{array}} \right)\\ \hat C \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\langle U\vert U\rangle }&amp;{\langle U\vert D\rangle }\\ {\langle D\vert U\rangle }&amp;{ - \langle D\vert D\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 1&amp;0\\ 0&amp;{ - 1} \end{array}} \right) \end{array}
+\tag{12.10}\]</span></span></p>
+<p><strong>2.2</strong> Let <span class="math inline">\(\left\vert  1 \right\rangle ,\left\vert  2 \right\rangle\)</span> be two basis vectors of a two-dimensional space, and let an operator <span class="math inline">\(\hat H\)</span> be</p>
+<p><span id="eq-ch12-p2435"><span class="math display">\[
+\hat H = \cos \theta \left\vert  1 \right\rangle \left\langle 1 \right\vert  + \sin \theta \left\vert  1 \right\rangle \left\langle 2 \right\vert  + \sin \theta \left\vert  2 \right\rangle \left\langle 1 \right\vert  - \cos \theta \left\vert  2 \right\rangle \left\langle 2 \right\vert
+\tag{12.11}\]</span></span></p>
+<p>Find the eigenvalues and corresponding eigenstates of <span class="math inline">\(\hat H\)</span>.</p>
+<p>Solution: Seek all eigenvalues <span class="math inline">\(\lambda\)</span> and eigenvectors <span class="math inline">\(\vert \lambda\rangle\)</span> satisfying <span class="math inline">\(\hat H\vert \lambda\rangle = \lambda \vert \lambda\rangle\)</span>. First write this vector equation in the <span class="math inline">\(\left\{ {\left\vert  1 \right\rangle ,\left\vert  2 \right\rangle } \right\}\)</span> basis.</p>
+<p>The matrix elements of <span class="math inline">\(\hat H\)</span> are <span class="math inline">\(\left\langle i \right\vert {\hat H}\left\vert  j \right\rangle\)</span>. Using <span class="math inline">\(\left\langle {i} \mathrel{\left \vert  {\vphantom {i j}} \right. \kern-1.2pt } {j} \right\rangle = {\delta _{ij}}\)</span>, its matrix in the <span class="math inline">\(\left\{ {\left\vert  1 \right\rangle ,\left\vert  2 \right\rangle } \right\}\)</span> basis is</p>
+<p><span id="eq-ch12-p2439"><span class="math display">\[
+\hat H \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\cos \theta }&amp;{\sin \theta }\\ {\sin \theta }&amp;{ - \cos \theta } \end{array}} \right)
+\tag{12.12}\]</span></span></p>
+<p>A nonzero solution exists only if the following determinant vanishes:</p>
+<p><span id="eq-ch12-p2441"><span class="math display">\[
+\left\vert  {\begin{array}{*{20}{c}} {\cos \theta - \lambda }&amp;{\sin \theta }\\ {\sin \theta }&amp;{ - \cos \theta - \lambda } \end{array}} \right\vert  = 0 \Rightarrow ({\lambda ^2} - {\cos ^2}\theta ) - {\sin ^2}\theta = 0 \Rightarrow \lambda = \pm 1
+\tag{12.13}\]</span></span></p>
+<p>Let the eigenvector <span class="math inline">\(\left. \vert {\lambda }_{1}\right\rangle ={a}_{1}\left. \vert 1\right\rangle +{a}_{2}\left. \vert 2\right\rangle\)</span> correspond to <span class="math inline">\({\lambda }_{1}=1\)</span>.</p>
+<p><span id="eq-ch12-p2443"><span class="math display">\[
+\left( {\begin{array}{*{20}{c}} {\cos \theta }&amp;{\sin \theta }\\ {\sin \theta }&amp;{ - \cos \theta } \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{a_1}}\\ {{a_2}} \end{array}} \right) = 1\left( {\begin{array}{*{20}{c}} {{a_1}}\\ {{a_2}} \end{array}} \right)
+\tag{12.14}\]</span></span></p>
+<p><span id="eq-ch12-p2444"><span class="math display">\[
+\begin{array}{c} {a_1}\cos \theta + {a_2}\sin \theta = {a_1}\\ {a_2}\cos \frac{\theta }{2} = {a_1}\sin \frac{\theta }{2} \end{array}
+\tag{12.15}\]</span></span></p>
+<p><span id="eq-ch12-p2445"><span class="math display">\[
+\therefore {a_1} = \cos \frac{\theta }{2}, \qquad  {a_2} = \sin \frac{\theta }{2}
+\tag{12.16}\]</span></span></p>
+<p><span id="eq-ch12-p2446"><span class="math display">\[
+{\lambda _1} = 1, \qquad  \qquad  \left\vert  {{\lambda _1}} \right\rangle = \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {\sin \frac{\theta }{2}} \end{array}} \right)
+\tag{12.17}\]</span></span></p>
+<p>Similarly,</p>
+<p><span id="eq-ch12-p2448"><span class="math display">\[
+{\lambda _2} = - 1, \qquad  \qquad  \left\vert  {{\lambda _2}} \right\rangle = \left( {\begin{array}{*{20}{c}} { - \sin \frac{\theta }{2}}\\ {\cos \frac{\theta }{2}} \end{array}} \right)
+\tag{12.18}\]</span></span></p>
+<p><strong>2.3</strong>* A Hermitian operator <span class="math inline">\(\hat A\)</span> has nondegenerate eigenvalues <span class="math inline">\(\left\{ {{a_i}} \right\}\)</span> and eigenstates <span class="math inline">\(\left\{ {\left\vert  {{a_i}} \right\rangle } \right\}\)</span>. Find the eigenvalues and eigenstates of <span class="math inline">\({\hat A^{ - 1}}\)</span>.</p>
+<p>Solution: Since <span class="math inline">\(\left\vert  {{a_i}} \right\rangle = \hat I\left\vert  {{a_i}} \right\rangle = {\hat A^{ - 1}}\hat A\left\vert  {{a_i}} \right\rangle = {\hat A^{ - 1}}{a_i}\left\vert  {{a_i}} \right\rangle = {a_i}{\hat A^{ - 1}}\left\vert  {{a_i}} \right\rangle\)</span>,</p>
+<p>we have <span class="math inline">\({\hat A^{ - 1}}\left\vert  {{a_i}} \right\rangle = \frac{1}{{{a_i}}}\left\vert  {{a_i}} \right\rangle\)</span>.</p>
+<p>Thus <span class="math inline">\({\hat A^{ - 1}}\)</span> has eigenvalues <span class="math inline">\({1 \mathord{\left/ {\vphantom {1 {{a_i}}}} \right. \kern-1.2pt } {{a_i}}}\)</span> with eigenstates <span class="math inline">\(\left\vert  {{a_i}} \right\rangle\)</span>.</p>
+<p><strong>2.4</strong> Prove that, for a Hermitian operator <span class="math inline">\(\hat A\)</span>, the eigenvalues of <span class="math inline">\({\hat A^2}\)</span> are nonnegative.</p>
+<p>Solution: Since <span class="math inline">\(\hat A = {\hat A^ + }\)</span>,</p>
+<p>for any vector <span class="math inline">\(\vert \psi \rangle\)</span>, <span class="math inline">\(\langle \psi\vert {\hat A^2}\vert \psi\rangle = \langle \psi\vert {\hat A^\dag }\hat A\vert \psi\rangle = \left( {\langle \psi\vert {{\hat A}^\dag }} \right)\left( {\hat A\vert \psi\rangle } \right) \ge 0\)</span>.</p>
+<p>Let <span class="math inline">\(b\)</span> and <span class="math inline">\(\vert b\rangle\)</span> be an eigenvalue and corresponding eigenstate of <span class="math inline">\({\hat A^2}\)</span>.</p>
+<p>Then <span class="math inline">\(\langle b\vert {\hat A^2}\vert b\rangle = \langle b\vert b\vert b\rangle = b\langle b\vert b\rangle \ge 0\)</span>. Since <span class="math inline">\(\langle b\vert b\rangle \ge 0\)</span>, we obtain <span class="math inline">\(b \ge 0\)</span>, as required.</p>
+<p><strong>2.5</strong> Prove that, for any operator <span class="math inline">\(\hat A\)</span>, <span class="math inline">\(\hat A{\hat A^\dag }\)</span> is Hermitian.</p>
+<p>Solution: <span class="math inline">\({\left( {\hat A{{\hat A}^\dag }} \right)^\dag } = {\left( {{{\hat A}^\dag }} \right)^\dag }{\hat A^\dag } = \hat A{\hat A^\dag }\)</span>, which proves the assertion.</p>
+</section>
+<section id="exercises-for-chapter-3" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="exercises-for-chapter-3"><span class="header-section-number">12.3</span> Exercises for Chapter 3</h2>
+<p><strong>3.1</strong> A spin-1/2 particle initially has spin state <span class="math inline">\(\left. \vert \psi \right\rangle =\left. \vert U\right\rangle +\left. 2i\vert D\right\rangle\)</span>.</p>
+<ul>
+<li><p>Normalize <span class="math inline">\(\left. \vert \psi \right\rangle\)</span>.</p></li>
+<li><p>In <span class="math inline">\(\left. \vert \psi \right\rangle\)</span>, what is the probability that measuring <span class="math inline">\({\sigma }_{z}\)</span> gives <span class="math inline">\(+1\)</span>?</p></li>
+<li><p>In <span class="math inline">\(\left. \vert \psi \right\rangle\)</span>, what is the probability that measuring <span class="math inline">\({\sigma }_{x}\)</span> gives <span class="math inline">\(-1\)</span>?</p></li>
+<li><p>In <span class="math inline">\(\left. \vert \psi \right\rangle\)</span>, first measure <span class="math inline">\({\sigma }_{z}\)</span>, then <span class="math inline">\({\sigma }_{x}\)</span>. What is the probability that both results are <span class="math inline">\(+1\)</span>?</p></li>
+<li><p>In <span class="math inline">\(\left. \vert \psi \right\rangle\)</span>, first measure <span class="math inline">\({\sigma }_{x}\)</span>, then <span class="math inline">\({\sigma }_{z}\)</span>. What is the probability that both results are <span class="math inline">\(+1\)</span>?</p></li>
+</ul>
+<p>Solution:</p>
+<p><span id="eq-ch12-p2474"><span class="math display">\[
+\left. \vert \psi \right\rangle =\frac{\left. \vert U\right\rangle +\left. 2i\vert D\right\rangle }{\sqrt{\left\langle \psi \vert \psi \right\rangle }}=\frac{1}{\sqrt{5}}\left( \left. \vert U\right\rangle +\left. 2i\vert D\right\rangle \right)
+\tag{12.19}\]</span></span></p>
+<p><span id="eq-ch12-p2475"><span class="math display">\[
+{\left\vert  \left\langle U\vert \psi \right\rangle \right\vert  }^{2}=1/5
+\tag{12.20}\]</span></span></p>
+<p><span id="eq-ch12-p2476"><span class="math display">\[
+{\left\vert  \left\langle L\vert \psi \right\rangle \right\vert  }^{2}={\left\vert  \frac{1}{\sqrt{2}}\left( \left\langle U\vert \right. -\left\langle D\vert \right. \right) \frac{1}{\sqrt{5}}\left( \left. \vert U\right\rangle +\left. 2i\vert D\right\rangle \right) \right\vert  }^{2}=\frac{1}{10}{\left\vert  \left( 1-2i\right) \right\vert  }^{2}=\frac{1}{2}
+\tag{12.21}\]</span></span></p>
+<p><span id="eq-ch12-p2477"><span class="math display">\[
+{\left\vert  \left\langle U\vert \psi \right\rangle \right\vert  }^{2}{\left\vert  \left\langle R\vert U\right\rangle \right\vert  }^{2}=\frac{1}{5}\times \frac{1}{2}=\frac{1}{10}
+\tag{12.22}\]</span></span></p>
+<p><span id="eq-ch12-p2478"><span class="math display">\[
+{\left\vert  \left\langle R\vert \psi \right\rangle \right\vert  }^{2}{\left\vert  \left\langle U\vert R\right\rangle \right\vert  }^{2}=\left( 1-{\left\vert  \left\langle L\vert \psi \right\rangle \right\vert  }^{2}\right) \times \frac{1}{2}=\frac{1}{4}
+\tag{12.23}\]</span></span></p>
+<p><strong>3.2</strong> The electron’s magnetic moment <span class="math inline">\({\bf{\hat \mu }}\)</span> is proportional to its spin <span class="math inline">\({\bf{\hat S}}\)</span>, with <span class="math inline">\({\bf{\hat \mu }} = {{ - 2{\mu _B}{\bf{\hat S}}} \mathord{\left/ {\vphantom {{ - 2{\mu _B}{\bf{\hat S}}} \hbar }} \right. \kern-1.2pt } \hbar }\)</span>. A stationary electron is placed in a uniform magnetic field of magnitude <span class="math inline">\(B\)</span>. Using the magnetic energy <span class="math inline">\(\hat H = - {\bf{\hat \mu }} \cdot {\bf{B}}\)</span>, find the eigenvalues and eigenstates of <span class="math inline">\(\hat H\)</span> and the energy-level spacing. Hint: Treat the field as a classical quantity, a number.</p>
+<p>Solution: Choose the field along positive <span class="math inline">\(z\)</span>. The Hamiltonian is</p>
+<p><span id="eq-ch12-p2483"><span class="math display">\[
+\hat H = - {\bf{\mu }} \cdot {\bf{B}} = - B{\hat \mu _z} = \frac{{2{\mu _{\rm{B}}}}}{\hbar }B{\hat S_z} = {\mu _{\rm{B}}}B{\hat \sigma _z}
+\tag{12.24}\]</span></span></p>
+<p>This is a constant times <span class="math inline">\({\hat \sigma _z}\)</span>, so</p>
+<p><span id="eq-ch12-p2485"><span class="math display">\[
+\begin{array}{l} \hat H\left\vert  U \right\rangle = {\mu _{\rm{B}}}B{{\hat \sigma }_z}\left\vert  U \right\rangle = {\mu _{\rm{B}}}B\left\vert  U \right\rangle \\ \hat H\left\vert  D \right\rangle = {\mu _{\rm{B}}}B{{\hat \sigma }_z}\left\vert  D \right\rangle = - {\mu _{\rm{B}}}B\left\vert  D \right\rangle \end{array}
+\tag{12.25}\]</span></span></p>
+<p>Thus the energy eigenstates in a constant magnetic field are eigenstates of <span class="math inline">\({\hat \sigma _z}\)</span>. Their energies are the eigenvalues of <span class="math inline">\({\hat \sigma _z}\)</span> multiplied by <span class="math inline">\({\mu _{\rm{B}}}B\)</span>. The level spacing is <span class="math inline">\(\Delta E=2{\mu }_{B}B\)</span>.</p>
+<p>If we define <span class="math inline">\(2{\mu }_{B}B\equiv \hbar {\omega }_{L}\)</span>, the transition frequency is <span class="math inline">\({\omega }_{L}\)</span>. The frequency associated with magnetic splitting is also called the Larmor frequency.</p>
+<p><img src="assets/image677.png" class="img-fluid" width="172"> <strong>3.3</strong> As shown, the projection of <span class="math inline">\({\bf{\hat \sigma }}\)</span> along direction <span class="math inline">\({\bf{n}}{\rm{(}}\theta {\rm{,}}\phi )\)</span> is <span class="math inline">\({\hat \sigma _n}\)</span>.</p>
+<ul>
+<li>Write the matrix of <span class="math inline">\({\hat \sigma _n}\)</span> in the <span class="math inline">\({\hat \sigma _z}\)</span> representation, and show that its eigenvalues are <span class="math inline">\(+ 1, - 1\)</span>, with eigenvectors</li>
+</ul>
+<p><span id="eq-ch12-p2491"><span class="math display">\[
+\left\vert  { + 1} \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {{e^{i\phi }}\sin \frac{\theta }{2}} \end{array}} \right), \qquad  \left\vert  { - 1} \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {{e^{ - i\phi }}\sin \frac{\theta }{2}}\\ { - \cos \frac{\theta }{2}} \end{array}} \right)
+\tag{12.26}\]</span></span></p>
+<ul>
+<li><p>If <span class="math inline">\({\hat \sigma _x}\)</span> is known to equal <span class="math inline">\(1\)</span>, find the probability that <span class="math inline">\({\hat \sigma _n}\)</span> equals <span class="math inline">\(-1\)</span>.</p></li>
+<li><p>Find the expectation value <span class="math inline">\(\left( {\langle {{\hat \sigma }_x}\rangle ,\langle {{\hat \sigma }_y}\rangle ,\langle {{\hat \sigma }_z}\rangle } \right)\)</span> of <span class="math inline">\({\bf{\sigma }}\)</span> in state <span class="math inline">\(\left\vert  {\hat n + } \right\rangle\)</span>.</p></li>
+</ul>
+<p>Hint:</p>
+<p><span id="eq-ch12-p2495"><span class="math display">\[
+{\hat \sigma _n} = {\bf{\hat \sigma }} \cdot {\bf{\hat n}} = \left( {{{\hat \sigma }_x}{\bf{\hat x}} + {{\hat \sigma }_y}{\bf{\hat y}} + {{\hat \sigma }_z}{\bf{\hat z}}} \right) \cdot \left( {{n_x}{\bf{\hat x}} + {n_y}{\bf{\hat y}} + {n_z}{\bf{\hat z}}} \right){\rm{ = }}{\hat \sigma _x}{n_x} + {\hat \sigma _y}{n_y} + {\hat \sigma _z}{n_z}
+\tag{12.27}\]</span></span></p>
+<p>The symbols <span class="math inline">\({\bf{x}},{\bf{y}},{\bf{z}}\)</span> and <span class="math inline">\({\bf{n}}\)</span> are ordinary unit vectors indicating directions in Cartesian space. The components of <span class="math inline">\({\bf{n}}\)</span> along <span class="math inline">\({\bf{x}},{\bf{y}},{\bf{z}}\)</span> are numbers:</p>
+<p><span id="eq-ch12-p2497"><span class="math display">\[
+{\rm{(}}{n_x},\;{n_y},\;{n_z}) = (\sin \theta \cos \phi ,\;\sin \theta \sin \phi ,\;\cos \theta )
+\tag{12.28}\]</span></span></p>
+<p>In contrast, <span class="math inline">\({\bf{\hat \sigma }}\)</span> is a vector observable whose components along the three directions <span class="math inline">\({\bf{x}},{\bf{y}},{\bf{z}}\)</span> are operators.</p>
+<p>Solution:</p>
+<ul>
+<li>First write the matrix of <span class="math inline">\({\hat \sigma _n}\)</span> in the <span class="math inline">\({\hat \sigma _z}\)</span> representation:</li>
+</ul>
+<p><span id="eq-ch12-p2502"><span class="math display">\[
+\begin{array}{c} {{\hat \sigma }_n} = {\bf{\hat \sigma }} \cdot {\bf{\hat n}} = \left( {{{\hat \sigma }_x}{\bf{\hat x}} + {{\hat \sigma }_y}{\bf{\hat y}} + {{\hat \sigma }_z}{\bf{\hat z}}} \right) \cdot \left( {{n_x}{\bf{\hat x}} + {n_y}{\bf{\hat y}} + {n_z}{\bf{\hat z}}} \right) = {{\hat \sigma }_x}{n_x} + {{\hat \sigma }_y}{n_y} + {{\hat \sigma }_z}{n_z}\\ = {{\hat \sigma }_x}\sin \theta \cos \phi + {{\hat \sigma }_y}\sin \theta \sin \phi + {{\hat \sigma }_z}\cos \theta \\ \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\cos \theta }&amp;{\sin \theta \cos \phi - i\sin \theta \sin \phi }\\ {\sin \theta \cos \phi + i\sin \theta \sin \phi }&amp;{ - \cos \theta } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\cos \theta }&amp;{\sin \theta {e^{ - i\phi }}}\\ {\sin \theta {e^{i\phi }}}&amp;{ - \cos \theta } \end{array}} \right) \end{array}
+\tag{12.29}\]</span></span></p>
+<p>For the eigenvalue equation <span class="math inline">\({\hat \sigma _n}\left\vert  \lambda \right\rangle = \lambda \left\vert  \lambda \right\rangle\)</span> to have a nonzero solution,</p>
+<p><span id="eq-ch12-p2504"><span class="math display">\[
+\left\vert  {\begin{array}{*{20}{c}} {\cos \theta - \lambda }&amp;{{e^{ - i\phi }}\sin \theta }\\ {{e^{i\phi }}\sin \theta }&amp;{ - \cos \theta - \lambda } \end{array}} \right\vert  = 0
+\tag{12.30}\]</span></span></p>
+<p>Thus <span class="math inline">\(- \left( {\cos \theta - \lambda } \right)\left( {\cos \theta {\rm{ + }}\lambda } \right) - {\sin ^2}\theta = 0\)</span>, giving two eigenvalues: <span class="math inline">\({\lambda _ + } = 1, \qquad  {\lambda _ - } = - 1\)</span>.</p>
+<p>Assume <span class="math inline">\(\left. \vert {\lambda }_{+}\right\rangle =a\left. \vert U\right\rangle +b\left. \vert D\right\rangle\)</span>. Then <span class="math inline">\({\hat \sigma _n}\left\vert  {{\lambda _ + }} \right\rangle = + \left\vert  {{\lambda _ + }} \right\rangle\)</span>, whose matrix form is</p>
+<p><span id="eq-ch12-p2507"><span class="math display">\[
+\left( {\begin{array}{*{20}{c}} {\cos \theta }&amp;{{e^{ - i\phi }}\sin \theta }\\ {{e^{i\phi }}\sin \theta }&amp;{ - \cos \theta } \end{array}} \right)\left( {\begin{array}{*{20}{c}} a\\ b \end{array}} \right) = \left( {\begin{array}{*{20}{c}} a\\ b \end{array}} \right)
+\tag{12.31}\]</span></span></p>
+<p>Therefore</p>
+<p><span id="eq-ch12-p2509"><span class="math display">\[
+a\cos \theta + b{e^{ - i\phi }}\sin \theta = a \qquad  \Rightarrow \qquad  \frac{a}{b} = \frac{{\cos ({\theta \mathord{\left/ {\vphantom {\theta 2}} \right. \kern-1.2pt } 2})}}{{\sin ({\theta \mathord{\left/ {\vphantom {\theta 2}} \right. \kern-1.2pt } 2}){e^{i\phi }}}}
+\tag{12.32}\]</span></span></p>
+<p>Choose <span class="math inline">\(a = \cos \left( {{\theta \mathord{\left/ {\vphantom {\theta 2}} \right. \kern-1.2pt } 2}} \right),\;\;b = {e^{i\phi }}\sin \left( {{\theta \mathord{\left/ {\vphantom {\theta 2}} \right. \kern-1.2pt } 2}} \right)\)</span>. Then</p>
+<p><span id="eq-ch12-p2511"><span class="math display">\[
+\left\vert  {{\lambda _ + }} \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {{e^{i\phi }}\sin \frac{\theta }{2}} \end{array}} \right),
+\tag{12.33}\]</span></span></p>
+<p>Since <span class="math inline">\(\left\langle {{{\lambda _ + }}} \mathrel{\left \vert  {\vphantom {{{\lambda _ + }} {{\lambda _ + }}}} \right. \kern-1.2pt } {{{\lambda _ + }}} \right\rangle = 1\)</span>, <span class="math inline">\(\left\vert  {{\lambda _ + }} \right\rangle\)</span> is already normalized. Otherwise every component must be divided by <span class="math inline">\({\left\vert  {\langle {{\lambda _ + }}\vert {{\lambda _ + }}\rangle } \right\vert ^2}\)</span>.</p>
+<p>Similarly, the eigenvector <span class="math inline">\(\langle {\lambda _ + }\vert {\lambda _ - }\rangle = 0\)</span> corresponding to <span class="math inline">\(\left\vert  {{\lambda _ - }} \right\rangle\)</span> can be found. In the <span class="math inline">\({\hat \sigma _z}\)</span> representation,</p>
+<p><span id="eq-ch12-p2514"><span class="math display">\[
+\vert {\lambda _ + }\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {{e^{i\phi }}\sin \frac{\theta }{2}} \end{array}} \right), \qquad  \qquad  \vert {\lambda _ - }\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {{e^{ - i\phi }}\sin \frac{\theta }{2}}\\ { - \cos \frac{\theta }{2}} \end{array}} \right)
+\tag{12.34}\]</span></span></p>
+<p>As a check, substitute special values of <span class="math inline">\(\theta ,\varphi\)</span> into <span class="math inline">\({\hat{\sigma }}_{n}\)</span> and <span class="math inline">\(\left\vert  {{\lambda _ \pm }} \right\rangle\)</span> to recover <span class="math inline">\({\hat \sigma _{x,y,z}}\)</span> and their eigenstates.</p>
+<p>Note: If <span class="math inline">\({\bf{\hat n}} = \left( {\theta ,\phi } \right)\)</span>, the direction opposite to <span class="math inline">\({\bf{\hat n}}\)</span> is <span class="math inline">\({\bf{\hat n'}} = \left( {\pi - \theta ,\pi + \phi } \right)\)</span>. Physically, the eigenstate with the projection of <span class="math inline">\({\bf{\sigma }}\)</span> along <span class="math inline">\({\bf{\hat n}}\)</span> equal to <span class="math inline">\(- 1\)</span> should be the same as the eigenstate <span class="math inline">\(\vert {{{\lambda '}_ + }}\rangle\)</span> with the projection of <span class="math inline">\({\bf{\sigma }}\)</span> along <span class="math inline">\({\bf{\hat n'}}\)</span> equal to <span class="math inline">\(+ 1\)</span>.</p>
+<p><span id="eq-ch12-p2517"><span class="math display">\[
+\vert {\lambda '_ + }\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\cos \frac{{\pi - \theta }}{2}}\\ {{e^{i\left( {\pi + \phi } \right)}}\sin \frac{{\pi - \theta }}{2}} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\sin \frac{\theta }{2}}\\ {{e^{i\left( {\pi + \phi } \right)}}\cos \frac{\theta }{2}} \end{array}} \right) = {e^{i\phi }}\left( {\begin{array}{*{20}{c}} {{e^{ - i\phi }}\sin \frac{\theta }{2}}\\ { - \cos \frac{\theta }{2}} \end{array}} \right)
+\tag{12.35}\]</span></span></p>
+<p>Thus <span class="math inline">\(\vert {\lambda '_ + }\rangle\)</span> and <span class="math inline">\(\vert {\lambda _ - }\rangle\)</span> differ only by the phase factor <span class="math inline">\({e^{i\phi }}\)</span>, and indeed represent the same physical state.</p>
+<ul>
+<li>A definite value <span class="math inline">\(1\)</span> of <span class="math inline">\({\hat \sigma _x}\)</span> means that the system is in <span class="math inline">\(\left\vert  R \right\rangle\)</span>. The probability of measuring <span class="math inline">\({\sigma _n} = - 1\)</span> is</li>
+</ul>
+<p><span id="eq-ch12-p2520"><span class="math display">\[
+{\left\vert  {\left\langle {{{\lambda _ - }}} \mathrel{\left \vert  {\vphantom {{{\lambda _ - }} R}} \right. \kern-1.2pt } {R} \right\rangle } \right\vert ^2} = {\left\vert  {\left( {\begin{array}{*{20}{c}} {{e^{i\phi }}\sin \frac{\theta }{2}}&amp;{ - \cos \frac{\theta }{2}} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{1 \mathord{\left/ {\vphantom {1 {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}}\\ {{1 \mathord{\left/ {\vphantom {1 {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}} \end{array}} \right)} \right\vert ^2} = \frac{1}{2}\left( {1 - \sin \theta \cos \phi } \right)
+\tag{12.36}\]</span></span></p>
+<p><span id="eq-ch12-p2522"><span class="math display">\[
+\begin{array}{l} \langle {{{\hat \sigma }_x}}\rangle = \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}&amp;{{e^{ - i\phi }}\sin \frac{\theta }{2}} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&amp;1\\ 1&amp;0 \end{array}} \right)\left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {{e^{i\phi }}\sin \frac{\theta }{2}} \end{array}} \right) = \sin \theta \cos \phi \\ \langle {{{\hat \sigma }_y}}\rangle = \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}&amp;{{e^{ - i\phi }}\sin \frac{\theta }{2}} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&amp;{ - i}\\ i&amp;0 \end{array}} \right)\left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {{e^{i\phi }}\sin \frac{\theta }{2}} \end{array}} \right) = \sin \theta \sin \phi \\ \langle {{{\hat \sigma }_z}}\rangle = \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}&amp;{{e^{ - i\phi }}\sin \frac{\theta }{2}} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 1&amp;0\\ 0&amp;{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {{e^{i\phi }}\sin \frac{\theta }{2}} \end{array}} \right) = \cos \theta \end{array}
+\tag{12.37}\]</span></span></p>
+</section>
+<section id="exercises-for-chapter-4" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="exercises-for-chapter-4"><span class="header-section-number">12.4</span> Exercises for Chapter 4</h2>
+<p><strong>4.1</strong> Define <span class="math inline">\({\rm{\{ }}\hat A,\hat B{\rm{\} }} \equiv \hat A\hat B + \hat B\hat A\)</span>. Prove that <span class="math inline">\(\hat A\hat B = \frac{1}{2}\left[ {\hat A,\hat B} \right] + \frac{1}{2}\left\{ {\hat A,\hat B} \right\}\)</span>.</p>
+<p>Solution: <span class="math inline">\(\frac{1}{2}\left[ {\hat A,\hat B} \right] + \frac{1}{2}\left\{ {\hat A,\hat B} \right\} = \frac{1}{2}\left( {\hat A\hat B - \hat B\hat A} \right) + \frac{1}{2}\left( {\hat A\hat B + \hat B\hat A} \right) = \hat A\hat B\)</span>.</p>
+<p><strong>4.2</strong> The eigenstates <span class="math inline">\(\vert {a_i}\rangle ,\vert {a_j}\rangle\)</span> of a Hermitian operator <span class="math inline">\(\hat A\)</span> have distinct eigenvalues <span class="math inline">\({a_i},{a_j}\)</span>. If <span class="math inline">\([\hat B,\hat A] = 0\)</span>, prove that <span class="math inline">\(\langle {{a_i}}\vert {\hat B}\vert {{a_j}}\rangle = 0\)</span>.</p>
+<p>Solution: <span class="math inline">\(\hat B\hat A - \hat A\hat B = 0\)</span>, so</p>
+<p><span id="eq-ch12-p2530"><span class="math display">\[
+\begin{array}{c} \langle {a_i}\vert \left( {\hat B\hat A - \hat A\hat B} \right)\vert {a_j}\rangle = 0\\ \langle {a_i}\vert \hat B\hat A\vert {a_j}\rangle - \langle {a_i}\vert \hat A\hat B\vert {a_j}\rangle = 0\\ {a_j}\langle {a_i}\vert \hat B\vert {a_j}\rangle - {a_i}\langle {a_i}\vert \hat B\vert {a_j}\rangle = 0\\ \left( {{a_j} - {a_i}} \right)\langle {a_i}\vert \hat B\vert {a_j}\rangle = 0 \end{array}
+\tag{12.38}\]</span></span></p>
+<p>Since <span class="math inline">\({a_j} \ne {a_i}\)</span>, necessarily <span class="math inline">\(\langle {a_i}\vert \hat B\vert {a_j}\rangle = 0\)</span>.</p>
+<p><strong>4.3</strong> Given <span class="math inline">\({{\bf{\hat S}}^2} \equiv \hat S_x^2 + \hat S_y^2 + \hat S_z^2\)</span>, use the commutator identity <a href="04-commutation-relations.html#eq-zeqnnum842864" class="quarto-xref">Equation&nbsp;<span>4.5</span></a> and spin commutation relations <a href="04-commutation-relations.html#eq-zeqnnum232011" class="quarto-xref">Equation&nbsp;<span>4.6</span></a> to prove that</p>
+<p><span id="eq-ch12-p2534"><span class="math display">\[
+\left[ {{{{\bf{\hat S}}}^2},{{\hat S}_z}} \right] = \left[ {{{{\bf{\hat S}}}^2},{{\hat S}_x}} \right] = \left[ {{{{\bf{\hat S}}}^2},{{\hat S}_y}} \right] = 0
+\tag{12.39}\]</span></span></p>
+<p>Solution:</p>
+<p><span id="eq-ch12-p2536"><span class="math display">\[
+\begin{array}{c} \left[ {{{{\bf{\hat S}}}^2},{{\hat S}_z}} \right] = \left[ {\hat S_x^2 + \hat S_y^2 + \hat S_z^2,{{\hat S}_z}} \right]\\ = \left[ {\hat S_x^2,{{\hat \sigma }_z}} \right] + \left[ {\hat S_y^2,{{\hat S}_z}} \right] + \left[ {\hat S_z^2,{{\hat S}_z}} \right]\\ = \left( {{{\hat S}_x}\left[ {{{\hat S}_x},{{\hat S}_z}} \right]{\rm{ + }}\left[ {{{\hat S}_x},{{\hat S}_z}} \right]{{\hat S}_x}} \right) + \left( {{{\hat S}_y}\left[ {{{\hat S}_y},{{\hat S}_z}} \right] + \left[ {{{\hat S}_y},{{\hat S}_z}} \right]{{\hat S}_y}} \right) + 0\\ = \;{{\hat S}_x}\left( { - i\hbar {{\hat S}_y}} \right) + \left( { - i\hbar {{\hat S}_y}} \right){{\hat S}_x} + {{\hat S}_y}i\hbar {{\hat S}_x} + i\hbar {{\hat S}_x}{{\hat S}_y}\\ = 0 \end{array}
+\tag{12.40}\]</span></span></p>
+<p>The other two commutators vanish by the same argument.</p>
+<p><strong>4.4</strong> Show that the expectation value of an anti-Hermitian operator, <span class="math inline">\({\hat C^\dag } = - \hat C\)</span>, is purely imaginary.</p>
+<p>Solution: <span class="math inline">\(\left\langle \psi \right\vert {\hat C}\left\vert  \psi \right\rangle = - \left\langle \psi \right\vert {{C^\dag }}\left\vert  \psi \right\rangle = - \left( {\left\langle \psi \right\vert {{C^\dag }}} \right)\left\vert  \psi \right\rangle = - {\left[ {\left\langle \psi \right\vert \left( {C\left\vert  \psi \right\rangle } \right)} \right]^*} = - \left\langle \psi \right\vert {\hat C}{\left\vert  \psi \right\rangle ^*}\)</span>. Hence <span class="math inline">\(\langle C\rangle\)</span> is purely imaginary.</p>
+<p><strong>4.5</strong> Write the matrix of <span class="math inline">\(\left\vert  R \right\rangle ,\left\vert  L \right\rangle ,{\hat \sigma _x}\)</span> in the <span class="math inline">\({\hat \sigma _{\rm{y}}}\)</span> representation.</p>
+<p>Solution: The old basis is <span class="math inline">\(\left\vert  U \right\rangle ,\left\vert  D \right\rangle\)</span>, and the corresponding new basis is <span class="math inline">\(\left\vert  I \right\rangle ,\left\vert  O \right\rangle\)</span>.</p>
+<p>Method 1: In the <span class="math inline">\({\hat \sigma _z}\)</span> representation,</p>
+<p><span id="eq-ch12-p2545"><span class="math display">\[
+\left\vert  I \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {U} \mathrel{\left \vert  {\vphantom {U I}} \right. \kern-1.2pt } {I} \right\rangle }\\ {\left\langle {D} \mathrel{\left \vert  {\vphantom {D I}} \right. \kern-1.2pt } {I} \right\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{1 \mathord{\left/ {\vphantom {1 {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}}\\ {{i \mathord{\left/ {\vphantom {i {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}} \end{array}} \right), \qquad  \qquad  \left\vert  O \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {U} \mathrel{\left \vert  {\vphantom {U O}} \right. \kern-1.2pt } {O} \right\rangle }\\ {\left\langle {D} \mathrel{\left \vert  {\vphantom {D O}} \right. \kern-1.2pt } {O} \right\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{1 \mathord{\left/ {\vphantom {1 {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}}\\ {{{ - i} \mathord{\left/ {\vphantom {{ - i} {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}} \end{array}} \right)
+\tag{12.41}\]</span></span></p>
+<p>Using these matrix elements and <span class="math inline">\(\langle \alpha\vert \beta\rangle = {\langle \beta\vert \alpha\rangle ^*}\)</span>, we obtain, in the <span class="math inline">\({\hat \sigma _{\rm{y}}}\)</span> representation,</p>
+<p><span id="eq-ch12-p2547"><span class="math display">\[
+\left\vert  U \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {I} \mathrel{\left \vert  {\vphantom {I U}} \right. \kern-1.2pt } {U} \right\rangle }\\ {\left\langle {O} \mathrel{\left \vert  {\vphantom {O U}} \right. \kern-1.2pt } {U} \right\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{1 \mathord{\left/ {\vphantom {1 {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}}\\ {{1 \mathord{\left/ {\vphantom {1 {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}} \end{array}} \right) = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ 1 \end{array}} \right), \qquad  \left\vert  D \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {I} \mathrel{\left \vert  {\vphantom {I D}} \right. \kern-1.2pt } {D} \right\rangle }\\ {\left\langle {O} \mathrel{\left \vert  {\vphantom {O D}} \right. \kern-1.2pt } {D} \right\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{{ - i} \mathord{\left/ {\vphantom {{ - i} {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}}\\ {{i \mathord{\left/ {\vphantom {i {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}} \end{array}} \right) = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} { - i}\\ i \end{array}} \right)
+\tag{12.42}\]</span></span></p>
+<p>Since <span class="math inline">\(\left\vert  R \right\rangle = \frac{{\sqrt 2 }}{2}\left( {\left\vert  U \right\rangle + \left\vert  D \right\rangle } \right)\)</span>, express <span class="math inline">\(\left\vert  U \right\rangle\)</span> and <span class="math inline">\(\left\vert  D \right\rangle\)</span> as columns in the <span class="math inline">\({\hat \sigma _{\rm{y}}}\)</span> representation. Then, in the <span class="math inline">\({\hat \sigma _{\rm{y}}}\)</span> representation,</p>
+<p><span id="eq-ch12-p2549"><span class="math display">\[
+\left\vert  R \right\rangle \buildrel\textstyle.\over= \frac{{\sqrt 2 }}{2}\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ 1 \end{array}} \right) + \frac{{\sqrt 2 }}{2}\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} { - i}\\ i \end{array}} \right) = \frac{1}{2}\left( {\begin{array}{*{20}{c}} {1 - i}\\ {1 + i} \end{array}} \right)
+\tag{12.43}\]</span></span></p>
+<p>Likewise, since <span class="math inline">\(\left\vert  L \right\rangle = \frac{{\sqrt 2 }}{2}\left( {\left\vert  U \right\rangle - \left\vert  D \right\rangle } \right)\)</span>, in the <span class="math inline">\({\hat \sigma _{\rm{y}}}\)</span> representation,</p>
+<p><span id="eq-ch12-p2551"><span class="math display">\[
+\left\vert  L \right\rangle = \frac{{\sqrt 2 }}{2}\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ 1 \end{array}} \right) - \frac{{\sqrt 2 }}{2}\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} { - i}\\ i \end{array}} \right) = \frac{1}{2}\left( {\begin{array}{*{20}{c}} {1 + i}\\ {1 - i} \end{array}} \right)
+\tag{12.44}\]</span></span></p>
+<p>Method 2: The basis transformation <span class="math inline">\(\hat U\)</span> between <span class="math inline">\({\hat \sigma _{\rm{z}}}\)</span> and <span class="math inline">\({\hat \sigma _y}\)</span>, and its inverse <span class="math inline">\({\hat U^\dag }\)</span>, have the following matrices in the old <span class="math inline">\({\hat \sigma _{\rm{z}}}\)</span> representation:</p>
+<p><span id="eq-ch12-p2553"><span class="math display">\[
+\hat U \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {U} \mathrel{\left \vert  {\vphantom {U I}} \right. \kern-1.2pt } {I} \right\rangle }&amp;{\left\langle {U} \mathrel{\left \vert  {\vphantom {U O}} \right. \kern-1.2pt } {O} \right\rangle }\\ {\left\langle {D} \mathrel{\left \vert  {\vphantom {D I}} \right. \kern-1.2pt } {I} \right\rangle }&amp;{\left\langle {D} \mathrel{\left \vert  {\vphantom {D O}} \right. \kern-1.2pt } {O} \right\rangle } \end{array}} \right) = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ i&amp;{ - i} \end{array}} \right), \qquad  {\hat U^\dag } = {\left( {{{\hat U}^T}} \right)^*} = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;{ - i}\\ 1&amp;i \end{array}} \right)
+\tag{12.45}\]</span></span></p>
+<p>In the new <span class="math inline">\({\hat \sigma _{\rm{y}}}\)</span> representation, <a href="04-commutation-relations.html#eq-zeqnnum557165" class="quarto-xref">Equation&nbsp;<span>4.46</span></a> gives <span class="math inline">\({\left( {\left\vert  \psi \right\rangle } \right)_\text{new}} = {\left( {{{\hat U}^\dag }\left\vert  \psi \right\rangle } \right)_\text{old}}\)</span>.</p>
+<p><span id="eq-ch12-p2555"><span class="math display">\[
+\begin{gathered} {\left( {\left\vert  R \right\rangle } \right)_\text{new}} = {\left( {{{\hat U}^\dag }\left\vert  R \right\rangle } \right)_\text{old}} = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;{ - i} \\ 1&amp;i \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1 \\ 1 \end{array}} \right) = \frac{1}{2}\left( {\begin{array}{*{20}{c}} {1 - i} \\ {1 + i} \end{array}} \right)  \\ {\left( {\left\vert  L \right\rangle } \right)_\text{new}} = {\left( {{{\hat U}^\dag }\left\vert  L \right\rangle } \right)_\text{old}} = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;{ - i} \\ 1&amp;i \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1 \\ { - 1} \end{array}} \right) = \frac{1}{2}\left( {\begin{array}{*{20}{c}} {1 + i} \\ {1 - i} \end{array}} \right)  \\ \end{gathered}
+\tag{12.46}\]</span></span></p>
+<p>By <a href="04-commutation-relations.html#eq-zeqnnum834377" class="quarto-xref">Equation&nbsp;<span>4.48</span></a>, <span class="math inline">\({\left( {\hat X} \right)_\text{new}} = {\left( {{{\hat U}^\dag }\hat X\hat U} \right)_\text{old}}\)</span>.</p>
+<p><span id="eq-ch12-p2557"><span class="math display">\[
+\begin{gathered} {\left( {{{\hat \sigma }_x}} \right)_\text{new}} = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;{ - i} \\ 1&amp;i \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&amp;1 \\ 1&amp;0 \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1 \\ i&amp;{ - i} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0&amp;{ - i} \\ i&amp;0 \end{array}} \right)  \\ {\left( {{{\hat \sigma }_y}} \right)_\text{new}} = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;{ - i} \\ 1&amp;i \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&amp;{ - i} \\ i&amp;0 \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1 \\ i&amp;{ - i} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 1&amp;0 \\ 0&amp;{ - 1} \end{array}} \right)  \\ {\left( {{{\hat \sigma }_z}} \right)_\text{new}} = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;{ - i} \\ 1&amp;i \end{array}} \right)\left( {\begin{array}{*{20}{c}} 1&amp;0 \\ 0&amp;{ - 1} \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1 \\ i&amp;{ - i} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0&amp;1 \\ 1&amp;0 \end{array}} \right)  \\ \end{gathered}
+\tag{12.47}\]</span></span></p>
+<p><strong>4.5</strong> Write the matrix of <span class="math inline">\(\lvert R\rangle,\lvert L\rangle,\hat\sigma_x\)</span> in the <span class="math inline">\(\hat\sigma_y\)</span> representation.</p>
+<p><strong>4.6</strong>* Let <span class="math inline">\(\langle {\hat X}\rangle\)</span> denote the expectation value of <span class="math inline">\(\hat X\)</span> in any state, and define <span class="math inline">\(\Delta \hat X \equiv \hat X - \langle \hat X\rangle \hat I \equiv \hat X - \langle \hat X\rangle\)</span>. If <span class="math inline">\(\hat A,\hat B\)</span> are Hermitian, prove that (1) <span class="math inline">\(\langle {[\hat A,\hat B]}\rangle\)</span> is purely imaginary and (2) <span class="math inline">\(\langle {{\rm{\{ }}\Delta \hat A,\Delta \hat B{\rm{\} }}}\rangle\)</span> is real.</p>
+<p>Solution:</p>
+<ul>
+<li>First, <span class="math inline">\({{[A,B]}^\dag }{\rm{ = }}{\left( {AB} \right)^\dag } - {\left( {BA} \right)^\dag } = {B^\dag }{A^\dag } - {A^\dag }{B^\dag } = BA - AB = - \left( {AB - BA} \right) = - \left[ {A,B} \right]\)</span>.</li>
+</ul>
+<p>Thus <span class="math inline">\([\hat A,\hat B]\)</span> is anti-Hermitian, and its expectation value is purely imaginary.</p>
+<ul>
+<li><span class="math inline">\({\left( {\Delta \hat B} \right)^\dag } = {\left( {\hat B - \langle {\hat B}\rangle } \right)^\dag } = {\hat B^\dag } - \langle {\hat B}\rangle = \hat B - \langle {\hat B}\rangle = \Delta \hat B\)</span>, and similarly <span class="math inline">\({\left( {\Delta \hat A} \right)^\dag } = \Delta \hat A\)</span>.</li>
+</ul>
+<p><span id="eq-ch12-p2564"><span class="math display">\[
+{{{\rm{\{ }}\Delta \hat A,\Delta \hat B{\rm{\} }}}^\dag } = {\left( {\Delta \hat A\Delta \hat B} \right)^\dag } + {\left( {\Delta \hat B\Delta \hat A} \right)^\dag } = \Delta {\hat B^\dag }\Delta {\hat A^\dag } + \Delta {\hat A^\dag }\Delta {\hat B^\dag } = \Delta \hat B\Delta \hat A + \Delta \hat A\Delta \hat B = {{\rm{\{ }}\Delta \hat A,\Delta \hat B{\rm{\} }}}
+\tag{12.48}\]</span></span></p>
+<p>Thus <span class="math inline">\({{\rm{\{ }}\Delta \hat A,\Delta \hat B{\rm{\} }}}\)</span> is Hermitian. Since a Hermitian operator has real expectation values, <span class="math inline">\(\langle {{\rm{\{ }}\Delta \hat A,\Delta \hat B{\rm{\} }}}\rangle\)</span> is real.</p>
+</section>
+<section id="exercises-for-chapter-5" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="exercises-for-chapter-5"><span class="header-section-number">12.5</span> Exercises for Chapter 5</h2>
+<p><strong>5.1</strong> The electron’s magnetic moment is <span class="math inline">\({\bf{\mu }} = {{ - 2{\mu _B}{\bf{S}}} \mathord{\left/ {\vphantom {{ - 2{\mu _B}{\bf{S}}} \hbar }} \right. \kern-1.2pt } \hbar }\)</span>, and its magnetic energy is <span class="math inline">\(H = - {\bf{\mu }} \cdot {\bf{B}}\)</span>. A stationary electron is placed in a static field of magnitude <span class="math inline">\(B\)</span> directed along positive <span class="math inline">\({\bf{\hat z}}\)</span>.</p>
+<ol type="1">
+<li><p>If initially <span class="math inline">\({S_z} = - {\hbar \mathord{\left/ {\vphantom {\hbar 2}} \right. \kern-1.2pt } 2}\)</span>, find <span class="math inline">\(\left\vert  {\psi \left( t \right)} \right\rangle\)</span>.</p></li>
+<li><p>Let <span class="math inline">\({\bf{\hat n}}\)</span> be a unit vector in the first quadrant of the x–z plane, at angle <span class="math inline">\(\theta\)</span> to z. Initially the projection of <span class="math inline">\({\bf{S}}\)</span> along <span class="math inline">\({\bf{\hat n}}\)</span> is <span class="math inline">\(\hbar /2\)</span>. Using earlier exercise results, find the spin state <span class="math inline">\(\left\vert  {\psi \left( t \right)} \right\rangle\)</span> at time <span class="math inline">\(t\)</span> and the expectation values of <span class="math inline">\({\hat S_x},\;{\hat S_y},\;{\hat S_z}\)</span>. To simplify the result, define <span class="math inline">\({\omega _L} \equiv {{2B{\mu _B}} \mathord{\left/ {\vphantom {{2B{\mu _B}} \hbar }} \right. \kern-1.2pt } \hbar }\)</span>.</p></li>
+</ol>
+<p>Solution: Recall the results from Chapter 3.</p>
+<p>The Hamiltonian is <span class="math inline">\(\hat H = - {\bf{\mu }} \cdot {\bf{B}} = - {\hat \mu _z}B = \frac{{2{\mu _B}{{\hat S}_z}}}{\hbar }B = {\mu _B}B{\hat \sigma _z}\)</span>. Since <span class="math inline">\({\mu _B}B\)</span> is a constant, the eigenstates of <span class="math inline">\(\hat H\)</span> are those of <span class="math inline">\({\hat \sigma _z}\)</span>, and their eigenvalues are those of <span class="math inline">\({\hat \sigma _z}\)</span> multiplied by <span class="math inline">\({\mu _B}B\)</span>.</p>
+<p><span id="eq-ch12-p2575"><span class="math display">\[
+\begin{gathered} {E_1} = {\mu _{\text{B}}}B = {{\hbar {\omega _L}} \mathord{\left/ {\vphantom {{\hbar {\omega _L}} 2}} \right. \kern-1.2pt } 2}, \qquad  \qquad  \left\vert  {{E_1}} \right\rangle = \left\vert  U \right\rangle  \\ {E_2} = - {\mu _{\text{B}}}B = {{ - \hbar {\omega _L}} \mathord{\left/ {\vphantom {{ - \hbar {\omega _L}} 2}} \right. \kern-1.2pt } 2}, \qquad  \qquad  \left\vert  {{E_2}} \right\rangle = \left\vert  D \right\rangle  \\ \end{gathered}
+\tag{12.49}\]</span></span></p>
+<p>Define <span class="math inline">\(\hbar {\omega _L} \equiv 2{\mu _B}B\)</span>, so the energy separation is <span class="math inline">\(\Delta E \equiv {E_1} - {E_2} = 2{\mu _B}B = \hbar {\omega _L}\)</span>.</p>
+<ul>
+<li>The initial state is <span class="math inline">\(\left\vert  D \right\rangle\)</span>. Substituting <span class="math inline">\(\left\vert  {\psi \left( 0 \right)} \right\rangle = \left\vert  D \right\rangle\)</span> into the general Schrödinger solution gives</li>
+</ul>
+<p><span id="eq-ch12-p2578"><span class="math display">\[
+\begin{array}{c} \left\vert  {\psi \left( t \right)} \right\rangle = \sum\limits_j {\left\vert  {{E_j}} \right\rangle } \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle {e^{ - {{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}\\ = \left\vert  D \right\rangle {e^{ - {{i{E_2}t} \mathord{\left/ {\vphantom {{i{E_2}t} \hbar }} \right. \kern-1.2pt } \hbar }}} = \left\vert  D \right\rangle {e^{{{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}} \end{array}
+\tag{12.50}\]</span></span></p>
+<p>Multiplication by an overall phase does not change the physical state. Thus this quantum state is stationary.</p>
+<ol start="2" type="1">
+<li>The projection of the electron spin <span class="math inline">\({\bf{S}}\)</span> along <span class="math inline">\({\bf{\hat n}}\)</span> is <span class="math inline">\(\hbar /2\)</span>; that is, <span class="math inline">\({\hat \sigma _n}\)</span> equals <span class="math inline">\(+1\)</span>. From the preceding chapter’s exercises,</li>
+</ol>
+<p><span id="eq-ch12-p2581"><span class="math display">\[
+\left\vert  {{\lambda _ + }} \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {{e^{i\phi }}\sin \frac{\theta }{2}} \end{array}} \right),
+\tag{12.51}\]</span></span></p>
+<p>Since <span class="math inline">\({\bf{\hat n}}\)</span> lies in the x–z plane, <span class="math inline">\(\phi = 0\)</span>. The initial state is therefore</p>
+<p><span id="eq-ch12-p2583"><span class="math display">\[
+\left\vert  {\psi \left( 0 \right)} \right\rangle = \left\vert  {{\lambda _ + }(\phi = 0)} \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {\sin \frac{\theta }{2}} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\left\langle {U} \mathrel{\left \vert  {\vphantom {U {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle }\\ {\left\langle {D} \mathrel{\left \vert  {\vphantom {D {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle } \end{array}} \right)
+\tag{12.52}\]</span></span></p>
+<p><span id="eq-ch12-p2584"><span class="math display">\[
+\left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( t \right)}}} \right. \kern-1.2pt } {{\psi \left( t \right)}} \right\rangle = \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle {e^{ - {{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}
+\tag{12.53}\]</span></span></p>
+<p>Notice that the magnetic field points along z, so <span class="math inline">\(\hat H = {\mu _B}B{\hat \sigma _z}\)</span>, and the energy eigenstates are <span class="math inline">\(\vert U\rangle\)</span> and <span class="math inline">\(\vert D\rangle\)</span>.</p>
+<p><span id="eq-ch12-p2586"><span class="math display">\[
+\left\vert  {\psi \left( t \right)} \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\langle U\vert {\psi (t)}\rangle }\\ {\langle D\vert {\psi (t)}\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}{e^{{{ - i{\omega _L}t} \mathord{\left/ {\vphantom {{ - i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}}\\ {\sin \frac{\theta }{2}{e^{{{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right)
+\tag{12.54}\]</span></span></p>
+<p><span id="eq-ch12-p2587"><span class="math display">\[
+\begin{array}{c} \left\langle {{{\hat S}_x}\left( t \right)} \right\rangle = \left\langle {\psi (t)} \right\vert {{{\hat S}_x}}\left\vert  {\psi (t)} \right\rangle \\ = \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}{e^{{{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}},}&amp;{\sin \frac{\theta }{2}{e^{{{ - i{\omega _L}t} \mathord{\left/ {\vphantom {{ - i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right)\frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&amp;1\\ 1&amp;0 \end{array}} \right)\left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}{e^{ - {{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}}\\ {\sin \frac{\theta }{2}{e^{{{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right) = \frac{\hbar }{2}\sin \theta \cos {\omega _L}t \end{array}
+\tag{12.55}\]</span></span></p>
+<p><span id="eq-ch12-p2588"><span class="math display">\[
+\left\langle {{{\hat S}_y}\left( t \right)} \right\rangle = \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}{e^{{{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}},}&amp;{\sin \frac{\theta }{2}{e^{ - {{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right)\frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&amp;{ - i}\\ i&amp;0 \end{array}} \right)\left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}{e^{{{ - i{\omega _L}t} \mathord{\left/ {\vphantom {{ - i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}}\\ {\sin \frac{\theta }{2}{e^{{{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right) = \frac{\hbar }{2}\sin \theta \sin {\omega _L}t\qquad \left\langle {{{\hat S}_z}\left( t \right)} \right\rangle = \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}{e^{{{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}},}&amp;{\sin \frac{\theta }{2}{e^{ - {{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right)\frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 1&amp;0\\ 0&amp;{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}{e^{ - {{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}}\\ {\sin \frac{\theta }{2}{e^{{{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right) = \frac{\hbar }{2}\cos \theta
+\tag{12.56}\]</span></span></p>
+<p>Define <span class="math inline">\(\langle {\bf{S}}\rangle \equiv \left( {\langle {{{\hat S}_y}(t)}\rangle ,\langle {{{\hat S}_y}(t)}\rangle ,\langle {{{\hat S}_z}(t)}\rangle } \right)\)</span>. As the figure shows, it is a vector of length <span class="math inline">\(\hbar /2\)</span> precessing about the field direction (the z axis) at frequency <span class="math inline">\({\omega _L}\)</span>. This Larmor precession is characteristic of particles with spin magnetic moments in a magnetic field.</p>
+<p><img src="assets/image2447.png" class="img-fluid" width="243"></p>
+<p><em>An interesting feature:</em> <span class="math inline">\(\langle {{\bf{S}}(t)}\rangle\)</span> has period <span class="math inline">\(T = {{2\pi } \mathord{\left/ {\vphantom {{2\pi } {{\omega _L}}}} \right. \kern-1.2pt } {{\omega _L}}}\)</span>, whereas the state vector <span class="math inline">\(\left\vert  {\psi \left( t \right)} \right\rangle\)</span> has period <span class="math inline">\({{4\pi } \mathord{\left/ {\vphantom {{4\pi } {{\omega _L}}}} \right. \kern-1.2pt } {{\omega _L}}}\)</span>.</p>
+<p>After one revolution of <span class="math inline">\(\langle {{\bf{S}}(t)}\rangle\)</span>, the state vector changes sign rather than returning to its initial value:</p>
+<p><span id="eq-ch12-p2594"><span class="math display">\[
+\left\vert  {\psi \left( {t = T} \right)} \right\rangle \buildrel\textstyle.\over= - \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {\sin \frac{\theta }{2}} \end{array}} \right) = - \left\vert  {\psi \left( 0 \right)} \right\rangle
+\tag{12.57}\]</span></span></p>
+<p>Only after two revolutions of <span class="math inline">\(\langle {{\bf{S}}(t)}\rangle\)</span> does <span class="math inline">\(\left\vert  {\psi \left( {t = 2T} \right)} \right\rangle = \left\vert  {\psi \left( 0 \right)} \right\rangle\)</span> return to its original value.</p>
+</section>
+<section id="exercises-for-chapter-6" class="level2" data-number="12.6">
+<h2 data-number="12.6" class="anchored" data-anchor-id="exercises-for-chapter-6"><span class="header-section-number">12.6</span> Exercises for Chapter 6</h2>
+</section>
+<section id="exercises-for-chapter-7" class="level2" data-number="12.7">
+<h2 data-number="12.7" class="anchored" data-anchor-id="exercises-for-chapter-7"><span class="header-section-number">12.7</span> Exercises for Chapter 7</h2>
+<p>Unless stated otherwise, the wavefunctions below are position wavefunctions.</p>
+<p><strong>7.1</strong> Using <a href="07-continuous-observables.html#eq-zeqnnum474818" class="quarto-xref">Equation&nbsp;<span>7.89</span></a>, prove directly by integration that the energy eigenstates of a one-dimensional infinite square well are orthogonal.</p>
+<p>Solution:</p>
+<p><span id="eq-ch12-p2604"><span class="math display">\[
+\begin{gathered} \int_0^L {dx\;\sin \left( {\frac{{n\pi x}}{L}} \right)\sin \left( {\frac{{m\pi x}}{L}} \right)} \propto \int_0^L {dx\;\left[ {\cos \left( {\frac{{n - m}}{L}\pi x} \right) - \cos \left( {\frac{{n + m}}{L}\pi x} \right)} \right]{\text{ }}} \\ {\text{ = }}\int\limits_0^L {dx\;\cos \left( {\frac{{n - m}}{L}\pi x} \right)} - \int\limits_0^L {dx\;\cos \left( {\frac{{n + m}}{L}\pi x} \right)} \\ = 0 + 0 \qquad  \qquad  \text{for }n \ne m \\ \end{gathered}
+\tag{12.58}\]</span></span></p>
+<p><strong>7.2</strong> A particle is in a one-dimensional infinite square well spanning <span class="math inline">\(\left( {0,d} \right)\)</span>, with wavefunction</p>
+<p><span id="eq-ch12-p2607"><span class="math display">\[
+\psi (x) = A{\cos ^3}\left( {\frac{{\pi x}}{{2d}}} \right)\sin \left( {\frac{{\pi x}}{{2d}}} \right)
+\tag{12.59}\]</span></span></p>
+<p>Here <span class="math inline">\(A\)</span> is a normalization constant. What energies are possible, and with what probabilities?</p>
+<p>Hint: How is this wavefunction related to the well’s energy eigenfunctions?</p>
+<p>Solution: Expand the wavefunction in energy eigenfunctions: <span class="math inline">\({u_n}\left( x \right) \propto \sin \left( {\frac{{n\pi x}}{d}} \right),n = 1,2,3 \cdots\)</span>.</p>
+<p><span id="eq-ch12-p2611"><span class="math display">\[
+\begin{array}{c} A{\cos ^3}\left( {\frac{{\pi x}}{{2d}}} \right)\sin \left( {\frac{{\pi x}}{{2d}}} \right) = \frac{A}{2}{\cos ^2}\left( {\frac{{\pi x}}{{2d}}} \right)\sin \left( {\frac{{\pi x}}{d}} \right) = \frac{A}{2}\frac{{1 + \cos \left( {\frac{{\pi x}}{d}} \right)}}{2}\sin \left( {\frac{{\pi x}}{d}} \right)\\ = \frac{A}{4}\left[ {\sin \left( {\frac{{\pi x}}{d}} \right) + \frac{1}{2}\sin \left( {\frac{{2\pi x}}{d}} \right)} \right] \propto {u_1}\left( x \right) + \frac{1}{2}{u_2}\left( x \right) \end{array}
+\tag{12.60}\]</span></span></p>
+<p>The probability of energy <span class="math inline">\({E_1}\)</span> is <span class="math inline">\({4 \mathord{\left/ {\vphantom {4 5}} \right. \kern-1.2pt } 5}\)</span>, and that of energy <span class="math inline">\({E_2}\)</span> is <span class="math inline">\({1 \mathord{\left/ {\vphantom {1 5}} \right. \kern-1.2pt } 5}\)</span>.</p>
+<p><strong>7.3</strong>* Derive Newton’s second law from quantum mechanics. In one dimension, define a particle’s velocity <span class="math inline">\(v\)</span> by</p>
+<p><span id="eq-ch12-p2616"><span class="math display">\[
+v \equiv \frac{d}{{dt}}\left\langle {\psi \left( t \right)} \right\vert \hat X\left\vert  {\psi \left( t \right)} \right\rangle = \frac{d}{{dt}}\langle \hat X\rangle
+\tag{12.61}\]</span></span></p>
+<ol type="1">
+<li><p>Prove that <span class="math inline">\(v = {{\langle \hat P\rangle } \mathord{\left/ {\vphantom {{\langle \hat P\rangle } m}} \right. \kern-1.2pt } m}\)</span>.</p></li>
+<li><p>Prove the following:</p></li>
+</ol>
+<p><span id="eq-ch12-p2619"><span class="math display">\[
+\frac{d}{{dt}}\langle \hat P\rangle = - \left\langle {\frac{{dV\left( x \right)}}{{dx}}} \right\rangle
+\tag{12.62}\]</span></span></p>
+<p>Hint: Use the equation of motion for expectation values and the position representation of momentum.</p>
+<p>Solution:</p>
+<ol type="1">
+<li></li>
+</ol>
+<p><span id="eq-ch12-p2623"><span class="math display">\[
+\begin{array}{c} v = \frac{d}{{dt}}\langle \hat X\rangle = \frac{1}{{i\hbar }}\left\langle {[\hat X,\hat H]} \right\rangle = \frac{1}{{i\hbar }}\left\langle {[\hat X,\frac{{{{\hat P}^2}}}{{2m}} + \hat V(x)]} \right\rangle \\ = \frac{1}{{2mi\hbar }}\left\langle {[\hat X,{{\hat P}^2}]} \right\rangle = \frac{1}{{2mi\hbar }}\left\langle {\hat P[\hat X,\hat P] + [\hat X,\hat P]\hat P} \right\rangle \\ = \frac{{2i\hbar }}{{2mi\hbar }}\langle {\hat P}\rangle = \frac{{\langle {\hat P}\rangle }}{m} \end{array}
+\tag{12.63}\]</span></span></p>
+<ol start="2" type="1">
+<li></li>
+</ol>
+<p><span id="eq-ch12-p2625"><span class="math display">\[
+\frac{d}{{dt}}\langle \hat P\rangle = \frac{1}{{i\hbar }}\left\langle {[\hat P,\hat H]} \right\rangle = \frac{1}{{i\hbar }}\left\langle {[\hat P,\hat V(x)]} \right\rangle
+\tag{12.64}\]</span></span></p>
+<p><span id="eq-ch12-p2626"><span class="math display">\[
+\begin{array}{c} [\hat P,\hat V(x)]\psi (x) = \left( {\hat P\hat V(x) - \hat V(x)\hat P} \right)\psi (x)\\ = - i\hbar \left( {\frac{\partial }{{\partial x}}V(x)\psi (x) - V(x)\frac{\partial }{{\partial x}}\psi (x)} \right) = - i\hbar \left( {\frac{{\partial V(x)}}{{\partial x}}} \right)\psi (x) \end{array}
+\tag{12.65}\]</span></span></p>
+<p><span id="eq-ch12-p2627"><span class="math display">\[
+\therefore \qquad  [\hat P,\hat V(x)] = - i\hbar \frac{{\partial V(x)}}{{\partial x}}
+\tag{12.66}\]</span></span></p>
+<p><span id="eq-ch12-p2628"><span class="math display">\[
+\frac{d}{{dt}}\langle \hat P\rangle = \frac{1}{{i\hbar }}\left\langle {[\hat P,\hat V(x)]} \right\rangle = - \left\langle {\frac{{\partial V(x)}}{{\partial x}}} \right\rangle
+\tag{12.67}\]</span></span></p>
+</section>
+<section id="exercises-for-chapter-8" class="level2" data-number="12.8">
+<h2 data-number="12.8" class="anchored" data-anchor-id="exercises-for-chapter-8"><span class="header-section-number">12.8</span> Exercises for Chapter 8</h2>
+<p><strong>8.1</strong> A system has definite <span class="math inline">\({{\bf{\hat J}}^2}\)</span> and <span class="math inline">\({\hat J_z}\)</span>, equal to <span class="math inline">\(j(j + 1){\hbar ^2}\)</span> and <span class="math inline">\(m\hbar\)</span>. Use symmetry to prove the following result.</p>
+<p>Solution: Definite values <span class="math inline">\(j(j + 1){\hbar ^2}\)</span> and <span class="math inline">\(m\hbar\)</span> of <span class="math inline">\({{\bf{\hat J}}^2}\)</span> and <span class="math inline">\({\hat J_z}\)</span> mean that the state is <span class="math inline">\(\vert j,m\rangle\)</span>.</p>
+<p><span id="eq-ch12-p2633"><span class="math display">\[
+\begin{array}{c} \left\langle {j,m} \right\vert {\hat J_x^2}\left\vert  {j,m} \right\rangle + \left\langle {j,m} \right\vert {\hat J_y^2}\left\vert  {j,m} \right\rangle = \langle j,m{\rm{\vert }}{\hat J_x^2 + \hat J_y^2}\vert j,m\rangle = \langle j,m{\rm{\vert }}{{{\bf{\hat J}}}^2} - \hat J_z^2\vert j,m\rangle \\ = j(j + 1){\hbar ^2} - m{\hbar ^2} \end{array}
+\tag{12.68}\]</span></span></p>
+<p>Since <span class="math inline">\(\vert j,m\rangle\)</span> is an eigenstate of <span class="math inline">\({\hat J_z}\)</span>, symmetry gives <span class="math inline">\(\langle {\hat J_x^2}\rangle = \langle {\hat J_y^2}\rangle\)</span>, and hence</p>
+<p><span id="eq-ch12-p2635"><span class="math display">\[
+\langle {\hat J_x^2}\rangle = \langle {\hat J_y^2}\rangle = \frac{{j(j + 1) - {m^2}}}{2}{\hbar ^2}
+\tag{12.69}\]</span></span></p>
+<p><strong>8.2</strong> Starting from <a href="08-angular-momentum.html#eq-zeqnnum904731" class="quarto-xref">Equation&nbsp;<span>8.23</span></a>, <span class="math inline">\({\hat J_ \pm }\left\vert  {j,m} \right\rangle = {C_ \pm }\left( {j,m} \right)\left\vert  {j,m \pm 1} \right\rangle\)</span>, use <a href="08-angular-momentum.html#eq-zeqnnum732391" class="quarto-xref">Equation&nbsp;<span>8.18</span></a> and <a href="08-angular-momentum.html#eq-zeqnnum324145" class="quarto-xref">Equation&nbsp;<span>8.19</span></a> to find <span class="math inline">\({\left\vert  {{C_ \pm }\left( {j,m} \right)} \right\vert ^2}\)</span>, and hence prove the preceding result.</p>
+<p>Solution: Using <a href="08-angular-momentum.html#eq-zeqnnum732391" class="quarto-xref">Equation&nbsp;<span>8.18</span></a>,</p>
+<p><span id="eq-ch12-p2639"><span class="math display">\[
+\begin{array}{c} {\left\vert  {{C_ + }\left( {j,m} \right)} \right\vert ^2} = \left\langle {j,m} \right\vert \hat J_ + ^\dag {{\hat J}_ + }\left\vert  {j,m} \right\rangle = \left\langle {j,m} \right\vert {{\hat J}_ - }{{\hat J}_ + }\left\vert  {j,m} \right\rangle \\ = \left\langle {j,m} \right\vert {{{\bf{\hat J}}}^2} - \hat J_z^2 - \hbar {{\hat J}_z}\left\vert  {j,m} \right\rangle \\ = j\left( {j + 1} \right){\hbar ^2} - {m^2}{\hbar ^2} - m{\hbar ^2}\\ = {\hbar ^2}\left[ {j\left( {j + 1} \right) - m\left( {m + 1} \right)} \right] \end{array}
+\tag{12.70}\]</span></span></p>
+<p>Using <a href="08-angular-momentum.html#eq-zeqnnum324145" class="quarto-xref">Equation&nbsp;<span>8.19</span></a>,</p>
+<p><span id="eq-ch12-p2641"><span class="math display">\[
+\begin{array}{c} {\left\vert  {{C_ - }\left( {j,m} \right)} \right\vert ^2} = \left\langle {j,m} \right\vert \hat J_ - ^\dag {{\hat J}_ - }\left\vert  {j,m} \right\rangle = \left\langle {j,m} \right\vert {{\hat J}_ + }{{\hat J}_ - }\left\vert  {j,m} \right\rangle \\ = \left\langle {j,m} \right\vert {{{\bf{\hat J}}}^2} - \hat J_z^2 + \hbar {{\hat J}_z}\left\vert  {j,m} \right\rangle \\ = j\left( {j + 1} \right){\hbar ^2} - {m^2}{\hbar ^2} + m{\hbar ^2}\\ = {\hbar ^2}\left[ {j\left( {j + 1} \right) - m\left( {m - 1} \right)} \right] \end{array}
+\tag{12.71}\]</span></span></p>
+<p>Using <a href="08-angular-momentum.html#eq-zeqnnum857737" class="quarto-xref">Equation&nbsp;<span>8.13</span></a>,</p>
+<p><span id="eq-ch12-p2643"><span class="math display">\[
+\begin{array}{l} \langle {jm}\vert {\hat J_x^2}\vert {jm}\rangle = \frac{1}{4}\langle {jm}\vert {({{\hat J}_ + } + {{\hat J}_ - })({{\hat J}_ + } + {{\hat J}_ - })}\vert {jm}\rangle \\ = \frac{1}{4}\left( {\langle {jm}\vert {{{\hat J}_ + }{{\hat J}_ + }}\vert {jm}\rangle + \langle {jm}\vert {{{\hat J}_ - }{{\hat J}_ - }}\vert {jm}\rangle + \langle {jm}\vert {{{\hat J}_ + }{{\hat J}_ - }}\vert {jm}\rangle + \langle {jm}\vert {{{\hat J}_ - }{{\hat J}_ + }}\vert {jm}\rangle } \right)\\ = \frac{1}{4}\left( {0 + 0 + {{\left\vert  {{C_ - }\left( {j,m} \right)} \right\vert }^2} + {{\left\vert  {{C_ + }\left( {j,m} \right)} \right\vert }^2}} \right)\\ = {\hbar ^2}\frac{{j(j + 1) - {m^2}}}{2} \end{array}
+\tag{12.72}\]</span></span></p>
+<p>Here <span class="math inline">\(\langle {jm}\vert {{{\hat J}_ + }{{\hat J}_ + }}\vert {jm}\rangle = \langle {jm}\vert {\hat J_ - ^\dag {{\hat J}_ + }}\vert {jm}\rangle = C_ - ^*{C_ + }\langle {j,m - 1}\vert {j,m + 1}\rangle = 0\)</span>, and similarly <span class="math inline">\(\langle {jm}\vert {{{\hat J}_ - }{{\hat J}_ - }}\vert {jm}\rangle = 0\)</span>.</p>
+<p><strong>8.3</strong> A particle in a central field <span class="math inline">\(V = V(r)\)</span> has wavefunction</p>
+<p><span id="eq-ch12-p2649"><span class="math display">\[
+\psi ({\bf{r}}) = (x + y + 3z)f(r)
+\tag{12.73}\]</span></span></p>
+<ul>
+<li><p>Is <span class="math inline">\(\psi\)</span> an eigenstate of <span class="math inline">\({{\bf{\hat L}}^2}\)</span>? If so, what is <span class="math inline">\(l\)</span>? Otherwise, what values can <span class="math inline">\(l\)</span> take?</p></li>
+<li><p>What are the possible values of <span class="math inline">\({\hat L_z}\)</span>, and their probabilities?</p></li>
+</ul>
+<p>Hint: Use <a href="08-angular-momentum.html#eq-zeqnnum736187" class="quarto-xref">Equation&nbsp;<span>8.59</span></a> and <a href="08-angular-momentum.html#eq-zeqnnum238379" class="quarto-xref">Equation&nbsp;<span>8.81</span></a>.</p>
+<p>Solution:</p>
+<p><span id="eq-ch12-p2654"><span class="math display">\[
+\begin{array}{c} \psi ({\bf{r}}) = (x + y + 3z)f(r) = r(\sin \theta \cos \phi + \sin \theta \sin \phi + 3\cos \theta )f(r)\\ = \left( {\sin \theta \frac{{{e^{i\phi }} + {e^{ - i\phi }}}}{2} + \sin \theta \frac{{{e^{i\phi }} - {e^{ - i\phi }}}}{{2i}} + 3\cos \theta } \right)rf(r)\\ = \sqrt {\frac{{8\pi }}{3}} \left( {\frac{{ - {Y_{1,1}} + {Y_{1, - 1}}}}{2} + \frac{{ - {Y_{1,1}} - {Y_{1, - 1}}}}{{2i}} + \frac{3}{{\sqrt 2 }}{Y_{1,0}}} \right)rf(r)\\ {\rm{ = }}\sqrt {\frac{{8\pi }}{3}} \left( { - \frac{{1 - i}}{2}{Y_{1,1}} + \frac{{1 + i}}{2}{Y_{1, - 1}} + \frac{3}{{\sqrt 2 }}{Y_{1,0}}} \right)rf(r) \end{array}
+\tag{12.74}\]</span></span></p>
+<ol type="1">
+<li>The angular part is a linear combination of spherical harmonics <span class="math inline">\(l=1\)</span>, so</li>
+</ol>
+<p><span id="eq-ch12-p2656"><span class="math display">\[
+{{\bf{L}}^2}\psi ({\bf{r}}) = 1(1 + 1){\hbar ^2}\;\psi ({\bf{r}})
+\tag{12.75}\]</span></span></p>
+<p>It is therefore an eigenstate of <span class="math inline">\({{\bf{\hat L}}^2}\)</span>, with <span class="math inline">\(l = 1\)</span>.</p>
+<ol start="2" type="1">
+<li>The possible values of <span class="math inline">\({\hat L_z}\)</span> are <span class="math inline">\(m\hbar\)</span> and <span class="math inline">\(m = 1, - 1,0\)</span>, with probability amplitudes <span class="math inline">\(- \frac{{1 - i}}{2},\;\;\frac{{1 + i}}{2},\;\;\frac{3}{{\sqrt 2 }}\)</span>.</li>
+</ol>
+<p>Thus each <span class="math inline">\(m = \pm 1\)</span> has probability <span class="math inline">\(\frac{{{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}}}{{{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}{\rm{ + }}{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}{\rm{ + }}{9 \mathord{\left/ {\vphantom {9 2}} \right. \kern-1.2pt } 2}}} = \frac{1}{{11}}\)</span>, while <span class="math inline">\(m = 0\)</span> has probability <span class="math inline">\(\frac{9}{{11}}\)</span>.</p>
+</section>
+<section id="exercises-for-chapter-9" class="level2" data-number="12.9">
+<h2 data-number="12.9" class="anchored" data-anchor-id="exercises-for-chapter-9"><span class="header-section-number">12.9</span> Exercises for Chapter 9</h2>
+<p><strong>9.1</strong> Using the definitions <a href="09-coupling-angular-momenta.html#eq-zeqnnum643050" class="quarto-xref">Equation&nbsp;<span>9.17</span></a> and <a href="09-coupling-angular-momenta.html#eq-zeqnnum961018" class="quarto-xref">Equation&nbsp;<span>9.19</span></a> of total angular momentum <span class="math inline">\({\bf{\hat J}}\)</span>, prove that</p>
+<p><span id="eq-ch12-p2664"><span class="math display">\[
+\left[ {{{\hat J}_z},{\mathbf{\hat J}}_1^2} \right] = 0, \qquad  \qquad  \left[ {{{{\mathbf{\hat J}}}^2},{\mathbf{\hat J}}_1^2} \right] = 0
+\tag{12.76}\]</span></span></p>
+<p>Proof:</p>
+<p><span id="eq-ch12-p2666"><span class="math display">\[
+\begin{array}{c} \left[ {{{\hat J}_z},\hat J_1^2} \right] = \left[ {{{\hat J}_{1z}} + {{\hat J}_{2z}},\hat J_1^2} \right]\\ = \left[ {{{\hat J}_{1z}},\hat J_1^2} \right] + \left[ {{{\hat J}_{2z}},\hat J_1^2} \right]\\ = 0 + 0\\ \left[ {{{{\bf{\hat J}}}^2},{\bf{\hat J}}_1^2} \right] = \left[ {2{{{\bf{\hat J}}}_1} \cdot {{{\bf{\hat J}}}_2},{\bf{\hat J}}_1^2} \right] \propto \left[ {{{\hat J}_{1z}}{{\hat J}_{2z}},{\bf{\hat J}}_1^2} \right] + \left[ {{{\hat J}_{1x}}{{\hat J}_{2x}},{\bf{\hat J}}_1^2} \right] + \left[ {{{\hat J}_{1y}}{{\hat J}_{2y}},{\bf{\hat J}}_1^2} \right]\\ \propto \left[ {{{\hat J}_{1z}},{\bf{\hat J}}_1^2} \right]{{\hat J}_{2z}} + \left[ {{{\hat J}_{1x}},{\bf{\hat J}}_1^2} \right]{{\hat J}_{2x}} + \left[ {{{\hat J}_{1y}},{\bf{\hat J}}_1^2} \right]{{\hat J}_{2y}}\\ = 0 + 0 + 0 \end{array}
+\tag{12.77}\]</span></span></p>
+<p><strong>9.2</strong>* Relate the coupled and uncoupled bases for two spin-1/2 particles. Use <span class="math inline">\({C_ \pm }(j,m)\)</span> from Exercise 8.2, chosen positive, and apply <span class="math inline">\({\hat J_ - } = {\hat J_{1 - }} + {\hat J_{2 - }}\)</span> to both sides of</p>
+<p><span id="eq-ch12-p2668"><span class="math display">\[
+\left\vert  {1,1} \right\rangle = \left\vert  {\frac{1}{2};\frac{1}{2}} \right\rangle
+\tag{12.78}\]</span></span></p>
+<p>to obtain the uncoupled expansion of <span class="math inline">\(\vert {1,0}\rangle\)</span>. Then use orthogonality of <span class="math inline">\(\vert {1,0}\rangle\)</span> and <span class="math inline">\(\vert {0,0}\rangle\)</span> to calculate the expansion of <span class="math inline">\(\vert {0,0}\rangle\)</span>.</p>
+<p>Solution: From Exercise 8.2, <span class="math inline">\({C_ - }\left( {j,m} \right) = \hbar \sqrt {j\left( {j + 1} \right) - m\left( {m - 1} \right)}\)</span>, so <span class="math inline">\({C_ - }(1,1) = \sqrt 2 \hbar , \qquad  {C_ - }\left( {{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2},{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}} \right) = \hbar\)</span>.</p>
+<p><span id="eq-ch12-p2671"><span class="math display">\[
+\begin{array}{c} {{\hat J}_ - }\left\vert  {1,1} \right\rangle = ({{\hat J}_{1 - }} + {{\hat J}_{2 - }})\left\vert  {\frac{1}{2};\frac{1}{2}} \right\rangle \\ {C_ - }(1,1)\left\vert  {1,0} \right\rangle = {C_ - }({1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2},{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2})\left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle + {C_ - }({1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2},{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2})\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle \\ \sqrt 2 \hbar \left\vert  {1,0} \right\rangle = \hbar \left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle + \hbar \left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle \\ \left\vert  {1,0} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle + \left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle } \right) \end{array}
+\tag{12.79}\]</span></span></p>
+<p>The condition <span class="math inline">\(m = {m_1} + {m_2}\)</span> allows us to write</p>
+<p><span class="math inline">\(\vert {0,0}\rangle = {d_1}\left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle + {d_2}\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle ,\)</span>, with <span class="math inline">\({\left\vert  {{d_1}} \right\vert ^2} + {\left\vert  {{d_2}} \right\vert ^2} = 1\)</span>.</p>
+<p>Using</p>
+<p><span id="eq-ch12-p2675"><span class="math display">\[
+\begin{array}{c} \langle 1,0\vert {0,0}\rangle = 0\\ \Rightarrow \frac{1}{{\sqrt 2 }}{d_1} + \frac{1}{{\sqrt 2 }}{d_2} = 0\\ \Rightarrow {d_1} = - {d_2} = \frac{1}{{\sqrt 2 }} \end{array}
+\tag{12.80}\]</span></span></p>
+<p>we obtain <span class="math inline">\(\vert {0,0}\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle + \left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle } \right)\)</span>.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./11-appendices.html" class="pagination-link" aria-label="Appendices">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Appendices</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

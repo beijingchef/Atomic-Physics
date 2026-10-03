@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>5&nbsp; Time Evolution – Introduction to Quantum Mechanics</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./06-transitions.html" rel="next">
+<link href="./04-commutation-relations.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-631496449bf32ff9b0bb69a6bfd9195d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="assets/mathjax/tex-svg.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05-time-evolution.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Time Evolution</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Introduction to Quantum Mechanics</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-vectors-and-quantum-states.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Vectors and Quantum States</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Operators</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-quantum-measurement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Quantum Measurement</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-commutation-relations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Commutation Relations of Observables</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-time-evolution.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Time Evolution</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-transitions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-continuous-observables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Continuous Observables</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-angular-momentum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Angular Momentum</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-coupling-angular-momenta.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Coupling Two Angular Momenta</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-topics-in-atomic-physics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Topics in Atomic Physics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-appendices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Appendices</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-exercise-solutions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Exercise Solutions</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#motivating-the-schrödinger-equation" id="toc-motivating-the-schrödinger-equation" class="nav-link active" data-scroll-target="#motivating-the-schrödinger-equation"><span class="header-section-number">5.1</span> * Motivating the Schrödinger equation</a></li>
+  <li><a href="#solving-the-schrödinger-equation" id="toc-solving-the-schrödinger-equation" class="nav-link" data-scroll-target="#solving-the-schrödinger-equation"><span class="header-section-number">5.2</span> Solving the Schrödinger equation</a>
+  <ul class="collapse">
+  <li><a href="#stationary-states" id="toc-stationary-states" class="nav-link" data-scroll-target="#stationary-states"><span class="header-section-number">5.2.1</span> Stationary states</a></li>
+  </ul></li>
+  <li><a href="#time-evolution-of-expectation-values" id="toc-time-evolution-of-expectation-values" class="nav-link" data-scroll-target="#time-evolution-of-expectation-values"><span class="header-section-number">5.3</span> Time evolution of expectation values</a></li>
+  <li><a href="#constants-of-motion" id="toc-constants-of-motion" class="nav-link" data-scroll-target="#constants-of-motion"><span class="header-section-number">5.4</span> Constants of motion</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">5.5</span> Exercises</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Time Evolution</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>So far we have discussed states at a given instant. Even sequences of measurements were implicitly performed immediately one after another, before appreciable evolution could occur. We now examine how a state changes with time.</p>
+<p><strong>Quantum postulate 6.</strong> Between measurements, a system’s state evolves according to the Schrödinger equation.</p>
+<p>The Schrödinger equation plays the role in quantum mechanics that Newton’s second law plays in classical mechanics. It cannot be deduced from more elementary principles within this presentation; its validity ultimately rests on experiment.</p>
+<section id="motivating-the-schrödinger-equation" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="motivating-the-schrödinger-equation"><span class="header-section-number">5.1</span> * Motivating the Schrödinger equation</h2>
+<p>Consider a modern route to the equation. An initial state <span class="math inline">\(\vert \psi (0)\rangle\)</span> evolves after time <span class="math inline">\(t\)</span> into <span class="math inline">\(\vert \psi (t)\rangle\)</span>. We seek the law governing this evolution:</p>
+<p><span id="eq-ch05-p1328"><span class="math display">\[
+\left\vert  {\psi \left( 0 \right)} \right\rangle \xrightarrow{{\text{time evolution}}}\left\vert  {\psi \left( t \right)} \right\rangle
+\tag{5.1}\]</span></span></p>
+<p>Introduce a time-evolution operator <span class="math inline">\(\hat U(t)\)</span> relating the initial state to that after <span class="math inline">\(t\)</span>:</p>
+<p><span id="eq-zeqnnum681983"><span class="math display">\[
+\hat U\left( t \right)\left\vert  {\psi (0)} \right\rangle = \left\vert  {\psi (t)} \right\rangle
+\tag{5.2}\]</span></span></p>
+<p>Physical considerations impose three requirements.</p>
+<p><strong>First:</strong> as the elapsed time tends to zero, <span class="math inline">\(\hat U(t)\)</span> leaves the state unchanged:</p>
+<p><span id="eq-ch05-p1333"><span class="math display">\[
+\mathop {\lim }\limits_{t \to 0} \hat U\left( t \right) = \hat I
+\tag{5.3}\]</span></span></p>
+<p><strong>Second:</strong> two successive intervals compose to give evolution over the combined interval.</p>
+<p><span id="eq-ch05-p1335"><span class="math display">\[
+\hat U\left( {{t_2}} \right)\hat U\left( {{t_1}} \right)\left\vert  {\psi \left( 0 \right)} \right\rangle = \hat U\left( {{t_2}} \right)\left\vert  {\psi \left( {{t_1}} \right)} \right\rangle = \left\vert  {\psi \left( {{t_1} + {t_2}} \right)} \right\rangle = \hat U\left( {{t_1} + {t_2}} \right)\left\vert  {\psi \left( 0 \right)} \right\rangle
+\tag{5.4}\]</span></span></p>
+<p>Therefore,</p>
+<p><span id="eq-ch05-p1337"><span class="math display">\[
+\hat U\left( {{t_2}} \right)\hat U\left( {{t_1}} \right) = \hat U\left( {{t_1} + {t_2}} \right) = \hat U\left( {{t_1}} \right)\hat U\left( {{t_2}} \right)
+\tag{5.5}\]</span></span></p>
+<p><strong>Third:</strong> probability is conserved, <span class="math inline">\(\langle {\psi (t)}\vert {\psi (t)}\rangle = \langle {\psi (0)}\vert {\psi (0)}\rangle\)</span>, so</p>
+<p><span id="eq-ch05-p1339"><span class="math display">\[
+{\hat U^\dag }\left( t \right)\hat U\left( t \right) = \hat I
+\tag{5.6}\]</span></span></p>
+<p>Thus <span class="math inline">\(\hat U\)</span> is unitary: time evolution is a unitary transformation.</p>
+<p>These requirements suggest an infinitesimal evolution operator <span class="math inline">\(\hat U(dt)\)</span>:</p>
+<p><span id="eq-ch05-p1342"><span class="math display">\[
+\hat U\left( {dt} \right)\left\vert  {\psi (0)} \right\rangle = \left\vert  {\psi (dt)} \right\rangle
+\tag{5.7}\]</span></span></p>
+<p><span id="eq-zeqnnum759354"><span class="math display">\[
+\hat U\left( {dt} \right) \equiv \hat I - i\hat \Omega dt
+\tag{5.8}\]</span></span></p>
+<p>Neglecting higher-order terms in <span class="math inline">\(dt\)</span>, <span class="math inline">\(\hat U(dt)\)</span> satisfies the first two requirements. The third gives</p>
+<p><span id="eq-ch05-p1345"><span class="math display">\[
+\left( {\hat I{\rm{ + }}i{{\hat \Omega }^\dag }dt} \right)\left( {\hat I - i\hat \Omega dt} \right) = I
+\tag{5.9}\]</span></span></p>
+<p>Expanding and neglecting higher-order terms in <span class="math inline">\(dt\)</span>,</p>
+<p><span id="eq-ch05-p1347"><span class="math display">\[
+\hat I{\rm{ + }}idt\hat I\left( {{{\hat \Omega }^\dag } - \hat \Omega } \right) = \hat I
+\tag{5.10}\]</span></span></p>
+<p>Hence</p>
+<p><span id="eq-ch05-p1349"><span class="math display">\[
+\hat \Omega = {\hat \Omega ^\dag }
+\tag{5.11}\]</span></span></p>
+<p>Thus <span class="math inline">\(\hat \Omega\)</span> must be Hermitian, suggesting an observable. Equation <a href="#eq-zeqnnum759354" class="quarto-xref">Equation&nbsp;<span>5.8</span></a> shows that <span class="math inline">\(\hat \Omega\)</span> has frequency dimensions. Classical frequency describes a rate of variation rather than a fundamental dynamical observable. Planck’s frequency–energy relation, however, gives</p>
+<p><span id="eq-ch05-p1351"><span class="math display">\[
+E = \hbar \omega
+\tag{5.12}\]</span></span></p>
+<p>The energy operator, or <strong>Hamiltonian</strong>, is denoted <span class="math inline">\(\hat H\)</span>. We therefore propose</p>
+<p><span id="eq-ch05-p1353"><span class="math display">\[
+\hat \Omega = {{\hat H} \mathord{\left/ {\vphantom {{\hat H} \hbar }} \right. \kern-1.2pt } \hbar }
+\tag{5.13}\]</span></span></p>
+<p>The infinitesimal evolution operator becomes</p>
+<p><span id="eq-ch05-p1355"><span class="math display">\[
+\hat U\left( {dt} \right) = \hat I - i\frac{{\hat H}}{\hbar }dt
+\tag{5.14}\]</span></span></p>
+<p>Because of the central role of <span class="math inline">\(\hat H\)</span>, energy is called the <strong>generator of time evolution</strong>.</p>
+<p>From <span class="math inline">\(\hat U(dt)\)</span>, we obtain a differential equation for <span class="math inline">\(\hat U(t)\)</span>, defined in <a href="#eq-zeqnnum681983" class="quarto-xref">Equation&nbsp;<span>5.2</span></a>:</p>
+<p><span id="eq-zeqnnum668676"><span class="math display">\[
+\hat U\left( {t + dt} \right) = \hat U\left( {dt} \right)\hat U\left( t \right) = \left( {\hat I - i\frac{{\hat H}}{\hbar }dt} \right)\hat U\left( t \right)
+\tag{5.15}\]</span></span></p>
+<p>Thus,</p>
+<p><span id="eq-zeqnnum963010"><span class="math display">\[
+\frac{{\hat U\left( {t + dt} \right) - \hat U\left( t \right)}}{{dt}} = - i\frac{{\hat H}}{\hbar }\hat U\left( t \right)
+\tag{5.16}\]</span></span></p>
+<p>Multiplying by <span class="math inline">\(i\hbar\)</span> gives</p>
+<p><span id="eq-zeqnnum680102"><span class="math display">\[
+i\hbar \frac{\partial }{{\partial t}}\hat U\left( t \right) = \hat H\hat U\left( t \right)
+\tag{5.17}\]</span></span></p>
+<p>Equation <a href="#eq-zeqnnum680102" class="quarto-xref">Equation&nbsp;<span>5.17</span></a> is the Schrödinger equation for the evolution operator. Acting with both sides of <a href="#eq-zeqnnum963010" class="quarto-xref">Equation&nbsp;<span>5.16</span></a> on <span class="math inline">\(\vert \psi (0)\rangle\)</span> gives the familiar state equation:</p>
+<p><span id="eq-zeqnnum131431"><span class="math display">\[
+i\hbar \frac{\partial }{{\partial t}}\left\vert  {\psi \left( t \right)} \right\rangle = \hat H\left\vert  {\psi \left( t \right)} \right\rangle
+\tag{5.18}\]</span></span></p>
+</section>
+<section id="solving-the-schrödinger-equation" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="solving-the-schrödinger-equation"><span class="header-section-number">5.2</span> Solving the Schrödinger equation</h2>
+<p>Here <span class="math inline">\(\vert \psi (t)\rangle\)</span> is the state at time <span class="math inline">\(t\)</span>, and <span class="math inline">\(\hat H\)</span> is the Hamiltonian. The equation describes state evolution and is first order in time, so only the initial condition <span class="math inline">\(\vert \psi (0)\rangle\)</span> is needed. Knowing the Hamiltonian and the state at one instant determines all subsequent states.</p>
+<p>Assume <span class="math inline">\(\hat H\)</span> has no explicit time dependence. Then <span class="math inline">\(\hat H\)</span> is constant in time, and <span class="math inline">\(\hat H\)</span> has fixed eigenvalues <span class="math inline">\({E_j}\)</span> and eigenvectors <span class="math inline">\(\vert {E_j}\rangle\)</span>:</p>
+<p><span id="eq-zeqnnum782147"><span class="math display">\[
+\hat H\left\vert  {{E_j}} \right\rangle = {E_j}\left\vert  {{E_j}} \right\rangle
+\tag{5.19}\]</span></span></p>
+<p>The energy eigenvalue equation is also called the <strong>time-independent Schrödinger equation</strong>. Energy is central to quantum mechanics: many problems reduce to constructing the Hamiltonian and finding its eigenvalues and eigenstates exactly or approximately.</p>
+<p>Since the Schrödinger equation contains <span class="math inline">\(\hat H\)</span>, the <span class="math inline">\(\hat H\)</span> representation is convenient. Multiply <a href="#eq-zeqnnum131431" class="quarto-xref">Equation&nbsp;<span>5.18</span></a> on the left by <span class="math inline">\(\langle {E_j}\vert\)</span>:</p>
+<p><span id="eq-ch05-p1371"><span class="math display">\[
+i\hbar \frac{\partial }{{\partial t}}\left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( t \right)}}} \right. \kern-1.2pt } {{\psi \left( t \right)}} \right\rangle = \left\langle {{E_j}} \right\vert \hat H\left\vert  {\psi \left( t \right)} \right\rangle = {E_j}\left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( t \right)}}} \right. \kern-1.2pt } {{\psi \left( t \right)}} \right\rangle
+\tag{5.20}\]</span></span></p>
+<p>This is a first-order differential equation for <span class="math inline">\(\langle {E_j}\vert \psi (t)\rangle\)</span>, with solution</p>
+<p><span id="eq-zeqnnum909538"><span class="math display">\[
+\left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( t \right)}}} \right. \kern-1.2pt } {{\psi \left( t \right)}} \right\rangle = \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle {e^{ - {{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}
+\tag{5.21}\]</span></span></p>
+<p>Hence the energy-basis expansion of <span class="math inline">\(\vert \psi (t)\rangle\)</span> is</p>
+<p><span id="eq-zeqnnum925440"><span class="math display">\[
+\left\vert  {\psi \left( t \right)} \right\rangle = \sum\limits_j {\left\vert  {{E_j}} \right\rangle \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( t \right)}}} \right. \kern-1.2pt } {{\psi \left( t \right)}} \right\rangle } = \sum\limits_j {\left\vert  {{E_j}} \right\rangle \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle {e^{ - {{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}}
+\tag{5.22}\]</span></span></p>
+<p>This is the general solution for time-independent <span class="math inline">\(\hat H\)</span>. Comparing the initial and final expansions makes the result easy to remember.</p>
+<p><span id="eq-zeqnnum160654"><span class="math display">\[
+\begin{array}{c} \left\vert  {\psi \left( 0 \right)} \right\rangle = \sum\limits_j {\left\vert  {{E_j}} \right\rangle \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle } \\ \left\vert  {\psi \left( t \right)} \right\rangle = \sum\limits_j {\left\vert  {{E_j}} \right\rangle \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle {e^{ - {{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}} \end{array}
+\tag{5.23}\]</span></span></p>
+<section id="stationary-states" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="stationary-states"><span class="header-section-number">5.2.1</span> Stationary states</h3>
+<p>Suppose the initial state is an eigenstate of <span class="math inline">\(\hat H\)</span>:</p>
+<p><span id="eq-ch05-p1380"><span class="math display">\[
+\left\vert  {\psi {\rm{(}}0)} \right\rangle = \left\vert  {{E_m}} \right\rangle
+\tag{5.24}\]</span></span></p>
+<p>Then <a href="#eq-zeqnnum925440" class="quarto-xref">Equation&nbsp;<span>5.22</span></a> becomes</p>
+<p><span id="eq-ch05-p1382"><span class="math display">\[
+\begin{array}{c} \left\vert  {\psi (t)} \right\rangle = \sum\limits_j {\left\vert  {{E_j}} \right\rangle {\delta _{jm}}{e^{ - {{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}} = \left\vert  {{E_m}} \right\rangle {e^{ - {{i{E_m}t} \mathord{\left/ {\vphantom {{i{E_m}t} \hbar }} \right. \kern-1.2pt } \hbar }}}\\ = {e^{ - {{i{E_m}t} \mathord{\left/ {\vphantom {{i{E_m}t} \hbar }} \right. \kern-1.2pt } \hbar }}}\left\vert  {\psi (0)} \right\rangle \end{array}
+\tag{5.25}\]</span></span></p>
+<p>The final vector differs from the initial one only by an overall phase, so they represent the same physical state. For a time-independent Hamiltonian, an initial energy eigenstate therefore remains physically unchanged and is called a <strong>stationary state</strong>. Since a state contains all information about the system, its time-independent physical properties remain unchanged.</p>
+</section>
+</section>
+<section id="time-evolution-of-expectation-values" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="time-evolution-of-expectation-values"><span class="header-section-number">5.3</span> Time evolution of expectation values</h2>
+<p>Once the state evolution is known, the expectation value of any observable <span class="math inline">\(\hat A\)</span> follows from <span class="math inline">\(\langle {\hat A(t)}\rangle \equiv \left\langle {\psi (t)} \right\vert \hat A\left\vert  {\psi (t)} \right\rangle\)</span>. Use <a href="#eq-zeqnnum160654" class="quarto-xref">Equation&nbsp;<span>5.23</span></a> to obtain <span class="math inline">\(\left\vert  {\psi (t)} \right\rangle\)</span>, then calculate <span class="math inline">\(\left\langle {\psi (t)} \right\vert \hat A\left\vert  {\psi (t)} \right\rangle\)</span>.</p>
+<p>More generally, <a href="03-quantum-measurement.html#eq-zeqnnum739477" class="quarto-xref">Equation&nbsp;<span>3.5</span></a> and <a href="#eq-zeqnnum160654" class="quarto-xref">Equation&nbsp;<span>5.23</span></a> give</p>
+<p><span id="eq-zeqnnum188299"><span class="math display">\[
+\begin{array}{c} \left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle = \sum\limits_{j,k} {{e^{{{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}\left\langle {{\psi (0)}} \mathrel{\left \vert  {\vphantom {{\psi (0)} {{E_j}}}} \right. \kern-1.2pt } {{{E_j}}} \right\rangle \left\langle {{E_j}} \right\vert \hat A\left\vert  {{E_k}} \right\rangle \left\langle {{{E_k}}} \mathrel{\left \vert  {\vphantom {{{E_k}} {\psi (0)}}} \right. \kern-1.2pt } {{\psi (0)}} \right\rangle {e^{{{ - i{E_k}t} \mathord{\left/ {\vphantom {{ - i{E_k}t} \hbar }} \right. \kern-1.2pt } \hbar }}}} \\ = \sum\limits_{j,k} {\left\langle {{\psi (0)}} \mathrel{\left \vert  {\vphantom {{\psi (0)} {{E_j}}}} \right. \kern-1.2pt } {{{E_j}}} \right\rangle \left\langle {{{E_k}}} \mathrel{\left \vert  {\vphantom {{{E_k}} {\psi (0)}}} \right. \kern-1.2pt } {{\psi (0)}} \right\rangle \left\langle {{E_j}} \right\vert \hat A\left\vert  {{E_k}} \right\rangle {e^{{{i\left( {{E_j} - {E_k}} \right)t} \mathord{\left/ {\vphantom {{i\left( {{E_j} - {E_k}} \right)t} \hbar }} \right. \kern-1.2pt } \hbar }}}} \end{array}
+\tag{5.26}\]</span></span></p>
+<p>Without the final time-dependent phase in each summand, this is the expectation of <span class="math inline">\(\hat A\)</span> in initial state <span class="math inline">\(\vert {\psi (0)}\rangle\)</span>. If the initial state contains components <span class="math inline">\(\vert {E_j}\rangle\)</span> and <span class="math inline">\(\vert {E_k}\rangle\)</span> of different energies, with <span class="math inline">\(\left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi (0)}}} \right. \kern-1.2pt } {{\psi (0)}} \right\rangle\)</span> and <span class="math inline">\(\left\langle {{{E_k}}} \mathrel{\left \vert  {\vphantom {{{E_k}} {\psi (0)}}} \right. \kern-1.2pt } {{\psi (0)}} \right\rangle\)</span> both nonzero, and <span class="math inline">\(\hat A\)</span> has nonzero matrix element <span class="math inline">\({A_{jk}} \equiv \left\langle {{E_j}} \right\vert \hat A\left\vert  {{E_k}} \right\rangle \ne 0\)</span> between them, the mean of <span class="math inline">\(\hat A\)</span> contains an oscillation at frequency <span class="math inline">\({\omega _{jk}} \equiv {{({E_j} - {E_k})} \mathord{\left/ {\vphantom {{({E_j} - {E_k})} \hbar }} \right. \kern-1.2pt } \hbar }\)</span>. This offers a qualitative picture of atomic radiation: take <span class="math inline">\(\hat A\)</span> to be electron position. If a perturbation mixes energy state <span class="math inline">\(\vert {E_k}\rangle\)</span> into an initial eigenstate <span class="math inline">\(\vert {E_j}\rangle\)</span>, the mean position oscillates at <span class="math inline">\({\omega _{jk}}\)</span>, suggesting radiation at that frequency during a transition. Heisenberg arrived at <a href="#eq-zeqnnum188299" class="quarto-xref">Equation&nbsp;<span>5.26</span></a> while studying transitions and built matrix mechanics around this insight. The matrix form of <a href="#eq-zeqnnum188299" class="quarto-xref">Equation&nbsp;<span>5.26</span></a> is</p>
+<p><span id="eq-ch05-p1389"><span class="math display">\[
+\left\langle {\psi (t)} \right\vert \hat A\left\vert  {\psi (t)} \right\rangle \buildrel\textstyle.\over= {\left( {\begin{array}{*{20}{c}} {\langle 1\vert {\psi (0)}\rangle }\\ {\langle 2\vert {\psi (0)}\rangle }\\ \vdots \\ \vdots \end{array}} \right)^\dag }\left( {\begin{array}{*{20}{l}} {{A_{11}}}&amp;{{A_{12}}{e^{i{\omega _{12}}t}}}&amp;{{A_{13}}{e^{{\omega _{13}}t}}}&amp; \cdots \\ {{A_{21}}{e^{i{\omega _{21}}t}}}&amp;{{A_{22}}}&amp;{{A_{23}}{e^{{\omega _{23}}t}}}&amp; \cdots \\ {{A_{31}}{e^{i{\omega _{31}}t}}}&amp;{{A_{32}}{e^{{\omega _{32}}t}}}&amp;{{A_{33}}}&amp; \cdots \\ \vdots &amp; \vdots &amp; \vdots &amp; \ddots \end{array}} \right)\left( {\begin{array}{*{20}{c}} {\langle 1\vert {\psi (0)}\rangle }\\ {\langle 2\vert {\psi (0)}\rangle }\\ \vdots \\ \vdots \end{array}} \right)
+\tag{5.27}\]</span></span></p>
+</section>
+<section id="constants-of-motion" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="constants-of-motion"><span class="header-section-number">5.4</span> Constants of motion</h2>
+<p>If <span class="math inline">\(\hat A\)</span> has no explicit time dependence, there is a direct way to find the evolution of <span class="math inline">\(\left\langle {\psi (t)} \right\vert \hat A\left\vert  {\psi (t)} \right\rangle\)</span>.</p>
+<p>First write the Schrödinger equation in the bra space:</p>
+<p><span id="eq-ch05-p1393"><span class="math display">\[
+- i\hbar \frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right\vert  = \left\langle {\psi \left( t \right)} \right\vert \hat H
+\tag{5.28}\]</span></span></p>
+<p>Therefore,</p>
+<p><span id="eq-zeqnnum471083"><span class="math display">\[
+\begin{array}{c} \frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle = \left( {\frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right\vert } \right)\hat A\left\vert  {\psi \left( t \right)} \right\rangle + \left\langle {\psi \left( t \right)} \right\vert \hat A\frac{\partial }{{\partial t}}\left\vert  {\psi \left( t \right)} \right\rangle \\ = \frac{{ - 1}}{{i\hbar }}\left\langle {\psi \left( t \right)} \right\vert \hat H\hat A\left\vert  {\psi \left( t \right)} \right\rangle + \frac{1}{{i\hbar }}\left\langle {\psi \left( t \right)} \right\vert \hat A\hat H\left\vert  {\psi \left( t \right)} \right\rangle \end{array}
+\tag{5.29}\]</span></span></p>
+<p>Multiply by <span class="math inline">\(i\hbar\)</span> to obtain</p>
+<p><span id="eq-zeqnnum848461"><span class="math display">\[
+i\hbar \frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle = \left\langle {\psi \left( t \right)} \right\vert [\hat A,\hat H]\left\vert  {\psi \left( t \right)} \right\rangle
+\tag{5.30}\]</span></span></p>
+<p>This is often abbreviated as</p>
+<p><span id="eq-zeqnnum974147"><span class="math display">\[
+i\hbar \frac{\partial }{{\partial t}}\langle \hat A(t)\rangle = \langle [\hat A,\hat H]\rangle
+\tag{5.31}\]</span></span></p>
+<p>By <a href="#eq-zeqnnum848461" class="quarto-xref">Equation&nbsp;<span>5.30</span></a>, if <span class="math inline">\(\hat A\)</span> has no explicit time dependence and commutes with the Hamiltonian,</p>
+<p><span id="eq-ch05-p1401"><span class="math display">\[
+\frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle = 0
+\tag{5.32}\]</span></span></p>
+<p>The mean of <span class="math inline">\(\hat A\)</span> is constant. If <span class="math inline">\(\hat A\)</span> initially has a definite value, that value equals its mean and <span class="math inline">\(\hat A\)</span> retains it.</p>
+<p>An observable with no explicit time dependence that commutes with the Hamiltonian is a <strong>constant of motion</strong>. Its mean is constant, and any initially definite value remains definite and unchanged. Quantum numbers labeling conserved observables are called <strong>good quantum numbers</strong>.</p>
+<p>Whether a quantity is conserved depends on the system’s Hamiltonian. An operator always commutes with itself, so energy is conserved for the time-independent Hamiltonians considered here.</p>
+</section>
+<section id="exercises" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="exercises"><span class="header-section-number">5.5</span> Exercises</h2>
+<p><strong>5.1.</strong> An electron has magnetic moment <span class="math inline">\({\bf{\mu }} = {{ - 2{\mu _{\rm{B}}}{\bf{S}}} \mathord{\left/ {\vphantom {{ - 2{\mu _{\rm{B}}}{\bf{S}}} \hbar }} \right. \kern-1.2pt } \hbar }\)</span> and magnetic energy <span class="math inline">\(H = - {\bf{\mu }} \cdot {\bf{B}}\)</span>. Place a stationary electron in a static field <span class="math inline">\({\bf{B}} = B{\bf{\hat z}}\)</span>.</p>
+<ol type="1">
+<li><p>Given the initial condition <span class="math inline">\({S_z} = - {\hbar \mathord{\left/ {\vphantom {\hbar 2}} \right. \kern-1.2pt } 2}\)</span>, find <span class="math inline">\(\left\vert  {\psi \left( t \right)} \right\rangle\)</span>.</p></li>
+<li><p>Let <span class="math inline">\({\bf{\hat n}}\)</span> be a unit vector in the first quadrant of the <span class="math inline">\(x\)</span>–<span class="math inline">\(z\)</span> plane, making angle <span class="math inline">\(\theta\)</span> with <span class="math inline">\(z\)</span>. Initially the projection of <span class="math inline">\({\bf{S}}\)</span> along <span class="math inline">\({\bf{\hat n}}\)</span> is <span class="math inline">\({\hbar \mathord{\left/ {\vphantom {\hbar 2}} \right. \kern-1.2pt } 2}\)</span>. Using the preceding chapter’s exercises, find spin state <span class="math inline">\(\left\vert  {\psi \left( t \right)} \right\rangle\)</span> at time <span class="math inline">\(t\)</span> and the expectation value of <span class="math inline">\({\hat S_x},\;{\hat S_y},\;{\hat S_z}\)</span>. You may define <span class="math inline">\({\omega _L} \equiv {{2{\mu _{\rm{B}}}B} \mathord{\left/ {\vphantom {{2{\mu _{\rm{B}}}B} \hbar }} \right. \kern-1.2pt } \hbar }\)</span> to simplify the result.</p></li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./04-commutation-relations.html" class="pagination-link" aria-label="Commutation Relations of Observables">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Commutation Relations of Observables</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./06-transitions.html" class="pagination-link" aria-label="\* Transitions">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,98 @@
+[
+  {
+    "file": "01-vectors-and-quantum-states.html",
+    "math": 226,
+    "sourceMath": 226,
+    "errors": [],
+    "missingImages": [],
+    "width": 1440
+  },
+  {
+    "file": "02-operators.html",
+    "math": 225,
+    "sourceMath": 225,
+    "errors": [],
+    "missingImages": [],
+    "width": 1440
+  },
+  {
+    "file": "03-quantum-measurement.html",
+    "math": 357,
+    "sourceMath": 357,
+    "errors": [],
+    "missingImages": [],
+    "width": 1440
+  },
+  {
+    "file": "04-commutation-relations.html",
+    "math": 420,
+    "sourceMath": 420,
+    "errors": [],
+    "missingImages": [],
+    "width": 1440
+  },
+  {
+    "file": "05-time-evolution.html",
+    "math": 110,
+    "sourceMath": 110,
+    "errors": [],
+    "missingImages": [],
+    "width": 1440
+  },
+  {
+    "file": "06-transitions.html",
+    "math": 140,
+    "sourceMath": 140,
+    "errors": [],
+    "missingImages": [],
+    "width": 1440
+  },
+  {
+    "file": "07-continuous-observables.html",
+    "math": 381,
+    "sourceMath": 381,
+    "errors": [],
+    "missingImages": [],
+    "width": 1440
+  },
+  {
+    "file": "08-angular-momentum.html",
+    "math": 325,
+    "sourceMath": 325,
+    "errors": [],
+    "missingImages": [],
+    "width": 1440
+  },
+  {
+    "file": "09-coupling-angular-momenta.html",
+    "math": 271,
+    "sourceMath": 271,
+    "errors": [],
+    "missingImages": [],
+    "width": 1440
+  },
+  {
+    "file": "10-topics-in-atomic-physics.html",
+    "math": 22,
+    "sourceMath": 22,
+    "errors": [],
+    "missingImages": [],
+    "width": 1440
+  },
+  {
+    "file": "11-appendices.html",
+    "math": 31,
+    "sourceMath": 31,
+    "errors": [],
+    "missingImages": [],
+    "width": 1440
+  },
+  {
+    "file": "12-exercise-solutions.html",
+    "math": 375,
+    "sourceMath": 375,
+    "errors": [],
+    "missingImages": [],
+    "width": 1440
+  }
+]

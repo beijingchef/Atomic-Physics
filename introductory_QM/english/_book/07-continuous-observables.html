@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>7&nbsp; Continuous Observables – Introduction to Quantum Mechanics</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./08-angular-momentum.html" rel="next">
+<link href="./06-transitions.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-631496449bf32ff9b0bb69a6bfd9195d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="assets/mathjax/tex-svg.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./07-continuous-observables.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Continuous Observables</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Introduction to Quantum Mechanics</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-vectors-and-quantum-states.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Vectors and Quantum States</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Operators</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-quantum-measurement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Quantum Measurement</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-commutation-relations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Commutation Relations of Observables</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-time-evolution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Time Evolution</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-transitions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-continuous-observables.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Continuous Observables</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-angular-momentum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Angular Momentum</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-coupling-angular-momenta.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Coupling Two Angular Momenta</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-topics-in-atomic-physics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Topics in Atomic Physics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-appendices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Appendices</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-exercise-solutions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Exercise Solutions</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-dirac-delta-function" id="toc-the-dirac-delta-function" class="nav-link active" data-scroll-target="#the-dirac-delta-function"><span class="header-section-number">7.1</span> The Dirac delta function</a></li>
+  <li><a href="#continuous-representations-and-wavefunctions" id="toc-continuous-representations-and-wavefunctions" class="nav-link" data-scroll-target="#continuous-representations-and-wavefunctions"><span class="header-section-number">7.2</span> Continuous representations and wavefunctions</a></li>
+  <li><a href="#position" id="toc-position" class="nav-link" data-scroll-target="#position"><span class="header-section-number">7.3</span> Position</a>
+  <ul class="collapse">
+  <li><a href="#the-position-operator-in-position-space" id="toc-the-position-operator-in-position-space" class="nav-link" data-scroll-target="#the-position-operator-in-position-space"><span class="header-section-number">7.3.1</span> The position operator in position space</a></li>
+  <li><a href="#position-wavefunctions-in-three-dimensions" id="toc-position-wavefunctions-in-three-dimensions" class="nav-link" data-scroll-target="#position-wavefunctions-in-three-dimensions"><span class="header-section-number">7.3.2</span> Position wavefunctions in three dimensions</a></li>
+  </ul></li>
+  <li><a href="#momentum" id="toc-momentum" class="nav-link" data-scroll-target="#momentum"><span class="header-section-number">7.4</span> Momentum</a></li>
+  <li><a href="#the-relationship-between-position-and-momentum" id="toc-the-relationship-between-position-and-momentum" class="nav-link" data-scroll-target="#the-relationship-between-position-and-momentum"><span class="header-section-number">7.5</span> The relationship between position and momentum</a>
+  <ul class="collapse">
+  <li><a href="#spatial-translations-and-the-momentum-operator" id="toc-spatial-translations-and-the-momentum-operator" class="nav-link" data-scroll-target="#spatial-translations-and-the-momentum-operator"><span class="header-section-number">7.5.1</span> Spatial translations and the momentum operator</a></li>
+  <li><a href="#the-positionmomentum-commutator" id="toc-the-positionmomentum-commutator" class="nav-link" data-scroll-target="#the-positionmomentum-commutator"><span class="header-section-number">7.5.2</span> The position–momentum commutator</a></li>
+  <li><a href="#momentum-in-the-position-representation" id="toc-momentum-in-the-position-representation" class="nav-link" data-scroll-target="#momentum-in-the-position-representation"><span class="header-section-number">7.5.3</span> Momentum in the position representation</a></li>
+  <li><a href="#position-wavefunctions-of-momentum-eigenstates" id="toc-position-wavefunctions-of-momentum-eigenstates" class="nav-link" data-scroll-target="#position-wavefunctions-of-momentum-eigenstates"><span class="header-section-number">7.5.4</span> Position wavefunctions of momentum eigenstates</a></li>
+  </ul></li>
+  <li><a href="#transforming-between-position-and-momentum-representations" id="toc-transforming-between-position-and-momentum-representations" class="nav-link" data-scroll-target="#transforming-between-position-and-momentum-representations"><span class="header-section-number">7.6</span> Transforming between position and momentum representations</a></li>
+  <li><a href="#summary-of-the-position-representation" id="toc-summary-of-the-position-representation" class="nav-link" data-scroll-target="#summary-of-the-position-representation"><span class="header-section-number">7.7</span> Summary of the position representation</a></li>
+  <li><a href="#solving-the-energy-eigenvalue-equation-in-position-space" id="toc-solving-the-energy-eigenvalue-equation-in-position-space" class="nav-link" data-scroll-target="#solving-the-energy-eigenvalue-equation-in-position-space"><span class="header-section-number">7.8</span> Solving the energy eigenvalue equation in position space</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">7.9</span> Exercises</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Continuous Observables</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>So far, our observables have discrete eigenvalues. Their eigenbases define <strong>discrete representations</strong>. We now consider observables with continuous eigenvalues and the <strong>continuous representations</strong> they define, developing their properties by comparison. Unless stated otherwise, integrals extend from negative to positive infinity.</p>
+<section id="the-dirac-delta-function" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="the-dirac-delta-function"><span class="header-section-number">7.1</span> The Dirac delta function</h2>
+<p>Introduce the Dirac <span class="math inline">\(\delta\)</span> function <span class="math inline">\(\delta (x - x')\)</span>, where <span class="math inline">\(x\)</span> is a real variable and <span class="math inline">\(x'\)</span> a real parameter. It is defined by</p>
+<p><span id="eq-ch07-p1520"><span class="math display">\[
+\delta \left( {x - x'} \right) = \left\{ {\begin{array}{*{20}{c}} {\infty ,}&amp;{x = x'}\\ {0,}&amp;{x \ne x'} \end{array}} \right.
+\tag{7.1}\]</span></span></p>
+<p><span id="eq-ch07-p1521"><span class="math display">\[
+\int_{ - \infty }^\infty {\delta \left( {x - x'} \right)dx} = 1
+\tag{7.2}\]</span></span></p>
+<p>The <span class="math inline">\(\delta\)</span> function has the properties</p>
+<p><span id="eq-ch07-p1523"><span class="math display">\[
+\delta \left( {x - x'} \right) = \delta \left( {x' - x} \right)
+\tag{7.3}\]</span></span></p>
+<p><span id="eq-ch07-p1524"><span class="math display">\[
+\delta \left( {x - x'} \right)F\left( x \right) = \delta \left( {x - x'} \right)F\left( {x'} \right)
+\tag{7.4}\]</span></span></p>
+<p><span id="eq-zeqnnum269859"><span class="math display">\[
+\int {dx\;\delta \left( {x - x'} \right)F\left( x \right)} = F\left( {x'} \right)
+\tag{7.5}\]</span></span></p>
+<p>Equation <a href="#eq-zeqnnum269859" class="quarto-xref">Equation&nbsp;<span>7.5</span></a> may itself be used to define the <span class="math inline">\(\delta\)</span> function.</p>
+<p>A Fourier expansion expresses a function <span class="math inline">\(F\left( x \right)\)</span> in terms of <span class="math inline">\(\exp \left( {ikx} \right)\)</span>:</p>
+<p><span id="eq-zeqnnum712670"><span class="math display">\[
+F\left( x \right) = \frac{1}{{\sqrt {2\pi } }}\int\limits_{{\rm{ - }}\infty }^{{\rm{ + }}\infty } {dk\;\widetilde F\left( k \right)\exp \left( {ikx} \right)}
+\tag{7.6}\]</span></span></p>
+<p>The coefficients <span class="math inline">\(\widetilde F\left( k \right)\)</span> are</p>
+<p><span id="eq-zeqnnum971789"><span class="math display">\[
+\widetilde F\left( k \right) = \frac{1}{{\sqrt {2\pi } }}\int\limits_{{\rm{ - }}\infty }^\infty {dx\;F\left( x \right)\exp \left( { - ikx} \right)}
+\tag{7.7}\]</span></span></p>
+<p>Functions <span class="math inline">\(F\left( x \right)\)</span> and <span class="math inline">\(\widetilde F\left( k \right)\)</span> are Fourier transforms of each other. Equations <a href="#eq-zeqnnum712670" class="quarto-xref">Equation&nbsp;<span>7.6</span></a> and <a href="#eq-zeqnnum971789" class="quarto-xref">Equation&nbsp;<span>7.7</span></a> give</p>
+<p><span id="eq-zeqnnum832633"><span class="math display">\[
+\begin{array}{c} F\left( {x'} \right) = \frac{1}{{\sqrt {2\pi } }}\int {dk\;\widetilde F\left( k \right)\exp \left( {ikx'} \right)} \\ = \frac{1}{{\sqrt {2\pi } }}\int {dk\;\left[ {\frac{1}{{\sqrt {2\pi } }}\int\limits_{{\rm{ - }}\infty }^\infty {dx\;F\left( x \right)\exp \left( { - ikx} \right)} } \right]\exp \left( {ikx'} \right)} \\ = \int {dx\left\{ {\frac{1}{{2\pi }}\int {dk\exp \left[ {ik\left( {x' - x} \right)} \right]} } \right\}F\left( x \right)} \\ = \int {dx\left\{ {\frac{1}{{2\pi }}\int {dk\exp \left[ {ik\left( {x - x'} \right)} \right]} } \right\}F\left( x \right)} \end{array}
+\tag{7.8}\]</span></span></p>
+<p>Comparing <a href="#eq-zeqnnum832633" class="quarto-xref">Equation&nbsp;<span>7.8</span></a> with the defining identity <a href="#eq-zeqnnum269859" class="quarto-xref">Equation&nbsp;<span>7.5</span></a> gives</p>
+<p><span id="eq-zeqnnum117049"><span class="math display">\[
+\delta \left( {x - x'} \right) = \frac{1}{{2\pi }}\int_{ - \infty }^\infty {dk\exp \left[ {ik\left( {x - x'} \right)} \right]}
+\tag{7.9}\]</span></span></p>
+<p><span id="eq-zeqnnum893086"><span class="math display">\[
+\delta \left( x \right) = \frac{1}{{2\pi }}\int_{ - \infty }^\infty {dk\exp \left( {ikx} \right)} = \frac{1}{{\sqrt {2\pi } }}\int_{ - \infty }^\infty {dk\frac{1}{{\sqrt {2\pi } }}\exp \left( {ikx} \right)}
+\tag{7.10}\]</span></span></p>
+<p>This is the Fourier representation of the <span class="math inline">\(\delta\)</span> function. Comparing <a href="#eq-zeqnnum893086" class="quarto-xref">Equation&nbsp;<span>7.10</span></a> and <a href="#eq-zeqnnum712670" class="quarto-xref">Equation&nbsp;<span>7.6</span></a>, <span class="math inline">\(\delta (x)\)</span> and <span class="math inline">\({1 \mathord{\left/ {\vphantom {1 {\sqrt {2\pi } }}} \right. \kern-1.2pt } {\sqrt {2\pi } }}\)</span> form a Fourier-transform pair.</p>
+</section>
+<section id="continuous-representations-and-wavefunctions" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="continuous-representations-and-wavefunctions"><span class="header-section-number">7.2</span> Continuous representations and wavefunctions</h2>
+<p>We extend the discrete formalism to continuous observables. For discrete eigenvalues of <span class="math inline">\(\hat Q\)</span>, use integer-indexed quantities <span class="math inline">\({q_i}\)</span>. For continuous eigenvalues of <span class="math inline">\(\hat Q\)</span>, use a continuous variable <span class="math inline">\(q,q',q''...\)</span>.</p>
+<p><img src="assets/image1257.png" class="img-fluid" width="286"><img src="assets/image1258.png" class="img-fluid" width="265"></p>
+<div class="source-caption">
+<p>Figure 7.1. Left: <span class="math inline">\({\left\vert  {\langle {{q_i}}\vert \psi\rangle } \right\vert ^2}\)</span> is a probability in a discrete representation. Right: <span class="math inline">\({\left\vert  {\langle q\vert \psi\rangle } \right\vert ^2}\)</span> is a probability density in a continuous representation.</p>
+</div>
+<p>For a discrete observable <span class="math inline">\(\hat Q\)</span>, state <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> has the expansion in the <span class="math inline">\(\hat Q\)</span> representation</p>
+<p><span id="eq-ch07-p1542"><span class="math display">\[
+\left\vert  \psi \right\rangle = \sum\limits_i {\left\vert  {{q_i}} \right\rangle \left\langle {{{q_i}}} \mathrel{\left \vert  {\vphantom {{{q_i}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }
+\tag{7.11}\]</span></span></p>
+<p>The probability amplitude <span class="math inline">\(\langle {{q_i}}\vert \psi\rangle\)</span> is a discrete function of <span class="math inline">\({q_i}\)</span>. Its squared magnitude <span class="math inline">\({\left\vert  {\left\langle {{{q_i}}} \mathrel{\left \vert  {\vphantom {{{q_i}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \right\vert ^2}\)</span> is the probability that <span class="math inline">\(\hat Q\)</span> has value <span class="math inline">\({q}_{i}\)</span> in state <span class="math inline">\(\left\vert  \psi \right\rangle\)</span>. Probability conservation requires</p>
+<p><span id="eq-zeqnnum779322"><span class="math display">\[
+\sum\limits_i {{{\left\vert  {\left\langle {{{q_i}}} \mathrel{\left \vert  {\vphantom {{{q_i}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \right\vert }^2}} = 1
+\tag{7.12}\]</span></span></p>
+<p>For a continuous observable <span class="math inline">\(\hat Q\)</span>, <span class="math inline">\(\left\langle {q} \mathrel{\left \vert  {\vphantom {q \psi }} \right. \kern-1.2pt } {\psi } \right\rangle\)</span> becomes a continuous function of <span class="math inline">\(q\)</span>, written</p>
+<p><span id="eq-ch07-p1546"><span class="math display">\[
+\left\langle {q} \mathrel{\left \vert  {\vphantom {q \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \equiv \psi \left( q \right)
+\tag{7.13}\]</span></span></p>
+<p>This is a <strong>wavefunction</strong>, although it need not describe an ordinary wave. It depends on the representation: <span class="math inline">\(\psi \left( q \right)\)</span> is state <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> in the <span class="math inline">\(\hat Q\)</span> representation. As Figure 7.1 illustrates, <span class="math inline">\({\left\vert  {\psi (q)} \right\vert ^2}\)</span> is continuous in <span class="math inline">\(q\)</span>, so the sum in <a href="#eq-zeqnnum779322" class="quarto-xref">Equation&nbsp;<span>7.12</span></a> becomes an integral:</p>
+<p><span id="eq-zeqnnum469206"><span class="math display">\[
+\int {dq} {\left\vert  {\psi (q)} \right\vert ^2} = 1
+\tag{7.14}\]</span></span></p>
+<p>Thus <span class="math inline">\(dq{\left\vert  {\psi (q)} \right\vert ^2}\)</span> is the probability that <span class="math inline">\(\hat Q\)</span> lies in <span class="math inline">\(q\~q + dq\)</span> in state <span class="math inline">\(\left\vert  \psi \right\rangle\)</span>. The quantity <span class="math inline">\({\left\vert  {\psi (q)} \right\vert ^2}\)</span> is the probability density near <span class="math inline">\(q\)</span> for <span class="math inline">\(\hat Q\)</span> in state <span class="math inline">\(\left\vert  \psi \right\rangle\)</span>, with dimensions <span class="math inline">\({1 \mathord{\left/ {\vphantom {1 q}} \right. \kern-1.2pt } q}\)</span>.</p>
+<p>To ensure unique, normalized probabilities, the physically admissible wavefunctions <span class="math inline">\(\psi (q)\)</span> considered here satisfy three conditions:</p>
+<ul>
+<li><p><strong>Single-valued:</strong> apart from an overall phase, each <span class="math inline">\(q\)</span> has a unique value <span class="math inline">\(\psi (q)\)</span>.</p></li>
+<li><p><strong>Continuous everywhere.</strong></p></li>
+<li><p><strong>Vanishing at infinity:</strong> <span class="math inline">\(\psi (q = \pm \infty ) = 0\)</span>.</p></li>
+</ul>
+<p>Normalization and probability conservation <a href="#eq-zeqnnum469206" class="quarto-xref">Equation&nbsp;<span>7.14</span></a> give, for any state <span class="math inline">\(\vert \psi \rangle\)</span>,</p>
+<p><span id="eq-ch07-p1555"><span class="math display">\[
+\left\langle {\psi } \mathrel{\left \vert  {\vphantom {\psi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = 1 = \int {dq} {\left\vert  {\left\langle {q} \mathrel{\left \vert  {\vphantom {q \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \right\vert ^2} = \int {dq\left\langle {\psi } \mathrel{\left \vert  {\vphantom {\psi q}} \right. \kern-1.2pt } {q} \right\rangle \left\langle {q} \mathrel{\left \vert  {\vphantom {q \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } = \left\langle \psi \right\vert \left( {\int {dq\left\vert  q \right\rangle \left\langle q \right\vert } } \right)\left\vert  \psi \right\rangle
+\tag{7.15}\]</span></span></p>
+<p>Hence the continuous completeness relation is</p>
+<p><span id="eq-zeqnnum869918"><span class="math display">\[
+\int {dq\;\left\vert  q \right\rangle \left\langle q \right\vert } = \hat I
+\tag{7.16}\]</span></span></p>
+<p>Completeness gives the following results.</p>
+<p>The expansion of an arbitrary state <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> is</p>
+<p><span id="eq-zeqnnum818008"><span class="math display">\[
+\left\vert  \psi \right\rangle = \int {dq\left\vert  q \right\rangle \left\langle {q} \mathrel{\left \vert  {\vphantom {q \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } = \int {dq\;\psi (q)\left\vert  q \right\rangle }
+\tag{7.17}\]</span></span></p>
+<p>The inner product of two states is</p>
+<p><span id="eq-ch07-p1562"><span class="math display">\[
+\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \int {dq\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi q}} \right. \kern-1.2pt } {q} \right\rangle \left\langle {q} \mathrel{\left \vert  {\vphantom {q \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } = \int {{\phi ^*}\left( q \right)\psi \left( q \right)dq}
+\tag{7.18}\]</span></span></p>
+<p>Take the inner product of <a href="#eq-zeqnnum818008" class="quarto-xref">Equation&nbsp;<span>7.17</span></a> with eigenstate <span class="math inline">\(\vert {q'}\rangle\)</span> of <span class="math inline">\(\hat Q\)</span>, belonging to eigenvalue <span class="math inline">\(q'\)</span>:</p>
+<p><span id="eq-ch07-p1564"><span class="math display">\[
+\psi (q') = \int {dq\;\psi (q)\left\langle {{q'}} \mathrel{\left \vert  {\vphantom {{q'} q}} \right. \kern-1.2pt } {q} \right\rangle }
+\tag{7.19}\]</span></span></p>
+<p>Comparison with the <span class="math inline">\(\delta\)</span>-function definition <a href="#eq-zeqnnum269859" class="quarto-xref">Equation&nbsp;<span>7.5</span></a> gives</p>
+<p><span id="eq-ch07-p1566"><span class="math display">\[
+\left\langle {{q'}} \mathrel{\left \vert  {\vphantom {{q'} q}} \right. \kern-1.2pt } {q} \right\rangle = \delta (q - q') = \delta (q' - q) = \left\langle {q} \mathrel{\left \vert  {\vphantom {q {q'}}} \right. \kern-1.2pt } {{q'}} \right\rangle
+\tag{7.20}\]</span></span></p>
+<p>Thus the state with definite value <span class="math inline">\(q'\)</span> of continuous observable <span class="math inline">\(\hat Q\)</span> has wavefunction <span class="math inline">\(\delta (q - q')\)</span> in its own representation.</p>
+<p>Table 7.1 compares the corresponding formulas in discrete and continuous representations.</p>
+<p>Table 7.1. Expansions in discrete and continuous representations.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Discrete representation</th>
+<th>Continuous representation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Eigenvalue equation</td>
+<td><span class="math inline">\(\hat Q\left\vert  {{q_i}} \right\rangle = {q_i}\left\vert  {{q_i}} \right\rangle\)</span></td>
+<td><span class="math inline">\(\hat Q\left\vert  q \right\rangle = q\left\vert  q \right\rangle\)</span></td>
+</tr>
+<tr class="even">
+<td>Relations between basis vectors</td>
+<td><span class="math inline">\(\left\langle {{{q_i}}} \mathrel{\left \vert  {\vphantom {{{q_i}} {{q_j}}}} \right. \kern-1.2pt } {{{q_j}}} \right\rangle = {\delta _{ij}}\)</span></td>
+<td><span class="math inline">\(\left\langle {q} \mathrel{\left \vert  {\vphantom {q {q'}}} \right. \kern-1.2pt } {{q'}} \right\rangle = \delta \left( {q - q'} \right)\)</span></td>
+</tr>
+<tr class="odd">
+<td>State expansion</td>
+<td><span class="math inline">\(\left\vert  \psi \right\rangle = \sum\limits_i {\left\vert  {{q_i}} \right\rangle \left\langle {{{q_i}}} \mathrel{\left \vert  {\vphantom {{{q_i}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }\)</span></td>
+<td><span class="math inline">\(\left\vert  \psi \right\rangle = \int {dq\left\vert  q \right\rangle \left\langle {q} \mathrel{\left \vert  {\vphantom {q \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } = \int {dq\;\psi (q)\left\vert  q \right\rangle }\)</span></td>
+</tr>
+<tr class="even">
+<td>State in the chosen basis</td>
+<td>Column of probability amplitudes <span class="math inline">\(\left( {\begin{array}{*{20}{c}} \vdots \\ {\left\langle {{{q_i}}} \mathrel{\left \vert  {\vphantom {{{q_i}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }\\ \vdots \end{array}} \right)\)</span></td>
+<td>Wavefunction (probability-density amplitude) <span class="math inline">\(\left\langle {q} \mathrel{\left \vert  {\vphantom {q \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \equiv \psi {\rm{(}}q)\)</span> Single-valued, continuous, <span class="math inline">\(\psi (q = \pm \infty ) = 0\)</span></td>
+</tr>
+<tr class="odd">
+<td>Measurement probability</td>
+<td><span class="math inline">\({\left\vert  {\left\langle {{{q_i}}} \mathrel{\left \vert  {\vphantom {{{q_i}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \right\vert ^2}\)</span>: probability of value <span class="math inline">\({q_i}\)</span></td>
+<td><span class="math inline">\({\left\vert  {\psi (q)} \right\vert ^2}dq\)</span>: probability of a value in <span class="math inline">\(q\~q + dq\)</span></td>
+</tr>
+<tr class="even">
+<td>Probability conservation</td>
+<td><span class="math inline">\(\sum\limits_i {{{\left\vert  {\left\langle {{{q_i}}} \mathrel{\left \vert  {\vphantom {{{q_i}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \right\vert }^2}} = 1\)</span></td>
+<td><span class="math inline">\(\int {dq\;{{\left\vert  {\left\langle {q} \mathrel{\left \vert  {\vphantom {q \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \right\vert }^2}} = \int {dq\;{{\left\vert  {\psi (q)} \right\vert }^2}} = 1\)</span></td>
+</tr>
+<tr class="odd">
+<td>Completeness relation</td>
+<td><span class="math inline">\(\sum\limits_i {\left\vert  {{q_i}} \right\rangle \left\langle {{q_i}} \right\vert } = \hat I\)</span></td>
+<td><span class="math inline">\(\int {dq\left\vert  q \right\rangle \left\langle q \right\vert } = \hat I\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle\)</span></td>
+<td><span class="math inline">\(\sum\limits_i {\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi {{q_i}}}} \right. \kern-1.2pt } {{{q_i}}} \right\rangle \left\langle {{{q_i}}} \mathrel{\left \vert  {\vphantom {{{q_i}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }\)</span></td>
+<td><span class="math inline">\(\int {dq\;\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi q}} \right. \kern-1.2pt } {q} \right\rangle \left\langle {q} \mathrel{\left \vert  {\vphantom {q \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } {\rm{ = }}\int {dq\;{\phi ^*}{\rm{(}}q)\psi (q)}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>We now examine several important continuous observables.</p>
+</section>
+<section id="position" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="position"><span class="header-section-number">7.3</span> Position</h2>
+<p>A particle’s position is an observable, represented in one dimension by <span class="math inline">\(\hat X\)</span>. Its eigenvalue equation is postulated to be</p>
+<p><span id="eq-ch07-p1634"><span class="math display">\[
+\hat X\left\vert  x \right\rangle = x\left\vert  x \right\rangle
+\tag{7.21}\]</span></span></p>
+<p>The variable <span class="math inline">\(x\)</span> labels eigenvalues of <span class="math inline">\(\hat X\)</span>, continuously from negative to positive infinity. The eigenstate <span class="math inline">\(\left\vert  x \right\rangle\)</span> corresponding to <span class="math inline">\(x\)</span> represents a particle definitely at <span class="math inline">\(x\)</span>.</p>
+<p>Position eigenstates form a delta-normalized complete set:</p>
+<p><span id="eq-ch07-p1637"><span class="math display">\[
+\left\langle {{x'}} \mathrel{\left \vert  {\vphantom {{x'} {x''}}} \right. \kern-1.2pt } {{x''}} \right\rangle = \delta \left( {x'' - x'} \right)
+\tag{7.22}\]</span></span></p>
+<p>Any motional state <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> can be expanded in <span class="math inline">\(\left\{ {\left\vert  x \right\rangle } \right\}\)</span>:</p>
+<p><span id="eq-ch07-p1639"><span class="math display">\[
+\left\vert  \psi \right\rangle = \int_{ - \infty }^\infty {dx\left\vert  x \right\rangle \left\langle {x} \mathrel{\left \vert  {\vphantom {x \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }
+\tag{7.23}\]</span></span></p>
+<p>Here <span class="math inline">\(\left\langle {x} \mathrel{\left \vert  {\vphantom {x \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \equiv \psi \left( x \right)\)</span> is the <strong>position wavefunction</strong>. <span class="math inline">\({\left\vert  {\psi \left( x \right)} \right\vert ^2}\)</span> is the probability density at <span class="math inline">\(x\)</span> in state <span class="math inline">\(\left\vert  \psi \right\rangle\)</span>, and <span class="math inline">\({\left\vert  {\psi \left( x \right)} \right\vert ^2}dx\)</span> is the probability in interval <span class="math inline">\(x\~x + dx\)</span> in state <span class="math inline">\(\left\vert  \psi \right\rangle\)</span>. Thus, in state <span class="math inline">\(\left\vert  \psi \right\rangle\)</span>, the probability of position between <span class="math inline">\(x = a\)</span> and <span class="math inline">\(x = b\)</span> is</p>
+<p><span id="eq-ch07-p1641"><span class="math display">\[
+\int_a^b {dx{{\left\vert  {\psi \left( x \right)} \right\vert }^2}}
+\tag{7.24}\]</span></span></p>
+<p>The probability of finding the particle somewhere in space is <span class="math inline">\(1\)</span>:</p>
+<p><span id="eq-zeqnnum866371"><span class="math display">\[
+\int_{ - \infty }^\infty {dx{{\left\vert  {\psi \left( x \right)} \right\vert }^2}} = 1
+\tag{7.25}\]</span></span></p>
+<p>In the special state <span class="math inline">\(\vert {x_0}\rangle\)</span>, with definite position <span class="math inline">\({x_0}\)</span>, the wavefunction is</p>
+<p><span id="eq-ch07-p1645"><span class="math display">\[
+\langle x\vert {x_0}\rangle = \delta (x - {x_0})
+\tag{7.26}\]</span></span></p>
+<section id="the-position-operator-in-position-space" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="the-position-operator-in-position-space"><span class="header-section-number">7.3.1</span> The position operator in position space</h3>
+<p>For any one-dimensional motional state <span class="math inline">\(\vert \psi \rangle\)</span>,</p>
+<p><span id="eq-ch07-p1648"><span class="math display">\[
+\langle x\vert \hat X\vert \psi \rangle = \left( {\langle x\vert \hat X} \right)\vert \psi \rangle = x\langle x\vert \psi \rangle = x\psi (x)
+\tag{7.27}\]</span></span></p>
+<p>Thus <span class="math inline">\(\hat X\left\vert  \psi \right\rangle\)</span> is represented by <span class="math inline">\(x\psi \left( x \right)\)</span> in position space, and <span class="math inline">\(\hat X\)</span> has the form</p>
+<p><span id="eq-zeqnnum472694"><span class="math display">\[
+\hat X = x
+\tag{7.28}\]</span></span></p>
+<p>Real functions of the position operator are Hermitian. For example, <span class="math inline">\({\hat X^n}\)</span> satisfies</p>
+<p><span id="eq-ch07-p1652"><span class="math display">\[
+{\hat X^n}\left\vert  x \right\rangle = {\hat X^{n - 1}}\left( {\hat X\left\vert  x \right\rangle } \right) = {\hat X^{n - 1}}x\left\vert  x \right\rangle = x{\hat X^{n - 1}}\left\vert  x \right\rangle = \cdots = {x^n}\left\vert  x \right\rangle
+\tag{7.29}\]</span></span></p>
+<p>An operator function <span class="math inline">\(V{\rm{(}}\hat X{\rm{)}}\)</span> may be defined through its Taylor series:</p>
+<p><span id="eq-ch07-p1654"><span class="math display">\[
+V(\hat X) \equiv V\left( 0 \right)\hat I + V'\left( 0 \right)\hat X + \frac{{V''\left( 0 \right)}}{{2!}}{\hat X^2} + \cdots
+\tag{7.30}\]</span></span></p>
+<p>Therefore,</p>
+<p><span id="eq-ch07-p1656"><span class="math display">\[
+\begin{array}{c} V(\hat X)\left\vert  x \right\rangle = V\left( 0 \right)\hat I\left\vert  x \right\rangle + V'\left( 0 \right)\hat X\left\vert  x \right\rangle + \frac{{V''\left( 0 \right)}}{{2!}}{{\hat X}^2}\left\vert  x \right\rangle + \cdots \\ = \left\{ {V\left( 0 \right) + V'\left( 0 \right)x + \frac{{V''\left( 0 \right)}}{{2!}}{x^2} + \cdots } \right\}\left\vert  x \right\rangle \\ = V(x)\left\vert  x \right\rangle \end{array}
+\tag{7.31}\]</span></span></p>
+<p>The quantity <span class="math inline">\(V(\hat X)\)</span> on the left is an operator; <span class="math inline">\(V(x)\)</span> on the right is a number, the eigenvalue of <span class="math inline">\(V(\hat X)\)</span>.</p>
+<p>Using the Hermiticity of <span class="math inline">\(V(\hat X)\)</span>, for any state <span class="math inline">\(\vert \psi \rangle\)</span>,</p>
+<p><span id="eq-zeqnnum311642"><span class="math display">\[
+\left\langle x \right\vert V(\hat X)\left\vert  \psi \right\rangle = \left[ {\left\langle x \right\vert V(\hat X)} \right]\left\vert  \psi \right\rangle = V\left( x \right)\left\langle {x} \mathrel{\left \vert  {\vphantom {x \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = V\left( x \right)\psi \left( x \right)
+\tag{7.32}\]</span></span></p>
+<p>The position wavefunction of <span class="math inline">\(V(\hat X)\left\vert  \psi \right\rangle\)</span> is <span class="math inline">\(V\left( x \right)\)</span> times that of <span class="math inline">\(\vert \psi \rangle\)</span>. Thus <span class="math inline">\(V(\hat X)\)</span> is represented in position space by <span class="math inline">\(V(x)\)</span>.</p>
+<p><span id="eq-zeqnnum494017"><span class="math display">\[
+V(\hat X) = V\left( x \right)
+\tag{7.33}\]</span></span></p>
+</section>
+<section id="position-wavefunctions-in-three-dimensions" class="level3" data-number="7.3.2">
+<h3 data-number="7.3.2" class="anchored" data-anchor-id="position-wavefunctions-in-three-dimensions"><span class="header-section-number">7.3.2</span> Position wavefunctions in three dimensions</h3>
+<p>A particle can have definite Cartesian position <span class="math inline">\({\bf{r}}\)</span>. The components <span class="math inline">\(\hat X,\hat Y,\hat Z\)</span> commute pairwise and have common three-dimensional position eigenstates:</p>
+<p><span id="eq-ch07-p1664"><span class="math display">\[
+\left\vert  {\bf{r}} \right\rangle \equiv \left\vert  {x,y,z} \right\rangle
+\tag{7.34}\]</span></span></p>
+<p><span id="eq-ch07-p1665"><span class="math display">\[
+\hat X\left\vert  {\bf{r}} \right\rangle = x\left\vert  {\bf{r}} \right\rangle , \qquad  \hat Y\left\vert  {\bf{r}} \right\rangle = y\left\vert  {\bf{r}} \right\rangle , \qquad  \hat Z\left\vert  {\bf{r}} \right\rangle = z\left\vert  {\bf{r}} \right\rangle
+\tag{7.35}\]</span></span></p>
+<p><strong>Orthogonality:</strong></p>
+<p><span id="eq-ch07-p1667"><span class="math display">\[
+\left\langle {{{\bf{r'}}}} \mathrel{\left \vert  {\vphantom {{{\bf{r'}}} {{\bf{r''}}}}} \right. \kern-1.2pt } {{{\bf{r''}}}} \right\rangle = {\delta ^3}\left( {{\bf{r'}} - {\bf{r''}}} \right)
+\tag{7.36}\]</span></span></p>
+<p>Here <span class="math inline">\({\delta ^3}\)</span> is the three-dimensional <span class="math inline">\(\delta\)</span> function: <span class="math inline">\({\delta ^3}\left( {{\bf{r'}} - {\bf{r''}}} \right) \equiv \delta \left( {x' - x''} \right)\delta \left( {y' - y''} \right)\delta \left( {z' - z''} \right)\)</span>.</p>
+<p><strong>Completeness:</strong></p>
+<p><span id="eq-ch07-p1670"><span class="math display">\[
+\int {{d^3}r\left\vert  {\bf{r}} \right\rangle \left\langle {\bf{r}} \right\vert } = \hat I
+\tag{7.37}\]</span></span></p>
+<p>Here <span class="math inline">\(\int {{d^3}r} \equiv \iiint {dxdydz}\)</span>.</p>
+<p>Any three-dimensional motional state <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> expands as</p>
+<p><span id="eq-ch07-p1673"><span class="math display">\[
+\left\vert  \psi \right\rangle = \int {{d^3}r\left\vert  {\bf{r}} \right\rangle \left\langle {{\bf{r}}} \mathrel{\left \vert  {\vphantom {{\bf{r}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } = \int {{d^3}r\left\vert  {\bf{r}} \right\rangle \psi \left( {\bf{r}} \right)}
+\tag{7.38}\]</span></span></p>
+<p>where <span class="math inline">\(\left\vert  {\bf{r}} \right\rangle \equiv \left\vert  {x,y,z} \right\rangle\)</span> and <span class="math inline">\(\left\langle {{\bf{r}}} \mathrel{\left \vert  {\vphantom {{\bf{r}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \equiv \left\langle {{x,y,z}} \mathrel{\left \vert  {\vphantom {{x,y,z} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \equiv \psi \left( {x,y,z} \right) \equiv \psi ({\bf{r}})\)</span>.</p>
+<p>The quantity <span class="math inline">\({\left\vert  {\psi \left( {\bf{r}} \right)} \right\vert ^2}{d^3}r\)</span> is the probability of finding a particle in state <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> within volume <span class="math inline">\({d^3}r\)</span> at <span class="math inline">\({\bf{r}}\)</span>. The quantity <span class="math inline">\({\left\vert  {\psi \left( {\bf{r}} \right)} \right\vert ^2}\)</span> is the probability density at <span class="math inline">\({\bf{r}}\)</span> in state <span class="math inline">\(\left\vert  \psi \right\rangle\)</span>.</p>
+<p>Extending <a href="#eq-zeqnnum472694" class="quarto-xref">Equation&nbsp;<span>7.28</span></a> and <a href="#eq-zeqnnum494017" class="quarto-xref">Equation&nbsp;<span>7.33</span></a> to three dimensions gives</p>
+<p><span id="eq-zeqnnum707152"><span class="math display">\[
+\hat X = x, \qquad  \hat Y = y, \qquad  \hat Z = z
+\tag{7.39}\]</span></span></p>
+<p><span id="eq-ch07-p1678"><span class="math display">\[
+V(\hat X,\hat Y,\hat Z) = V(x,y,z)
+\tag{7.40}\]</span></span></p>
+</section>
+</section>
+<section id="momentum" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="momentum"><span class="header-section-number">7.4</span> Momentum</h2>
+<p>Momentum is also a continuous observable. Denote its one-dimensional operator by <span class="math inline">\(\hat P\)</span>. Its eigenvalue equation is</p>
+<p><span id="eq-ch07-p1681"><span class="math display">\[
+\hat P\left\vert  p \right\rangle = p\left\vert  p \right\rangle , \qquad  p \in \left( { - \infty , + \infty } \right)
+\tag{7.41}\]</span></span></p>
+<p>Momentum eigenstates form a complete set:</p>
+<p><span id="eq-ch07-p1683"><span class="math display">\[
+\left\langle {{p'}} \mathrel{\left \vert  {\vphantom {{p'} p}} \right. \kern-1.2pt } {p} \right\rangle = \delta \left( {p - p'} \right), \qquad  \qquad  \int_{ - \infty }^\infty {dp\left\vert  p \right\rangle \left\langle p \right\vert } = \hat I
+\tag{7.42}\]</span></span></p>
+<p>Any one-dimensional motional state <span class="math inline">\(\vert \psi \rangle\)</span> can be expanded in <span class="math inline">\(\left\{ {\left\vert  p \right\rangle } \right\}\)</span>, the momentum representation:</p>
+<p><span id="eq-ch07-p1685"><span class="math display">\[
+\left\vert  \psi \right\rangle = \int_{ - \infty }^\infty {dp\left\vert  p \right\rangle \left\langle {p} \mathrel{\left \vert  {\vphantom {p \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }
+\tag{7.43}\]</span></span></p>
+<p>The amplitude <span class="math inline">\(\left\langle {p} \mathrel{\left \vert  {\vphantom {p \psi }} \right. \kern-1.2pt } {\psi } \right\rangle\)</span> is the <strong>momentum wavefunction</strong>, usually written <span class="math inline">\(\widetilde \psi \left( p \right)\)</span>:</p>
+<p><span id="eq-ch07-p1687"><span class="math display">\[
+\left\langle {p} \mathrel{\left \vert  {\vphantom {p \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \equiv \widetilde \psi \left( p \right)
+\tag{7.44}\]</span></span></p>
+<p>The tilde on <span class="math inline">\(\widetilde \psi \left( p \right)\)</span> distinguishes it from the position wavefunction <span class="math inline">\(\psi \left( x \right)\)</span>. Functions <span class="math inline">\(\widetilde \psi\)</span> and <span class="math inline">\(\psi\)</span> differ in functional form, not merely in the name of their variable.</p>
+<p>For momentum wavefunction <span class="math inline">\(\widetilde \psi \left( p \right)\)</span>, <span class="math inline">\({\left\vert  {\widetilde \psi \left( p \right)} \right\vert ^{\rm{2}}}dp\)</span> is the probability of momentum in <span class="math inline">\(p \sim p + dp\)</span>, while <span class="math inline">\({\left\vert  {\widetilde \psi \left( p \right)} \right\vert ^{\rm{2}}}\)</span> is the probability density near <span class="math inline">\(p\)</span>, that is, probability per unit momentum interval.</p>
+</section>
+<section id="the-relationship-between-position-and-momentum" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="the-relationship-between-position-and-momentum"><span class="header-section-number">7.5</span> The relationship between position and momentum</h2>
+<p>We now investigate how position and momentum are related.</p>
+<section id="spatial-translations-and-the-momentum-operator" class="level3" data-number="7.5.1">
+<h3 data-number="7.5.1" class="anchored" data-anchor-id="spatial-translations-and-the-momentum-operator"><span class="header-section-number">7.5.1</span> Spatial translations and the momentum operator</h3>
+<p>Define an infinitesimal translation operator <span class="math inline">\(\hat \Gamma \left( {\Delta x} \right)\)</span> that moves a particle at <span class="math inline">\(x\)</span> by <span class="math inline">\(\Delta x\)</span> along <span class="math inline">\(x\)</span>:</p>
+<p><span id="eq-zeqnnum909685"><span class="math display">\[
+\hat \Gamma \left( {\Delta x} \right)\left\vert  x \right\rangle = \left\vert  {x + \Delta x} \right\rangle
+\tag{7.45}\]</span></span></p>
+<p>Thus,</p>
+<p><span id="eq-ch07-p1696"><span class="math display">\[
+\hat \Gamma \left( { - \Delta x} \right)\hat \Gamma \left( {\Delta x} \right)\left\vert  x \right\rangle = \hat \Gamma \left( { - \Delta x} \right)\left\vert  {x + \Delta x} \right\rangle = \left\vert  x \right\rangle
+\tag{7.46}\]</span></span></p>
+<p>Since <span class="math inline">\(\left\{ {\left\vert  x \right\rangle } \right\}\)</span> is complete, <span class="math inline">\(\hat \Gamma \left( { - \Delta x} \right)\hat \Gamma \left( {\Delta x} \right)\left\vert  \psi \right\rangle = \left\vert  \psi \right\rangle\)</span> holds for any state <span class="math inline">\(\left\vert  \psi \right\rangle\)</span>. Hence</p>
+<p><span id="eq-ch07-p1698"><span class="math display">\[
+\hat \Gamma \left( { - \Delta x} \right)\hat \Gamma \left( {\Delta x} \right) = \hat I
+\tag{7.47}\]</span></span></p>
+<p>We impose three physical requirements on <span class="math inline">\(\hat \Gamma \left( {\Delta x} \right)\)</span>.</p>
+<ul>
+<li>A translation tending to zero leaves the state unchanged:</li>
+</ul>
+<p><span id="eq-ch07-p1701"><span class="math display">\[
+\hat \Gamma \left( {\Delta x \to 0} \right) = \hat I
+\tag{7.48}\]</span></span></p>
+<ul>
+<li>Two successive infinitesimal translations equal a translation by their sum:</li>
+</ul>
+<p><span id="eq-ch07-p1703"><span class="math display">\[
+\hat \Gamma \left( {\Delta {x_2}} \right)\hat \Gamma \left( {\Delta {x_1}} \right) = \hat \Gamma \left( {\Delta {x_1} + \Delta {x_2}} \right) = \hat \Gamma \left( {\Delta {x_1}} \right)\hat \Gamma \left( {\Delta {x_2}} \right)
+\tag{7.49}\]</span></span></p>
+<ul>
+<li>Physical laws are unchanged by translation. In particular, <span class="math inline">\(\hat \Gamma \left( {\Delta x} \right)\)</span> preserves inner products: for vectors <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> and <span class="math inline">\(\left\vert  \phi \right\rangle\)</span>, if <span class="math inline">\(\hat \Gamma \left( {\Delta x} \right)\left\vert  \psi \right\rangle = \left\vert  {\psi '} \right\rangle , \qquad  \hat \Gamma \left( {\Delta x} \right)\left\vert  \phi \right\rangle = \left\vert  {\phi '} \right\rangle\)</span>, then</li>
+</ul>
+<p><span id="eq-ch07-p1705"><span class="math display">\[
+\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \left\langle {{\phi '}} \mathrel{\left \vert  {\vphantom {{\phi '} {\psi '}}} \right. \kern-1.2pt } {{\psi '}} \right\rangle = \left\langle \phi \right\vert {\hat \Gamma ^\dag }\left( {\Delta x} \right)\hat \Gamma \left( {\Delta x} \right)\left\vert  \psi \right\rangle
+\tag{7.50}\]</span></span></p>
+<p>Consequently,</p>
+<p><span id="eq-ch07-p1707"><span class="math display">\[
+{\hat \Gamma ^ + }\left( {\Delta x} \right)\hat \Gamma \left( {\Delta x} \right) = \hat I
+\tag{7.51}\]</span></span></p>
+<p>Thus <span class="math inline">\(\hat \Gamma \left( {\Delta x} \right)\)</span> is unitary, and spatial translation is a unitary transformation.</p>
+<p><span id="eq-zeqnnum441973"><span class="math display">\[
+{\hat \Gamma ^\dag }\left( {\Delta x} \right) = \hat \Gamma \left( { - \Delta x} \right)
+\tag{7.52}\]</span></span></p>
+<p>These requirements suggest the form <span class="math inline">\(\hat \Gamma \left( {\Delta x} \right)\)</span>:</p>
+<p><span id="eq-zeqnnum676559"><span class="math display">\[
+\hat \Gamma \left( {\Delta x} \right) = \hat I - i\hat K\Delta x
+\tag{7.53}\]</span></span></p>
+<p>The first two requirements are satisfied. The third requires <span class="math inline">\({\hat K^\dag } = \hat K\)</span>.</p>
+<p>Hence <span class="math inline">\(\hat K\)</span> is Hermitian and corresponds to an observable. From <a href="#eq-zeqnnum676559" class="quarto-xref">Equation&nbsp;<span>7.53</span></a>, <span class="math inline">\(\hat K\)</span> has inverse-length dimensions, like wave number <span class="math inline">\(k \equiv {{2\pi } \mathord{\left/ {\vphantom {{2\pi } \lambda }} \right. \kern-1.2pt } \lambda }\)</span>. The de Broglie relation <span class="math inline">\(p = {h \mathord{\left/ {\vphantom {h \lambda }} \right. \kern-1.2pt } \lambda }\)</span>, or <span class="math inline">\(k = {p \mathord{\left/ {\vphantom {p \hbar }} \right. \kern-1.2pt } \hbar }\)</span>, suggests</p>
+<p><span id="eq-zeqnnum551095"><span class="math display">\[
+\hat K = {{\hat P} \mathord{\left/ {\vphantom {{\hat P} \hbar }} \right. \kern-1.2pt } \hbar }
+\tag{7.54}\]</span></span></p>
+<p>Here <span class="math inline">\(\hat P\)</span> is momentum. Equation <a href="#eq-zeqnnum676559" class="quarto-xref">Equation&nbsp;<span>7.53</span></a> becomes</p>
+<p><span id="eq-zeqnnum333148"><span class="math display">\[
+\hat \Gamma \left( {\Delta x} \right) = \hat I - i\frac{{\hat P}}{\hbar }\Delta x
+\tag{7.55}\]</span></span></p>
+<p>Experiment confirms this identification: momentum is the <strong>generator of spatial translations</strong>.</p>
+<p>From <a href="#eq-zeqnnum441973" class="quarto-xref">Equation&nbsp;<span>7.52</span></a>, <span class="math inline">\({\hat \Gamma ^\dag }(\Delta x)\vert x\rangle = \vert x - \Delta x\rangle\)</span>, and therefore</p>
+<p><span id="eq-ch07-p1719"><span class="math display">\[
+\langle x\vert \hat \Gamma (\Delta x) = \langle x - \Delta x\vert
+\tag{7.56}\]</span></span></p>
+<p>Changing the position basis changes the position wavefunction of <span class="math inline">\(\vert \psi\rangle\)</span>:</p>
+<p><span id="eq-ch07-p1721"><span class="math display">\[
+\langle x\vert \hat \Gamma (\Delta x)\vert \psi\rangle = \langle x - \Delta x\vert \psi\rangle = \psi (x - \Delta x)
+\tag{7.57}\]</span></span></p>
+<p>Thus a translation acts on a position wavefunction as</p>
+<p><span id="eq-ch07-p1723"><span class="math display">\[
+\hat \Gamma (\Delta x)\psi (x) = \psi (x - \Delta x)
+\tag{7.58}\]</span></span></p>
+</section>
+<section id="the-positionmomentum-commutator" class="level3" data-number="7.5.2">
+<h3 data-number="7.5.2" class="anchored" data-anchor-id="the-positionmomentum-commutator"><span class="header-section-number">7.5.2</span> The position–momentum commutator</h3>
+<p>First consider the commutator of translation <span class="math inline">\(\hat \Gamma \left( {\Delta x} \right)\)</span> and position <span class="math inline">\(\hat X\)</span>:</p>
+<p><span id="eq-ch07-p1726"><span class="math display">\[
+\hat X\hat \Gamma \left( {\Delta x} \right)\left\vert  x \right\rangle = \hat X\left\vert  {x + \Delta x} \right\rangle = \left( {x + \Delta x} \right)\left\vert  {x + \Delta x} \right\rangle
+\tag{7.59}\]</span></span></p>
+<p><span id="eq-ch07-p1727"><span class="math display">\[
+\hat \Gamma \left( {\Delta x} \right)\hat X\left\vert  x \right\rangle = \hat \Gamma \left( {\Delta x} \right)x\left\vert  x \right\rangle = x\left\vert  {x + \Delta x} \right\rangle
+\tag{7.60}\]</span></span></p>
+<p>It follows that</p>
+<p><span id="eq-ch07-p1729"><span class="math display">\[
+\left[ {\hat X,\hat \Gamma \left( {\Delta x} \right)} \right]\left\vert  x \right\rangle = \Delta x\left\vert  {x + \Delta x} \right\rangle \approx \Delta x\left\vert  x \right\rangle
+\tag{7.61}\]</span></span></p>
+<p>The last step neglects higher-order terms in <span class="math inline">\(\Delta x\)</span>. Every position eigenstate <span class="math inline">\(\vert x\rangle\)</span> is an eigenstate of commutator <span class="math inline">\([\hat X,\hat \Gamma \left( {\Delta x} \right)]\)</span> with eigenvalue <span class="math inline">\(\Delta x\)</span>. Since <span class="math inline">\(\left\{ {\vert x\rangle } \right\}\)</span> is complete, reasoning as in <a href="04-commutation-relations.html#eq-ch04-p1092" class="quarto-xref">Equation&nbsp;<span>4.23</span></a> gives</p>
+<p><span id="eq-ch07-p1731"><span class="math display">\[
+\left[ {\hat X,\hat \Gamma \left( {\Delta x} \right)} \right] = \Delta x
+\tag{7.62}\]</span></span></p>
+<p>Substitute <a href="#eq-zeqnnum333148" class="quarto-xref">Equation&nbsp;<span>7.55</span></a>:</p>
+<p><span id="eq-zeqnnum187365"><span class="math display">\[
+\left[ {\hat X,\hat P} \right] = i\hbar
+\tag{7.63}\]</span></span></p>
+<p>This is the canonical commutation relation. Position and momentum are incompatible, with no common eigenstate or simultaneous definite values. Combining <a href="#eq-zeqnnum187365" class="quarto-xref">Equation&nbsp;<span>7.63</span></a> with uncertainty relation <a href="04-commutation-relations.html#eq-zeqnnum149609" class="quarto-xref">Equation&nbsp;<span>4.64</span></a> gives</p>
+<p><span id="eq-ch07-p1735"><span class="math display">\[
+\Delta \hat X\Delta \hat P \ge {\hbar \mathord{\left/ {\vphantom {\hbar 2}} \right. \kern-1.2pt } 2}
+\tag{7.64}\]</span></span></p>
+</section>
+<section id="momentum-in-the-position-representation" class="level3" data-number="7.5.3">
+<h3 data-number="7.5.3" class="anchored" data-anchor-id="momentum-in-the-position-representation"><span class="header-section-number">7.5.3</span> Momentum in the position representation</h3>
+<p>We now derive the position-space form of momentum.</p>
+<p>From the infinitesimal translation definition <a href="#eq-zeqnnum909685" class="quarto-xref">Equation&nbsp;<span>7.45</span></a>,</p>
+<p><span id="eq-ch07-p1739"><span class="math display">\[
+\left( {\hat I - i\frac{{\hat P}}{\hbar }\Delta x} \right)\left\vert  x \right\rangle = \left\vert  {x + \Delta x} \right\rangle
+\tag{7.65}\]</span></span></p>
+<p><span id="eq-ch07-p1740"><span class="math display">\[
+\hat P\vert x\rangle = i\hbar \frac{{\vert x + \Delta x\rangle - \vert x\rangle }}{{\Delta x}}
+\tag{7.66}\]</span></span></p>
+<p>For any state <span class="math inline">\(\left\vert  \psi \right\rangle\)</span>,</p>
+<p><span id="eq-ch07-p1742"><span class="math display">\[
+\left\langle x \right\vert \hat P\left\vert  \psi \right\rangle = \left( { - i\hbar \frac{{\langle x + \Delta x\vert  - \langle x\vert }}{{\Delta x}}} \right)\left\vert  \psi \right\rangle = - i\hbar \frac{{\left\langle {{x + \Delta x}} \mathrel{\left \vert  {\vphantom {{x + \Delta x} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle - \left\langle {x} \mathrel{\left \vert  {\vphantom {x \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }}{{\Delta x}}
+\tag{7.67}\]</span></span></p>
+<p>Therefore,</p>
+<p><span id="eq-zeqnnum308911"><span class="math display">\[
+\left\langle x \right\vert \hat P\left\vert  \psi \right\rangle = - i\hbar \frac{d}{{dx}}\left\langle {x} \mathrel{\left \vert  {\vphantom {x \psi }} \right. \kern-1.2pt } {\psi } \right\rangle
+\tag{7.68}\]</span></span></p>
+<p>The left side is <span class="math inline">\(\hat P\left\vert  \psi \right\rangle\)</span> in position space; <span class="math inline">\(\left\langle {x} \mathrel{\left \vert  {\vphantom {x \psi }} \right. \kern-1.2pt } {\psi } \right\rangle\)</span> on the right represents <span class="math inline">\(\vert \psi\rangle\)</span>. Thus <span class="math inline">\(- i\hbar {\textstyle{d \over {dx}}}\)</span> represents <span class="math inline">\(\hat P\)</span>:</p>
+<p><span id="eq-zeqnnum685183"><span class="math display">\[
+\hat P = - i\hbar \frac{d}{{dx}}
+\tag{7.69}\]</span></span></p>
+<p>Use the position-space forms <a href="#eq-zeqnnum707152" class="quarto-xref">Equation&nbsp;<span>7.39</span></a> and <a href="#eq-zeqnnum578039" class="quarto-xref">Equation&nbsp;<span>7.72</span></a> to verify <span class="math inline">\([\hat X,{\hat P_x}] = i\hbar\)</span> again.</p>
+<p><strong>Proof.</strong> Let <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> be arbitrary, with position wavefunction <span class="math inline">\(\psi (x)\)</span>.</p>
+<p><span id="eq-ch07-p1749"><span class="math display">\[
+\begin{array}{c} \hat X{{\hat P}_x}\left\vert  \psi \right\rangle \buildrel\textstyle.\over= x\left( { - i\hbar \frac{\partial }{{\partial x}}} \right)\psi \left( x \right) = - i\hbar x\frac{\partial }{{\partial x}}\psi \left( x \right)\\ {{\hat P}_x}\hat X\left\vert  \psi \right\rangle \buildrel\textstyle.\over= - i\hbar \frac{\partial }{{\partial x}}x\;\psi \left( x \right) = - i\hbar \frac{\partial }{{\partial x}}\left[ {x\psi \left( x \right)} \right] = - i\hbar \left[ {\psi \left( x \right) + x\frac{\partial }{{\partial x}}\psi \left( x \right)} \right] \end{array}
+\tag{7.70}\]</span></span></p>
+<p><span id="eq-ch07-p1750"><span class="math display">\[
+\left( {\hat X{{\hat P}_x} - {{\hat P}_x}\hat X} \right)\vert \psi \rangle \buildrel\textstyle.\over= i\hbar \psi (x)
+\tag{7.71}\]</span></span></p>
+<p>In three dimensions,</p>
+<p><span id="eq-zeqnnum578039"><span class="math display">\[
+{\hat P_x} = - i\hbar \frac{\partial }{{\partial x}}, \qquad  {\hat P_y} = - i\hbar \frac{\partial }{{\partial y}}, \qquad  {\hat P_z} = - i\hbar \frac{\partial }{{\partial z}}
+\tag{7.72}\]</span></span></p>
+<p>Partial derivatives with respect to different coordinates commute, so the three momentum components commute and may be simultaneously definite. Differentiation with respect to <span class="math inline">\(y\)</span> leaves <span class="math inline">\(x\)</span> unchanged, so perpendicular position and momentum components also commute, for example <span class="math inline">\([\hat X,{\hat P_y}] = 0\)</span>. Thus,</p>
+<p><span id="eq-zeqnnum944007"><span class="math display">\[
+\left[ {{{\hat X}_j},{{\hat P}_k}} \right] = i\hbar {\delta _{jk}}
+\tag{7.73}\]</span></span></p>
+<p>The indices <span class="math inline">\(j,k = 1,2,3\)</span> denote the three Cartesian directions.</p>
+<p>Using <a href="#eq-zeqnnum578039" class="quarto-xref">Equation&nbsp;<span>7.72</span></a>,</p>
+<p><span id="eq-ch07-p1757"><span class="math display">\[
+{\bf{\hat P}}\left\vert  \psi \right\rangle \buildrel\textstyle.\over= - i\hbar \left( {{\bf{\hat i}}\frac{\partial }{{\partial x}} + {\bf{\hat j}}\frac{\partial }{{\partial y}} + {\bf{\hat k}}\frac{\partial }{{\partial z}}} \right)\psi (x,y,z) = - i\hbar \nabla \psi \left( {\bf{r}} \right)
+\tag{7.74}\]</span></span></p>
+<p>We can now derive further properties of momentum. First,</p>
+<p><span id="eq-ch07-p1759"><span class="math display">\[
+{\hat P^2}\left\vert  \psi \right\rangle = \hat P\left( {\hat P\left\vert  \psi \right\rangle } \right)\xrightarrow{{\text{position representation}}} - i\hbar \frac{d}{{dx}}\left( { - i\hbar \frac{d}{{dx}}\psi (x)} \right) = - {\hbar ^2}\frac{{{d^2}}}{{d{x^2}}}\psi (x)
+\tag{7.75}\]</span></span></p>
+<p>Thus, in position space,</p>
+<p><span id="eq-ch07-p1761"><span class="math display">\[
+{\hat P^2} = - {\hbar ^2}\frac{{{d^2}}}{{d{x^2}}}
+\tag{7.76}\]</span></span></p>
+<p>In three dimensions this becomes</p>
+<p><span id="eq-ch07-p1763"><span class="math display">\[
+{{\bf{\hat P}}^2}\left\vert  \psi \right\rangle \buildrel\textstyle.\over= - {\hbar ^2}\left( {\frac{{{d^2}}}{{d{x^2}}} + \frac{{{d^2}}}{{d{y^2}}} + \frac{{{d^2}}}{{d{z^2}}}} \right)\psi \left( {\bf{r}} \right) = - {\hbar ^2}{\nabla ^2}\psi \left( {\bf{r}} \right)
+\tag{7.77}\]</span></span></p>
+</section>
+<section id="position-wavefunctions-of-momentum-eigenstates" class="level3" data-number="7.5.4">
+<h3 data-number="7.5.4" class="anchored" data-anchor-id="position-wavefunctions-of-momentum-eigenstates"><span class="header-section-number">7.5.4</span> Position wavefunctions of momentum eigenstates</h3>
+<p>To find the position wavefunction <span class="math inline">\(\left\langle {x} \mathrel{\left \vert  {\vphantom {x p}} \right. \kern-1.2pt } {p} \right\rangle\)</span> of momentum eigenstate <span class="math inline">\(\left\vert  p \right\rangle\)</span>, use <a href="#eq-zeqnnum685183" class="quarto-xref">Equation&nbsp;<span>7.69</span></a> to write its eigenvalue equation in position space:</p>
+<p><span id="eq-ch07-p1766"><span class="math display">\[
+\hat P\left\vert  p \right\rangle = p\left\vert  p \right\rangle \xrightarrow{{\text{position representation}}} - i\hbar \frac{\partial }{{\partial x}}\left\langle {x} \mathrel{\left \vert  {\vphantom {x p}} \right. \kern-1.2pt } {p} \right\rangle = p\left\langle {x} \mathrel{\left \vert  {\vphantom {x p}} \right. \kern-1.2pt } {p} \right\rangle
+\tag{7.78}\]</span></span></p>
+<p>The solution is</p>
+<p><span id="eq-zeqnnum192350"><span class="math display">\[
+\left\langle {x} \mathrel{\left \vert  {\vphantom {x p}} \right. \kern-1.2pt } {p} \right\rangle = N\exp \left( {i\frac{{px}}{\hbar }} \right)
+\tag{7.79}\]</span></span></p>
+<p>Here <span class="math inline">\(N\)</span> is a normalization constant. A momentum eigenstate is represented by a complex plane wave.</p>
+<p>The quantity <span class="math inline">\({\left\vert  {\left\langle {x} \mathrel{\left \vert  {\vphantom {x p}} \right. \kern-1.2pt } {p} \right\rangle } \right\vert ^2}dx\)</span> is the probability that a particle of momentum <span class="math inline">\(p\)</span> lies in <span class="math inline">\(x \sim x + dx\)</span>. The quantity <span class="math inline">\({\left\vert  {\left\langle {x} \mathrel{\left \vert  {\vphantom {x p}} \right. \kern-1.2pt } {p} \right\rangle } \right\vert ^2}\)</span> is its position probability density near <span class="math inline">\(x\)</span> when its momentum is <span class="math inline">\(p\)</span>. Since</p>
+<p><span id="eq-zeqnnum142349"><span class="math display">\[
+{\left\vert  {\left\langle {x} \mathrel{\left \vert  {\vphantom {x p}} \right. \kern-1.2pt } {p} \right\rangle } \right\vert ^2} = {\left\vert  N \right\vert ^2}
+\tag{7.80}\]</span></span></p>
+<p>is independent of position, a definite-momentum state has uniform density throughout space. The integral of <a href="#eq-zeqnnum142349" class="quarto-xref">Equation&nbsp;<span>7.80</span></a> over all space cannot be normalized because <a href="#eq-zeqnnum192350" class="quarto-xref">Equation&nbsp;<span>7.79</span></a> does not vanish at infinity. Exact plane waves are idealizations; normalizable localized physical states are formed from their superpositions.</p>
+</section>
+</section>
+<section id="transforming-between-position-and-momentum-representations" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="transforming-between-position-and-momentum-representations"><span class="header-section-number">7.6</span> Transforming between position and momentum representations</h2>
+<p>How are the position and momentum wavefunctions of the same state related?</p>
+<p><span id="eq-ch07-p1775"><span class="math display">\[
+\begin{array}{l} \psi (x) \equiv \left\langle {x} \mathrel{\left \vert  {\vphantom {x \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \int {dp\left\langle {x} \mathrel{\left \vert  {\vphantom {x p}} \right. \kern-1.2pt } {p} \right\rangle \left\langle {p} \mathrel{\left \vert  {\vphantom {p \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \\ \tilde \psi (p) \equiv \left\langle {p} \mathrel{\left \vert  {\vphantom {p \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \int {dx\left\langle {p} \mathrel{\left \vert  {\vphantom {p x}} \right. \kern-1.2pt } {x} \right\rangle \left\langle {x} \mathrel{\left \vert  {\vphantom {x \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \end{array}
+\tag{7.81}\]</span></span></p>
+<p>Substitute <a href="#eq-zeqnnum192350" class="quarto-xref">Equation&nbsp;<span>7.79</span></a>:</p>
+<p><span id="eq-zeqnnum128349"><span class="math display">\[
+\begin{array}{l} \psi \left( x \right) = \frac{1}{N}\int {dp\exp \left( {\frac{{ipx}}{\hbar }} \right)\widetilde \psi \left( p \right)} \\ \widetilde \psi \left( p \right) = \frac{1}{N}\int {dx\exp \left( { - \frac{{ipx}}{\hbar }} \right)\psi \left( x \right)} \end{array}
+\tag{7.82}\]</span></span></p>
+<p>The position wavefunction <span class="math inline">\(\psi \left( x \right)\)</span> and momentum wavefunction <span class="math inline">\(\tilde \psi \left( p \right)\)</span> are Fourier transforms of each other.</p>
+<p>Using <a href="#eq-zeqnnum128349" class="quarto-xref">Equation&nbsp;<span>7.82</span></a>, we also obtain the momentum-space form of position:</p>
+<p><span id="eq-ch07-p1780"><span class="math display">\[
+\begin{array}{c} \left\langle p \right\vert \hat X\left\vert  \psi \right\rangle = \int {dx\langle p\vert x\rangle \langle x\vert {\hat X}\vert \psi\rangle } \\ = \frac{1}{N}\int {dx\exp \left( { - i\frac{{px}}{\hbar }} \right)x\psi (x)} \\ = i\hbar \frac{\partial }{{\partial p}}\left[ {\frac{1}{N}\int {dx\exp \left( { - i\frac{{px}}{\hbar }} \right)\psi (x)} } \right]\\ = i\hbar \frac{\partial }{{\partial p}}\widetilde \psi \left( p \right) \end{array}
+\tag{7.83}\]</span></span></p>
+<p>Thus the position operator in momentum space is</p>
+<p><span id="eq-ch07-p1782"><span class="math display">\[
+\hat X = i\hbar \frac{\partial }{{\partial p}}
+\tag{7.84}\]</span></span></p>
+</section>
+<section id="summary-of-the-position-representation" class="level2" data-number="7.7">
+<h2 data-number="7.7" class="anchored" data-anchor-id="summary-of-the-position-representation"><span class="header-section-number">7.7</span> Summary of the position representation</h2>
+<p>Because position space is used frequently, we collect the main formulas.</p>
+<ul>
+<li><strong>Completeness</strong></li>
+</ul>
+<p><span id="eq-ch07-p1786"><span class="math display">\[
+\int {d{r^3}\left\vert  {\bf{r}} \right\rangle \left\langle {\bf{r}} \right\vert } = \hat I
+\tag{7.85}\]</span></span></p>
+<ul>
+<li><strong>Position wavefunction</strong></li>
+</ul>
+<p><span id="eq-ch07-p1788"><span class="math display">\[
+\begin{gathered} \vert \psi\rangle \xrightarrow{{\text{position representation}}}\left\langle {{\mathbf{r}}} \mathrel{\left \vert  {\vphantom {{\mathbf{r}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \equiv \left\langle {{x,y,z}} \mathrel{\left \vert  {\vphantom {{x,y,z} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \equiv \psi \left( {x,y,z} \right) \equiv \psi ({\mathbf{r}})  \\ \langle \psi\vert \xrightarrow{{\text{position representation}}}\left\langle {\psi } \mathrel{\left \vert  {\vphantom {\psi {\mathbf{r}}}} \right. \kern-1.2pt } {{\mathbf{r}}} \right\rangle = {\left\langle {{\mathbf{r}}} \mathrel{\left \vert  {\vphantom {{\mathbf{r}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle ^*} = {\psi ^*}({\mathbf{r}})  \\ \end{gathered}
+\tag{7.86}\]</span></span></p>
+<ul>
+<li><strong>Position probability density in state <span class="math inline">\(\vert \psi \rangle\)</span></strong></li>
+</ul>
+<p><span id="eq-ch07-p1790"><span class="math display">\[
+{\left\vert  {\psi ({\bf{r}})} \right\vert ^2}
+\tag{7.87}\]</span></span></p>
+<ul>
+<li><strong>Normalization of total probability</strong></li>
+</ul>
+<p><span id="eq-ch07-p1792"><span class="math display">\[
+\left\langle {\psi } \mathrel{\left \vert  {\vphantom {\psi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \int {\langle \psi\vert {\bf{r}}\rangle \langle {\bf{r}}\vert \psi\rangle {d^3}r} = \int {{{\left\vert  {\psi ({\bf{r}})} \right\vert }^2}{d^3}r} = 1
+\tag{7.88}\]</span></span></p>
+<ul>
+<li><strong>Inner product of two states</strong></li>
+</ul>
+<p><span id="eq-zeqnnum474818"><span class="math display">\[
+\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \int {{\phi ^*}({\bf{r}})\psi ({\bf{r}}){d^3}r}
+\tag{7.89}\]</span></span></p>
+<ul>
+<li><strong>Probability of finding one state in another</strong></li>
+</ul>
+<p><span id="eq-ch07-p1796"><span class="math display">\[
+{\left\vert  {\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \right\vert ^2} = {\left\vert  {\int {{\phi ^*}({\bf{r}})\psi ({\bf{r}}){d^3}r} } \right\vert ^2}
+\tag{7.90}\]</span></span></p>
+<ul>
+<li><strong>Orthonormality of eigenstates of a discrete observable <span class="math inline">\(\hat A\)</span></strong></li>
+</ul>
+<p><span id="eq-ch07-p1798"><span class="math display">\[
+\left\langle {{{a_i}}} \mathrel{\left \vert  {\vphantom {{{a_i}} {{a_j}}}} \right. \kern-1.2pt } {{{a_j}}} \right\rangle = \int {\left\langle {{{a_i}}} \mathrel{\left \vert  {\vphantom {{{a_i}} {\bf{r}}}} \right. \kern-1.2pt } {{\bf{r}}} \right\rangle \left\langle {{\bf{r}}} \mathrel{\left \vert  {\vphantom {{\bf{r}} {{a_j}}}} \right. \kern-1.2pt } {{{a_j}}} \right\rangle {d^3}r} = \int {u_i^*({\bf{r}}){u_j}({\bf{r}}){d^3}x} = {\delta _{ij}}
+\tag{7.91}\]</span></span></p>
+<p>Here <span class="math inline">\({u_j}({\bf{r}}) \equiv \langle {\bf{r}}\vert {{a_j}}\rangle\)</span> is the position wavefunction of eigenstate <span class="math inline">\(\vert {a_j}\rangle\)</span> of <span class="math inline">\(\hat A\)</span>.</p>
+<ul>
+<li><strong>Action of an operator on a state</strong></li>
+</ul>
+<p><span id="eq-ch07-p1801"><span class="math display">\[
+\hat O\left\vert  \psi \right\rangle \xrightarrow{{\text{position representation}}}\left\langle {\mathbf{r}} \right\vert \hat O\left\vert  \psi \right\rangle \equiv \hat O({\mathbf{r}})\;\psi \left( {\mathbf{r}} \right)
+\tag{7.92}\]</span></span></p>
+<p>Here <span class="math inline">\(\hat O({\bf{r}})\)</span> is the position-space representation of <span class="math inline">\(\hat O\)</span>. We often abbreviate <span class="math inline">\(\hat O({\bf{r}})\)</span> as <span class="math inline">\(\hat O\)</span>: when it acts on a wavefunction in a specified representation, it denotes the representation of <span class="math inline">\(\hat O\)</span> there. For example,</p>
+<p><span id="eq-ch07-p1803"><span class="math display">\[
+{\hat P_x}\psi (x) = - i\hbar \frac{d}{{dx}}\psi (x)
+\tag{7.93}\]</span></span></p>
+<ul>
+<li><strong>Bra space</strong></li>
+</ul>
+<p><span id="eq-ch07-p1805"><span class="math display">\[
+\langle \phi \vert \hat O\xrightarrow{{\text{position representation}}}\langle \phi \vert \hat O\vert {\mathbf{r}}\rangle = {\langle {\mathbf{r}}\vert {\hat O^\dag }\vert \phi \rangle ^*} = {[\hat O_{}^\dag \phi ({\mathbf{r}})]^{\text{*}}}
+\tag{7.94}\]</span></span></p>
+<p>For a Hermitian observable <span class="math inline">\(\hat A\)</span>,</p>
+<p><span id="eq-ch07-p1807"><span class="math display">\[
+\langle \phi \vert \hat A\xrightarrow{{\text{position representation}}}{[\hat A\phi ({\mathbf{r}})]^{\text{*}}}
+\tag{7.95}\]</span></span></p>
+<ul>
+<li><strong>Matrix element between two states</strong></li>
+</ul>
+<p><span id="eq-ch07-p1809"><span class="math display">\[
+\left\langle \phi \right\vert \hat O\left\vert  \psi \right\rangle = \int {d{r^3}\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi {\bf{r}}}} \right. \kern-1.2pt } {{\bf{r}}} \right\rangle \left\langle {\bf{r}} \right\vert \hat O\left\vert  \psi \right\rangle } = \int {{d^3}r\;{\phi ^*}({\bf{r}})\hat O\psi ({\bf{r}})}
+\tag{7.96}\]</span></span></p>
+<ul>
+<li><strong>Hermiticity of an observable:</strong> <span class="math inline">\(\left\langle \phi \right\vert {\hat A}\left\vert  \psi \right\rangle = \left\langle \psi \right\vert {\hat A}{\left\vert  \phi \right\rangle ^*}\)</span></li>
+</ul>
+<p><span id="eq-ch07-p1811"><span class="math display">\[
+\begin{array}{c} \left\langle \phi \right\vert {\hat A}\left\vert  \psi \right\rangle = \int {d{r^3}\;{\phi ^*}{\rm{(}}{\bf{r}})\hat A\psi ({\bf{r}})} \\ \left\langle \psi \right\vert {\hat A}{\left\vert  \phi \right\rangle ^*} = {\left( {\int {d{r^3}\;{\psi ^{\rm{*}}}({\bf{r}})\hat A\phi {\rm{(}}{\bf{r}})} } \right)^{\rm{*}}} = \int {d{r^3}\psi ({\bf{r}})} \;{[\hat A\phi {\rm{(}}{\bf{r}})]^*} = \int {d{r^3}\;{{[\hat A\phi {\rm{(}}{\bf{r}})]}^*}\psi ({\bf{r}})} \end{array}
+\tag{7.97}\]</span></span></p>
+<p>Therefore,</p>
+<p><span id="eq-ch07-p1813"><span class="math display">\[
+\int {d{r^3}\;{\phi ^*}{\rm{(}}{\bf{r}})\hat A\psi ({\bf{r}})} = \int {d{r^3}\;{{[\hat A\phi {\rm{(}}{\bf{r}})]}^*}\psi ({\bf{r}})}
+\tag{7.98}\]</span></span></p>
+<ul>
+<li><strong>Expectation value</strong></li>
+</ul>
+<p><span id="eq-ch07-p1815"><span class="math display">\[
+\left\langle \psi \right\vert \hat A\left\vert  \psi \right\rangle = \int {{d^3}r\;{\psi ^*}({\bf{r}})\hat A\psi ({\bf{r}})}
+\tag{7.99}\]</span></span></p>
+<p>Table 7.2 lists position-space forms of common observables.</p>
+<p>Table 7.2. Common observables in the position representation. The final two expressions use spherical coordinates.</p>
+<p><span id="eq-ch07-p1818"><span class="math display">\[
+\begin{array}{*{20}{c}} {\text{Observable}}&amp;{\text{Dirac notation}}&amp;{\text{Position representation}} \\ \hline {\text{Position}}&amp;{\hat X}&amp;x \\ {\text{potential energy}}&amp;{V(\hat X,\hat Y,\hat Z)}&amp;{V(x,y,z)} \\ {\text{1D momentum}}&amp;{{{\hat P}_x}}&amp;{ - i\hbar \frac{\partial }{{\partial x}}} \\ {\text{Squared 1D momentum}}&amp;{\hat P_x^2}&amp;{ - {\hbar ^2}\frac{{{\partial ^2}}}{{\partial {x^2}}}} \\ {\text{3D momentum}}&amp;{{\mathbf{\hat P}}}&amp;{ - i\hbar \nabla } \\ {\text{Squared 3D momentum}}&amp;{{{{\mathbf{\hat P}}}^2} = \hat P_x^2 + \hat P_y^2 + \hat P_z^2}&amp;{ - {\hbar ^2}{\nabla ^2}} \\ {\text{Energy}}&amp;{\hat H = \frac{{{{{\mathbf{\hat P}}}^2}}}{{2m}} + V(\hat X,\hat Y,\hat Z)}&amp;{ - \frac{{{\hbar ^2}}}{{2m}}{\nabla ^2} + V\left( {x,y,z} \right)} \\ {\text{Orbital x component}}&amp;{{{\hat L}_x} = \hat Y{{\hat P}_z} - \hat Z{{\hat P}_y}}&amp;{ - i\hbar \left( {y\frac{\partial }{{\partial z}} - z\frac{\partial }{{\partial y}}} \right)} \\ {\text{Orbital y component}}&amp;{{{\hat L}_y} = \hat Z{{\hat P}_x} - \hat X{{\hat P}_z}}&amp;{ - i\hbar \left( {z\frac{\partial }{{\partial x}} - x\frac{\partial }{{\partial z}}} \right)} \\ {\text{Orbital z component}}&amp;{{{\hat L}_z} = \hat X{{\hat P}_y} - \hat Y{{\hat P}_x}}&amp;{ - i\hbar \left( {x\frac{\partial }{{\partial y}} - y\frac{\partial }{{\partial x}}} \right)} \\ {\text{Orbital z component}}&amp;{{{\hat L}_z}}&amp;{ - i\hbar \frac{\partial }{{\partial \phi }}} \\ {\text{Squared orbital angular momentum}}&amp;{{{{\mathbf{\hat L}}}^2} = \hat L_x^2 + \hat L_y^2 + \hat L_z^2}&amp;{ - {\hbar ^2}\left\{ {\frac{1}{{\sin \theta }}\frac{\partial }{{\partial \theta }}\left( {\sin \theta \frac{\partial }{{\partial \theta }}} \right) + \frac{1}{{{{\sin }^2}\theta }}\frac{{{\partial ^2}}}{{\partial {\phi ^2}}}} \right\}} \end{array}
+\tag{7.100}\]</span></span></p>
+</section>
+<section id="solving-the-energy-eigenvalue-equation-in-position-space" class="level2" data-number="7.8">
+<h2 data-number="7.8" class="anchored" data-anchor-id="solving-the-energy-eigenvalue-equation-in-position-space"><span class="header-section-number">7.8</span> Solving the energy eigenvalue equation in position space</h2>
+<p>For a particle of mass <span class="math inline">\(m\)</span>, the energy eigenvalue equation takes the following position-space forms.</p>
+<p><strong>One Cartesian dimension:</strong></p>
+<p><span id="eq-zeqnnum473106"><span class="math display">\[
+\left[ { - \frac{{{\hbar ^2}}}{{2m}}\frac{{{\partial ^2}}}{{\partial {x^2}}} + V\left( x \right)} \right]\psi \left( x \right) = E\psi \left( x \right)
+\tag{7.101}\]</span></span></p>
+<p><strong>Three Cartesian dimensions:</strong></p>
+<p><span id="eq-ch07-p1824"><span class="math display">\[
+\left[ { - \frac{{{\hbar ^2}}}{{2m}}{\nabla ^2} + V\left( {\bf{r}} \right)} \right]\psi \left( {\bf{r}} \right) = E\psi \left( {\bf{r}} \right)
+\tag{7.102}\]</span></span></p>
+<p>The kinetic-energy term has a standard form; the potential depends on the interaction. We now solve several examples.</p>
+<p><strong>Example 1: the one-dimensional infinite square well.</strong></p>
+<p><span id="eq-ch07-p1828"><span class="math display">\[
+V(x)=\begin{cases}0,&amp;0&lt;x&lt;L,\\\infty,&amp;x\leq0\text{ or }x\geq L.\end{cases}
+\tag{7.103}\]</span></span></p>
+<p><span id="eq-ch07-p1829"><span class="math display">\[
+\left[ { - \frac{{{\hbar ^2}}}{{2m}}\frac{{{\partial ^2}}}{{\partial {x^2}}} + V(x)} \right]\psi (x) = E\psi (x)
+\tag{7.104}\]</span></span></p>
+<p><strong>Solution.</strong> Outside boundaries <span class="math inline">\(\left( {0,L} \right)\)</span>, <span class="math inline">\(V(x) = \infty\)</span>, and a solution requires <span class="math inline">\(\psi (x) = 0\)</span>. Within <span class="math inline">\(\left( {0,L} \right)\)</span>, <span class="math inline">\(V\left( x \right) = 0\)</span> <span class="math inline">\(- \frac{{{\hbar ^2}}}{{2m}}\frac{{{\partial ^2}}}{{\partial {x^2}}}\psi \left( x \right) = E\psi \left( x \right)\)</span>.</p>
+<p>Set <span class="math inline">\(k = {{\sqrt {2mE} } \mathord{\left/ {\vphantom {{\sqrt {2mE} } \hbar }} \right. \kern-1.2pt } \hbar }\)</span> to obtain</p>
+<p><span id="eq-zeqnnum337048"><span class="math display">\[
+\frac{{{\partial ^2}}}{{\partial {x^2}}}\psi \left( x \right) + {k^2}\psi \left( x \right) = 0
+\tag{7.105}\]</span></span></p>
+<p>For each <span class="math inline">\(k\)</span>, there are two elementary solutions <span class="math inline">\(\sin (kx),\;\cos (kx)\)</span>. Their linear combinations share the same <span class="math inline">\(k\)</span>, giving the general eigenfunction</p>
+<p><span id="eq-ch07-p1834"><span class="math display">\[
+\psi (x) = A\sin (kx) + B\cos (kx)
+\tag{7.106}\]</span></span></p>
+<p>The constants <span class="math inline">\(A,B\)</span> are determined by the boundary conditions. Continuity requires <span class="math inline">\(\psi (0) = \psi (L) = 0\)</span>, so</p>
+<p><span id="eq-ch07-p1836"><span class="math display">\[
+\begin{array}{l} \psi (0) = A\sin (0) + B\cos (0) = 0\\ \psi (L) = A\sin (kL) + B\cos (kL) = 0 \end{array}
+\tag{7.107}\]</span></span></p>
+<p>Therefore <span class="math inline">\(B = 0\)</span> and <span class="math inline">\(\sin \left( {kL} \right) = 0\)</span>. The allowed values of <span class="math inline">\(k\)</span> are</p>
+<p><span id="eq-ch07-p1838"><span class="math display">\[
+{k_n} = \frac{{n\pi }}{L}, \qquad  \qquad  n \in 0, \pm 1, \pm 2, \cdots
+\tag{7.108}\]</span></span></p>
+<p>The eigenfunction associated with <span class="math inline">\({k_n}\)</span> is</p>
+<p><span id="eq-ch07-p1840"><span class="math display">\[
+{\psi _n}(x) = {A_n}\sin \left( {\frac{{n\pi x}}{L}} \right), \qquad  n \in \pm 1, \pm 2, \cdots
+\tag{7.109}\]</span></span></p>
+<p>Here <span class="math inline">\({A_n}\)</span> normalizes the state. The case <span class="math inline">\(n = 0\)</span> is excluded because it gives <span class="math inline">\(\psi (x) = 0\)</span>, the zero wavefunction. From</p>
+<p><span id="eq-ch07-p1842"><span class="math display">\[
+\int_0^\infty {{{\left\vert  {{\psi _n}(x)} \right\vert }^2}dx} = \int_0^L {{{\left\vert  {{A_n}} \right\vert }^2}{{\sin }^2}\left( {\frac{{n\pi x}}{L}} \right)dx} = 1
+\tag{7.110}\]</span></span></p>
+<p>we obtain <span class="math inline">\({A_n} = \sqrt {{2 \mathord{\left/ {\vphantom {2 L}} \right. \kern-1.2pt } L}}\)</span>. Thus the normalized eigenfunctions are</p>
+<p><span id="eq-ch07-p1844"><span class="math display">\[
+{\psi _n}(x) = \sqrt {\frac{2}{L}} \sin \left( {\frac{{n\pi x}}{L}} \right), \qquad  n = 1,2,3 \cdots
+\tag{7.111}\]</span></span></p>
+<p>Negative <span class="math inline">\(n\)</span> are also redundant because <span class="math inline">\({\psi _{ \pm n}}(x)\)</span> differ only by a phase and represent the same state. The energies associated with <span class="math inline">\({\psi _n}(x)\)</span> are</p>
+<p><span id="eq-ch07-p1846"><span class="math display">\[
+{E_n} = \frac{{{\hbar ^2}}}{{2m}}k_n^2 = \frac{{{n^2}}}{{{L^2}}}\frac{{{\pi ^2}{\hbar ^2}}}{{2m}}, \qquad  n = 1,2,3 \cdots
+\tag{7.112}\]</span></span></p>
+<p>The following figure shows the three lowest energy eigenfunctions and their probability densities.</p>
+<p><img src="assets/image1572.png" class="img-fluid" width="472"></p>
+<div class="source-caption">
+<p>Figure 7.2. Energy eigenfunctions and probability densities in a one-dimensional infinite square well.</p>
+</div>
+<p>The infinite square well has the following features:</p>
+<ul>
+<li><p>Energy levels are proportional to <span class="math inline">\({n^2}\)</span> and inversely proportional to <span class="math inline">\({L^2}\)</span>.</p></li>
+<li><p>The lowest energy is positive: a confined particle cannot be completely at rest.</p></li>
+<li><p>The spacing <span class="math inline">\({E_{n + 1}} - {E_n} \propto \frac{{2n + 1}}{{{L^2}}}\)</span> increases with energy and becomes larger for a narrower well.</p></li>
+</ul>
+<p><strong>Example 2: a finite square well.</strong></p>
+<p><span id="eq-ch07-p1857"><span class="math display">\[
+\left[-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)\right]\psi(x)=E\psi(x),\qquad V(x)=\begin{cases}0,&amp;\lvert x\rvert&lt;L/2,\\ V_0,&amp;\lvert x\rvert\geq L/2.\end{cases}
+\tag{7.113}\]</span></span></p>
+<p><strong>Solution.</strong> Energies may satisfy <span class="math inline">\(E &gt; {V_0}\)</span>, with arbitrary <span class="math inline">\(E\)</span> and traveling-wave solutions; we omit that case. We focus on <span class="math inline">\(E &lt; {V_0}\)</span>, which gives <strong>bound states</strong>.</p>
+<p>In region <span class="math inline">\(\left\vert  x \right\vert  &lt; {L \mathord{\left/ {\vphantom {L 2}} \right. \kern-1.2pt } 2}\)</span>, set <span class="math inline">\(k = {{ + \sqrt {2mE} } \mathord{\left/ {\vphantom {{ + \sqrt {2mE} } \hbar }} \right. \kern-1.2pt } \hbar }\)</span>. The equation is the same as <a href="#eq-zeqnnum337048" class="quarto-xref">Equation&nbsp;<span>7.105</span></a>, with general solution</p>
+<p><span id="eq-zeqnnum258584"><span class="math display">\[
+\psi (x) = A\sin (kx) + B\cos (kx), \qquad  - {L \mathord{\left/ {\vphantom {L 2}} \right. \kern-1.2pt } 2} &lt; x &lt; {L \mathord{\left/ {\vphantom {L 2}} \right. \kern-1.2pt } 2}
+\tag{7.114}\]</span></span></p>
+<p>In region <span class="math inline">\(\left\vert  x \right\vert  \ge {L \mathord{\left/ {\vphantom {L 2}} \right. \kern-1.2pt } 2}\)</span>, set <span class="math inline">\(K = {{ + \sqrt {2m({V_0} - E)} } \mathord{\left/ {\vphantom {{ + \sqrt {2m({V_0} - E)} } \hbar }} \right. \kern-1.2pt } \hbar }\)</span>, giving</p>
+<p><span id="eq-ch07-p1862"><span class="math display">\[
+\frac{{{\partial ^2}}}{{\partial {x^2}}}\psi \left( x \right) - {K^2}\psi \left( x \right) = 0
+\tag{7.115}\]</span></span></p>
+<p>Its elementary solutions are <span class="math inline">\({e^{Kx}},{e^{ - Kx}}\)</span>. Requiring decay at infinity leaves</p>
+<p><span id="eq-zeqnnum599486"><span class="math display">\[
+\begin{array}{l} \psi (x) = F\exp ( - Kx), &amp; x \ge {L \mathord{\left/ {\vphantom {L 2}} \right. \kern-1.2pt } 2}\\ \psi (x) = G\exp (Kx), &amp; x \le - {L \mathord{\left/ {\vphantom {L 2}} \right. \kern-1.2pt } 2} \end{array}
+\tag{7.116}\]</span></span></p>
+<p>Continuity requires matching this solution to <a href="#eq-zeqnnum599486" class="quarto-xref">Equation&nbsp;<span>7.116</span></a> at <span class="math inline">\(x = \pm {L \mathord{\left/ {\vphantom {L 2}} \right. \kern-1.2pt } 2}\)</span>. We omit the lengthy algebra. Figure 7.3 shows two features of bound states: (1) discrete energy levels, as in the infinite well and other confining bound-state problems; (2) although <span class="math inline">\({V_0} &gt; E\)</span> outside the well, the eigenfunctions remain nonzero at the boundaries, penetrate the exterior, and decay exponentially. There is therefore a nonzero probability of finding the particle outside the well. Since <span class="math inline">\(E=\text{potential energy}+\text{kinetic energy}\)</span>, classical reasoning would assign negative kinetic energy there. How should this apparent contradiction be understood?</p>
+<p><img src="assets/image1590.png" class="img-fluid" width="485"></p>
+<div class="source-caption">
+<p>Figure 7.3. Energy levels and eigenfunctions of one-dimensional infinite (left) and finite (right) square wells.</p>
+</div>
+<p><strong>Example 3: the one-dimensional harmonic oscillator.</strong></p>
+<p>In the infinite well, spacings increase toward higher energies, and narrowing the well increases them. Making the lower part of a potential narrower than its upper part could increase the lower-level spacings. Can a potential be shaped so all spacings are equal? Yes: take <span class="math inline">\(V(x) \propto {x^2}\)</span>, as for the harmonic oscillator:</p>
+<p><span id="eq-ch07-p1870"><span class="math display">\[
+V(x) = \frac{1}{2}m\omega _0^2{x^2}
+\tag{7.117}\]</span></span></p>
+<p>Here <span class="math inline">\(m\)</span> is the mass and <span class="math inline">\({\omega _0}\)</span> the natural frequency. The energies are</p>
+<p><span id="eq-ch07-p1872"><span class="math display">\[
+{E_n} = \left( {n + \frac{1}{2}} \right)\hbar {\omega _0}, \qquad  \qquad  (n = 0,1,2 \cdots )
+\tag{7.118}\]</span></span></p>
+<p>Every adjacent spacing is <span class="math inline">\(\hbar {\omega _0}\)</span>. This permits a periodic perturbation of frequency <span class="math inline">\({\omega _0}\)</span> to excite a particle successively from the ground state to high levels.</p>
+<p>The eigenfunctions <span class="math inline">\({\psi _n}(x)\)</span> resemble those of a finite well. We omit their explicit formulas and show their shapes below.</p>
+<p><img src="assets/image1599.png" class="img-fluid" width="431"></p>
+</section>
+<section id="exercises" class="level2" data-number="7.9">
+<h2 data-number="7.9" class="anchored" data-anchor-id="exercises"><span class="header-section-number">7.9</span> Exercises</h2>
+<p>Unless specified otherwise, all wavefunctions below are position wavefunctions.</p>
+<p><strong>7.1.</strong> Using <a href="#eq-zeqnnum474818" class="quarto-xref">Equation&nbsp;<span>7.89</span></a>, directly verify the orthogonality of infinite-well energy eigenstates.</p>
+<p><strong>7.2.</strong> A particle is in a one-dimensional infinite well over <span class="math inline">\(\left( {0,d} \right)\)</span>, with wavefunction</p>
+<p><span id="eq-ch07-p1882"><span class="math display">\[
+\psi (x) = A{\cos ^3}\left( {\frac{{\pi x}}{{2d}}} \right)\sin \left( {\frac{{\pi x}}{{2d}}} \right)
+\tag{7.119}\]</span></span></p>
+<p>Here <span class="math inline">\(A\)</span> is a normalization constant. What energies can be measured, and with what probabilities?</p>
+<p>Hint: How is this wavefunction related to the energy eigenfunctions of the one-dimensional infinite square well?</p>
+<p><strong>7.3</strong>* Derive Newton’s second law from quantum mechanics. In one dimension, define a particle’s velocity <span class="math inline">\(v\)</span> by</p>
+<p><span id="eq-ch07-p1887"><span class="math display">\[
+v \equiv \frac{d}{{dt}}\left\langle {\psi \left( t \right)} \right\vert \hat X\left\vert  {\psi \left( t \right)} \right\rangle = \frac{d}{{dt}}\langle \hat X\rangle
+\tag{7.120}\]</span></span></p>
+<ol type="1">
+<li><p>Prove that <span class="math inline">\(v = {{\langle \hat P\rangle } \mathord{\left/ {\vphantom {{\langle \hat P\rangle } m}} \right. \kern-1.2pt } m}\)</span>.</p></li>
+<li><p>Prove the following:</p></li>
+</ol>
+<p><span id="eq-ch07-p1890"><span class="math display">\[
+\frac{d}{{dt}}\langle \hat P\rangle = - \left\langle {\frac{{dV\left( x \right)}}{{dx}}} \right\rangle
+\tag{7.121}\]</span></span></p>
+<p>Hint: Use the equation of motion for expectation values and the position representation of the momentum operator.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./06-transitions.html" class="pagination-link" aria-label="\* Transitions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./08-angular-momentum.html" class="pagination-link" aria-label="Angular Momentum">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Angular Momentum</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

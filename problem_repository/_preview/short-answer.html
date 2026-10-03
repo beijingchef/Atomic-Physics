@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Short-Answer Questions</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="short-answer_files/libs/clipboard/clipboard.min.js"></script>
+<script src="short-answer_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="short-answer_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="short-answer_files/libs/quarto-html/popper.min.js"></script>
+<script src="short-answer_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="short-answer_files/libs/quarto-html/anchor.min.js"></script>
+<link href="short-answer_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="short-answer_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="short-answer_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="short-answer_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="short-answer_files/libs/bootstrap/bootstrap-62e2d20df198e8a01bb734742f2e28cf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#part-i" id="toc-part-i" class="nav-link active" data-scroll-target="#part-i">Part I</a>
+  <ul class="collapse">
+  <li><a href="#blackbody-radiation" id="toc-blackbody-radiation" class="nav-link" data-scroll-target="#blackbody-radiation">Blackbody radiation</a></li>
+  <li><a href="#rutherford-scattering" id="toc-rutherford-scattering" class="nav-link" data-scroll-target="#rutherford-scattering">Rutherford scattering</a>
+  <ul class="collapse">
+  <li><a href="#problem-1" id="toc-problem-1" class="nav-link" data-scroll-target="#problem-1">Problem 1</a></li>
+  <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem 2</a></li>
+  </ul></li>
+  <li><a href="#photoelectric-effect-difficulty-level-2" id="toc-photoelectric-effect-difficulty-level-2" class="nav-link" data-scroll-target="#photoelectric-effect-difficulty-level-2">Photoelectric effect (difficulty level 2)</a>
+  <ul class="collapse">
+  <li><a href="#problem-1-1" id="toc-problem-1-1" class="nav-link" data-scroll-target="#problem-1-1">Problem 1</a></li>
+  <li><a href="#problem-2-1" id="toc-problem-2-1" class="nav-link" data-scroll-target="#problem-2-1">Problem 2</a></li>
+  </ul></li>
+  <li><a href="#blackbody-radiation-1" id="toc-blackbody-radiation-1" class="nav-link" data-scroll-target="#blackbody-radiation-1">Blackbody radiation</a>
+  <ul class="collapse">
+  <li><a href="#problem-1-2" id="toc-problem-1-2" class="nav-link" data-scroll-target="#problem-1-2">Problem 1</a></li>
+  <li><a href="#problem-2-2" id="toc-problem-2-2" class="nav-link" data-scroll-target="#problem-2-2">Problem 2</a></li>
+  </ul></li>
+  <li><a href="#compton-scattering" id="toc-compton-scattering" class="nav-link" data-scroll-target="#compton-scattering">Compton scattering</a></li>
+  <li><a href="#bohr-model" id="toc-bohr-model" class="nav-link" data-scroll-target="#bohr-model">Bohr model</a>
+  <ul class="collapse">
+  <li><a href="#problem-1-3" id="toc-problem-1-3" class="nav-link" data-scroll-target="#problem-1-3">Problem 1</a></li>
+  <li><a href="#problem-2-3" id="toc-problem-2-3" class="nav-link" data-scroll-target="#problem-2-3">Problem 2</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#part-ii" id="toc-part-ii" class="nav-link" data-scroll-target="#part-ii">Part II</a>
+  <ul class="collapse">
+  <li><a href="#one-electron-systems" id="toc-one-electron-systems" class="nav-link" data-scroll-target="#one-electron-systems">One-electron systems</a>
+  <ul class="collapse">
+  <li><a href="#problem1-sterngerlach-experiment" id="toc-problem1-sterngerlach-experiment" class="nav-link" data-scroll-target="#problem1-sterngerlach-experiment">Problem1: Stern–Gerlach experiment</a></li>
+  <li><a href="#problem-2-hydrogen-energy-eigenfunctions" id="toc-problem-2-hydrogen-energy-eigenfunctions" class="nav-link" data-scroll-target="#problem-2-hydrogen-energy-eigenfunctions">Problem 2: Hydrogen energy eigenfunctions</a></li>
+  </ul></li>
+  <li><a href="#many-electron-atoms" id="toc-many-electron-atoms" class="nav-link" data-scroll-target="#many-electron-atoms">Many-electron atoms</a>
+  <ul class="collapse">
+  <li><a href="#atomic-states-of-many-electron-atoms-1" id="toc-atomic-states-of-many-electron-atoms-1" class="nav-link" data-scroll-target="#atomic-states-of-many-electron-atoms-1">Atomic states of many-electron atoms 1</a></li>
+  <li><a href="#atomic-states-of-many-electron-atoms-2" id="toc-atomic-states-of-many-electron-atoms-2" class="nav-link" data-scroll-target="#atomic-states-of-many-electron-atoms-2">Atomic states of many-electron atoms 2</a></li>
+  <li><a href="#alkali-metal-energy-levels-1-comprehensive-problem" id="toc-alkali-metal-energy-levels-1-comprehensive-problem" class="nav-link" data-scroll-target="#alkali-metal-energy-levels-1-comprehensive-problem">Alkali-metal energy levels 1 (comprehensive problem)</a></li>
+  <li><a href="#alkali-metal-energy-levels-2-comprehensive-problem" id="toc-alkali-metal-energy-levels-2-comprehensive-problem" class="nav-link" data-scroll-target="#alkali-metal-energy-levels-2-comprehensive-problem">Alkali-metal energy levels 2 (comprehensive problem)</a></li>
+  </ul></li>
+  <li><a href="#other-questions" id="toc-other-questions" class="nav-link" data-scroll-target="#other-questions">Other questions</a>
+  <ul class="collapse">
+  <li><a href="#magnetic-quantum-number" id="toc-magnetic-quantum-number" class="nav-link" data-scroll-target="#magnetic-quantum-number">Magnetic quantum number</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Short-Answer Questions</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!-- English translation of 问答题.docx. Source order, marks, solutions, and numerical values are retained. Comments identify apparent source inconsistencies. -->
+<section id="part-i" class="level1">
+<h1>Part I</h1>
+<section id="blackbody-radiation" class="level2">
+<h2 class="anchored" data-anchor-id="blackbody-radiation">Blackbody radiation</h2>
+</section>
+<section id="rutherford-scattering" class="level2">
+<h2 class="anchored" data-anchor-id="rutherford-scattering">Rutherford scattering</h2>
+<section id="problem-1" class="level3">
+<h3 class="anchored" data-anchor-id="problem-1">Problem 1</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="short-answer-assets/image1.gif" class="img-fluid figure-img" width="501"></p>
+<figcaption>Rutherford scattering geometry</figcaption>
+</figure>
+</div>
+<p>A beam of <span class="math inline">\(N\)</span> particles, each with charge <span class="math inline">\(Z_1e\)</span> and kinetic energy <span class="math inline">\(E\)</span>, is incident normally on a thin target foil of thickness <span class="math inline">\(d\)</span>, atomic number density <span class="math inline">\(n\)</span>, and nuclear charge <span class="math inline">\(Z_2e\)</span>. Assume that the incident particles are much lighter than the target nuclei and that the foil is thin enough for only single scattering to occur. The Coulomb scattering formula is</p>
+<p><span class="math display">\[
+b=\frac{a}{2}\cot\frac{\theta}{2},\qquad a=\frac{Z_1Z_2e^2}{4\pi\epsilon_0E}.
+\]</span></p>
+<ol type="1">
+<li>Explain the physical meaning of <span class="math inline">\(a\)</span>. (20%)</li>
+<li>Find the total number of particles with scattering angles smaller than <span class="math inline">\(90^\circ\)</span>. (50%)</li>
+<li>The differential scattering cross section <span class="math inline">\(\sigma_c(\theta)\)</span> is the cross-sectional area associated with one target nucleus that scatters incident particles into unit solid angle in direction <span class="math inline">\(\theta\)</span>. Derive <span class="math inline">\(\sigma_c(\theta)\)</span> from the Coulomb scattering formula. (30%)</li>
+</ol>
+<p><strong>Answer</strong></p>
+<ol type="1">
+<li><p><span class="math inline">\(a\)</span> is the distance of closest approach in a head-on collision.</p></li>
+<li><p>Let the beam spot have area <span class="math inline">\(A\)</span>. The number of target nuclei within the illuminated foil is <span class="math inline">\(nAd\)</span>. Particles with impact parameters</p>
+<p><span class="math display">\[b&lt;\frac{a}{2}\cot\left(\frac{\pi/2}{2}\right)\equiv B\]</span></p>
+<p>are scattered through angles <span class="math inline">\(\theta&gt;\pi/2\)</span>. Each nucleus therefore contributes a cross section <span class="math inline">\(\pi B^2\)</span> for scattering through more than <span class="math inline">\(90^\circ\)</span>. The number of such particles is</p>
+<p><span class="math display">\[N'=N\frac{nAd\pi B^2}{A}=Nnd\pi B^2.\]</span></p>
+<p>The number with scattering angles smaller than <span class="math inline">\(90^\circ\)</span> is <span class="math inline">\(N-Nnd\pi B^2\)</span>.</p></li>
+<li><p>Particles incident within an annulus of area <span class="math inline">\(d\sigma=\pi b\,db\)</span> centered on a target nucleus are scattered into a solid angle <span class="math inline">\(d\Omega=2\pi\sin\theta\,d\theta\)</span> in direction <span class="math inline">\(\theta\)</span>. Thus,</p>
+<p><span class="math display">\[\sigma_c(\theta)=\frac{d\sigma}{d\Omega}=\frac{2\pi b\,db}{2\pi\sin\theta\,d\theta}=\frac{b}{\sin\theta}\frac{db}{d\theta}=\frac{a^2}{4}\frac{1}{\sin^4(\theta/2)}.\]</span></p></li>
+</ol>
+</section>
+<section id="problem-2" class="level3">
+<h3 class="anchored" data-anchor-id="problem-2">Problem 2</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="short-answer-assets/image1.gif" class="img-fluid figure-img" width="574"></p>
+<figcaption>Rutherford scattering geometry</figcaption>
+</figure>
+</div>
+<p>A proton beam is incident normally on a heavy-metal foil of thickness <span class="math inline">\(d\)</span>, atomic number density <span class="math inline">\(n\)</span>, and atomic number <span class="math inline">\(Z\)</span>. Assume the foil is thin enough that target nuclei do not shadow one another. The Coulomb scattering formula is</p>
+<p><span class="math display">\[\cot\frac{\theta}{2}=\frac{2b}{a}.\]</span></p>
+<p>The cross section per target nucleus for scattering into unit solid angle in direction <span class="math inline">\(\theta\)</span> is</p>
+<p><span class="math display">\[\sigma_c(\theta)=\frac{(a/4)^2}{\sin^4(\theta/2)}.\]</span></p>
+<ol type="1">
+<li><p>Explain the physical meaning of <span class="math inline">\(a\)</span> and give its mathematical expression. (5 marks)</p></li>
+<li><p>Find the probability of scattering into a circular detector of radius <span class="math inline">\(r\)</span>, located a distance <span class="math inline">\(l\)</span> from the target in direction <span class="math inline">\(\theta\)</span> and facing the target, with <span class="math inline">\(l\gg r\)</span>. (5 marks)</p>
+<p><strong>Alternative:</strong> A flat plate facing the incident beam is located a distance <span class="math inline">\(l\)</span> from the target. Find the probability that particles scattered in direction <span class="math inline">\(\theta\)</span> strike a circular region of radius <span class="math inline">\(r\)</span> on the plate, with <span class="math inline">\(l\gg r\)</span>.</p></li>
+<li><p>Find the probability of scattering through an angle between <span class="math inline">\(\theta_1\)</span> and <span class="math inline">\(\theta_2\)</span>. (5 marks)</p></li>
+</ol>
+</section>
+</section>
+<section id="photoelectric-effect-difficulty-level-2" class="level2">
+<h2 class="anchored" data-anchor-id="photoelectric-effect-difficulty-level-2">Photoelectric effect (difficulty level 2)</h2>
+<section id="problem-1-1" class="level3">
+<h3 class="anchored" data-anchor-id="problem-1-1">Problem 1</h3>
+<ol type="1">
+<li>An LED emits light at a wavelength of <span class="math inline">\(500\,\mathrm{nm}\)</span>, consumes <span class="math inline">\(1\,\mathrm{mW}\)</span> of power, and has a conversion efficiency of 80%. How many photons does it emit per second? (40%)</li>
+<li>Photons emitted by spontaneous decay of hydrogen atoms from the first excited state strike a metal surface with a work function of <span class="math inline">\(4\,\mathrm{eV}\)</span>. What is the kinetic energy of the emitted electrons? (60%)</li>
+</ol>
+<p><strong>Answer</strong></p>
+<ol type="1">
+<li><p>The energy of a <span class="math inline">\(500\,\mathrm{nm}\)</span> photon is</p>
+<p><span class="math display">\[hc/\lambda=4\times10^{-19}\,\mathrm{J}.\]</span></p>
+<p>Since <span class="math inline">\(1\,\mathrm{mW}=0.001\,\mathrm{J\,s^{-1}}\)</span>, the energy converted into light each second is <span class="math inline">\(0.001\times80\%=0.0008\,\mathrm{J}\)</span>. The number of photons emitted per second is</p>
+<p><span class="math display">\[n=\frac{8\times10^{-4}}{4\times10^{-19}}=2\times10^{15}.\]</span></p></li>
+<li><p>The photon energy equals the energy difference between the first excited state and the ground state:</p>
+<p><span class="math display">\[13.6(1-1/4)=10.2\,\mathrm{eV}.\]</span></p>
+<p>The supplied answer gives the emitted electron kinetic energy as <span class="math inline">\(10.2\,\mathrm{eV}-4\,\mathrm{eV}=6.2\,\mathrm{eV}\)</span>.</p></li>
+</ol>
+</section>
+<section id="problem-2-1" class="level3">
+<h3 class="anchored" data-anchor-id="problem-2-1">Problem 2</h3>
+<p>The graph below shows the maximum kinetic energy of photoelectrons emitted from potassium as a function of incident-light frequency. The dots are experimental data, and the straight line is a fit.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="short-answer-assets/image2.png" class="img-fluid figure-img" width="607"></p>
+<figcaption>Maximum photoelectron kinetic energy versus incident frequency for potassium</figcaption>
+</figure>
+</div>
+<ol type="1">
+<li>What is the minimum photon energy required to eject photoelectrons, in electronvolts? (4 marks)</li>
+<li>Use the graph to determine Planck’s constant. Show your calculation and use appropriate significant figures. (3 marks)</li>
+<li>The threshold frequency for copper is twice that for potassium. Sketch the theoretical curve for copper on the same graph. (3 marks)</li>
+</ol>
+</section>
+</section>
+<section id="blackbody-radiation-1" class="level2">
+<h2 class="anchored" data-anchor-id="blackbody-radiation-1">Blackbody radiation</h2>
+<section id="problem-1-2" class="level3">
+<h3 class="anchored" data-anchor-id="problem-1-2">Problem 1</h3>
+<p>An insulated blackbody cavity exchanges energy with its surroundings only through a small aperture. Its blackbody wavelength spectrum peaks at <span class="math inline">\(500\,\mathrm{nm}\)</span>. A laser beam of wavelength <span class="math inline">\(800\,\mathrm{nm}\)</span> is directed into the aperture. After illuminating the cavity for some time and switching off the laser, will the peak wavelength of the radiation emerging from the aperture increase or decrease? Explain. (6 marks)</p>
+</section>
+<section id="problem-2-2" class="level3">
+<h3 class="anchored" data-anchor-id="problem-2-2">Problem 2</h3>
+<p>In a blackbody cavity at temperature <span class="math inline">\(T\)</span>, the electromagnetic energy per unit volume per unit frequency interval near frequency <span class="math inline">\(\nu\)</span> is</p>
+<p><span class="math display">\[u_\nu(T)=\frac{8\pi\nu^2}{c^3}\times\frac{1}{e^{h\nu/(k_BT)}-1}\times h\nu.\]</span></p>
+<ol type="a">
+<li><p>Explain the physical meaning of each of the three factors, from left to right. (6 marks)</p></li>
+<li><p>Let <span class="math inline">\(i_\nu(T)\)</span> denote the energy radiated from the blackbody surface per unit time, per unit area, and per unit frequency interval, with</p>
+<p><span class="math display">\[\int_0^\infty i_\nu(T)\,d\nu=\sigma T^4.\]</span></p>
+<p>Approximate the Sun’s surface as a blackbody. The solar energy incident normally on unit area at Earth’s surface per unit time is <span class="math inline">\(I_E\)</span>. The Earth–Sun distance is <span class="math inline">\(D\)</span>, and the solar radius is <span class="math inline">\(R\)</span>. Find the solar surface temperature <span class="math inline">\(T_S\)</span>. (4 marks)</p></li>
+<li><p>A metal plate in the solar system has photoelectric threshold frequency <span class="math inline">\(\nu_0\)</span>. The solar surface temperature is <span class="math inline">\(T_S\)</span>. Assuming the total sunlight power incident on the sheet is <span class="math inline">\(W\)</span> and the plate reflects 90% of the light uniformly over all the frequencies. How many electrons does the plate emit per unit time? (4 marks)</p></li>
+</ol>
+<p><strong>Answer</strong></p>
+<ol type="a">
+<li><p>The factors are (1) the number of electromagnetic modes per unit volume per unit frequency interval near <span class="math inline">\(\nu\)</span> in the cavity, (2) the mean photon number per mode, and (3) the energy of a photon of frequency <span class="math inline">\(\nu\)</span>.</p></li>
+<li><p>Assuming spherically symmetric solar radiation, the surface intensity <span class="math inline">\(I_S\)</span> and the intensity at Earth satisfy</p>
+<p><span class="math display">\[I_S=I_E\frac{D^2}{R^2}.\]</span></p>
+<p>Since the solar surface is a blackbody,</p>
+<p><span class="math display">\[I_S=\int_0^\infty i_\nu(T_S)\,d\nu=\sigma T_S^4,\qquad T_S=\left(\frac{I_ED^2}{\sigma R^2}\right)^{1/4}.\]</span></p></li>
+<li><p>Each photon above <span class="math inline">\(\nu_0\)</span> ejects one electron. Thus, the electron emission rate equals the arrival rate of photons above <span class="math inline">\(\nu_0\)</span>. Let <span class="math inline">\(i_\nu(T_S)\)</span> be the spectral radiant flux density at the solar surface. The power incident on the sheet in the interval <span class="math inline">\(\nu\)</span> to <span class="math inline">\(\nu+d\nu\)</span> is</p>
+<p><span class="math display">\[W\frac{i_\nu(T_S)\,d\nu}{\int_0^\infty i_\nu(T_S)\,d\nu}=\frac{W}{\sigma T_S^4}i_\nu(T_S)\,d\nu.\]</span></p>
+<p>The corresponding photon rate is</p>
+<p><span class="math display">\[dn(\nu)=\frac{W}{\sigma T_S^4}\frac{i_\nu(T_S)\,d\nu}{h\nu}.\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[n=\int_{\nu_0}^\infty dn(\nu)=\frac{W}{h\sigma T_S^4}\int_{\nu_0}^\infty\frac{i_\nu(T_S)}{\nu}\,d\nu.\]</span></p></li>
+</ol>
+</section>
+</section>
+<section id="compton-scattering" class="level2">
+<h2 class="anchored" data-anchor-id="compton-scattering">Compton scattering</h2>
+<p>The Compton scattering formula is</p>
+<p><span class="math display">\[\lambda'-\lambda=\lambda_e(1-\cos\theta),\]</span></p>
+<p>where <span class="math inline">\(\lambda_e\)</span> is the Compton wavelength,</p>
+<p><span class="math display">\[\lambda_e=\frac{h}{m_ec}.\]</span></p>
+<ol type="1">
+<li>Explain the physical meaning of the Compton wavelength.</li>
+<li>If the incident wavelength equals the Compton wavelength, what is the maximum energy that a photon can transfer to an initially stationary electron?</li>
+<li>Given <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\lambda\)</span>, find the electron’s scattering angle.</li>
+</ol>
+</section>
+<section id="bohr-model" class="level2">
+<h2 class="anchored" data-anchor-id="bohr-model">Bohr model</h2>
+<section id="problem-1-3" class="level3">
+<h3 class="anchored" data-anchor-id="problem-1-3">Problem 1</h3>
+<p>The Rydberg formula for the hydrogen spectrum is</p>
+<p><span class="math display">\[\frac{1}{\lambda}=R\left[\frac{1}{n^2}-\frac{1}{(n')^2}\right].\]</span></p>
+<ol type="1">
+<li><p>Express the hydrogen energy levels <span class="math inline">\(E_n\)</span> in terms of <span class="math inline">\(R\)</span>.</p></li>
+<li><p>Express the Bohr orbital radii <span class="math inline">\(r_n\)</span> in terms of <span class="math inline">\(R\)</span>.</p></li>
+<li><p>Use the correspondence principle to show that</p>
+<p><span class="math display">\[R=\frac{2\pi^2e^4m_e}{(4\pi\epsilon)^2h^3c}.\]</span></p></li>
+</ol>
+</section>
+<section id="problem-2-3" class="level3">
+<h3 class="anchored" data-anchor-id="problem-2-3">Problem 2</h3>
+<p>Assume that the electron in hydrogen moves in a circular orbit around the proton. Using the angular-momentum quantization postulate</p>
+<p><span class="math display">\[L=m_ev_nr_n=n\hbar,\]</span></p>
+<p>derive the Bohr orbital radii <span class="math inline">\(r_n\)</span> and energy levels <span class="math inline">\(E_n\)</span> for a one-electron atom of atomic number <span class="math inline">\(Z\)</span>. Assume an infinitely massive nucleus.</p>
+</section>
+</section>
+</section>
+<section id="part-ii" class="level1">
+<h1>Part II</h1>
+<section id="one-electron-systems" class="level2">
+<h2 class="anchored" data-anchor-id="one-electron-systems">One-electron systems</h2>
+<section id="problem1-sterngerlach-experiment" class="level3">
+<h3 class="anchored" data-anchor-id="problem1-sterngerlach-experiment">Problem1: Stern–Gerlach experiment</h3>
+<p>Explain why silver atoms form two traces in the Stern–Gerlach experiment.</p>
+<p>Hint: Silver has <span class="math inline">\(Z=47\)</span> and ground-state configuration <span class="math inline">\([\mathrm{Kr}]4d^{10}5s^1\)</span>. Its two main isotopes, <span class="math inline">\(^{107}\mathrm{Ag}\)</span> and <span class="math inline">\(^{109}\mathrm{Ag}\)</span>, each have a natural abundance of approximately 50% and nuclear spin <span class="math inline">\(I=1/2\)</span>.</p>
+<p><strong>Answer</strong></p>
+<p>The ground-state configuration is <span class="math inline">\([\mathrm{Kr}]4d^{10}5s^1\)</span>, with term symbol <span class="math inline">\(^{2}S_{1/2}\)</span>. The total electronic angular-momentum quantum number therefore equals the electron spin quantum number, <span class="math inline">\(1/2\)</span>. The magnetic field in the experiment is strong enough that the external-field energy greatly exceeds the hyperfine splitting. The good quantum numbers are then <span class="math inline">\(m_s\)</span> and <span class="math inline">\(m_I\)</span>. The nuclear magnetic moment is very small, so splitting associated with <span class="math inline">\(m_I\)</span> is difficult to resolve. The two observed traces correspond to the two values of <span class="math inline">\(m_S\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="short-answer-assets/image3.png" class="img-fluid figure-img"></p>
+<figcaption>Stern–Gerlach experiment</figcaption>
+</figure>
+</div>
+</section>
+<section id="problem-2-hydrogen-energy-eigenfunctions" class="level3">
+<h3 class="anchored" data-anchor-id="problem-2-hydrogen-energy-eigenfunctions">Problem 2: Hydrogen energy eigenfunctions</h3>
+<p>(15 marks = <span class="math inline">\(3\times5\)</span>.) Neglect electron spin. The hydrogen energy eigenfunctions are</p>
+<p><span class="math display">\[\psi_{nlm}(r,\theta,\phi)=R_{nl}(r)Y_{lm}(\theta,\phi).\]</span></p>
+<p>Express the volume element using <span class="math inline">\(d\theta\)</span>, <span class="math inline">\(d\phi\)</span>, and <span class="math inline">\(dr\)</span>, and answer the following questions.</p>
+<ol type="1">
+<li>Which mechanical quantities do the three quantum numbers of <span class="math inline">\(\psi_{nlm}\)</span> specify, and what are their values?</li>
+<li>What is the probability of finding the electron in a differential volume at <span class="math inline">\((r,\theta,\phi)\)</span> in state <span class="math inline">\(\psi_{nlm}\)</span>?</li>
+<li>What is the probability of finding it in the spherical shell between <span class="math inline">\(r\)</span> and <span class="math inline">\(r+dr\)</span>?</li>
+<li>What is the probability that its distance from the nucleus is less than <span class="math inline">\(r_0\)</span>?</li>
+<li>What is its probability density at the origin?</li>
+</ol>
+<p><strong>Answer</strong></p>
+<ol type="1">
+<li><p><span class="math inline">\(n\)</span> specifies the energy, <span class="math inline">\(-13.6\,\mathrm{eV}/n^2\)</span>; <span class="math inline">\(l\)</span> specifies the squared orbital angular momentum, <span class="math inline">\(l(l+1)\hbar^2\)</span>; and <span class="math inline">\(m\)</span> specifies its <span class="math inline">\(z\)</span> component, <span class="math inline">\(m\hbar\)</span>.</p></li>
+<li><p>The probability is</p>
+<p><span class="math display">\[|\psi_{nlm}(r,\theta,\phi)|^2dV=|\psi_{nlm}(r,\theta,\phi)|^2r^2\sin\theta\,d\theta\,d\phi\,dr.\]</span></p></li>
+<li><p>Integrate over all directions:</p>
+<p><span class="math display">\[\iint |\psi_{nlm}|^2r^2\sin\theta\,d\theta\,d\phi\,dr=R_{nl}^2(r)r^2dr\iint|Y_{lm}|^2\sin\theta\,d\theta\,d\phi=R_{nl}^2(r)r^2dr.\]</span></p></li>
+<li><p>The probability is <span class="math inline">\(\displaystyle\int_0^{r_0}R_{nl}^2(r)r^2\,dr\)</span>.</p></li>
+<li><p>Since the origin includes all directions, average the probability density at <span class="math inline">\(r=0\)</span> over all directions:</p>
+<p><span class="math display">\[\frac{\int|\psi_{nlm}(0,\theta,\phi)|^2\,d\Omega}{4\pi}=\frac{R_{nl}^2(0)}{4\pi}.\]</span></p></li>
+</ol>
+</section>
+</section>
+<section id="many-electron-atoms" class="level2">
+<h2 class="anchored" data-anchor-id="many-electron-atoms">Many-electron atoms</h2>
+<section id="atomic-states-of-many-electron-atoms-1" class="level3">
+<h3 class="anchored" data-anchor-id="atomic-states-of-many-electron-atoms-1">Atomic states of many-electron atoms 1</h3>
+<p>Carbon has six electrons.</p>
+<ol type="1">
+<li>Write its ground-state electron configuration. (20%)</li>
+<li>List all spectroscopic terms for this configuration. (30%)</li>
+<li>Identify the lowest-energy term. (20%)</li>
+<li>If one valence electron is excited to <span class="math inline">\(3d\)</span>, list all spectroscopic terms for the resulting configuration. (30%)</li>
+<li>If one valence electron is excited to <span class="math inline">\(3s\)</span>, identify the lowest-energy term and all its spontaneous decay paths.</li>
+</ol>
+<p><strong>Answer</strong></p>
+<ol type="1">
+<li><p><span class="math inline">\(1s^22s^22p^2\)</span>.</p></li>
+<li><p>The two outer <span class="math inline">\(2p^2\)</span> electrons are equivalent, so only combinations with even <span class="math inline">\(L+S\)</span> are allowed. Here <span class="math inline">\(l_1=l_2=1\)</span> and <span class="math inline">\(s_1=s_2=1/2\)</span>, giving</p>
+<p><span class="math display">\[L=2,1,0;\quad S=1,0;\quad J=L+S,L+S-1,\ldots,|L-S|.\]</span></p>
+<p>The allowed combinations are <span class="math inline">\((L,S)=(2,0),(1,1),(0,0)\)</span>, yielding the terms <span class="math inline">\(^{2S+1}L_J\)</span>:</p>
+<p><span class="math display">\[^{1}D_2,\quad {}^{3}P_{2,1,0},\quad {}^{1}S_0.\]</span></p></li>
+<li><p>Hund’s first rule favors the largest <span class="math inline">\(S\)</span>, so <span class="math inline">\((L,S)=(1,1)\)</span>. For a shell less than half filled, Hund’s third rule favors the smallest <span class="math inline">\(J\)</span>. The ground state is <span class="math inline">\(^{3}P_0\)</span>.</p></li>
+<li><p>The configuration is <span class="math inline">\(1s^22s^22p3d\)</span>. The two valence electrons have different <span class="math inline">\(n\)</span> values and are nonequivalent. The supplied solution gives <span class="math inline">\(L=3,2,1\)</span> and <span class="math inline">\(S=1,0\)</span>. All six <span class="math inline">\((L,S)\)</span> combinations are allowed, with</p>
+<p><span class="math display">\[J=L+S,L+S-1,\ldots,|L-S|.\]</span></p>
+<p>The listed terms are</p>
+<p><span class="math display">\[{}^{3}F_{4,3,2},\quad {}^{1}F_3，\quad ^{3}D_{3,2,1},\quad {}^{1}D_2,\quad {}^{3}P_{2,1,0},\quad {}^{1}P_1\]</span></p></li>
+<li><p>For <span class="math inline">\(1s^22s^22p^13s^1\)</span>, <span class="math inline">\(l_1=1\)</span>, <span class="math inline">\(l_2=0\)</span>, and <span class="math inline">\(s_1=s_2=1/2\)</span>. Thus <span class="math inline">\(L=1\)</span>, <span class="math inline">\(S=1,0\)</span>, and <span class="math inline">\((L,S)=(1,1),(1,0)\)</span>. The supplied solution identifies <span class="math inline">\(^{3}P_0\)</span> as the lowest term and lists decay to <span class="math inline">\(2p^2\,{}^{3}P_1\)</span>. The transition to <span class="math inline">\(2p^2\,{}^{3}P_0\)</span> is not allowed, because <span class="math inline">\(J=0\)</span> to <span class="math inline">\(J=0\)</span> is forbidden for electric-dipole transition.</p></li>
+</ol>
+</section>
+<section id="atomic-states-of-many-electron-atoms-2" class="level3">
+<h3 class="anchored" data-anchor-id="atomic-states-of-many-electron-atoms-2">Atomic states of many-electron atoms 2</h3>
+<p>(15 marks = <span class="math inline">\(3\times5\)</span>.) Sulfur has atomic number 16.</p>
+<ol type="1">
+<li>Write its ground-state electron configuration.</li>
+<li>Determine all spectroscopic terms for this configuration.</li>
+<li>Identify the lowest-energy term.</li>
+</ol>
+<p>Nitrogen has atomic number 7 and ground state <span class="math inline">\(2p^3\,{}^{4}S_{3/2}\)</span>.</p>
+<ol start="4" type="1">
+<li>Write the electron configuration of its lowest excited state accessible by an electric-dipole transition.</li>
+<li>Identify the lowest-energy term for this configuration.</li>
+</ol>
+<p><strong>Answer</strong></p>
+<ol type="1">
+<li><span class="math inline">\(1s^22s^22p^63s^23p^4\)</span>.</li>
+<li>The term structure is the same as for <span class="math inline">\(3p^2\)</span>. For two equivalent electrons, <span class="math inline">\(L+S\)</span> must be even, giving <span class="math inline">\(^{3}P_{2,1,0}\)</span>, <span class="math inline">\(^{1}D_2\)</span>, and <span class="math inline">\(^{1}S_0\)</span>.</li>
+<li>Hund’s rules favor the largest <span class="math inline">\(S\)</span>, so the lowest level lies within <span class="math inline">\(^{3}P_{2,1,0}\)</span>. For fixed <span class="math inline">\(S\)</span> and <span class="math inline">\(L\)</span> in a more-than-half-filled shell, larger <span class="math inline">\(J\)</span> means lower energy. The ground state is <span class="math inline">\(^{3}P_2\)</span>.</li>
+<li><span class="math inline">\(2p^23s\)</span>.</li>
+<li>For the <span class="math inline">\(2p^2\)</span> pair, <span class="math inline">\(L_{12}=1\)</span> and <span class="math inline">\(S_{12}=1\)</span>. The <span class="math inline">\(3s\)</span> electron has <span class="math inline">\(s_3=1/2\)</span> and <span class="math inline">\(l_3=0\)</span>. Thus <span class="math inline">\(S=3/2,1/2\)</span> and <span class="math inline">\(L=1\)</span>. Hund’s rules give <span class="math inline">\(S=3/2\)</span>, <span class="math inline">\(L=1\)</span>, <span class="math inline">\(J=1/2\)</span>, hence <span class="math inline">\(^{4}P_{1/2}\)</span>.</li>
+</ol>
+</section>
+<section id="alkali-metal-energy-levels-1-comprehensive-problem" class="level3">
+<h3 class="anchored" data-anchor-id="alkali-metal-energy-levels-1-comprehensive-problem">Alkali-metal energy levels 1 (comprehensive problem)</h3>
+<p>(20 marks = <span class="math inline">\(2\times10\)</span>.) The diagram shows the energy levels of rubidium-87, an alkali metal with atomic number 37. Starting from a hydrogen-like <span class="math inline">\(n=5\)</span> principal level, three successive splittings produce the actual levels shown.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="short-answer-assets/image20.png" class="img-fluid figure-img" width="713"></p>
+<figcaption>Energy levels of rubidium-87. The four headings, from left to right, are Hydrogen n = 5 level, First splitting, Second splitting, and Third splitting.</figcaption>
+</figure>
+</div>
+<ol type="1">
+<li>Which interaction, between which particles, determines the <span class="math inline">\(n=5\)</span> principal level?</li>
+<li>What causes the first splitting? Why is <span class="math inline">\(5S\)</span> lower in energy than <span class="math inline">\(5P\)</span>?</li>
+<li>What causes the second splitting?</li>
+<li>Why does <span class="math inline">\(5S\)</span> remain unsplit at the second stage?</li>
+<li>Use the diagram to calculate the transition wavelength between <span class="math inline">\(5\,{}^{2}P_{3/2}\)</span> and <span class="math inline">\(5\,{}^{2}P_{1/2}\)</span>.</li>
+<li>What causes the third splitting?</li>
+<li>Why is the third-stage splitting largest for <span class="math inline">\(5\,{}^{2}S_{1/2}\)</span>?</li>
+<li>Determine the nuclear spin quantum number of rubidium-87 from the diagram.</li>
+<li>In a weak magnetic field, how many sublevels arise from the <span class="math inline">\(F=2\)</span> and <span class="math inline">\(F=1\)</span> branches of <span class="math inline">\(5\,{}^{2}S_{1/2}\)</span>? Assume the new splitting is much smaller than the separation between these branches.</li>
+<li>Find the ratio of the adjacent-sublevel spacing in the <span class="math inline">\(F=2\)</span> branch to that in the <span class="math inline">\(F=1\)</span> branch.</li>
+</ol>
+<p><strong>Answer</strong></p>
+<ol type="1">
+<li><p>The Coulomb interaction between the single outer valence electron and the nucleus screened by the inner electrons, with an effective charge of <span class="math inline">\(+1\)</span> in units of <span class="math inline">\(e\)</span>.</p></li>
+<li><p>Orbital penetration increases the effective nuclear charge experienced by the valence electron, lowering its energy. The <span class="math inline">\(5S\)</span> electron penetrates more deeply than the <span class="math inline">\(5P\)</span> electron, so it experiences a larger effective charge and has lower energy.</p></li>
+<li><p>The magnetic interaction between the electron’s spin magnetic moment and the magnetic field associated with its orbital motion, also called spin–orbit coupling.</p></li>
+<li><p>An <span class="math inline">\(S\)</span> electron has no orbital angular momentum and therefore no spin–orbit coupling.</p></li>
+<li><p>With wavelengths in nanometers,</p>
+<p><span class="math display">\[\frac{1}{\lambda_F}=\frac{1}{780}-\frac{1}{795},\qquad\lambda_F=413\times10^2\,\mathrm{nm}.\]</span></p></li>
+<li><p>The hyperfine interaction between the nuclear magnetic moment and the magnetic field produced by the electrons.</p></li>
+<li><p>The <span class="math inline">\(5S\)</span> electron has the greatest probability density at the nucleus, giving the largest Fermi contact field and the strongest magnetic-dipole hyperfine interaction.</p></li>
+<li><p><span class="math inline">\(I=3/2\)</span>.</p></li>
+<li><p>The <span class="math inline">\(F=2\)</span> branch produces five sublevels; the <span class="math inline">\(F=1\)</span> branch produces three.</p></li>
+<li><p>In a weak field, the hyperfine Zeeman splitting is proportional to the <span class="math inline">\(g\)</span> factor for total angular momentum <span class="math inline">\(F\)</span>:</p>
+<p><span class="math display">\[g_F=g_S\frac{F(F+1)+S(S+1)-I(I+1)}{2F(F+1)}.\]</span></p>
+<p>Substitution gives the source’s values <span class="math inline">\(g_{F=2}=1/4\)</span> and <span class="math inline">\(g_{F=1}=-1/4\)</span>. Their magnitudes are equal, so the spacing ratio is 1.</p></li>
+</ol>
+</section>
+<section id="alkali-metal-energy-levels-2-comprehensive-problem" class="level3">
+<h3 class="anchored" data-anchor-id="alkali-metal-energy-levels-2-comprehensive-problem">Alkali-metal energy levels 2 (comprehensive problem)</h3>
+<p>The diagram shows the valence-electron energy levels of lithium-6 (<span class="math inline">\(^{6}\mathrm{Li}\)</span>), atomic number 3. Starting from a hydrogen-like <span class="math inline">\(n=2\)</span> principal level, three successive splittings produce the actual levels.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="short-answer-assets/image25.png" class="img-fluid figure-img" width="650"></p>
+<figcaption>Energy levels of lithium-6</figcaption>
+</figure>
+</div>
+<ol type="1">
+<li>What interaction determines the principal level? (2 marks)</li>
+<li>What causes the first splitting? Why is <span class="math inline">\(2S\)</span> lower in energy than <span class="math inline">\(2P\)</span>? (2 marks)</li>
+<li>What causes the second splitting? Why does <span class="math inline">\(2S\)</span> remain unsplit at this stage? (2 marks)</li>
+<li>What causes the third splitting? Why is it largest for <span class="math inline">\(2\,{}^{2}S_{1/2}\)</span>? (2 marks)</li>
+<li>What nuclear spin quantum number for <span class="math inline">\(^{6}\mathrm{Li}\)</span> can be inferred from the diagram? (2 marks)</li>
+<li>Calculate the transition frequency between <span class="math inline">\(2\,{}^{2}P_{3/2}\)</span> and <span class="math inline">\(2\,{}^{2}P_{1/2}\)</span> using the diagram. (2 marks)</li>
+</ol>
+<p><strong>Answer</strong></p>
+<ol type="1">
+<li><p>The Coulomb interaction between the valence electron and the effective nuclear charge <span class="math inline">\(+e\)</span> after screening by the atomic core.</p></li>
+<li><p>Orbital penetration makes the effective nuclear charge greater than one. The <span class="math inline">\(2S\)</span> electron penetrates more deeply, experiences a larger effective charge, and has lower potential energy.</p></li>
+<li><p>The fine-structure interaction, or spin–orbit coupling, is the magnetic interaction between the electron’s spin moment and the field associated with its orbital motion. An <span class="math inline">\(S\)</span> electron has zero orbital angular momentum, so there is no orbital magnetic field and no spin–orbit coupling.</p></li>
+<li><p>The hyperfine interaction couples the nuclear magnetic moment to the field produced by the electron’s spin or orbital motion. An <span class="math inline">\(S\)</span> electron has the greatest probability density near the nucleus, so its spin magnetic moment interacts most strongly with the nucleus.</p></li>
+<li><p><span class="math inline">\(I=1\)</span>, since <span class="math inline">\(F_{\max}=I+S\)</span>, <span class="math inline">\(F_{\max}=3/2\)</span>, and <span class="math inline">\(S=1/2\)</span>.</p></li>
+<li><p>The supplied answer is</p>
+<p><span class="math display">\[\nu=c\left(\frac{1}{\lambda_{D1}}-\frac{1}{\lambda_{D2}}\right)=1.33\,\mathrm{GHz}.\]</span></p></li>
+</ol>
+</section>
+</section>
+<section id="other-questions" class="level2">
+<h2 class="anchored" data-anchor-id="other-questions">Other questions</h2>
+<section id="magnetic-quantum-number" class="level3">
+<h3 class="anchored" data-anchor-id="magnetic-quantum-number">Magnetic quantum number</h3>
+<p>Can energy-level splittings caused by internal atomic interactions depend on the quantum number <span class="math inline">\(m_s\)</span>?</p>
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

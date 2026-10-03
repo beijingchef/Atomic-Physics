@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>6&nbsp; * Transitions – Introduction to Quantum Mechanics</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./07-continuous-observables.html" rel="next">
+<link href="./05-time-evolution.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-631496449bf32ff9b0bb69a6bfd9195d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="assets/mathjax/tex-svg.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06-transitions.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Introduction to Quantum Mechanics</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-vectors-and-quantum-states.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Vectors and Quantum States</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Operators</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-quantum-measurement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Quantum Measurement</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-commutation-relations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Commutation Relations of Observables</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-time-evolution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Time Evolution</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-transitions.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-continuous-observables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Continuous Observables</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-angular-momentum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Angular Momentum</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-coupling-angular-momenta.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Coupling Two Angular Momenta</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-topics-in-atomic-physics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Topics in Atomic Physics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-appendices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Appendices</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-exercise-solutions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Exercise Solutions</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#magnetic-resonance" id="toc-magnetic-resonance" class="nav-link active" data-scroll-target="#magnetic-resonance"><span class="header-section-number">6.1</span> Magnetic resonance</a></li>
+  <li><a href="#transitions-in-a-general-two-level-system" id="toc-transitions-in-a-general-two-level-system" class="nav-link" data-scroll-target="#transitions-in-a-general-two-level-system"><span class="header-section-number">6.2</span> Transitions in a general two-level system</a></li>
+  <li><a href="#density-matrices-and-the-bloch-vector" id="toc-density-matrices-and-the-bloch-vector" class="nav-link" data-scroll-target="#density-matrices-and-the-bloch-vector"><span class="header-section-number">6.3</span> * Density matrices and the Bloch vector</a></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix"><span class="header-section-number">6.4</span> Appendix</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>A state that is not an energy eigenstate evolves and can exhibit oscillations. Here we begin in an eigenstate of a dominant Hamiltonian and apply a small periodic perturbation that does not commute with it. This can drive oscillations between its eigenstates. Electron spin in a magnetic field remains our example.</p>
+<section id="magnetic-resonance" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="magnetic-resonance"><span class="header-section-number">6.1</span> Magnetic resonance</h2>
+<p>An electron in static field <span class="math inline">\({{\bf{B}}_0} = {B_0}{\bf{\hat z}}\)</span> initially has spin state <span class="math inline">\(\vert U\rangle\)</span>. States <span class="math inline">\(\vert U\rangle\)</span> and <span class="math inline">\(\vert D\rangle\)</span> have energies <span class="math inline">\({\mu _{\rm{B}}}B\)</span> and <span class="math inline">\(- {\mu _{\rm{B}}}{B_0}\)</span>. Both are stationary, so the system remains in either state without a perturbation. Apply a transverse oscillating field <span class="math inline">\({\bf{B'}}\)</span> at frequency <span class="math inline">\(\omega\)</span>, perpendicular to <span class="math inline">\({{\bf{B}}_0}\)</span>, with <span class="math inline">\(\left\vert  {{\bf{B'}}} \right\vert  \ll \left\vert  {{{\bf{B}}_0}} \right\vert\)</span>. Although weak, the periodic perturbation can profoundly affect the evolution under suitable conditions.</p>
+<p>Write the transverse field as</p>
+<p><span id="eq-zeqnnum692846"><span class="math display">\[
+{\bf{B'}} = {B'_x}{\bf{\hat x}} + {B'_y}{\bf{\hat y}}
+\tag{6.1}\]</span></span></p>
+<p>Let <span class="math inline">\({\bf{B'}}\)</span> be a constant-magnitude circularly polarized field rotating in the same sense as the electron’s precession in <span class="math inline">\({{\bf{B}}_0}\)</span>:</p>
+<p><span id="eq-zeqnnum766276"><span class="math display">\[
+{B'_x} = B'\cos \omega t; \qquad  \qquad  {B'_y} = B'\sin \omega t
+\tag{6.2}\]</span></span></p>
+<p>The interaction Hamiltonian for the total field is</p>
+<p><span id="eq-zeqnnum126030"><span class="math display">\[
+\hat H = - {{\bf{\mu }}_{\rm{S}}} \cdot \left( {{{\bf{B}}_0} + {\bf{B'}}} \right) = {\hat H_0} + \hat V(t)
+\tag{6.3}\]</span></span></p>
+<p>Here <span class="math inline">\({\hat H_0}\)</span> and <span class="math inline">\(\hat V\)</span> are the static-field and oscillating-field energy operators. In the <span class="math inline">\({\hat \sigma _z}\)</span> representation,</p>
+<p><span id="eq-zeqnnum864064"><span class="math display">\[
+{\hat H_0} = - {{\bf{\mu }}_{\rm{S}}} \cdot {{\bf{B}}_0} = {\mu _{\rm{B}}}{\hat \sigma _z}{B_0} \buildrel\textstyle.\over= {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} {{B_0}}&amp;0\\ 0&amp;{ - {B_0}} \end{array}} \right) = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&amp;0\\ 0&amp;{ - {\omega _0}} \end{array}} \right)
+\tag{6.4}\]</span></span></p>
+<p>Here <span class="math inline">\({\omega _0} \equiv {{({E_1} - {E_2})} \mathord{\left/ {\vphantom {{({E_1} - {E_2})} \hbar }} \right. \kern-1.2pt } \hbar } = {{2{\mu _{\rm{B}}}{B_0}} \mathord{\left/ {\vphantom {{2{\mu _{\rm{B}}}{B_0}} \hbar }} \right. \kern-1.2pt } \hbar }\)</span> is the static-field Larmor frequency.</p>
+<p><span id="eq-zeqnnum833059"><span class="math display">\[
+\begin{array}{c} \hat V(t) = - {{\bf{\mu }}_{\rm{S}}} \cdot {\bf{B'}} = {\mu _{\rm{B}}}\left( {{{\hat \sigma }_x}{{B'}_x} + {{\hat \sigma }_y}{{B'}_y}} \right) \buildrel\textstyle.\over= {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} 0&amp;{{{B'}_x} - i{{B'}_y}}\\ {{{B'}_x} + i{{B'}_y}}&amp;0 \end{array}} \right)\\ = {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} 0&amp;{B'{e^{ - i\omega t}}}\\ {B'{e^{i\omega t}}}&amp;0 \end{array}} \right) = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&amp;{{\Omega _0}{e^{ - i\omega t}}}\\ {{\Omega _0}{e^{i\omega t}}}&amp;0 \end{array}} \right) \end{array}
+\tag{6.5}\]</span></span></p>
+<p>The quantity <span class="math inline">\({\Omega _0} \equiv {{2{\mu _{\rm{B}}}B'} \mathord{\left/ {\vphantom {{2{\mu _{\rm{B}}}B'} \hbar }} \right. \kern-1.2pt } \hbar }\)</span> is the <strong>Rabi frequency</strong>, or resonant Rabi frequency. Rabi received the 1944 Nobel Prize in Physics for the atomic and molecular beam magnetic-resonance method.</p>
+<p>The total Hamiltonian is therefore</p>
+<p><span id="eq-zeqnnum963082"><span class="math display">\[
+\hat H \buildrel\textstyle.\over= \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&amp;{{\Omega _0}{e^{ - i\omega t}}}\\ {{\Omega _0}{e^{i\omega t}}}&amp;{ - {\omega _0}} \end{array}} \right)
+\tag{6.6}\]</span></span></p>
+<p>Expand spin state <span class="math inline">\(\vert {\psi (t)}\rangle\)</span> at time <span class="math inline">\(t\)</span> in the <span class="math inline">\({\hat \sigma _z}\)</span> representation, incorporating the initial condition:</p>
+<p><span id="eq-zeqnnum361616"><span class="math display">\[
+\vert {\psi (t)}\rangle = {c_1}(t)\vert U\rangle + {c_2}(t)\left\vert  D \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {{c_1}(t)}\\ {{c_2}(t)} \end{array}} \right), \qquad  {\left\vert  {{c_1}} \right\vert ^2} + {\left\vert  {{c_2}} \right\vert ^2} = 1,\;\;\left( {\begin{array}{*{20}{c}} {{c_1}(0) = 1}\\ {{c_2}(0) = 0} \end{array}} \right),\;\;
+\tag{6.7}\]</span></span></p>
+<p>Substituting <a href="#eq-zeqnnum963082" class="quarto-xref">Equation&nbsp;<span>6.6</span></a> and <a href="#eq-zeqnnum361616" class="quarto-xref">Equation&nbsp;<span>6.7</span></a> into the Schrödinger equation gives</p>
+<p><span id="eq-zeqnnum927934"><span class="math display">\[
+\left( {\begin{array}{*{20}{c}} {{{\dot c}_1}}\\ {{{\dot c}_2}} \end{array}} \right) = - \frac{i}{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&amp;{{\Omega _0}{e^{ - i\omega t}}}\\ {{\Omega _0}{e^{i\omega t}}}&amp;{ - {\omega _0}} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{c_1}}\\ {{c_2}} \end{array}} \right)
+\tag{6.8}\]</span></span></p>
+<p>Introduce a rotating-frame transformation:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p><span id="eq-zeqnnum414068"><span class="math display">\[
+{c_1}(t) = {d_1}(t){e^{ - {{i\omega t} \mathord{\left/ {\vphantom {{i\omega t} 2}} \right. \kern-1.2pt } 2}}}; \qquad  {c_2}(t) = {d_2}(t){e^{{{i\omega t} \mathord{\left/ {\vphantom {{i\omega t} 2}} \right. \kern-1.2pt } 2}}}.
+\tag{6.9}\]</span></span></p>
+<p>Equation <a href="#eq-zeqnnum927934" class="quarto-xref">Equation&nbsp;<span>6.8</span></a> becomes a system without the rapid oscillating factors:</p>
+<p><span id="eq-zeqnnum721542"><span class="math display">\[
+\left( {\begin{array}{*{20}{c}} {{{\dot d}_1}}\\ {{{\dot d}_2}} \end{array}} \right) = \frac{i}{2}\left( {\begin{array}{*{20}{c}} \Delta &amp;{ - {\Omega _0}}\\ { - {\Omega _0}}&amp;{ - \Delta } \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{d_1}}\\ {{d_2}} \end{array}} \right), \qquad  \left( {\begin{array}{*{20}{c}} {{d_1}(0)}\\ {{d_2}(0)} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right)
+\tag{6.10}\]</span></span></p>
+<p>Here <span class="math inline">\(\Delta \equiv \omega - {\omega _0}\)</span> is the <strong>detuning</strong>. The solution of <a href="#eq-zeqnnum721542" class="quarto-xref">Equation&nbsp;<span>6.10</span></a> is given below; the derivation appears in this chapter’s appendix.</p>
+<p><span id="eq-zeqnnum460032"><span class="math display">\[
+\begin{array}{l} {d_1}(t) = \cos \frac{{\Omega t}}{2} + i\frac{\Delta }{\Omega }\sin \frac{{\Omega t}}{2}\\ {d_2}(t) = - i\frac{{{\Omega _0}}}{\Omega }\sin \frac{{\Omega t}}{2} \end{array}
+\tag{6.11}\]</span></span></p>
+<p>The quantity <span class="math inline">\(\Omega \equiv \sqrt {{\Delta ^2} + \Omega _0^2}\)</span> is the <strong>generalized Rabi frequency</strong>. Substituting <a href="#eq-zeqnnum460032" class="quarto-xref">Equation&nbsp;<span>6.11</span></a> into <a href="#eq-zeqnnum414068" class="quarto-xref">Equation&nbsp;<span>6.9</span></a> and then <a href="#eq-zeqnnum361616" class="quarto-xref">Equation&nbsp;<span>6.7</span></a> gives <span class="math inline">\(\vert {\psi (t)}\rangle\)</span> at any time. The probabilities of states <span class="math inline">\(\vert U\rangle\)</span> and <span class="math inline">\(\vert D\rangle\)</span> are</p>
+<p><span id="eq-zeqnnum748213"><span class="math display">\[
+\begin{gathered} {P_1}(t) \equiv {\left\vert  {{c_1}(t)} \right\vert ^2} = \frac{1}{2}\left( {1 + \frac{{{\Delta ^2}}}{{{\Omega ^2}}}} \right) + \frac{1}{2}\frac{{\Omega _0^2}}{{{\Omega ^2}}}\cos \Omega t\xrightarrow{{\Delta = 0}}\frac{1}{2}\left( {1 + \cos {\Omega _0}t} \right)  \\ {P_2}(t) \equiv {\left\vert  {{c_2}(t)} \right\vert ^2} = \frac{1}{2}\frac{{\Omega _0^2}}{{{\Omega ^2}}}\left( {1 - \cos \Omega t} \right)\xrightarrow{{\Delta = 0}}\frac{1}{2}\left( {1 - \cos {\Omega _0}t} \right)  \\ \Delta \equiv \omega - {\omega _0},\, \qquad  {\Omega _0} \equiv {{2{\mu _{\text{B}}}B'} \mathord{\left/ {\vphantom {{2{\mu _{\text{B}}}B'} \hbar }} \right. \kern-1.2pt } \hbar }, \qquad  \;\;\;\;\;\;\Omega \equiv \sqrt {{\Delta ^2} + \Omega _0^2} ,  \\ \end{gathered}
+\tag{6.12}\]</span></span></p>
+<p>Both <span class="math inline">\({P}_{1}\)</span> and <span class="math inline">\({P}_{2}\)</span> oscillate at <span class="math inline">\(\Omega\)</span>, describing population transfer between the two levels.</p>
+<p>Figure 6.1 plots <span class="math inline">\({P_2}\)</span> for several detunings. At <span class="math inline">\(\Delta = 0\)</span>, <span class="math inline">\({P_2}\)</span> oscillates most slowly but with maximum contrast, ranging from zero to one. The condition <span class="math inline">\(\Delta = 0\)</span> is <strong>resonance</strong>. Increasing detuning increases the oscillation frequency of <span class="math inline">\({P_2}\)</span> but reduces its amplitude and the transition probability. By <a href="#eq-zeqnnum748213" class="quarto-xref">Equation&nbsp;<span>6.12</span></a>, whenever <span class="math inline">\(\Omega t\)</span> is an even multiple of <span class="math inline">\(\pi\)</span>, <span class="math inline">\({P}_{2}=0\)</span> and <span class="math inline">\({P}_{1}=1\)</span>, so the initial population returns. Whenever <span class="math inline">\(\Omega t\)</span> is an odd multiple of <span class="math inline">\(\pi\)</span>, <span class="math inline">\({P}_{2}\)</span> reaches its maximum for that detuning. At resonance, <span class="math inline">\({P}_{2}=1\)</span>, corresponding to complete transfer to the other level.</p>
+<p>The drive <span class="math inline">\({\bf{B'}}\)</span> makes <span class="math inline">\({P}_{2}\)</span> oscillate at <span class="math inline">\(\Omega\)</span>. As <span class="math inline">\({P}_{2}\)</span> increases, the electron’s mean magnetic energy decreases, transferring energy to the drive: <strong>stimulated emission</strong>. As <span class="math inline">\({P}_{2}\)</span> decreases, its mean energy increases by absorbing energy from the drive: <strong>stimulated absorption</strong>. Both arise from the same mechanism, explaining the equality of Einstein’s corresponding coefficients for this two-state case.</p>
+<p><img src="assets/image1150.png" class="img-fluid" width="410"></p>
+<div class="source-caption">
+<p>Figure 6.1. Probability of electron spin state <span class="math inline">\(\vert D\rangle\)</span> versus time at different detunings.</p>
+</div>
+<p>By <a href="#eq-zeqnnum748213" class="quarto-xref">Equation&nbsp;<span>6.12</span></a>, the oscillatory amplitudes of <span class="math inline">\({P}_{2}\)</span> and <span class="math inline">\({P}_{1}\)</span> are both</p>
+<p><span id="eq-zeqnnum340775"><span class="math display">\[
+{P_0}(\Delta ) = \frac{1}{2}\frac{{\Omega _0^2}}{{{\Omega ^2}}} = \frac{1}{2}\frac{{\Omega _0^2}}{{{\Delta ^2} + \Omega _0^2}}
+\tag{6.13}\]</span></span></p>
+<p>At fixed <span class="math inline">\({\Omega _0}\)</span>, <span class="math inline">\({P_0}(\Delta )\)</span> is a peaked function of detuning <span class="math inline">\(\Delta\)</span>, as in Figure 6.2. Its half-width at half-maximum (HWHM) is <span class="math inline">\({\Omega _0}\)</span>. Since <span class="math inline">\({\Omega _0}\)</span> is proportional to drive amplitude, stronger excitation broadens the line. This <strong>power broadening</strong> occurs in magnetic-resonance and spectroscopic measurements of level separations, such as absorption spectra.</p>
+<p><img src="assets/image1158.png" class="img-fluid" width="379"><img src="assets/image1159.svg" class="img-fluid" width="379"></p>
+<div class="source-caption">
+<p>Figure 6.2. <span class="math inline">\({P_0}(\Delta )\)</span> peaks at <span class="math inline">\(\Delta = 0\)</span> and has HWHM <span class="math inline">\({\Omega _0}\)</span>. Zero detuning is resonance.</p>
+</div>
+<p>We can also calculate the evolution of the mean spin vector <span class="math inline">\(\langle {\psi (t)}\vert {{{\hat S}_{x,y,z}}}\vert {\psi (t)}\rangle\)</span>.</p>
+<p><span id="eq-ch06-p1453"><span class="math display">\[
+\begin{gathered} \langle {{{\hat S}_z}}(t)\rangle = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {c_1^*,}&amp;{c_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 1&amp;0 \\ 0&amp;{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{c_1}} \\ {{c_2}} \end{array}} \right) = \frac{\hbar }{2}\left( {{{\left\vert  {{c_1}} \right\vert }^2} - {{\left\vert  {{c_2}} \right\vert }^2}} \right) \\ = \frac{\hbar }{2}\left[ {\left( {1 - \frac{{\Omega _0^2}}{{{\Omega ^2}}}} \right) + \frac{{\Omega _0^2}}{{{\Omega ^2}}}\cos \Omega t} \right]\xrightarrow{{\Delta = 0}}\frac{\hbar }{2}\cos {\Omega _0}t \\ \end{gathered}
+\tag{6.14}\]</span></span></p>
+<p><span id="eq-ch06-p1454"><span class="math display">\[
+\begin{gathered} \langle {{{\hat S}_x}(t)}\rangle = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {c_1^*,}&amp;{c_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&amp;1 \\ 1&amp;0 \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{c_1}} \\ {{c_2}} \end{array}} \right) = \frac{\hbar }{2}\left( {{c_1}c_2^* + c_1^*{c_2}} \right) \\ = \frac{\hbar }{2}\frac{{{\Omega _0}}}{{{\Omega ^2}}}\left[ {\Omega \sin \Omega t\sin \omega t - \Delta (1 - \cos \Omega t)\cos \omega t} \right] \\ \xrightarrow{{\Delta = 0}}\frac{\hbar }{2}\sin {\Omega _0}t\sin {\omega _0}t \\ \end{gathered}
+\tag{6.15}\]</span></span></p>
+<p><span id="eq-ch06-p1455"><span class="math display">\[
+\begin{gathered} \langle {{{\hat S}_y}(t)}\rangle = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {c_1^*,}&amp;{c_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&amp;{ - i} \\ i&amp;0 \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{c_1}} \\ {{c_2}} \end{array}} \right) = \frac{{i\hbar }}{2}\left( {{c_1}c_2^* - c_1^*{c_2}} \right) \\ = - \frac{\hbar }{2}\frac{{{\Omega _0}}}{{{\Omega ^2}}}\left[ {\Omega \sin \Omega t\cos \omega t + \Delta (1 - \cos \Omega t)\sin \omega t} \right] \\ \xrightarrow{{\Delta = 0}} - \frac{\hbar }{2}\sin {\Omega _0}t\cos {\omega _0}t \\ \end{gathered}
+\tag{6.16}\]</span></span></p>
+<p>A linearly polarized drive <span class="math inline">\({\bf{B'}}\)</span> is easier to produce than a circularly polarized one. For polarization along <span class="math inline">\(x\)</span> with amplitude <span class="math inline">\(2B'\)</span>, write <span class="math inline">\({\bf{B'}}\)</span> as</p>
+<p><span id="eq-ch06-p1457"><span class="math display">\[
+{B'_x} = 2B'\cos \omega t; \qquad  \qquad  {B'_y} = 0
+\tag{6.17}\]</span></span></p>
+<p>Its interaction <span class="math inline">\({\bf{B'}}\)</span> with the electron magnetic moment has Hamiltonian</p>
+<p><span id="eq-zeqnnum472633"><span class="math display">\[
+\begin{array}{c} \hat V(t) = 2{\mu _{\rm{B}}}B'\cos \omega t\left( {\begin{array}{*{20}{c}} 0&amp;1\\ 1&amp;0 \end{array}} \right) = \hbar \left( {\begin{array}{*{20}{c}} 0&amp;{{\Omega _0}\cos \omega t}\\ {{\Omega _0}\cos \omega t}&amp;0 \end{array}} \right)\\ = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&amp;{{\Omega _0}({e^{i\omega t}} + {e^{ - i\omega t}})}\\ {{\Omega _0}({e^{i\omega t}} + {e^{ - i\omega t}})}&amp;0 \end{array}} \right) \end{array}
+\tag{6.18}\]</span></span></p>
+<p>Following <a href="#eq-zeqnnum833059" class="quarto-xref">Equation&nbsp;<span>6.5</span></a> through <a href="#eq-zeqnnum927934" class="quarto-xref">Equation&nbsp;<span>6.8</span></a>, the Schrödinger equation becomes</p>
+<p><span id="eq-ch06-p1461"><span class="math display">\[
+\left( {\begin{array}{*{20}{c}} {{{\dot c}_1}}\\ {{{\dot c}_2}} \end{array}} \right) = - \frac{i}{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&amp;{{\Omega _0}({e^{i\omega t}} + {e^{ - i\omega t}})}\\ {{\Omega _0}({e^{i\omega t}} + {e^{ - i\omega t}})}&amp;{ - {\omega _0}} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{c_1}}\\ {{c_2}} \end{array}} \right)
+\tag{6.19}\]</span></span></p>
+<p>Using the definitions and method following <a href="#eq-zeqnnum414068" class="quarto-xref">Equation&nbsp;<span>6.9</span></a> gives</p>
+<p><span id="eq-zeqnnum877206"><span class="math display">\[
+\begin{array}{c} {{\dot d}_1} = \frac{i}{2}\left[ {\Delta {d_1} - {\Omega _0}({e^{2i\omega t}} + 1){d_2}} \right],\\ {{\dot d}_2} = \frac{i}{2}\left[ { - {\Omega _0}(1 + {e^{ - 2i\omega t}}){d_1} - \Delta {d_2}} \right], \end{array}
+\tag{6.20}\]</span></span></p>
+<p>Assume <span class="math inline">\(B' \ll {B_0}\)</span> and near resonance between <span class="math inline">\(\omega\)</span> and <span class="math inline">\({\omega _0}\)</span>, namely <span class="math inline">\({\Omega _0},\;\left\vert  \Delta \right\vert  \ll {\omega _0},\omega\)</span>. These are the near-resonant, weak-drive conditions. In <a href="#eq-zeqnnum877206" class="quarto-xref">Equation&nbsp;<span>6.20</span></a>, the factors <span class="math inline">\({e^{ \pm 2i\omega t}}\)</span> oscillate much faster than changes on the scales <span class="math inline">\(\Delta\)</span> and <span class="math inline">\({\Omega _0}\)</span>, so they may be replaced by their zero time average. This is the <strong>rotating-wave approximation</strong>. Equation <a href="#eq-zeqnnum877206" class="quarto-xref">Equation&nbsp;<span>6.20</span></a> then reduces to <a href="#eq-zeqnnum721542" class="quarto-xref">Equation&nbsp;<span>6.10</span></a> and has the same solution. A weak near-resonant linear drive is therefore approximately equivalent to a circular drive with half its amplitude.</p>
+</section>
+<section id="transitions-in-a-general-two-level-system" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="transitions-in-a-general-two-level-system"><span class="header-section-number">6.2</span> Transitions in a general two-level system</h2>
+<p>The magnetic-resonance analysis extends to other two-level transitions. For any two-level system of separation <span class="math inline">\(\hbar {\omega _0}\)</span>, shifting the energy origin gives the unperturbed eigenvalue equation</p>
+<p><span id="eq-ch06-p1468"><span class="math display">\[
+\begin{array}{l} {{\hat H}_0}\vert e\rangle = \hbar \frac{{{\omega _0}}}{2}\vert e\rangle \\ {{\hat H}_0}\vert g\rangle = - \hbar \frac{{{\omega _0}}}{2}\vert g\rangle \end{array}
+\tag{6.21}\]</span></span></p>
+<p>Here <span class="math inline">\(\vert e\rangle ,{\rm{ }}\vert g\rangle\)</span> denote excited and ground states. In the <span class="math inline">\({\hat H_0}\)</span> representation,</p>
+<p><span id="eq-zeqnnum616848"><span class="math display">\[
+{\hat H_0} = \hbar \left( {\begin{array}{*{20}{c}} {{{{\omega _0}} \mathord{\left/ {\vphantom {{{\omega _0}} 2}} \right. \kern-1.2pt } 2}}&amp;0\\ 0&amp;{{{ - {\omega _0}} \mathord{\left/ {\vphantom {{ - {\omega _0}} 2}} \right. \kern-1.2pt } 2}} \end{array}} \right)
+\tag{6.22}\]</span></span></p>
+<p>Adding a perturbation <span class="math inline">\(\hat V(t) = {\hat V_0}\cos \omega t\)</span> gives</p>
+<p><span id="eq-ch06-p1472"><span class="math display">\[
+\hat V(t) = \left( {\begin{array}{*{20}{c}} {\langle 1\vert {{{\hat V}_0}}\vert 1\rangle }&amp;{\langle 1\vert {{{\hat V}_0}}\vert 2\rangle }\\ {{{\langle 1\vert {{{\hat V}}_0}\vert 2\rangle }^*}}&amp;{\langle 2\vert {{{\hat V}_0}}\vert 2\rangle } \end{array}} \right)\cos \omega t
+\tag{6.23}\]</span></span></p>
+<p>Frequently <span class="math inline">\({\hat V_0}\)</span> has zero diagonal elements, <span class="math inline">\(\langle 1\vert {{{\hat V}_0}}\vert 1\rangle = \langle 2\vert {{{\hat V}_0}}\vert 2\rangle = 0\)</span>, and <span class="math inline">\(\langle 1\vert {{{\hat V}_0}}\vert 2\rangle\)</span> is real. Defining <span class="math inline">\({\Omega _0} \equiv {{\langle 1\vert {{{\hat V}_0}}\vert 2\rangle } \mathord{\left/ {\vphantom {{\langle 1\vert {{{\hat V}_0}}\vert 2\rangle } \hbar }} \right. \kern-1.2pt } \hbar }\)</span> gives</p>
+<p><span id="eq-zeqnnum790744"><span class="math display">\[
+\hat V(t) = \hbar \left( {\begin{array}{*{20}{c}} 0&amp;{{\Omega _0}\cos \omega t}\\ {\Omega _0^{}\cos \omega t}&amp;0 \end{array}} \right)
+\tag{6.24}\]</span></span></p>
+<p>Equations <a href="#eq-zeqnnum616848" class="quarto-xref">Equation&nbsp;<span>6.22</span></a> and <a href="#eq-zeqnnum790744" class="quarto-xref">Equation&nbsp;<span>6.24</span></a> have the same form as <a href="#eq-zeqnnum864064" class="quarto-xref">Equation&nbsp;<span>6.4</span></a> and <a href="#eq-zeqnnum472633" class="quarto-xref">Equation&nbsp;<span>6.18</span></a>. Such a two-level transition is therefore mathematically equivalent to spin-1/2 magnetic resonance.</p>
+</section>
+<section id="density-matrices-and-the-bloch-vector" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="density-matrices-and-the-bloch-vector"><span class="header-section-number">6.3</span> * Density matrices and the Bloch vector</h2>
+<p>The preceding sections reduce two-level evolution to <a href="#eq-zeqnnum460032" class="quarto-xref">Equation&nbsp;<span>6.11</span></a>, the evolution of <span class="math inline">\({d_1},{d_2}\)</span>. We now give it a geometric interpretation.</p>
+<p>An arbitrary pure state of a two-level system can be written as</p>
+<p><span id="eq-ch06-p1479"><span class="math display">\[
+\left( {\begin{array}{*{20}{c}} {{d_1}}\\ {{d_2}} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {{e^{i\phi }}\sin \frac{\theta }{2}} \end{array}} \right)
+\tag{6.25}\]</span></span></p>
+<p>Define the Cartesian <strong>Bloch vector</strong> <span class="math inline">\({\bf{P}} = \left\{ {u,v,w} \right\}\)</span>:</p>
+<p><span id="eq-zeqnnum365247"><span class="math display">\[
+\begin{array}{l} u = {\rho _{12}} + {\rho _{21}}\\ v = i({\rho _{12}} - {\rho _{21}})\\ \omega = {\rho _{11}} - {\rho _{22}} \end{array}
+\tag{6.26}\]</span></span></p>
+<p>where</p>
+<p><span id="eq-zeqnnum448235"><span class="math display">\[
+{\rho _{ij}} \equiv {d_i}d_j^*
+\tag{6.27}\]</span></span></p>
+<p><span id="eq-ch06-p1484"><span class="math display">\[
+\begin{array}{l} {\rho _{12}} = \frac{1}{2}{e^{ - i\phi }}\sin \theta \\ {\rho _{21}} = \frac{1}{2}{e^{i\phi }}\sin \theta \\ {\rho _{11}} = \frac{{1 + \cos \theta }}{2}\\ {\rho _{22}} = \frac{{1 - \cos \theta }}{2} \end{array}
+\tag{6.28}\]</span></span></p>
+<p>By <a href="#eq-zeqnnum365247" class="quarto-xref">Equation&nbsp;<span>6.26</span></a>,</p>
+<p><span id="eq-ch06-p1486"><span class="math display">\[
+\begin{array}{l} u = {\rho _{12}} + {\rho _{21}} = \sin \theta \cos \phi \\ v = i({\rho _{12}} - {\rho _{21}}) = \sin \theta \sin \phi \\ \omega = {\rho _{11}} - {\rho _{22}} = \cos \theta \end{array}
+\tag{6.29}\]</span></span></p>
+<p>One verifies <span class="math inline">\({u^2} + {v^2} + {w^2} = 1\)</span>, so <span class="math inline">\({\bf{P}}\)</span> is a unit vector. The parameters <span class="math inline">\(\theta ,\phi\)</span> are its spherical angles. All pure states lie on the surface traced by its tip, the <strong>Bloch sphere</strong>. For example,</p>
+<p><span id="eq-ch06-p1488"><span class="math display">\[
+\begin{array}{*{20}{c}} {\left( {0,0,1} \right) \leftrightarrow \;\vert U\rangle }&amp;{\left( {0,0, - 1} \right) \leftrightarrow \;\vert D\rangle }\\ {\left( {1,0,0} \right) \leftrightarrow \;\frac{1}{{\sqrt 2 }}\left( {\;\vert U\rangle + \;\vert D\rangle } \right)}&amp;{\left( { - 1,0,0} \right) \leftrightarrow \frac{1}{{\sqrt 2 }}\left( {\;\vert U\rangle - \;\vert D\rangle } \right)}\\ {\left( {0,1,0} \right) \leftrightarrow \;\;\frac{1}{{\sqrt 2 }}\left( {\;\vert U\rangle + i\;\vert D\rangle } \right)}&amp;{\left( {0, - 1,0} \right) \leftrightarrow \;\frac{1}{{\sqrt 2 }}\left( {\;\vert U\rangle - i\;\vert D\rangle } \right)} \end{array}
+\tag{6.30}\]</span></span></p>
+<p>The motion of <span class="math inline">\({\bf{P}}\)</span> describes state evolution <a href="#eq-zeqnnum721542" class="quarto-xref">Equation&nbsp;<span>6.10</span></a>. From <a href="#eq-zeqnnum721542" class="quarto-xref">Equation&nbsp;<span>6.10</span></a> and <a href="#eq-zeqnnum448235" class="quarto-xref">Equation&nbsp;<span>6.27</span></a>,</p>
+<p><span id="eq-zeqnnum821674"><span class="math display">\[
+\begin{array}{l} {{\dot \rho }_{12}} = i\Delta {\rho _{12}} + i\frac{{{\Omega _0}}}{2}\left( {{\rho _{11}} - {\rho _{22}}} \right)\\ {{\dot \rho }_{21}} = - i\Delta {\rho _{21}} - i\frac{{{\Omega _0}}}{2}\left( {{\rho _{11}} - {\rho _{22}}} \right)\\ {{\dot \rho }_{11}} = i\frac{{{\Omega _0}}}{2}\left( {{\rho _{12}} - {\rho _{21}}} \right)\\ {{\dot \rho }_{22}} = - i\frac{{{\Omega _0}}}{2}\left( {{\rho _{12}} - {\rho _{21}}} \right) \end{array}
+\tag{6.31}\]</span></span></p>
+<p>Using <a href="#eq-zeqnnum821674" class="quarto-xref">Equation&nbsp;<span>6.31</span></a> and <a href="#eq-zeqnnum365247" class="quarto-xref">Equation&nbsp;<span>6.26</span></a>,</p>
+<p><span id="eq-zeqnnum729193"><span class="math display">\[
+\begin{array}{l} \frac{{du}}{{dt}} = \Delta v\\ \frac{{dv}}{{dt}} = - \Delta u - {\Omega _0}w\\ \frac{{dw}}{{dt}} = {\Omega _0}v \end{array}
+\tag{6.32}\]</span></span></p>
+<p>Define <span class="math inline">\({\bf{\Omega }} = \left\{ {{\Omega _0},0, - \Delta } \right\}\)</span>. Equation <a href="#eq-zeqnnum729193" class="quarto-xref">Equation&nbsp;<span>6.32</span></a> becomes</p>
+<p><span id="eq-zeqnnum862867"><span class="math display">\[
+\frac{{d{\bf{P}}}}{{dt}} = {\bf{\Omega }} \times {\bf{P}}
+\tag{6.33}\]</span></span></p>
+<p>Since <span class="math inline">\({\bf{\Omega }}\)</span> is constant, <a href="#eq-zeqnnum862867" class="quarto-xref">Equation&nbsp;<span>6.33</span></a> describes <span class="math inline">\({\bf{P}}\)</span> precessing about <span class="math inline">\({\bf{\Omega }}\)</span> with angular speed <span class="math inline">\(\left\vert  {\bf{\Omega }} \right\vert  = \sqrt {\Omega _0^2 + {\Delta ^2}}\)</span>. Under the preceding rotating-wave treatment, two-state dynamics thus becomes a Bloch-vector equation,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> giving a useful geometric picture of transitions.</p>
+<p>This corresponds to the group-theoretic connection between a unitary transformation <span class="math inline">\({\rm{SU}}(2)\)</span> in a two-dimensional complex space and a rotation <span class="math inline">\({\rm{SO}}(3)\)</span> in three-dimensional Cartesian space.</p>
+</section>
+<section id="appendix" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="appendix"><span class="header-section-number">6.4</span> Appendix</h2>
+<p>We solve the linear differential system <a href="#eq-zeqnnum721542" class="quarto-xref">Equation&nbsp;<span>6.10</span></a> as follows.</p>
+<p><span id="eq-ch06-p1500"><span class="math display">\[
+\left( {\begin{array}{*{20}{c}} {{{\dot d}_1}}\\ {{{\dot d}_2}} \end{array}} \right) = \frac{i}{2}\left( {\begin{array}{*{20}{c}} \Delta &amp;{ - {\Omega _0}}\\ { - {\Omega _0}}&amp;{ - \Delta } \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{d_1}}\\ {{d_2}} \end{array}} \right), \qquad  \left( {\begin{array}{*{20}{c}} {{d_1}(0)}\\ {{d_2}(0)} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right)
+\tag{6.34}\]</span></span></p>
+<p>Try <span class="math inline">\(\left( {{d_1},{d_2}} \right) = \left( {{k_1},{k_2}} \right){e^{{{i\lambda t} \mathord{\left/ {\vphantom {{i\lambda t} 2}} \right. \kern-1.2pt } 2}}}\)</span>, with time-independent <span class="math inline">\({k_{1,2}}\)</span>. Substitution gives the eigenvalue equation</p>
+<p><span id="eq-zeqnnum238012"><span class="math display">\[
+\lambda \left( {\begin{array}{*{20}{c}} {{k_1}}\\ {{k_2}} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} \Delta &amp;{ - {\Omega _0}}\\ { - {\Omega _0}}&amp;{ - \Delta } \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{k_1}}\\ {{k_2}} \end{array}} \right) \Rightarrow \left( {\begin{array}{*{20}{c}} {\Delta - \lambda }&amp;{ - {\Omega _0}}\\ { - {\Omega _0}}&amp;{ - \Delta - \lambda } \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{k_1}}\\ {{k_2}} \end{array}} \right) = 0,
+\tag{6.35}\]</span></span></p>
+<p>A nonzero solution requires</p>
+<p><span id="eq-ch06-p1504"><span class="math display">\[
+\left\vert  {\begin{array}{*{20}{c}} {\Delta - \lambda }&amp;{ - {\Omega _0}}\\ { - {\Omega _0}}&amp;{ - \Delta - \lambda } \end{array}} \right\vert  = 0
+\tag{6.36}\]</span></span></p>
+<p>The eigenvalues are <span class="math inline">\({\lambda _ \pm } = \pm \Omega\)</span>, where <span class="math inline">\(\Omega \equiv \sqrt {\Omega _0^2 + {\Delta ^2}}\)</span>. Substituting <span class="math inline">\({\lambda _ \pm }\)</span> into <a href="#eq-zeqnnum238012" class="quarto-xref">Equation&nbsp;<span>6.35</span></a> gives the eigenvectors</p>
+<p><span id="eq-ch06-p1506"><span class="math display">\[
+\vert \lambda\rangle \equiv \left( {\begin{array}{*{20}{c}} {{k_1}}\\ {{k_2}} \end{array}} \right): \qquad  \vert {{\lambda _ + }}\rangle = \left( {\begin{array}{*{20}{c}} {{\Omega _0}}\\ {\Delta - \Omega } \end{array}} \right), \qquad  \vert {{\lambda _ - }}\rangle = \left( {\begin{array}{*{20}{c}} {{\Omega _0}}\\ {\Delta + \Omega } \end{array}} \right)
+\tag{6.37}\]</span></span></p>
+<p>The general solution is a linear combination of these particular solutions:</p>
+<p><span id="eq-zeqnnum771504"><span class="math display">\[
+\left( {\begin{array}{*{20}{c}} {{d_1}(t)}\\ {{d_2}(t)} \end{array}} \right) = {g_ + }\left( {\begin{array}{*{20}{c}} {{\Omega _0}}\\ {\Delta - \Omega } \end{array}} \right)\exp \left( {{{i{\lambda _ + }t} \mathord{\left/ {\vphantom {{i{\lambda _ + }t} 2}} \right. \kern-1.2pt } 2}} \right) + {g_ - }\left( {\begin{array}{*{20}{c}} {{\Omega _0}}\\ {\Delta + \Omega } \end{array}} \right)\exp \left( {{{i{\lambda _ - }t} \mathord{\left/ {\vphantom {{i{\lambda _ - }t} 2}} \right. \kern-1.2pt } 2}} \right)
+\tag{6.38}\]</span></span></p>
+<p>Determine coefficients <span class="math inline">\({g_ \pm }\)</span> from the initial condition:</p>
+<p><span id="eq-ch06-p1510"><span class="math display">\[
+\left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right) = {g_ + }\left( {\begin{array}{*{20}{c}} {{\Omega _0}}\\ {\Delta - \Omega } \end{array}} \right) + {g_ - }\left( {\begin{array}{*{20}{c}} {{\Omega _0}}\\ {\Delta + \Omega } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{\Omega _0}}&amp;{{\Omega _0}}\\ {\Delta - \Omega }&amp;{\Delta + \Omega } \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{g_ + }}\\ {{g_ - }} \end{array}} \right) = D\left( {\begin{array}{*{20}{c}} {{g_ + }}\\ {{g_ - }} \end{array}} \right)
+\tag{6.39}\]</span></span></p>
+<p>Therefore,</p>
+<p><span id="eq-ch06-p1512"><span class="math display">\[
+\left( {\begin{array}{*{20}{c}} {{g_ + }}\\ {{g_ - }} \end{array}} \right) = {D^{ - 1}}\left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right) = \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {\Omega + \Delta }&amp;{ - {\Omega _0}}\\ {\Omega - \Delta }&amp;{{\Omega _0}} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right) = \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {\Omega + \Delta }\\ {\Omega - \Delta } \end{array}} \right)
+\tag{6.40}\]</span></span></p>
+<p>Substituting <span class="math inline">\({g_ \pm }\)</span> into <a href="#eq-zeqnnum771504" class="quarto-xref">Equation&nbsp;<span>6.38</span></a> gives</p>
+<p><span id="eq-ch06-p1514"><span class="math display">\[
+\begin{array}{c} \left( {\begin{array}{*{20}{c}} {{d_1}(t)}\\ {{d_2}(t)} \end{array}} \right) = \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {(\Omega + \Delta ){\Omega _0}}\\ {(\Omega + \Delta )(\Delta - \Omega )} \end{array}} \right){e^{{{i{\lambda _ + }t} \mathord{\left/ {\vphantom {{i{\lambda _ + }t} 2}} \right. \kern-1.2pt } 2}}} + \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {(\Omega - \Delta ){\Omega _0}}\\ {(\Omega - \Delta )(\Delta + \Omega )} \end{array}} \right){e^{{{i{\lambda _ - }t} \mathord{\left/ {\vphantom {{i{\lambda _ - }t} 2}} \right. \kern-1.2pt } 2}}}\\ = \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {(\Omega + \Delta ){\Omega _0}{e^{{{i\Omega t} \mathord{\left/ {\vphantom {{i\Omega t} 2}} \right. \kern-1.2pt } 2}}} + (\Omega - \Delta ){\Omega _0}{e^{{{ - i\Omega t} \mathord{\left/ {\vphantom {{ - i\Omega t} 2}} \right. \kern-1.2pt } 2}}}}\\ { - \Omega _0^2{e^{{{i\Omega t} \mathord{\left/ {\vphantom {{i\Omega t} 2}} \right. \kern-1.2pt } 2}}} + \Omega _0^2{e^{{{ - i\Omega t} \mathord{\left/ {\vphantom {{ - i\Omega t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right)\\ = = \left( {\begin{array}{*{20}{c}} {\cos \left( {\frac{\Omega }{2}t} \right) + \frac{{i\Delta }}{\Omega }\sin \left( {\frac{\Omega }{2}t} \right)}\\ { - \frac{{i{\Omega _0}}}{\Omega }\sin \left( {\frac{\Omega }{2}t} \right)} \end{array}} \right) \end{array}
+\tag{6.41}\]</span></span></p>
+
+
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Some books use the interaction picture, setting <span class="math inline">\({c_1}(t) = {d_1}(t)\exp ( - {{i{\omega _0}t} \mathord{\left/ {\vphantom {{i{\omega _0}t} 2}} \right. \kern-1.2pt } 2}); \qquad  {c_2}(t) = {d_2}(t)\exp ({{i{\omega _0}t} \mathord{\left/ {\vphantom {{i{\omega _0}t} 2}} \right. \kern-1.2pt } 2})\)</span>. The method used here is equivalent to a rotating coordinate frame in classical mechanics and gives a shorter derivation for a two-level system.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Feynman, Vernon, and Hellwarth, “GEOMETRICAL REPRESENTATION OF THE SCHRODINGER EQUATION FOR SOLVING MASER PROBLEMS.”<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./05-time-evolution.html" class="pagination-link" aria-label="Time Evolution">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Time Evolution</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./07-continuous-observables.html" class="pagination-link" aria-label="Continuous Observables">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Continuous Observables</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

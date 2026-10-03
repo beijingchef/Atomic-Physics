@@ -1,0 +1,42 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Introduction to Quantum Mechanics"
+  subtitle: "Lecture Notes"
+  chapters:
+    - index.qmd
+    - 01-vectors-and-quantum-states.qmd
+    - 02-operators.qmd
+    - 03-quantum-measurement.qmd
+    - 04-commutation-relations.qmd
+    - 05-time-evolution.qmd
+    - 06-transitions.qmd
+    - 07-continuous-observables.qmd
+    - 08-angular-momentum.qmd
+    - 09-coupling-angular-momenta.qmd
+    - 10-topics-in-atomic-physics.qmd
+    - 11-appendices.qmd
+    - 12-exercise-solutions.qmd
+
+lang: en
+number-sections: true
+toc: true
+toc-depth: 3
+crossref:
+  chapters: true
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    html-math-method:
+      method: mathjax
+      url: assets/mathjax/tex-svg.js
+    code-fold: true
+  pdf:
+    documentclass: scrreprt
+    keep-tex: true
+    papersize: a4
+    geometry:
+      - margin=25mm

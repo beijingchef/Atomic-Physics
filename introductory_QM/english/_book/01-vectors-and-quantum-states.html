@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>1&nbsp; Vectors and Quantum States – Introduction to Quantum Mechanics</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./02-operators.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-631496449bf32ff9b0bb69a6bfd9195d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="assets/mathjax/tex-svg.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-vectors-and-quantum-states.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Vectors and Quantum States</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Introduction to Quantum Mechanics</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-vectors-and-quantum-states.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Vectors and Quantum States</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Operators</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-quantum-measurement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Quantum Measurement</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-commutation-relations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Commutation Relations of Observables</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-time-evolution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Time Evolution</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-transitions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-continuous-observables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Continuous Observables</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-angular-momentum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Angular Momentum</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-coupling-angular-momenta.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Coupling Two Angular Momenta</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-topics-in-atomic-physics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Topics in Atomic Physics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-appendices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Appendices</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-exercise-solutions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Exercise Solutions</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-sterngerlach-experiment" id="toc-the-sterngerlach-experiment" class="nav-link active" data-scroll-target="#the-sterngerlach-experiment"><span class="header-section-number">1.1</span> The Stern–Gerlach experiment</a></li>
+  <li><a href="#vector-spaces" id="toc-vector-spaces" class="nav-link" data-scroll-target="#vector-spaces"><span class="header-section-number">1.2</span> Vector spaces</a></li>
+  <li><a href="#examples-of-complex-linear-vector-spaces" id="toc-examples-of-complex-linear-vector-spaces" class="nav-link" data-scroll-target="#examples-of-complex-linear-vector-spaces"><span class="header-section-number">1.3</span> Examples of complex linear vector spaces</a></li>
+  <li><a href="#bras-and-inner-products" id="toc-bras-and-inner-products" class="nav-link" data-scroll-target="#bras-and-inner-products"><span class="header-section-number">1.4</span> Bras and inner products</a></li>
+  <li><a href="#orthogonality-and-basis-vectors" id="toc-orthogonality-and-basis-vectors" class="nav-link" data-scroll-target="#orthogonality-and-basis-vectors"><span class="header-section-number">1.5</span> Orthogonality and basis vectors</a></li>
+  <li><a href="#matrix-representations-of-vectors" id="toc-matrix-representations-of-vectors" class="nav-link" data-scroll-target="#matrix-representations-of-vectors"><span class="header-section-number">1.6</span> Matrix representations of vectors</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">1.7</span> Exercises</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Vectors and Quantum States</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Many people contributed to quantum mechanics through different approaches, including numerous false starts. Following the historical route is therefore not the most efficient way to learn the subject. We will begin directly with the basic principles of modern quantum mechanics.</p>
+<section id="the-sterngerlach-experiment" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="the-sterngerlach-experiment"><span class="header-section-number">1.1</span> The Stern–Gerlach experiment</h2>
+<p>Spin angular momentum <span class="math inline">\({\bf{S}}\)</span> is an intrinsic property of a microscopic particle, like its charge or mass, and its magnitude is fixed. Charge and mass are scalars, whereas spin is a vector: although its magnitude is fixed, its projection along a spatial direction can vary and is quantized. Particles whose spin projection can take only <span class="math inline">\(+ {\hbar \mathord{\left/ {\vphantom {\hbar 2}} \right. \kern-1.2pt } 2}\)</span> or <span class="math inline">\(- {\hbar \mathord{\left/ {\vphantom {\hbar 2}} \right. \kern-1.2pt } 2}\)</span> are called spin-1/2 particles; electrons, neutrons, and protons are examples. Such two-state systems are the simplest quantum systems and provide a direct route to the central ideas of quantum mechanics. To avoid repeatedly writing <span class="math inline">\({\hbar \mathord{\left/ {\vphantom {\hbar 2}} \right. \kern-1.2pt } 2}\)</span>, we define a new observable <span class="math inline">\({\bf{\sigma }}\)</span>, <span id="eq-zeqnnum505139"><span class="math display">\[
+{\bf{S}} \equiv \frac{\hbar }{2}{\bf{\sigma }}
+\tag{1.1}\]</span></span></p>
+<p>Let the unit vector <span class="math inline">\({\bf{n}}\)</span> specify a spatial direction, and let <span class="math inline">\({\sigma _n} \equiv {\bf{\sigma }} \cdot {\bf{n}}\)</span> denote the projection of <span class="math inline">\({\bf{\sigma }}\)</span> along <span class="math inline">\({\bf{n}}\)</span>. Measuring <span class="math inline">\({\sigma _n}\)</span> for a spin-1/2 particle can give only <span class="math inline">\(+ 1\)</span> or <span class="math inline">\(- 1\)</span>.</p>
+<p>A Stern–Gerlach (SG) apparatus measures a particle’s spin projection using a strong magnetic-field gradient. Particles emerge at distinct positions along the gradient direction, each exit corresponding to a different spin projection along that direction.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> A spin-<span class="math inline">\(1/2\)</span> particle has only two possible exits, corresponding to <span class="math inline">\({\sigma _n} = \pm 1\)</span>. Suppose a source continuously emits spin-1/2 particles with random spin orientations. We make the beam sufficiently weak that particles pass individually through the entire apparatus and do not interact. We then perform the experiments illustrated in Figure 1.1.</p>
+<p><img src="assets/image15.png" class="img-fluid" width="537"></p>
+<div class="source-caption">
+<p>Figure 1.1. The source on the left emits particles with random spin orientations. Each box represents a <span class="math inline">\({\sigma }_{n}\)</span> detector. The percentages to its right give the probabilities that a measurement of <span class="math inline">\({\sigma }_{n}\)</span> yields <span class="math inline">\(+1\)</span> or <span class="math inline">\(-1\)</span>.</p>
+</div>
+<p><strong>Experiment 1.</strong> Place an SG apparatus immediately after the source, with its field gradient along <span class="math inline">\(z\)</span>, to measure <span class="math inline">\({\sigma _z}\)</span>. Particles from the random source leave through its positive and negative exits with equal probability. If we block the <span class="math inline">\({\sigma _z} = - 1\)</span> exit, only particles with <span class="math inline">\({\sigma _z} = + 1\)</span> pass through the “<span class="math inline">\(+1\)</span>” exit. Place a second, identically oriented apparatus after the first apparatus’s “<span class="math inline">\(+1\)</span>” exit and measure <span class="math inline">\({\sigma _z}\)</span> again. All particles (<span class="math inline">\(100\%\)</span>) give <span class="math inline">\({\sigma _z} = + 1\)</span>. Similarly, selecting <span class="math inline">\({\sigma _z} = - 1\)</span> after the first apparatus and placing the second at its “<span class="math inline">\(-1\)</span>” exit gives <span class="math inline">\({\sigma _z} = - 1\)</span> for all particles (<span class="math inline">\(100\%\)</span>). Rotating both detectors to the same arbitrary direction <span class="math inline">\({\bf{n}}\)</span> preserves this agreement. Thus, even in the quantum world, a measurement result can be reproduced. Measuring <span class="math inline">\({\sigma _n}\)</span> also provides a way to prepare particles with <span class="math inline">\({\sigma _n} = + 1\)</span> or <span class="math inline">\(- 1\)</span>.</p>
+<p><strong>Experiment 2.</strong> Reverse the orientation of the second <span class="math inline">\({\sigma _z}\)</span> apparatus relative to the first. Particles emerging from the first apparatus’s “<span class="math inline">\(+1\)</span>” exit now all emerge from the second apparatus’s “<span class="math inline">\(-1\)</span>” exit <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, and conversely. The measured quantity changes sign when the detector is reversed, suggesting vector behavior.</p>
+<p><strong>Experiment 3.</strong> First use a <span class="math inline">\({\sigma _z}\)</span> apparatus to select particles with <span class="math inline">\({\sigma _z} = + 1\)</span>, and then measure <span class="math inline">\({\sigma _x}\)</span>. We find <span class="math inline">\({\sigma _x} = + 1\)</span> for 50% of the particles, and <span class="math inline">\({\sigma _x} = - 1\)</span> for <span class="math inline">\(50\%\)</span>. Classical reasoning would suggest that the upper outgoing beam has both <span class="math inline">\({\sigma _z} = + 1\)</span> and <span class="math inline">\({\sigma _x} = + 1\)</span>, while the lower beam has both <span class="math inline">\({\sigma _z} = + 1\)</span> and <span class="math inline">\({\sigma _x} = - 1\)</span>.</p>
+<p><strong>Experiment 4.</strong> After the second apparatus in Experiment 3, select particles with <span class="math inline">\({\sigma _x} = + 1\)</span> and pass them through a third apparatus measuring <span class="math inline">\({\sigma _z}\)</span>. The preceding classical argument predicts <span class="math inline">\({\sigma _z} = + 1\)</span> with certainty. Instead, half the particles give <span class="math inline">\({\sigma _z} = + 1\)</span> and half give <span class="math inline">\({\sigma _z} = - 1\)</span>. Selecting <span class="math inline">\({\sigma _x} = - 1\)</span> after the second apparatus and moving the third, <span class="math inline">\({\sigma _z}\)</span>-measuring apparatus to its “<span class="math inline">\(-1\)</span>” exit again produces <span class="math inline">\({\sigma _z} = + 1\)</span> and <span class="math inline">\({\sigma _z} = - 1\)</span> with equal probabilities. The crucial change is the insertion of a measurement of <span class="math inline">\({\sigma _x}\)</span> between two measurements of <span class="math inline">\({\sigma _z}\)</span>. Measuring <span class="math inline">\({\sigma _x}\)</span> completely destroys the previously acquired information about <span class="math inline">\({\sigma _z}\)</span>. This is not a peculiarity of SG apparatus: any method of measuring the <span class="math inline">\({\bf{\sigma }}\)</span> projection has the same consequence. The values of <span class="math inline">\({\sigma }_{x}\)</span> and <span class="math inline">\({\sigma }_{z}\)</span> cannot both be definite for a particle.</p>
+<p><img src="assets/image46.png" class="img-fluid" width="554"></p>
+<div class="source-caption">
+<p>Figure 1.2. Recombination of the two SG paths.</p>
+</div>
+<p><strong>Experiment 5.</strong> Previously, we moved the next detector to align it with each exit of the preceding one. For convenience, we now use magnets as a beam combiner, merging particles entering at different heights into a single outgoing line. Place it between the second and third apparatuses of Experiment 4, as in Figure 1.2. <strong>Experiments 5.1–5.2:</strong> block one exit of the second apparatus to select <span class="math inline">\({\sigma }_{x}=-1\)</span> or <span class="math inline">\(+1\)</span>, and send the selected particles through the combiner into the <span class="math inline">\({\sigma }_{z}\)</span> detector. As before, <span class="math inline">\({\sigma }_{z}=+1\)</span> and <span class="math inline">\(-1\)</span> each occur with probability <span class="math inline">\(50\%\)</span>. <strong>Experiment 5.3:</strong> remove the blocking plate so that particles from either exit pass through the combiner into the <span class="math inline">\({\sigma }_{z}\)</span> detector. Classical reasoning says that each “<span class="math inline">\(\pm 1\)</span>” exit of the <span class="math inline">\({\sigma }_{x}\)</span> detector is taken with probability <span class="math inline">\(50\%\)</span>, and that particles from either exit subsequently give <span class="math inline">\(\pm 1\)</span> in the <span class="math inline">\({\sigma }_{z}\)</span> detector with probability <span class="math inline">\(50\%\)</span>. Opening both exits should therefore still give each <span class="math inline">\({\sigma }_{z}=\pm 1\)</span> result with probability <span class="math inline">\(50\%\)</span>. In fact, every measurement of <span class="math inline">\({\sigma }_{z}\)</span> gives <span class="math inline">\(+1\)</span>! Experiments 4 and 5 show that when the result of <span class="math inline">\({\sigma }_{x}\)</span> cannot be known, the probability of <span class="math inline">\({\sigma }_{z}=+1\)</span> is <span class="math inline">\(100\%\)</span>, whereas making the result of <span class="math inline">\({\sigma }_{x}\)</span> knowable gives the two <span class="math inline">\({\sigma }_{z}=\pm 1\)</span> results with probability <span class="math inline">\(50\%\)</span> each.</p>
+<p>These observations may seem astonishing, but they describe how the world works. The familiar behavior of the classical world arises as a macroscopic average over enormous numbers of interacting particles.</p>
+<p>Experimentally, suppose two directions <span class="math inline">\({\bf{n}}\)</span> and <span class="math inline">\({\bf{m}}\)</span> make an angle <span class="math inline">\(\theta\)</span>. First measure the projection of <span class="math inline">\({\bf{\sigma }}\)</span> along <span class="math inline">\({\bf{n}}\)</span>, obtaining <span class="math inline">\({\sigma _n} = + 1\)</span>, and then measure <span class="math inline">\({\sigma _m}\)</span>, the projection of <span class="math inline">\({\bf{\sigma }}\)</span> along <span class="math inline">\({\bf{m}}\)</span>. The probabilities of <span class="math inline">\({\sigma _m} = + 1\)</span> and <span class="math inline">\(- 1\)</span> are <span class="math inline">\({\cos ^2}({\theta \mathord{\left/ {\vphantom {\theta 2}} \right. \kern-1.2pt } 2})\)</span> and <span class="math inline">\({\sin ^2}({\theta \mathord{\left/ {\vphantom {\theta 2}} \right. \kern-1.2pt } 2})\)</span>, respectively. In Experiment 1, <span class="math inline">\(\theta = 0\)</span> and <span class="math inline">\(\pi\)</span>; in Experiment 2, <span class="math inline">\(\theta = {\pi \mathord{\left/ {\vphantom {\pi 2}} \right. \kern-1.2pt } 2}\)</span>. These probabilities give the mean value <span class="math inline">\(( + 1) \cdot {\cos ^2}({\theta \mathord{\left/ {\vphantom {\theta 2}} \right. \kern-1.2pt } 2}) + ( - 1) \cdot {\sin ^2}({\theta \mathord{\left/ {\vphantom {\theta 2}} \right. \kern-1.2pt } 2}) = \cos (\theta )\)</span> for <span class="math inline">\({\sigma _m}\)</span>. Although individual measurements of <span class="math inline">\({\bf{\sigma }}\)</span> have unfamiliar outcomes, the average of <span class="math inline">\({\bf{\sigma }}\)</span> behaves like a classical vector. The mean of <span class="math inline">\({\bf{\sigma }}\)</span> is also called the <strong>spin-polarization vector</strong>.</p>
+<p>We now develop the basic rules of quantum mechanics and then return to explain these experiments.</p>
+</section>
+<section id="vector-spaces" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="vector-spaces"><span class="header-section-number">1.2</span> Vector spaces</h2>
+<p>In classical mechanics, the state of a physical system at time <span class="math inline">\(t\)</span> is described by the values of its dynamical variables for every particle. For example, the position and momentum of particle <span class="math inline">\(i\)</span> are <span class="math inline">\({x}_{i}\left( t\right) ,{p}_{i}\left( t\right)\)</span>; angular momentum, kinetic energy, and potential energy are functions of positions and momenta. Knowing all these values at an instant supplies complete information about the system. The state evolves according to Newton’s second law, continually updating the quantities <span class="math inline">\(\left\{ {x}_{i}\left( t\right) ,{p}_{i}\left( t\right) ,\cdots \right\}\)</span>. Mathematically, a classical state is described by these functions of time. Einstein famously said that he did not believe God played dice. In classical mechanics, statistical predictions are needed only when our information or computational power is incomplete. In principle, an observer who knew every particle’s state at one instant and had unlimited computational power could predict the system’s state at any past or future time with unlimited precision. This is classical determinism.</p>
+<p>In quantum mechanics, even the spin projections of a single isolated electron along two arbitrary directions cannot both be definite. Experiments show that classical mechanics is a macroscopic approximation to quantum mechanics, whose laws underlie the world we know. Certain important quantities cannot simultaneously be definite: position and momentum, different angular-momentum components, and even kinetic and potential energy. Consequently, the state of a system cannot be described by assigning definite values to all its dynamical variables at one time. We must reconsider the relation between a physical state and its dynamical variables.</p>
+<p>In quantum mechanics, the system’s state is called a <strong>quantum state</strong>, while its dynamical variables are called <strong>observables</strong>. They are different kinds of objects. Given the state at one instant, the Schrödinger equation determines its subsequent evolution. However, the state gives only the probabilities of the possible values of observables. What mathematical objects should represent states and observables? A central contribution of Heisenberg, Schrödinger, Dirac, and others was to find a precise mathematical language for quantum mechanics. Several equivalent formulations exist. We use the concise and general Dirac–von Neumann formulation; Heisenberg’s matrix mechanics and Schrödinger’s wave mechanics are concrete realizations of it.</p>
+<p>The relationship between observables and quantum states is the relationship between operators and vectors.</p>
+<p><strong>Quantum postulate.</strong> A physical system’s quantum state contains all the information about that system at the given instant. Mathematically, the state is represented by a vector in a complex linear vector space.</p>
+<p>The word <em>vector</em> can refer either to an ordinary vector in three-dimensional Cartesian space or to an abstract state vector, which can cause confusion. We will distinguish <strong>spatial vectors</strong>, referring to physical three-dimensional space, from <strong>state vectors</strong>, representing quantum states. The space containing all possible state vectors of a system is its <strong>state space</strong>, or <strong>Hilbert space</strong>.</p>
+<p>Dirac introduced the notation <span class="math inline">\(\lvert\text{vector name}\rangle\)</span> for a vector and called it a <strong>ket</strong>.</p>
+<p>Vectors have the following properties:</p>
+<p><span id="eq-zeqnnum995300"><span class="math display">\[
+\begin{aligned}\text{Commutativity:}\quad &amp;\lvert\psi_\alpha\rangle+\lvert\psi_\beta\rangle=\lvert\psi_\beta\rangle+\lvert\psi_\alpha\rangle\\\text{Complex scalars:}\quad &amp;c\lvert\psi\rangle=\lvert\psi\rangle c\\\text{Distributivity:}\quad &amp;(c_1+c_2)\lvert\psi\rangle=c_1\lvert\psi\rangle+c_2\lvert\psi\rangle\\&amp;c(\lvert\psi_\alpha\rangle+\lvert\psi_\beta\rangle)=c\lvert\psi_\alpha\rangle+c\lvert\psi_\beta\rangle\end{aligned}
+\tag{1.2}\]</span></span></p>
+<p>Here <span class="math inline">\(c,{c_1},{c_2}\)</span> are complex numbers. These properties are natural and easy to remember. The precise definitions of vector addition and multiplication by a complex number will be specified in concrete examples.</p>
+<p><strong>Zero vector.</strong> Every vector space contains a special zero vector, denoted <span class="math inline">\(\left\vert  {{\rm{null}}} \right\rangle\)</span>, which may be thought of as having zero length. It is defined by the following condition for every vector <span class="math inline">\(\left\vert  \psi \right\rangle\)</span>:</p>
+<p><span id="eq-zeqnnum835984"><span class="math display">\[
+\left\vert  {{\rm{null}}} \right\rangle + \left\vert  \psi \right\rangle = \left\vert  \psi \right\rangle , \qquad  \qquad  0\left\vert  \psi \right\rangle = \left\vert  {{\rm{null}}} \right\rangle
+\tag{1.3}\]</span></span></p>
+<p>If <span class="math inline">\(\left. \vert {\psi }_{1}\right\rangle\)</span> and <span class="math inline">\(\left. \vert {\psi }_{2}\right\rangle\)</span> belong to the same vector space, their linear combination <span class="math inline">\(\vert \psi\rangle = {c_1}\left\vert  {{\psi _1}} \right\rangle + {c_2}\left\vert  {{\psi _2}} \right\rangle\)</span> belongs to that space as well. If a vector is a linear combination of other vectors, those vectors together are linearly dependent.</p>
+</section>
+<section id="examples-of-complex-linear-vector-spaces" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="examples-of-complex-linear-vector-spaces"><span class="header-section-number">1.3</span> Examples of complex linear vector spaces</h2>
+<p>A complex linear vector space is an abstract concept. The following examples make it concrete. Decide which collections of mathematical objects form such spaces, paying attention to how vector addition and scalar multiplication are defined.</p>
+<p><strong>Example 1: all complex column matrices with</strong> <span class="math inline">\(n\)</span> components.</p>
+<p>Each complex column matrix with <span class="math inline">\(n\)</span> components is a vector. Any linear combination of two such <span class="math inline">\(n\)</span>-component columns is again a column with <span class="math inline">\(n\)</span> components. Indeed, column matrices are among the most common representations of quantum states.</p>
+<p><span id="eq-ch01-p0170"><span class="math display">\[
+\begin{pmatrix}a_1\\a_2\\a_3\\\vdots\\a_n\end{pmatrix},\quad a_i\in\mathbb C;\qquad\lvert\mathrm{null}\rangle=\begin{pmatrix}0\\0\\0\\\vdots\\0\end{pmatrix}
+\tag{1.4}\]</span></span></p>
+<p><strong>Example 2: all solutions of a homogeneous linear differential equation.</strong></p>
+<p>For example, consider all solutions of</p>
+<p><span id="eq-ch01-p0173"><span class="math display">\[
+\frac{{{d^2}}}{{d{t^2}}}x(t) + 2\beta \frac{d}{{dt}}x(t) + \omega _0^2x(t) = 0
+\tag{1.5}\]</span></span></p>
+<p>If <span class="math inline">\({x_1}(t)\)</span> and <span class="math inline">\({x_2}(t)\)</span> are solutions, any complex linear combination of them is also a solution. The collection of solutions forms a vector space.</p>
+</section>
+<section id="bras-and-inner-products" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="bras-and-inner-products"><span class="header-section-number">1.4</span> Bras and inner products</h2>
+<p>The ket <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> has a corresponding <strong>bra</strong>, written <span class="math inline">\(\left\langle \psi \right\vert\)</span>. Each ket <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> has a unique dual bra <span class="math inline">\(\left\langle \psi \right\vert\)</span>, and conversely. Kets form the ket space and bras form the bra space. These spaces obey the same vector-space rules: replacing each ket in the preceding identities by its corresponding bra gives valid identities.</p>
+<p>The bra space corresponding to a ket space is specified by the following duality rules:</p>
+<p><span id="eq-zeqnnum136783"><span class="math display">\[
+\begin{gathered} \text{Bra space}:\text{Ket space} \\ c* \leftrightarrow c \\ \left\langle \psi \right\vert  \leftrightarrow \left\vert  \psi \right\rangle \\ {c^*}\left\langle \psi \right\vert  \leftrightarrow c\left\vert  \psi \right\rangle \\ c_1^*\left\langle \alpha \right\vert  + c_2^*\left\langle \beta \right\vert  \leftrightarrow c_1^{}\left\vert  \alpha \right\rangle + c_2^{}\left\vert  \beta \right\rangle \\ \end{gathered}
+\tag{1.6}\]</span></span></p>
+<p>If bras and kets correspond one to one, why introduce bras? Duality allows two vectors to produce a number. Just as the dot product of two Cartesian vectors is a real number, the <strong>inner product</strong> of two vectors in a complex vector space is a complex number, written</p>
+<p><span id="eq-zeqnnum133573"><span class="math display">\[
+\left\langle \varphi \right\vert  \cdot \left\vert  \psi \right\rangle \equiv \left\langle {\varphi } \mathrel{\left \vert  {\vphantom {\varphi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = c
+\tag{1.7}\]</span></span></p>
+<p>The inner product <span class="math inline">\(\left\langle {\varphi } \mathrel{\left \vert  {\vphantom {\varphi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle\)</span> may be viewed as the projection of <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> onto <span class="math inline">\(\left\vert  \varphi \right\rangle\)</span>, or the amount of <span class="math inline">\(\left\vert  \varphi \right\rangle\)</span> contained in <span class="math inline">\(\left\vert  \psi \right\rangle\)</span>.</p>
+<p>The inner product obeys the following rules.</p>
+<p><strong>Distributivity:</strong></p>
+<p><span id="eq-zeqnnum320588"><span class="math display">\[
+\begin{array}{l} \langle \gamma\vert \left( {{c_1}\vert \alpha\rangle + {c_2}\vert \beta\rangle } \right) = {c_1}\left\langle {\gamma } \mathrel{\left \vert  {\vphantom {\gamma \alpha }} \right. \kern-1.2pt } {\alpha } \right\rangle + {c_2}\left\langle {\gamma } \mathrel{\left \vert  {\vphantom {\gamma \beta }} \right. \kern-1.2pt } {\beta } \right\rangle ,\\ \left( {{c_1}\langle \gamma\vert {\rm{ + }}{c_2}\langle \beta\vert } \right)\vert \alpha\rangle = {c_1}\left\langle {\gamma } \mathrel{\left \vert  {\vphantom {\gamma \alpha }} \right. \kern-1.2pt } {\alpha } \right\rangle + {c_2}\left\langle {\beta } \mathrel{\left \vert  {\vphantom {\beta \alpha }} \right. \kern-1.2pt } {\alpha } \right\rangle \end{array}
+\tag{1.8}\]</span></span></p>
+<p><strong>Conjugate symmetry:</strong></p>
+<p><span id="eq-zeqnnum921664"><span class="math display">\[
+\left\langle {\varphi } \mathrel{\left \vert  {\vphantom {\varphi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \left\langle {\psi } \mathrel{\left \vert  {\vphantom {\psi \varphi }} \right. \kern-1.2pt } {\varphi } \right\rangle *
+\tag{1.9}\]</span></span></p>
+<p>From <a href="#eq-zeqnnum921664" class="quarto-xref">Equation&nbsp;<span>1.9</span></a>, the inner product of a vector with itself must be real.</p>
+<p><span id="eq-ch01-p0188"><span class="math display">\[
+\left\langle {\psi } \mathrel{\left \vert  {\vphantom {\psi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \left\langle {\psi } \mathrel{\left \vert  {\vphantom {\psi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle *
+\tag{1.10}\]</span></span></p>
+<p>We further require</p>
+<p><span id="eq-zeqnnum281628"><span class="math display">\[
+\left\langle {\psi } \mathrel{\left \vert  {\vphantom {\psi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \ge 0
+\tag{1.11}\]</span></span></p>
+<p>Equality holds only for <span class="math inline">\(\vert \psi\rangle = \vert {{\rm{null}}}\rangle\)</span>. A vector <span class="math inline">\(\vert \psi\rangle\)</span> whose inner product with itself is one,</p>
+<p><span id="eq-ch01-p0192"><span class="math display">\[
+\left\langle {\psi } \mathrel{\left \vert  {\vphantom {\psi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = 1
+\tag{1.12}\]</span></span></p>
+<p>is <strong>normalized</strong>. Any nonzero, unnormalized vector <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> can be normalized as follows:</p>
+<p><span id="eq-ch01-p0194"><span class="math display">\[
+\left\vert  {\tilde \psi } \right\rangle = \frac{{\left\vert  \psi \right\rangle }}{{\sqrt {\left\langle {\psi } \mathrel{\left \vert  {\vphantom {\psi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } }}
+\tag{1.13}\]</span></span></p>
+<p>The concrete rules for bras, kets, and inner products depend on the representation of the vectors. Consider the following example.</p>
+<p><strong>Example.</strong> We know that complex column matrices form a complex linear vector space. How can their inner product produce a number and satisfy all the rules from <a href="#eq-zeqnnum133573" class="quarto-xref">Equation&nbsp;<span>1.7</span></a> to <a href="#eq-zeqnnum281628" class="quarto-xref">Equation&nbsp;<span>1.11</span></a>? In linear algebra, multiplying a row matrix by a column matrix gives a number. Thus, if a column represents a ket, its conjugate-transpose row represents the dual bra. For example,</p>
+<p><span id="eq-ch01-p0197"><span class="math display">\[
+\begin{array}{l} \left\vert  \phi \right\rangle = \left( {\begin{array}{*{20}{c}} {{a_1}}\\ {{a_2}} \end{array}} \right) \leftrightarrow \left\langle \phi \right\vert  = \left( {\begin{array}{*{20}{c}} {a_1^*}&amp;{a_2^*} \end{array}} \right)\\ \left\vert  \psi \right\rangle = \left( {\begin{array}{*{20}{c}} {{b_1}}\\ {{b_2}} \end{array}} \right) \leftrightarrow \left\langle \psi \right\vert  = \left( {\begin{array}{*{20}{c}} {b_1^*}&amp;{b_2^*} \end{array}} \right) \end{array}
+\tag{1.14}\]</span></span></p>
+<p>The inner product <span class="math inline">\(\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle\)</span> can then be defined by ordinary matrix multiplication:</p>
+<p><span id="eq-zeqnnum248635"><span class="math display">\[
+\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \left( {\begin{array}{*{20}{c}} {a_1^*}&amp;{a_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{b_1}}\\ {{b_2}} \end{array}} \right) = a_1^*{b_1} + a_2^*{b_2}
+\tag{1.15}\]</span></span></p>
+<p>These definitions of bras, kets, and inner products satisfy all the required properties, including <a href="#eq-zeqnnum921664" class="quarto-xref">Equation&nbsp;<span>1.9</span></a>.</p>
+<p><span id="eq-ch01-p0201"><span class="math display">\[
+\left\langle {\psi } \mathrel{\left \vert  {\vphantom {\psi \phi }} \right. \kern-1.2pt } {\phi } \right\rangle = \left( {\begin{array}{*{20}{c}} {b_1^*}&amp;{b_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{a_1}}\\ {{a_2}} \end{array}} \right) = b_1^*{a_1} + b_2^*{a_2} = {({b_1}a_1^* + {b_2}a_2^*)^*} = {\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle ^*}
+\tag{1.16}\]</span></span></p>
+</section>
+<section id="orthogonality-and-basis-vectors" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="orthogonality-and-basis-vectors"><span class="header-section-number">1.5</span> Orthogonality and basis vectors</h2>
+<p>Two Cartesian vectors <span class="math inline">\({\bf{a}},{\bf{b}}\)</span> are perpendicular when <span class="math inline">\({\bf{a}} \cdot {\bf{b}} = 0\)</span>. At most three nonzero vectors in three-dimensional Cartesian space can be mutually perpendicular. Rotating such a set gives infinitely many alternative sets, but never more than three mutually perpendicular vectors; this is the dimension of the space. Given mutually perpendicular unit vectors <span class="math inline">\({\bf{x}},{\bf{y}},{\bf{z}}\)</span>, any Cartesian vector <span class="math inline">\({\bf{v}}\)</span> can be expressed as their linear combination:</p>
+<p><span id="eq-ch01-p0204"><span class="math display">\[
+{\bf{v}} = \left( {{\bf{x}} \cdot {\bf{v}}} \right){\bf{x}} + \left( {{\bf{y}} \cdot {\bf{v}}} \right){\bf{y}} + \left( {{\bf{z}} \cdot {\bf{v}}} \right){\bf{z}} = {v_x}{\bf{x}} + {v_y}{\bf{y}} + {v_z}{\bf{z}}
+\tag{1.17}\]</span></span></p>
+<p>The three components of <span class="math inline">\({\bf{v}}\)</span> can also be written as a column matrix:</p>
+<p><span id="eq-ch01-p0206"><span class="math display">\[
+{\bf{v}} = \left( {\begin{array}{*{20}{c}} {{v_x}}\\ {{v_y}}\\ {{v_z}} \end{array}} \right){\rm{ = }}\left( {\begin{array}{*{20}{c}} {{\bf{x}} \cdot {\bf{v}}}\\ {{\bf{y}} \cdot {\bf{v}}}\\ {{\bf{y}} \cdot {\bf{v}}} \end{array}} \right)
+\tag{1.18}\]</span></span></p>
+<p>The matrix entries—the components of <span class="math inline">\({\bf{v}}\)</span>—depend on the coordinate system. Rotating the <span class="math inline">\({\bf{x}},{\bf{y}},{\bf{z}}\)</span> axes changes the components of <span class="math inline">\({\bf{v}}\)</span>. The coordinate unit vectors, however, always have the following column representations in their own coordinate system:</p>
+<p><span id="eq-ch01-p0208"><span class="math display">\[
+{\bf{x}} = \left( {\begin{array}{*{20}{c}} 1\\ 0\\ 0 \end{array}} \right), \qquad  {\bf{y}} = \left( {\begin{array}{*{20}{c}} 0\\ 1\\ 0 \end{array}} \right), \qquad  {\bf{z}} = \left( {\begin{array}{*{20}{c}} 0\\ 0\\ 1 \end{array}} \right)
+\tag{1.19}\]</span></span></p>
+<p>We now extend these concepts to vector spaces. Two nonzero vectors <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> and <span class="math inline">\(\left\vert  \phi \right\rangle\)</span> are <strong>orthogonal</strong> if their inner product vanishes, <span class="math inline">\(\langle \psi\vert \phi\rangle = 0\)</span>. The dimension is the maximum number of mutually orthogonal vectors. In the space of two-component columns, the inner product defined in <a href="#eq-zeqnnum248635" class="quarto-xref">Equation&nbsp;<span>1.15</span></a> allows infinitely many orthogonal pairs; here are three pairs of normalized vectors:</p>
+<p><span id="eq-zeqnnum282640"><span class="math display">\[
+\left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right),\;\;\left( {\begin{array}{*{20}{c}} 0\\ 1 \end{array}} \right); \qquad  \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ 1 \end{array}} \right),\;\;\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ { - 1} \end{array}} \right); \qquad  \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ i \end{array}} \right),\;\;\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ { - i} \end{array}} \right)
+\tag{1.20}\]</span></span></p>
+<p>Once one such pair is chosen, no third nonzero column vector is orthogonal to both. The vector space of two-component columns therefore has dimension two.</p>
+<p>A set of <span class="math inline">\(N\)</span> mutually orthogonal, normalized vectors in an <span class="math inline">\(N\)</span>-dimensional vector space forms a <strong>complete basis</strong>, usually called a basis; its members are <strong>basis vectors</strong>. For any two basis vectors <span class="math inline">\(\vert i\rangle ,\vert j\rangle\)</span>,</p>
+<p><span id="eq-zeqnnum766490"><span class="math display">\[
+\left\langle {j} \mathrel{\left \vert  {\vphantom {j i}} \right. \kern-1.2pt } {i} \right\rangle = {\delta _{ij}}
+\tag{1.21}\]</span></span></p>
+<p>The symbol <span class="math inline">\({\delta _{ij}}\)</span> is the <strong>Kronecker delta</strong>, defined by</p>
+<p><span id="eq-ch01-p0216"><span class="math display">\[
+{\delta _{ij}} = \left\{ \begin{array}{l} 1, &amp; i = j\\ 0, &amp; i \ne j \end{array} \right.
+\tag{1.22}\]</span></span></p>
+<p>A vector space has infinitely many possible complete bases. Each pair in <a href="#eq-zeqnnum282640" class="quarto-xref">Equation&nbsp;<span>1.20</span></a> is a complete basis for the two-dimensional space. A basis acts like a coordinate system: every vector can be expanded as a linear combination of the basis vectors. In an <span class="math inline">\(N\)</span>-dimensional space spanned by <span class="math inline">\(\left\{ {\left\vert  i \right\rangle } \right\},\;i \in \left\{ {1,2...N} \right\}\)</span>, any vector <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> can be written as</p>
+<p><span id="eq-ch01-p0218"><span class="math display">\[
+\left\vert  \psi \right\rangle = \sum\limits_i {{a_i}\left\vert  i \right\rangle }
+\tag{1.23}\]</span></span></p>
+<p>Here <span class="math inline">\({a_i}\)</span> is a complex number giving the component of <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> along <span class="math inline">\(\left\vert  i \right\rangle\)</span>. Taking the inner product with a basis vector <span class="math inline">\(\left\langle j \right\vert\)</span> on both sides gives</p>
+<p><span id="eq-ch01-p0220"><span class="math display">\[
+\left\langle {j} \mathrel{\left \vert  {\vphantom {j \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \sum\limits_i {\left\langle j \right\vert {a_i}\left\vert  i \right\rangle } = \sum\limits_i {{a_i}\left\langle {j} \mathrel{\left \vert  {\vphantom {j i}} \right. \kern-1.2pt } {i} \right\rangle } = \sum\limits_i {{a_i}{\delta _{ij}}} = {a_j}
+\tag{1.24}\]</span></span></p>
+<p>Thus the component of <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> along <span class="math inline">\(\left\vert  i \right\rangle\)</span> is <span class="math inline">\(\left\langle {i} \mathrel{\left \vert  {\vphantom {i \psi }} \right. \kern-1.2pt } {\psi } \right\rangle\)</span>, and</p>
+<p><span id="eq-zeqnnum935342"><span class="math display">\[
+\left\vert  \psi \right\rangle = \sum\limits_i {\left\langle {i} \mathrel{\left \vert  {\vphantom {i \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \left\vert  i \right\rangle } = \sum\limits_i {\left\vert  i \right\rangle } \left\langle {i} \mathrel{\left \vert  {\vphantom {i \psi }} \right. \kern-1.2pt } {\psi } \right\rangle
+\tag{1.25}\]</span></span></p>
+<p>This is an important identity. In the final step, the scalar <span class="math inline">\(\left\langle {i} \mathrel{\left \vert  {\vphantom {i \psi }} \right. \kern-1.2pt } {\psi } \right\rangle\)</span> has been moved from the left of <span class="math inline">\(\left\vert  i \right\rangle\)</span> to its right so that <span class="math inline">\(\sum\nolimits_i {\left\vert  i \right\rangle \left\langle i \right\vert }\)</span> appears together. Section 2.4 explains why. Combining <a href="#eq-zeqnnum136783" class="quarto-xref">Equation&nbsp;<span>1.6</span></a> and <a href="#eq-zeqnnum921664" class="quarto-xref">Equation&nbsp;<span>1.9</span></a> also gives the bra expansion:</p>
+<p><span id="eq-ch01-p0224"><span class="math display">\[
+\left\langle \psi \right\vert  = \sum\limits_i {\left\langle {\psi } \mathrel{\left \vert  {\vphantom {\psi i}} \right. \kern-1.2pt } {i} \right\rangle } \left\langle i \right\vert
+\tag{1.26}\]</span></span></p>
+</section>
+<section id="matrix-representations-of-vectors" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="matrix-representations-of-vectors"><span class="header-section-number">1.6</span> Matrix representations of vectors</h2>
+<p>Just as a Cartesian vector can be written as a column, the expansion <a href="#eq-zeqnnum935342" class="quarto-xref">Equation&nbsp;<span>1.25</span></a> of a state vector has a column-matrix representation:</p>
+<p><span id="eq-zeqnnum343100"><span class="math display">\[
+\lvert\psi\rangle=\begin{pmatrix}\langle 1\vert\psi\rangle\\\langle 2\vert\psi\rangle\\\vdots\\\langle N\vert\psi\rangle\end{pmatrix}
+\tag{1.27}\]</span></span></p>
+<p>Each basis vector, expressed in its own complete basis, has the column representation</p>
+<p><span id="eq-ch01-p0229"><span class="math display">\[
+\left\vert  1 \right\rangle = \left( {\begin{array}{*{20}{c}} 1\\ 0\\ \vdots \\ 0 \end{array}} \right), \qquad  \left\vert  2 \right\rangle = \left( {\begin{array}{*{20}{c}} 0\\ 1\\ \vdots \\ 0 \end{array}} \right), \qquad  \cdots \qquad  \left\vert  N \right\rangle = \left( {\begin{array}{*{20}{c}} 0\\ 0\\ \vdots \\ 1 \end{array}} \right)
+\tag{1.28}\]</span></span></p>
+<p>The entries of a vector’s matrix representation depend on the chosen basis. Columns expressed in different bases cannot be combined directly in matrix calculations.</p>
+<p>The following comparison between Cartesian vectors and abstract state vectors may help make the latter more familiar.</p>
+<p><span id="eq-ch01-p0232"><span class="math display">\[
+\begin{array}{*{20}{c}} {\text{Cartesian space}}&amp;{{\text{ }} \to {\text{ }}}&amp;{\text{Vector space}} \\ {\text{Dot product}:{\mathbf{a}} \cdot {\mathbf{b}} = {\mathbf{b}} \cdot {\mathbf{a}}}&amp;{}&amp;{\text{Inner product}:\;\langle \phi\vert \psi\rangle = {{\langle \psi\vert \phi\rangle }^*}} \\ {\text{Perpendicular}:{\mathbf{a}} \cdot {\mathbf{b}} = 0}&amp;{}&amp;{\text{Orthogonal}:\;\langle \psi\vert \phi\rangle = 0} \\ {\text{Coordinate unit vectors}{\mathbf{\hat x}},{\mathbf{\hat y}},{\mathbf{\hat z}}}&amp;{}&amp;{\text{Basis vectors}{\text{ }}\left\{ {\vert i\rangle } \right\}} \\ {\text{Coordinate system}}&amp;{}&amp;{\text{Complete basis}(\text{basis})} \\ {\text{Coordinates}:{\mathbf{v}} = \left( {\begin{array}{*{20}{c}} {{\mathbf{\hat x}} \cdot {\mathbf{v}}} \\ {{\mathbf{\hat y}} \cdot {\mathbf{v}}} \\ {{\mathbf{\hat z}} \cdot {\mathbf{v}}} \end{array}} \right)}&amp;{}&amp;{\text{Basis expansion}:\left\vert  \psi \right\rangle = \left( {\begin{array}{*{20}{c}} {\left\langle {1} \mathrel{\left \vert  {\vphantom {1 \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \\ {\left\langle {2} \mathrel{\left \vert  {\vphantom {2 \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \\ \vdots \\ {\left\langle {N} \mathrel{\left \vert  {\vphantom {N \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \end{array}} \right)} \end{array}
+\tag{1.29}\]</span></span></p>
+</section>
+<section id="exercises" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="exercises"><span class="header-section-number">1.7</span> Exercises</h2>
+<p><strong>1.1.</strong> Determine whether each of the following collections forms a Hilbert space.</p>
+<ul>
+<li><p>All complex numbers.</p></li>
+<li><p>All vectors in three-dimensional Cartesian space.</p></li>
+<li><p>The solutions <span class="math inline">\(\psi (x)\)</span> of the following equation, where <span class="math inline">\(E\)</span> is real and <span class="math inline">\(V(x)\)</span> is a finite, continuous function of <span class="math inline">\(x\)</span>.</p></li>
+</ul>
+<p><span id="eq-ch01-p0240"><span class="math display">\[
+\left[ { - \frac{{{\hbar ^2}}}{{2m}}\frac{{{d^2}}}{{d{x^2}}} + V(x)} \right]\psi (x) = E\psi (x)
+\tag{1.30}\]</span></span></p>
+<p><strong>1.2.</strong> Prove <span class="math inline">\(\left\langle {\alpha } \mathrel{\left \vert  {\vphantom {\alpha \alpha }} \right. \kern-1.2pt } {\alpha } \right\rangle \left\langle {\beta } \mathrel{\left \vert  {\vphantom {\beta \beta }} \right. \kern-1.2pt } {\beta } \right\rangle \ge {\left\vert  {\left\langle {\alpha } \mathrel{\left \vert  {\vphantom {\alpha \beta }} \right. \kern-1.2pt } {\beta } \right\rangle } \right\vert ^2}\)</span>.</p>
+<p>Hint: construct <span class="math inline">\(\vert \psi \rangle\)</span> as a linear combination of <span class="math inline">\(\vert \alpha\rangle\)</span> and <span class="math inline">\(\vert \beta\rangle\)</span>, and use <a href="#eq-zeqnnum281628" class="quarto-xref">Equation&nbsp;<span>1.11</span></a> <span class="math inline">\(\left\langle {\psi } \mathrel{\left \vert  {\vphantom {\psi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \ge 0\)</span>.</p>
+<p><strong>1.3.</strong> A two-dimensional vector <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> has the following expansion in the basis <span class="math inline">\(\left\{ {\vert {\alpha _1}\rangle ,\vert {\alpha _2}\rangle } \right\}\)</span>:</p>
+<p><span id="eq-ch01-p0246"><span class="math display">\[
+\vert \psi \rangle = \vert {\alpha _1}\rangle + 3\vert {\alpha _2}\rangle
+\tag{1.31}\]</span></span></p>
+<p>A second basis <span class="math inline">\(\left\{ {\vert {\beta _1}\rangle ,\vert {\beta _2}\rangle } \right\}\)</span> satisfies</p>
+<p><span id="eq-ch01-p0248"><span class="math display">\[
+\left\vert  {{\beta _1}} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\vert {\alpha _1}\rangle + i\vert {\alpha _2}\rangle } \right), \qquad  \left\vert  {{\beta _2}} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\vert {\alpha _1}\rangle - i\vert {\alpha _2}\rangle } \right)
+\tag{1.32}\]</span></span></p>
+<p>Find the expansion of <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> in the second basis, using two different methods.</p>
+
+
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>A Stern–Gerlach apparatus directly measures the magnetic moment <span class="math inline">\(\mu\)</span>, with <span class="math inline">\(\mu =\gamma S\)</span>, where <span class="math inline">\(\gamma\)</span> is a constant.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>The force on the particle is <span class="math inline">\({F}_{z}\propto {\sigma }_{z}\frac{\partial {B}_{z}}{\partial z}\)</span>. The <span class="math inline">\(z\)</span> axis is fixed. Reversing the detector along <span class="math inline">\(z\)</span> reverses both the magnetic-field gradient convention and <span class="math inline">\({B}_{z}\)</span>, so the sign of the gradient of <span class="math inline">\({B}_{z}\)</span> remains unchanged. The sign of the particle’s <span class="math inline">\({\sigma }_{z}\)</span> does not depend on detector orientation, so <span class="math inline">\({F}_{z}\)</span> is unchanged and the particle still leaves through the upper exit. However, the exits marked <span class="math inline">\(+1\)</span> and <span class="math inline">\(-1\)</span> have exchanged places, so the particle now exits through <span class="math inline">\(-1\)</span>. We need not know the detector’s internal operation: its scale labels values of <span class="math inline">\({\sigma }_{z}\)</span>. Experiment shows that oppositely oriented detectors assign opposite signs to the same measured quantity.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Preface">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./02-operators.html" class="pagination-link" aria-label="Operators">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Operators</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

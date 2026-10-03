@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>9&nbsp; Coupling Two Angular Momenta – Introduction to Quantum Mechanics</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./10-topics-in-atomic-physics.html" rel="next">
+<link href="./08-angular-momentum.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-631496449bf32ff9b0bb69a6bfd9195d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="assets/mathjax/tex-svg.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./09-coupling-angular-momenta.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Coupling Two Angular Momenta</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Introduction to Quantum Mechanics</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-vectors-and-quantum-states.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Vectors and Quantum States</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Operators</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-quantum-measurement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Quantum Measurement</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-commutation-relations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Commutation Relations of Observables</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-time-evolution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Time Evolution</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-transitions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-continuous-observables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Continuous Observables</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-angular-momentum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Angular Momentum</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-coupling-angular-momenta.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Coupling Two Angular Momenta</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-topics-in-atomic-physics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Topics in Atomic Physics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-appendices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Appendices</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-exercise-solutions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Exercise Solutions</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#composite-vector-spaces-tensor-products" id="toc-composite-vector-spaces-tensor-products" class="nav-link active" data-scroll-target="#composite-vector-spaces-tensor-products"><span class="header-section-number">9.1</span> Composite Vector Spaces (Tensor Products)</a></li>
+  <li><a href="#matrix-representations-in-the-tensor-product-space" id="toc-matrix-representations-in-the-tensor-product-space" class="nav-link" data-scroll-target="#matrix-representations-in-the-tensor-product-space"><span class="header-section-number">9.2</span> Matrix Representations in the Tensor-Product Space</a></li>
+  <li><a href="#the-uncoupled-basis" id="toc-the-uncoupled-basis" class="nav-link" data-scroll-target="#the-uncoupled-basis"><span class="header-section-number">9.3</span> The Uncoupled Basis</a></li>
+  <li><a href="#the-coupled-basis" id="toc-the-coupled-basis" class="nav-link" data-scroll-target="#the-coupled-basis"><span class="header-section-number">9.4</span> The Coupled Basis</a></li>
+  <li><a href="#relating-the-coupled-and-uncoupled-bases" id="toc-relating-the-coupled-and-uncoupled-bases" class="nav-link" data-scroll-target="#relating-the-coupled-and-uncoupled-bases"><span class="header-section-number">9.5</span> Relating the Coupled and Uncoupled Bases</a>
+  <ul class="collapse">
+  <li><a href="#coupling-two-spin-12-particles" id="toc-coupling-two-spin-12-particles" class="nav-link" data-scroll-target="#coupling-two-spin-12-particles"><span class="header-section-number">9.5.1</span> Coupling Two Spin-1/2 Particles</a></li>
+  <li><a href="#spinorbit-coupling" id="toc-spinorbit-coupling" class="nav-link" data-scroll-target="#spinorbit-coupling"><span class="header-section-number">9.5.2</span> Spin–Orbit Coupling</a></li>
+  </ul></li>
+  <li><a href="#calculating-clebschgordan-coefficients" id="toc-calculating-clebschgordan-coefficients" class="nav-link" data-scroll-target="#calculating-clebschgordan-coefficients"><span class="header-section-number">9.6</span> * Calculating Clebsch–Gordan Coefficients</a></li>
+  <li><a href="#exchange-symmetry-of-cg-coefficients" id="toc-exchange-symmetry-of-cg-coefficients" class="nav-link" data-scroll-target="#exchange-symmetry-of-cg-coefficients"><span class="header-section-number">9.7</span> * Exchange Symmetry of CG Coefficients</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">9.8</span> Exercises</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Coupling Two Angular Momenta</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Angular-momentum coupling underlies many phenomena in atomic physics: fine and hyperfine structure, magnetic splitting, and <span class="math inline">\(LS\)</span> and <span class="math inline">\(jj\)</span> coupling in many-electron atoms. It is equally important in nuclear physics. Although often postponed to advanced quantum mechanics, its basic ideas are accessible without the more complicated coefficient formulas. We give a brief introduction here.</p>
+<p>We often encounter observables belonging either to different particles, such as the momenta of two electrons, or to different degrees of freedom of one particle, such as its orbital and spin angular momenta. The observables belong to distinct vector subspaces. Each operator acts only on its own subsystem, so operators belonging to different subsystems commute.</p>
+<section id="composite-vector-spaces-tensor-products" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="composite-vector-spaces-tensor-products"><span class="header-section-number">9.1</span> Composite Vector Spaces (Tensor Products)</h2>
+<p>Consider two angular momenta <span class="math inline">\({{\bf{J}}_1},\;{{\bf{J}}_2}\)</span> belonging to different subspaces: two spins, two orbital angular momenta, or the spin and orbital angular momentum of one particle. With their quantum numbers fixed at <span class="math inline">\({j_1},\;{j_2}\)</span>, how do we describe the state of the composite system? Complete bases for <span class="math inline">\({{\bf{J}}_1},\;{{\bf{J}}_2}\)</span> are <span class="math inline">\(\left\{ {\left\vert  {{j_1},{m_1}} \right\rangle } \right\}\)</span> and <span class="math inline">\(\left\{ {\left\vert  {{j_2},{m_2}} \right\rangle } \right\}\)</span>, containing <span class="math inline">\(2{j_1} + 1\)</span> and <span class="math inline">\(2{j_2} + 1\)</span> basis vectors. One might initially suppose that the total state is always a tensor product of definite subsystem states:</p>
+<p><span id="eq-zeqnnum878336"><span class="math display">\[
+\vert \Psi \rangle = \vert {\psi _1}\rangle \otimes \vert {\psi _2}\rangle \equiv \vert {\psi _1}\rangle \vert {\psi _2}\rangle = \left( {\sum\limits_{{m_1}} {\left\vert  {{j_1}{m_1}} \right\rangle \left\langle {{{j_1}{m_1}}} \mathrel{\left \vert  {\vphantom {{{j_1}{m_1}} {{\psi _1}}}} \right. \kern-1.2pt } {{{\psi _1}}} \right\rangle } } \right)\left( {\sum\limits_{{m_2}} {\left\vert  {{j_2}{m_2}} \right\rangle \left\langle {{{j_2}{m_2}}} \mathrel{\left \vert  {\vphantom {{{j_2}{m_2}} {{\psi _2}}}} \right. \kern-1.2pt } {{{\psi _2}}} \right\rangle } } \right)
+\tag{9.1}\]</span></span></p>
+<p>This description uses <span class="math inline">\((2{j_1} + 1) + (2{j_2} + 1)\)</span> probability amplitudes. Nature, however, allows a more general possibility.</p>
+<p><strong>Quantum Postulate 7:</strong> A basis of a composite vector space consists of tensor products of subsystem basis vectors. Its dimension is the product of the subsystem dimensions.</p>
+<p>For the two angular momenta considered here, the composite basis vectors are</p>
+<p><span id="eq-ch09-p2154"><span class="math display">\[
+\left\vert  {{j_1},{m_1}} \right\rangle \otimes \left\vert  {{j_2},{m_2}} \right\rangle \equiv \left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle \equiv \left\vert  {{j_1}{m_1};{j_2}{m_2}} \right\rangle , \qquad  ( - {j_1} \le {m_1} \le {j_1},\; - {j_2} \le {m_2} \le {j_2})
+\tag{9.2}\]</span></span></p>
+<p>There are <span class="math inline">\((2{j_1} + 1)(2{j_2} + 1)\)</span> such vectors, spanning the <span class="math inline">\((2{j_1} + 1)(2{j_2} + 1)\)</span>-dimensional composite or tensor-product space of <span class="math inline">\({{\bf{J}}_1},\;{{\bf{J}}_2}\)</span>. An arbitrary state in this space expands as</p>
+<p><span id="eq-zeqnnum695918"><span class="math display">\[
+\vert \Psi \rangle = \sum\limits_{{m_1}} {\sum\limits_{{m_2}} {\left\vert  {{j_1}{m_1};{j_2}{m_2}} \right\rangle \left\langle {{{j_1}{m_1};{j_2}{m_2}}} \mathrel{\left \vert  {\vphantom {{{j_1}{m_1};{j_2}{m_2}} \Psi }} \right. \kern-1.2pt } {\Psi } \right\rangle } }
+\tag{9.3}\]</span></span></p>
+<p>This state can require <span class="math inline">\((2{j_1} + 1)(2{j_2} + 1)\)</span> probability amplitudes, so <a href="#eq-zeqnnum695918" class="quarto-xref">Equation&nbsp;<span>9.3</span></a> describes more states than <a href="#eq-zeqnnum878336" class="quarto-xref">Equation&nbsp;<span>9.1</span></a>. A state of the latter form can always be expanded into the former, but the reverse is not always possible. Some states in <a href="#eq-zeqnnum695918" class="quarto-xref">Equation&nbsp;<span>9.3</span></a> cannot be written as a product of two subsystem states. These are entangled states: the total system has a definite pure state, while its subsystems have no individual pure states. For two spin-1/2 particles, <span class="math inline">\(\vert U{\rangle _1}\vert D{\rangle _2} + \vert D{\rangle _1}\vert U{\rangle _2}\)</span> is an example.</p>
+<p>Let <span class="math inline">\({\hat A_1},\left\vert  {{\psi _1}} \right\rangle\)</span> and <span class="math inline">\({\hat A_2},\left\vert  {{\psi _2}} \right\rangle\)</span> denote operators and vectors belonging to subspaces <span class="math inline">\(1\)</span> and 2. In the composite space, each operator acts only on the vector in its own subspace. For example,</p>
+<p><span id="eq-zeqnnum356609"><span class="math display">\[
+\begin{array}{c} \hat J_1^2{{\hat J}_{2z}}\vert {j_1}{m_1};{j_2}{m_2}\rangle \equiv \hat J_1^2{{\hat J}_{2z}}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle = \left( {\hat J_1^2\left\vert  {{j_1},{m_1}} \right\rangle } \right)\left( {{{\hat J}_{2z}}\left\vert  {{j_2},{m_2}} \right\rangle } \right)\\ = {j_1}({j_1} + 1){m_2}{\hbar ^3}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle \end{array}
+\tag{9.4}\]</span></span></p>
+<p><span id="eq-zeqnnum297307"><span class="math display">\[
+\begin{array}{c} \left( {\hat J_1^2 + \hat J_{2z}^2} \right)\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle = \left( {\hat J_1^2\left\vert  {{j_1},{m_1}} \right\rangle } \right)\left\vert  {{j_2},{m_2}} \right\rangle + \left\vert  {{j_1},{m_1}} \right\rangle \left( {\hat J_{2z}^2\left\vert  {{j_2},{m_2}} \right\rangle } \right)\\ = \left[ {{j_1}({j_1} + 1) + m_2^2} \right]{\hbar ^2}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle \end{array}
+\tag{9.5}\]</span></span></p>
+<p>Notice that <span class="math inline">\(\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle = \left\vert  {{j_2},{m_2}} \right\rangle \left\vert  {{j_1},{m_1}} \right\rangle\)</span>. Provided the subsystem labels are retained, changing the written order of the factors does not change the physical state. In calculations, keep a fixed ordering to avoid confusion.</p>
+</section>
+<section id="matrix-representations-in-the-tensor-product-space" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="matrix-representations-in-the-tensor-product-space"><span class="header-section-number">9.2</span> Matrix Representations in the Tensor-Product Space</h2>
+<p>Composite operations can be expressed as matrices using the tensor product (denoted <span class="math inline">\(\otimes\)</span>) and the sum of operators acting on different factors. The rules are illustrated below.</p>
+<p>Suppose the states <span class="math inline">\(\left\vert  {{\psi _1}} \right\rangle ,\;\left\vert  {{\psi _2}} \right\rangle\)</span> in subspaces 1 and 2 have matrix representations</p>
+<p><span id="eq-ch09-p2165"><span class="math display">\[
+\left\vert  {{\psi _1}} \right\rangle = \left( {\begin{array}{*{20}{c}} {{\alpha _1}}\\ {{\beta _1}} \end{array}} \right), \qquad  \qquad  \left\vert  {{\psi _2}} \right\rangle = \left( {\begin{array}{*{20}{c}} {{\alpha _2}}\\ {{\beta _2}} \end{array}} \right)
+\tag{9.6}\]</span></span></p>
+<p>Then in the composite representation,</p>
+<p><span id="eq-ch09-p2167"><span class="math display">\[
+\left\vert  {{\psi _1}} \right\rangle \left\vert  {{\psi _2}} \right\rangle \equiv \left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle = \left( {\begin{array}{*{20}{c}} {{\alpha _1}\left\vert  {{\psi _2}} \right\rangle }\\ {{\beta _1}\left\vert  {{\psi _2}} \right\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{\alpha _1}\left( {\begin{array}{*{20}{c}} {{\alpha _2}}\\ {{\beta _2}} \end{array}} \right)}\\ {{\beta _1}\left( {\begin{array}{*{20}{c}} {{\alpha _2}}\\ {{\beta _2}} \end{array}} \right)} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\begin{array}{*{20}{c}} {{\alpha _1}{\alpha _2}}\\ {{\alpha _1}{\beta _2}} \end{array}}\\ {\begin{array}{*{20}{c}} {{\beta _1}{\alpha _2}}\\ {{\beta _1}{\beta _2}} \end{array}} \end{array}} \right)
+\tag{9.7}\]</span></span></p>
+<p>Suppose the operators <span class="math inline">\({\hat A_1},\;{\hat A_2}\)</span> have the following matrices in subspaces 1 and 2:</p>
+<p><span id="eq-ch09-p2169"><span class="math display">\[
+{\hat A_1} = \left( {\begin{array}{*{20}{c}} {{a_1}}&amp;{{b_1}}\\ {{c_1}}&amp;{{d_1}} \end{array}} \right), \qquad  \qquad  {\hat A_2} = \left( {\begin{array}{*{20}{c}} {{a_2}}&amp;{{b_2}}\\ {{c_2}}&amp;{{d_2}} \end{array}} \right),
+\tag{9.8}\]</span></span></p>
+<p>In the composite representation,</p>
+<p><span class="math inline">\({\hat A_1} \otimes {\hat A_2}\)</span>: tensor product.</p>
+<p><span id="eq-ch09-p2172"><span class="math display">\[
+{\hat A_1} \otimes {\hat A_2} = \left( {\begin{array}{*{20}{c}} {{a_1}{{\hat A}_2}}&amp;{{b_1}{{\hat A}_2}}\\ {{c_1}{{\hat A}_2}}&amp;{{d_1}{{\hat A}_2}} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\begin{array}{*{20}{c}} {{a_1}{a_2}}&amp;{{a_1}{b_2}}\\ {{a_1}{c_2}}&amp;{{a_1}{d_2}} \end{array}}&amp;{\begin{array}{*{20}{c}} {{b_1}{a_2}}&amp;{{b_1}{b_2}}\\ {{b_1}{c_2}}&amp;{{b_1}{d_2}} \end{array}}\\ {\begin{array}{*{20}{c}} {{c_1}{a_2}}&amp;{{c_1}{b_2}}\\ {{c_1}{c_2}}&amp;{{c_1}{d_2}} \end{array}}&amp;{\begin{array}{*{20}{c}} {{d_1}{a_2}}&amp;{{d_1}{b_2}}\\ {{d_1}{c_2}}&amp;{{d_1}{d_2}} \end{array}} \end{array}} \right)
+\tag{9.9}\]</span></span></p>
+<p><span class="math inline">\({\hat A_1} + {\hat A_2}\)</span>: sum in the composite space.</p>
+<p>Since the spaces of <span class="math inline">\({\hat A_1},\;{\hat A_2}\)</span> need not have equal dimensions, <span class="math inline">\({\hat A_1} + {\hat A_2}\)</span> is not a simple element-by-element matrix sum. The notation <span class="math inline">\({\hat A_1} + {\hat A_2}\)</span> means</p>
+<p><span id="eq-ch09-p2175"><span class="math display">\[
+\begin{array}{c} {{\hat A}_1} + {{\hat A}_2} \equiv {{\hat A}_1} \otimes {{\hat I}_2} + {{\hat I}_1} \otimes {{\hat A}_2}\\ {\rm{ = }}\left( {\begin{array}{*{20}{c}} {{a_1}}&amp;0&amp;{{b_1}}&amp;0\\ 0&amp;{{a_1}}&amp;0&amp;{{b_1}}\\ {{c_1}}&amp;0&amp;{{d_1}}&amp;0\\ 0&amp;{{c_1}}&amp;0&amp;{{d_1}} \end{array}} \right) + \left( {\begin{array}{*{20}{c}} {{a_2}}&amp;0&amp;{{b_2}}&amp;0\\ 0&amp;{{a_2}}&amp;0&amp;{{b_2}}\\ {{c_2}}&amp;0&amp;{{d_2}}&amp;0\\ 0&amp;{{c_2}}&amp;0&amp;{{d_2}} \end{array}} \right)\\ = \left( {\begin{array}{*{20}{c}} {{a_1} + {a_2}}&amp;0&amp;{{b_1} + {b_2}}&amp;0\\ 0&amp;{{a_1} + {a_2}}&amp;0&amp;{{b_1} + {b_2}}\\ {{c_1} + {c_2}}&amp;0&amp;{{d_1} + {d_2}}&amp;0\\ 0&amp;{{c_1} + {c_2}}&amp;0&amp;{{d_1} + {d_2}} \end{array}} \right) \end{array}
+\tag{9.10}\]</span></span></p>
+<p>In this example, subspaces 1 and 2 happen to have equal dimensions. The tensor-product and composite-sum rules also apply when their dimensions differ.</p>
+<p>These matrix rules readily imply</p>
+<p><span id="eq-ch09-p2178"><span class="math display">\[
+\left( {{{\hat A}_1} \otimes {{\hat A}_2}} \right)\left( {\left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle } \right) = \left( {{{\hat A}_1}\left\vert  {{\psi _1}} \right\rangle } \right) \otimes \left( {{{\hat A}_2}\left\vert  {{\psi _2}} \right\rangle } \right)
+\tag{9.11}\]</span></span></p>
+<p><span id="eq-ch09-p2179"><span class="math display">\[
+\begin{array}{c} \left( {{{\hat A}_1} + {{\hat A}_2}} \right)\left( {\left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle } \right) = \left( {{{\hat A}_1} \otimes {{\hat I}_2} + {{\hat I}_1} \otimes {{\hat A}_2}} \right)\left( {\left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle } \right)\\ = \left( {{{\hat A}_1} \otimes {{\hat I}_2}} \right)\left( {\left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle } \right) + \left( {{{\hat I}_1} \otimes {{\hat A}_2}} \right)\left( {\left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle } \right)\\ = {{\hat A}_1}\left\vert  {{\psi _1}} \right\rangle \otimes {{\hat I}_2}\left\vert  {{\psi _2}} \right\rangle + {{\hat I}_1}\left\vert  {{\psi _1}} \right\rangle \otimes {{\hat A}_2}\left\vert  {{\psi _2}} \right\rangle \\ = {{\hat A}_1}\left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle + \left\vert  {{\psi _1}} \right\rangle \otimes {{\hat A}_2}\left\vert  {{\psi _2}} \right\rangle \end{array}
+\tag{9.12}\]</span></span></p>
+<p>In retrospect, the operation in <a href="#eq-zeqnnum356609" class="quarto-xref">Equation&nbsp;<span>9.4</span></a> suppresses the symbol <span class="math inline">\(\otimes\)</span>. Its explicit form is</p>
+<p><span id="eq-ch09-p2181"><span class="math display">\[
+\left( {\hat J_1^2 \otimes {{\hat J}_{2z}}} \right)\left( {\left\vert  {{j_1},{m_1}} \right\rangle \otimes \left\vert  {{j_2},{m_2}} \right\rangle } \right) = \left( {\hat J_1^2\left\vert  {{j_1},{m_1}} \right\rangle } \right) \otimes \left( {{{\hat J}_{2z}}\left\vert  {{j_2},{m_2}} \right\rangle } \right)
+\tag{9.13}\]</span></span></p>
+<p>Likewise, the explicit form of <a href="#eq-zeqnnum297307" class="quarto-xref">Equation&nbsp;<span>9.5</span></a> is</p>
+<p><span id="eq-ch09-p2183"><span class="math display">\[
+\left( {\hat J_1^2 \otimes {{\hat I}_2} + {{\hat I}_1} \otimes \hat J_{2z}^2} \right)\left( {\left\vert  {{j_1},{m_1}} \right\rangle \otimes \left\vert  {{j_2},{m_2}} \right\rangle } \right) = \left( {\hat J_1^2\left\vert  {{j_1},{m_1}} \right\rangle } \right) \otimes \left\vert  {{j_2},{m_2}} \right\rangle + \left\vert  {{j_1},{m_1}} \right\rangle \otimes \left( {\hat J_{2z}^2\left\vert  {{j_2},{m_2}} \right\rangle } \right)
+\tag{9.14}\]</span></span></p>
+<p>We shall continue to omit <span class="math inline">\(\otimes\)</span> for simplicity, provided each operator acts only on its own subsystem’s vector.</p>
+</section>
+<section id="the-uncoupled-basis" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="the-uncoupled-basis"><span class="header-section-number">9.3</span> The Uncoupled Basis</h2>
+<p>For two angular momenta <span class="math inline">\({{\bf{J}}_1},\;{{\bf{J}}_2}\)</span> in different subspaces, with magnitudes specified by <span class="math inline">\({j_1},\;{j_2}\)</span>, the following four operators commute pairwise:</p>
+<p><span id="eq-zeqnnum597965"><span class="math display">\[
+\left[ {{\bf{\hat J}}_1^2,\;{{\hat J}_{1z}},\;{\bf{\hat J}}_2^2{\rm{,}}\;{\rm{ }}{{\hat J}_{2z}}} \right] = 0
+\tag{9.15}\]</span></span></p>
+<p>Their simultaneous eigenstates <span class="math inline">\(\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle\)</span> form the uncoupled basis, also written <span class="math inline">\(\left\vert  {{j_1}{j_2}{m_1}{m_2}} \right\rangle\)</span> or, more briefly, <span class="math inline">\(\vert {m_1},{m_2}\rangle\)</span>.</p>
+<p><span id="eq-ch09-p2189"><span class="math display">\[
+\begin{array}{l} {\bf{\hat J}}_1^2\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle = {j_1}({j_1} + 1){\hbar ^2}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle \\ {\bf{\hat J}}_2^2\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle = {j_2}({j_2} + 1){\hbar ^2}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle \\ {{\hat J}_{1z}}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle = {m_1}\hbar \left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle , &amp; {m_1} = {j_1},{j_1} - 1, \cdots , - {j_1}\\ {{\hat J}_{2z}}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle = {m_2}\hbar \left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle , &amp; {m_2} = {j_2},{j_2} - 1, \cdots , - {j_2} \end{array}
+\tag{9.16}\]</span></span></p>
+</section>
+<section id="the-coupled-basis" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="the-coupled-basis"><span class="header-section-number">9.4</span> The Coupled Basis</h2>
+<p>A vector space has more than one possible basis, and so does a composite space. Besides the uncoupled basis, the composite space of <span class="math inline">\({{\bf{J}}_1},\;{{\bf{J}}_2}\)</span> has another especially useful basis: the coupled basis.</p>
+<p>First define the total angular momentum <span class="math inline">\({\bf{\hat J}} \equiv {{\bf{\hat J}}_1} + {{\bf{\hat J}}_2}\)</span> by its three components:</p>
+<p><span id="eq-zeqnnum643050"><span class="math display">\[
+{\hat J_z} \equiv {\hat J_{1z}} + {\hat J_{2z}}, \qquad  {\hat J_x} \equiv {\hat J_{1x}} + {\hat J_{2x}}, \qquad  {\hat J_y} \equiv {\hat J_{1y}} + {\hat J_{2y}}
+\tag{9.17}\]</span></span></p>
+<p>The total ladder operators are therefore</p>
+<p><span id="eq-ch09-p2195"><span class="math display">\[
+{\hat J_ \pm } \equiv {\hat J_x} \pm i{\hat J_y} = \left( {{{\hat J}_{1x}} \pm i{{\hat J}_{1y}}} \right) + \left( {{{\hat J}_{2x}} \pm i{{\hat J}_{2y}}} \right) = {\hat J_{1 \pm }} + {\hat J_{2 \pm }}
+\tag{9.18}\]</span></span></p>
+<p>The squared total angular momentum <span class="math inline">\({{\bf{\hat J}}^2}\)</span> is</p>
+<p><span id="eq-zeqnnum961018"><span class="math display">\[
+{{\bf{\hat J}}^2} = {\left( {{{{\bf{\hat J}}}_1} + {{{\bf{\hat J}}}_2}} \right)^2} = {\bf{\hat J}}_1^2 + {\bf{\hat J}}_2^2 + 2{{\bf{\hat J}}_1} \cdot {{\bf{\hat J}}_2} = \hat J_x^2 + \hat J_y^2 + \hat J_z^2
+\tag{9.19}\]</span></span></p>
+<p>These definitions imply that <span class="math inline">\({\bf{\hat J}}\)</span> satisfies the defining angular-momentum relations:</p>
+<p><span id="eq-ch09-p2199"><span class="math display">\[
+\left[ {{{\hat J}_x},{{\hat J}_y}} \right] = i\hbar {\hat J_z}, \qquad  \qquad  \left[ {{{{\bf{\hat J}}}^2},{{\hat J}_z}} \right] = 0
+\tag{9.20}\]</span></span></p>
+<p>We can also prove, as an exercise, that</p>
+<p><span id="eq-ch09-p2201"><span class="math display">\[
+\left[ {{{\hat J}_z},{\mathbf{\hat J}}_1^2} \right] = \left[ {{{\hat J}_z},{\mathbf{\hat J}}_2^2} \right] = 0, \qquad  \qquad  \left[ {{{{\mathbf{\hat J}}}^2},{\mathbf{\hat J}}_1^2} \right] = \left[ {{{{\mathbf{\hat J}}}^2},{\mathbf{\hat J}}_2^2} \right] = 0
+\tag{9.21}\]</span></span></p>
+<p>This gives a new set of four pairwise commuting operators:</p>
+<p><span id="eq-zeqnnum733299"><span class="math display">\[
+\left[ {{\bf{\hat J}}_1^2,{\bf{\hat J}}_2^2,{{{\bf{\hat J}}}^2},{{\hat J}_z}} \right] = 0
+\tag{9.22}\]</span></span></p>
+<p>Their simultaneous eigenstates form the coupled basis, usually denoted <span class="math inline">\(\left\vert  {{j_1}{j_2}jm} \right\rangle\)</span> or, briefly, <span class="math inline">\(\vert j,m\rangle\)</span>.</p>
+<p><span id="eq-ch09-p2205"><span class="math display">\[
+\begin{array}{l} {\bf{\hat J}}_1^2\left\vert  {{j_1}{j_2}jm} \right\rangle = {j_1}({j_1} + 1){\hbar ^2}\left\vert  {{j_1}{j_2}jm} \right\rangle \\ {\bf{\hat J}}_2^2\left\vert  {{j_1}{j_2}jm} \right\rangle = {j_2}({j_2} + 1){\hbar ^2}\left\vert  {{j_1}{j_2}jm} \right\rangle \\ {{{\bf{\hat J}}}^2}\left\vert  {{j_1}{j_2}jm} \right\rangle = j(j + 1){\hbar ^2}\left\vert  {{j_1}{j_2}jm} \right\rangle \\ {{\hat J}_z}\left\vert  {{j_1}{j_2}jm} \right\rangle = m\hbar \left\vert  {{j_1}{j_2}jm} \right\rangle \end{array}
+\tag{9.23}\]</span></span></p>
+<p>Without giving the full proof, let us examine the allowed values of <span class="math inline">\(j\)</span>. First, for <span class="math inline">\({{\bf{J}}_1}\)</span> and <span class="math inline">\({{\bf{J}}_2}\)</span>,</p>
+<p><span id="eq-ch09-p2207"><span class="math display">\[
+- {j_1} \le {m_1} \le {j_1},\;\; \qquad  - {j_2} \le {m_2} \le {j_2}
+\tag{9.24}\]</span></span></p>
+<p>Conservation of angular momentum requires <span class="math inline">\(m = {m_1} + {m_2}\)</span>, so</p>
+<p><span id="eq-zeqnnum783552"><span class="math display">\[
+- {j_1} \le m - {m_2} \le {j_1},\; \qquad  - {j_2} \le m - {m_1} \le {j_2}
+\tag{9.25}\]</span></span></p>
+<p>General angular-momentum theory requires each <span class="math inline">\(j\)</span> to have <span class="math inline">\(2j + 1\)</span> values of <span class="math inline">\(m\)</span>, namely <span class="math inline">\(m = - j,\; - j + 1,\; \cdots ,\;j - 1,\;j\)</span>. Substituting the maximum value of <span class="math inline">\(m,{m_1},{m_2}\)</span> into <a href="#eq-zeqnnum783552" class="quarto-xref">Equation&nbsp;<span>9.25</span></a> gives</p>
+<p><span id="eq-ch09-p2211"><span class="math display">\[
+- {j_1} \le j - {j_2} \le {j_1},\; \qquad  \qquad  - {j_2} \le j - {j_1} \le {j_2}
+\tag{9.26}\]</span></span></p>
+<p>That is,</p>
+<p><span id="eq-ch09-p2213"><span class="math display">\[
+{j_2} - {j_1} \le j \le {j_1} + {j_2},\; \qquad  {j_1} - {j_2} \le j \le {j_1} + {j_2}
+\tag{9.27}\]</span></span></p>
+<p>Both inequalities must hold, so the allowed range of <span class="math inline">\(j\)</span> is</p>
+<p><span id="eq-zeqnnum838538"><span class="math display">\[
+\left\vert  {{j_1} - {j_2}} \right\vert  \le j \le {j_1} + {j_2}
+\tag{9.28}\]</span></span></p>
+<p>The same result follows intuitively from vector addition.</p>
+<p>Equation <a href="#eq-zeqnnum838538" class="quarto-xref">Equation&nbsp;<span>9.28</span></a> specifies the range of <span class="math inline">\(j\)</span>. For each <span class="math inline">\(j\)</span>, the total magnetic quantum number <span class="math inline">\(m\)</span> has <span class="math inline">\(2j + 1\)</span> values. Assuming <span class="math inline">\({j_1} &gt; {j_2}\)</span>, the number of coupled basis vectors is</p>
+<p><span id="eq-ch09-p2218"><span class="math display">\[
+\sum\limits_{j = {j_1} - {j_2}}^{{j_1} + {j_2}} {2j + 1} = (2{j_1} + 1)(2{j_2} + 1)
+\tag{9.29}\]</span></span></p>
+<p>This equals the number of uncoupled basis vectors, as it must: both are bases of the same composite space.</p>
+<p>Notice that although <span class="math inline">\([{\hat J_z}{\rm{,}}\;{\hat J_{1z}}] = 0,\;\;[{\hat J_z}{\rm{,}}\;{\hat J_{2z}}] = 0\)</span>, we have <span class="math inline">\([{{\bf{\hat J}}^2}{\rm{,}}\;{\hat J_{1z}}] \ne 0,\;\;[{{\bf{\hat J}}^2}{\rm{,}}\;{\hat J_{2z}}] \ne 0\)</span>. Thus we cannot simultaneously specify <span class="math inline">\({{\bf{\hat J}}^2}\)</span> and both <span class="math inline">\({\hat J_{1z}}\)</span> and <span class="math inline">\({\hat J_{2z}}\)</span>.</p>
+</section>
+<section id="relating-the-coupled-and-uncoupled-bases" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="relating-the-coupled-and-uncoupled-bases"><span class="header-section-number">9.5</span> Relating the Coupled and Uncoupled Bases</h2>
+<p>Completeness allows us to expand a coupled basis vector in the uncoupled basis:</p>
+<p><span id="eq-zeqnnum358642"><span class="math display">\[
+\left\vert  {{j_1}{j_2}jm} \right\rangle = \sum\limits_{{m_1} = - {j_1}}^{{j_1}} {\sum\limits_{{m_2} = - {j_2}}^{{j_2}} {\left\vert  {{j_1}{m_1};{j_2}{m_2}} \right\rangle \left\langle {{{j_1}{m_1};{j_2}{m_2}}} \mathrel{\left \vert  {\vphantom {{{j_1}{m_1};{j_2}{m_2}} {{j_1}{j_2}jm}}} \right. \kern-1.2pt } {{{j_1}{j_2}jm}} \right\rangle } }
+\tag{9.30}\]</span></span></p>
+<p>Conversely, an uncoupled basis vector expands in the coupled basis as</p>
+<p><span id="eq-zeqnnum779006"><span class="math display">\[
+\left\vert  {{j_1}{m_1};{j_2}{m_2}} \right\rangle = \sum\limits_{j = \left\vert  {{j_1} - {j_2}} \right\vert }^{{j_1} + {j_2}} {\sum\limits_{m = - j}^j {\left\vert  {{j_1}{j_2}jm} \right\rangle \left\langle {{{j_1}{j_2}jm}} \mathrel{\left \vert  {\vphantom {{{j_1}{j_2}jm} {{j_1}{m_1};{j_2}{m_2}}}} \right. \kern-1.2pt } {{{j_1}{m_1};{j_2}{m_2}}} \right\rangle } }
+\tag{9.31}\]</span></span></p>
+<p>The transformation coefficients <span class="math inline">\(\left\langle {{{j_1}{m_1};{j_2}{m_2}}} \mathrel{\left \vert  {\vphantom {{{j_1}{m_1};{j_2}{m_2}} {{j_1}{j_2}jm}}} \right. \kern-1.2pt } {{{j_1}{j_2}jm}} \right\rangle\)</span> are called Clebsch–Gordan (CG) coefficients. Their calculation is discussed below. For now, note these properties:</p>
+<ol type="1">
+<li><p>CG coefficients are defined only for <span class="math inline">\(\left\vert  {{j_1} - {j_2}} \right\vert  \le j \le {j_1} + {j_2}\)</span> and <span class="math inline">\(- j \le m \le \;j,\; - {j_2} \le m \le \;{j_2},\; - {j_2} \le {m_2} \le \;{j_2}\)</span>.</p></li>
+<li><p>They can be nonzero only when <span class="math inline">\(m = {m_1} + {m_2}\)</span>, expressing conservation of angular momentum.</p></li>
+<li><p>The overall phase is conventional and is chosen so that all CG coefficients are real.</p></li>
+</ol>
+<p>Let us prove the second property.</p>
+<p><strong>Theorem 9.1.</strong> If <span class="math inline">\(m \ne {m_1} + {m_2}\)</span>, the CG coefficient vanishes.</p>
+<ul>
+<li>Proof: Since <span class="math inline">\(({\hat J_z} - {\hat J_{1z}} - {\hat J_{2z}})\left\vert  {{j_1}{j_2}jm} \right\rangle = 0\)</span>,</li>
+</ul>
+<p><span id="eq-ch09-p2233"><span class="math display">\[
+\begin{array}{c} \left\langle {{j_1}{m_1};{j_2}{m_2}} \right\vert \left( {{{\hat J}_z} - {{\hat J}_{1z}} - {{\hat J}_{2z}}} \right)\left\vert  {{j_1}{j_2}jm} \right\rangle = 0\\ \left\langle {{j_1}{m_1};{j_2}{m_2}} \right\vert {{\hat J}_z}\left\vert  {{j_1}{j_2}jm} \right\rangle - \left\langle {{j_1}{m_1};{j_2}{m_2}} \right\vert {{\hat J}_1}\left\vert  {{j_1}{j_2}jm} \right\rangle - \left\langle {{j_1}{m_1};{j_2}{m_2}} \right\vert {{\hat J}_2}\left\vert  {{j_1}{j_2}jm} \right\rangle = 0\\ \left( {m - {m_1} - {m_2}} \right)\left\langle {{{j_1}{m_1};{j_2}{m_2}}} \mathrel{\left \vert  {\vphantom {{{j_1}{m_1};{j_2}{m_2}} {{j_1}{j_2}jm}}} \right. \kern-1.2pt } {{{j_1}{j_2}jm}} \right\rangle = 0 \end{array}
+\tag{9.32}\]</span></span></p>
+<p>Thus <span class="math inline">\(\left\langle {{{j_1}{m_1};{j_2}{m_2}}} \mathrel{\left \vert  {\vphantom {{{j_1}{m_1};{j_2}{m_2}} {{j_1}{j_2}jm}}} \right. \kern-1.2pt } {{{j_1}{j_2}jm}} \right\rangle\)</span> can be nonzero only when <span class="math inline">\(m = {m_1} + {m_2}\)</span>.</p>
+<p>Consequently, in <a href="#eq-zeqnnum358642" class="quarto-xref">Equation&nbsp;<span>9.30</span></a> we need sum over only one of <span class="math inline">\({m_1}\)</span> and <span class="math inline">\({m_2}\)</span>, since the other is not independent. The equation simplifies to</p>
+<p><span id="eq-ch09-p2236"><span class="math display">\[
+\left\vert  {{j_1}{j_2}jm} \right\rangle = \sum\limits_{{m_1} = - {j_1}}^{{j_1}} {\vert {j_1}{m_1};{j_2}m - {m_1}\rangle \langle {j_1}{m_1};{j_2}m - {m_1}\vert {j_1}{j_2}jm\rangle }
+\tag{9.33}\]</span></span></p>
+<p>Similarly, <a href="#eq-zeqnnum779006" class="quarto-xref">Equation&nbsp;<span>9.31</span></a> simplifies to</p>
+<p><span id="eq-ch09-p2238"><span class="math display">\[
+\left\vert  {{j_1}{m_1};{j_2}{m_2}} \right\rangle = \sum\limits_{j = \vert {j_1} - {j_2}\vert }^{{j_1} + {j_2}} {\vert {j_1}{j_2}j,{m_1} + {m_2}\rangle \langle {j_1}{j_2}j,{m_1} + {m_2}\vert {j_1}{m_1};{j_2}{m_2}\rangle }
+\tag{9.34}\]</span></span></p>
+<p>For brevity, we shall often write the coupled vector <span class="math inline">\(\left\vert  {{j_1}{j_2}jm} \right\rangle\)</span> as <span class="math inline">\(\left\vert  {j,m} \right\rangle\)</span>, and the uncoupled vector <span class="math inline">\(\left\vert  {{j_1}{m_1};{j_2}{m_2}} \right\rangle\)</span> as <span class="math inline">\(\left\vert  {{m_1};{m_2}} \right\rangle\)</span>. A semicolon separates the two quantum numbers in the uncoupled notation, whereas a comma separates them in the coupled notation.</p>
+<section id="coupling-two-spin-12-particles" class="level3" data-number="9.5.1">
+<h3 data-number="9.5.1" class="anchored" data-anchor-id="coupling-two-spin-12-particles"><span class="header-section-number">9.5.1</span> Coupling Two Spin-1/2 Particles</h3>
+<p>Consider two spin-1/2 particles, <span class="math inline">\({j_1} = {j_2} = {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}\)</span>. How are the coupled and uncoupled bases related?</p>
+<p>First list the uncoupled basis vectors in the notation <span class="math inline">\(\left\vert  {{m_1};{m_2}} \right\rangle\)</span>:</p>
+<p><span id="eq-ch09-p2243"><span class="math display">\[
+\left\vert  {\frac{1}{2};\frac{1}{2}} \right\rangle ,\;\;\;\;\;\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle ,\;\;\;\;\;\left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle ,\;\;\;\;\;\left\vert  { - \frac{1}{2}; - \frac{1}{2}} \right\rangle
+\tag{9.35}\]</span></span></p>
+<p>Next list the coupled basis vectors in the notation <span class="math inline">\(\left\vert  {j,m} \right\rangle\)</span>. From <a href="#eq-zeqnnum838538" class="quarto-xref">Equation&nbsp;<span>9.28</span></a>, <span class="math inline">\(j = 1,0\)</span>:</p>
+<p><span id="eq-ch09-p2245"><span class="math display">\[
+\left\vert  {1,1} \right\rangle ,\;\;\;\;\;\left\vert  {1,0} \right\rangle ,\;\;\;\;\;\left\vert  {1, - 1} \right\rangle ,\;\;\;\;\;\left\vert  {0,0} \right\rangle
+\tag{9.36}\]</span></span></p>
+<p>The three states with <span class="math inline">\(j = 1\)</span> form a triplet, while the one state with <span class="math inline">\(j = 0\)</span> is a singlet. Using <a href="#eq-zeqnnum358642" class="quarto-xref">Equation&nbsp;<span>9.30</span></a> and the CG coefficients calculated below, the coupled states expand as</p>
+<p><span id="eq-zeqnnum909689"><span class="math display">\[
+\begin{array}{c} \left\vert  {j,m} \right\rangle = \sum\nolimits_{{m_1},{m_2}} {\left\vert  {{m_1};{m_2}} \right\rangle \left\langle {{{m_1};{m_2}}} \mathrel{\left \vert  {\vphantom {{{m_1};{m_2}} {j,m}}} \right. \kern-1.2pt } {{j,m}} \right\rangle } \\ \begin{array}{*{20}{l}} \begin{array}{c} \left\vert  {1,1} \right\rangle = \left\vert  {\frac{1}{2};\frac{1}{2}} \right\rangle \\ \left\vert  {1,0} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle + \;\left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle } \right)\;,\;\;\;\\ \left\vert  {1, - 1} \right\rangle = \left\vert  { - \frac{1}{2}; - \frac{1}{2}} \right\rangle \; \end{array}&amp;{\left\vert  {0,0} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle - \left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle } \right)} \end{array} \end{array}
+\tag{9.37}\]</span></span></p>
+<p>Because <span class="math inline">\(m = {m_1} + {m_2}\)</span>, and since <span class="math inline">\({m_1} \le {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}\)</span> and <span class="math inline">\({m_2} \le {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}\)</span>, the uncoupled expansion of <span class="math inline">\(\left\vert  {1,1} \right\rangle\)</span> contains only the term in which both <span class="math inline">\({m_1},{m_2}\)</span> are maximal. Similarly, <span class="math inline">\(\left\vert  {1, - 1} \right\rangle\)</span> contains only the term in which both <span class="math inline">\({m_1},{m_2}\)</span> are minimal. The state <span class="math inline">\(\left\vert  {1,0} \right\rangle\)</span> must be a linear combination of <span class="math inline">\(\left\vert  {{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}; - {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}} \right\rangle\)</span> and <span class="math inline">\(\left\vert  { - {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2};{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}} \right\rangle\)</span>, and <span class="math inline">\(\left\vert  {0,0} \right\rangle\)</span> a linear combination of <span class="math inline">\(\left\vert  {{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}; - {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}} \right\rangle\)</span> and <span class="math inline">\(\left\vert  { - {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2};{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}} \right\rangle\)</span>. Why does the difference between the expansions of <span class="math inline">\(\left\vert  {1,0} \right\rangle\)</span> and <span class="math inline">\(\left\vert  {0,0} \right\rangle\)</span> give different <span class="math inline">\(j\)</span>? Measuring <span class="math inline">\({\hat J_z} = {\hat J_{1z}} + {\hat J_{2z}}\)</span> in either state produces <span class="math inline">\(\left\vert  {{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}; - {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}} \right\rangle\)</span> or <span class="math inline">\(\left\vert  {{{ - 1} \mathord{\left/ {\vphantom {{ - 1} 2}} \right. \kern-1.2pt } 2};{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}} \right\rangle\)</span> with equal 50% probabilities. The measured values of <span class="math inline">\({\hat J_{1z}},{\hat J_{2z}}\)</span> are opposite, so <span class="math inline">\({\hat J_z}\)</span> is <span class="math inline">\(0\)</span>. To see the difference, express <span class="math inline">\(\left\vert  {1,0} \right\rangle\)</span> and <span class="math inline">\(\left\vert  {0,0} \right\rangle\)</span> in the <span class="math inline">\({\hat J_{1x}} \otimes {\hat J_{2x}}\)</span> product representation. Using <a href="03-quantum-measurement.html#eq-zeqnnum667352" class="quarto-xref">Equation&nbsp;<span>3.20</span></a>,</p>
+<p><span id="eq-zeqnnum419967"><span class="math display">\[
+\begin{array}{c} \left\vert  {1,0} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle + \;\left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle } \right) \equiv \frac{1}{{\sqrt 2 }}\left( {\left\vert  U \right\rangle \left\vert  D \right\rangle + \left\vert  D \right\rangle \;\left\vert  U \right\rangle } \right)\\ = \frac{1}{{\sqrt 2 }}\left[ {\frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle + \left\vert  L \right\rangle } \right)\frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle - \left\vert  L \right\rangle } \right) + \frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle - \left\vert  L \right\rangle } \right)\frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle + \left\vert  L \right\rangle } \right)} \right]\\ = \frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle \left\vert  R \right\rangle - \left\vert  L \right\rangle \left\vert  L \right\rangle } \right) \end{array}
+\tag{9.38}\]</span></span></p>
+<p>Keep the order of the two ket factors fixed throughout the calculation. From <a href="#eq-zeqnnum419967" class="quarto-xref">Equation&nbsp;<span>9.38</span></a>, measuring <span class="math inline">\({\hat J_x} = {\hat J_{1x}} + {\hat J_{2x}}\)</span> in <span class="math inline">\(\left\vert  {1,0} \right\rangle\)</span> yields <span class="math inline">\(\vert R\rangle \vert R\rangle\)</span> or <span class="math inline">\(\vert L\rangle \vert L\rangle\)</span>, each with probability <span class="math inline">\(50\%\)</span>. In the former, both <span class="math inline">\({\hat J_{1x}},{\hat J_{2x}}\)</span> equal <span class="math inline">\(\hbar /2\)</span> and <span class="math inline">\({\hat J_x}\)</span> is <span class="math inline">\(\hbar\)</span>; in the latter, both <span class="math inline">\({\hat J_{1x}},{\hat J_{2x}}\)</span> equal <span class="math inline">\(-\hbar /2\)</span> and <span class="math inline">\({\hat J_x}\)</span> is <span class="math inline">\(-\hbar\)</span>. Likewise, in <span class="math inline">\(\left\vert  {1,0} \right\rangle\)</span>, <span class="math inline">\({\hat J_y}\)</span> takes the values <span class="math inline">\(\pm \hbar\)</span> with equal 50% probabilities. Thus, in <span class="math inline">\(\left\vert  {1,0} \right\rangle\)</span>, the two z components are opposite, but the <span class="math inline">\(x\)</span> or <span class="math inline">\(y\)</span> components are always equal.</p>
+<p>Similarly, expand <span class="math inline">\(\left\vert  {0,0} \right\rangle\)</span> in the <span class="math inline">\({\hat J_{1x}} \otimes {\hat J_{2x}}\)</span> product representation:</p>
+<p><span id="eq-ch09-p2252"><span class="math display">\[
+\left\vert  {0,0} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\vert R\rangle \vert L\rangle - \vert L\rangle \vert R\rangle } \right)
+\tag{9.39}\]</span></span></p>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="assets/image2067.png" class="img-fluid" width="440"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="assets/image2068.png" class="img-fluid" width="440"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="assets/image2069.png" class="img-fluid" width="440"></p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="assets/image2070.png" class="img-fluid" width="440"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="assets/image2071.png" class="img-fluid" width="440"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="assets/image2072.png" class="img-fluid" width="440"></p>
+</div>
+</div>
+</div>
+<p>Figure 9.1. Vector illustrations of the triplet and singlet formed by coupling two spin-1/2 particles. Each individual vector has an uncertain direction, but the directions are correlated. Dashed lines show the range of possible directions. The vector-addition sketches are reproduced from Yang Fujia, <em>Atomic Physics</em>.</p>
+<p>Measuring <span class="math inline">\({\hat J_x} = {\hat J_{1x}} + {\hat J_{2x}}\)</span> in <span class="math inline">\(\left\vert  {0,0} \right\rangle\)</span> gives <span class="math inline">\(\vert R\rangle \vert L\rangle\)</span> or <span class="math inline">\(\vert L\rangle \vert R\rangle\)</span>, each with probability <span class="math inline">\(50\%\)</span>. The values of <span class="math inline">\({\hat J_{1x}}\)</span> and <span class="math inline">\({\hat J_{2x}}\)</span> are always opposite, so <span class="math inline">\({\hat J_x}\)</span> is always zero. Likewise, <span class="math inline">\({\hat J_y}\)</span> is always zero. Thus, in <span class="math inline">\(\left\vert  {0,0} \right\rangle\)</span>, the two angular-momentum components are opposite along every direction.</p>
+</section>
+<section id="spinorbit-coupling" class="level3" data-number="9.5.2">
+<h3 data-number="9.5.2" class="anchored" data-anchor-id="spinorbit-coupling"><span class="header-section-number">9.5.2</span> Spin–Orbit Coupling</h3>
+<p>An atomic electron has intrinsic spin <span class="math inline">\({\bf{S}}\)</span> and may also have orbital angular momentum <span class="math inline">\({\bf{L}}\)</span> of definite magnitude. Its spin quantum number is always <span class="math inline">\({1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}\)</span>. If the orbital quantum number is <span class="math inline">\(l = 0\)</span>, the total angular-momentum quantum number <span class="math inline">\(j\)</span> has just one value, <span class="math inline">\(j = {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}\)</span>. If <span class="math inline">\(l &gt; 0\)</span>, there are two possible values of <span class="math inline">\(j\)</span>:</p>
+<p><span id="eq-ch09-p2257"><span class="math display">\[
+j = l \pm \frac{1}{2}
+\tag{9.40}\]</span></span></p>
+</section>
+</section>
+<section id="calculating-clebschgordan-coefficients" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="calculating-clebschgordan-coefficients"><span class="header-section-number">9.6</span> * Calculating Clebsch–Gordan Coefficients</h2>
+<p>The overall phase of CG coefficients is conventional. We choose the phase convention in which they are real:</p>
+<p><span id="eq-ch09-p2260"><span class="math display">\[
+\left\langle {{{j_1}{m_1};{j_2}{m_2}}} \mathrel{\left \vert  {\vphantom {{{j_1}{m_1};{j_2}{m_2}} {{j_1}{j_2}jm}}} \right. \kern-1.2pt } {{{j_1}{j_2}jm}} \right\rangle = \left\langle {{{j_1}{j_2}jm}} \mathrel{\left \vert  {\vphantom {{{j_1}{j_2}jm} {{j_1}{m_1};{j_2}{m_2}}}} \right. \kern-1.2pt } {{{j_1}{m_1};{j_2}{m_2}}} \right\rangle
+\tag{9.41}\]</span></span></p>
+<p>Abbreviate the coupled vectors <span class="math inline">\(\left\vert  {{j_1}{j_2}jm} \right\rangle\)</span> as <span class="math inline">\(\left\vert  {j,m} \right\rangle\)</span>, and uncoupled vectors <span class="math inline">\(\left\vert  {{j_1}{m_1};{j_2}{m_2}} \right\rangle\)</span> as <span class="math inline">\(\left\vert  {{m_1};{m_2}} \right\rangle\)</span>. Let</p>
+<p><span id="eq-ch09-p2262"><span class="math display">\[
+{j_{\max }} \equiv {j_1} + {j_2}
+\tag{9.42}\]</span></span></p>
+<p>Step 1: Find the uncoupled-basis expansions of all <span class="math inline">\(\left\vert  {{j_{\max }},m} \right\rangle\)</span>.</p>
+<p>Start with the extreme state <span class="math inline">\(\left\vert  {{j_{\max }},{j_{\max }}} \right\rangle\)</span>. To satisfy <span class="math inline">\(m = {m_1} + {m_2}\)</span>, its expansion must be</p>
+<p><span id="eq-ch09-p2265"><span class="math display">\[
+\left\vert  {{j_{\max }},{j_{\max }}} \right\rangle = \left\vert  {{j_1};{j_2}} \right\rangle
+\tag{9.43}\]</span></span></p>
+<p>Apply the lowering operator <span class="math inline">\({\hat J_ - } = {\hat J_{1 - }} + {\hat J_{2 - }}\)</span> to both sides and use <a href="08-angular-momentum.html#eq-zeqnnum592417" class="quarto-xref">Equation&nbsp;<span>8.49</span></a>:</p>
+<p><span id="eq-ch09-p2267"><span class="math display">\[
+\begin{array}{c} {{\hat J}_ - }\left\vert  {{j_{\max }},{j_{\max }}} \right\rangle = {{\hat J}_{1 - }}\left\vert  {{j_1};{j_2}} \right\rangle + {{\hat J}_{2 - }}\left\vert  {{j_1};{j_2}} \right\rangle \\ \sqrt {2{j_{\max }}} \left\vert  {{j_{\max }},{j_{\max }} - 1} \right\rangle = \sqrt {2{j_1}} \left\vert  {{j_1} - 1;{j_2}} \right\rangle + \sqrt {2{j_2}} \left\vert  {{j_1};{j_2} - 1} \right\rangle \end{array}
+\tag{9.44}\]</span></span></p>
+<p>This determines the expansion of <span class="math inline">\(\left\vert  {{j_{\max }},{j_{\max }} - 1} \right\rangle\)</span>. Repeated lowering generates the expansions of all <span class="math inline">\(\left\vert  {{j_{\max }},m} \right\rangle\)</span>.</p>
+<p>Step 2: Find the expansions of all <span class="math inline">\(\left\vert  {{j_{\max }} - 1,m} \right\rangle\)</span>.</p>
+<p>Again begin with the extreme state <span class="math inline">\(\left\vert  {{j_{\max }} - 1,{j_{\max }} - 1} \right\rangle\)</span>. Since only coefficients satisfying <span class="math inline">\(m = {m_1} + {m_2}\)</span> can be nonzero, write</p>
+<p><span id="eq-ch09-p2271"><span class="math display">\[
+\begin{array}{c} \left\vert  {{j_{\max }} - 1,{j_{\max }} - 1} \right\rangle = {c_1}\left\vert  {{j_1} - 1;{j_2}} \right\rangle + {c_2}\left\vert  {{j_1};{j_2} - 1} \right\rangle \\ c_1^2 + c_2^2 = 1 \end{array}
+\tag{9.45}\]</span></span></p>
+<p>Use the result for <span class="math inline">\(\left\langle {{j_{\max }},{j_{\max }} - 1} \right\vert\)</span> from step 1 and orthogonality of the coupled basis:</p>
+<p><span id="eq-ch09-p2273"><span class="math display">\[
+\left\langle {{{j_{\max }},{j_{\max }} - 1}} \mathrel{\left \vert  {\vphantom {{{j_{\max }},{j_{\max }} - 1} {{j_{\max }} - 1,{j_{\max }} - 1}}} \right. \kern-1.2pt } {{{j_{\max }} - 1,{j_{\max }} - 1}} \right\rangle = 0
+\tag{9.46}\]</span></span></p>
+<p>This determines <span class="math inline">\({c_1},{c_2}\)</span> and hence the expansion of <span class="math inline">\(\left\vert  {{j_{\max }} - 1,{j_{\max }} - 1} \right\rangle\)</span>. Repeated application of <span class="math inline">\({J_ - } = {J_{1 - }} + {J_{2 - }}\)</span> then gives all <span class="math inline">\(\left\vert  {{j_{\max }} - 1,m} \right\rangle\)</span>.</p>
+<p>Step 3: Find the expansions of all coupled vectors <span class="math inline">\(\left\vert  {{j_{\max }} - 2,m} \right\rangle\)</span>.</p>
+<p>Begin again with the extreme state and write</p>
+<p><span id="eq-ch09-p2277"><span class="math display">\[
+\begin{array}{c} \left\vert  {{j_{\max }} - 2,{j_{\max }} - 2} \right\rangle = {d_1}\left\vert  {{j_1} - 2;{j_2}} \right\rangle + {d_2}\left\vert  {{j_1} - 1;{j_2} - 1} \right\rangle + {d_3}\left\vert  {{j_1};{j_2} - 2} \right\rangle \\ d_1^2 + d_2^2 + d_3^2 = 1 \end{array}
+\tag{9.47}\]</span></span></p>
+<p>Use the results of the preceding steps and orthogonality:</p>
+<p><span id="eq-ch09-p2279"><span class="math display">\[
+\begin{array}{c} \left\langle {{{j_{\max }} - 1,{j_{\max }} - 2}} \mathrel{\left \vert  {\vphantom {{{j_{\max }} - 1,{j_{\max }} - 2} {{j_{\max }} - 2,{j_{\max }} - 2}}} \right. \kern-1.2pt } {{{j_{\max }} - 2,{j_{\max }} - 2}} \right\rangle = 0\\ \left\langle {{{j_{\max }},{j_{\max }} - 2}} \mathrel{\left \vert  {\vphantom {{{j_{\max }},{j_{\max }} - 2} {{j_{\max }} - 2,{j_{\max }} - 2}}} \right. \kern-1.2pt } {{{j_{\max }} - 2,{j_{\max }} - 2}} \right\rangle = 0 \end{array}
+\tag{9.48}\]</span></span></p>
+<p>This determines <span class="math inline">\({d_1},{d_2},{d_3}\)</span> and the expansion of <span class="math inline">\(\left\vert  {{j_{\max }} - 2,{j_{\max }} - 2} \right\rangle\)</span>. Continue with the lowering operator in the same way.</p>
+<p>This systematic procedure can be implemented recursively. Mathematica provides the built-in CG-coefficient function <span class="math inline">\(ClebschGordan[{{j}_{1},{m}_{1}},{{j}_{2},{m}_{2}},{j,m}]\)</span>.</p>
+<p>Example: Use this method to expand the coupled basis vectors in the uncoupled basis.</p>
+<p><span id="eq-ch09-p2283"><span class="math display">\[
+\left\vert  {j,m} \right\rangle = \sum\limits_{{m_1} = - {j_1}}^{{j_1}} {\left\vert  {{m_1};m - {m_1}} \right\rangle \left\langle {{{m_1};m - {m_1}}} \mathrel{\left \vert  {\vphantom {{{m_1};m - {m_1}} {j,m}}} \right. \kern-1.2pt } {{j,m}} \right\rangle }
+\tag{9.49}\]</span></span></p>
+<p><span id="eq-ch09-p2284"><span class="math display">\[
+{j_1} = {j_2} = {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}
+\tag{9.50}\]</span></span></p>
+<p><span id="eq-ch09-p2285"><span class="math display">\[
+\begin{array}{*{20}{l}} \begin{array}{l} \left\vert  {1,1} \right\rangle = \left\vert  {\frac{1}{2};\frac{1}{2}} \right\rangle \\ \left\vert  {1,0} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle + \;\left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle } \right)\;,\;\;\;\\ \left\vert  {1, - 1} \right\rangle = \left\vert  { - \frac{1}{2}; - \frac{1}{2}} \right\rangle \; \end{array}&amp;{\left\vert  {0,0} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle - \left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle } \right)} \end{array}
+\tag{9.51}\]</span></span></p>
+<p><span id="eq-ch09-p2286"><span class="math display">\[
+{j_1} = {j_2} = 1
+\tag{9.52}\]</span></span></p>
+<p><span id="eq-ch09-p2287"><span class="math display">\[
+\begin{array}{*{20}{c}} \begin{array}{l} \left\vert  {2,2} \right\rangle = \left\vert  {1;1} \right\rangle \\ \left\vert  {2,1} \right\rangle = \frac{{\left\vert  {1;0} \right\rangle + \left\vert  {0;1} \right\rangle }}{{\sqrt 2 }}\\ \left\vert  {2,0} \right\rangle = \frac{{\left\vert  { - 1;1} \right\rangle + 2\left\vert  {0;0} \right\rangle + \left\vert  {1; - 1} \right\rangle }}{{\sqrt 6 }},\;\;\\ \left\vert  {2, - 1} \right\rangle = \frac{{\left\vert  {0; - 1} \right\rangle + \left\vert  { - 1;0} \right\rangle }}{{\sqrt 2 }}\\ \left\vert  {2, - 2} \right\rangle = \left\vert  { - 1; - 1} \right\rangle \end{array}&amp;\begin{array}{l} \left\vert  {1,1} \right\rangle = \frac{{\left\vert  {1;0} \right\rangle - \left\vert  {0;1} \right\rangle }}{{\sqrt 2 }}\\ \left\vert  {1,0} \right\rangle = \frac{{\left\vert  {1; - 1} \right\rangle - \left\vert  { - 1;1} \right\rangle }}{{\sqrt 2 }}\;,\\ \left\vert  {1, - 1} \right\rangle = \frac{{\left\vert  {0; - 1} \right\rangle - \left\vert  { - 1;0} \right\rangle }}{{\sqrt 2 }}\;\; \end{array}&amp;{\left\vert  {0,0} \right\rangle = \frac{{\left\vert  {1; - 1} \right\rangle - \left\vert  {0;0} \right\rangle + \left\vert  { - 1;1} \right\rangle }}{{\sqrt 3 }}} \end{array}
+\tag{9.53}\]</span></span></p>
+</section>
+<section id="exchange-symmetry-of-cg-coefficients" class="level2" data-number="9.7">
+<h2 data-number="9.7" class="anchored" data-anchor-id="exchange-symmetry-of-cg-coefficients"><span class="header-section-number">9.7</span> * Exchange Symmetry of CG Coefficients</h2>
+<p>CG coefficients satisfy the symmetry relation<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p><span id="eq-zeqnnum431426"><span class="math display">\[
+\left\langle {{{j_1}{m_1};{j_2}{m_2}}} \mathrel{\left \vert  {\vphantom {{{j_1}{m_1};{j_2}{m_2}} {jm}}} \right. \kern-1.2pt } {{jm}} \right\rangle = {\left( { - 1} \right)^{{j_1} + {j_2} - j}}\left\langle {{{j_2}{m_2};{j_1}{m_1}}} \mathrel{\left \vert  {\vphantom {{{j_2}{m_2};{j_1}{m_1}} {jm}}} \right. \kern-1.2pt } {{jm}} \right\rangle
+\tag{9.54}\]</span></span></p>
+<p>If <span class="math inline">\({j_1}\)</span> and <span class="math inline">\({j_2}\)</span> represent the angular momenta of two particles, this relation shows that the exchange symmetry of the CG coefficients and total state <span class="math inline">\(\vert j,m\rangle\)</span> depends on the parity of <span class="math inline">\({j_1} + {j_2} - j\)</span>. We use this to prove a rule for <span class="math inline">\(L{\rm{ - }}S\)</span> coupling, known as the even-sum rule.</p>
+<p><strong>Even-sum rule:</strong> For an atomic state in <span class="math inline">\(L{\rm{ - }}S\)</span> coupling with two equivalent valence electrons, <span class="math inline">\(L + S\)</span> must be even.</p>
+<p>Proof: Consider two equivalent valence electrons in <span class="math inline">\(L{\rm{ - }}S\)</span> coupling. Write their total state as <span class="math inline">\(\left\vert  {R({r_1},{r_2})} \right\rangle \left\vert  {LSJM} \right\rangle\)</span>, where <span class="math inline">\(\left\vert  R \right\rangle\)</span> is the radial part and <span class="math inline">\(\left\vert  {LSJM} \right\rangle\)</span> the angular-momentum part. The total state of fermions must be antisymmetric under exchange, so <span class="math inline">\(\left\vert  R \right\rangle\)</span> and <span class="math inline">\(\left\vert  {LSJM} \right\rangle\)</span> must have opposite exchange symmetries.</p>
+<p>Both equivalent electrons have the same radial state <span class="math inline">\(\left\vert  {nl} \right\rangle\)</span>, so the total radial factor is</p>
+<p><span id="eq-ch09-p2295"><span class="math display">\[
+\left\vert  {R({r_1},{r_2})} \right\rangle = {\left\vert  {nl} \right\rangle _1}{\left\vert  {nl} \right\rangle _2}
+\tag{9.55}\]</span></span></p>
+<p>which is symmetric. Therefore <span class="math inline">\(\left\vert  {LSJM} \right\rangle\)</span> must be antisymmetric. Expand it in the uncoupled basis:</p>
+<p><span id="eq-zeqnnum649848"><span class="math display">\[
+\left\vert  {LSJM} \right\rangle = \sum\limits_{{M_L}{M_S}} {\left\vert  {L{M_L};S{M_S}} \right\rangle \left\langle {{L{M_L};S{M_S}}} \mathrel{\left \vert  {\vphantom {{L{M_L};S{M_S}} {LSJM}}} \right. \kern-1.2pt } {{LSJM}} \right\rangle }
+\tag{9.56}\]</span></span></p>
+<p>For two equivalent electrons,</p>
+<p><span id="eq-ch09-p2299"><span class="math display">\[
+\begin{array}{l} {l_1} = {l_2} = l \to {l_1} + {l_2} = 2l,\;\left\vert  {{l_1} - {l_2}} \right\vert  = 0\\ {s_1} = {s_2} = {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2} \to {s_1} + {s_2} = 1,\;\left\vert  {{s_1} - {s_2}} \right\vert  = 0 \end{array}
+\tag{9.57}\]</span></span></p>
+<p>Thus the total orbital angular momentum is <span class="math inline">\(L = 2l,2l - 1, \cdots 0\)</span> and the total spin is <span class="math inline">\(S = 1,0\)</span>.</p>
+<p>Let <span class="math inline">\(\hat X\)</span> be the electron-exchange operator. Using the CG identity <a href="#eq-zeqnnum431426" class="quarto-xref">Equation&nbsp;<span>9.54</span></a> gives</p>
+<p><span id="eq-zeqnnum405893"><span class="math display">\[
+\begin{array}{c} \hat X\left\vert  {L{M_L}} \right\rangle = \hat X\sum\limits_{{m_1},{m_2}} {\left\vert  {l{m_1};l{m_2}} \right\rangle \left\langle {{l{m_1};l{m_2}}} \mathrel{\left \vert  {\vphantom {{l{m_1};l{m_2}} {L{M_L}}}} \right. \kern-1.2pt } {{L{M_L}}} \right\rangle } \\ = \sum\limits_{{m_1},{m_2}} {\left\vert  {l{m_2};l{m_1}} \right\rangle \left\langle {{l{m_1};l{m_2}}} \mathrel{\left \vert  {\vphantom {{l{m_1};l{m_2}} {L{M_L}}}} \right. \kern-1.2pt } {{L{M_L}}} \right\rangle } \\ = {( - 1)^{2l - L}}\sum\limits_{{m_1},{m_2}} {\left\vert  {l{m_1};l{m_2}} \right\rangle \left\langle {{l{m_1};l{m_2}}} \mathrel{\left \vert  {\vphantom {{l{m_1};l{m_2}} {L{M_L}}}} \right. \kern-1.2pt } {{L{M_L}}} \right\rangle } \\ = {( - 1)^{2l - L}}\left\vert  {L{M_L}} \right\rangle \end{array}
+\tag{9.58}\]</span></span></p>
+<p>Similarly,</p>
+<p><span id="eq-ch09-p2304"><span class="math display">\[
+\hat X\left\vert  {S{M_S}} \right\rangle = {( - 1)^{2s - S}}\left\vert  {S{M_S}} \right\rangle = {( - 1)^{1 - S}}\left\vert  {S{M_S}} \right\rangle
+\tag{9.59}\]</span></span></p>
+<p>Since <span class="math inline">\(2l\)</span> is even, odd <span class="math inline">\(L\)</span> gives <span class="math inline">\(\hat X\left\vert  {L{M_L}} \right\rangle = - \left\vert  {L{M_L}} \right\rangle\)</span>, so <span class="math inline">\(\left\vert  {L{M_L}} \right\rangle\)</span> is antisymmetric under exchange. Conversely, even <span class="math inline">\(L\)</span> makes <span class="math inline">\(\left\vert  {L{M_L}} \right\rangle\)</span> symmetric. Likewise, <span class="math inline">\(S = 1\)</span> makes <span class="math inline">\(\left\vert  {S{M_S}} \right\rangle\)</span> symmetric, whereas <span class="math inline">\(S = 0\)</span> makes it antisymmetric. Consequently, <span class="math inline">\(\left\vert  {L{M_L}} \right\rangle \left\vert  {S{M_S}} \right\rangle\)</span> is antisymmetric when <span class="math inline">\(L + S\)</span> is even and symmetric when it is odd.</p>
+<p>Returning to <a href="#eq-zeqnnum649848" class="quarto-xref">Equation&nbsp;<span>9.56</span></a>, every term <span class="math inline">\(\left\vert  {L{M_L}} \right\rangle \left\vert  {S{M_S}} \right\rangle\)</span> in the expansion of <span class="math inline">\(\left\vert  {LSJM} \right\rangle\)</span> has the same <span class="math inline">\(L\)</span> and <span class="math inline">\(S\)</span>. Thus <span class="math inline">\(\left\vert  {LSJM} \right\rangle\)</span> has the same exchange symmetry as <span class="math inline">\(\left\vert  {L{M_L}} \right\rangle \left\vert  {S{M_S}} \right\rangle\)</span>. To make <span class="math inline">\(\left\vert  {LSJM} \right\rangle\)</span> antisymmetric, <span class="math inline">\(L + S\)</span> must be even.</p>
+</section>
+<section id="exercises" class="level2" data-number="9.8">
+<h2 data-number="9.8" class="anchored" data-anchor-id="exercises"><span class="header-section-number">9.8</span> Exercises</h2>
+<p><strong>9.1</strong> Using the definitions <a href="#eq-zeqnnum643050" class="quarto-xref">Equation&nbsp;<span>9.17</span></a> and <a href="#eq-zeqnnum961018" class="quarto-xref">Equation&nbsp;<span>9.19</span></a> of total angular momentum <span class="math inline">\({\bf{\hat J}}\)</span>, prove that</p>
+<p><span id="eq-ch09-p2310"><span class="math display">\[
+\left[ {{{\hat J}_z},{\mathbf{\hat J}}_1^2} \right] = 0, \qquad  \qquad  \left[ {{{{\mathbf{\hat J}}}^2},{\mathbf{\hat J}}_1^2} \right] = 0
+\tag{9.60}\]</span></span></p>
+<p><strong>9.2</strong>* Relate the coupled and uncoupled bases of two spin-1/2 particles. Using <span class="math inline">\({C_ \pm }(j,m)\)</span> from Exercise 8.2, chosen positive, apply the lowering operator <span class="math inline">\({\hat J_ - } = {\hat J_{1 - }} + {\hat J_{2 - }}\)</span> to both sides of</p>
+<p><span id="eq-ch09-p2312"><span class="math display">\[
+\left\vert  {1,1} \right\rangle = \left\vert  {\frac{1}{2};\frac{1}{2}} \right\rangle
+\tag{9.61}\]</span></span></p>
+<p>and find the uncoupled expansion of <span class="math inline">\(\vert {1,0}\rangle\)</span>. Then use orthogonality of <span class="math inline">\(\vert {1,0}\rangle\)</span> and <span class="math inline">\(\vert {0,0}\rangle\)</span> to calculate the expansion of <span class="math inline">\(\vert {0,0}\rangle\)</span>.</p>
+
+
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Hecht, Quantum Mechanics. Cf. Symmetry Properties of Clebsch—Gordan Coefficients<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./08-angular-momentum.html" class="pagination-link" aria-label="Angular Momentum">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Angular Momentum</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./10-topics-in-atomic-physics.html" class="pagination-link" aria-label="Topics in Atomic Physics">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Topics in Atomic Physics</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

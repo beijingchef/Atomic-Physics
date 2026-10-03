@@ -1,0 +1,45 @@
+{
+  "chapters": 12,
+  "translated_paragraphs": 1201,
+  "math_tokens": 2871,
+  "display_equations": 678,
+  "equation_reference_targets": 222,
+  "unresolved_references": [],
+  "ambiguous_bookmarks": [
+    [
+      1290,
+      [
+        "ZEqnNum864955"
+      ],
+      "从而有 [[X1186]]"
+    ],
+    [
+      1291,
+      [
+        "ZEqnNum374297"
+      ],
+      "不难证明 [[X1187]]"
+    ],
+    [
+      1292,
+      [
+        "ZEqnNum153390"
+      ],
+      "根据上两式可得， [[X1188]]."
+    ],
+    [
+      1942,
+      [
+        "ZEqnNum736764"
+      ],
+      "同理，对[[X1933]]反复施加降算子，必有一个[[X1934]]，当[[X1935]]时，[[X1936]] [[X1937]]"
+    ],
+    [
+      2082,
+      [
+        "ZEqnNum804907"
+      ],
+      "即 [[X2088]]"
+    ]
+  ]
+}

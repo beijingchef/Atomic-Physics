@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2&nbsp; Operators – Introduction to Quantum Mechanics</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./03-quantum-measurement.html" rel="next">
+<link href="./01-vectors-and-quantum-states.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-631496449bf32ff9b0bb69a6bfd9195d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="assets/mathjax/tex-svg.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02-operators.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Operators</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Introduction to Quantum Mechanics</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-vectors-and-quantum-states.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Vectors and Quantum States</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-operators.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Operators</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-quantum-measurement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Quantum Measurement</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-commutation-relations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Commutation Relations of Observables</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-time-evolution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Time Evolution</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-transitions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-continuous-observables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Continuous Observables</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-angular-momentum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Angular Momentum</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-coupling-angular-momenta.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Coupling Two Angular Momenta</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-topics-in-atomic-physics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Topics in Atomic Physics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-appendices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Appendices</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-exercise-solutions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Exercise Solutions</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#linear-operators" id="toc-linear-operators" class="nav-link active" data-scroll-target="#linear-operators"><span class="header-section-number">2.1</span> Linear operators</a></li>
+  <li><a href="#matrix-representations-of-operators" id="toc-matrix-representations-of-operators" class="nav-link" data-scroll-target="#matrix-representations-of-operators"><span class="header-section-number">2.2</span> Matrix representations of operators</a></li>
+  <li><a href="#eigenvalues-and-eigenvectors" id="toc-eigenvalues-and-eigenvectors" class="nav-link" data-scroll-target="#eigenvalues-and-eigenvectors"><span class="header-section-number">2.3</span> Eigenvalues and eigenvectors</a></li>
+  <li><a href="#outer-products-projection-operators-and-completeness" id="toc-outer-products-projection-operators-and-completeness" class="nav-link" data-scroll-target="#outer-products-projection-operators-and-completeness"><span class="header-section-number">2.4</span> Outer products, projection operators, and completeness</a>
+  <ul class="collapse">
+  <li><a href="#projection-operators" id="toc-projection-operators" class="nav-link" data-scroll-target="#projection-operators"><span class="header-section-number">2.4.1</span> Projection operators</a></li>
+  <li><a href="#the-completeness-relation" id="toc-the-completeness-relation" class="nav-link" data-scroll-target="#the-completeness-relation"><span class="header-section-number">2.4.2</span> The completeness relation</a></li>
+  </ul></li>
+  <li><a href="#hermitian-conjugates-of-operators" id="toc-hermitian-conjugates-of-operators" class="nav-link" data-scroll-target="#hermitian-conjugates-of-operators"><span class="header-section-number">2.5</span> Hermitian conjugates of operators</a>
+  <ul class="collapse">
+  <li><a href="#hermitian-conjugation-of-an-outer-product" id="toc-hermitian-conjugation-of-an-outer-product" class="nav-link" data-scroll-target="#hermitian-conjugation-of-an-outer-product"><span class="header-section-number">2.5.1</span> Hermitian conjugation of an outer product</a></li>
+  <li><a href="#matrix-representation-of-the-hermitian-conjugate" id="toc-matrix-representation-of-the-hermitian-conjugate" class="nav-link" data-scroll-target="#matrix-representation-of-the-hermitian-conjugate"><span class="header-section-number">2.5.2</span> Matrix representation of the Hermitian conjugate</a></li>
+  </ul></li>
+  <li><a href="#inverse-and-unitary-operators" id="toc-inverse-and-unitary-operators" class="nav-link" data-scroll-target="#inverse-and-unitary-operators"><span class="header-section-number">2.6</span> Inverse and unitary operators</a></li>
+  <li><a href="#hermitian-operators" id="toc-hermitian-operators" class="nav-link" data-scroll-target="#hermitian-operators"><span class="header-section-number">2.7</span> Hermitian operators</a>
+  <ul class="collapse">
+  <li><a href="#representations" id="toc-representations" class="nav-link" data-scroll-target="#representations"><span class="header-section-number">2.7.1</span> Representations</a></li>
+  </ul></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">2.8</span> Exercises</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Operators</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Quantum states are represented by complex linear vectors. We now discuss the mathematical counterparts of dynamical quantities, which Heisenberg called <strong>observables</strong>: position, momentum, angular momentum, energy, and the SG quantity <span class="math inline">\({\bf{\sigma }} \cdot {\bf{n}}\)</span>, for example. An observable is represented by a <strong>linear operator</strong> on the vector space.</p>
+<section id="linear-operators" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="linear-operators"><span class="header-section-number">2.1</span> Linear operators</h2>
+<p>An operator transforms one vector into another. We usually place a hat over its symbol to distinguish it from an ordinary variable. The action of an operator <span class="math inline">\(\hat O\)</span> on a ket is written</p>
+<p><span id="eq-ch02-p0259"><span class="math display">\[
+\hat O\left\vert  \psi \right\rangle = \left\vert  \phi \right\rangle
+\tag{2.1}\]</span></span></p>
+<p>An operator can also act on a bra, producing another bra:</p>
+<p><span id="eq-ch02-p0261"><span class="math display">\[
+\left\langle \alpha \right\vert \hat O = \left\langle \beta \right\vert
+\tag{2.2}\]</span></span></p>
+<p>An operator acting on a ket is written to its left; an operator acting on a bra is written to its right. An operator between a bra and a ket obeys associativity:</p>
+<p><span id="eq-ch02-p0263"><span class="math display">\[
+\langle \alpha \vert \left( {\hat O\vert \beta\rangle } \right) \equiv \left( {\langle \alpha \vert \hat O} \right)\vert \beta\rangle \equiv \langle \alpha \vert \hat O\vert \beta\rangle
+\tag{2.3}\]</span></span></p>
+<p>The result of this operation is a number.</p>
+<p>Linear operators have the following properties.</p>
+<p><strong>Equality.</strong> If operators <span class="math inline">\(\hat X\)</span> and <span class="math inline">\(\hat Y\)</span> satisfy <span class="math inline">\(\hat X\left\vert  \psi \right\rangle = \hat Y\left\vert  \psi \right\rangle\)</span> for every vector <span class="math inline">\(\left\vert  \psi \right\rangle\)</span>, then <span class="math inline">\(\hat X = \hat Y\)</span>.</p>
+<p><strong>Identity.</strong> Every vector space has an identity operator, usually denoted <span class="math inline">\(\hat I\)</span>, which leaves every vector unchanged:</p>
+<p><span id="eq-ch02-p0268"><span class="math display">\[
+\hat I\left\vert  \psi \right\rangle = \left\vert  \psi \right\rangle
+\tag{2.4}\]</span></span></p>
+<p><strong>Products.</strong> The product <span class="math inline">\(\hat X\hat Y\)</span> of two operators is itself an operator.</p>
+<p><span id="eq-ch02-p0270"><span class="math display">\[
+\left( {\hat X\hat Y} \right)\left\vert  \psi \right\rangle \equiv \hat X\left( {\hat Y\left\vert  \psi \right\rangle } \right) = \hat X\hat Y\left\vert  \psi \right\rangle
+\tag{2.5}\]</span></span></p>
+<p><span id="eq-ch02-p0271"><span class="math display">\[
+\left\langle \psi \right\vert \left( {\hat X\hat Y} \right) \equiv \left( {\left\langle \psi \right\vert \hat X} \right)\hat Y = \left\langle \psi \right\vert \hat X\hat Y
+\tag{2.6}\]</span></span></p>
+<p>The order of multiplication generally matters: in general, <span class="math inline">\(\hat X\hat Y \ne \hat Y\hat X\)</span>.</p>
+<p>Powers of an operator are defined by</p>
+<p><span id="eq-ch02-p0274"><span class="math display">\[
+{\hat X^n} \equiv \underbrace {\hat X\hat X \cdots \hat X}_{n\text{ terms}}
+\tag{2.7}\]</span></span></p>
+<p>Linear operators must also obey the following rules:</p>
+<p><span id="eq-zeqnnum324323"><span class="math display">\[
+\begin{gathered} \hat X\left( {c\left\vert  \psi \right\rangle } \right) = c\hat X\left\vert  \psi \right\rangle , \\ \hat X\left( {\left\vert  {{\psi _\alpha }} \right\rangle + \left\vert  {{\psi _\beta }} \right\rangle } \right) = \hat X\left\vert  {{\psi _\alpha }} \right\rangle + \hat X\left\vert  {{\psi _\beta }} \right\rangle , \\ \left( {\hat X + \hat Y} \right)\left\vert  \psi \right\rangle = \hat X\left\vert  \psi \right\rangle + \hat Y\left\vert  \psi \right\rangle \\ \hat X + \hat Y = \hat Y + \hat X, \\ \hat X + (\hat Y + \hat Z) = (\hat X + \hat Y) + \hat Z \\ \end{gathered}
+\tag{2.8}\]</span></span></p>
+<p>Operator multiplication is associative:</p>
+<p><span id="eq-ch02-p0278"><span class="math display">\[
+\hat X\left( {\hat Y\hat Z} \right) = \left( {\hat X\hat Y} \right)\hat Z = \hat X\hat Y\hat Z
+\tag{2.9}\]</span></span></p>
+<p>Multiplying any operator by the identity leaves it unchanged:</p>
+<p><span id="eq-ch02-p0280"><span class="math display">\[
+\hat I\hat X = \hat X\hat I = \hat X
+\tag{2.10}\]</span></span></p>
+<p>The third property in <a href="#eq-zeqnnum324323" class="quarto-xref">Equation&nbsp;<span>2.8</span></a>, together with the properties of the inner product, gives</p>
+<p><span id="eq-ch02-p0282"><span class="math display">\[
+\left\langle \alpha \right\vert \left( {{\hat X + \hat Y}} \right)\left\vert  \beta \right\rangle = \left\langle \alpha \right\vert \hat X\left\vert  \beta \right\rangle + \left\langle \alpha \right\vert \hat Y\left\vert  \beta \right\rangle
+\tag{2.11}\]</span></span></p>
+</section>
+<section id="matrix-representations-of-operators" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="matrix-representations-of-operators"><span class="header-section-number">2.2</span> Matrix representations of operators</h2>
+<p>A vector has an expansion in a complete basis, <a href="01-vectors-and-quantum-states.html#eq-zeqnnum935342" class="quarto-xref">Equation&nbsp;<span>1.25</span></a>, and an operator has a corresponding basis representation. Let <span class="math inline">\(\left\{ {\left\vert  1 \right\rangle ,\left\vert  2 \right\rangle ...\left\vert  N \right\rangle } \right\}\)</span> be a basis, and suppose <span class="math inline">\(\hat M\)</span> maps <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> to <span class="math inline">\(\left\vert  \phi \right\rangle\)</span>:</p>
+<p><span id="eq-zeqnnum246664"><span class="math display">\[
+\hat M\left\vert  \psi \right\rangle = \left\vert  \phi \right\rangle
+\tag{2.12}\]</span></span></p>
+<p>Take the inner product with any basis vector <span class="math inline">\(\left\langle i \right\vert\)</span> on both sides:</p>
+<p><span id="eq-zeqnnum456036"><span class="math display">\[
+\left\langle i \right\vert \hat M\left\vert  \psi \right\rangle = \left\langle {i} \mathrel{\left \vert  {\vphantom {i \phi }} \right. \kern-1.2pt } {\phi } \right\rangle
+\tag{2.13}\]</span></span></p>
+<p>Using <span class="math inline">\(\left\vert  \psi \right\rangle = \sum {\left\vert  j \right\rangle \left\langle {j} \mathrel{\left \vert  {\vphantom {j \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }\)</span>, we can rewrite <a href="#eq-zeqnnum456036" class="quarto-xref">Equation&nbsp;<span>2.13</span></a> as</p>
+<p><span id="eq-zeqnnum775889"><span class="math display">\[
+\sum\limits_{j = 1}^N {\left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\langle {j} \mathrel{\left \vert  {\vphantom {j \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } = \left\langle {i} \mathrel{\left \vert  {\vphantom {i \phi }} \right. \kern-1.2pt } {\phi } \right\rangle
+\tag{2.14}\]</span></span></p>
+<p>The quantity <span class="math inline">\(\left\langle i \right\vert \hat M\left\vert  j \right\rangle\)</span> is a number. Write <span class="math inline">\({M_{ij}} \equiv \left\langle i \right\vert \hat M\left\vert  j \right\rangle\)</span> and let <span class="math inline">\(i\)</span> in <a href="#eq-zeqnnum775889" class="quarto-xref">Equation&nbsp;<span>2.14</span></a> run through the entire basis to obtain</p>
+<p><span id="eq-ch02-p0291"><span class="math display">\[
+\left( {\begin{array}{*{20}{c}} {{M_{11}}}&amp;{{M_{12}}}&amp; \cdots &amp;{{M_{1N}}}\\ {{M_{21}}}&amp;{{M_{22}}}&amp; \cdots &amp;{{M_{2N}}}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ {{M_{N1}}}&amp;{{M_{N2}}}&amp; \cdots &amp;{{M_{NN}}} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {\langle 1\vert \psi\rangle }\\ {\langle 2\vert \psi\rangle }\\ \vdots \\ {\langle N\vert \psi\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\langle 1\vert \phi \rangle }\\ {\langle 2\vert \phi \rangle }\\ \vdots \\ {\langle N\vert \phi \rangle } \end{array}} \right)
+\tag{2.15}\]</span></span></p>
+<p>This is the matrix representation of <span class="math inline">\(\hat M\left\vert  \psi \right\rangle = \left\vert  \phi \right\rangle\)</span>.</p>
+<p>Thus, the numbers <span class="math inline">\({M_{ij}}\)</span> form an <span class="math inline">\(N \times N\)</span> square matrix representing <span class="math inline">\(\hat M\)</span>, with <span class="math inline">\(i,j\)</span> specifying row and column indices. The matrix representation of <span class="math inline">\(\hat M\)</span> is</p>
+<p><span id="eq-ch02-p0294"><span class="math display">\[
+\hat M = \left( {\begin{array}{*{20}{c}} {{M_{11}}}&amp;{{M_{12}}}&amp; \cdots &amp;{{M_{1N}}}\\ {{M_{21}}}&amp;{{M_{22}}}&amp; \cdots &amp;{{M_{2N}}}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ {{M_{N1}}}&amp;{{M_{N2}}}&amp; \cdots &amp;{{M_{NN}}} \end{array}} \right), \qquad  {M_{ij}} \equiv \left\langle i \right\vert \hat M\left\vert  j \right\rangle
+\tag{2.16}\]</span></span></p>
+<p>Like a vector’s representation, an operator’s matrix always depends on the chosen basis.</p>
+</section>
+<section id="eigenvalues-and-eigenvectors" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="eigenvalues-and-eigenvectors"><span class="header-section-number">2.3</span> Eigenvalues and eigenvectors</h2>
+<p>For an operator, some special vectors are transformed into scalar multiples of themselves. These are its <strong>eigenvectors</strong>, and the corresponding scalars are its <strong>eigenvalues</strong>. To indicate the correspondence, we usually label an eigenvector by its eigenvalue or a related symbol: the eigenvector associated with <span class="math inline">\({a_i}\)</span> is often written <span class="math inline">\(\vert {a_i}\rangle\)</span> or <span class="math inline">\(\left\vert  i \right\rangle\)</span>.</p>
+<p><strong>Example.</strong> If <span class="math inline">\(\hat A\)</span> has eigenvectors <span class="math inline">\(\vert {a_i}\rangle\)</span> with eigenvalues <span class="math inline">\({a_i}\)</span>, then</p>
+<p><span id="eq-ch02-p0299"><span class="math display">\[
+\hat A\left\vert  {{a_1}} \right\rangle = {a_1}\left\vert  {{a_1}} \right\rangle ,\;\; \qquad  \hat A\left\vert  {{a_2}} \right\rangle = {a_2}\left\vert  {{a_2}} \right\rangle , \qquad  \cdots
+\tag{2.17}\]</span></span></p>
+<p>When operators are represented by square matrices and vectors by columns, these are precisely the matrix eigenvalues and eigenvectors of linear algebra. We can therefore find an operator’s eigenvalues and eigenvectors from its matrix representation.</p>
+<p>An eigenvalue may correspond to several linearly independent eigenvectors. Their number is its <strong>degeneracy</strong>. An eigenvalue of degeneracy one is nondegenerate; otherwise it is degenerate. Notice that if <span class="math inline">\(\hat A\vert a\rangle = a\vert a\rangle\)</span>, then <span class="math inline">\(\hat A\left( {c\vert a\rangle } \right) = a\left( {c\vert a\rangle } \right)\)</span> for any complex number <span class="math inline">\(c\)</span>. Hence <span class="math inline">\(c\vert a\rangle\)</span> also corresponds to eigenvalue <span class="math inline">\(a\)</span>, but <span class="math inline">\(c\vert a\rangle\)</span> and <span class="math inline">\(\vert a\rangle\)</span> are linearly dependent and do not increase the degeneracy.</p>
+<p><strong>Theorem 2.1.</strong> If several eigenvectors of <span class="math inline">\(\hat A\)</span> share an eigenvalue, any nonzero linear combination is an eigenvector with that same eigenvalue.</p>
+<p><strong>Proof.</strong> Suppose eigenvalue <span class="math inline">\(a\)</span> of <span class="math inline">\(\hat A\)</span> has <span class="math inline">\(n\)</span> eigenvectors, denoted <span class="math inline">\(\vert 1\rangle ,\vert 2\rangle , \cdots \vert n\rangle\)</span>, so that</p>
+<p><span id="eq-ch02-p0304"><span class="math display">\[
+\hat A\left\vert  i \right\rangle = a\left\vert  i \right\rangle , \qquad  i = 1,2, \cdots n
+\tag{2.18}\]</span></span></p>
+<p>For any linear combination <span class="math inline">\(\sum\nolimits_i {{c_i}\vert i\rangle }\)</span> of these eigenvectors,</p>
+<p><span id="eq-zeqnnum130538"><span class="math display">\[
+\hat A\left( {\sum\limits_i {{c_i}\vert i\rangle } } \right) = \sum\limits_i {{c_i}\hat A\vert i\rangle } = \sum\limits_i {{c_i}a\vert i\rangle } = a\left( {\sum\limits_i {{c_i}\vert i\rangle } } \right)
+\tag{2.19}\]</span></span></p>
+<p>This proves the result.</p>
+</section>
+<section id="outer-products-projection-operators-and-completeness" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="outer-products-projection-operators-and-completeness"><span class="header-section-number">2.4</span> Outer products, projection operators, and completeness</h2>
+<p>We have encountered valid operations such as <span class="math inline">\(c\left\langle \psi \right\vert\)</span>, <span class="math inline">\(\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle\)</span>, <span class="math inline">\(\hat X\left\vert  \psi \right\rangle\)</span>, <span class="math inline">\(\left\langle \psi \right\vert \hat X\)</span>, <span class="math inline">\(\hat X\hat Y\)</span>, and <span class="math inline">\(\vert \alpha\rangle + \vert \beta\rangle\)</span>. Expressions such as <span class="math inline">\(\hat X\left\langle \psi \right\vert\)</span>, <span class="math inline">\(\left\vert  \psi \right\rangle \hat X\)</span>, or <span class="math inline">\(\vert \alpha\rangle + \langle \beta\vert\)</span> are not valid. For two vectors <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> and <span class="math inline">\(\left\vert  \phi \right\rangle\)</span> in the same vector space, <span class="math inline">\(\left\vert  \psi \right\rangle \left\vert  \phi \right\rangle\)</span> is also not defined.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> What about the following product?</p>
+<p><span id="eq-zeqnnum460948"><span class="math display">\[
+\left\vert  \psi \right\rangle \left\langle \phi \right\vert
+\tag{2.20}\]</span></span></p>
+<p>This is called an <strong>outer product</strong>.</p>
+<p>Dirac notation has a useful associative rule: in a product of kets, bras, scalars, and operators, brackets <span class="math inline">\(\left( {} \right)\)</span> may group adjacent factors in any way, provided the expression inside <span class="math inline">\(\left( {} \right)\)</span> is a valid scalar, vector, or operator.</p>
+<p>To interpret the outer product in <a href="#eq-zeqnnum460948" class="quarto-xref">Equation&nbsp;<span>2.20</span></a>, multiply it on the right by a ket and use associativity:</p>
+<p><span id="eq-ch02-p0314"><span class="math display">\[
+\left( {\left\vert  \psi \right\rangle \left\langle \phi \right\vert } \right)\;\left\vert  \alpha \right\rangle \equiv \left\vert  \psi \right\rangle \;\left( {\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \alpha }} \right. \kern-1.2pt } {\alpha } \right\rangle } \right)
+\tag{2.21}\]</span></span></p>
+<p>The right-hand side is the scalar <span class="math inline">\(\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \alpha }} \right. \kern-1.2pt } {\alpha } \right\rangle\)</span> times the ket <span class="math inline">\(\left\vert  \psi \right\rangle\)</span>, so it is another ket. An outer product therefore maps a ket to a ket: it is an operator.</p>
+<section id="projection-operators" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="projection-operators"><span class="header-section-number">2.4.1</span> Projection operators</h3>
+<p>Let <span class="math inline">\(\left\{ {\vert j\rangle } \right\}\)</span> be a complete basis. Every vector <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> can be written as a linear combination of <span class="math inline">\(\left\{ {\vert j\rangle } \right\}\)</span>. Associativity gives</p>
+<p><span id="eq-zeqnnum153427"><span class="math display">\[
+\left\vert  \psi \right\rangle = \sum\limits_j {\left\vert  j \right\rangle \left\langle {j} \mathrel{\left \vert  {\vphantom {j \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } = \sum\limits_j {\left( {\left\vert  j \right\rangle \left\langle j \right\vert } \right)\left\vert  \psi \right\rangle }
+\tag{2.22}\]</span></span></p>
+<p>Every term in this sum contains an outer-product operator.</p>
+<p><span id="eq-ch02-p0320"><span class="math display">\[
+\left\vert  j \right\rangle \left\langle j \right\vert
+\tag{2.23}\]</span></span></p>
+<p>This is a <strong>projection operator</strong>. Acting with <span class="math inline">\(\vert j\rangle \langle j\vert\)</span> on <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> gives the component of <span class="math inline">\(\vert \psi \rangle\)</span> along <span class="math inline">\(\vert j\rangle\)</span>:</p>
+<p><span id="eq-ch02-p0322"><span class="math display">\[
+\left( {\left\vert  j \right\rangle \left\langle j \right\vert } \right)\left\vert  \psi \right\rangle = \left\vert  j \right\rangle \left\langle {j} \mathrel{\left \vert  {\vphantom {j \psi }} \right. \kern-1.2pt } {\psi } \right\rangle
+\tag{2.24}\]</span></span></p>
+</section>
+<section id="the-completeness-relation" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="the-completeness-relation"><span class="header-section-number">2.4.2</span> The completeness relation</h3>
+<p>In <a href="#eq-zeqnnum153427" class="quarto-xref">Equation&nbsp;<span>2.22</span></a>, <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> does not depend on the summation index <span class="math inline">\(j\)</span> and can be taken outside the sum:</p>
+<p><span id="eq-ch02-p0325"><span class="math display">\[
+\left\vert  \psi \right\rangle = \left( {\sum\limits_j {\left\vert  j \right\rangle \left\langle j \right\vert } } \right)\left\vert  \psi \right\rangle
+\tag{2.25}\]</span></span></p>
+<p>The sum of the projectors is an operator that maps every <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> to itself, <span class="math inline">\(\vert \psi\rangle\)</span>. Therefore,</p>
+<p><span id="eq-zeqnnum286146"><span class="math display">\[
+\sum\limits_j {\left\vert  j \right\rangle \left\langle j \right\vert } = \hat I
+\tag{2.26}\]</span></span></p>
+<p>This is the <strong>completeness relation</strong>. It is extremely useful: an identity of this form can be inserted wherever an operator is allowed in a Dirac expression, without changing the result. For example, any operator <span class="math inline">\(\hat M\)</span> in a space with basis <span class="math inline">\(\left\{ {\vert 1\rangle ,\vert 2\rangle , \cdots \vert n\rangle } \right\}\)</span> can be expanded as</p>
+<p><span id="eq-ch02-p0329"><span class="math display">\[
+\begin{array}{c} \hat M = \left( {\sum\limits_i {\left\vert  i \right\rangle \left\langle i \right\vert } } \right)\hat M\left( {\sum\limits_j {\left\vert  j \right\rangle \left\langle j \right\vert } } \right) = \sum\limits_{i,j} {\left\vert  i \right\rangle \left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\langle j \right\vert } \\ = \sum\limits_{i,j} {\left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{M_{ij}}\left\vert  i \right\rangle \left\langle j \right\vert } \end{array}
+\tag{2.27}\]</span></span></p>
+<p>If the basis consists of the eigenstates <span class="math inline">\(\hat M\vert j\rangle = {m_j}\vert j\rangle\)</span> of <span class="math inline">\(\hat M\)</span>, then</p>
+<p><span id="eq-zeqnnum298708"><span class="math display">\[
+\begin{array}{c} \hat M = \sum\limits_{i,j} {\left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{m_j}\langle i\vert j\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{m_j}{\delta _{ij}}\left\vert  i \right\rangle \left\langle j \right\vert } \\ = \sum\limits_j {{m_j}\left\vert  j \right\rangle \left\langle j \right\vert } \end{array}
+\tag{2.28}\]</span></span></p>
+</section>
+</section>
+<section id="hermitian-conjugates-of-operators" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="hermitian-conjugates-of-operators"><span class="header-section-number">2.5</span> Hermitian conjugates of operators</h2>
+<p>Suppose an operator <span class="math inline">\(\hat B\)</span> is related to <span class="math inline">\(\hat A\)</span> as follows: whenever the latter acts on a ket as <span class="math inline">\(\hat A\left\vert  \psi \right\rangle = \left\vert  \phi \right\rangle\)</span>, we have <span class="math inline">\(\left\langle \psi \right\vert \hat B = \left\langle \phi \right\vert\)</span>. Then <span class="math inline">\(\hat B\)</span> is the <strong>Hermitian conjugate</strong> of <span class="math inline">\(\hat A\)</span>, denoted <span class="math inline">\({\hat A^\dag }\)</span>.</p>
+<p><span id="eq-zeqnnum326007"><span class="math display">\[
+\hat A\left\vert  \psi \right\rangle \leftrightarrow \left\langle \psi \right\vert {\hat A^\dag }
+\tag{2.29}\]</span></span></p>
+<p>Hermitian conjugation has the following properties.</p>
+<p><strong>Theorem 2.2.</strong></p>
+<p><span id="eq-zeqnnum665376"><span class="math display">\[
+{\left( {\hat X + \hat Y} \right)^\dag } = {\hat X^\dag } + {\hat Y^\dag }
+\tag{2.30}\]</span></span></p>
+<p><strong>Proof.</strong> Apply the bra–ket duality rules <a href="01-vectors-and-quantum-states.html#eq-zeqnnum136783" class="quarto-xref">Equation&nbsp;<span>1.6</span></a> and <a href="#eq-zeqnnum326007" class="quarto-xref">Equation&nbsp;<span>2.29</span></a>:</p>
+<p><span id="eq-ch02-p0339"><span class="math display">\[
+\begin{array}{c} \left( {\hat X + \hat Y} \right)\left\vert  \psi \right\rangle \leftrightarrow \left\langle \psi \right\vert {\left( {\hat X + \hat Y} \right)^\dag }\\ \left( {\hat X + \hat Y} \right)\left\vert  \psi \right\rangle = \hat X\left\vert  \psi \right\rangle + \hat Y\left\vert  \psi \right\rangle \leftrightarrow \left\langle \psi \right\vert {{\hat X}^\dag } + \left\langle \psi \right\vert {{\hat Y}^\dag } = \left\langle \psi \right\vert ({{\hat X}^\dag } + {{\hat Y}^\dag }) \end{array}
+\tag{2.31}\]</span></span></p>
+<p><strong>Theorem 2.3.</strong></p>
+<p><span id="eq-zeqnnum908109"><span class="math display">\[
+{\left( {\hat X\hat Y} \right)^\dag } = {\hat Y^\dag }{\hat X^\dag }
+\tag{2.32}\]</span></span></p>
+<p><strong>Proof.</strong></p>
+<p><span id="eq-ch02-p0343"><span class="math display">\[
+\begin{array}{c} \left( {\hat X\hat Y} \right)\left\vert  \psi \right\rangle \leftrightarrow \left\langle \psi \right\vert {\left( {\hat X\hat Y} \right)^\dag }\\ \left( {\hat X\hat Y} \right)\left\vert  \psi \right\rangle = \hat X\left( {\hat Y\left\vert  \psi \right\rangle } \right) \leftrightarrow \left( {\left\langle \psi \right\vert {{\hat Y}^\dag }} \right){{\hat X}^\dag } = \left\langle \psi \right\vert {{\hat Y}^\dag }{{\hat X}^\dag } \end{array}
+\tag{2.33}\]</span></span></p>
+<p><strong>Theorem 2.4.</strong></p>
+<p>For any two vectors <span class="math inline">\(\vert \alpha\rangle ,\vert \beta\rangle\)</span>,</p>
+<p><span id="eq-zeqnnum961324"><span class="math display">\[
+\left\langle \alpha \right\vert {{{\hat M}^\dag }}\left\vert  \beta \right\rangle = \left\langle \beta \right\vert \hat M{\left\vert  \alpha \right\rangle ^*}
+\tag{2.34}\]</span></span></p>
+<p><strong>Proof.</strong> Put <span class="math inline">\(\hat M\left\vert  \alpha \right\rangle = \left\vert  \gamma \right\rangle\)</span>, so that <span class="math inline">\(\left\langle \alpha \right\vert {\hat M^\dag } = \left\langle \gamma \right\vert\)</span>.</p>
+<p><span id="eq-ch02-p0348"><span class="math display">\[
+\left\langle \alpha \right\vert {{\hat M}^\dag }\left\vert  \beta \right\rangle = \left\langle {\gamma } \mathrel{\left \vert  {\vphantom {\gamma \beta }} \right. \kern-1.2pt } {\beta } \right\rangle = {\left\langle {\beta } \mathrel{\left \vert  {\vphantom {\beta \gamma }} \right. \kern-1.2pt } {\gamma } \right\rangle ^*} = \left\langle \beta \right\vert \hat M{\left\vert  \alpha \right\rangle ^*}
+\tag{2.35}\]</span></span></p>
+<p><strong>Theorem 2.5.</strong></p>
+<p><span id="eq-ch02-p0350"><span class="math display">\[
+{({\hat M^\dag })^\dag } = \hat M
+\tag{2.36}\]</span></span></p>
+<p><strong>Proof.</strong> For any two vectors <span class="math inline">\(\vert \alpha\rangle ,\vert \beta\rangle\)</span>,</p>
+<p><span id="eq-ch02-p0352"><span class="math display">\[
+\left\langle \alpha \right\vert {{{({{\hat M}^\dag })}^\dag }}\left\vert  \beta \right\rangle = \left\langle \beta \right\vert {\hat M^\dag }{\left\vert  \alpha \right\rangle ^*} = {\left( {\left\langle \alpha \right\vert \hat M{{\left\vert  \beta \right\rangle }^*}} \right)^*} = \left\langle \alpha \right\vert \hat M\left\vert  \beta \right\rangle
+\tag{2.37}\]</span></span></p>
+<p>The first two equalities use Theorem 2.4. Hence <span class="math inline">\({({\hat M^\dag })^\dag } = \hat M\)</span>.</p>
+<section id="hermitian-conjugation-of-an-outer-product" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="hermitian-conjugation-of-an-outer-product"><span class="header-section-number">2.5.1</span> Hermitian conjugation of an outer product</h3>
+<p>For an outer-product operator <span class="math inline">\(\vert \psi \rangle \langle \phi \vert\)</span>,</p>
+<p><span id="eq-ch02-p0356"><span class="math display">\[
+\left( {\left\vert  \psi \right\rangle \left\langle \phi \right\vert } \right)\left\vert  \alpha \right\rangle {\rm{ = }}\left\vert  \psi \right\rangle \left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \alpha }} \right. \kern-1.2pt } {\alpha } \right\rangle \leftrightarrow \left\langle {\alpha } \mathrel{\left \vert  {\vphantom {\alpha \phi }} \right. \kern-1.2pt } {\phi } \right\rangle \left\langle \psi \right\vert {\rm{ = }}\left\langle \alpha \right\vert \left( {\left\vert  \phi \right\rangle \left\langle \psi \right\vert } \right)
+\tag{2.38}\]</span></span></p>
+<p>Therefore its Hermitian conjugate is</p>
+<p><span id="eq-zeqnnum917915"><span class="math display">\[
+{\left( {\left\vert  \psi \right\rangle \left\langle \phi \right\vert } \right)^\dag } = \left\vert  \phi \right\rangle \left\langle \psi \right\vert
+\tag{2.39}\]</span></span></p>
+</section>
+<section id="matrix-representation-of-the-hermitian-conjugate" class="level3" data-number="2.5.2">
+<h3 data-number="2.5.2" class="anchored" data-anchor-id="matrix-representation-of-the-hermitian-conjugate"><span class="header-section-number">2.5.2</span> Matrix representation of the Hermitian conjugate</h3>
+<p>In a basis <span class="math inline">\(\left\{ {\left\vert  1 \right\rangle ,\left\vert  2 \right\rangle ...\left\vert  N \right\rangle } \right\}\)</span>, <a href="#eq-zeqnnum961324" class="quarto-xref">Equation&nbsp;<span>2.34</span></a> relates the matrix elements of <span class="math inline">\(\hat M\)</span> and <span class="math inline">\({\hat M^\dag }\)</span> as follows:</p>
+<p><span id="eq-zeqnnum366291"><span class="math display">\[
+\left\langle i \right\vert {\hat M^\dag }\left\vert  j \right\rangle = \left\langle j \right\vert \hat M{\left\vert  i \right\rangle ^*} \qquad  {\rm{or}} \qquad  M_{ij}^\dag = M_{ji}^*
+\tag{2.40}\]</span></span></p>
+<p>Thus the matrix of <span class="math inline">\({\hat M^\dag }\)</span> is the conjugate transpose of the matrix of <span class="math inline">\(\hat M\)</span>. For example,</p>
+<p><span id="eq-ch02-p0363"><span class="math display">\[
+\text{If } \hat M = \left( {\begin{array}{*{20}{c}} {{M_{11}}}&amp;{{M_{12}}}&amp;{{M_{13}}} \\ {{M_{21}}}&amp;{{M_{22}}}&amp;{{M_{23}}} \\ {{M_{31}}}&amp;{{M_{32}}}&amp;{{M_{33}}} \end{array}} \right), \qquad  \;\;\;\;\text{then } {\hat M^\dag } = \left( {\begin{array}{*{20}{c}} {M_{11}^*}&amp;{M_{21}^*}&amp;{M_{31}^*} \\ {M_{12}^*}&amp;{M_{22}^*}&amp;{M_{32}^*} \\ {M_{13}^*}&amp;{M_{23}^*}&amp;{M_{33}^*} \end{array}} \right)
+\tag{2.41}\]</span></span></p>
+<p>The matrix representation makes it clear that <span class="math inline">\({\left( {{{\hat M}^\dag }} \right)^\dag } = \hat M\)</span>. Thus <span class="math inline">\(\hat M\)</span> and <span class="math inline">\({\hat M^\dag }\)</span> are Hermitian conjugates of one another.</p>
+</section>
+</section>
+<section id="inverse-and-unitary-operators" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="inverse-and-unitary-operators"><span class="header-section-number">2.6</span> Inverse and unitary operators</h2>
+<p><strong>Inverse.</strong> The inverse <span class="math inline">\({\hat O^{ - 1}}\)</span> of an operator <span class="math inline">\(\hat O\)</span> is defined by</p>
+<p><span id="eq-ch02-p0367"><span class="math display">\[
+{\hat O^{ - 1}}\hat O = \hat O{\hat O^{ - 1}} = \hat I
+\tag{2.42}\]</span></span></p>
+<p><strong>Unitary operator.</strong> If the inverse of <span class="math inline">\(\hat U\)</span> equals the Hermitian conjugate <span class="math inline">\({\hat U^\dag } = {\hat U^{ - 1}}\)</span> of <span class="math inline">\(\hat U\)</span>, that is, <span class="math inline">\({\hat U^\dag }\hat U = \hat U{\hat U^\dag } = \hat I\)</span>, then <span class="math inline">\(\hat U\)</span> is <strong>unitary</strong>. Its action on vectors is a unitary transformation. The most important property of such a transformation is preservation of inner products.</p>
+<p><strong>Theorem 2.6.</strong> A unitary transformation preserves inner products.</p>
+<p><strong>Proof.</strong> Suppose <span class="math inline">\(\hat U\left\vert  \alpha \right\rangle = \left\vert  {\alpha '} \right\rangle\)</span> and <span class="math inline">\(\hat U\left\vert  \beta \right\rangle = \left\vert  {\beta '} \right\rangle\)</span>. Then</p>
+<p><span id="eq-ch02-p0371"><span class="math display">\[
+\left\langle {{\alpha '}} \mathrel{\left \vert  {\vphantom {{\alpha '} {\beta '}}} \right. \kern-1.2pt } {{\beta '}} \right\rangle = \left\langle \alpha \right\vert {\hat U^\dag }\hat U\left\vert  \beta \right\rangle = \left\langle {\alpha } \mathrel{\left \vert  {\vphantom {\alpha \beta }} \right. \kern-1.2pt } {\beta } \right\rangle
+\tag{2.43}\]</span></span></p>
+</section>
+<section id="hermitian-operators" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="hermitian-operators"><span class="header-section-number">2.7</span> Hermitian operators</h2>
+<p>An operator <span class="math inline">\(\hat A\)</span> is <strong>Hermitian</strong> if it equals its own Hermitian conjugate, <span class="math inline">\({\hat A^\dag } = \hat A\)</span>. We will see that quantum-mechanical observables are represented by Hermitian operators.</p>
+<p>Using the relation <span class="math inline">\(\left\langle \phi \right\vert {\hat X^\dag }\left\vert  \psi \right\rangle = \left\langle \psi \right\vert \hat X{\left\vert  \phi \right\rangle ^*}\)</span> between <span class="math inline">\(\hat X\)</span> and its Hermitian conjugate, if <span class="math inline">\(\hat X\)</span> is Hermitian, so that <span class="math inline">\(\hat X = {\hat X^\dag }\)</span>, then</p>
+<p><span id="eq-zeqnnum353712"><span class="math display">\[
+\left\langle \phi \right\vert \hat X\left\vert  \psi \right\rangle = \left\langle \psi \right\vert \hat X{\left\vert  \phi \right\rangle ^*}
+\tag{2.44}\]</span></span></p>
+<p><strong>Theorem 2.7.</strong> For a Hermitian operator <span class="math inline">\(\hat X\)</span>, <span class="math inline">\(\left\langle \psi \right\vert \hat X\left\vert  \psi \right\rangle\)</span> is real.</p>
+<p><strong>Proof.</strong> Set <span class="math inline">\(\left\vert  \phi \right\rangle = \left\vert  \psi \right\rangle\)</span> in <a href="#eq-zeqnnum353712" class="quarto-xref">Equation&nbsp;<span>2.44</span></a>:</p>
+<p><span id="eq-ch02-p0378"><span class="math display">\[
+\left\langle \psi \right\vert \hat X\left\vert  \psi \right\rangle = \left\langle \psi \right\vert \hat X{\left\vert  \psi \right\rangle ^*}
+\tag{2.45}\]</span></span></p>
+<p><strong>Theorem 2.8.</strong> The eigenvalues of a Hermitian operator are real.</p>
+<p><strong>Proof.</strong> If <span class="math inline">\(\hat A\left\vert  a \right\rangle = a\left\vert  a \right\rangle\)</span>, duality gives <span class="math inline">\(\left\langle a \right\vert {\hat A^\dag } = \left\langle a \right\vert {a^*}\)</span> and <span class="math inline">\(\hat A = {\hat A^\dag }\)</span>, hence <span class="math inline">\(\left\langle a \right\vert \hat A = \left\langle a \right\vert {a^*}\)</span>. We can therefore evaluate <span class="math inline">\(\left\langle a \right\vert \hat A\left\vert  a \right\rangle\)</span> in two ways:</p>
+<p><span id="eq-ch02-p0381"><span class="math display">\[
+\begin{array}{c} \left\langle a \right\vert \hat A\left\vert  a \right\rangle = \left\langle a \right\vert \left( {\hat A\left\vert  a \right\rangle } \right) = a\left\langle {a} \mathrel{\left \vert  {\vphantom {a a}} \right. \kern-1.2pt } {a} \right\rangle \\ \left\langle a \right\vert \hat A\left\vert  a \right\rangle = \left( {\left\langle a \right\vert \hat A} \right)\left\vert  a \right\rangle = {a^*}\left\langle {a} \mathrel{\left \vert  {\vphantom {a a}} \right. \kern-1.2pt } {a} \right\rangle \end{array}
+\tag{2.46}\]</span></span></p>
+<p>It follows that <span class="math inline">\(a = {a^*}\)</span>, so <span class="math inline">\(a\)</span> is real.</p>
+<p>Physically, this ensures that measured values of observables are real.</p>
+<p><strong>Theorem 2.9.</strong> A Hermitian operator’s matrix equals its conjugate transpose, and its diagonal elements are real.</p>
+<p><strong>Proof.</strong> By <a href="#eq-zeqnnum961324" class="quarto-xref">Equation&nbsp;<span>2.34</span></a>, if <span class="math inline">\(\hat A\)</span> is Hermitian, then for any vectors <span class="math inline">\(\vert \alpha\rangle ,\vert \beta\rangle\)</span>,</p>
+<p><span id="eq-ch02-p0386"><span class="math display">\[
+\left\langle \alpha \right\vert {\hat A}\left\vert  \beta \right\rangle = \left\langle \beta \right\vert {\hat A}{\left\vert  \alpha \right\rangle ^*}
+\tag{2.47}\]</span></span></p>
+<p>Consequently, the matrix elements of <span class="math inline">\(\hat A\)</span> in any complete basis obey</p>
+<p><span id="eq-ch02-p0388"><span class="math display">\[
+{A_{ij}} = A_{ji}^*
+\tag{2.48}\]</span></span></p>
+<p>Thus <span class="math inline">\({A_{ii}} = A_{ii}^* \Rightarrow {A_{ii}} \in \Re\)</span>.</p>
+<p>This property makes it easy to recognize a matrix representing a Hermitian operator.</p>
+<p><strong>Theorem 2.10.</strong> Eigenvectors of a Hermitian operator belonging to different eigenvalues are orthogonal.</p>
+<p><strong>Proof.</strong> Let <span class="math inline">\({a_i}\)</span> and <span class="math inline">\({a_j}\)</span> be eigenvalues of the Hermitian operator <span class="math inline">\(\hat A\)</span>, with corresponding eigenvectors <span class="math inline">\(\vert {a_i}\rangle ,\vert {a_j}\rangle\)</span>:</p>
+<p><span id="eq-ch02-p0393"><span class="math display">\[
+\begin{array}{c} \hat A\left\vert  {{a_i}} \right\rangle = {a_i}\left\vert  {{a_i}} \right\rangle \\ \hat A\left\vert  {{a_j}} \right\rangle = {a_j}\left\vert  {{a_j}} \right\rangle \end{array}
+\tag{2.49}\]</span></span></p>
+<p>Duality gives</p>
+<p><span id="eq-ch02-p0395"><span class="math display">\[
+\left\langle {{a_i}} \right\vert {\hat A^\dag } = \left\langle {{a_i}} \right\vert a_i^*
+\tag{2.50}\]</span></span></p>
+<p>Since <span class="math inline">\(\hat A = {\hat A^\dag }\)</span> and Hermitian eigenvalues are real, this becomes</p>
+<p><span id="eq-ch02-p0397"><span class="math display">\[
+\left\langle {{a_i}} \right\vert \hat A = \left\langle {{a_i}} \right\vert {a_i}
+\tag{2.51}\]</span></span></p>
+<p>Multiply both sides on the right by <span class="math inline">\(\vert {a_j}\rangle\)</span>, then let <span class="math inline">\(\hat A\)</span> act first on <span class="math inline">\(\vert {a_j}\rangle\)</span>. Rearranging gives</p>
+<p><span id="eq-ch02-p0399"><span class="math display">\[
+\left( {{a_j} - {a_i}} \right)\left\langle {{{a_i}}} \mathrel{\left \vert  {\vphantom {{{a_i}} {{a_j}}}} \right. \kern-1.2pt } {{{a_j}}} \right\rangle = 0
+\tag{2.52}\]</span></span></p>
+<p>Since <span class="math inline">\({a_i} \ne {a_j}\)</span>, we must have <span class="math inline">\(\langle {{a_i}}\vert {{a_j}}\rangle = 0\)</span>, proving the result.</p>
+<p>We therefore obtain the following theorem.</p>
+<p><strong>Theorem 2.11.</strong> If all <span class="math inline">\(N\)</span> eigenvalues of a Hermitian operator <span class="math inline">\(\hat A\)</span> are nondegenerate, its <span class="math inline">\(N\)</span> mutually orthogonal eigenvectors <span class="math inline">\(\{ \vert {a_1}\rangle ,\vert {a_2}\rangle \cdots \vert {a_N}\rangle \}\)</span> form a complete basis for <span class="math inline">\(\hat A\)</span>.</p>
+<p>The conclusion extends to degenerate Hermitian operators. Chapter 4 discusses how to choose the basis vectors within degenerate subspaces.</p>
+<section id="representations" class="level3" data-number="2.7.1">
+<h3 data-number="2.7.1" class="anchored" data-anchor-id="representations"><span class="header-section-number">2.7.1</span> Representations</h3>
+<p>A complete basis made from the eigenvectors of a Hermitian operator <span class="math inline">\(\hat A\)</span> defines the <strong><span class="math inline">\(\hat A\)</span> representation</strong>.</p>
+<ul>
+<li>An arbitrary vector <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> has the following matrix in the <span class="math inline">\(\hat A\)</span> representation:</li>
+</ul>
+<p><span id="eq-ch02-p0407"><span class="math display">\[
+\left\vert  \psi \right\rangle = \sum\limits_i {\left\vert  {{a_i}} \right\rangle \left\langle {{{a_i}}} \mathrel{\left \vert  {\vphantom {{{a_i}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {{{a_1}}} \mathrel{\left \vert  {\vphantom {{{a_1}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }\\ {\left\langle {{{a_2}}} \mathrel{\left \vert  {\vphantom {{{a_2}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }\\ \vdots \end{array}} \right)
+\tag{2.53}\]</span></span></p>
+<ul>
+<li>The eigenvector <span class="math inline">\(\left\vert  {{a_i}} \right\rangle\)</span> of <span class="math inline">\(\hat A\)</span> has the following column representation in its own eigenbasis:</li>
+</ul>
+<p><span id="eq-ch02-p0409"><span class="math display">\[
+\lvert a_i\rangle=\begin{pmatrix}\langle a_1\vert a_i\rangle\\\vdots\\\langle a_i\vert a_i\rangle\\\vdots\\\langle a_N\vert a_i\rangle\end{pmatrix}=\begin{pmatrix}0\\\vdots\\1\\\vdots\\0\end{pmatrix}\quad\text{(1 in row }i\text{)}
+\tag{2.54}\]</span></span></p>
+<ul>
+<li>An arbitrary Hermitian operator <span class="math inline">\(\hat B\)</span> has the following matrix in the <span class="math inline">\(\hat A\)</span> representation:</li>
+</ul>
+<p><span id="eq-ch02-p0411"><span class="math display">\[
+\hat B = \left( {\begin{array}{*{20}{c}} {\left\langle {{a_1}} \right\vert \hat B\left\vert  {{a_1}} \right\rangle }&amp;{\left\langle {{a_1}} \right\vert \hat B\left\vert  {{a_2}} \right\rangle }&amp; \cdots \\ {\left\langle {{a_2}} \right\vert \hat B\left\vert  {{a_1}} \right\rangle }&amp;{\left\langle {{a_2}} \right\vert \hat B\left\vert  {{a_2}} \right\rangle }&amp; \cdots \\ \vdots &amp; \vdots &amp; \ddots \end{array}} \right)
+\tag{2.55}\]</span></span></p>
+<ul>
+<li>The matrix of <span class="math inline">\(\hat A\)</span> in its own representation is diagonal, with the eigenvalues of <span class="math inline">\(\hat A\)</span> on the diagonal:</li>
+</ul>
+<p><span id="eq-zeqnnum449673"><span class="math display">\[
+\hat A = \left( {\begin{array}{*{20}{c}} {\left\langle {{a_1}} \right\vert \hat A\left\vert  {{a_1}} \right\rangle }&amp;{\left\langle {{a_1}} \right\vert \hat A\left\vert  {{a_2}} \right\rangle }&amp; \cdots \\ {\left\langle {{a_2}} \right\vert \hat A\left\vert  {{a_1}} \right\rangle }&amp;{\left\langle {{a_2}} \right\vert \hat A\left\vert  {{a_2}} \right\rangle }&amp; \cdots \\ \vdots &amp; \vdots &amp; \ddots \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{a_1}}&amp;0&amp; \cdots \\ 0&amp;{{a_2}}&amp; \cdots \\ \vdots &amp; \vdots &amp; \ddots \end{array}} \right)
+\tag{2.56}\]</span></span></p>
+</section>
+</section>
+<section id="exercises" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="exercises"><span class="header-section-number">2.8</span> Exercises</h2>
+<p><strong>2.1.</strong> Let {<span class="math inline">\(\left\vert  U \right\rangle ,\left\vert  D \right\rangle\)</span>} be a basis of a two-dimensional vector space. The two basis vectors have the following matrices in this basis:</p>
+<p><span id="eq-ch02-p0416"><span class="math display">\[
+\vert U\rangle = \left( {\begin{array}{*{20}{c}} {\langle U\vert U\rangle }\\ {\langle D\vert U\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right), \qquad  \vert D\rangle = \left( {\begin{array}{*{20}{c}} {\langle U\vert D\rangle }\\ {\langle D\vert D\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0\\ 1 \end{array}} \right),
+\tag{2.57}\]</span></span></p>
+<p>Three operators <span class="math inline">\(\hat A,\hat B,\hat C\)</span> in this space have the following properties:</p>
+<p><span id="eq-ch02-p0418"><span class="math display">\[
+\begin{array}{l} \hat A\vert U\rangle = \vert D\rangle , &amp; \hat A\vert D\rangle = \vert U\rangle \\ \hat B\vert U\rangle = i\vert D\rangle , &amp; \hat B\vert D\rangle = - i\vert U\rangle \\ \hat C\vert U\rangle = \vert U\rangle , &amp; \hat C\vert D\rangle = \vert D\rangle \end{array}
+\tag{2.58}\]</span></span></p>
+<p>Write the matrix of each operator in this basis.</p>
+<p><strong>2.2.</strong> Let <span class="math inline">\(\left\vert  1 \right\rangle ,\left\vert  2 \right\rangle\)</span> be two basis vectors of a two-dimensional space, with operator <span class="math inline">\(\hat H\)</span> given by</p>
+<p><span id="eq-ch02-p0422"><span class="math display">\[
+\hat H = \cos \theta \left\vert  1 \right\rangle \left\langle 1 \right\vert  + \sin \theta \left\vert  1 \right\rangle \left\langle 2 \right\vert  + \sin \theta \left\vert  2 \right\rangle \left\langle 1 \right\vert  - \cos \theta \left\vert  2 \right\rangle \left\langle 2 \right\vert
+\tag{2.59}\]</span></span></p>
+<p>Find the eigenvalues and corresponding eigenstates of <span class="math inline">\(\hat H\)</span>.</p>
+<p>**2.3*.** A Hermitian operator <span class="math inline">\(\hat A\)</span> has nondegenerate eigenvalues <span class="math inline">\(\left\{ {{a_i}} \right\}\)</span> and eigenstates <span class="math inline">\(\left\{ {\left\vert  {{a_i}} \right\rangle } \right\}\)</span>. Find the eigenvalues and eigenstates of <span class="math inline">\({\hat A^{ - 1}}\)</span>.</p>
+<p><strong>2.4.</strong> Prove that if <span class="math inline">\(\hat A\)</span> is Hermitian, the eigenvalues of <span class="math inline">\({\hat A^2}\)</span> are nonnegative.</p>
+<p><strong>2.5.</strong> Prove that <span class="math inline">\(\hat A{\hat A^\dag }\)</span> is Hermitian for any operator <span class="math inline">\(\hat A\)</span>.</p>
+
+
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>When <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> and <span class="math inline">\(\left\vert  \phi \right\rangle\)</span> belong to different vector subspaces, <span class="math inline">\(\left\vert  \psi \right\rangle \left\vert  \phi \right\rangle\)</span> denotes a tensor-product state. See Chapter 9.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./01-vectors-and-quantum-states.html" class="pagination-link" aria-label="Vectors and Quantum States">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Vectors and Quantum States</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./03-quantum-measurement.html" class="pagination-link" aria-label="Quantum Measurement">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Quantum Measurement</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

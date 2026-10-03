@@ -1,0 +1,1201 @@
+0	Introduction to Quantum Mechanics — Lecture Notes
+1	Contents
+124	References
+125	J. J. Sakurai, *Modern Quantum Mechanics*: logically organized, with a complete and clear presentation.
+126	Zhao Kaihua and Luo Weiyin, *Quantum Physics*, second edition: extensive coverage; Appendix A presents matrix mechanics.
+128	Preface
+129	Even a careful beginner is unlikely to understand a quantum mechanics textbook completely on a first reading. Many concepts depend on one another, so you will need to move back and forth through the text before the ideas fit together. These notes introduce many new concepts. If a term becomes unclear, use the search function to find where it was introduced. Sections marked with an asterisk (*) may be skipped without interrupting your progress through the remaining material.
+130	I would first like to discuss why quantum mechanics is suitable for describing microscopic particles, or why quantum phenomena are particularly apparent in microscopic systems. We begin by accepting that the world obeys quantum mechanics, but any physical law must be applied to a clearly defined system. Microscopic systems are relatively simple and easier to isolate from their environment. Here, isolation means the absence of interactions: a system that does not interact with its surroundings is a good isolated system. Once random interactions with the environment occur, we must describe the system and environment together as a larger quantum system. This combined system still obeys quantum mechanics. However, because we know very little about the environment and ask questions only about the original system, its behavior can often be approximated—and more conveniently described—by classical mechanics. Most systems encountered in daily life are macroscopic and continually interact with their surroundings, which explains why classical mechanics was discovered first. Light provides an exception. Although a beam travels through air, its photons interact only weakly with air molecules and, under ordinary conditions, negligibly with one another. Even a large collection of photons can therefore form a relatively simple quantum system. This helps explain why optical phenomena such as refraction and interference were discovered so early.
+131	If certain observables of a system do not undergo random fluctuations through its interaction with the environment, those observables can still exhibit behavior well described by quantum mechanics.
+132	Vectors and Quantum States
+133	Many people contributed to quantum mechanics through different approaches, including numerous false starts. Following the historical route is therefore not the most efficient way to learn the subject. We will begin directly with the basic principles of modern quantum mechanics.
+134	The Stern–Gerlach experiment
+135	Spin angular momentum [[X5]] is an intrinsic property of a microscopic particle, like its charge or mass, and its magnitude is fixed. Charge and mass are scalars, whereas spin is a vector: although its magnitude is fixed, its projection along a spatial direction can vary and is quantized. Particles whose spin projection can take only [[X6]] or [[X7]] are called spin-1/2 particles; electrons, neutrons, and protons are examples. Such two-state systems are the simplest quantum systems and provide a direct route to the central ideas of quantum mechanics. To avoid repeatedly writing [[X8]], we define a new observable [[X9]]:
+137	Let the unit vector [[X11]] specify a spatial direction, and let [[X12]] denote the projection of [[X13]] along [[X14]]. Measuring [[X15]] for a spin-1/2 particle can give only [[X16]] or [[X17]].
+138	A Stern–Gerlach (SG) apparatus measures a particle's spin projection using a strong magnetic-field gradient. Particles emerge at distinct positions along the gradient direction, each exit corresponding to a different spin projection along that direction.[^f1] A spin-[[X18]] particle has only two possible exits, corresponding to [[X19]]. Suppose a source continuously emits spin-1/2 particles with random spin orientations. We make the beam sufficiently weak that particles pass individually through the entire apparatus and do not interact. We then perform the experiments illustrated in Figure 1.1.
+140	Figure 1.1. The source on the left emits particles with random spin orientations. Each box represents a [[X21]] detector. The percentages to its right give the probabilities that a measurement of [[X22]] yields [[X23]] or [[X24]].
+141	**Experiment 1.** Place an SG apparatus immediately after the source, with its field gradient along [[X25]], to measure [[X26]]. Particles from the random source leave through its positive and negative exits with equal probability. If we block the [[X27]] exit, only particles with [[X28]] pass through the “[[X29]]” exit. Place a second, identically oriented apparatus after the first apparatus's “[[X30]]” exit and measure [[X31]] again. Every result for [[X32]] is [[X33]]. Similarly, selecting [[X34]] after the first apparatus and placing the second at its “[[X35]]” exit gives [[X36]] equal to [[X37]] every time. Rotating both detectors to the same arbitrary direction [[X38]] preserves this agreement. Thus, even in the quantum world, a measurement result can be reproduced. Measuring [[X39]] also provides a way to prepare particles with [[X40]] or [[X41]].
+142	**Experiment 2.** Reverse the orientation of the second [[X42]] apparatus relative to the first. Particles emerging from the first apparatus's “[[X43]]” exit now all emerge from the second apparatus's “[[X44]]” exit [[X45]], and conversely. The measured quantity changes sign when the detector is reversed, suggesting vector behavior.
+143	**Experiment 3.** First use a [[X46]] apparatus to select particles with [[X47]], and then measure [[X48]]. We find [[X49]] for 50% of the particles, and [[X51]] for [[X50]]. Classical reasoning would suggest that the upper outgoing beam has both [[X52]] and [[X53]], while the lower beam has both [[X54]] and [[X55]].
+144	**Experiment 4.** After the second apparatus in Experiment 3, select particles with [[X56]] and pass them through a third apparatus measuring [[X57]]. The preceding classical argument predicts [[X58]] with certainty. Instead, half the particles give [[X59]] and half give [[X60]]. Selecting [[X61]] after the second apparatus and moving the third, [[X62]]-measuring apparatus to its “[[X63]]” exit again produces [[X64]] and [[X65]] with equal probabilities. The crucial change is the insertion of a measurement of [[X67]] between two measurements of [[X66]]. Measuring [[X68]] completely destroys the previously acquired information about [[X69]]. This is not a peculiarity of SG apparatus: any method of measuring the [[X70]] projection has the same consequence. The values of [[X71]] and [[X72]] cannot both be definite for a particle.
+146	Figure 1.2. Recombination of the two SG paths.
+147	**Experiment 5.** Previously, we moved the next detector to align it with each exit of the preceding one. For convenience, we now use magnets as a beam combiner, merging particles entering at different heights into a single outgoing line. Place it between the second and third apparatuses of Experiment 4, as in Figure 1.2. **Experiments 5.1–5.2:** block one exit of the second apparatus to select [[X74]] or [[X75]], and send the selected particles through the combiner into the [[X76]] detector. As before, [[X77]] and [[X78]] each occur with probability [[X79]]. **Experiment 5.3:** remove the blocking plate so that particles from either exit pass through the combiner into the [[X80]] detector. Classical reasoning says that each “[[X82]]” exit of the [[X81]] detector is taken with probability [[X83]], and that particles from either exit subsequently give [[X85]] in the [[X84]] detector with probability [[X86]]. Opening both exits should therefore still give each [[X87]] result with probability [[X88]]. In fact, every measurement of [[X89]] gives [[X90]]! Experiments 4 and 5 show that when the result of [[X91]] cannot be known, the probability of [[X92]] is [[X93]], whereas making the result of [[X94]] knowable gives the two [[X95]] results with probability [[X96]] each.
+148	These observations may seem astonishing, but they describe how the world works. The familiar behavior of the classical world arises as a macroscopic average over enormous numbers of interacting particles.
+149	Experimentally, suppose two directions [[X97]] and [[X98]] make an angle [[X99]]. First measure the projection of [[X100]] along [[X101]], obtaining [[X102]], and then measure [[X105]], the projection of [[X103]] along [[X104]]. The probabilities of [[X106]] and [[X107]] are [[X108]] and [[X109]], respectively. In Experiment 1, [[X110]] and [[X111]]; in Experiment 2, [[X112]]. These probabilities give the mean value [[X114]] for [[X113]]. Although individual measurements of [[X115]] have unfamiliar outcomes, the average of [[X116]] behaves like a classical vector. The mean of [[X117]] is also called the **spin-polarization vector**.
+150	We now develop the basic rules of quantum mechanics and then return to explain these experiments.
+151	Vector spaces
+152	In classical mechanics, the state of a physical system at time [[X118]] is described by the values of its dynamical variables for every particle. For example, the position and momentum of particle [[X119]] are [[X120]]; angular momentum, kinetic energy, and potential energy are functions of positions and momenta. Knowing all these values at an instant supplies complete information about the system. The state evolves according to Newton's second law, continually updating the quantities [[X121]]. Mathematically, a classical state is described by these functions of time. Einstein famously said that he did not believe God played dice. In classical mechanics, statistical predictions are needed only when our information or computational power is incomplete. In principle, an observer who knew every particle's state at one instant and had unlimited computational power could predict the system's state at any past or future time with unlimited precision. This is classical determinism.
+153	In quantum mechanics, even the spin projections of a single isolated electron along two arbitrary directions cannot both be definite. Experiments show that classical mechanics is a macroscopic approximation to quantum mechanics, whose laws underlie the world we know. Certain important quantities cannot simultaneously be definite: position and momentum, different angular-momentum components, and even kinetic and potential energy. Consequently, the state of a system cannot be described by assigning definite values to all its dynamical variables at one time. We must reconsider the relation between a physical state and its dynamical variables.
+154	In quantum mechanics, the system's state is called a **quantum state**, while its dynamical variables are called **observables**. They are different kinds of objects. Given the state at one instant, the Schrödinger equation determines its subsequent evolution. However, the state gives only the probabilities of the possible values of observables. What mathematical objects should represent states and observables? A central contribution of Heisenberg, Schrödinger, Dirac, and others was to find a precise mathematical language for quantum mechanics. Several equivalent formulations exist. We use the concise and general Dirac–von Neumann formulation; Heisenberg's matrix mechanics and Schrödinger's wave mechanics are concrete realizations of it.
+155	The relationship between observables and quantum states is the relationship between operators and vectors.
+156	**Quantum postulate.** A physical system's quantum state contains all the information about that system at the given instant. Mathematically, the state is represented by a vector in a complex linear vector space.
+157	The word *vector* can refer either to an ordinary vector in three-dimensional Cartesian space or to an abstract state vector, which can cause confusion. We will distinguish **spatial vectors**, referring to physical three-dimensional space, from **state vectors**, representing quantum states. The space containing all possible state vectors of a system is its **state space**, or **Hilbert space**.
+158	Dirac introduced the notation [[X122]] for a vector and called it a **ket**.
+159	Vectors have the following properties:
+161	Here [[X124]] are complex numbers. These properties are natural and easy to remember. The precise definitions of vector addition and multiplication by a complex number will be specified in concrete examples.
+162	**Zero vector.** Every vector space contains a special zero vector, denoted [[X125]], which may be thought of as having zero length. It is defined by the following condition for every vector [[X126]]:
+164	If [[X128]] and [[X129]] belong to the same vector space, their linear combination [[X130]] belongs to that space as well. If a vector is a linear combination of other vectors, those vectors together are linearly dependent.
+166	Examples of complex linear vector spaces
+167	A complex linear vector space is an abstract concept. The following examples make it concrete. Decide which collections of mathematical objects form such spaces, paying attention to how vector addition and scalar multiplication are defined.
+168	**Example 1: all complex column matrices with [[X131]] components.**
+169	Each complex column matrix with [[X132]] components is a vector. Any linear combination of two such [[X133]]-component columns is again a column with [[X134]] components. Indeed, column matrices are among the most common representations of quantum states.
+171	**Example 2: all solutions of a homogeneous linear differential equation.**
+172	For example, consider all solutions of
+174	If [[X137]] and [[X138]] are solutions, any complex linear combination of them is also a solution. The collection of solutions forms a vector space.
+175	Bras and inner products
+176	The ket [[X139]] has a corresponding **bra**, written [[X140]]. Each ket [[X141]] has a unique dual bra [[X142]], and conversely. Kets form the ket space and bras form the bra space. These spaces obey the same vector-space rules: replacing each ket in the preceding identities by its corresponding bra gives valid identities.
+177	The bra space corresponding to a ket space is specified by the following duality rules:
+179	If bras and kets correspond one to one, why introduce bras? Duality allows two vectors to produce a number. Just as the dot product of two Cartesian vectors is a real number, the **inner product** of two vectors in a complex vector space is a complex number, written
+181	The inner product [[X145]] may be viewed as the projection of [[X146]] onto [[X147]], or the amount of [[X149]] contained in [[X148]].
+182	The inner product obeys the following rules.
+183	**Distributivity:**
+185	**Conjugate symmetry:**
+187	From [[REF:ZEqnNum921664]], the inner product of a vector with itself must be real.
+189	We further require
+191	Equality holds only for [[X154]]. A vector [[X155]] whose inner product with itself is one,
+193	is **normalized**. Any nonzero, unnormalized vector [[X157]] can be normalized as follows:
+195	The concrete rules for bras, kets, and inner products depend on the representation of the vectors. Consider the following example.
+196	**Example.** We know that complex column matrices form a complex linear vector space. How can their inner product produce a number and satisfy all the rules from [[REF:ZEqnNum133573]] to [[REF:ZEqnNum281628]]? In linear algebra, multiplying a row matrix by a column matrix gives a number. Thus, if a column represents a ket, its conjugate-transpose row represents the dual bra. For example,
+198	The inner product [[X160]] can then be defined by ordinary matrix multiplication:
+200	These definitions of bras, kets, and inner products satisfy all the required properties, including [[REF:ZEqnNum921664]].
+202	Orthogonality and basis vectors
+203	Two Cartesian vectors [[X163]] are perpendicular when [[X164]]. At most three nonzero vectors in three-dimensional Cartesian space can be mutually perpendicular. Rotating such a set gives infinitely many alternative sets, but never more than three mutually perpendicular vectors; this is the dimension of the space. Given mutually perpendicular unit vectors [[X165]], any Cartesian vector [[X166]] can be expressed as their linear combination:
+205	The three components of [[X168]] can also be written as a column matrix:
+207	The matrix entries—the components of [[X170]]—depend on the coordinate system. Rotating the [[X171]] axes changes the components of [[X172]]. The coordinate unit vectors, however, always have the following column representations in their own coordinate system:
+210	We now extend these concepts to vector spaces. Two nonzero vectors [[X174]] and [[X175]] are **orthogonal** if their inner product vanishes, [[X176]]. The dimension is the maximum number of mutually orthogonal vectors. In the space of two-component columns, the inner product defined in [[REF:ZEqnNum248635]] allows infinitely many orthogonal pairs; here are three pairs of normalized vectors:
+212	Once one such pair is chosen, no third nonzero column vector is orthogonal to both. The vector space of two-component columns therefore has dimension two.
+213	A set of [[X179]] mutually orthogonal, normalized vectors in an [[X178]]-dimensional vector space forms a **complete basis**, usually called a basis; its members are **basis vectors**. For any two basis vectors [[X180]],
+215	The symbol [[X182]] is the **Kronecker delta**, defined by
+217	A vector space has infinitely many possible complete bases. Each pair in [[REF:ZEqnNum282640]] is a complete basis for the two-dimensional space. A basis acts like a coordinate system: every vector can be expanded as a linear combination of the basis vectors. In an [[X185]]-dimensional space spanned by [[X184]], any vector [[X186]] can be written as
+219	Here [[X188]] is a complex number giving the component of [[X189]] along [[X190]]. Taking the inner product with a basis vector [[X191]] on both sides gives
+221	Thus the component of [[X193]] along [[X194]] is [[X195]], and
+223	This is an important identity. In the final step, the scalar [[X197]] has been moved from the left of [[X198]] to its right so that [[X199]] appears together. Section 2.4 explains why. Combining [[REF:ZEqnNum136783]] and [[REF:ZEqnNum921664]] also gives the bra expansion:
+225	Matrix representations of vectors
+226	Just as a Cartesian vector can be written as a column, the expansion [[REF:ZEqnNum935342]] of a state vector has a column-matrix representation:
+228	Each basis vector, expressed in its own complete basis, has the column representation
+230	The entries of a vector's matrix representation depend on the chosen basis. Columns expressed in different bases cannot be combined directly in matrix calculations.
+231	The following comparison between Cartesian vectors and abstract state vectors may help make the latter more familiar.
+235	Exercises
+236	**1.1.** Determine whether each of the following collections forms a Hilbert space.
+237	All complex numbers.
+238	All vectors in three-dimensional Cartesian space.
+239	The solutions [[X204]] of the following equation, where [[X205]] is real and [[X206]] is a finite, continuous function of [[X207]].
+242	**1.2.** Prove [[X209]].
+243	Hint: construct [[X212]] as a linear combination of [[X210]] and [[X211]], and use [[REF:ZEqnNum281628]] [[X213]].
+245	**1.3.** A two-dimensional vector [[X214]] has the following expansion in the basis [[X215]]:
+247	A second basis [[X217]] satisfies
+249	Find the expansion of [[X219]] in the second basis, using two different methods.
+255	Operators
+256	Quantum states are represented by complex linear vectors. We now discuss the mathematical counterparts of dynamical quantities, which Heisenberg called **observables**: position, momentum, angular momentum, energy, and the SG quantity [[X220]], for example. An observable is represented by a **linear operator** on the vector space.
+257	Linear operators
+258	An operator transforms one vector into another. We usually place a hat over its symbol to distinguish it from an ordinary variable. The action of an operator [[X221]] on a ket is written
+260	An operator can also act on a bra, producing another bra:
+262	An operator acting on a ket is written to its left; an operator acting on a bra is written to its right. An operator between a bra and a ket obeys associativity:
+264	The result of this operation is a number.
+265	Linear operators have the following properties.
+266	**Equality.** If operators [[X225]] and [[X226]] satisfy [[X228]] for every vector [[X227]], then [[X229]].
+267	**Identity.** Every vector space has an identity operator, usually denoted [[X230]], which leaves every vector unchanged:
+269	**Products.** The product [[X232]] of two operators is itself an operator.
+272	The order of multiplication generally matters: in general, [[X235]].
+273	Powers of an operator are defined by
+275	Linear operators must also obey the following rules:
+277	Operator multiplication is associative:
+279	Multiplying any operator by the identity leaves it unchanged:
+281	The third property in [[REF:ZEqnNum324323]], together with the properties of the inner product, gives
+283	Matrix representations of operators
+284	A vector has an expansion in a complete basis, [[REF:ZEqnNum935342]], and an operator has a corresponding basis representation. Let [[X241]] be a basis, and suppose [[X242]] maps [[X243]] to [[X244]]:
+286	Take the inner product with any basis vector [[X246]] on both sides:
+288	Using [[X248]], we can rewrite [[REF:ZEqnNum456036]] as
+290	The quantity [[X250]] is a number. Write [[X251]] and let [[X252]] in [[REF:ZEqnNum775889]] run through the entire basis to obtain
+292	This is the matrix representation of [[X254]].
+293	Thus, the numbers [[X255]] form an [[X256]] square matrix representing [[X257]], with [[X258]] specifying row and column indices. The matrix representation of [[X259]] is
+295	Like a vector's representation, an operator's matrix always depends on the chosen basis.
+296	Eigenvalues and eigenvectors
+297	For an operator, some special vectors are transformed into scalar multiples of themselves. These are its **eigenvectors**, and the corresponding scalars are its **eigenvalues**. To indicate the correspondence, we usually label an eigenvector by its eigenvalue or a related symbol: the eigenvector associated with [[X261]] is often written [[X262]] or [[X263]].
+298	**Example.** If [[X264]] has eigenvectors [[X265]] with eigenvalues [[X266]], then
+300	When operators are represented by square matrices and vectors by columns, these are precisely the matrix eigenvalues and eigenvectors of linear algebra. We can therefore find an operator's eigenvalues and eigenvectors from its matrix representation.
+301	An eigenvalue may correspond to several linearly independent eigenvectors. Their number is its **degeneracy**. An eigenvalue of degeneracy one is nondegenerate; otherwise it is degenerate. Notice that if [[X268]], then [[X270]] for any complex number [[X269]]. Hence [[X271]] also corresponds to eigenvalue [[X272]], but [[X273]] and [[X274]] are linearly dependent and do not increase the degeneracy.
+302	**Theorem 2.1.** If several eigenvectors of [[X275]] share an eigenvalue, any nonzero linear combination is an eigenvector with that same eigenvalue.
+303	**Proof.** Suppose eigenvalue [[X277]] of [[X276]] has [[X278]] eigenvectors, denoted [[X279]], so that
+305	For any linear combination [[X281]] of these eigenvectors,
+307	This proves the result.
+308	Outer products, projection operators, and completeness
+309	We have encountered valid operations such as [[X283]], [[X284]], [[X285]], [[X286]], [[X287]], and [[X288]]. Expressions such as [[X289]], [[X290]], or [[X291]] are not valid. For two vectors [[X292]] and [[X293]] in the same vector space, [[X294]] is also not defined.[^f3] What about the following product?
+311	This is called an **outer product**.
+312	Dirac notation has a useful associative rule: in a product of kets, bras, scalars, and operators, brackets [[X296]] may group adjacent factors in any way, provided the expression inside [[X297]] is a valid scalar, vector, or operator.
+313	To interpret the outer product in [[REF:ZEqnNum460948]], multiply it on the right by a ket and use associativity:
+315	The right-hand side is the scalar [[X299]] times the ket [[X300]], so it is another ket. An outer product therefore maps a ket to a ket: it is an operator.
+316	Projection operators
+317	Let [[X301]] be a complete basis. Every vector [[X302]] can be written as a linear combination of [[X303]]. Associativity gives
+319	Every term in this sum contains an outer-product operator.
+321	This is a **projection operator**. Acting with [[X306]] on [[X307]] gives the component of [[X308]] along [[X309]]:
+323	The completeness relation
+324	In [[REF:ZEqnNum153427]], [[X311]] does not depend on the summation index [[X312]] and can be taken outside the sum:
+326	The sum of the projectors is an operator that maps every [[X314]] to itself, [[X315]]. Therefore,
+328	This is the **completeness relation**. It is extremely useful: an identity of this form can be inserted wherever an operator is allowed in a Dirac expression, without changing the result. For example, any operator [[X318]] in a space with basis [[X317]] can be expanded as
+330	If the basis consists of the eigenstates [[X321]] of [[X320]], then
+332	Hermitian conjugates of operators
+333	Suppose an operator [[X323]] is related to [[X324]] as follows: whenever the latter acts on a ket as [[X325]], we have [[X326]]. Then [[X327]] is the **Hermitian conjugate** of [[X328]], denoted [[X329]].
+335	Hermitian conjugation has the following properties.
+336	**Theorem 2.2.**
+338	**Proof.** Apply the bra–ket duality rules [[REF:ZEqnNum136783]] and [[REF:ZEqnNum326007]]:
+340	**Theorem 2.3.**
+342	**Proof.**
+344	**Theorem 2.4.**
+345	For any two vectors [[X335]],
+347	**Proof.** Put [[X337]], so that [[X338]].
+349	**Theorem 2.5.**
+351	**Proof.** For any two vectors [[X341]],
+353	The first two equalities use Theorem 2.4. Hence [[X343]].
+354	Hermitian conjugation of an outer product
+355	For an outer-product operator [[X344]],
+357	Therefore its Hermitian conjugate is
+359	Matrix representation of the Hermitian conjugate
+360	In a basis [[X347]], [[REF:ZEqnNum961324]] relates the matrix elements of [[X348]] and [[X349]] as follows:
+362	Thus the matrix of [[X351]] is the conjugate transpose of the matrix of [[X352]]. For example,
+364	The matrix representation makes it clear that [[X354]]. Thus [[X355]] and [[X356]] are Hermitian conjugates of one another.
+365	Inverse and unitary operators
+366	**Inverse.** The inverse [[X358]] of an operator [[X357]] is defined by
+368	**Unitary operator.** If the inverse of [[X360]] equals the Hermitian conjugate [[X362]] of [[X361]], that is, [[X363]], then [[X364]] is **unitary**. Its action on vectors is a unitary transformation. The most important property of such a transformation is preservation of inner products.
+369	**Theorem 2.6.** A unitary transformation preserves inner products.
+370	**Proof.** Suppose [[X365]] and [[X366]]. Then
+372	Hermitian operators
+373	An operator [[X368]] is **Hermitian** if it equals its own Hermitian conjugate, [[X369]]. We will see that quantum-mechanical observables are represented by Hermitian operators.
+374	Using the relation [[X371]] between [[X370]] and its Hermitian conjugate, if [[X372]] is Hermitian, so that [[X373]], then
+376	**Theorem 2.7.** For a Hermitian operator [[X375]], [[X376]] is real.
+377	**Proof.** Set [[X377]] in [[REF:ZEqnNum353712]]:
+379	**Theorem 2.8.** The eigenvalues of a Hermitian operator are real.
+380	**Proof.** If [[X379]], duality gives [[X380]] and [[X381]], hence [[X382]]. We can therefore evaluate [[X383]] in two ways:
+382	It follows that [[X385]], so [[X386]] is real.
+383	Physically, this ensures that measured values of observables are real.
+384	**Theorem 2.9.** A Hermitian operator's matrix equals its conjugate transpose, and its diagonal elements are real.
+385	**Proof.** By [[REF:ZEqnNum961324]], if [[X387]] is Hermitian, then for any vectors [[X388]],
+387	Consequently, the matrix elements of [[X390]] in any complete basis obey
+389	Thus [[X392]].
+390	This property makes it easy to recognize a matrix representing a Hermitian operator.
+391	**Theorem 2.10.** Eigenvectors of a Hermitian operator belonging to different eigenvalues are orthogonal.
+392	**Proof.** Let [[X393]] and [[X394]] be eigenvalues of the Hermitian operator [[X395]], with corresponding eigenvectors [[X396]]:
+394	Duality gives
+396	Since [[X399]] and Hermitian eigenvalues are real, this becomes
+398	Multiply both sides on the right by [[X401]], then let [[X402]] act first on [[X403]]. Rearranging gives
+400	Since [[X405]], we must have [[X406]], proving the result.
+401	We therefore obtain the following theorem.
+402	**Theorem 2.11.** If all $N$ eigenvalues of a Hermitian operator [[X407]] are nondegenerate, its $N$ mutually orthogonal eigenvectors [[X409]] form a complete basis for [[X408]].
+403	The conclusion extends to degenerate Hermitian operators. Chapter 4 discusses how to choose the basis vectors within degenerate subspaces.
+404	Representations
+405	A complete basis made from the eigenvectors of a Hermitian operator [[X410]] defines the **[[X411]] representation**.
+406	An arbitrary vector [[X412]] has the following matrix in the [[X413]] representation:
+408	The eigenvector [[X416]] of [[X415]] has the following column representation in its own eigenbasis:
+410	An arbitrary Hermitian operator [[X418]] has the following matrix in the [[X419]] representation:
+412	The matrix of [[X421]] in its own representation is diagonal, with the eigenvalues of [[X422]] on the diagonal:
+414	Exercises
+415	**2.1.** Let {[[X424]]} be a basis of a two-dimensional vector space. The two basis vectors have the following matrices in this basis:
+417	Three operators [[X426]] in this space have the following properties:
+419	Write the matrix of each operator in this basis.
+421	**2.2.** Let [[X428]] be two basis vectors of a two-dimensional space, with operator [[X429]] given by
+423	Find the eigenvalues and corresponding eigenstates of [[X431]].
+425	**2.3*.** A Hermitian operator [[X432]] has nondegenerate eigenvalues [[X433]] and eigenstates [[X434]]. Find the eigenvalues and eigenstates of [[X435]].
+426	**2.4.** Prove that if [[X436]] is Hermitian, the eigenvalues of [[X437]] are nonnegative.
+427	**2.5.** Prove that [[X439]] is Hermitian for any operator [[X438]].
+429	Quantum Measurement
+430	We now connect the abstract mathematics of vectors and operators with physical reality.
+431	The measurement postulates
+432	**Quantum postulate 1.** An observable corresponds to a Hermitian operator, whose eigenvalues are all the possible values of that observable.
+433	**Quantum postulate 2.** A system's quantum state corresponds to a normalized vector, such as [[X440]], containing all information about the system. If [[X441]] is a phase factor, [[X442]] and [[X443]] represent the same physical state.
+434	**Quantum postulate 3.** If [[X444]] are possible states of a system, their superposition [[X445]] is also a possible state, with [[X446]].
+435	If the superposition reduces to [[X447]], it represents the same state as [[X448]]. A common overall phase has no physical significance.
+436	**Quantum postulate 4.** If observable [[X449]] has a definite value [[X450]], the system is in eigenstate [[X453]] of [[X451]] belonging to eigenvalue [[X452]]. Here we assume [[X454]] is nondegenerate.
+437	**Quantum postulate 5—the measurement principle.** Measuring [[X456]] in state [[X455]] gives an eigenvalue [[X458]] of [[X457]] with probability [[X459]]. Afterward, the state collapses to eigenstate [[X461]] associated with the measured value [[X460]]. The inner product [[X462]] is the **probability amplitude** for this event. More generally, the probability of finding [[X464]] in state [[X463]] is [[X465]], with amplitude [[X466]].
+438	The measurement principle can be summarized as follows.
+439	Solve the eigenvalue equation [[X468]] of observable [[X467]] to obtain its eigenvalues and eigenstates:
+441	Collapse is random: we know the probabilities, but cannot predict which eigenstate of [[X471]] the state [[X470]] will collapse into. Only when the initial state is already an eigenstate [[X473]] of [[X472]] does measuring [[X474]] leave it unchanged, with the definite result [[X475]]. An observable therefore has a definite value in its eigenstates.
+442	Measuring [[X476]] must yield some eigenvalue of [[X477]], so the probabilities sum to [[X478]]:
+444	Equivalently,
+446	Using completeness, [[REF:ZEqnNum286146]], this simplifies to
+448	Thus state vectors must be normalized to conserve total probability.
+449	The postulates also imply the following.
+450	Measurement provides a method of state preparation: select systems with measured value [[X482]] to prepare the definite state [[X483]].
+451	Eigenvectors of a Hermitian operator with different eigenvalues are orthogonal. Therefore, two states that can be distinguished with certainty by a single measurement must be orthogonal.
+452	If [[X484]] has value [[X485]], the probability that a measurement of [[X486]] yields [[X487]] is [[X488]].
+453	After measuring [[X489]] and obtaining [[X490]], the state collapses to [[X491]]. The probability that [[X492]] still has value [[X493]] is then [[X494]]. The next chapter examines relationships between observables.
+454	**Theorem 3.1.** In state [[X495]], the mean value of observable [[X496]] is [[X497]].
+455	**Proof.**
+457	The last line multiplies each value [[X499]] of [[X501]] by the probability of obtaining [[X502]] in state [[X500]], then sums over all possibilities. This is precisely the mean of [[X504]] in state [[X503]].
+458	When the state is understood, the mean of a Hermitian operator [[X505]] may be abbreviated [[X506]].
+459	A two-state spin system
+460	Consider an observable with only two eigenstates. A system whose state space consists of these states is a **two-state system**, like the system in Chapter 1. Its observable is [[X509]], the projection of [[X507]] along [[X508]], so [[X510]] is Hermitian. We now determine the eigenvalues and eigenstates of [[X511]].
+461	**Experiment:** measuring [[X512]] yields either [[X513]] or [[X514]].
+462	**Postulate:** a measurement of an observable always yields one of its eigenvalues.
+463	**Conclusion:** [[X515]] has only two eigenvalues, [[X516]] and [[X517]]. Assuming each is nondegenerate, call their eigenstates [[X518]] and [[X519]]:
+465	The eigenvalues differ, so [[X521]]. These eigenstates form a basis for a two-dimensional vector space, called the [[X522]] representation.
+466	We give the states memorable names. In the coordinates of Figure 3.1, the states for [[X523]] and [[X524]] are [[X525]] and [[X526]] (Up and Down); those for [[X527]] and [[X528]] are [[X529]] and [[X530]] (Right and Left). Measuring the projection along [[X531]], we call the states for [[X532]] and [[X533]] [[X534]] and [[X535]] (In and Out).
+468	Figure 3.1. Coordinates defining Up and Down, Left and Right, and In and Out.
+469	The eigenstates of [[X537]] are [[X538]] and [[X539]], with eigenvalues [[X540]] and [[X541]], respectively. Hence
+471	Similarly, for [[X543]] and [[X544]],
+474	To explain the experiments, we must now determine the relationships between these different states.
+475	Superposition of quantum states
+476	We begin with eigenstates of different observables. In a spin-[[X547]] state space, at most two states can be mutually orthogonal, such as [[X548]] and [[X549]], [[X550]] and [[X551]], or [[X552]] and [[X553]]. Choosing the [[X554]] representation with basis [[X555]] and [[X556]], completeness [[REF:ZEqnNum286146]] gives
+478	Any spin state [[X558]] is a linear combination of [[X559]] and [[X560]]. Following [[REF:ZEqnNum9353]],
+480	To express [[X562]] and [[X563]] in basis [[X564]], use [[REF:ZEqnNum905994]]:
+482	The SG experiment shows that when [[X566]] equals [[X567]], that is, in state [[X568]], a measurement of [[X569]] yields [[X570]] and [[X571]] with equal 50% probabilities. Therefore,
+484	The general solution is
+486	The angles [[X574]] and [[X575]] are undetermined phases. The expansion of [[X576]] is therefore
+488	Here [[X578]]. Since an overall phase is arbitrary, choose [[X579]], or [[X580]], giving
+490	One relative phase [[X582]] remains undetermined. States [[X583]] and [[X584]] fix the positive and negative [[X585]] directions, but the positive [[X586]] direction may still be chosen anywhere in the plane perpendicular to [[X587]]. To keep the expression for [[X588]] free of complex coefficients, choose [[X589]]. Then
+492	That is,
+494	Next express [[X592]] in the [[X593]] representation. Using [[X594]] and [[X595]], and setting an irrelevant overall phase to [[X596]], gives
+496	Equations [[REF:ZEqnNum225749]] and [[REF:ZEqnNum448258]] expand [[X598]] in the [[X599]] representation. Inverting them gives the expansion of [[X600]] in the [[X601]] representation:
+498	Thus, when [[X603]] is definitely [[X604]] or [[X605]], a measurement of [[X606]] yields [[X607]] and [[X608]] with equal 50% probabilities, agreeing with experiment.
+499	Finally, express the eigenstates [[X610]] and [[X611]] of [[X609]] in the [[X612]] representation. In an eigenstate of [[X613]], measurements of [[X614]] and [[X615]] are symmetric, so, as in [[REF:ZEqnNum248257]],
+501	Repeating the reasoning from [[REF:ZEqnNum248257]] to [[REF:ZEqnNum655177]] gives
+503	The relative phase [[X618]] cannot be chosen arbitrarily as it was for [[X619]]. By symmetry, when [[X620]] equals [[X621]], measuring [[X622]] must also yield the values [[X623]] with equal 50% probabilities. Thus [[X624]] must satisfy
+505	Substituting [[REF:ZEqnNum225749]] and [[REF:ZEqnNum757923]] into [[REF:ZEqnNum871161]] gives
+508	Therefore,
+510	The condition [[X629]] gives the same result. The remaining ambiguity in [[X630]] reflects the two possible choices of [[X633]] perpendicular to the already fixed [[X631]] and [[X632]] axes: left-handed ([[X634]]) and right-handed ([[X635]]) coordinates. Choosing the usual right-handed system gives [[X636]], and hence
+512	Using [[X638]] then gives
+514	Although we tried to avoid complex numbers, they have inevitably entered the quantum-mechanical description.
+515	Matrix representations of states and observables
+516	Matrices greatly simplify calculations, but the representation must always be clear. Physical predictions are independent of the chosen representation; all matrices combined in a calculation must nevertheless use the same basis.
+517	Matrices of the [[X640]] eigenstates
+518	From [[REF:ZEqnNum935342]] and [[REF:ZEqnNum343100]], choosing [[X641]] and [[X642]] as basis vectors gives the following column for any state [[X643]]:
+520	Thus,
+524	As an example, prove [[X648]] using matrices.
+525	**Proof.** Use the matrices of [[X649]] and [[X650]] in [[REF:ZEqnNum109578]] and [[REF:ZEqnNum389239]]:
+527	When converting a ket column into a bra row, remember to take the complex conjugate as well as the transpose.
+529	Matrices of the [[X653]] operators
+530	By [[REF:ZEqnNum449673]], the matrix of [[X655]] in the [[X654]] representation is
+532	Next find the matrix of [[X657]] in the [[X658]] representation.
+533	**Method 1.** From [[REF:ZEqnNum667352]] and [[REF:ZEqnNum903599]],
+535	Thus [[X660]] has the following matrix in the [[X661]] representation:
+537	**Method 2.** First expand [[X663]] in its own eigenvectors:
+539	Substitute the matrices [[REF:ZEqnNum109578]] of [[X665]] in the [[X666]] representation into [[REF:ZEqnNum507960]]:
+541	Similarly, the matrix of [[X668]] in the [[X669]] representation follows from [[REF:ZEqnNum298708]] and [[REF:ZEqnNum389239]]:
+543	For reference, the matrices of [[X671]], [[X672]], and [[X673]] in the [[X674]] representation are the **Pauli matrices**:
+545	Two useful pairs of relations are
+548	Using [[X678]], the three Cartesian spin-component operators for a spin-1/2 particle have the following matrices in the [[X679]] representation:
+550	For teaching purposes, we inferred the eigenvalues and eigenstate relationships of [[X681]] from experiments and then obtained the operator matrices. In applications, we usually start with the Hermitian operator representing an observable and solve its eigenvalue equation.
+552	Common conceptual confusions
+553	How to express a measurement
+554	If we measure [[X683]] in state [[X682]], does the state become [[X684]]?
+555	Measurement is not simply the action of an operator on a state. [[X685]] is a definite vector, whereas the state after measurement is random. It is one of the eigenstates of [[X686]], selected from the initial state according to the relevant probabilities. This collapse cannot be expressed by a deterministic state transformation.
+556	Quantum and classical dynamical quantities
+557	Microscopic observables are treated as Hermitian operators, whereas macroscopic fields may be approximated by classical numerical variables. For example, the energy of an electron's spin magnetic moment in an external field [[X687]] is
+559	Here [[X689]] is a numerical variable, whether produced by Earth's field or a current-carrying coil. The [[X690]] component [[X691]] of the electron magnetic moment is a Hermitian operator, as is the energy [[X692]].
+560	An observable versus its value
+561	An operator's eigenvalues and eigenstates are intrinsic properties, independent of the system's current state. Saying that [[X693]] has value 5 means a measurement of [[X694]] will certainly give 5. Do not write “[[X695]]”: the left side is an operator and the right side a number. They are different objects, just as “my student number is 3288” does not mean “I am 3288.” We may introduce a variable [[X696]] for the value of [[X697]], then write “[[X698]] has value 5” as “[[X699]],” indicating state [[X700]].
+562	Expressions such as [[X701]] sometimes suppress an identity operator. Their actual meaning is [[X702]].
+563	Spatial vectors and state vectors
+564	State vectors represent quantum states. For example, eigenstates [[X704]] and [[X705]] of [[X703]] represent positive and negative spin projections along $z$. Although their spatial spin directions are opposite, their state vectors are orthogonal: one measurement of [[X706]] distinguishes them with certainty. Conversely, [[X707]] and [[X708]] represent spin right and spin up. Those spatial directions are perpendicular, but the state vectors are not orthogonal because [[X709]] is nonzero. No single measurement can distinguish them with certainty.
+565	Several kinds of spatial vectors occur in quantum mechanics:
+566	Coordinate unit vectors have definite directions and are not observables.
+567	Macroscopic vector quantities, such as applied magnetic and electric fields or electromagnetic waves, may be approximated by classical vectors; [[X710]] in [[REF:ZEqnNum392782]] is an example.
+568	A microscopic vector observable comprises three component observables. Electron spin [[X711]] has components [[X712]], [[X713]], and [[X714]], each with two eigenvalues and two orthogonal eigenstates. Their eigenstates differ, so no state makes all components definite simultaneously: [[X715]] has no definite direction. However, in any state [[X716]], each component mean [[X717]] is definite, and the mean [[X719]] of [[X718]] has a definite direction.
+569	Some microscopic vector observables do have three simultaneously definite components. Position is one example; momentum is another.
+570	The next chapter gives the conditions under which observables can have definite values simultaneously.
+571	Summary of vector and operator matrices
+572	Using the eigenstates [[X721]] of a Hermitian operator [[X720]] as a basis, we summarize the matrix representations.
+573	**Ket matrix:**
+575	The expression on the right depends on the representation. For example, the matrices of [[X723]] in the [[X724]] and [[X725]] representations are
+577	**Bra matrix:**
+579	**Inner product:** [[X728]] is a row matrix multiplied by a column matrix.
+581	**Eigenvector [[X731]] of [[X730]] in its own representation:**
+583	**Dirac expansion of an arbitrary operator [[X733]] in the [[X734]] representation:**
+585	**Matrix of an arbitrary operator [[X736]] in the [[X737]] representation:**
+587	**Dirac expansion of [[X739]] in its own representation:**
+589	**Matrix of [[X741]] in its own representation:** a diagonal matrix containing the eigenvalues of [[X742]].
+591	**Matrix of [[X744]] in the [[X745]] representation:**
+593	**Eigenvalue equation, eigenvalues, and eigenvectors of [[X747]]:**
+595	In the [[X749]] representation, this equation becomes
+598	Exercises
+599	**3.1.** A spin-1/2 particle initially has spin state [[X751]].
+600	Normalize [[X752]].
+601	In state [[X753]], what is the probability that measuring [[X754]] gives [[X755]]?
+602	In state [[X756]], what is the probability that measuring [[X757]] gives [[X758]]?
+603	In state [[X759]], first measure [[X760]], then [[X761]]. What is the probability that both results equal [[X762]]?
+604	In state [[X763]], first measure [[X764]], then [[X765]]. What is the probability that both results equal [[X766]]?
+606	**3.2.** The electron magnetic moment [[X767]] is proportional to its spin [[X768]], with [[X769]]. Place a stationary electron in a uniform field of magnitude [[X770]]. Using its magnetic energy [[X771]], find the eigenvalues, eigenstates, and energy-level separation of [[X772]]. Hint: the field may be treated as a classical numerical quantity.
+608	**3.3.** As shown, the projection of [[X773]] along direction [[X774]] is [[X775]].
+609	[[X776]] Write the matrix of [[X777]] in the [[X778]] representation. Show that its eigenvalues are [[X779]], with the following eigenvectors:
+611	Given that [[X781]] has value [[X782]], find the probability that [[X783]] has value [[X784]].
+612	Find the mean [[X787]] of [[X786]] in state [[X785]], and compare it with an ordinary spatial vector.
+613	**Hint:**
+615	[[X789]] and [[X790]] are spatial unit vectors. The components of [[X791]] along [[X792]] are numbers:
+617	By contrast, [[X794]] is a vector observable; its projections along the three [[X795]] directions are operators.
+619	Commutation Relations of Observables
+620	If two observables share an eigenstate, they both have definite values in that state. This chapter asks when observables can possess simultaneous definite values in a complete set of states.
+621	Commutators and common eigenstates
+622	The result of successive operator actions generally depends on their order: [[X796]]. We define the **commutator** [[X799]] of [[X797]] and [[X798]] to measure the difference between the two products:
+624	If [[X801]], operators [[X802]] and [[X803]] **commute**, or are **compatible**. If [[X804]], [[X805]] and [[X806]] are incompatible. Definition [[REF:ZEqnNum285812]] gives the identities
+629	For examples, return to the two-state spin system. Using the matrices of [[X811]] in [[REF:ZEqnNum931030]], one readily proves
+631	These three equations are often abbreviated as
+633	Here [[X814]] is the **Levi-Civita symbol**:
+635	The indices [[X816]] are drawn from 1, 2, and 3. An ordering [[X817]] matching the left diagram gives [[X818]]; one matching the right gives [[X819]]. If any indices coincide, [[X820]]. For example, [[X821]].
+636	We will see that [[REF:ZEqnNum743287]] also holds for the components of orbital angular momentum [[X822]], making it a general angular-momentum commutation relation.
+637	Define new observables:
+639	These are the squared components and the squared magnitude of angular momentum. The matrices [[REF:ZEqnNum931030]] of [[X824]] give
+642	Each is a constant times the identity. Since the identity commutes with every operator on the same space, they commute with all spin components:
+644	From its matrix, [[X828]] has only one eigenvalue:
+646	It may seem surprising that the largest component of spin [[X830]] along any direction is [[X831]], yet [[X832]] equals [[X834]], not [[X833]]. This is a characteristic feature of angular momentum.
+647	The matrix of [[X835]] is two-dimensional but has a single eigenvalue, which is therefore doubly degenerate. Any orthogonal pair of two-component vectors, such as [[X836]] or [[X837]], can serve as its eigenvectors. In an eigenstate of any component [[X838]], both [[X839]] and [[X840]] can be definite.
+648	Common eigenstates of compatible observables
+649	If [[X841]] is definite, the state must be an eigenstate of [[X842]]. If [[X843]] is also definite, it must also be an eigenstate of [[X844]], hence a common eigenstate of [[X845]]. If every eigenstate of [[X846]] is an eigenstate of [[X847]] and conversely, the observables commute.
+650	**Theorem 4.1.** Two observables with a complete common eigenbasis commute.
+651	**Proof.** Let [[X848]] be a complete common eigenbasis of [[X849]]. For any basis vector [[X850]],
+653	Therefore,
+656	Hence [[X854]]. Since [[X855]] is complete, every vector can be expanded in it. For arbitrary [[X856]],
+658	Thus [[X858]].
+659	The contrapositive also holds: incompatible observables have no complete common eigenbasis. For spin 1/2, [[X859]] and [[X860]] do not commute, as in [[REF:ZEqnNum232011]], and have no common eigenstate. A definite [[X861]] requires an eigenstate of [[X862]], for example [[X863]]. But [[X864]] is not an eigenstate of [[X865]], so [[X866]] is indefinite. Similarly, a definite [[X867]] excludes a definite [[X868]].
+660	Simultaneous measurement can be difficult. Alternating measurements and finding that each observable's result remains unchanged establishes simultaneous definite values.
+662	**Theorem 4.2.** If [[X869]] and [[X870]] has nondegenerate eigenvalues, every eigenstate of [[X871]] is also an eigenstate of [[X872]].
+663	**Proof.** Let [[X873]] be the orthonormal eigenstates of [[X874]]:
+665	Then
+667	Thus [[X877]] is an eigenstate of [[X878]] with eigenvalue [[X879]]. Because eigenvalue [[X881]] of [[X880]] is nondegenerate, [[X882]] and [[X883]] must be linearly dependent. Write
+669	Here [[X885]] is constant. This is the eigenvalue equation of [[X886]]: [[X887]] is an eigenstate of [[X888]], and [[X889]] is the eigenvalue associated with [[X890]]. Therefore [[X891]] is a common eigenstate of [[X892]] and [[X893]]. To label both observables symmetrically, rename [[X894]] as [[X895]].
+673	Types of common eigenstates
+674	We describe three patterns of compatibility. They may seem abstract initially; return to them after encountering more concrete examples.
+675	**Nondegenerate case.** In Figure 4.1, each dot represents an eigenstate [[X897]].
+745	Figure 4.1. Nondegenerate common eigenstates.
+747	Each [[X908]] corresponds uniquely to eigenvalue [[X910]] of [[X909]] and eigenvalue [[X912]] of [[X911]].
+749	**Example.** An electron has magnetic moment [[X913]]. Its energy in a magnetic field of magnitude [[X915]] along [[X914]] is
+751	Clearly [[X917]] and [[X918]] commute. Both have nondegenerate eigenvalues, and their complete common eigenbasis is [[X919]].
+753	**Degenerate case.** Eigenvalues of [[X920]] may be degenerate. In Figure 4.2, the number of eigenstates (dots) belonging to an eigenvalue is its degeneracy.
+757	Operator
+759	Eigenvalue
+761	Degeneracy
+787	Figure 4.2. Degenerate eigenvalues.
+789	For an eigenvalue of [[X926]] with degeneracy [[X927]], we can construct [[X928]] mutually orthogonal eigenstates. Orthogonal states can be distinguished by a single measurement of a suitable observable. Suppose [[X930]] commutes with [[X929]], and these [[X931]] states are also eigenstates of [[X932]] with distinct eigenvalues of [[X933]]. The eigenvalues of [[X934]] and [[X935]] then jointly identify a unique common eigenstate [[X936]], as in Figure 4.3. The degeneracy of eigenvalues [[X938]] of [[X937]] is resolved by measuring [[X939]].
+888	Figure 4.3. Resolving degeneracy with a second observable.
+889	**Example.** The squared orbital angular momentum [[X953]] and its $z$ component [[X954]] (or a component along any chosen direction) commute. Their complete common eigenbasis is [[X955]]:
+897	[[X957]] quantum number [[X958]]
+917	[[X966]] quantum number [[X967]]
+989	Figure 4.4. Orbital angular-momentum quantum numbers.
+990	If measuring [[X979]] does not completely remove the degeneracy, a fixed combination [[X980]] may still label several states. In Figure 4.5, [[X981]] remains degenerate. We can seek another observable [[X984]] commuting with both [[X982]] and [[X983]]. If [[X985]] still fails to resolve the degeneracy, add [[X986]], and so on. Ultimately, a complete set of pairwise compatible observables [[X987]] removes it.
+1089	Figure 4.5. A complete set of commuting observables.
+1091	Theorem 2.11 states that the eigenvectors [[X1002]] of an observable [[X1001]] form a complete basis when its eigenvalues are nondegenerate. Even with degeneracy, a set of compatible observables [[X1003]] can be found such that each eigenvalue combination [[X1004]] uniquely identifies a common eigenstate [[X1005]]. These common eigenstates form a complete basis.
+1094	**Example.** Neglecting spin in hydrogen, electron energy, squared orbital angular momentum, and one angular-momentum component commute. Their common eigenstates are [[X1008]], where [[X1009]] label their eigenvalues. Each quantum number alone is degenerate, but all three together specify a unique eigenstate. The states [[X1010]] form a complete basis; their superpositions describe any orbital quantum state of the electron.
+1096	There is another form of compatibility.
+1097	**Independent spaces.** [[X1011]] and [[X1012]] belong to different vector spaces; their values are independent.
+1196	Figure 4.6. Observables on independent vector spaces.
+1197	Observables acting on different vector spaces always commute. Their common eigenstates are tensor products of eigenstates in the component spaces, written [[X1026]], abbreviated [[X1027]], or written [[X1028]]. The dimension is the dimension of the [[X1029]] space times that of the [[X1030]] space. An operator acts only on the vector factor belonging to its own space. For example,
+1199	Two common situations are: (1) [[X1032]] and [[X1033]] describe independent degrees of freedom of one system, such as electron orbital motion and intrinsic spin; (2) [[X1034]] and [[X1035]] belong to different subsystems, such as [[X1036]] of electron A and [[X1037]] of electron B.
+1201	Quantum logic and addition of probability amplitudes
+1202	Classically, probabilities multiply for successive conditional steps and add for mutually exclusive alternative paths. Consider the following sequence of measurements.
+1203	[[X1038]][[X1039]][[X1040]] Let [[X1041]] be incompatible, with complete eigenbases [[X1042]] and [[X1043]]. Perform the measurements on [[X1044]] shown in Figure 4.7. If the first result is [[X1045]], the probability of [[X1046]] at the second step is [[X1047]]. If the second result is [[X1048]], the probability of [[X1049]] at the third step is [[X1050]]. Thus, given [[X1052]] in the initial measurement of [[X1051]], classical probability assigns the following probability to [[X1053]] at step two and [[X1054]] at step three:
+1205	[[X1056]][[X1057]] In Figure 4.8, all output paths after measuring [[X1058]] are open. Given [[X1059]] at the first step, what is the probability of [[X1060]] at the third? Classical reasoning sums over the alternative intermediate values of [[X1061]]:
+1207	Quantum reasoning uses amplitudes. The probability of finding [[X1064]] in state [[X1063]] is [[X1065]], with probability amplitude [[X1066]]. Amplitudes multiply for successive steps. For indistinguishable alternative paths, amplitudes add. The probability is the squared magnitude of the resulting total amplitude.
+1208	The total amplitude for Figure 4.7 is [[X1067]], so its probability is
+1210	This agrees with the classical result [[REF:ZEqnNum885144]]. In Figure 4.8, however, the final result can arise through different intermediate paths, so the total amplitude is their sum:
+1212	The probability is [[X1070]], exactly as if the intermediate step were absent.
+1213	We can now explain the final experiment in Figure 1.2. Particles initially in [[X1071]] pass through a [[X1072]] device before a final measurement of [[X1073]]. Since no result from the [[X1074]] device is recorded, the probability of final state [[X1075]] is
+1215	Similarly, the probability of [[X1077]] is
+1217	These results also follow by evaluating each path amplitude. For example, the probability of final state [[X1079]] is
+1219	The amplitudes of the two paths through the [[X1081]] device cancel by destructive interference.
+1220	In classical optics, intensity at a screen point is proportional to the squared magnitude of the sum of electric fields arriving by different paths. Their relative phases produce constructive or destructive interference. The analogous relation between quantum probabilities and amplitudes motivates the description of quantum behavior as **wave behavior**.
+1221	When should classical or quantum reasoning be applied to the apparently identical sequence in Figure 4.8? Fundamentally, quantum reasoning applies. Microscopic and macroscopic systems, however, have different interactions with their surroundings. An isolated microscopic particle can traverse the intermediate device without leaving any record of its path, so no measurement-induced collapse occurs there. A macroscopic object continually interacts with light and air. Even if nobody looks at the intermediate result, the environment retains a record. The intermediate outcome exists but is random, so probabilities must be combined statistically.
+1223	Changing representations
+1224	Chapter 3 used eigenvectors [[X1083]] of [[X1082]] as a basis. We could instead use eigenvectors [[X1085]] of [[X1084]]. This section develops changes of representation, or changes of basis.
+1225	Transformation rules
+1226	Let [[X1086]] and [[X1087]] be complete eigenbases of incompatible observables [[X1088]] and [[X1089]]. The operator [[X1092]] that maps each basis vector of the [[X1090]] representation to its counterpart in the [[X1091]] representation is the transformation operator for [[X1093]]:
+1228	One readily verifies
+1230	By [[REF:ZEqnNum917915]],
+1232	One also verifies
+1234	Thus [[X1098]] transforms the representation [[X1099]]. Combining [[REF:ZEqnNum306910]] and [[REF:ZEqnNum147961]] gives
+1236	Hence [[X1101]] is the inverse of [[X1102]]. A change of orthonormal basis is unitary and preserves inner products, as expected because their physical significance cannot depend on the calculation basis.
+1237	The matrix elements of transformation operator [[X1103]] in the [[X1104]] representation are
+1239	The elements of [[X1106]] in the [[X1107]] representation are
+1241	The transformation therefore has the same matrix in both representations:
+1243	Likewise, the inverse [[X1110]] has the same matrix in both:
+1245	For any vector [[X1112]],
+1247	Therefore,
+1249	The left side is the column of [[X1115]] in the [[X1116]] representation. The right side is the inverse transformation matrix times the column of [[X1117]] in the [[X1118]] representation. Thus,
+1251	For an operator, the corresponding transformation is
+1253	The left side is the matrix of [[X1121]] in the [[X1122]] representation; the three factors on the right are the matrices of [[X1123]] in the [[X1124]] representation. Hence
+1255	This is a similarity transformation of matrices.
+1256	**Example.** Find the matrix of [[X1126]] in the [[X1127]] representation.
+1257	The [[X1128]] basis is [[X1129]], and the [[X1130]] basis is [[X1131]]. By [[REF:ZEqnNum504142]], the matrix of [[X1133]] for the change [[X1132]] is
+1259	By [[REF:ZEqnNum682052]], its inverse [[X1135]] has matrix
+1261	Using [[REF:ZEqnNum834377]], in the [[X1137]] representation we obtain
+1263	**Theorem 4.3.** An observable's matrix has the same trace—the sum of diagonal entries—in every representation. It equals the sum of all eigenvalues, counting an eigenvalue of degeneracy [[X1139]] exactly [[X1140]] times.
+1265	**Proof.** Use [[REF:ZEqnNum834377]] and the trace identity [[X1142]].
+1267	The trace is therefore representation-independent. In its own eigenbasis, [[REF:ZEqnNum449673]], the operator is diagonal, with each eigenvalue of degeneracy [[X1144]] appearing [[X1145]] times. Thus the trace in any basis is the eigenvalue sum, counting degeneracy [[X1146]] with multiplicity [[X1147]].
+1268	Eigenvalue equations and changes of basis
+1269	Let [[X1148]] and [[X1149]] be eigenbases of incompatible observables [[X1150]] and [[X1151]]. The eigenvalue equation [[X1153]] of [[X1152]] has the following form in the [[X1154]] representation:
+1271	The column of the $m$th eigenvector of [[X1156]] in the [[X1157]] representation is column $m$ of transformation matrix [[X1159]] for [[X1158]]. Thus, assembling all eigenvector columns of [[X1160]] in the [[X1161]] basis gives transformation matrix [[X1163]] for [[X1162]]. By [[REF:ZEqnNum834377]], this transforms [[X1164]] from its [[X1165]] matrix to a diagonal matrix in its own basis, with eigenvalues of [[X1166]] on the diagonal. This is **diagonalization**.
+1272	Summary of changes of representation
+1273	Define the transformation operator [[X1168]] for [[X1167]] by [[X1169]].
+1274	Then [[X1170]] transforms [[X1171]]: [[X1172]].
+1275	The transformation operator is unitary: [[X1173]].
+1276	Vector representations are related by [[X1174]].
+1277	Operator representations are related by [[X1175]].
+1278	The matrices of [[X1176]] and [[X1177]] are representation-independent.
+1282	* The Heisenberg uncertainty principle
+1283	Define the deviation operator: [[X1179]].
+1284	Define the variance: [[X1180]].
+1285	Prove [[X1181]].
+1286	**Proof.** Define [[X1182]]. Clearly,
+1288	Let [[X1184]] be Hermitian operators.
+1289	One readily proves [[X1185]].
+1290	Consequently, [[X1186]].
+1291	Also, [[X1187]].
+1292	Combining these gives [[X1188]].
+1293	Substitute [[X1189]] into [[REF:ZEqnNum676215]] and take expectation values:
+1295	The Schwarz inequality states that for any states [[X1191]],
+1297	For arbitrary state [[X1193]], set [[X1194]] in [[REF:ZEqnNum750071]] and use [[REF:ZEqnNum473569]] and [[REF:ZEqnNum153390]]:
+1299	The second term on the right of [[REF:ZEqnNum813888]] is a real square and is nonnegative. Hence
+1301	Define the standard deviation [[X1197]] and take square roots to obtain the familiar uncertainty relation:
+1303	This relation concerns the product of the standard deviations of two observables. Each standard deviation can be determined statistically from repeated measurements.
+1304	Time is a parameter, not an observable in this formulation. What, then, is the precise meaning of the energy–time relation [[X1199]]?
+1305	Exercises
+1306	**4.1.** Define [[X1200]]. Prove [[X1201]].
+1308	**4.2.** Eigenstates [[X1203]] of [[X1202]] have distinct eigenvalues [[X1204]]. If [[X1205]], prove
+1311	**4.3.** Using the commutator identity [[REF:ZEqnNum842864]] and spin commutation relations [[REF:ZEqnNum232011]], prove
+1314	**4.4.** Prove that the mean of an anti-Hermitian operator, [[X1208]], is purely imaginary.
+1316	**4.5.** Write the matrix of [[X1209]] in the [[X1210]] representation.
+1317	**4.6*.** Let [[X1211]] be the expectation value of [[X1212]] in an arbitrary state, with [[X1213]]. If [[X1214]] are Hermitian, prove:
+1318	[[X1215]] is purely imaginary.
+1319	[[X1216]] is real.
+1322	Time Evolution
+1323	So far we have discussed states at a given instant. Even sequences of measurements were implicitly performed immediately one after another, before appreciable evolution could occur. We now examine how a state changes with time.
+1324	**Quantum postulate 6.** Between measurements, a system's state evolves according to the Schrödinger equation.
+1325	The Schrödinger equation plays the role in quantum mechanics that Newton's second law plays in classical mechanics. It cannot be deduced from more elementary principles within this presentation; its validity ultimately rests on experiment.
+1326	* Motivating the Schrödinger equation
+1327	Consider a modern route to the equation. An initial state [[X1217]] evolves after time [[X1218]] into [[X1219]]. We seek the law governing this evolution:
+1329	Introduce a time-evolution operator [[X1221]] relating the initial state to that after [[X1222]]:
+1331	Physical considerations impose three requirements.
+1332	**First:** as the elapsed time tends to zero, [[X1224]] leaves the state unchanged:
+1334	**Second:** two successive intervals compose to give evolution over the combined interval.
+1336	Therefore,
+1338	**Third:** probability is conserved, [[X1228]], so
+1340	Thus [[X1230]] is unitary: time evolution is a unitary transformation.
+1341	These requirements suggest an infinitesimal evolution operator [[X1231]]:
+1344	Neglecting higher-order terms in [[X1234]], [[X1235]] satisfies the first two requirements. The third gives
+1346	Expanding and neglecting higher-order terms in [[X1237]],
+1348	Hence
+1350	Thus [[X1240]] must be Hermitian, suggesting an observable. Equation [[REF:ZEqnNum759354]] shows that [[X1241]] has frequency dimensions. Classical frequency describes a rate of variation rather than a fundamental dynamical observable. Planck's frequency–energy relation, however, gives
+1352	The energy operator, or **Hamiltonian**, is denoted [[X1243]]. We therefore propose
+1354	The infinitesimal evolution operator becomes
+1356	Because of the central role of [[X1246]], energy is called the **generator of time evolution**.
+1357	From [[X1247]], we obtain a differential equation for [[X1248]], defined in [[REF:ZEqnNum681983]]:
+1359	Thus,
+1361	Multiplying by [[X1251]] gives
+1363	Equation [[REF:ZEqnNum680102]] is the Schrödinger equation for the evolution operator. Acting with both sides of [[REF:ZEqnNum963010]] on [[X1253]] gives the familiar state equation:
+1365	Solving the Schrödinger equation
+1366	Here [[X1255]] is the state at time [[X1256]], and [[X1257]] is the Hamiltonian. The equation describes state evolution and is first order in time, so only the initial condition [[X1258]] is needed. Knowing the Hamiltonian and the state at one instant determines all subsequent states.
+1367	Assume [[X1259]] has no explicit time dependence. Then [[X1260]] is constant in time, and [[X1261]] has fixed eigenvalues [[X1262]] and eigenvectors [[X1263]]:
+1369	The energy eigenvalue equation is also called the **time-independent Schrödinger equation**. Energy is central to quantum mechanics: many problems reduce to constructing the Hamiltonian and finding its eigenvalues and eigenstates exactly or approximately.
+1370	Since the Schrödinger equation contains [[X1265]], the [[X1266]] representation is convenient. Multiply [[REF:ZEqnNum131431]] on the left by [[X1267]]:
+1372	This is a first-order differential equation for [[X1269]], with solution
+1374	Hence the energy-basis expansion of [[X1271]] is
+1376	This is the general solution for time-independent [[X1273]]. Comparing the initial and final expansions makes the result easy to remember.
+1378	Stationary states
+1379	Suppose the initial state is an eigenstate of [[X1275]]:
+1381	Then [[REF:ZEqnNum925440]] becomes
+1383	The final vector differs from the initial one only by an overall phase, so they represent the same physical state. For a time-independent Hamiltonian, an initial energy eigenstate therefore remains physically unchanged and is called a **stationary state**. Since a state contains all information about the system, its time-independent physical properties remain unchanged.
+1384	Time evolution of expectation values
+1385	Once the state evolution is known, the expectation value of any observable [[X1278]] follows from [[X1279]]. Use [[REF:ZEqnNum160654]] to obtain [[X1280]], then calculate [[X1281]].
+1386	More generally, [[REF:ZEqnNum739477]] and [[REF:ZEqnNum160654]] give
+1388	Without the final time-dependent phase in each summand, this is the expectation of [[X1283]] in initial state [[X1284]]. If the initial state contains components [[X1285]] and [[X1286]] of different energies, with [[X1287]] and [[X1288]] both nonzero, and [[X1289]] has nonzero matrix element [[X1290]] between them, the mean of [[X1291]] contains an oscillation at frequency [[X1292]]. This offers a qualitative picture of atomic radiation: take [[X1293]] to be electron position. If a perturbation mixes energy state [[X1295]] into an initial eigenstate [[X1294]], the mean position oscillates at [[X1296]], suggesting radiation at that frequency during a transition. Heisenberg arrived at [[REF:ZEqnNum188299]] while studying transitions and built matrix mechanics around this insight. Its matrix form is
+1390	Constants of motion
+1391	If [[X1298]] has no explicit time dependence, there is a direct way to find the evolution of [[X1299]].
+1392	First write the Schrödinger equation in the bra space:
+1394	Therefore,
+1396	Multiply by [[X1302]] to obtain
+1398	This is often abbreviated as
+1400	By [[REF:ZEqnNum848461]], if [[X1305]] has no explicit time dependence and commutes with the Hamiltonian,
+1402	The mean of [[X1307]] is constant. If [[X1308]] initially has a definite value, that value equals its mean and [[X1309]] retains it.
+1403	An observable with no explicit time dependence that commutes with the Hamiltonian is a **constant of motion**. Its mean is constant, and any initially definite value remains definite and unchanged. Quantum numbers labeling conserved observables are called **good quantum numbers**.
+1404	Whether a quantity is conserved depends on the system's Hamiltonian. An operator always commutes with itself, so energy is conserved for the time-independent Hamiltonians considered here.
+1406	Exercises
+1407	**5.1.** An electron has magnetic moment [[X1310]] and magnetic energy [[X1311]]. Place a stationary electron in a static field [[X1312]].
+1408	1. Given the initial condition [[X1313]], find [[X1314]].
+1409	2. Let [[X1315]] be a unit vector in the first quadrant of the $x$–$z$ plane, making angle [[X1316]] with $z$. Initially the projection of [[X1317]] along [[X1318]] is [[X1319]]. Using the preceding chapter's exercises, find spin state [[X1321]] at time [[X1320]] and the expectation value of [[X1322]]. You may define [[X1323]] to simplify the result.
+1412	* Transitions
+1413	A state that is not an energy eigenstate evolves and can exhibit oscillations. Here we begin in an eigenstate of a dominant Hamiltonian and apply a small periodic perturbation that does not commute with it. This can drive oscillations between its eigenstates. Electron spin in a magnetic field remains our example.
+1414	Magnetic resonance
+1415	An electron in static field [[X1324]] initially has spin state [[X1325]]. States [[X1326]] and [[X1327]] have energies [[X1328]] and [[X1329]]. Both are stationary, so the system remains in either state without a perturbation. Apply a transverse oscillating field [[X1332]] at frequency [[X1331]], perpendicular to [[X1330]], with [[X1333]]. Although weak, the periodic perturbation can profoundly affect the evolution under suitable conditions.
+1416	Write the transverse field as
+1418	Let [[X1335]] be a constant-magnitude circularly polarized field rotating in the same sense as the electron's precession in [[X1336]]:
+1420	The interaction Hamiltonian for the total field is
+1422	Here [[X1339]] and [[X1340]] are the static-field and oscillating-field energy operators. In the [[X1341]] representation,
+1424	Here [[X1343]] is the static-field Larmor frequency.
+1426	The quantity [[X1345]] is the **Rabi frequency**, or resonant Rabi frequency. Rabi received the 1944 Nobel Prize in Physics for the atomic and molecular beam magnetic-resonance method.
+1427	The total Hamiltonian is therefore
+1429	Expand spin state [[X1348]] at time [[X1347]] in the [[X1349]] representation, incorporating the initial condition:
+1431	Substituting [[REF:ZEqnNum963082]] and [[REF:ZEqnNum361616]] into the Schrödinger equation gives
+1433	Introduce a rotating-frame transformation:[^f4]
+1435	Equation [[REF:ZEqnNum927934]] becomes a system without the rapid oscillating factors:
+1437	Here [[X1354]] is the **detuning**. The solution of [[REF:ZEqnNum721542]] is given below; the derivation appears in this chapter's appendix.
+1439	The quantity [[X1356]] is the **generalized Rabi frequency**. Substituting [[REF:ZEqnNum460032]] into [[REF:ZEqnNum414068]] and then [[REF:ZEqnNum361616]] gives [[X1357]] at any time. The probabilities of states [[X1358]] and [[X1359]] are
+1441	Both [[X1361]] and [[X1362]] oscillate at [[X1363]], describing population transfer between the two levels.
+1442	Figure 6.1 plots [[X1364]] for several detunings. At [[X1365]], [[X1366]] oscillates most slowly but with maximum contrast, ranging from zero to one. The condition [[X1367]] is **resonance**. Increasing detuning increases the oscillation frequency but reduces its amplitude and the transition probability. By [[REF:ZEqnNum748213]], whenever [[X1369]] is an even multiple of [[X1370]], [[X1371]] and [[X1372]], so the initial population returns. Whenever [[X1373]] is an odd multiple of [[X1374]], [[X1375]] reaches its maximum for that detuning. At resonance, [[X1376]], corresponding to complete transfer to the other level.
+1443	The drive [[X1377]] makes [[X1378]] oscillate at [[X1379]]. As [[X1380]] increases, the electron's mean magnetic energy decreases, transferring energy to the drive: **stimulated emission**. As [[X1381]] decreases, its mean energy increases by absorbing energy from the drive: **stimulated absorption**. Both arise from the same mechanism, explaining the equality of Einstein's corresponding coefficients for this two-state case.
+1445	Figure 6.1. Probability of electron spin state [[X1383]] versus time at different detunings.
+1446	By [[REF:ZEqnNum748213]], the oscillatory amplitudes of [[X1384]] and [[X1385]] are both
+1448	At fixed [[X1387]], [[X1388]] is a peaked function of detuning [[X1389]], as in Figure 6.2. Its half-width at half-maximum (HWHM) is [[X1390]]. Since [[X1391]] is proportional to drive amplitude, stronger excitation broadens the line. This **power broadening** occurs in magnetic-resonance and spectroscopic measurements of level separations, such as absorption spectra.
+1450	Figure 6.2. [[X1394]] peaks at [[X1395]] and has HWHM [[X1396]]. Zero detuning is resonance.
+1452	We can also calculate the evolution of the mean spin vector [[X1397]].
+1456	A linearly polarized drive [[X1401]] is easier to produce than a circularly polarized one. For polarization along [[X1402]] with amplitude [[X1403]], write [[X1404]] as
+1458	Its interaction [[X1406]] with the electron magnetic moment has Hamiltonian
+1460	Following [[REF:ZEqnNum833059]] through [[REF:ZEqnNum927934]], the Schrödinger equation becomes
+1462	Using the definitions and method following [[REF:ZEqnNum414068]] gives
+1464	Assume [[X1410]] and near resonance between [[X1411]] and [[X1412]], namely [[X1413]]. These are the near-resonant, weak-drive conditions. In [[REF:ZEqnNum877206]], the factors [[X1416]] oscillate much faster than changes on the scales [[X1414]] and [[X1415]], so they may be replaced by their zero time average. This is the **rotating-wave approximation**. Equation [[REF:ZEqnNum877206]] then reduces to [[REF:ZEqnNum721542]] and has the same solution. A weak near-resonant linear drive is therefore approximately equivalent to a circular drive with half its amplitude.
+1466	Transitions in a general two-level system
+1467	The magnetic-resonance analysis extends to other two-level transitions. For any two-level system of separation [[X1417]], shifting the energy origin gives the unperturbed eigenvalue equation
+1469	Here [[X1419]] denote excited and ground states. In the [[X1420]] representation,
+1471	Adding a perturbation [[X1422]] gives
+1473	Frequently [[X1424]] has zero diagonal elements, [[X1425]], and [[X1426]] is real. Defining [[X1427]] gives
+1475	Equations [[REF:ZEqnNum616848]] and [[REF:ZEqnNum790744]] have the same form as [[REF:ZEqnNum864064]] and [[REF:ZEqnNum472633]]. Such a two-level transition is therefore mathematically equivalent to spin-1/2 magnetic resonance.
+1476	* Density matrices and the Bloch vector
+1477	The preceding sections reduce two-level evolution to [[REF:ZEqnNum460032]], the evolution of [[X1429]]. We now give it a geometric interpretation.
+1478	An arbitrary pure state of a two-level system can be written as
+1480	Define the Cartesian **Bloch vector** [[X1431]]:
+1482	where
+1485	By [[REF:ZEqnNum365247]],
+1487	One verifies [[X1436]], so [[X1437]] is a unit vector. The parameters [[X1438]] are its spherical angles. All pure states lie on the surface traced by its tip, the **Bloch sphere**. For example,
+1489	The motion of [[X1440]] describes state evolution [[REF:ZEqnNum721542]]. From [[REF:ZEqnNum721542]] and [[REF:ZEqnNum448235]],
+1491	Using [[REF:ZEqnNum821674]] and [[REF:ZEqnNum365247]],
+1493	Define [[X1443]]. Equation [[REF:ZEqnNum729193]] becomes
+1495	Since [[X1445]] is constant, [[REF:ZEqnNum862867]] describes [[X1446]] precessing about [[X1448]] with angular speed [[X1447]]. Under the preceding rotating-wave treatment, two-state dynamics thus becomes a Bloch-vector equation,[^f5] giving a useful geometric picture of transitions.
+1496	This corresponds to the group-theoretic connection between a unitary transformation [[X1449]] in a two-dimensional complex space and a rotation [[X1450]] in three-dimensional Cartesian space.
+1498	Appendix
+1499	We solve the linear differential system [[REF:ZEqnNum721542]] as follows.
+1501	Try [[X1452]], with time-independent [[X1453]]. Substitution gives the eigenvalue equation
+1503	A nonzero solution requires
+1505	The eigenvalues are [[X1456]], where [[X1457]]. Substituting [[X1458]] into [[REF:ZEqnNum238012]] gives the eigenvectors
+1507	The general solution is a linear combination of these particular solutions:
+1509	Determine coefficients [[X1461]] from the initial condition:
+1511	Therefore,
+1513	Substituting [[X1464]] into [[REF:ZEqnNum771504]] gives
+1516	Continuous Observables
+1517	So far, our observables have discrete eigenvalues. Their eigenbases define **discrete representations**. We now consider observables with continuous eigenvalues and the **continuous representations** they define, developing their properties by comparison. Unless stated otherwise, integrals extend from negative to positive infinity.
+1518	The Dirac delta function
+1519	Introduce the Dirac [[X1466]] function [[X1467]], where [[X1468]] is a real variable and [[X1469]] a real parameter. It is defined by
+1522	The [[X1472]] function has the properties
+1526	Equation [[REF:ZEqnNum269859]] may itself be used to define the [[X1476]] function.
+1527	A Fourier expansion expresses a function [[X1477]] in terms of [[X1478]]:
+1529	The coefficients [[X1480]] are
+1531	Functions [[X1482]] and [[X1483]] are Fourier transforms of each other. Equations [[REF:ZEqnNum712670]] and [[REF:ZEqnNum971789]] give
+1533	Comparing [[REF:ZEqnNum832633]] with the defining identity [[REF:ZEqnNum269859]] gives
+1536	This is the Fourier representation of the [[X1487]] function. Comparing [[REF:ZEqnNum893086]] and [[REF:ZEqnNum712670]], [[X1488]] and [[X1489]] form a Fourier-transform pair.
+1537	Continuous representations and wavefunctions
+1538	We extend the discrete formalism to continuous observables. For discrete eigenvalues of [[X1490]], use integer-indexed quantities [[X1491]]. For continuous eigenvalues of [[X1492]], use a continuous variable [[X1493]].
+1540	Figure 7.1. Left: [[X1496]] is a probability in a discrete representation. Right: [[X1497]] is a probability density in a continuous representation.
+1541	For a discrete observable [[X1498]], state [[X1499]] has the expansion in the [[X1500]] representation
+1543	The probability amplitude [[X1502]] is a discrete function of [[X1503]]. Its squared magnitude [[X1504]] is the probability that [[X1506]] has value [[X1507]] in state [[X1505]]. Probability conservation requires
+1545	For a continuous observable [[X1509]], [[X1510]] becomes a continuous function of [[X1511]], written
+1547	This is a **wavefunction**, although it need not describe an ordinary wave. It depends on the representation: [[X1513]] is state [[X1514]] in the [[X1515]] representation. As Figure 7.1 illustrates, [[X1516]] is continuous in [[X1517]], so the sum in [[REF:ZEqnNum779322]] becomes an integral:
+1549	Thus [[X1519]] is the probability that [[X1521]] lies in [[X1522]] in state [[X1520]]. The quantity [[X1523]] is the probability density near [[X1526]] for [[X1525]] in state [[X1524]], with dimensions [[X1527]].
+1550	To ensure unique, normalized probabilities, the physically admissible wavefunctions [[X1528]] considered here satisfy three conditions:
+1551	**Single-valued:** apart from an overall phase, each [[X1529]] has a unique value [[X1530]].
+1552	**Continuous everywhere.**
+1553	**Vanishing at infinity:** [[X1531]].
+1554	Normalization and probability conservation [[REF:ZEqnNum469206]] give, for any state [[X1532]],
+1556	Hence the continuous completeness relation is
+1558	Completeness gives the following results.
+1559	The expansion of an arbitrary state [[X1535]] is
+1561	The inner product of two states is
+1563	Take the inner product of [[REF:ZEqnNum818008]] with eigenstate [[X1540]] of [[X1538]], belonging to eigenvalue [[X1539]]:
+1565	Comparison with the [[X1542]]-function definition [[REF:ZEqnNum269859]] gives
+1567	Thus the state with definite value [[X1545]] of continuous observable [[X1544]] has wavefunction [[X1546]] in its own representation.
+1568	Table 7.1 compares the corresponding formulas in discrete and continuous representations.
+1570	Table 7.1. Expansions in discrete and continuous representations.
+1575	Discrete representation
+1577	Continuous representation
+1579	Eigenvalue equation
+1585	Relations between basis vectors
+1591	State expansion
+1597	State in the chosen basis
+1599	Column of probability amplitudes
+1602	Wavefunction (probability-density amplitude)
+1604	Single-valued, continuous, [[X1555]]
+1606	Measurement probability
+1608	[[X1556]]: probability of value [[X1557]]
+1610	[[X1558]]: probability of a value in [[X1559]]
+1612	Probability conservation
+1618	Completeness relation
+1631	We now examine several important continuous observables.
+1632	Position
+1633	A particle's position is an observable, represented in one dimension by [[X1567]]. Its eigenvalue equation is postulated to be
+1635	The variable [[X1569]] labels eigenvalues of [[X1570]], continuously from negative to positive infinity. The eigenstate [[X1571]] corresponding to [[X1572]] represents a particle definitely at [[X1573]].
+1636	Position eigenstates form a delta-normalized complete set:
+1638	Any motional state [[X1575]] can be expanded in [[X1576]]:
+1640	Here [[X1578]] is the **position wavefunction**. [[X1579]] is the probability density at [[X1581]] in state [[X1580]], and [[X1582]] is the probability in interval [[X1584]] in state [[X1583]]. Thus, in state [[X1585]], the probability of position between [[X1586]] and [[X1587]] is
+1642	The probability of finding the particle somewhere in space is [[X1589]]:
+1644	In the special state [[X1591]], with definite position [[X1592]], the wavefunction is
+1646	The position operator in position space
+1647	For any one-dimensional motional state [[X1594]],
+1649	Thus [[X1596]] is represented by [[X1597]] in position space, and [[X1598]] has the form
+1651	Real functions of the position operator are Hermitian. For example, [[X1600]] satisfies
+1653	An operator function [[X1602]] may be defined through its Taylor series:
+1655	Therefore,
+1657	The quantity [[X1605]] on the left is an operator; [[X1606]] on the right is a number, the eigenvalue of [[X1607]].
+1658	Using the Hermiticity of [[X1608]], for any state [[X1609]],
+1660	The position wavefunction of [[X1611]] is [[X1612]] times that of [[X1613]]. Thus [[X1614]] is represented in position space by [[X1615]].
+1662	Position wavefunctions in three dimensions
+1663	A particle can have definite Cartesian position [[X1617]]. The components [[X1618]] commute pairwise and have common three-dimensional position eigenstates:
+1666	**Orthogonality:**
+1668	Here [[X1622]] is the three-dimensional [[X1623]] function: [[X1624]].
+1669	**Completeness:**
+1671	Here [[X1626]].
+1672	Any three-dimensional motional state [[X1627]] expands as
+1674	where [[X1629]] and [[X1630]].
+1675	The quantity [[X1631]] is the probability of finding a particle in state [[X1632]] within volume [[X1634]] at [[X1633]]. The quantity [[X1635]] is the probability density at [[X1637]] in state [[X1636]].
+1676	Extending [[REF:ZEqnNum472694]] and [[REF:ZEqnNum494017]] to three dimensions gives
+1679	Momentum
+1680	Momentum is also a continuous observable. Denote its one-dimensional operator by [[X1640]]. Its eigenvalue equation is
+1682	Momentum eigenstates form a complete set:
+1684	Any one-dimensional motional state [[X1643]] can be expanded in [[X1644]], the momentum representation:
+1686	The amplitude [[X1646]] is the **momentum wavefunction**, usually written [[X1647]]:
+1688	The tilde on [[X1649]] distinguishes it from the position wavefunction [[X1650]]. Functions [[X1651]] and [[X1652]] differ in functional form, not merely in the name of their variable.
+1689	For momentum wavefunction [[X1653]], [[X1654]] is the probability of momentum in [[X1655]], while [[X1656]] is the probability density near [[X1657]], that is, probability per unit momentum interval.
+1690	The relationship between position and momentum
+1691	We now investigate how position and momentum are related.
+1692	Spatial translations and the momentum operator
+1693	Define an infinitesimal translation operator [[X1658]] that moves a particle at [[X1659]] by [[X1661]] along [[X1660]]:
+1695	Thus,
+1697	Since [[X1664]] is complete, [[X1666]] holds for any state [[X1665]]. Hence
+1699	We impose three physical requirements on [[X1668]].
+1700	A translation tending to zero leaves the state unchanged:
+1702	Two successive infinitesimal translations equal a translation by their sum:
+1704	Physical laws are unchanged by translation. In particular, [[X1671]] preserves inner products: for vectors [[X1672]] and [[X1673]], if [[X1674]], then
+1706	Consequently,
+1708	Thus [[X1677]] is unitary, and spatial translation is a unitary transformation.
+1710	These requirements suggest the form [[X1679]]:
+1712	The first two requirements are satisfied. The third requires [[X1681]].
+1713	Hence [[X1682]] is Hermitian and corresponds to an observable. From [[REF:ZEqnNum676559]], [[X1683]] has inverse-length dimensions, like wave number [[X1684]]. The de Broglie relation [[X1685]], or [[X1686]], suggests
+1715	Here [[X1688]] is momentum. Equation [[REF:ZEqnNum676559]] becomes
+1717	Experiment confirms this identification: momentum is the **generator of spatial translations**.
+1718	From [[REF:ZEqnNum441973]], [[X1690]], and therefore
+1720	Changing the position basis changes the position wavefunction of [[X1692]]:
+1722	Thus a translation acts on a position wavefunction as
+1724	The position–momentum commutator
+1725	First consider the commutator of translation [[X1695]] and position [[X1696]]:
+1728	It follows that
+1730	The last step neglects higher-order terms in [[X1700]]. Every position eigenstate [[X1703]] is an eigenstate of commutator [[X1702]] with eigenvalue [[X1701]]. Since [[X1704]] is complete, reasoning as in [[REF:ZEqnNum417391]] gives
+1732	Substitute [[REF:ZEqnNum333148]]:
+1734	This is the canonical commutation relation. Position and momentum are incompatible, with no common eigenstate or simultaneous definite values. Combining [[REF:ZEqnNum187365]] with uncertainty relation [[REF:ZEqnNum149609]] gives
+1736	Momentum in the position representation
+1737	We now derive the position-space form of momentum.
+1738	From the infinitesimal translation definition [[REF:ZEqnNum909685]],
+1741	For any state [[X1710]],
+1743	Therefore,
+1745	The left side is [[X1713]] in position space; [[X1714]] on the right represents [[X1715]]. Thus [[X1716]] represents [[X1717]]:
+1747	Use the position-space forms [[REF:ZEqnNum707152]] and [[REF:ZEqnNum578039]] to verify [[X1719]] again.
+1748	**Proof.** Let [[X1720]] be arbitrary, with position wavefunction [[X1721]].
+1751	In three dimensions,
+1753	Partial derivatives with respect to different coordinates commute, so the three momentum components commute and may be simultaneously definite. Differentiation with respect to $y$ leaves $x$ unchanged, so perpendicular position and momentum components also commute, for example [[X1725]]. Thus,
+1755	The indices [[X1727]] denote the three Cartesian directions.
+1756	Using [[REF:ZEqnNum578039]],
+1758	We can now derive further properties of momentum. First,
+1760	Thus, in position space,
+1762	In three dimensions this becomes
+1764	Position wavefunctions of momentum eigenstates
+1765	To find the position wavefunction [[X1733]] of momentum eigenstate [[X1732]], use [[REF:ZEqnNum685183]] to write its eigenvalue equation in position space:
+1767	The solution is
+1769	Here [[X1736]] is a normalization constant. A momentum eigenstate is represented by a complex plane wave.
+1770	The quantity [[X1737]] is the probability that a particle of momentum [[X1738]] lies in [[X1739]]. The quantity [[X1740]] is its position probability density near [[X1742]] when its momentum is [[X1741]]. Since
+1772	is independent of position, a definite-momentum state has uniform density throughout space. The integral of [[REF:ZEqnNum142349]] over all space cannot be normalized because [[REF:ZEqnNum192350]] does not vanish at infinity. Exact plane waves are idealizations; normalizable localized physical states are formed from their superpositions.
+1773	Transforming between position and momentum representations
+1774	How are the position and momentum wavefunctions of the same state related?
+1776	Substitute [[REF:ZEqnNum192350]]:
+1778	The position wavefunction [[X1746]] and momentum wavefunction [[X1747]] are Fourier transforms of each other.
+1779	Using [[REF:ZEqnNum128349]], we also obtain the momentum-space form of position:
+1781	Thus the position operator in momentum space is
+1783	Summary of the position representation
+1784	Because position space is used frequently, we collect the main formulas.
+1785	**Completeness**
+1787	**Position wavefunction**
+1789	**Position probability density in state [[X1752]]**
+1791	**Normalization of total probability**
+1793	**Inner product of two states**
+1795	**Probability of finding one state in another**
+1797	**Orthonormality of eigenstates of a discrete observable [[X1757]]**
+1799	Here [[X1759]] is the position wavefunction of eigenstate [[X1761]] of [[X1760]].
+1800	**Action of an operator on a state**
+1802	Here [[X1763]] is the position-space representation of [[X1764]]. We often abbreviate [[X1765]] as [[X1766]]: when it acts on a wavefunction in a specified representation, it denotes the representation of [[X1767]] there. For example,
+1804	**Bra space**
+1806	For a Hermitian observable [[X1770]],
+1808	**Matrix element between two states**
+1810	**Hermiticity of an observable:** [[X1773]]
+1812	Therefore,
+1814	**Expectation value**
+1816	Table 7.2 lists position-space forms of common observables.
+1817	Table 7.2. Common observables in the position representation. The final two expressions use spherical coordinates.
+1819	Solving the energy eigenvalue equation in position space
+1820	For a particle of mass [[X1778]], the energy eigenvalue equation takes the following position-space forms.
+1821	**One Cartesian dimension:**
+1823	**Three Cartesian dimensions:**
+1825	The kinetic-energy term has a standard form; the potential depends on the interaction. We now solve several examples.
+1827	**Example 1: the one-dimensional infinite square well.**
+1830	**Solution.** Outside boundaries [[X1783]], [[X1784]], and a solution requires [[X1785]]. Within [[X1786]], [[X1787]] [[X1788]].
+1831	Set [[X1789]] to obtain
+1833	For each [[X1791]], there are two elementary solutions [[X1792]]. Their linear combinations share the same [[X1793]], giving the general eigenfunction
+1835	The constants [[X1795]] are determined by the boundary conditions. Continuity requires [[X1796]], so
+1837	Therefore [[X1798]] and [[X1799]]. The allowed values of [[X1800]] are
+1839	The eigenfunction associated with [[X1802]] is
+1841	Here [[X1804]] normalizes the state. The case [[X1805]] is excluded because it gives [[X1806]], the zero wavefunction. From
+1843	we obtain [[X1808]]. Thus the normalized eigenfunctions are
+1845	Negative [[X1810]] are also redundant because [[X1811]] differ only by a phase and represent the same state. The energies associated with [[X1812]] are
+1847	The following figure shows the three lowest energy eigenfunctions and their probability densities.
+1850	Figure 7.2. Energy eigenfunctions and probability densities in a one-dimensional infinite square well.
+1852	The infinite square well has the following features:
+1853	Energy levels are proportional to [[X1815]] and inversely proportional to [[X1816]].
+1854	The lowest energy is positive: a confined particle cannot be completely at rest.
+1855	The spacing [[X1817]] increases with energy and becomes larger for a narrower well.
+1856	**Example 2: a finite square well.**
+1858	**Solution.** Energies may satisfy [[X1819]], with arbitrary [[X1820]] and traveling-wave solutions; we omit that case. We focus on [[X1821]], which gives **bound states**.
+1859	In region [[X1822]], set [[X1823]]. The equation is the same as [[REF:ZEqnNum337048]], with general solution
+1861	In region [[X1825]], set [[X1826]], giving
+1863	Its elementary solutions are [[X1828]]. Requiring decay at infinity leaves
+1865	Continuity requires matching this solution to [[REF:ZEqnNum599486]] at [[X1830]]. We omit the lengthy algebra. Figure 7.3 shows two features of bound states: (1) discrete energy levels, as in the infinite well and other confining bound-state problems; (2) although [[X1831]] outside the well, the eigenfunctions remain nonzero at the boundaries, penetrate the exterior, and decay exponentially. There is therefore a nonzero probability of finding the particle outside the well. Since [[X1832]], classical reasoning would assign negative kinetic energy there. How should this apparent contradiction be understood?
+1867	Figure 7.3. Energy levels and eigenfunctions of one-dimensional infinite (left) and finite (right) square wells.
+1868	**Example 3: the one-dimensional harmonic oscillator.**
+1869	In the infinite well, spacings increase toward higher energies, and narrowing the well increases them. Making the lower part of a potential narrower than its upper part could increase the lower-level spacings. Can a potential be shaped so all spacings are equal? Yes: take [[X1834]], as for the harmonic oscillator:
+1871	Here [[X1836]] is the mass and [[X1837]] the natural frequency. The energies are
+1873	Every adjacent spacing is [[X1839]]. This permits a periodic perturbation of frequency [[X1840]] to excite a particle successively from the ground state to high levels.
+1874	The eigenfunctions [[X1841]] resemble those of a finite well. We omit their explicit formulas and show their shapes below.
+1877	Exercises
+1878	Unless specified otherwise, all wavefunctions below are position wavefunctions.
+1879	**7.1.** Using [[REF:ZEqnNum474818]], directly verify the orthogonality of infinite-well energy eigenstates.
+1881	**7.2.** A particle is in a one-dimensional infinite well over [[X1843]], with wavefunction
+1883	Here $A$ is a normalization constant. What energies can be measured, and with what probabilities?
+1884	Hint: How is this wavefunction related to the energy eigenfunctions of the one-dimensional infinite square well?
+1886	**7.3*** Derive Newton's second law from quantum mechanics. In one dimension, define a particle's velocity [[X1845]] by
+1888	1) Prove that [[X1847]].
+1889	2) Prove the following:
+1891	Hint: Use the equation of motion for expectation values and the position representation of the momentum operator.
+1893	Angular Momentum
+1894	After energy, angular momentum is one of the most important observables in atomic physics. The Coulomb attraction, the dominant interaction in an atom, is a central force, so an electron's orbital angular momentum about the nucleus is conserved in a central-field description. Moreover, magnetic moments are proportional to angular momenta. Both internal magnetic interactions and the energy of an atom in an external magnetic field are therefore closely related to angular momentum. We now examine its properties in detail.
+1895	General Angular Momentum
+1896	In classical mechanics, orbital angular momentum about a reference point is the cross product of a particle's displacement from that point and its momentum. In Cartesian coordinates with that point as the origin,
+1898	The three component operators in the position representation are
+1900	By applying these operators to an arbitrary wavefunction [[X1851]], or by using the position–momentum commutator [[REF:ZEqnNum944007]], we readily verify that
+1902	These relations can also be written compactly as
+1904	Recall that spin angular momentum obeys the same commutation relations:
+1906	In quantum mechanics, these commutation relations define angular momentum: a vector observable [[X1855]] is an angular momentum if its Cartesian components [[X1856]] satisfy
+1908	The three equations can be combined into one:
+1910	Besides the three components, another important angular-momentum observable is [[X1859]], defined by
+1912	Using the defining relations [[REF:ZEqnNum502879]], we can show that [[X1861]] commutes with all three components:
+1914	By symmetry, [[X1863]] and [[X1864]] are on an equal footing. Conventionally we choose [[X1865]] and [[X1866]]. Since they commute, they have simultaneous eigenstates. Let us determine their eigenvalues.
+1915	* Deriving the Eigenvalues of [[X1867]] and [[X1868]]
+1916	We can always write their eigenvalue equations in the form
+1919	Here [[X1871]] and [[X1872]] are real numbers to be determined. In the simultaneous eigenstate [[X1873]], the observables [[X1874]] and [[X1875]] have definite values [[X1876]] and [[X1877]]. To determine [[X1878]] and [[X1879]], first construct two operators [[X1880]], called ladder operators: [[X1881]] is the raising operator and [[X1882]] the lowering operator.
+1921	Their definitions imply
+1923	Let us examine the properties of [[X1885]]. It is straightforward to verify that [[X1886]] satisfies the following identities:
+1931	To understand the meaning of [[X1894]], use [[REF:ZEqnNum242044]] to obtain
+1933	Using [[REF:ZEqnNum700890]], we also obtain
+1935	Combining [[REF:ZEqnNum973611]] and [[REF:ZEqnNum643676]], we find that [[X1897]] remains a simultaneous eigenstate of [[X1898]] and [[X1899]]. For [[X1900]], the states [[X1901]] and [[X1902]] share the eigenvalue [[X1903]]. For [[X1904]], however, the eigenvalue of [[X1905]] is raised or lowered by [[X1907]] relative to that of [[X1906]], becoming [[X1908]]. This explains the names raising and lowering operators. Thus [[X1909]] and [[X1910]] represent the same state and differ at most by a constant factor:
+1937	Here [[X1912]] is a coefficient depending on [[X1913]].
+1938	It appears that applying [[X1914]] to an eigenstate [[X1915]] always produces another eigenstate with [[X1916]] increased or decreased by one. But when [[X1917]] (the squared angular momentum) is fixed, [[X1918]] (its projection) should be bounded. Indeed, taking expectation values of [[REF:ZEqnNum867638]] in [[X1919]] and using [[REF:ZEqnNum223798]] gives
+1940	By the quantum postulates, [[X1921]]. The second and third terms on the right are both [[X1922]], so [[X1923]]. Thus [[X1924]], and for fixed [[X1925]], the allowed range of [[X1926]] is finite. Repeatedly applying the raising operator to [[X1927]] using [[REF:ZEqnNum904731]] must therefore reach an upper limit [[X1928]], with [[X1929]]. To ensure [[X1930]], we require [[X1931]], so that
+1942	Similarly, repeated application of the lowering operator to [[X1933]] reaches a value [[X1934]] such that, when [[X1935]], [[X1936]] [[X1937]].
+1943	Let
+1945	Then [[X1939]] must be a nonnegative integer. From [[REF:ZEqnNum732391]] and [[REF:ZEqnNum324145]], respectively, we obtain
+1947	It follows that
+1949	Hence
+1951	The first factor is positive, so
+1953	This agrees with the symmetry of the system. The sign of [[X1944]] depends on our choice of the positive z direction, so the range of [[X1945]] should be symmetric about zero. From [[REF:ZEqnNum714513]] and [[REF:ZEqnNum434099]],
+1955	where [[X1947]]. Since [[X1948]] is a nonnegative integer, the only possible values of [[X1949]] are
+1957	For a given [[X1951]], [[X1952]] runs from [[X1953]] to [[X1954]], giving [[X1955]] possible values:
+1959	From [[REF:ZEqnNum714689]] and [[REF:ZEqnNum239811]],
+1961	We shall henceforth use [[X1958]], instead of [[X1959]], as the quantum number specifying the eigenvalue of [[X1960]], setting [[X1961]].
+1962	Results for General Angular Momentum
+1963	We have obtained the complete solution of the general angular-momentum eigenvalue equations:
+1966	The angular-momentum quantum number [[X1964]] specifies the magnitude, while the magnetic or projection quantum number [[X1965]] specifies a component. For spin, [[X1966]] is also called the spin quantum number. If [[X1967]] is an integer, [[X1968]] is an integer and includes [[X1969]]. If [[X1970]] is a half-integer, [[X1971]] is also a half-integer and never equals [[X1972]]. All measured angular momenta follow these rules. From the abstract commutation relation [[REF:ZEqnNum502879]], quantum mechanics yields a remarkable set of experimentally confirmed predictions.
+1967	In the next section we shall see that orbital angular momentum, associated with spatial motion, has integer quantum numbers from zero upward. Each particle species also has a definite spin quantum number, either integer or half-integer. Like mass and charge, spin is an intrinsic property.
+1970	Particle
+1972	Spin quantum number
+1974	Electron
+1978	Proton
+1982	Neutron
+1986	Quark
+1990	Photon
+1994	Graviton
+1998	Higgs boson
+2003	Particles with half-integer spin are called fermions; those with integer spin are bosons. Their behavior differs profoundly: identical bosons favor occupation of the same state, whereas identical fermions obey the Pauli exclusion principle. This is distinct from classical attraction or repulsion. It arises from the quantum indistinguishability of identical particles.
+2004	The Vector Model of Angular-Momentum Eigenstates
+2005	Since the eigenvalues of [[X1977]] are [[X1978]], the magnitude of [[X1979]] is described by
+2007	Clearly [[X1981]]. Why is the maximum value of [[X1982]] equal to [[X1983]], rather than [[X1984]]? When [[X1985]] is definite, [[X1986]] and [[X1987]] are uncertain and cannot both vanish. By symmetry, for definite [[X1988]], the uncertainties of [[X1989]] and [[X1990]] are equal. We therefore represent [[X1991]] approximately by a cone with its vertex at the origin and its axis along z. Its base intersects the z axis at [[X1992]] and has radius [[X1993]]. The figure illustrates [[X1994]]; the five cones in panel (b) represent the eigenstates [[X1995]]. In the eigenstate [[X1996]], the mean values of [[X1997]] are zero.
+2009	These results can be proved rigorously with ladder operators. In the state [[X1999]], we can also show that
+2011	The vector model provides an intuitive approximation and sometimes yields the same results as a rigorous quantum calculation. It describes angular-momentum eigenstates, not the expectation-value vector, whose magnitude and direction are definite in any given quantum state.
+2013	Figure 8.1. The vector model of angular momentum. Source: http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/vecmod.html
+2014	* Matrix Elements of Angular-Momentum Operators
+2015	We now write the matrix elements of the angular-momentum operators in the [[X2002]], or [[X2003]], representation.
+2016	1) [[X2004]] and [[X2005]]: Since [[X2006]] are simultaneous eigenstates of [[X2007]] and [[X2008]], the matrices of [[X2009]] and [[X2010]] are diagonal:
+2019	2) [[X2013]]: From [[REF:ZEqnNum904731]], [[X2014]], and therefore
+2021	Since [[X2016]], and since [[REF:ZEqnNum732391]] gives [[X2017]], this can also be written as
+2023	Combining [[REF:ZEqnNum141497]] and [[REF:ZEqnNum904686]], we obtain
+2025	By convention, [[X2020]] is chosen to be real and positive, so
+2027	Substituting into [[REF:ZEqnNum904731]] gives
+2029	Similarly,
+2032	These two equations automatically reproduce the results required by [[REF:ZEqnNum446313]] and [[REF:ZEqnNum736764]]:
+2034	The nonzero matrix elements of the ladder operators are therefore
+2036	3) [[X2027]]: Using [[REF:ZEqnNum857737]] and [[REF:ZEqnNum713322]], the nonzero matrix elements of [[X2028]] are
+2039	For an angular-momentum operator [[X2032]] with fixed [[X2031]], we order the matrix elements by decreasing [[X2033]], so that the upper-left element is [[X2034]].
+2040	Example 1: [[X2035]]. The matrices [[X2036]] introduced earlier use this convention; see [[REF:ZEqnNum931030]].
+2041	Example 2: [[X2037]].
+2046	Orbital Angular Momentum
+2047	Orbital angular momentum arises from a particle's motion relative to a reference point. We generally denote it by [[X2041]], with angular-momentum quantum number [[X2042]]. Even without knowing the general angular-momentum spectrum, we can write its eigenvalue equations as
+2049	Unlike spin, orbital angular-momentum eigenstates depend on spatial position. We now seek the position wavefunction [[X2045]] of [[X2044]]. Spherical coordinates centered on the reference point are convenient. In this representation, [[REF:ZEqnNum747222]] becomes
+2052	We also need the operators in spherical coordinates. Using the coordinate transformations
+2055	we convert the Cartesian expression [[REF:ZEqnNum826605]] for [[X2050]] into
+2057	and obtain the spherical-coordinate expression for [[X2052]]:
+2059	These angular-momentum operators are independent of the distance [[X2054]] from the origin. This suggests separating variables in the simultaneous eigenfunction [[X2057]] of [[X2055]] and [[X2056]]:
+2061	The radial function [[X2059]] is an arbitrary function of [[X2060]], and [[X2061]] is the angular function. Using [[REF:ZEqnNum721118]]–[[REF:ZEqnNum193092]], write the eigenvalue equations [[REF:ZEqnNum921413]] in spherical coordinates and cancel [[X2062]]. The angular function satisfies
+2064	Since [[X2065]] involves only [[X2066]], try separating [[X2067]] as
+2066	The eigenvalue equation [[REF:ZEqnNum252734]] for [[X2069]] then becomes an equation involving only [[X2070]]:
+2068	The eigenvalue equation for [[X2072]] becomes
+2070	Multiply [[REF:ZEqnNum839472]] by [[X2074]] and separate the terms involving [[X2075]] and [[X2076]] onto opposite sides:
+2072	From [[REF:ZEqnNum956196]],
+2074	Substituting [[REF:ZEqnNum135231]] into [[REF:ZEqnNum309925]] gives an equation for [[X2079]] involving only [[X2080]]:
+2076	First solve the eigenvalue equation [[REF:ZEqnNum956196]] for [[X2082]]:
+2078	The constant follows from normalization:
+2080	The azimuths [[X2085]] and [[X2086]] describe the same point in space, so single-valuedness requires
+2082	That is, [[X2088]].
+2083	Thus [[X2089]] must be an integer. Substituting this result into [[REF:ZEqnNum830038]] and using [[X2090]] yields
+2085	The detailed derivation is lengthy and is omitted here. Alternatively, general angular-momentum theory requires [[X2092]] to satisfy [[X2093]], which makes [[X2094]] an integer and also leads to [[REF:ZEqnNum917846]]. For orbital angular momentum, both [[X2095]] and [[X2096]] must therefore be integers.
+2086	Substituting [[REF:ZEqnNum917846]] into [[REF:ZEqnNum830038]] and carrying out a longer derivation gives
+2088	Here [[X2098]] is a real associated Legendre function[^f6], and [[X2099]] is a normalization constant chosen so that
+2090	Substituting [[REF:ZEqnNum839509]] and [[REF:ZEqnNum989444]] into [[REF:ZEqnNum129644]] finally gives
+2092	The spherical harmonic [[X2102]] is a simultaneous eigenfunction of [[X2103]] and [[X2104]]:
+2094	Below are all the spherical harmonics for [[X2106]].
+2097	Figure 8.2. Angular probability-density surfaces. The radial length in direction [[X2109]] represents [[X2110]]: a longer radius indicates a greater probability of finding the particle in that direction.
+2098	Since [[X2111]] and [[X2112]] are separately normalized, [[X2113]] is automatically normalized:
+2100	Restoring the radial factor gives the general simultaneous eigenfunctions of [[X2115]] and [[X2116]]:
+2102	Since [[X2118]] is normalized over [[X2119]], we need only ensure that [[X2120]] is normalized over [[X2121]], namely
+2104	Then [[X2123]] is automatically normalized:
+2106	The orbital angular-momentum eigenvalue equations do not determine the radial distribution and therefore cannot specify the complete spatial probability density. For a particle in state [[X2130]], with [[X2126]] and [[X2127]] equal to [[X2128]] and [[X2129]], [[X2125]] gives the probability per unit solid angle in direction [[X2131]]. We call this the angular probability density of the eigenstate. It is easy to show that [[X2132]] is independent of [[X2133]], so it is rotationally symmetric about the [[X2134]] axis.
+2107	* Rotations and Angular Momentum
+2108	We now examine the relation between rotations and angular momentum.
+2109	* The Infinitesimal Rotation Operator
+2110	Define an infinitesimal rotation operator [[X2135]] that rotates the entire system through [[X2137]] about the [[X2136]] axis. The initial state [[X2138]] becomes a new state [[X2140]], depending on [[X2139]]:
+2112	As with translations, physical considerations impose the following conditions on [[X2142]]:
+2114	The final condition requires the rotation operator to be unitary.
+2115	We can construct [[X2144]] as
+2117	Here [[X2146]] is Hermitian. The dimensions of [[X2147]] are those of angular momentum, and experiment identifies it with the [[X2148]] component of the system's angular momentum. Just as momentum generates translations ([[REF:ZEqnNum333148]]), angular momentum generates rotations.
+2118	* Orbital Angular Momentum
+2119	Applying an infinitesimal rotation to the spherical-coordinate position eigenstate [[X2149]] produces [[X2150]]:
+2121	The angular momentum associated with a change in position is orbital angular momentum, conventionally denoted [[X2152]]. Using [[REF:ZEqnNum304369]], rewrite [[REF:ZEqnNum108507]] as
+2123	In the bra space this reads
+2125	Thus
+2127	Multiply both sides on the right by an arbitrary quantum state [[X2156]], and Taylor-expand the right-hand side:
+2129	Finally,
+2131	Thus, in the spherical-coordinate position representation, the orbital angular-momentum component [[X2159]] is
+2135	Exercises
+2136	**8.1** A system has definite [[X2161]] and [[X2162]], equal to [[X2163]] and [[X2164]]. Use symmetry to prove that, in this state,
+2138	**8.2** Starting from [[REF:ZEqnNum904731]], [[X2166]], use [[REF:ZEqnNum732391]] and [[REF:ZEqnNum324145]] to find [[X2167]], and hence prove the preceding result.
+2140	**8.3** A particle in a central field [[X2168]] has wavefunction
+2142	Is [[X2170]] an eigenstate of [[X2171]]? If so, what is [[X2172]]? Otherwise, what values can [[X2173]] take?
+2143	What are the possible values of [[X2174]], and their probabilities?
+2144	Hint: Use [[REF:ZEqnNum736187]] and [[REF:ZEqnNum238379]].
+2145	Coupling Two Angular Momenta
+2146	Angular-momentum coupling underlies many phenomena in atomic physics: fine and hyperfine structure, magnetic splitting, and [[X2175]] and [[X2176]] coupling in many-electron atoms. It is equally important in nuclear physics. Although often postponed to advanced quantum mechanics, its basic ideas are accessible without the more complicated coefficient formulas. We give a brief introduction here.
+2147	We often encounter observables belonging either to different particles, such as the momenta of two electrons, or to different degrees of freedom of one particle, such as its orbital and spin angular momenta. The observables belong to distinct vector subspaces. Each operator acts only on its own subsystem, so operators belonging to different subsystems commute.
+2148	Composite Vector Spaces (Tensor Products)
+2149	Consider two angular momenta [[X2177]] belonging to different subspaces: two spins, two orbital angular momenta, or the spin and orbital angular momentum of one particle. With their quantum numbers fixed at [[X2178]], how do we describe the state of the composite system? Complete bases for [[X2179]] are [[X2180]] and [[X2181]], containing [[X2182]] and [[X2183]] basis vectors. One might initially suppose that the total state is always a tensor product of definite subsystem states:
+2151	This description uses [[X2185]] probability amplitudes. Nature, however, allows a more general possibility.
+2152	**Quantum Postulate 7:** A basis of a composite vector space consists of tensor products of subsystem basis vectors. Its dimension is the product of the subsystem dimensions.
+2153	For the two angular momenta considered here, the composite basis vectors are
+2155	There are [[X2187]] such vectors, spanning the [[X2188]]-dimensional composite or tensor-product space of [[X2189]]. An arbitrary state in this space expands as
+2157	This state can require [[X2191]] probability amplitudes, so [[REF:ZEqnNum695918]] describes more states than [[REF:ZEqnNum878336]]. A state of the latter form can always be expanded into the former, but the reverse is not always possible. Some states in [[REF:ZEqnNum695918]] cannot be written as a product of two subsystem states. These are entangled states: the total system has a definite pure state, while its subsystems have no individual pure states. For two spin-1/2 particles, [[X2192]] is an example.
+2158	Let [[X2193]] and [[X2194]] denote operators and vectors belonging to subspaces [[X2195]] and 2. In the composite space, each operator acts only on the vector in its own subspace. For example,
+2161	Notice that [[X2198]]. Provided the subsystem labels are retained, changing the written order of the factors does not change the physical state. In calculations, keep a fixed ordering to avoid confusion.
+2162	Matrix Representations in the Tensor-Product Space
+2163	Composite operations can be expressed as matrices using the tensor product (denoted [[X2199]]) and the sum of operators acting on different factors. The rules are illustrated below.
+2164	Suppose the states [[X2200]] in subspaces 1 and 2 have matrix representations
+2166	Then in the composite representation,
+2168	Suppose the operators [[X2203]] have the following matrices in subspaces 1 and 2:
+2170	In the composite representation,
+2171	[[X2205]]: tensor product.
+2173	[[X2207]]: sum in the composite space.
+2174	Since the spaces of [[X2208]] need not have equal dimensions, [[X2209]] is not a simple element-by-element matrix sum. The notation [[X2210]] means
+2176	In this example, subspaces 1 and 2 happen to have equal dimensions. The tensor-product and composite-sum rules also apply when their dimensions differ.
+2177	These matrix rules readily imply
+2180	In retrospect, the operation in [[REF:ZEqnNum356609]] suppresses the symbol [[X2214]]. Its explicit form is
+2182	Likewise, the explicit form of [[REF:ZEqnNum297307]] is
+2184	We shall continue to omit [[X2217]] for simplicity, provided each operator acts only on its own subsystem's vector.
+2185	The Uncoupled Basis
+2186	For two angular momenta [[X2219]] in different subspaces, with magnitudes specified by [[X2218]], the following four operators commute pairwise:
+2188	Their simultaneous eigenstates [[X2221]] form the uncoupled basis, also written [[X2222]] or, more briefly, [[X2223]].
+2190	The Coupled Basis
+2191	A vector space has more than one possible basis, and so does a composite space. Besides the uncoupled basis, the composite space of [[X2225]] has another especially useful basis: the coupled basis.
+2192	First define the total angular momentum [[X2226]] by its three components:
+2194	The total ladder operators are therefore
+2196	The squared total angular momentum [[X2229]] is
+2198	These definitions imply that [[X2231]] satisfies the defining angular-momentum relations:
+2200	We can also prove, as an exercise, that
+2202	This gives a new set of four pairwise commuting operators:
+2204	Their simultaneous eigenstates form the coupled basis, usually denoted [[X2235]] or, briefly, [[X2236]].
+2206	Without giving the full proof, let us examine the allowed values of [[X2238]]. First, for [[X2239]] and [[X2240]],
+2208	Conservation of angular momentum requires [[X2242]], so
+2210	General angular-momentum theory requires each [[X2244]] to have [[X2246]] values of [[X2245]], namely [[X2247]]. Substituting the maximum value of [[X2248]] into [[REF:ZEqnNum783552]] gives
+2212	That is,
+2214	Both inequalities must hold, so the allowed range of [[X2251]] is
+2216	The same result follows intuitively from vector addition.
+2217	Equation [[REF:ZEqnNum838538]] specifies the range of [[X2253]]. For each [[X2254]], the total magnetic quantum number [[X2255]] has [[X2256]] values. Assuming [[X2257]], the number of coupled basis vectors is
+2219	This equals the number of uncoupled basis vectors, as it must: both are bases of the same composite space.
+2220	Notice that although [[X2259]], we have [[X2260]]. Thus we cannot simultaneously specify [[X2261]] and both [[X2262]] and [[X2263]].
+2221	Relating the Coupled and Uncoupled Bases
+2222	Completeness allows us to expand a coupled basis vector in the uncoupled basis:
+2224	Conversely, an uncoupled basis vector expands in the coupled basis as
+2226	The transformation coefficients [[X2266]] are called Clebsch–Gordan (CG) coefficients. Their calculation is discussed below. For now, note these properties:
+2227	1) CG coefficients are defined only for [[X2267]] and [[X2268]].
+2228	2) They can be nonzero only when [[X2269]], expressing conservation of angular momentum.
+2229	3) The overall phase is conventional and is chosen so that all CG coefficients are real.
+2230	Let us prove the second property.
+2231	**Theorem 9.1.** If [[X2270]], the CG coefficient vanishes.
+2232	Proof: Since [[X2271]],
+2234	Thus [[X2274]] can be nonzero only when [[X2273]].
+2235	Consequently, in [[REF:ZEqnNum358642]] we need sum over only one of [[X2275]] and [[X2276]], since the other is not independent. The equation simplifies to
+2237	Similarly, [[REF:ZEqnNum779006]] simplifies to
+2239	For brevity, we shall often write the coupled vector [[X2279]] as [[X2280]], and the uncoupled vector [[X2281]] as [[X2282]]. A semicolon separates the two quantum numbers in the uncoupled notation, whereas a comma separates them in the coupled notation.
+2240	Coupling Two Spin-1/2 Particles
+2241	Consider two spin-1/2 particles, [[X2283]]. How are the coupled and uncoupled bases related?
+2242	First list the uncoupled basis vectors in the notation [[X2284]]:
+2244	Next list the coupled basis vectors in the notation [[X2286]]. From [[REF:ZEqnNum838538]], [[X2287]]:
+2246	The three states with [[X2289]] form a triplet, while the one state with [[X2290]] is a singlet. Using [[REF:ZEqnNum358642]] and the CG coefficients calculated below, the coupled states expand as
+2248	Because [[X2292]], and since [[X2293]] and [[X2294]], the uncoupled expansion of [[X2295]] contains only the term in which both [[X2296]] are maximal. Similarly, [[X2297]] contains only the term in which both [[X2298]] are minimal. The state [[X2299]] must be a linear combination of [[X2300]] and [[X2301]], and [[X2302]] a linear combination of [[X2303]] and [[X2304]]. Why does the difference between the expansions of [[X2305]] and [[X2306]] give different [[X2307]]? Measuring [[X2308]] in either state produces [[X2309]] or [[X2310]] with equal 50% probabilities. The measured values of [[X2311]] are opposite, so [[X2312]] is [[X2313]]. To see the difference, express [[X2315]] and [[X2316]] in the [[X2314]] product representation. Using [[REF:ZEqnNum667352]],
+2250	Keep the order of the two ket factors fixed throughout the calculation. From [[REF:ZEqnNum419967]], measuring [[X2319]] in [[X2318]] yields [[X2320]] or [[X2321]], each with probability [[X2322]]. In the former, both [[X2323]] equal [[X2324]] and [[X2325]] is [[X2326]]; in the latter, both [[X2327]] equal [[X2328]] and [[X2329]] is [[X2330]]. Likewise, in [[X2331]], [[X2332]] takes the values [[X2333]] with equal 50% probabilities. Thus, in [[X2334]], the two z components are opposite, but the [[X2335]] or [[X2336]] components are always equal.
+2251	Similarly, expand [[X2337]] in the [[X2338]] product representation:
+2253	[[X2340]] [[X2341]] [[X2342]] [[X2343]] [[X2344]] [[X2345]] Measuring [[X2347]] in [[X2346]] gives [[X2348]] or [[X2349]], each with probability [[X2350]]. The values of [[X2351]] and [[X2352]] are always opposite, so [[X2353]] is always zero. Likewise, [[X2354]] is always zero. Thus, in [[X2355]], the two angular-momentum components are opposite along every direction.
+2255	Spin–Orbit Coupling
+2256	An atomic electron has intrinsic spin [[X2356]] and may also have orbital angular momentum [[X2357]] of definite magnitude. Its spin quantum number is always [[X2358]]. If the orbital quantum number is [[X2359]], the total angular-momentum quantum number [[X2360]] has just one value, [[X2361]]. If [[X2362]], there are two possible values of [[X2363]]:
+2258	* Calculating Clebsch–Gordan Coefficients
+2259	The overall phase of CG coefficients is conventional. We choose the phase convention in which they are real:
+2261	Abbreviate the coupled vectors [[X2366]] as [[X2367]], and uncoupled vectors [[X2368]] as [[X2369]]. Let
+2263	Step 1: Find the uncoupled-basis expansions of all [[X2371]].
+2264	Start with the extreme state [[X2372]]. To satisfy [[X2373]], its expansion must be
+2266	Apply the lowering operator [[X2375]] to both sides and use [[REF:ZEqnNum592417]]:
+2268	This determines the expansion of [[X2377]]. Repeated lowering generates the expansions of all [[X2378]].
+2269	Step 2: Find the expansions of all [[X2379]].
+2270	Again begin with the extreme state [[X2380]]. Since only coefficients satisfying [[X2381]] can be nonzero, write
+2272	Use the result for [[X2383]] from step 1 and orthogonality of the coupled basis:
+2274	This determines [[X2385]] and hence the expansion of [[X2386]]. Repeated application of [[X2387]] then gives all [[X2388]].
+2275	Step 3: Find the expansions of all coupled vectors [[X2389]].
+2276	Begin again with the extreme state and write
+2278	Use the results of the preceding steps and orthogonality:
+2280	This determines [[X2392]] and the expansion of [[X2393]]. Continue with the lowering operator in the same way.
+2281	This systematic procedure can be implemented recursively. Mathematica provides the built-in CG-coefficient function [[X2394]].
+2282	Example: Use this method to expand the coupled basis vectors in the uncoupled basis.
+2288	* Exchange Symmetry of CG Coefficients
+2289	CG coefficients satisfy the symmetry relation[^f7]
+2291	If [[X2401]] and [[X2402]] represent the angular momenta of two particles, this relation shows that the exchange symmetry of the CG coefficients and total state [[X2403]] depends on the parity of [[X2404]]. We use this to prove a rule for [[X2405]] coupling, known as the even-sum rule.
+2292	**Even-sum rule:** For an atomic state in [[X2406]] coupling with two equivalent valence electrons, [[X2407]] must be even.
+2293	Proof: Consider two equivalent valence electrons in [[X2408]] coupling. Write their total state as [[X2409]], where [[X2410]] is the radial part and [[X2411]] the angular-momentum part. The total state of fermions must be antisymmetric under exchange, so [[X2412]] and [[X2413]] must have opposite exchange symmetries.
+2294	Both equivalent electrons have the same radial state [[X2414]], so the total radial factor is
+2296	which is symmetric. Therefore [[X2416]] must be antisymmetric. Expand it in the uncoupled basis:
+2298	For two equivalent electrons,
+2300	Thus the total orbital angular momentum is [[X2419]] and the total spin is [[X2420]].
+2301	Let [[X2421]] be the electron-exchange operator. Using the CG identity [[REF:ZEqnNum431426]] gives
+2303	Similarly,
+2305	Since [[X2424]] is even, odd [[X2425]] gives [[X2426]], so [[X2427]] is antisymmetric under exchange. Conversely, even [[X2428]] makes [[X2429]] symmetric. Likewise, [[X2430]] makes [[X2431]] symmetric, whereas [[X2432]] makes it antisymmetric. Consequently, [[X2434]] is antisymmetric when [[X2433]] is even and symmetric when it is odd.
+2306	Returning to [[REF:ZEqnNum649848]], every term [[X2436]] in the expansion of [[X2435]] has the same [[X2437]] and [[X2438]]. Thus [[X2439]] has the same exchange symmetry as [[X2440]]. To make [[X2441]] antisymmetric, [[X2442]] must be even.
+2308	Exercises
+2309	**9.1** Using the definitions [[REF:ZEqnNum643050]] and [[REF:ZEqnNum961018]] of total angular momentum [[X2443]], prove that
+2311	**9.2*** Relate the coupled and uncoupled bases of two spin-1/2 particles. Using [[X2445]] from Exercise 8.2, chosen positive, apply the lowering operator [[X2446]] to both sides of
+2313	and find the uncoupled expansion of [[X2448]]. Then use orthogonality of [[X2449]] and [[X2450]] to calculate the expansion of [[X2451]].
+2316	Topics in Atomic Physics
+2318	Integrals of Three Spherical Harmonics
+2319	Alkali-Atom Energy Levels in an External Magnetic Field
+2320	Fine Structure of S Electrons and the Darwin Term
+2322	where
+2324	Therefore
+2326	An interesting observation is that, although for [[X2455]] the first factor of [[X2456]] vanishes and there is no spin–orbit coupling, and although [[X2457]] is meaningful only for [[X2458]], formally evaluating the expression at [[X2460]] while ignoring the condition [[X2459]] allows [[X2461]] to cancel between numerator and denominator, giving
+2328	This equals the Darwin term for an [[X2463]] electron.
+2329	Fine and Hyperfine Structure of S Electrons
+2330	First consider the origin of the Fermi contact interaction in hyperfine structure.
+2331	Because the nucleus is much heavier than an electron, its spatial distribution can be approximated as a point relative to the electron cloud. With the nucleus at the origin, the probability density of an S electron at the nucleus is
+2333	The magnetization at the nucleus due to the electron's magnetic moment is
+2335	Electrodynamics gives the magnetic field inside a uniformly magnetized sphere as
+2337	The potential energy of the nuclear magnetic moment in this magnetized electron cloud—the Fermi contact interaction—is therefore
+2340	By analogy, replacing the nuclear magnetic moment [[X2468]] in [[REF:ZEqnNum480315]] with the electron moment [[X2469]] would give the electron's potential energy in its own magnetic field:
+2342	This calculation is not self-consistent: [[X2471]] treats the electron as a point, whereas [[X2472]] treats it as a distribution. If it is treated consistently as a distribution, the self-energy of a uniformly magnetized sphere from electrodynamics is
+2344	This result equals the Darwin term.
+2348	Appendices
+2350	Comparing Three Infinitesimal Operators: Time Evolution, Translation, and Rotation
+2351	Infinitesimal time evolution and energy: energy (interactions) generates time evolution.
+2353	Infinitesimal spatial translation and momentum: momentum generates translations.
+2355	Infinitesimal spatial rotation and orbital angular momentum: angular momentum generates rotations.
+2357	Here [[X2477]].
+2358	The derivations are similar. Why does [[X2478]] have a positive sign in the energy expression, while [[X2479]] has a negative sign in the momentum and angular-momentum expressions?
+2359	The Schrödinger equation [[REF:ZEqnNum507946]] is independent of representation, whereas [[REF:ZEqnNum118491]] and [[REF:ZEqnNum858885]] are position-representation formulas. In Schrödinger quantum mechanics, time is a parameter but position is an observable. The Schrödinger equation follows directly from the action of time evolution on a general state vector. The spatial formulas instead follow from translation and rotation of position basis vectors. Directly evolving a state and changing its basis have opposite effects on its components, accounting for the minus sign.
+2363	Connecting Discrete and Continuous Representations
+2364	Two examples illustrate qualitatively how matrices in a discrete representation become operators and wavefunctions in a continuous representation.
+2365	Formally, we may write a quantum state [[X2480]] as a column matrix in the continuous position representation:
+2368	We can also express momentum as an infinite-dimensional continuous matrix:
+2371	Properties of Pauli Operators
+2378	Poisson Brackets
+2379	The classical Poisson bracket [[X2488]] is defined by
+2381	Here [[X2490]] are the generalized position and momentum of particle [[X2491]].
+2382	The equation of motion of a dynamical quantity [[X2492]] is
+2384	The quantum commutator corresponding to a classical Poisson bracket is
+2386	For example,
+2388	The Heisenberg Picture
+2389	If [[X2496]] has no explicit time dependence,
+2391	We usually use the Schrödinger picture, in which states evolve with time. In the Heisenberg picture, the state is held fixed:
+2393	The observables evolve instead:
+2395	Subscripts S and H denote the Schrödinger and Heisenberg pictures. From [[REF:ZEqnNum996065]], clearly [[X2500]], while the energy operator remains constant in the Heisenberg picture: [[X2501]].
+2396	If [[X2502]] has no explicit time dependence,
+2401	Exercise Solutions
+2402	Exercises for Chapter 1
+2403	**1.1** Decide whether each of the following forms a Hilbert space.
+2404	All complex numbers.
+2405	All vectors in three-dimensional Cartesian space.
+2406	Solutions [[X2505]] of the following equation, where [[X2506]] is real and [[X2507]] is a finite continuous function of [[X2508]].
+2408	(a) Yes. (b) A real linear space, not a complex linear space. (c) Yes.
+2409	**1.2** Prove that [[X2510]].
+2410	Hint: Construct a suitable [[X2513]] as a linear combination of [[X2511]] and [[X2512]], and use [[REF:ZEqnNum281]], [[X2514]].
+2411	Solution: Let [[X2515]].
+2413	**1.3** A two-dimensional vector [[X2516]] expands in the basis [[X2517]] as
+2415	Another basis [[X2519]] satisfies
+2417	Find the expansion of [[X2521]] in the latter basis.
+2418	Solution, method 1: Express [[X2522]] in terms of [[X2523]] and substitute into the expression for [[X2524]].
+2419	Method 2: Use matrices. First write [[X2525]] and [[X2526]] in the [[X2527]] basis:
+2421	Use the relation between bra and ket matrices:
+2423	Finally, by [[REF:ZEqnNum935342]], the matrix of [[X2530]] in the [[X2531]] basis is
+2425	Exercises for Chapter 2
+2426	**2.1** Let {[[X2533]]} be a basis of a two-dimensional vector space. The basis vectors have matrices
+2428	Three operators [[X2535]] have the following properties:
+2430	Write their matrices in this basis.
+2432	Similarly,
+2434	**2.2** Let [[X2539]] be two basis vectors of a two-dimensional space, and let an operator [[X2540]] be
+2436	Find the eigenvalues and corresponding eigenstates of [[X2542]].
+2437	Solution: Seek all eigenvalues [[X2544]] and eigenvectors [[X2545]] satisfying [[X2543]]. First write this vector equation in the [[X2546]] basis.
+2438	The matrix elements of [[X2547]] are [[X2548]]. Using [[X2549]], its matrix in the [[X2550]] basis is
+2440	A nonzero solution exists only if the following determinant vanishes:
+2442	Let the eigenvector [[X2554]] correspond to [[X2553]].
+2447	Similarly,
+2451	**2.3*** A Hermitian operator [[X2560]] has nondegenerate eigenvalues [[X2561]] and eigenstates [[X2562]]. Find the eigenvalues and eigenstates of [[X2563]].
+2452	Solution: Since [[X2564]],
+2453	we have [[X2565]].
+2454	Thus [[X2566]] has eigenvalues [[X2567]] with eigenstates [[X2568]].
+2456	**2.4** Prove that, for a Hermitian operator [[X2569]], the eigenvalues of [[X2570]] are nonnegative.
+2457	Solution: Since [[X2571]],
+2458	for any vector [[X2572]], [[X2573]].
+2459	Let [[X2574]] and [[X2575]] be an eigenvalue and corresponding eigenstate of [[X2576]].
+2460	Then [[X2577]]. Since [[X2578]], we obtain [[X2579]], as required.
+2462	**2.5** Prove that, for any operator [[X2580]], [[X2581]] is Hermitian.
+2463	Solution: [[X2582]], which proves the assertion.
+2465	Exercises for Chapter 3
+2466	**3.1** A spin-1/2 particle initially has spin state [[X2583]].
+2467	Normalize [[X2584]].
+2468	In [[X2585]], what is the probability that measuring [[X2586]] gives [[X2587]]?
+2469	In [[X2588]], what is the probability that measuring [[X2589]] gives [[X2590]]?
+2470	In [[X2591]], first measure [[X2592]], then [[X2593]]. What is the probability that both results are [[X2594]]?
+2471	In [[X2595]], first measure [[X2596]], then [[X2597]]. What is the probability that both results are [[X2598]]?
+2472	Solution:
+2480	**3.2** The electron's magnetic moment [[X2604]] is proportional to its spin [[X2605]], with [[X2606]]. A stationary electron is placed in a uniform magnetic field of magnitude [[X2607]]. Using the magnetic energy [[X2608]], find the eigenvalues and eigenstates of [[X2609]] and the energy-level spacing. Hint: Treat the field as a classical quantity, a number.
+2482	Solution: Choose the field along positive [[X2610]]. The Hamiltonian is
+2484	This is a constant times [[X2612]], so
+2486	Thus the energy eigenstates in a constant magnetic field are eigenstates of [[X2614]]. Their energies are the eigenvalues of [[X2615]] multiplied by [[X2616]]. The level spacing is [[X2617]].
+2487	If we define [[X2618]], the transition frequency is [[X2619]]. The frequency associated with magnetic splitting is also called the Larmor frequency.
+2489	[[X2620]] **3.3** As shown, the projection of [[X2621]] along direction [[X2622]] is [[X2623]].
+2490	Write the matrix of [[X2624]] in the [[X2625]] representation, and show that its eigenvalues are [[X2626]], with eigenvectors
+2492	If [[X2628]] is known to equal [[X2629]], find the probability that [[X2630]] equals [[X2631]].
+2493	Find the expectation value [[X2634]] of [[X2633]] in state [[X2632]].
+2494	Hint:
+2496	The symbols [[X2636]] and [[X2637]] are ordinary unit vectors indicating directions in Cartesian space. The components of [[X2638]] along [[X2639]] are numbers:
+2498	In contrast, [[X2641]] is a vector observable whose components along the three directions [[X2642]] are operators.
+2500	Solution:
+2501	First write the matrix of [[X2644]] in the [[X2643]] representation:
+2503	For the eigenvalue equation [[X2646]] to have a nonzero solution,
+2505	Thus [[X2648]], giving two eigenvalues: [[X2649]].
+2506	Assume [[X2650]]. Then [[X2651]], whose matrix form is
+2508	Therefore
+2510	Choose [[X2654]]. Then
+2512	Since [[X2656]], [[X2657]] is already normalized. Otherwise every component must be divided by [[X2658]].
+2513	Similarly, the eigenvector [[X2660]] corresponding to [[X2659]] can be found. In the [[X2661]] representation,
+2515	As a check, substitute special values of [[X2663]] into [[X2664]] and [[X2665]] to recover [[X2666]] and their eigenstates.
+2516	Note: If [[X2667]], the direction opposite to [[X2668]] is [[X2669]]. Physically, the eigenstate with the projection of [[X2670]] along [[X2671]] equal to [[X2672]] should be the same as the eigenstate [[X2676]] with the projection of [[X2673]] along [[X2674]] equal to [[X2675]].
+2518	Thus [[X2678]] and [[X2679]] differ only by the phase factor [[X2680]], and indeed represent the same physical state.
+2519	A definite value [[X2682]] of [[X2681]] means that the system is in [[X2683]]. The probability of measuring [[X2684]] is
+2524	Exercises for Chapter 4
+2525	**4.1** Define [[X2687]]. Prove that [[X2688]].
+2526	Solution: [[X2689]].
+2528	**4.2** The eigenstates [[X2691]] of a Hermitian operator [[X2690]] have distinct eigenvalues [[X2692]]. If [[X2693]], prove that [[X2694]].
+2529	Solution: [[X2695]], so
+2531	Since [[X2697]], necessarily [[X2698]].
+2533	**4.3** Given [[X2699]], use the commutator identity [[REF:ZEqnNum842864]] and spin commutation relations [[REF:ZEqnNum232011]] to prove that
+2535	Solution:
+2537	The other two commutators vanish by the same argument.
+2539	**4.4** Show that the expectation value of an anti-Hermitian operator, [[X2702]], is purely imaginary.
+2540	Solution: [[X2703]]. Hence [[X2704]] is purely imaginary.
+2542	**4.5** Write the matrix of [[X2705]] in the [[X2706]] representation.
+2543	Solution: The old basis is [[X2707]], and the corresponding new basis is [[X2708]].
+2544	Method 1: In the [[X2709]] representation,
+2546	Using these matrix elements and [[X2711]], we obtain, in the [[X2712]] representation,
+2548	Since [[X2714]], express [[X2715]] and [[X2716]] as columns in the [[X2717]] representation. Then, in the [[X2718]] representation,
+2550	Likewise, since [[X2720]], in the [[X2721]] representation,
+2552	Method 2: The basis transformation [[X2725]] between [[X2723]] and [[X2724]], and its inverse [[X2726]], have the following matrices in the old [[X2727]] representation:
+2554	In the new [[X2729]] representation, [[REF:ZEqnNum557165]] gives [[X2730]].
+2556	By [[REF:ZEqnNum834377]], [[X2732]].
+2558	**4.5** Write the matrix of [[X2734]] in the [[X2735]] representation.
+2559	**4.6*** Let [[X2736]] denote the expectation value of [[X2737]] in any state, and define [[X2738]]. If [[X2739]] are Hermitian, prove that (1) [[X2740]] is purely imaginary and (2) [[X2741]] is real.
+2560	Solution:
+2561	First, [[X2742]].
+2562	Thus [[X2743]] is anti-Hermitian, and its expectation value is purely imaginary.
+2563	[[X2744]], and similarly [[X2745]].
+2565	Thus [[X2747]] is Hermitian. Since a Hermitian operator has real expectation values, [[X2748]] is real.
+2569	Exercises for Chapter 5
+2570	**5.1** The electron's magnetic moment is [[X2749]], and its magnetic energy is [[X2750]]. A stationary electron is placed in a static field of magnitude [[X2752]] directed along positive [[X2751]].
+2571	1) If initially [[X2753]], find [[X2754]].
+2572	2) Let [[X2755]] be a unit vector in the first quadrant of the x–z plane, at angle [[X2756]] to z. Initially the projection of [[X2757]] along [[X2758]] is [[X2759]]. Using earlier exercise results, find the spin state [[X2761]] at time [[X2760]] and the expectation values of [[X2762]]. To simplify the result, define [[X2763]].
+2573	Solution: Recall the results from Chapter 3.
+2574	The Hamiltonian is [[X2764]]. Since [[X2765]] is a constant, the eigenstates of [[X2766]] are those of [[X2767]], and their eigenvalues are those of [[X2768]] multiplied by [[X2769]].
+2576	Define [[X2771]], so the energy separation is [[X2772]].
+2577	The initial state is [[X2773]]. Substituting [[X2774]] into the general Schrödinger solution gives
+2579	Multiplication by an overall phase does not change the physical state. Thus this quantum state is stationary.
+2580	2) The projection of the electron spin [[X2776]] along [[X2777]] is [[X2778]]; that is, [[X2779]] equals [[X2780]]. From the preceding chapter's exercises,
+2582	Since [[X2782]] lies in the x–z plane, [[X2783]]. The initial state is therefore
+2585	Notice that the magnetic field points along z, so [[X2786]], and the energy eigenstates are [[X2787]] and [[X2788]].
+2589	Define [[X2793]]. As the figure shows, it is a vector of length [[X2794]] precessing about the field direction (the z axis) at frequency [[X2795]]. This Larmor precession is characteristic of particles with spin magnetic moments in a magnetic field.
+2592	*An interesting feature:* [[X2797]] has period [[X2798]], whereas the state vector [[X2799]] has period [[X2800]].
+2593	After one revolution of [[X2801]], the state vector changes sign rather than returning to its initial value:
+2595	Only after two revolutions of [[X2803]] does [[X2804]] return to its original value.
+2598	Exercises for Chapter 6
+2600	Exercises for Chapter 7
+2601	Unless stated otherwise, the wavefunctions below are position wavefunctions.
+2602	**7.1** Using [[REF:ZEqnNum474818]], prove directly by integration that the energy eigenstates of a one-dimensional infinite square well are orthogonal.
+2603	Solution:
+2606	**7.2** A particle is in a one-dimensional infinite square well spanning [[X2806]], with wavefunction
+2608	Here $A$ is a normalization constant. What energies are possible, and with what probabilities?
+2609	Hint: How is this wavefunction related to the well's energy eigenfunctions?
+2610	Solution: Expand the wavefunction in energy eigenfunctions: [[X2808]].
+2612	The probability of energy [[X2810]] is [[X2811]], and that of energy [[X2812]] is [[X2813]].
+2615	**7.3*** Derive Newton's second law from quantum mechanics. In one dimension, define a particle's velocity [[X2814]] by
+2617	1) Prove that [[X2816]].
+2618	2) Prove the following:
+2620	Hint: Use the equation of motion for expectation values and the position representation of momentum.
+2621	Solution:
+2630	Exercises for Chapter 8
+2631	**8.1** A system has definite [[X2823]] and [[X2824]], equal to [[X2825]] and [[X2826]]. Use symmetry to prove the following result.
+2632	Solution: Definite values [[X2829]] and [[X2830]] of [[X2827]] and [[X2828]] mean that the state is [[X2831]].
+2634	Since [[X2833]] is an eigenstate of [[X2834]], symmetry gives [[X2835]], and hence
+2637	**8.2** Starting from [[REF:ZEqnNum904731]], [[X2837]], use [[REF:ZEqnNum732391]] and [[REF:ZEqnNum324145]] to find [[X2838]], and hence prove the preceding result.
+2638	Solution: Using [[REF:ZEqnNum732391]],
+2640	Using [[REF:ZEqnNum324145]],
+2642	Using [[REF:ZEqnNum857737]],
+2644	Here [[X2842]], and similarly [[X2843]].
+2648	**8.3** A particle in a central field [[X2844]] has wavefunction
+2650	Is [[X2846]] an eigenstate of [[X2847]]? If so, what is [[X2848]]? Otherwise, what values can [[X2849]] take?
+2651	What are the possible values of [[X2850]], and their probabilities?
+2652	Hint: Use [[REF:ZEqnNum736187]] and [[REF:ZEqnNum238379]].
+2653	Solution:
+2655	1) The angular part is a linear combination of spherical harmonics [[X2852]], so
+2657	It is therefore an eigenstate of [[X2854]], with [[X2855]].
+2658	2) The possible values of [[X2856]] are [[X2857]] and [[X2858]], with probability amplitudes [[X2859]].
+2659	Thus each [[X2860]] has probability [[X2861]], while [[X2862]] has probability [[X2863]].
+2662	Exercises for Chapter 9
+2663	**9.1** Using the definitions [[REF:ZEqnNum643050]] and [[REF:ZEqnNum961018]] of total angular momentum [[X2864]], prove that
+2665	Proof:
+2667	**9.2*** Relate the coupled and uncoupled bases for two spin-1/2 particles. Use [[X2867]] from Exercise 8.2, chosen positive, and apply [[X2868]] to both sides of
+2669	to obtain the uncoupled expansion of [[X2870]]. Then use orthogonality of [[X2871]] and [[X2872]] to calculate the expansion of [[X2873]].
+2670	Solution: From Exercise 8.2, [[X2874]], so [[X2875]].
+2672	The condition [[X2877]] allows us to write
+2673	[[X2878]], with [[X2879]].
+2674	Using
+2676	we obtain [[X2881]].
+2678	A Stern–Gerlach apparatus directly measures the magnetic moment [[X2882]], with [[X2883]], where [[X2884]] is a constant.
+2680	The force on the particle is [[X2885]]. The [[X2886]] axis is fixed. Reversing the detector along [[X2887]] reverses both the magnetic-field gradient convention and [[X2888]], so the sign of the gradient of [[X2889]] remains unchanged. The sign of the particle's [[X2890]] does not depend on detector orientation, so [[X2891]] is unchanged and the particle still leaves through the upper exit. However, the exits marked [[X2892]] and [[X2893]] have exchanged places, so the particle now exits through [[X2894]]. We need not know the detector's internal operation: its scale labels values of [[X2895]]. Experiment shows that oppositely oriented detectors assign opposite signs to the same measured quantity.
+2682	When [[X2896]] and [[X2897]] belong to different vector subspaces, [[X2898]] denotes a tensor-product state. See Chapter 9.
+2684	Some books use the interaction picture, setting [[X2899]]. The method used here is equivalent to a rotating coordinate frame in classical mechanics and gives a shorter derivation for a two-level system.

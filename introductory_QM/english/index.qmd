@@ -1,0 +1,27 @@
+# Preface {.unnumbered}
+
+Quantum mechanics is best learned through repeated reading and problem solving. Many concepts depend on one another, and ideas that seem unfamiliar at first often become clearer as you progress. These notes introduce many new concepts. If a term becomes unclear, use the search function to find where it was introduced. Sections marked with an asterisk (\*) may be skipped without interrupting your progress through the remaining material.
+
+## Introduction
+
+It is often said that quantum mechanics is a theory of the microscopic world. This is true in the sense that quantum effects are most easily observed in atoms, molecules, and other microscopic systems. However, it is not true in the sense that quantum mechanics applies only to microscopic systems. Quantum mechanics is a fundamental theory of nature and applies, in principle, to physical systems at every scale.
+
+Why, then, are quantum effects easier to observe in atoms and other microscopic systems than in everyday objects? Part of the answer lies in how a system interacts with its surroundings. Microscopic systems can often be prepared and isolated well enough for their quantum behavior to remain observable. Everyday objects, by contrast, interact continually with air, light, and other parts of their environment.
+
+These interactions do not cause quantum mechanics to stop applying. The object together with its environment still has a quantum state and evolves according to quantum mechanics. However, interaction causes the state of the object to become correlated with the state of the environment, so that the object can no longer generally be described independently of its surroundings. When we observe only the object and do not keep track of all the details of the environment, interference between different possible states of the object can rapidly become unobservable. This process is known as decoherence.
+
+Decoherence is an important part of the transition from quantum to classical behavior, but it does not by itself produce classical mechanics. In macroscopic systems, characteristic actions are also typically much larger than $\hbar$ so that quantum dynamics can approach classical dynamics under appropriate conditions. Classical mechanics is therefore not a rival theory that replaces quantum mechanics for large objects; rather, it is an effective theory that emerges from quantum mechanics in an appropriate limit.
+
+Light provides an interesting contrast. Interference of light is easily observed on everyday scales and is accurately described by classical electromagnetic wave theory. However, classical interference is not a phenomenon separate from quantum interference. In the full quantum theory, light is a quantum electromagnetic field, and the familiar interference of classical optics emerges in the many-photon limit of the quantum theory. In this sense, ordinary optical interference is a macroscopic manifestation of quantum interference.
+
+This connection becomes especially clear in single-photon experiments. Photons can be sent through an interferometer one at a time, yet after many detection events they build up the same interference pattern predicted by classical wave theory. Why can such interference remain observable over macroscopic distances? A major reason is that photons often interact only weakly with their surroundings. Even when light travels through air, passes through transparent glass, or reflects from a mirror, these interactions often do not strongly entangle the light with uncontrolled degrees of freedom in the environment. The environment therefore acquires little information about which path the light has taken, and the interference can survive. Photons also interact only very weakly with one another under ordinary conditions. As a result, the quantum interference of light can remain observable through many familiar optical processes. This is why the connection between the quantum description of light and classical wave optics is particularly direct.
+
+The same principle applies more generally: a system need not be completely isolated for quantum behavior to remain observable. What matters is whether interactions with the environment strongly disturb the particular quantum behavior we are interested in. The internal states of atoms provide an important example. An atom may move through a gas and collide with other particles, yet its internal energy levels can remain sufficiently well defined that transitions between them appear as distinct lines in the atomic spectrum. Similarly, an atom's spin can remain well defined through many collisions because such collisions often affect the atom's motion much more strongly than its spin.
+
+These examples show that interaction with the environment does not necessarily destroy all quantum behavior of a system. Different aspects of the same system can be affected very differently by the environment. Thus, the important distinction is not simply between microscopic and macroscopic systems. Whether quantum behavior remains observable depends not only on the size of the system, but also on what property of the system we are studying and how strongly that property is disturbed by its surroundings.
+
+## References {.unnumbered}
+
+J. J. Sakurai, *Modern Quantum Mechanics*: logically organized, with a complete and clear presentation.
+
+Zhao Kaihua and Luo Weiyin, *Quantum Physics*, second edition: extensive coverage; Appendix A presents matrix mechanics.

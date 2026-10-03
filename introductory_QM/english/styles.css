@@ -1,0 +1,5 @@
+main { line-height: 1.7; }
+.math.display { display:block; overflow-x:auto; padding:0.5rem 0; }
+.source-caption { font-size:0.9em; color:#52616b; margin:0.4rem 0 1.5rem; }
+img { max-width:100%; height:auto; }
+table { font-size:0.94em; }

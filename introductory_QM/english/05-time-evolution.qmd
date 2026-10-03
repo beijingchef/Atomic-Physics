@@ -1,0 +1,237 @@
+# Time Evolution
+
+So far we have discussed states at a given instant. Even sequences of measurements were implicitly performed immediately one after another, before appreciable evolution could occur. We now examine how a state changes with time.
+
+**Quantum postulate 6.** Between measurements, a system's state evolves according to the Schrödinger equation.
+
+The Schrödinger equation plays the role in quantum mechanics that Newton's second law plays in classical mechanics. It cannot be deduced from more elementary principles within this presentation; its validity ultimately rests on experiment.
+
+## \* Motivating the Schrödinger equation
+
+Consider a modern route to the equation. An initial state $\vert \psi (0)\rangle$ evolves after time $t$ into $\vert \psi (t)\rangle$. We seek the law governing this evolution:
+
+$$
+\left\vert  {\psi \left( 0 \right)} \right\rangle \xrightarrow{{\text{time evolution}}}\left\vert  {\psi \left( t \right)} \right\rangle
+$$ {#eq-ch05-p1328}
+
+Introduce a time-evolution operator $\hat U(t)$ relating the initial state to that after $t$:
+
+$$
+\hat U\left( t \right)\left\vert  {\psi (0)} \right\rangle = \left\vert  {\psi (t)} \right\rangle
+$$ {#eq-zeqnnum681983}
+
+Physical considerations impose three requirements.
+
+**First:** as the elapsed time tends to zero, $\hat U(t)$ leaves the state unchanged:
+
+$$
+\mathop {\lim }\limits_{t \to 0} \hat U\left( t \right) = \hat I
+$$ {#eq-ch05-p1333}
+
+**Second:** two successive intervals compose to give evolution over the combined interval.
+
+$$
+\hat U\left( {{t_2}} \right)\hat U\left( {{t_1}} \right)\left\vert  {\psi \left( 0 \right)} \right\rangle = \hat U\left( {{t_2}} \right)\left\vert  {\psi \left( {{t_1}} \right)} \right\rangle = \left\vert  {\psi \left( {{t_1} + {t_2}} \right)} \right\rangle = \hat U\left( {{t_1} + {t_2}} \right)\left\vert  {\psi \left( 0 \right)} \right\rangle
+$$ {#eq-ch05-p1335}
+
+Therefore,
+
+$$
+\hat U\left( {{t_2}} \right)\hat U\left( {{t_1}} \right) = \hat U\left( {{t_1} + {t_2}} \right) = \hat U\left( {{t_1}} \right)\hat U\left( {{t_2}} \right)
+$$ {#eq-ch05-p1337}
+
+**Third:** probability is conserved, $\langle {\psi (t)}\vert {\psi (t)}\rangle = \langle {\psi (0)}\vert {\psi (0)}\rangle$, so
+
+$$
+{\hat U^\dag }\left( t \right)\hat U\left( t \right) = \hat I
+$$ {#eq-ch05-p1339}
+
+Thus $\hat U$ is unitary: time evolution is a unitary transformation.
+
+These requirements suggest an infinitesimal evolution operator $\hat U(dt)$:
+
+$$
+\hat U\left( {dt} \right)\left\vert  {\psi (0)} \right\rangle = \left\vert  {\psi (dt)} \right\rangle
+$$ {#eq-ch05-p1342}
+
+$$
+\hat U\left( {dt} \right) \equiv \hat I - i\hat \Omega dt
+$$ {#eq-zeqnnum759354}
+
+Neglecting higher-order terms in $dt$, $\hat U(dt)$ satisfies the first two requirements. The third gives
+
+$$
+\left( {\hat I{\rm{ + }}i{{\hat \Omega }^\dag }dt} \right)\left( {\hat I - i\hat \Omega dt} \right) = I
+$$ {#eq-ch05-p1345}
+
+Expanding and neglecting higher-order terms in $dt$,
+
+$$
+\hat I{\rm{ + }}idt\hat I\left( {{{\hat \Omega }^\dag } - \hat \Omega } \right) = \hat I
+$$ {#eq-ch05-p1347}
+
+Hence
+
+$$
+\hat \Omega = {\hat \Omega ^\dag }
+$$ {#eq-ch05-p1349}
+
+Thus $\hat \Omega$ must be Hermitian, suggesting an observable. Equation @eq-zeqnnum759354 shows that $\hat \Omega$ has frequency dimensions. Classical frequency describes a rate of variation rather than a fundamental dynamical observable. Planck's frequency–energy relation, however, gives
+
+$$
+E = \hbar \omega
+$$ {#eq-ch05-p1351}
+
+The energy operator, or **Hamiltonian**, is denoted $\hat H$. We therefore propose
+
+$$
+\hat \Omega = {{\hat H} \mathord{\left/ {\vphantom {{\hat H} \hbar }} \right. \kern-1.2pt } \hbar }
+$$ {#eq-ch05-p1353}
+
+The infinitesimal evolution operator becomes
+
+$$
+\hat U\left( {dt} \right) = \hat I - i\frac{{\hat H}}{\hbar }dt
+$$ {#eq-ch05-p1355}
+
+Because of the central role of $\hat H$, energy is called the **generator of time evolution**.
+
+From $\hat U(dt)$, we obtain a differential equation for $\hat U(t)$, defined in @eq-zeqnnum681983:
+
+$$
+\hat U\left( {t + dt} \right) = \hat U\left( {dt} \right)\hat U\left( t \right) = \left( {\hat I - i\frac{{\hat H}}{\hbar }dt} \right)\hat U\left( t \right)
+$$ {#eq-zeqnnum668676}
+
+Thus,
+
+$$
+\frac{{\hat U\left( {t + dt} \right) - \hat U\left( t \right)}}{{dt}} = - i\frac{{\hat H}}{\hbar }\hat U\left( t \right)
+$$ {#eq-zeqnnum963010}
+
+Multiplying by $i\hbar$ gives
+
+$$
+i\hbar \frac{\partial }{{\partial t}}\hat U\left( t \right) = \hat H\hat U\left( t \right)
+$$ {#eq-zeqnnum680102}
+
+Equation @eq-zeqnnum680102 is the Schrödinger equation for the evolution operator. Acting with both sides of @eq-zeqnnum963010 on $\vert \psi (0)\rangle$ gives the familiar state equation:
+
+$$
+i\hbar \frac{\partial }{{\partial t}}\left\vert  {\psi \left( t \right)} \right\rangle = \hat H\left\vert  {\psi \left( t \right)} \right\rangle
+$$ {#eq-zeqnnum131431}
+
+## Solving the Schrödinger equation
+
+Here $\vert \psi (t)\rangle$ is the state at time $t$, and $\hat H$ is the Hamiltonian. The equation describes state evolution and is first order in time, so only the initial condition $\vert \psi (0)\rangle$ is needed. Knowing the Hamiltonian and the state at one instant determines all subsequent states.
+
+Assume $\hat H$ has no explicit time dependence. Then $\hat H$ is constant in time, and $\hat H$ has fixed eigenvalues ${E_j}$ and eigenvectors $\vert {E_j}\rangle$:
+
+$$
+\hat H\left\vert  {{E_j}} \right\rangle = {E_j}\left\vert  {{E_j}} \right\rangle
+$$ {#eq-zeqnnum782147}
+
+The energy eigenvalue equation is also called the **time-independent Schrödinger equation**. Energy is central to quantum mechanics: many problems reduce to constructing the Hamiltonian and finding its eigenvalues and eigenstates exactly or approximately.
+
+Since the Schrödinger equation contains $\hat H$, the $\hat H$ representation is convenient. Multiply @eq-zeqnnum131431 on the left by $\langle {E_j}\vert$:
+
+$$
+i\hbar \frac{\partial }{{\partial t}}\left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( t \right)}}} \right. \kern-1.2pt } {{\psi \left( t \right)}} \right\rangle = \left\langle {{E_j}} \right\vert \hat H\left\vert  {\psi \left( t \right)} \right\rangle = {E_j}\left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( t \right)}}} \right. \kern-1.2pt } {{\psi \left( t \right)}} \right\rangle
+$$ {#eq-ch05-p1371}
+
+This is a first-order differential equation for $\langle {E_j}\vert \psi (t)\rangle$, with solution
+
+$$
+\left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( t \right)}}} \right. \kern-1.2pt } {{\psi \left( t \right)}} \right\rangle = \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle {e^{ - {{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}
+$$ {#eq-zeqnnum909538}
+
+Hence the energy-basis expansion of $\vert \psi (t)\rangle$ is
+
+$$
+\left\vert  {\psi \left( t \right)} \right\rangle = \sum\limits_j {\left\vert  {{E_j}} \right\rangle \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( t \right)}}} \right. \kern-1.2pt } {{\psi \left( t \right)}} \right\rangle } = \sum\limits_j {\left\vert  {{E_j}} \right\rangle \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle {e^{ - {{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}}
+$$ {#eq-zeqnnum925440}
+
+This is the general solution for time-independent $\hat H$. Comparing the initial and final expansions makes the result easy to remember.
+
+$$
+\begin{array}{c} \left\vert  {\psi \left( 0 \right)} \right\rangle = \sum\limits_j {\left\vert  {{E_j}} \right\rangle \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle } \\ \left\vert  {\psi \left( t \right)} \right\rangle = \sum\limits_j {\left\vert  {{E_j}} \right\rangle \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle {e^{ - {{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}} \end{array}
+$$ {#eq-zeqnnum160654}
+
+### Stationary states
+
+Suppose the initial state is an eigenstate of $\hat H$:
+
+$$
+\left\vert  {\psi {\rm{(}}0)} \right\rangle = \left\vert  {{E_m}} \right\rangle
+$$ {#eq-ch05-p1380}
+
+Then @eq-zeqnnum925440 becomes
+
+$$
+\begin{array}{c} \left\vert  {\psi (t)} \right\rangle = \sum\limits_j {\left\vert  {{E_j}} \right\rangle {\delta _{jm}}{e^{ - {{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}} = \left\vert  {{E_m}} \right\rangle {e^{ - {{i{E_m}t} \mathord{\left/ {\vphantom {{i{E_m}t} \hbar }} \right. \kern-1.2pt } \hbar }}}\\ = {e^{ - {{i{E_m}t} \mathord{\left/ {\vphantom {{i{E_m}t} \hbar }} \right. \kern-1.2pt } \hbar }}}\left\vert  {\psi (0)} \right\rangle \end{array}
+$$ {#eq-ch05-p1382}
+
+The final vector differs from the initial one only by an overall phase, so they represent the same physical state. For a time-independent Hamiltonian, an initial energy eigenstate therefore remains physically unchanged and is called a **stationary state**. Since a state contains all information about the system, its time-independent physical properties remain unchanged.
+
+## Time evolution of expectation values
+
+Once the state evolution is known, the expectation value of any observable $\hat A$ follows from $\langle {\hat A(t)}\rangle \equiv \left\langle {\psi (t)} \right\vert \hat A\left\vert  {\psi (t)} \right\rangle$. Use @eq-zeqnnum160654 to obtain $\left\vert  {\psi (t)} \right\rangle$, then calculate $\left\langle {\psi (t)} \right\vert \hat A\left\vert  {\psi (t)} \right\rangle$.
+
+More generally, @eq-zeqnnum739477 and @eq-zeqnnum160654 give
+
+$$
+\begin{array}{c} \left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle = \sum\limits_{j,k} {{e^{{{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}\left\langle {{\psi (0)}} \mathrel{\left \vert  {\vphantom {{\psi (0)} {{E_j}}}} \right. \kern-1.2pt } {{{E_j}}} \right\rangle \left\langle {{E_j}} \right\vert \hat A\left\vert  {{E_k}} \right\rangle \left\langle {{{E_k}}} \mathrel{\left \vert  {\vphantom {{{E_k}} {\psi (0)}}} \right. \kern-1.2pt } {{\psi (0)}} \right\rangle {e^{{{ - i{E_k}t} \mathord{\left/ {\vphantom {{ - i{E_k}t} \hbar }} \right. \kern-1.2pt } \hbar }}}} \\ = \sum\limits_{j,k} {\left\langle {{\psi (0)}} \mathrel{\left \vert  {\vphantom {{\psi (0)} {{E_j}}}} \right. \kern-1.2pt } {{{E_j}}} \right\rangle \left\langle {{{E_k}}} \mathrel{\left \vert  {\vphantom {{{E_k}} {\psi (0)}}} \right. \kern-1.2pt } {{\psi (0)}} \right\rangle \left\langle {{E_j}} \right\vert \hat A\left\vert  {{E_k}} \right\rangle {e^{{{i\left( {{E_j} - {E_k}} \right)t} \mathord{\left/ {\vphantom {{i\left( {{E_j} - {E_k}} \right)t} \hbar }} \right. \kern-1.2pt } \hbar }}}} \end{array}
+$$ {#eq-zeqnnum188299}
+
+Without the final time-dependent phase in each summand, this is the expectation of $\hat A$ in initial state $\vert {\psi (0)}\rangle$. If the initial state contains components $\vert {E_j}\rangle$ and $\vert {E_k}\rangle$ of different energies, with $\left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi (0)}}} \right. \kern-1.2pt } {{\psi (0)}} \right\rangle$ and $\left\langle {{{E_k}}} \mathrel{\left \vert  {\vphantom {{{E_k}} {\psi (0)}}} \right. \kern-1.2pt } {{\psi (0)}} \right\rangle$ both nonzero, and $\hat A$ has nonzero matrix element ${A_{jk}} \equiv \left\langle {{E_j}} \right\vert \hat A\left\vert  {{E_k}} \right\rangle \ne 0$ between them, the mean of $\hat A$ contains an oscillation at frequency ${\omega _{jk}} \equiv {{({E_j} - {E_k})} \mathord{\left/ {\vphantom {{({E_j} - {E_k})} \hbar }} \right. \kern-1.2pt } \hbar }$. This offers a qualitative picture of atomic radiation: take $\hat A$ to be electron position. If a perturbation mixes energy state $\vert {E_k}\rangle$ into an initial eigenstate $\vert {E_j}\rangle$, the mean position oscillates at ${\omega _{jk}}$, suggesting radiation at that frequency during a transition. Heisenberg arrived at @eq-zeqnnum188299 while studying transitions and built matrix mechanics around this insight. The matrix form of @eq-zeqnnum188299 is
+
+$$
+\left\langle {\psi (t)} \right\vert \hat A\left\vert  {\psi (t)} \right\rangle \buildrel\textstyle.\over= {\left( {\begin{array}{*{20}{c}} {\langle 1\vert {\psi (0)}\rangle }\\ {\langle 2\vert {\psi (0)}\rangle }\\ \vdots \\ \vdots \end{array}} \right)^\dag }\left( {\begin{array}{*{20}{l}} {{A_{11}}}&{{A_{12}}{e^{i{\omega _{12}}t}}}&{{A_{13}}{e^{{\omega _{13}}t}}}& \cdots \\ {{A_{21}}{e^{i{\omega _{21}}t}}}&{{A_{22}}}&{{A_{23}}{e^{{\omega _{23}}t}}}& \cdots \\ {{A_{31}}{e^{i{\omega _{31}}t}}}&{{A_{32}}{e^{{\omega _{32}}t}}}&{{A_{33}}}& \cdots \\ \vdots & \vdots & \vdots & \ddots \end{array}} \right)\left( {\begin{array}{*{20}{c}} {\langle 1\vert {\psi (0)}\rangle }\\ {\langle 2\vert {\psi (0)}\rangle }\\ \vdots \\ \vdots \end{array}} \right)
+$$ {#eq-ch05-p1389}
+
+## Constants of motion
+
+If $\hat A$ has no explicit time dependence, there is a direct way to find the evolution of $\left\langle {\psi (t)} \right\vert \hat A\left\vert  {\psi (t)} \right\rangle$.
+
+First write the Schrödinger equation in the bra space:
+
+$$
+- i\hbar \frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right\vert  = \left\langle {\psi \left( t \right)} \right\vert \hat H
+$$ {#eq-ch05-p1393}
+
+Therefore,
+
+$$
+\begin{array}{c} \frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle = \left( {\frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right\vert } \right)\hat A\left\vert  {\psi \left( t \right)} \right\rangle + \left\langle {\psi \left( t \right)} \right\vert \hat A\frac{\partial }{{\partial t}}\left\vert  {\psi \left( t \right)} \right\rangle \\ = \frac{{ - 1}}{{i\hbar }}\left\langle {\psi \left( t \right)} \right\vert \hat H\hat A\left\vert  {\psi \left( t \right)} \right\rangle + \frac{1}{{i\hbar }}\left\langle {\psi \left( t \right)} \right\vert \hat A\hat H\left\vert  {\psi \left( t \right)} \right\rangle \end{array}
+$$ {#eq-zeqnnum471083}
+
+Multiply by $i\hbar$ to obtain
+
+$$
+i\hbar \frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle = \left\langle {\psi \left( t \right)} \right\vert [\hat A,\hat H]\left\vert  {\psi \left( t \right)} \right\rangle
+$$ {#eq-zeqnnum848461}
+
+This is often abbreviated as
+
+$$
+i\hbar \frac{\partial }{{\partial t}}\langle \hat A(t)\rangle = \langle [\hat A,\hat H]\rangle
+$$ {#eq-zeqnnum974147}
+
+By @eq-zeqnnum848461, if $\hat A$ has no explicit time dependence and commutes with the Hamiltonian,
+
+$$
+\frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle = 0
+$$ {#eq-ch05-p1401}
+
+The mean of $\hat A$ is constant. If $\hat A$ initially has a definite value, that value equals its mean and $\hat A$ retains it.
+
+An observable with no explicit time dependence that commutes with the Hamiltonian is a **constant of motion**. Its mean is constant, and any initially definite value remains definite and unchanged. Quantum numbers labeling conserved observables are called **good quantum numbers**.
+
+Whether a quantity is conserved depends on the system's Hamiltonian. An operator always commutes with itself, so energy is conserved for the time-independent Hamiltonians considered here.
+
+## Exercises
+
+**5.1.** An electron has magnetic moment ${\bf{\mu }} = {{ - 2{\mu _{\rm{B}}}{\bf{S}}} \mathord{\left/ {\vphantom {{ - 2{\mu _{\rm{B}}}{\bf{S}}} \hbar }} \right. \kern-1.2pt } \hbar }$ and magnetic energy $H = - {\bf{\mu }} \cdot {\bf{B}}$. Place a stationary electron in a static field ${\bf{B}} = B{\bf{\hat z}}$.
+
+1. Given the initial condition ${S_z} = - {\hbar \mathord{\left/ {\vphantom {\hbar 2}} \right. \kern-1.2pt } 2}$, find $\left\vert  {\psi \left( t \right)} \right\rangle$.
+
+2. Let ${\bf{\hat n}}$ be a unit vector in the first quadrant of the $x$–$z$ plane, making angle $\theta$ with $z$. Initially the projection of ${\bf{S}}$ along ${\bf{\hat n}}$ is ${\hbar \mathord{\left/ {\vphantom {\hbar 2}} \right. \kern-1.2pt } 2}$. Using the preceding chapter's exercises, find spin state $\left\vert  {\psi \left( t \right)} \right\rangle$ at time $t$ and the expectation value of ${\hat S_x},\;{\hat S_y},\;{\hat S_z}$. You may define ${\omega _L} \equiv {{2{\mu _{\rm{B}}}B} \mathord{\left/ {\vphantom {{2{\mu _{\rm{B}}}B} \hbar }} \right. \kern-1.2pt } \hbar }$ to simplify the result.

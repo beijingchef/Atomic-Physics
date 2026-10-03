@@ -1,0 +1,461 @@
+# Operators
+
+Quantum states are represented by complex linear vectors. We now discuss the mathematical counterparts of dynamical quantities, which Heisenberg called **observables**: position, momentum, angular momentum, energy, and the SG quantity ${\bf{\sigma }} \cdot {\bf{n}}$, for example. An observable is represented by a **linear operator** on the vector space.
+
+## Linear operators
+
+An operator transforms one vector into another. We usually place a hat over its symbol to distinguish it from an ordinary variable. The action of an operator $\hat O$ on a ket is written
+
+$$
+\hat O\left\vert  \psi \right\rangle = \left\vert  \phi \right\rangle
+$$ {#eq-ch02-p0259}
+
+An operator can also act on a bra, producing another bra:
+
+$$
+\left\langle \alpha \right\vert \hat O = \left\langle \beta \right\vert
+$$ {#eq-ch02-p0261}
+
+An operator acting on a ket is written to its left; an operator acting on a bra is written to its right. An operator between a bra and a ket obeys associativity:
+
+$$
+\langle \alpha \vert \left( {\hat O\vert \beta\rangle } \right) \equiv \left( {\langle \alpha \vert \hat O} \right)\vert \beta\rangle \equiv \langle \alpha \vert \hat O\vert \beta\rangle
+$$ {#eq-ch02-p0263}
+
+The result of this operation is a number.
+
+Linear operators have the following properties.
+
+**Equality.** If operators $\hat X$ and $\hat Y$ satisfy $\hat X\left\vert  \psi \right\rangle = \hat Y\left\vert  \psi \right\rangle$ for every vector $\left\vert  \psi \right\rangle$, then $\hat X = \hat Y$.
+
+**Identity.** Every vector space has an identity operator, usually denoted $\hat I$, which leaves every vector unchanged:
+
+$$
+\hat I\left\vert  \psi \right\rangle = \left\vert  \psi \right\rangle
+$$ {#eq-ch02-p0268}
+
+**Products.** The product $\hat X\hat Y$ of two operators is itself an operator.
+
+$$
+\left( {\hat X\hat Y} \right)\left\vert  \psi \right\rangle \equiv \hat X\left( {\hat Y\left\vert  \psi \right\rangle } \right) = \hat X\hat Y\left\vert  \psi \right\rangle
+$$ {#eq-ch02-p0270}
+
+$$
+\left\langle \psi \right\vert \left( {\hat X\hat Y} \right) \equiv \left( {\left\langle \psi \right\vert \hat X} \right)\hat Y = \left\langle \psi \right\vert \hat X\hat Y
+$$ {#eq-ch02-p0271}
+
+The order of multiplication generally matters: in general, $\hat X\hat Y \ne \hat Y\hat X$.
+
+Powers of an operator are defined by
+
+$$
+{\hat X^n} \equiv \underbrace {\hat X\hat X \cdots \hat X}_{n\text{ terms}}
+$$ {#eq-ch02-p0274}
+
+Linear operators must also obey the following rules:
+
+$$
+\begin{gathered} \hat X\left( {c\left\vert  \psi \right\rangle } \right) = c\hat X\left\vert  \psi \right\rangle , \\ \hat X\left( {\left\vert  {{\psi _\alpha }} \right\rangle + \left\vert  {{\psi _\beta }} \right\rangle } \right) = \hat X\left\vert  {{\psi _\alpha }} \right\rangle + \hat X\left\vert  {{\psi _\beta }} \right\rangle , \\ \left( {\hat X + \hat Y} \right)\left\vert  \psi \right\rangle = \hat X\left\vert  \psi \right\rangle + \hat Y\left\vert  \psi \right\rangle \\ \hat X + \hat Y = \hat Y + \hat X, \\ \hat X + (\hat Y + \hat Z) = (\hat X + \hat Y) + \hat Z \\ \end{gathered}
+$$ {#eq-zeqnnum324323}
+
+Operator multiplication is associative:
+
+$$
+\hat X\left( {\hat Y\hat Z} \right) = \left( {\hat X\hat Y} \right)\hat Z = \hat X\hat Y\hat Z
+$$ {#eq-ch02-p0278}
+
+Multiplying any operator by the identity leaves it unchanged:
+
+$$
+\hat I\hat X = \hat X\hat I = \hat X
+$$ {#eq-ch02-p0280}
+
+The third property in @eq-zeqnnum324323, together with the properties of the inner product, gives
+
+$$
+\left\langle \alpha \right\vert \left( {{\hat X + \hat Y}} \right)\left\vert  \beta \right\rangle = \left\langle \alpha \right\vert \hat X\left\vert  \beta \right\rangle + \left\langle \alpha \right\vert \hat Y\left\vert  \beta \right\rangle
+$$ {#eq-ch02-p0282}
+
+## Matrix representations of operators
+
+A vector has an expansion in a complete basis, @eq-zeqnnum935342, and an operator has a corresponding basis representation. Let $\left\{ {\left\vert  1 \right\rangle ,\left\vert  2 \right\rangle ...\left\vert  N \right\rangle } \right\}$ be a basis, and suppose $\hat M$ maps $\left\vert  \psi \right\rangle$ to $\left\vert  \phi \right\rangle$:
+
+$$
+\hat M\left\vert  \psi \right\rangle = \left\vert  \phi \right\rangle
+$$ {#eq-zeqnnum246664}
+
+Take the inner product with any basis vector $\left\langle i \right\vert$ on both sides:
+
+$$
+\left\langle i \right\vert \hat M\left\vert  \psi \right\rangle = \left\langle {i} \mathrel{\left \vert  {\vphantom {i \phi }} \right. \kern-1.2pt } {\phi } \right\rangle
+$$ {#eq-zeqnnum456036}
+
+Using $\left\vert  \psi \right\rangle = \sum {\left\vert  j \right\rangle \left\langle {j} \mathrel{\left \vert  {\vphantom {j \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }$, we can rewrite @eq-zeqnnum456036 as
+
+$$
+\sum\limits_{j = 1}^N {\left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\langle {j} \mathrel{\left \vert  {\vphantom {j \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } = \left\langle {i} \mathrel{\left \vert  {\vphantom {i \phi }} \right. \kern-1.2pt } {\phi } \right\rangle
+$$ {#eq-zeqnnum775889}
+
+The quantity $\left\langle i \right\vert \hat M\left\vert  j \right\rangle$ is a number. Write ${M_{ij}} \equiv \left\langle i \right\vert \hat M\left\vert  j \right\rangle$ and let $i$ in @eq-zeqnnum775889 run through the entire basis to obtain
+
+$$
+\left( {\begin{array}{*{20}{c}} {{M_{11}}}&{{M_{12}}}& \cdots &{{M_{1N}}}\\ {{M_{21}}}&{{M_{22}}}& \cdots &{{M_{2N}}}\\ \vdots & \vdots & \ddots & \vdots \\ {{M_{N1}}}&{{M_{N2}}}& \cdots &{{M_{NN}}} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {\langle 1\vert \psi\rangle }\\ {\langle 2\vert \psi\rangle }\\ \vdots \\ {\langle N\vert \psi\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\langle 1\vert \phi \rangle }\\ {\langle 2\vert \phi \rangle }\\ \vdots \\ {\langle N\vert \phi \rangle } \end{array}} \right)
+$$ {#eq-ch02-p0291}
+
+This is the matrix representation of $\hat M\left\vert  \psi \right\rangle = \left\vert  \phi \right\rangle$.
+
+Thus, the numbers ${M_{ij}}$ form an $N \times N$ square matrix representing $\hat M$, with $i,j$ specifying row and column indices. The matrix representation of $\hat M$ is
+
+$$
+\hat M = \left( {\begin{array}{*{20}{c}} {{M_{11}}}&{{M_{12}}}& \cdots &{{M_{1N}}}\\ {{M_{21}}}&{{M_{22}}}& \cdots &{{M_{2N}}}\\ \vdots & \vdots & \ddots & \vdots \\ {{M_{N1}}}&{{M_{N2}}}& \cdots &{{M_{NN}}} \end{array}} \right), \qquad  {M_{ij}} \equiv \left\langle i \right\vert \hat M\left\vert  j \right\rangle
+$$ {#eq-ch02-p0294}
+
+Like a vector's representation, an operator's matrix always depends on the chosen basis.
+
+## Eigenvalues and eigenvectors
+
+For an operator, some special vectors are transformed into scalar multiples of themselves. These are its **eigenvectors**, and the corresponding scalars are its **eigenvalues**. To indicate the correspondence, we usually label an eigenvector by its eigenvalue or a related symbol: the eigenvector associated with ${a_i}$ is often written $\vert {a_i}\rangle$ or $\left\vert  i \right\rangle$.
+
+**Example.** If $\hat A$ has eigenvectors $\vert {a_i}\rangle$ with eigenvalues ${a_i}$, then
+
+$$
+\hat A\left\vert  {{a_1}} \right\rangle = {a_1}\left\vert  {{a_1}} \right\rangle ,\;\; \qquad  \hat A\left\vert  {{a_2}} \right\rangle = {a_2}\left\vert  {{a_2}} \right\rangle , \qquad  \cdots
+$$ {#eq-ch02-p0299}
+
+When operators are represented by square matrices and vectors by columns, these are precisely the matrix eigenvalues and eigenvectors of linear algebra. We can therefore find an operator's eigenvalues and eigenvectors from its matrix representation.
+
+An eigenvalue may correspond to several linearly independent eigenvectors. Their number is its **degeneracy**. An eigenvalue of degeneracy one is nondegenerate; otherwise it is degenerate. Notice that if $\hat A\vert a\rangle = a\vert a\rangle$, then $\hat A\left( {c\vert a\rangle } \right) = a\left( {c\vert a\rangle } \right)$ for any complex number $c$. Hence $c\vert a\rangle$ also corresponds to eigenvalue $a$, but $c\vert a\rangle$ and $\vert a\rangle$ are linearly dependent and do not increase the degeneracy.
+
+**Theorem 2.1.** If several eigenvectors of $\hat A$ share an eigenvalue, any nonzero linear combination is an eigenvector with that same eigenvalue.
+
+**Proof.** Suppose eigenvalue $a$ of $\hat A$ has $n$ eigenvectors, denoted $\vert 1\rangle ,\vert 2\rangle , \cdots \vert n\rangle$, so that
+
+$$
+\hat A\left\vert  i \right\rangle = a\left\vert  i \right\rangle , \qquad  i = 1,2, \cdots n
+$$ {#eq-ch02-p0304}
+
+For any linear combination $\sum\nolimits_i {{c_i}\vert i\rangle }$ of these eigenvectors,
+
+$$
+\hat A\left( {\sum\limits_i {{c_i}\vert i\rangle } } \right) = \sum\limits_i {{c_i}\hat A\vert i\rangle } = \sum\limits_i {{c_i}a\vert i\rangle } = a\left( {\sum\limits_i {{c_i}\vert i\rangle } } \right)
+$$ {#eq-zeqnnum130538}
+
+This proves the result.
+
+## Outer products, projection operators, and completeness
+
+We have encountered valid operations such as $c\left\langle \psi \right\vert$, $\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle$, $\hat X\left\vert  \psi \right\rangle$, $\left\langle \psi \right\vert \hat X$, $\hat X\hat Y$, and $\vert \alpha\rangle + \vert \beta\rangle$. Expressions such as $\hat X\left\langle \psi \right\vert$, $\left\vert  \psi \right\rangle \hat X$, or $\vert \alpha\rangle + \langle \beta\vert$ are not valid. For two vectors $\left\vert  \psi \right\rangle$ and $\left\vert  \phi \right\rangle$ in the same vector space, $\left\vert  \psi \right\rangle \left\vert  \phi \right\rangle$ is also not defined.[^f3] What about the following product?
+
+$$
+\left\vert  \psi \right\rangle \left\langle \phi \right\vert
+$$ {#eq-zeqnnum460948}
+
+This is called an **outer product**.
+
+Dirac notation has a useful associative rule: in a product of kets, bras, scalars, and operators, brackets $\left( {} \right)$ may group adjacent factors in any way, provided the expression inside $\left( {} \right)$ is a valid scalar, vector, or operator.
+
+To interpret the outer product in @eq-zeqnnum460948, multiply it on the right by a ket and use associativity:
+
+$$
+\left( {\left\vert  \psi \right\rangle \left\langle \phi \right\vert } \right)\;\left\vert  \alpha \right\rangle \equiv \left\vert  \psi \right\rangle \;\left( {\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \alpha }} \right. \kern-1.2pt } {\alpha } \right\rangle } \right)
+$$ {#eq-ch02-p0314}
+
+The right-hand side is the scalar $\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \alpha }} \right. \kern-1.2pt } {\alpha } \right\rangle$ times the ket $\left\vert  \psi \right\rangle$, so it is another ket. An outer product therefore maps a ket to a ket: it is an operator.
+
+### Projection operators
+
+Let $\left\{ {\vert j\rangle } \right\}$ be a complete basis. Every vector $\left\vert  \psi \right\rangle$ can be written as a linear combination of $\left\{ {\vert j\rangle } \right\}$. Associativity gives
+
+$$
+\left\vert  \psi \right\rangle = \sum\limits_j {\left\vert  j \right\rangle \left\langle {j} \mathrel{\left \vert  {\vphantom {j \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } = \sum\limits_j {\left( {\left\vert  j \right\rangle \left\langle j \right\vert } \right)\left\vert  \psi \right\rangle }
+$$ {#eq-zeqnnum153427}
+
+Every term in this sum contains an outer-product operator.
+
+$$
+\left\vert  j \right\rangle \left\langle j \right\vert
+$$ {#eq-ch02-p0320}
+
+This is a **projection operator**. Acting with $\vert j\rangle \langle j\vert$ on $\left\vert  \psi \right\rangle$ gives the component of $\vert \psi \rangle$ along $\vert j\rangle$:
+
+$$
+\left( {\left\vert  j \right\rangle \left\langle j \right\vert } \right)\left\vert  \psi \right\rangle = \left\vert  j \right\rangle \left\langle {j} \mathrel{\left \vert  {\vphantom {j \psi }} \right. \kern-1.2pt } {\psi } \right\rangle
+$$ {#eq-ch02-p0322}
+
+### The completeness relation
+
+In @eq-zeqnnum153427, $\left\vert  \psi \right\rangle$ does not depend on the summation index $j$ and can be taken outside the sum:
+
+$$
+\left\vert  \psi \right\rangle = \left( {\sum\limits_j {\left\vert  j \right\rangle \left\langle j \right\vert } } \right)\left\vert  \psi \right\rangle
+$$ {#eq-ch02-p0325}
+
+The sum of the projectors is an operator that maps every $\left\vert  \psi \right\rangle$ to itself, $\vert \psi\rangle$. Therefore,
+
+$$
+\sum\limits_j {\left\vert  j \right\rangle \left\langle j \right\vert } = \hat I
+$$ {#eq-zeqnnum286146}
+
+This is the **completeness relation**. It is extremely useful: an identity of this form can be inserted wherever an operator is allowed in a Dirac expression, without changing the result. For example, any operator $\hat M$ in a space with basis $\left\{ {\vert 1\rangle ,\vert 2\rangle , \cdots \vert n\rangle } \right\}$ can be expanded as
+
+$$
+\begin{array}{c} \hat M = \left( {\sum\limits_i {\left\vert  i \right\rangle \left\langle i \right\vert } } \right)\hat M\left( {\sum\limits_j {\left\vert  j \right\rangle \left\langle j \right\vert } } \right) = \sum\limits_{i,j} {\left\vert  i \right\rangle \left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\langle j \right\vert } \\ = \sum\limits_{i,j} {\left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{M_{ij}}\left\vert  i \right\rangle \left\langle j \right\vert } \end{array}
+$$ {#eq-ch02-p0329}
+
+If the basis consists of the eigenstates $\hat M\vert j\rangle = {m_j}\vert j\rangle$ of $\hat M$, then
+
+$$
+\begin{array}{c} \hat M = \sum\limits_{i,j} {\left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{m_j}\langle i\vert j\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{m_j}{\delta _{ij}}\left\vert  i \right\rangle \left\langle j \right\vert } \\ = \sum\limits_j {{m_j}\left\vert  j \right\rangle \left\langle j \right\vert } \end{array}
+$$ {#eq-zeqnnum298708}
+
+## Hermitian conjugates of operators
+
+Suppose an operator $\hat B$ is related to $\hat A$ as follows: whenever the latter acts on a ket as $\hat A\left\vert  \psi \right\rangle = \left\vert  \phi \right\rangle$, we have $\left\langle \psi \right\vert \hat B = \left\langle \phi \right\vert$. Then $\hat B$ is the **Hermitian conjugate** of $\hat A$, denoted ${\hat A^\dag }$.
+
+$$
+\hat A\left\vert  \psi \right\rangle \leftrightarrow \left\langle \psi \right\vert {\hat A^\dag }
+$$ {#eq-zeqnnum326007}
+
+Hermitian conjugation has the following properties.
+
+**Theorem 2.2.**
+
+$$
+{\left( {\hat X + \hat Y} \right)^\dag } = {\hat X^\dag } + {\hat Y^\dag }
+$$ {#eq-zeqnnum665376}
+
+**Proof.** Apply the bra–ket duality rules @eq-zeqnnum136783 and @eq-zeqnnum326007:
+
+$$
+\begin{array}{c} \left( {\hat X + \hat Y} \right)\left\vert  \psi \right\rangle \leftrightarrow \left\langle \psi \right\vert {\left( {\hat X + \hat Y} \right)^\dag }\\ \left( {\hat X + \hat Y} \right)\left\vert  \psi \right\rangle = \hat X\left\vert  \psi \right\rangle + \hat Y\left\vert  \psi \right\rangle \leftrightarrow \left\langle \psi \right\vert {{\hat X}^\dag } + \left\langle \psi \right\vert {{\hat Y}^\dag } = \left\langle \psi \right\vert ({{\hat X}^\dag } + {{\hat Y}^\dag }) \end{array}
+$$ {#eq-ch02-p0339}
+
+**Theorem 2.3.**
+
+$$
+{\left( {\hat X\hat Y} \right)^\dag } = {\hat Y^\dag }{\hat X^\dag }
+$$ {#eq-zeqnnum908109}
+
+**Proof.**
+
+$$
+\begin{array}{c} \left( {\hat X\hat Y} \right)\left\vert  \psi \right\rangle \leftrightarrow \left\langle \psi \right\vert {\left( {\hat X\hat Y} \right)^\dag }\\ \left( {\hat X\hat Y} \right)\left\vert  \psi \right\rangle = \hat X\left( {\hat Y\left\vert  \psi \right\rangle } \right) \leftrightarrow \left( {\left\langle \psi \right\vert {{\hat Y}^\dag }} \right){{\hat X}^\dag } = \left\langle \psi \right\vert {{\hat Y}^\dag }{{\hat X}^\dag } \end{array}
+$$ {#eq-ch02-p0343}
+
+**Theorem 2.4.**
+
+For any two vectors $\vert \alpha\rangle ,\vert \beta\rangle$,
+
+$$
+\left\langle \alpha \right\vert {{{\hat M}^\dag }}\left\vert  \beta \right\rangle = \left\langle \beta \right\vert \hat M{\left\vert  \alpha \right\rangle ^*}
+$$ {#eq-zeqnnum961324}
+
+**Proof.** Put $\hat M\left\vert  \alpha \right\rangle = \left\vert  \gamma \right\rangle$, so that $\left\langle \alpha \right\vert {\hat M^\dag } = \left\langle \gamma \right\vert$.
+
+$$
+\left\langle \alpha \right\vert {{\hat M}^\dag }\left\vert  \beta \right\rangle = \left\langle {\gamma } \mathrel{\left \vert  {\vphantom {\gamma \beta }} \right. \kern-1.2pt } {\beta } \right\rangle = {\left\langle {\beta } \mathrel{\left \vert  {\vphantom {\beta \gamma }} \right. \kern-1.2pt } {\gamma } \right\rangle ^*} = \left\langle \beta \right\vert \hat M{\left\vert  \alpha \right\rangle ^*}
+$$ {#eq-ch02-p0348}
+
+**Theorem 2.5.**
+
+$$
+{({\hat M^\dag })^\dag } = \hat M
+$$ {#eq-ch02-p0350}
+
+**Proof.** For any two vectors $\vert \alpha\rangle ,\vert \beta\rangle$,
+
+$$
+\left\langle \alpha \right\vert {{{({{\hat M}^\dag })}^\dag }}\left\vert  \beta \right\rangle = \left\langle \beta \right\vert {\hat M^\dag }{\left\vert  \alpha \right\rangle ^*} = {\left( {\left\langle \alpha \right\vert \hat M{{\left\vert  \beta \right\rangle }^*}} \right)^*} = \left\langle \alpha \right\vert \hat M\left\vert  \beta \right\rangle
+$$ {#eq-ch02-p0352}
+
+The first two equalities use Theorem 2.4. Hence ${({\hat M^\dag })^\dag } = \hat M$.
+
+### Hermitian conjugation of an outer product
+
+For an outer-product operator $\vert \psi \rangle \langle \phi \vert$,
+
+$$
+\left( {\left\vert  \psi \right\rangle \left\langle \phi \right\vert } \right)\left\vert  \alpha \right\rangle {\rm{ = }}\left\vert  \psi \right\rangle \left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \alpha }} \right. \kern-1.2pt } {\alpha } \right\rangle \leftrightarrow \left\langle {\alpha } \mathrel{\left \vert  {\vphantom {\alpha \phi }} \right. \kern-1.2pt } {\phi } \right\rangle \left\langle \psi \right\vert {\rm{ = }}\left\langle \alpha \right\vert \left( {\left\vert  \phi \right\rangle \left\langle \psi \right\vert } \right)
+$$ {#eq-ch02-p0356}
+
+Therefore its Hermitian conjugate is
+
+$$
+{\left( {\left\vert  \psi \right\rangle \left\langle \phi \right\vert } \right)^\dag } = \left\vert  \phi \right\rangle \left\langle \psi \right\vert
+$$ {#eq-zeqnnum917915}
+
+### Matrix representation of the Hermitian conjugate
+
+In a basis $\left\{ {\left\vert  1 \right\rangle ,\left\vert  2 \right\rangle ...\left\vert  N \right\rangle } \right\}$, @eq-zeqnnum961324 relates the matrix elements of $\hat M$ and ${\hat M^\dag }$ as follows:
+
+$$
+\left\langle i \right\vert {\hat M^\dag }\left\vert  j \right\rangle = \left\langle j \right\vert \hat M{\left\vert  i \right\rangle ^*} \qquad  {\rm{or}} \qquad  M_{ij}^\dag = M_{ji}^*
+$$ {#eq-zeqnnum366291}
+
+Thus the matrix of ${\hat M^\dag }$ is the conjugate transpose of the matrix of $\hat M$. For example,
+
+$$
+\text{If } \hat M = \left( {\begin{array}{*{20}{c}} {{M_{11}}}&{{M_{12}}}&{{M_{13}}} \\ {{M_{21}}}&{{M_{22}}}&{{M_{23}}} \\ {{M_{31}}}&{{M_{32}}}&{{M_{33}}} \end{array}} \right), \qquad  \;\;\;\;\text{then } {\hat M^\dag } = \left( {\begin{array}{*{20}{c}} {M_{11}^*}&{M_{21}^*}&{M_{31}^*} \\ {M_{12}^*}&{M_{22}^*}&{M_{32}^*} \\ {M_{13}^*}&{M_{23}^*}&{M_{33}^*} \end{array}} \right)
+$$ {#eq-ch02-p0363}
+
+The matrix representation makes it clear that ${\left( {{{\hat M}^\dag }} \right)^\dag } = \hat M$. Thus $\hat M$ and ${\hat M^\dag }$ are Hermitian conjugates of one another.
+
+## Inverse and unitary operators
+
+**Inverse.** The inverse ${\hat O^{ - 1}}$ of an operator $\hat O$ is defined by
+
+$$
+{\hat O^{ - 1}}\hat O = \hat O{\hat O^{ - 1}} = \hat I
+$$ {#eq-ch02-p0367}
+
+**Unitary operator.** If the inverse of $\hat U$ equals the Hermitian conjugate ${\hat U^\dag } = {\hat U^{ - 1}}$ of $\hat U$, that is, ${\hat U^\dag }\hat U = \hat U{\hat U^\dag } = \hat I$, then $\hat U$ is **unitary**. Its action on vectors is a unitary transformation. The most important property of such a transformation is preservation of inner products.
+
+**Theorem 2.6.** A unitary transformation preserves inner products.
+
+**Proof.** Suppose $\hat U\left\vert  \alpha \right\rangle = \left\vert  {\alpha '} \right\rangle$ and $\hat U\left\vert  \beta \right\rangle = \left\vert  {\beta '} \right\rangle$. Then
+
+$$
+\left\langle {{\alpha '}} \mathrel{\left \vert  {\vphantom {{\alpha '} {\beta '}}} \right. \kern-1.2pt } {{\beta '}} \right\rangle = \left\langle \alpha \right\vert {\hat U^\dag }\hat U\left\vert  \beta \right\rangle = \left\langle {\alpha } \mathrel{\left \vert  {\vphantom {\alpha \beta }} \right. \kern-1.2pt } {\beta } \right\rangle
+$$ {#eq-ch02-p0371}
+
+## Hermitian operators
+
+An operator $\hat A$ is **Hermitian** if it equals its own Hermitian conjugate, ${\hat A^\dag } = \hat A$. We will see that quantum-mechanical observables are represented by Hermitian operators.
+
+Using the relation $\left\langle \phi \right\vert {\hat X^\dag }\left\vert  \psi \right\rangle = \left\langle \psi \right\vert \hat X{\left\vert  \phi \right\rangle ^*}$ between $\hat X$ and its Hermitian conjugate, if $\hat X$ is Hermitian, so that $\hat X = {\hat X^\dag }$, then
+
+$$
+\left\langle \phi \right\vert \hat X\left\vert  \psi \right\rangle = \left\langle \psi \right\vert \hat X{\left\vert  \phi \right\rangle ^*}
+$$ {#eq-zeqnnum353712}
+
+**Theorem 2.7.** For a Hermitian operator $\hat X$, $\left\langle \psi \right\vert \hat X\left\vert  \psi \right\rangle$ is real.
+
+**Proof.** Set $\left\vert  \phi \right\rangle = \left\vert  \psi \right\rangle$ in @eq-zeqnnum353712:
+
+$$
+\left\langle \psi \right\vert \hat X\left\vert  \psi \right\rangle = \left\langle \psi \right\vert \hat X{\left\vert  \psi \right\rangle ^*}
+$$ {#eq-ch02-p0378}
+
+**Theorem 2.8.** The eigenvalues of a Hermitian operator are real.
+
+**Proof.** If $\hat A\left\vert  a \right\rangle = a\left\vert  a \right\rangle$, duality gives $\left\langle a \right\vert {\hat A^\dag } = \left\langle a \right\vert {a^*}$ and $\hat A = {\hat A^\dag }$, hence $\left\langle a \right\vert \hat A = \left\langle a \right\vert {a^*}$. We can therefore evaluate $\left\langle a \right\vert \hat A\left\vert  a \right\rangle$ in two ways:
+
+$$
+\begin{array}{c} \left\langle a \right\vert \hat A\left\vert  a \right\rangle = \left\langle a \right\vert \left( {\hat A\left\vert  a \right\rangle } \right) = a\left\langle {a} \mathrel{\left \vert  {\vphantom {a a}} \right. \kern-1.2pt } {a} \right\rangle \\ \left\langle a \right\vert \hat A\left\vert  a \right\rangle = \left( {\left\langle a \right\vert \hat A} \right)\left\vert  a \right\rangle = {a^*}\left\langle {a} \mathrel{\left \vert  {\vphantom {a a}} \right. \kern-1.2pt } {a} \right\rangle \end{array}
+$$ {#eq-ch02-p0381}
+
+It follows that $a = {a^*}$, so $a$ is real.
+
+Physically, this ensures that measured values of observables are real.
+
+**Theorem 2.9.** A Hermitian operator's matrix equals its conjugate transpose, and its diagonal elements are real.
+
+**Proof.** By @eq-zeqnnum961324, if $\hat A$ is Hermitian, then for any vectors $\vert \alpha\rangle ,\vert \beta\rangle$,
+
+$$
+\left\langle \alpha \right\vert {\hat A}\left\vert  \beta \right\rangle = \left\langle \beta \right\vert {\hat A}{\left\vert  \alpha \right\rangle ^*}
+$$ {#eq-ch02-p0386}
+
+Consequently, the matrix elements of $\hat A$ in any complete basis obey
+
+$$
+{A_{ij}} = A_{ji}^*
+$$ {#eq-ch02-p0388}
+
+Thus ${A_{ii}} = A_{ii}^* \Rightarrow {A_{ii}} \in \Re$.
+
+This property makes it easy to recognize a matrix representing a Hermitian operator.
+
+**Theorem 2.10.** Eigenvectors of a Hermitian operator belonging to different eigenvalues are orthogonal.
+
+**Proof.** Let ${a_i}$ and ${a_j}$ be eigenvalues of the Hermitian operator $\hat A$, with corresponding eigenvectors $\vert {a_i}\rangle ,\vert {a_j}\rangle$:
+
+$$
+\begin{array}{c} \hat A\left\vert  {{a_i}} \right\rangle = {a_i}\left\vert  {{a_i}} \right\rangle \\ \hat A\left\vert  {{a_j}} \right\rangle = {a_j}\left\vert  {{a_j}} \right\rangle \end{array}
+$$ {#eq-ch02-p0393}
+
+Duality gives
+
+$$
+\left\langle {{a_i}} \right\vert {\hat A^\dag } = \left\langle {{a_i}} \right\vert a_i^*
+$$ {#eq-ch02-p0395}
+
+Since $\hat A = {\hat A^\dag }$ and Hermitian eigenvalues are real, this becomes
+
+$$
+\left\langle {{a_i}} \right\vert \hat A = \left\langle {{a_i}} \right\vert {a_i}
+$$ {#eq-ch02-p0397}
+
+Multiply both sides on the right by $\vert {a_j}\rangle$, then let $\hat A$ act first on $\vert {a_j}\rangle$. Rearranging gives
+
+$$
+\left( {{a_j} - {a_i}} \right)\left\langle {{{a_i}}} \mathrel{\left \vert  {\vphantom {{{a_i}} {{a_j}}}} \right. \kern-1.2pt } {{{a_j}}} \right\rangle = 0
+$$ {#eq-ch02-p0399}
+
+Since ${a_i} \ne {a_j}$, we must have $\langle {{a_i}}\vert {{a_j}}\rangle = 0$, proving the result.
+
+We therefore obtain the following theorem.
+
+**Theorem 2.11.** If all $N$ eigenvalues of a Hermitian operator $\hat A$ are nondegenerate, its $N$ mutually orthogonal eigenvectors $\{ \vert {a_1}\rangle ,\vert {a_2}\rangle \cdots \vert {a_N}\rangle \}$ form a complete basis for $\hat A$.
+
+The conclusion extends to degenerate Hermitian operators. Chapter 4 discusses how to choose the basis vectors within degenerate subspaces.
+
+### Representations
+
+A complete basis made from the eigenvectors of a Hermitian operator $\hat A$ defines the **$\hat A$ representation**.
+
+- An arbitrary vector $\left\vert  \psi \right\rangle$ has the following matrix in the $\hat A$ representation:
+
+$$
+\left\vert  \psi \right\rangle = \sum\limits_i {\left\vert  {{a_i}} \right\rangle \left\langle {{{a_i}}} \mathrel{\left \vert  {\vphantom {{{a_i}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {{{a_1}}} \mathrel{\left \vert  {\vphantom {{{a_1}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }\\ {\left\langle {{{a_2}}} \mathrel{\left \vert  {\vphantom {{{a_2}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }\\ \vdots \end{array}} \right)
+$$ {#eq-ch02-p0407}
+
+- The eigenvector $\left\vert  {{a_i}} \right\rangle$ of $\hat A$ has the following column representation in its own eigenbasis:
+
+$$
+\lvert a_i\rangle=\begin{pmatrix}\langle a_1\vert a_i\rangle\\\vdots\\\langle a_i\vert a_i\rangle\\\vdots\\\langle a_N\vert a_i\rangle\end{pmatrix}=\begin{pmatrix}0\\\vdots\\1\\\vdots\\0\end{pmatrix}\quad\text{(1 in row }i\text{)}
+$$ {#eq-ch02-p0409}
+
+- An arbitrary Hermitian operator $\hat B$ has the following matrix in the $\hat A$ representation:
+
+$$
+\hat B = \left( {\begin{array}{*{20}{c}} {\left\langle {{a_1}} \right\vert \hat B\left\vert  {{a_1}} \right\rangle }&{\left\langle {{a_1}} \right\vert \hat B\left\vert  {{a_2}} \right\rangle }& \cdots \\ {\left\langle {{a_2}} \right\vert \hat B\left\vert  {{a_1}} \right\rangle }&{\left\langle {{a_2}} \right\vert \hat B\left\vert  {{a_2}} \right\rangle }& \cdots \\ \vdots & \vdots & \ddots \end{array}} \right)
+$$ {#eq-ch02-p0411}
+
+- The matrix of $\hat A$ in its own representation is diagonal, with the eigenvalues of $\hat A$ on the diagonal:
+
+$$
+\hat A = \left( {\begin{array}{*{20}{c}} {\left\langle {{a_1}} \right\vert \hat A\left\vert  {{a_1}} \right\rangle }&{\left\langle {{a_1}} \right\vert \hat A\left\vert  {{a_2}} \right\rangle }& \cdots \\ {\left\langle {{a_2}} \right\vert \hat A\left\vert  {{a_1}} \right\rangle }&{\left\langle {{a_2}} \right\vert \hat A\left\vert  {{a_2}} \right\rangle }& \cdots \\ \vdots & \vdots & \ddots \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{a_1}}&0& \cdots \\ 0&{{a_2}}& \cdots \\ \vdots & \vdots & \ddots \end{array}} \right)
+$$ {#eq-zeqnnum449673}
+
+## Exercises
+
+**2.1.** Let {$\left\vert  U \right\rangle ,\left\vert  D \right\rangle$} be a basis of a two-dimensional vector space. The two basis vectors have the following matrices in this basis:
+
+$$
+\vert U\rangle = \left( {\begin{array}{*{20}{c}} {\langle U\vert U\rangle }\\ {\langle D\vert U\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right), \qquad  \vert D\rangle = \left( {\begin{array}{*{20}{c}} {\langle U\vert D\rangle }\\ {\langle D\vert D\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0\\ 1 \end{array}} \right),
+$$ {#eq-ch02-p0416}
+
+Three operators $\hat A,\hat B,\hat C$ in this space have the following properties:
+
+$$
+\begin{array}{l} \hat A\vert U\rangle = \vert D\rangle , & \hat A\vert D\rangle = \vert U\rangle \\ \hat B\vert U\rangle = i\vert D\rangle , & \hat B\vert D\rangle = - i\vert U\rangle \\ \hat C\vert U\rangle = \vert U\rangle , & \hat C\vert D\rangle = \vert D\rangle \end{array}
+$$ {#eq-ch02-p0418}
+
+Write the matrix of each operator in this basis.
+
+**2.2.** Let $\left\vert  1 \right\rangle ,\left\vert  2 \right\rangle$ be two basis vectors of a two-dimensional space, with operator $\hat H$ given by
+
+$$
+\hat H = \cos \theta \left\vert  1 \right\rangle \left\langle 1 \right\vert  + \sin \theta \left\vert  1 \right\rangle \left\langle 2 \right\vert  + \sin \theta \left\vert  2 \right\rangle \left\langle 1 \right\vert  - \cos \theta \left\vert  2 \right\rangle \left\langle 2 \right\vert
+$$ {#eq-ch02-p0422}
+
+Find the eigenvalues and corresponding eigenstates of $\hat H$.
+
+**2.3*.** A Hermitian operator $\hat A$ has nondegenerate eigenvalues $\left\{ {{a_i}} \right\}$ and eigenstates $\left\{ {\left\vert  {{a_i}} \right\rangle } \right\}$. Find the eigenvalues and eigenstates of ${\hat A^{ - 1}}$.
+
+**2.4.** Prove that if $\hat A$ is Hermitian, the eigenvalues of ${\hat A^2}$ are nonnegative.
+
+**2.5.** Prove that $\hat A{\hat A^\dag }$ is Hermitian for any operator $\hat A$.
+
+[^f3]: When $\left\vert  \psi \right\rangle$ and $\left\vert  \phi \right\rangle$ belong to different vector subspaces, $\left\vert  \psi \right\rangle \left\vert  \phi \right\rangle$ denotes a tensor-product state. See Chapter 9.
