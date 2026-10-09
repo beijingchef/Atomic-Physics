@@ -493,7 +493,7 @@ Define the deviation operator: $\Delta \hat A \equiv \hat A - \langle \hat A\ran
 
 Define the variance: ${\langle {(\Delta \hat A})^2}\rangle = \left\langle {{{\hat A}^2} - 2\hat A\langle {\hat A}\rangle + {{\langle {\hat A}\rangle }^2}} \right\rangle = \langle {{{\hat A}^2}}\rangle - {\langle {\hat A}\rangle ^2}$.
 
-Prove $\langle {{{(\Delta \hat A)}^2}}\rangle \langle {{{(\Delta \hat B)}^2}}\rangle \ge \frac{1}{4}{\left\vert  {\langle [\hat A,\hat B]\rangle } \right\vert ^2}$.
+Prove $\langle {{{(\Delta \hat A)}^2}}\rangle \langle {{{(\Delta \hat B)}^2}}\rangle \ge {1/4}{\left\vert  {\langle [\hat A,\hat B]\rangle } \right\vert ^2}$.
 
 **Proof.** Define $[\hat X,\hat Y] \equiv \hat X\hat Y - \hat Y\hat X,\;\;{\rm{\{ }}\hat X,\hat Y{\rm{\} }} \equiv \hat X\hat Y + \hat Y\hat X$. Clearly,
 
@@ -565,7 +565,7 @@ Time is a parameter, not an observable in this formulation. What, then, is the p
 
 ## Exercises
 
-**4.1.** Define ${\rm{\{ }}\hat A,\hat B{\rm{\} }} \equiv \hat A\hat B + \hat B\hat A$. Prove $\hat A\hat B = \frac{1}{2}\left[ {\hat A,\hat B} \right] + \frac{1}{2}\left\{ {\hat A,\hat B} \right\}$.
+**4.1.** Define ${\rm{\{ }}\hat A,\hat B{\rm{\} }} \equiv \hat A\hat B + \hat B\hat A$. Prove $\hat A\hat B = {1/2}\left[ {\hat A,\hat B} \right] + {1/2}\left\{ {\hat A,\hat B} \right\}$.
 
 **4.2.** Eigenstates $\vert {a_i}\rangle ,\vert {a_j}\rangle$ of $\hat A$ have distinct eigenvalues ${a_i},{a_j}$. If $[\hat A,\hat B] = 0$, prove
 

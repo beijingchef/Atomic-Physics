@@ -1,6 +1,8 @@
 project:
   type: book
   output-dir: _book
+  resources:
+    - assets/mathjax/input/tex/extensions/boldsymbol.js
 
 book:
   title: "Introduction to Quantum Mechanics"

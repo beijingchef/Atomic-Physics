@@ -266,17 +266,17 @@ window.Quarto = {
 
 <section id="exercises-for-chapter-1" class="level2" data-number="12.1">
 <h2 data-number="12.1" class="anchored" data-anchor-id="exercises-for-chapter-1"><span class="header-section-number">12.1</span> Exercises for Chapter 1</h2>
-<p><strong>1.1</strong> Decide whether each of the following forms a Hilbert space.</p>
+<p><strong>1.1</strong> Decide whether each of the following forms a complex vector space under the usual addition and scalar multiplication. No inner product or completeness condition is required.</p>
 <ul>
 <li><p>All complex numbers.</p></li>
 <li><p>All vectors in three-dimensional Cartesian space.</p></li>
-<li><p>Solutions <span class="math inline">\(\psi (x)\)</span> of the following equation, where <span class="math inline">\(E\)</span> is real and <span class="math inline">\(V(x)\)</span> is a finite continuous function of <span class="math inline">\(x\)</span>.</p></li>
+<li><p>All complex-valued solutions <span class="math inline">\(\psi(x)\)</span> of the following equation on a fixed interval, with fixed real <span class="math inline">\(E\)</span> and a finite, continuous <span class="math inline">\(V(x)\)</span>. No normalization or boundary conditions are imposed.</p></li>
 </ul>
 <p><span id="eq-ch12-p2407"><span class="math display">\[
 \left[ { - \frac{{{\hbar ^2}}}{{2m}}\frac{{{d^2}}}{{d{x^2}}} + V(x)} \right]\psi (x) = E\psi (x)
 \tag{12.1}\]</span></span></p>
 <ol type="a">
-<li>Yes. (b) A real linear space, not a complex linear space. (c) Yes.</li>
+<li>Yes. (b) A real linear space, not a complex linear space: multiplying a real Cartesian vector by <span class="math inline">\(i\)</span> takes it outside the collection. (c) Yes: the equation is homogeneous and linear, so any complex linear combination of two solutions is another solution, and the zero function is a solution.</li>
 </ol>
 <p><strong>1.2</strong> Prove that <span class="math inline">\(\left\langle {\alpha } \mathrel{\left \vert  {\vphantom {\alpha \alpha }} \right. \kern-1.2pt } {\alpha } \right\rangle \left\langle {\beta } \mathrel{\left \vert  {\vphantom {\beta \beta }} \right. \kern-1.2pt } {\beta } \right\rangle \ge {\left\vert  {\left\langle {\alpha } \mathrel{\left \vert  {\vphantom {\alpha \beta }} \right. \kern-1.2pt } {\beta } \right\rangle } \right\vert ^2}\)</span>.</p>
 <p>Hint: Construct a suitable <span class="math inline">\(\vert \psi \rangle\)</span> as a linear combination of <span class="math inline">\(\vert \alpha\rangle\)</span> and <span class="math inline">\(\vert \beta\rangle\)</span>, and use <a href="01-vectors-and-quantum-states.html#eq-zeqnnum281628" class="quarto-xref">Equation&nbsp;<span>1.11</span></a>, <span class="math inline">\(\left\langle {\psi } \mathrel{\left \vert  {\vphantom {\psi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \ge 0\)</span>.</p>
@@ -355,7 +355,7 @@ window.Quarto = {
 \tag{12.18}\]</span></span></p>
 <p><strong>2.3</strong>* A Hermitian operator <span class="math inline">\(\hat A\)</span> has nondegenerate eigenvalues <span class="math inline">\(\left\{ {{a_i}} \right\}\)</span> and eigenstates <span class="math inline">\(\left\{ {\left\vert  {{a_i}} \right\rangle } \right\}\)</span>. Find the eigenvalues and eigenstates of <span class="math inline">\({\hat A^{ - 1}}\)</span>.</p>
 <p>Solution: Since <span class="math inline">\(\left\vert  {{a_i}} \right\rangle = \hat I\left\vert  {{a_i}} \right\rangle = {\hat A^{ - 1}}\hat A\left\vert  {{a_i}} \right\rangle = {\hat A^{ - 1}}{a_i}\left\vert  {{a_i}} \right\rangle = {a_i}{\hat A^{ - 1}}\left\vert  {{a_i}} \right\rangle\)</span>,</p>
-<p>we have <span class="math inline">\({\hat A^{ - 1}}\left\vert  {{a_i}} \right\rangle = \frac{1}{{{a_i}}}\left\vert  {{a_i}} \right\rangle\)</span>.</p>
+<p>we have <span class="math inline">\({\hat A^{ - 1}}\left\vert  {{a_i}} \right\rangle = {1/a_i}\left\vert  {{a_i}} \right\rangle\)</span>.</p>
 <p>Thus <span class="math inline">\({\hat A^{ - 1}}\)</span> has eigenvalues <span class="math inline">\({1 \mathord{\left/ {\vphantom {1 {{a_i}}}} \right. \kern-1.2pt } {{a_i}}}\)</span> with eigenstates <span class="math inline">\(\left\vert  {{a_i}} \right\rangle\)</span>.</p>
 <p><strong>2.4</strong> Prove that, for a Hermitian operator <span class="math inline">\(\hat A\)</span>, the eigenvalues of <span class="math inline">\({\hat A^2}\)</span> are nonnegative.</p>
 <p>Solution: Since <span class="math inline">\(\hat A = {\hat A^ + }\)</span>,</p>
@@ -469,8 +469,8 @@ a\cos \theta + b{e^{ - i\phi }}\sin \theta = a \qquad  \Rightarrow \qquad  \frac
 </section>
 <section id="exercises-for-chapter-4" class="level2" data-number="12.4">
 <h2 data-number="12.4" class="anchored" data-anchor-id="exercises-for-chapter-4"><span class="header-section-number">12.4</span> Exercises for Chapter 4</h2>
-<p><strong>4.1</strong> Define <span class="math inline">\({\rm{\{ }}\hat A,\hat B{\rm{\} }} \equiv \hat A\hat B + \hat B\hat A\)</span>. Prove that <span class="math inline">\(\hat A\hat B = \frac{1}{2}\left[ {\hat A,\hat B} \right] + \frac{1}{2}\left\{ {\hat A,\hat B} \right\}\)</span>.</p>
-<p>Solution: <span class="math inline">\(\frac{1}{2}\left[ {\hat A,\hat B} \right] + \frac{1}{2}\left\{ {\hat A,\hat B} \right\} = \frac{1}{2}\left( {\hat A\hat B - \hat B\hat A} \right) + \frac{1}{2}\left( {\hat A\hat B + \hat B\hat A} \right) = \hat A\hat B\)</span>.</p>
+<p><strong>4.1</strong> Define <span class="math inline">\({\rm{\{ }}\hat A,\hat B{\rm{\} }} \equiv \hat A\hat B + \hat B\hat A\)</span>. Prove that <span class="math inline">\(\hat A\hat B = {1/2}\left[ {\hat A,\hat B} \right] + {1/2}\left\{ {\hat A,\hat B} \right\}\)</span>.</p>
+<p>Solution: <span class="math inline">\({1/2}\left[ {\hat A,\hat B} \right] + {1/2}\left\{ {\hat A,\hat B} \right\} = {1/2}\left( {\hat A\hat B - \hat B\hat A} \right) + {1/2}\left( {\hat A\hat B + \hat B\hat A} \right) = \hat A\hat B\)</span>.</p>
 <p><strong>4.2</strong> The eigenstates <span class="math inline">\(\vert {a_i}\rangle ,\vert {a_j}\rangle\)</span> of a Hermitian operator <span class="math inline">\(\hat A\)</span> have distinct eigenvalues <span class="math inline">\({a_i},{a_j}\)</span>. If <span class="math inline">\([\hat B,\hat A] = 0\)</span>, prove that <span class="math inline">\(\langle {{a_i}}\vert {\hat B}\vert {{a_j}}\rangle = 0\)</span>.</p>
 <p>Solution: <span class="math inline">\(\hat B\hat A - \hat A\hat B = 0\)</span>, so</p>
 <p><span id="eq-ch12-p2530"><span class="math display">\[
@@ -498,11 +498,11 @@ a\cos \theta + b{e^{ - i\phi }}\sin \theta = a \qquad  \Rightarrow \qquad  \frac
 <p><span id="eq-ch12-p2547"><span class="math display">\[
 \left\vert  U \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {I} \mathrel{\left \vert  {\vphantom {I U}} \right. \kern-1.2pt } {U} \right\rangle }\\ {\left\langle {O} \mathrel{\left \vert  {\vphantom {O U}} \right. \kern-1.2pt } {U} \right\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{1 \mathord{\left/ {\vphantom {1 {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}}\\ {{1 \mathord{\left/ {\vphantom {1 {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}} \end{array}} \right) = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ 1 \end{array}} \right), \qquad  \left\vert  D \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {I} \mathrel{\left \vert  {\vphantom {I D}} \right. \kern-1.2pt } {D} \right\rangle }\\ {\left\langle {O} \mathrel{\left \vert  {\vphantom {O D}} \right. \kern-1.2pt } {D} \right\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{{ - i} \mathord{\left/ {\vphantom {{ - i} {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}}\\ {{i \mathord{\left/ {\vphantom {i {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}} \end{array}} \right) = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} { - i}\\ i \end{array}} \right)
 \tag{12.42}\]</span></span></p>
-<p>Since <span class="math inline">\(\left\vert  R \right\rangle = \frac{{\sqrt 2 }}{2}\left( {\left\vert  U \right\rangle + \left\vert  D \right\rangle } \right)\)</span>, express <span class="math inline">\(\left\vert  U \right\rangle\)</span> and <span class="math inline">\(\left\vert  D \right\rangle\)</span> as columns in the <span class="math inline">\({\hat \sigma _{\rm{y}}}\)</span> representation. Then, in the <span class="math inline">\({\hat \sigma _{\rm{y}}}\)</span> representation,</p>
+<p>Since <span class="math inline">\(\left\vert  R \right\rangle = {\sqrt 2/2}\left( {\left\vert  U \right\rangle + \left\vert  D \right\rangle } \right)\)</span>, express <span class="math inline">\(\left\vert  U \right\rangle\)</span> and <span class="math inline">\(\left\vert  D \right\rangle\)</span> as columns in the <span class="math inline">\({\hat \sigma _{\rm{y}}}\)</span> representation. Then, in the <span class="math inline">\({\hat \sigma _{\rm{y}}}\)</span> representation,</p>
 <p><span id="eq-ch12-p2549"><span class="math display">\[
 \left\vert  R \right\rangle \buildrel\textstyle.\over= \frac{{\sqrt 2 }}{2}\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ 1 \end{array}} \right) + \frac{{\sqrt 2 }}{2}\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} { - i}\\ i \end{array}} \right) = \frac{1}{2}\left( {\begin{array}{*{20}{c}} {1 - i}\\ {1 + i} \end{array}} \right)
 \tag{12.43}\]</span></span></p>
-<p>Likewise, since <span class="math inline">\(\left\vert  L \right\rangle = \frac{{\sqrt 2 }}{2}\left( {\left\vert  U \right\rangle - \left\vert  D \right\rangle } \right)\)</span>, in the <span class="math inline">\({\hat \sigma _{\rm{y}}}\)</span> representation,</p>
+<p>Likewise, since <span class="math inline">\(\left\vert  L \right\rangle = {\sqrt 2/2}\left( {\left\vert  U \right\rangle - \left\vert  D \right\rangle } \right)\)</span>, in the <span class="math inline">\({\hat \sigma _{\rm{y}}}\)</span> representation,</p>
 <p><span id="eq-ch12-p2551"><span class="math display">\[
 \left\vert  L \right\rangle = \frac{{\sqrt 2 }}{2}\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ 1 \end{array}} \right) - \frac{{\sqrt 2 }}{2}\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} { - i}\\ i \end{array}} \right) = \frac{1}{2}\left( {\begin{array}{*{20}{c}} {1 + i}\\ {1 - i} \end{array}} \right)
 \tag{12.44}\]</span></span></p>
@@ -541,7 +541,7 @@ a\cos \theta + b{e^{ - i\phi }}\sin \theta = a \qquad  \Rightarrow \qquad  \frac
 <li><p>Let <span class="math inline">\({\bf{\hat n}}\)</span> be a unit vector in the first quadrant of the x–z plane, at angle <span class="math inline">\(\theta\)</span> to z. Initially the projection of <span class="math inline">\({\bf{S}}\)</span> along <span class="math inline">\({\bf{\hat n}}\)</span> is <span class="math inline">\(\hbar /2\)</span>. Using earlier exercise results, find the spin state <span class="math inline">\(\left\vert  {\psi \left( t \right)} \right\rangle\)</span> at time <span class="math inline">\(t\)</span> and the expectation values of <span class="math inline">\({\hat S_x},\;{\hat S_y},\;{\hat S_z}\)</span>. To simplify the result, define <span class="math inline">\({\omega _L} \equiv {{2B{\mu _B}} \mathord{\left/ {\vphantom {{2B{\mu _B}} \hbar }} \right. \kern-1.2pt } \hbar }\)</span>.</p></li>
 </ol>
 <p>Solution: Recall the results from Chapter 3.</p>
-<p>The Hamiltonian is <span class="math inline">\(\hat H = - {\bf{\mu }} \cdot {\bf{B}} = - {\hat \mu _z}B = \frac{{2{\mu _B}{{\hat S}_z}}}{\hbar }B = {\mu _B}B{\hat \sigma _z}\)</span>. Since <span class="math inline">\({\mu _B}B\)</span> is a constant, the eigenstates of <span class="math inline">\(\hat H\)</span> are those of <span class="math inline">\({\hat \sigma _z}\)</span>, and their eigenvalues are those of <span class="math inline">\({\hat \sigma _z}\)</span> multiplied by <span class="math inline">\({\mu _B}B\)</span>.</p>
+<p>The Hamiltonian is <span class="math inline">\(\hat H = - {\bf{\mu }} \cdot {\bf{B}} = - {\hat \mu _z}B = {(2{\mu _B}{{\hat S}_z})/\hbar}B = {\mu _B}B{\hat \sigma _z}\)</span>. Since <span class="math inline">\({\mu _B}B\)</span> is a constant, the eigenstates of <span class="math inline">\(\hat H\)</span> are those of <span class="math inline">\({\hat \sigma _z}\)</span>, and their eigenvalues are those of <span class="math inline">\({\hat \sigma _z}\)</span> multiplied by <span class="math inline">\({\mu _B}B\)</span>.</p>
 <p><span id="eq-ch12-p2575"><span class="math display">\[
 \begin{gathered} {E_1} = {\mu _{\text{B}}}B = {{\hbar {\omega _L}} \mathord{\left/ {\vphantom {{\hbar {\omega _L}} 2}} \right. \kern-1.2pt } 2}, \qquad  \qquad  \left\vert  {{E_1}} \right\rangle = \left\vert  U \right\rangle  \\ {E_2} = - {\mu _{\text{B}}}B = {{ - \hbar {\omega _L}} \mathord{\left/ {\vphantom {{ - \hbar {\omega _L}} 2}} \right. \kern-1.2pt } 2}, \qquad  \qquad  \left\vert  {{E_2}} \right\rangle = \left\vert  D \right\rangle  \\ \end{gathered}
 \tag{12.49}\]</span></span></p>
@@ -602,7 +602,7 @@ a\cos \theta + b{e^{ - i\phi }}\sin \theta = a \qquad  \Rightarrow \qquad  \frac
 \tag{12.59}\]</span></span></p>
 <p>Here <span class="math inline">\(A\)</span> is a normalization constant. What energies are possible, and with what probabilities?</p>
 <p>Hint: How is this wavefunction related to the well’s energy eigenfunctions?</p>
-<p>Solution: Expand the wavefunction in energy eigenfunctions: <span class="math inline">\({u_n}\left( x \right) \propto \sin \left( {\frac{{n\pi x}}{d}} \right),n = 1,2,3 \cdots\)</span>.</p>
+<p>Solution: Expand the wavefunction in energy eigenfunctions: <span class="math inline">\({u_n}\left( x \right) \propto \sin \left( {{(n\pi x)/d}} \right),n = 1,2,3 \cdots\)</span>.</p>
 <p><span id="eq-ch12-p2611"><span class="math display">\[
 \begin{array}{c} A{\cos ^3}\left( {\frac{{\pi x}}{{2d}}} \right)\sin \left( {\frac{{\pi x}}{{2d}}} \right) = \frac{A}{2}{\cos ^2}\left( {\frac{{\pi x}}{{2d}}} \right)\sin \left( {\frac{{\pi x}}{d}} \right) = \frac{A}{2}\frac{{1 + \cos \left( {\frac{{\pi x}}{d}} \right)}}{2}\sin \left( {\frac{{\pi x}}{d}} \right)\\ = \frac{A}{4}\left[ {\sin \left( {\frac{{\pi x}}{d}} \right) + \frac{1}{2}\sin \left( {\frac{{2\pi x}}{d}} \right)} \right] \propto {u_1}\left( x \right) + \frac{1}{2}{u_2}\left( x \right) \end{array}
 \tag{12.60}\]</span></span></p>
@@ -688,9 +688,9 @@ v \equiv \frac{d}{{dt}}\left\langle {\psi \left( t \right)} \right\vert \hat X\l
 \tag{12.75}\]</span></span></p>
 <p>It is therefore an eigenstate of <span class="math inline">\({{\bf{\hat L}}^2}\)</span>, with <span class="math inline">\(l = 1\)</span>.</p>
 <ol start="2" type="1">
-<li>The possible values of <span class="math inline">\({\hat L_z}\)</span> are <span class="math inline">\(m\hbar\)</span> and <span class="math inline">\(m = 1, - 1,0\)</span>, with probability amplitudes <span class="math inline">\(- \frac{{1 - i}}{2},\;\;\frac{{1 + i}}{2},\;\;\frac{3}{{\sqrt 2 }}\)</span>.</li>
+<li>The possible values of <span class="math inline">\({\hat L_z}\)</span> are <span class="math inline">\(m\hbar\)</span> and <span class="math inline">\(m = 1, - 1,0\)</span>, with probability amplitudes <span class="math inline">\(- {(1 - i)/2},\;\;{(1 + i)/2},\;\;{3/\sqrt 2}\)</span>.</li>
 </ol>
-<p>Thus each <span class="math inline">\(m = \pm 1\)</span> has probability <span class="math inline">\(\frac{{{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}}}{{{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}{\rm{ + }}{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}{\rm{ + }}{9 \mathord{\left/ {\vphantom {9 2}} \right. \kern-1.2pt } 2}}} = \frac{1}{{11}}\)</span>, while <span class="math inline">\(m = 0\)</span> has probability <span class="math inline">\(\frac{9}{{11}}\)</span>.</p>
+<p>Thus each <span class="math inline">\(m = \pm 1\)</span> has probability <span class="math inline">\((1/2)/(1/2+1/2+9/2) = 1/11\)</span>, while <span class="math inline">\(m = 0\)</span> has probability <span class="math inline">\(9/11\)</span>.</p>
 </section>
 <section id="exercises-for-chapter-9" class="level2" data-number="12.9">
 <h2 data-number="12.9" class="anchored" data-anchor-id="exercises-for-chapter-9"><span class="header-section-number">12.9</span> Exercises for Chapter 9</h2>
@@ -712,12 +712,12 @@ v \equiv \frac{d}{{dt}}\left\langle {\psi \left( t \right)} \right\vert \hat X\l
 \begin{array}{c} {{\hat J}_ - }\left\vert  {1,1} \right\rangle = ({{\hat J}_{1 - }} + {{\hat J}_{2 - }})\left\vert  {\frac{1}{2};\frac{1}{2}} \right\rangle \\ {C_ - }(1,1)\left\vert  {1,0} \right\rangle = {C_ - }({1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2},{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2})\left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle + {C_ - }({1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2},{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2})\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle \\ \sqrt 2 \hbar \left\vert  {1,0} \right\rangle = \hbar \left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle + \hbar \left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle \\ \left\vert  {1,0} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle + \left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle } \right) \end{array}
 \tag{12.79}\]</span></span></p>
 <p>The condition <span class="math inline">\(m = {m_1} + {m_2}\)</span> allows us to write</p>
-<p><span class="math inline">\(\vert {0,0}\rangle = {d_1}\left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle + {d_2}\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle ,\)</span>, with <span class="math inline">\({\left\vert  {{d_1}} \right\vert ^2} + {\left\vert  {{d_2}} \right\vert ^2} = 1\)</span>.</p>
+<p><span class="math inline">\(\vert {0,0}\rangle = {d_1}\left\vert  { - {1/2};{1/2}} \right\rangle + {d_2}\left\vert  {{1/2}; - {1/2}} \right\rangle ,\)</span>, with <span class="math inline">\({\left\vert  {{d_1}} \right\vert ^2} + {\left\vert  {{d_2}} \right\vert ^2} = 1\)</span>.</p>
 <p>Using</p>
 <p><span id="eq-ch12-p2675"><span class="math display">\[
 \begin{array}{c} \langle 1,0\vert {0,0}\rangle = 0\\ \Rightarrow \frac{1}{{\sqrt 2 }}{d_1} + \frac{1}{{\sqrt 2 }}{d_2} = 0\\ \Rightarrow {d_1} = - {d_2} = \frac{1}{{\sqrt 2 }} \end{array}
 \tag{12.80}\]</span></span></p>
-<p>we obtain <span class="math inline">\(\vert {0,0}\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle + \left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle } \right)\)</span>.</p>
+<p>we obtain <span class="math inline">\(\vert {0,0}\rangle = {1/\sqrt 2}\left( {\left\vert  { - {1/2};{1/2}} \right\rangle + \left\vert  {{1/2}; - {1/2}} \right\rangle } \right)\)</span>.</p>
 
 
 </section>

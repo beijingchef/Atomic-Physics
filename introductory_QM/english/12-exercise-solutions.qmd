@@ -132,7 +132,7 @@ $$ {#eq-ch12-p2448}
 
 Solution: Since $\left\vert  {{a_i}} \right\rangle = \hat I\left\vert  {{a_i}} \right\rangle = {\hat A^{ - 1}}\hat A\left\vert  {{a_i}} \right\rangle = {\hat A^{ - 1}}{a_i}\left\vert  {{a_i}} \right\rangle = {a_i}{\hat A^{ - 1}}\left\vert  {{a_i}} \right\rangle$,
 
-we have ${\hat A^{ - 1}}\left\vert  {{a_i}} \right\rangle = \frac{1}{{{a_i}}}\left\vert  {{a_i}} \right\rangle$.
+we have ${\hat A^{ - 1}}\left\vert  {{a_i}} \right\rangle = {1/a_i}\left\vert  {{a_i}} \right\rangle$.
 
 Thus ${\hat A^{ - 1}}$ has eigenvalues ${1 \mathord{\left/ {\vphantom {1 {{a_i}}}} \right. \kern-1.2pt } {{a_i}}}$ with eigenstates $\left\vert  {{a_i}} \right\rangle$.
 
@@ -294,9 +294,9 @@ $$ {#eq-ch12-p2522}
 
 ## Exercises for Chapter 4
 
-**4.1** Define ${\rm{\{ }}\hat A,\hat B{\rm{\} }} \equiv \hat A\hat B + \hat B\hat A$. Prove that $\hat A\hat B = \frac{1}{2}\left[ {\hat A,\hat B} \right] + \frac{1}{2}\left\{ {\hat A,\hat B} \right\}$.
+**4.1** Define ${\rm{\{ }}\hat A,\hat B{\rm{\} }} \equiv \hat A\hat B + \hat B\hat A$. Prove that $\hat A\hat B = {1/2}\left[ {\hat A,\hat B} \right] + {1/2}\left\{ {\hat A,\hat B} \right\}$.
 
-Solution: $\frac{1}{2}\left[ {\hat A,\hat B} \right] + \frac{1}{2}\left\{ {\hat A,\hat B} \right\} = \frac{1}{2}\left( {\hat A\hat B - \hat B\hat A} \right) + \frac{1}{2}\left( {\hat A\hat B + \hat B\hat A} \right) = \hat A\hat B$.
+Solution: ${1/2}\left[ {\hat A,\hat B} \right] + {1/2}\left\{ {\hat A,\hat B} \right\} = {1/2}\left( {\hat A\hat B - \hat B\hat A} \right) + {1/2}\left( {\hat A\hat B + \hat B\hat A} \right) = \hat A\hat B$.
 
 **4.2** The eigenstates $\vert {a_i}\rangle ,\vert {a_j}\rangle$ of a Hermitian operator $\hat A$ have distinct eigenvalues ${a_i},{a_j}$. If $[\hat B,\hat A] = 0$, prove that $\langle {{a_i}}\vert {\hat B}\vert {{a_j}}\rangle = 0$.
 
@@ -342,13 +342,13 @@ $$
 \left\vert  U \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {I} \mathrel{\left \vert  {\vphantom {I U}} \right. \kern-1.2pt } {U} \right\rangle }\\ {\left\langle {O} \mathrel{\left \vert  {\vphantom {O U}} \right. \kern-1.2pt } {U} \right\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{1 \mathord{\left/ {\vphantom {1 {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}}\\ {{1 \mathord{\left/ {\vphantom {1 {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}} \end{array}} \right) = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ 1 \end{array}} \right), \qquad  \left\vert  D \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {I} \mathrel{\left \vert  {\vphantom {I D}} \right. \kern-1.2pt } {D} \right\rangle }\\ {\left\langle {O} \mathrel{\left \vert  {\vphantom {O D}} \right. \kern-1.2pt } {D} \right\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{{ - i} \mathord{\left/ {\vphantom {{ - i} {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}}\\ {{i \mathord{\left/ {\vphantom {i {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}} \end{array}} \right) = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} { - i}\\ i \end{array}} \right)
 $$ {#eq-ch12-p2547}
 
-Since $\left\vert  R \right\rangle = \frac{{\sqrt 2 }}{2}\left( {\left\vert  U \right\rangle + \left\vert  D \right\rangle } \right)$, express $\left\vert  U \right\rangle$ and $\left\vert  D \right\rangle$ as columns in the ${\hat \sigma _{\rm{y}}}$ representation. Then, in the ${\hat \sigma _{\rm{y}}}$ representation,
+Since $\left\vert  R \right\rangle = {\sqrt 2/2}\left( {\left\vert  U \right\rangle + \left\vert  D \right\rangle } \right)$, express $\left\vert  U \right\rangle$ and $\left\vert  D \right\rangle$ as columns in the ${\hat \sigma _{\rm{y}}}$ representation. Then, in the ${\hat \sigma _{\rm{y}}}$ representation,
 
 $$
 \left\vert  R \right\rangle \buildrel\textstyle.\over= \frac{{\sqrt 2 }}{2}\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ 1 \end{array}} \right) + \frac{{\sqrt 2 }}{2}\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} { - i}\\ i \end{array}} \right) = \frac{1}{2}\left( {\begin{array}{*{20}{c}} {1 - i}\\ {1 + i} \end{array}} \right)
 $$ {#eq-ch12-p2549}
 
-Likewise, since $\left\vert  L \right\rangle = \frac{{\sqrt 2 }}{2}\left( {\left\vert  U \right\rangle - \left\vert  D \right\rangle } \right)$, in the ${\hat \sigma _{\rm{y}}}$ representation,
+Likewise, since $\left\vert  L \right\rangle = {\sqrt 2/2}\left( {\left\vert  U \right\rangle - \left\vert  D \right\rangle } \right)$, in the ${\hat \sigma _{\rm{y}}}$ representation,
 
 $$
 \left\vert  L \right\rangle = \frac{{\sqrt 2 }}{2}\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ 1 \end{array}} \right) - \frac{{\sqrt 2 }}{2}\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} { - i}\\ i \end{array}} \right) = \frac{1}{2}\left( {\begin{array}{*{20}{c}} {1 + i}\\ {1 - i} \end{array}} \right)
@@ -400,7 +400,7 @@ Thus ${{\rm{\{ }}\Delta \hat A,\Delta \hat B{\rm{\} }}}$ is Hermitian. Since a H
 
 Solution: Recall the results from Chapter 3.
 
-The Hamiltonian is $\hat H = - {\bf{\mu }} \cdot {\bf{B}} = - {\hat \mu _z}B = \frac{{2{\mu _B}{{\hat S}_z}}}{\hbar }B = {\mu _B}B{\hat \sigma _z}$. Since ${\mu _B}B$ is a constant, the eigenstates of $\hat H$ are those of ${\hat \sigma _z}$, and their eigenvalues are those of ${\hat \sigma _z}$ multiplied by ${\mu _B}B$.
+The Hamiltonian is $\hat H = - {\bf{\mu }} \cdot {\bf{B}} = - {\hat \mu _z}B = {(2{\mu _B}{{\hat S}_z})/\hbar}B = {\mu _B}B{\hat \sigma _z}$. Since ${\mu _B}B$ is a constant, the eigenstates of $\hat H$ are those of ${\hat \sigma _z}$, and their eigenvalues are those of ${\hat \sigma _z}$ multiplied by ${\mu _B}B$.
 
 $$
 \begin{gathered} {E_1} = {\mu _{\text{B}}}B = {{\hbar {\omega _L}} \mathord{\left/ {\vphantom {{\hbar {\omega _L}} 2}} \right. \kern-1.2pt } 2}, \qquad  \qquad  \left\vert  {{E_1}} \right\rangle = \left\vert  U \right\rangle  \\ {E_2} = - {\mu _{\text{B}}}B = {{ - \hbar {\omega _L}} \mathord{\left/ {\vphantom {{ - \hbar {\omega _L}} 2}} \right. \kern-1.2pt } 2}, \qquad  \qquad  \left\vert  {{E_2}} \right\rangle = \left\vert  D \right\rangle  \\ \end{gathered}
@@ -484,7 +484,7 @@ Here $A$ is a normalization constant. What energies are possible, and with what 
 
 Hint: How is this wavefunction related to the well's energy eigenfunctions?
 
-Solution: Expand the wavefunction in energy eigenfunctions: ${u_n}\left( x \right) \propto \sin \left( {\frac{{n\pi x}}{d}} \right),n = 1,2,3 \cdots$.
+Solution: Expand the wavefunction in energy eigenfunctions: ${u_n}\left( x \right) \propto \sin \left( {{(n\pi x)/d}} \right),n = 1,2,3 \cdots$.
 
 $$
 \begin{array}{c} A{\cos ^3}\left( {\frac{{\pi x}}{{2d}}} \right)\sin \left( {\frac{{\pi x}}{{2d}}} \right) = \frac{A}{2}{\cos ^2}\left( {\frac{{\pi x}}{{2d}}} \right)\sin \left( {\frac{{\pi x}}{d}} \right) = \frac{A}{2}\frac{{1 + \cos \left( {\frac{{\pi x}}{d}} \right)}}{2}\sin \left( {\frac{{\pi x}}{d}} \right)\\ = \frac{A}{4}\left[ {\sin \left( {\frac{{\pi x}}{d}} \right) + \frac{1}{2}\sin \left( {\frac{{2\pi x}}{d}} \right)} \right] \propto {u_1}\left( x \right) + \frac{1}{2}{u_2}\left( x \right) \end{array}
@@ -598,9 +598,9 @@ $$ {#eq-ch12-p2656}
 
 It is therefore an eigenstate of ${{\bf{\hat L}}^2}$, with $l = 1$.
 
-2) The possible values of ${\hat L_z}$ are $m\hbar$ and $m = 1, - 1,0$, with probability amplitudes $- \frac{{1 - i}}{2},\;\;\frac{{1 + i}}{2},\;\;\frac{3}{{\sqrt 2 }}$.
+2) The possible values of ${\hat L_z}$ are $m\hbar$ and $m = 1, - 1,0$, with probability amplitudes $- {(1 - i)/2},\;\;{(1 + i)/2},\;\;{3/\sqrt 2}$.
 
-Thus each $m = \pm 1$ has probability $\frac{{{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}}}{{{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}{\rm{ + }}{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}{\rm{ + }}{9 \mathord{\left/ {\vphantom {9 2}} \right. \kern-1.2pt } 2}}} = \frac{1}{{11}}$, while $m = 0$ has probability $\frac{9}{{11}}$.
+Thus each $m = \pm 1$ has probability $(1/2)/(1/2+1/2+9/2) = 1/11$, while $m = 0$ has probability $9/11$.
 
 ## Exercises for Chapter 9
 
@@ -632,7 +632,7 @@ $$ {#eq-ch12-p2671}
 
 The condition $m = {m_1} + {m_2}$ allows us to write
 
-$\vert {0,0}\rangle = {d_1}\left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle + {d_2}\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle ,$, with ${\left\vert  {{d_1}} \right\vert ^2} + {\left\vert  {{d_2}} \right\vert ^2} = 1$.
+$\vert {0,0}\rangle = {d_1}\left\vert  { - {1/2};{1/2}} \right\rangle + {d_2}\left\vert  {{1/2}; - {1/2}} \right\rangle ,$, with ${\left\vert  {{d_1}} \right\vert ^2} + {\left\vert  {{d_2}} \right\vert ^2} = 1$.
 
 Using
 
@@ -640,4 +640,4 @@ $$
 \begin{array}{c} \langle 1,0\vert {0,0}\rangle = 0\\ \Rightarrow \frac{1}{{\sqrt 2 }}{d_1} + \frac{1}{{\sqrt 2 }}{d_2} = 0\\ \Rightarrow {d_1} = - {d_2} = \frac{1}{{\sqrt 2 }} \end{array}
 $$ {#eq-ch12-p2675}
 
-we obtain $\vert {0,0}\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle + \left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle } \right)$.
+we obtain $\vert {0,0}\rangle = {1/\sqrt 2}\left( {\left\vert  { - {1/2};{1/2}} \right\rangle + \left\vert  {{1/2}; - {1/2}} \right\rangle } \right)$.

@@ -723,7 +723,7 @@ $$
 \left[ { - \frac{{{\hbar ^2}}}{{2m}}\frac{{{\partial ^2}}}{{\partial {x^2}}} + V(x)} \right]\psi (x) = E\psi (x)
 $$ {#eq-ch07-p1829}
 
-**Solution.** Outside boundaries $\left( {0,L} \right)$, $V(x) = \infty$, and a solution requires $\psi (x) = 0$. Within $\left( {0,L} \right)$, $V\left( x \right) = 0$ $- \frac{{{\hbar ^2}}}{{2m}}\frac{{{\partial ^2}}}{{\partial {x^2}}}\psi \left( x \right) = E\psi \left( x \right)$.
+**Solution.** Outside boundaries $\left( {0,L} \right)$, $V(x) = \infty$, and a solution requires $\psi (x) = 0$. Within $\left( {0,L} \right)$, $V\left( x \right) = 0$ $- {\hbar ^2/(2m)}{\partial ^2/(\partial {x^2})}\psi \left( x \right) = E\psi \left( x \right)$.
 
 Set $k = {{\sqrt {2mE} } \mathord{\left/ {\vphantom {{\sqrt {2mE} } \hbar }} \right. \kern-1.2pt } \hbar }$ to obtain
 
@@ -787,7 +787,7 @@ The infinite square well has the following features:
 
 - The lowest energy is positive: a confined particle cannot be completely at rest.
 
-- The spacing ${E_{n + 1}} - {E_n} \propto \frac{{2n + 1}}{{{L^2}}}$ increases with energy and becomes larger for a narrower well.
+- The spacing ${E_{n + 1}} - {E_n} \propto {(2n + 1)/L^2}$ increases with energy and becomes larger for a narrower well.
 
 **Example 2: a finite square well.**
 

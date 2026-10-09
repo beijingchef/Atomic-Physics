@@ -144,7 +144,9 @@ This proves the result.
 
 ## Outer products, projection operators, and completeness
 
-We have encountered valid operations such as $c\left\langle \psi \right\vert$, $\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle$, $\hat X\left\vert  \psi \right\rangle$, $\left\langle \psi \right\vert \hat X$, $\hat X\hat Y$, and $\vert \alpha\rangle + \vert \beta\rangle$. Expressions such as $\hat X\left\langle \psi \right\vert$, $\left\vert  \psi \right\rangle \hat X$, or $\vert \alpha\rangle + \langle \beta\vert$ are not valid. For two vectors $\left\vert  \psi \right\rangle$ and $\left\vert  \phi \right\rangle$ in the same vector space, $\left\vert  \psi \right\rangle \left\vert  \phi \right\rangle$ is also not defined.[^f3] What about the following product?
+We have encountered valid operations such as $c\left\langle \psi \right\vert$, $\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle$, $\hat X\left\vert  \psi \right\rangle$, $\left\langle \psi \right\vert \hat X$, $\hat X\hat Y$, and $\vert \alpha\rangle + \vert \beta\rangle$. Expressions such as $\hat X\left\langle \psi \right\vert$, $\left\vert  \psi \right\rangle \hat X$, or $\vert \alpha\rangle + \langle \beta\vert$ are not valid. For two vectors $\left\vert  \psi \right\rangle$ and $\left\vert  \phi \right\rangle$ in the same vector space, $\left\vert  \psi \right\rangle \left\vert  \phi \right\rangle$ is also not defined.[^02-operators-1] What about the following product?
+
+[^02-operators-1]: When $\left\vert  \psi \right\rangle$ and $\left\vert  \phi \right\rangle$ belong to different vector subspaces, $\left\vert  \psi \right\rangle \left\vert  \phi \right\rangle$ denotes a tensor-product state. See Chapter 9.
 
 $$
 \left\vert  \psi \right\rangle \left\langle \phi \right\vert
@@ -402,7 +404,7 @@ The conclusion extends to degenerate Hermitian operators. Chapter 4 discusses ho
 
 ### Representations
 
-A complete basis made from the eigenvectors of a Hermitian operator $\hat A$ defines the **$\hat A$ representation**.
+A complete basis made from the eigenvectors of a Hermitian operator $\hat A$ defines the $\hat A$ representation.
 
 - An arbitrary vector $\left\vert  \psi \right\rangle$ has the following matrix in the $\hat A$ representation:
 
@@ -452,10 +454,8 @@ $$ {#eq-ch02-p0422}
 
 Find the eigenvalues and corresponding eigenstates of $\hat H$.
 
-**2.3*.** A Hermitian operator $\hat A$ has nondegenerate eigenvalues $\left\{ {{a_i}} \right\}$ and eigenstates $\left\{ {\left\vert  {{a_i}} \right\rangle } \right\}$. Find the eigenvalues and eigenstates of ${\hat A^{ - 1}}$.
+\*\*2.3\*.\*\* A Hermitian operator $\hat A$ has nondegenerate eigenvalues $\left\{ {{a_i}} \right\}$ and eigenstates $\left\{ {\left\vert  {{a_i}} \right\rangle } \right\}$. Find the eigenvalues and eigenstates of ${\hat A^{ - 1}}$.
 
 **2.4.** Prove that if $\hat A$ is Hermitian, the eigenvalues of ${\hat A^2}$ are nonnegative.
 
 **2.5.** Prove that $\hat A{\hat A^\dag }$ is Hermitian for any operator $\hat A$.
-
-[^f3]: When $\left\vert  \psi \right\rangle$ and $\left\vert  \phi \right\rangle$ belong to different vector subspaces, $\left\vert  \psi \right\rangle \left\vert  \phi \right\rangle$ denotes a tensor-product state. See Chapter 9.
