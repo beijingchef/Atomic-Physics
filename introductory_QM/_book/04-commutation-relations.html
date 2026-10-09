@@ -369,6 +369,14 @@ window.Quarto = {
 <li><strong>Nondegenerate case.</strong> In Figure 4.1, each dot represents an eigenstate <span class="math inline">\(\vert {{a_j},{b_j}}\rangle\)</span>.</li>
 </ul>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
 <thead>
 <tr class="header">
 <th></th>
@@ -902,17 +910,17 @@ window.Quarto = {
 \tag{4.36}\]</span></span></p>
 <p>By <a href="02-operators.html#eq-zeqnnum917915" class="quarto-xref">Equation&nbsp;<span>2.39</span></a>,</p>
 <p><span id="eq-zeqnnum147961"><span class="math display">\[
-{\hat U^\dag } = \sum\limits_i {\left\vert  {{a_i}} \right\rangle } \left\langle {{b_i}} \right\vert
+{\hat U^\dagger } = \sum\limits_i {\left\vert  {{a_i}} \right\rangle } \left\langle {{b_i}} \right\vert
 \tag{4.37}\]</span></span></p>
 <p>One also verifies</p>
 <p><span id="eq-ch04-p1233"><span class="math display">\[
-{\hat U^\dag }\left\vert  {{b_j}} \right\rangle = \left\vert  {{a_j}} \right\rangle
+{\hat U^\dagger }\left\vert  {{b_j}} \right\rangle = \left\vert  {{a_j}} \right\rangle
 \tag{4.38}\]</span></span></p>
-<p>Thus <span class="math inline">\({\hat U^\dag }\)</span> transforms the representation <span class="math inline">\(\hat B \to \hat A\)</span>. Combining <a href="#eq-zeqnnum306910" class="quarto-xref">Equation&nbsp;<span>4.36</span></a> and <a href="#eq-zeqnnum147961" class="quarto-xref">Equation&nbsp;<span>4.37</span></a> gives</p>
+<p>Thus <span class="math inline">\({\hat U^\dagger }\)</span> transforms the representation <span class="math inline">\(\hat B \to \hat A\)</span>. Combining <a href="#eq-zeqnnum306910" class="quarto-xref">Equation&nbsp;<span>4.36</span></a> and <a href="#eq-zeqnnum147961" class="quarto-xref">Equation&nbsp;<span>4.37</span></a> gives</p>
 <p><span id="eq-ch04-p1235"><span class="math display">\[
-\hat U{\hat U^\dag } = {\hat U^\dag }\hat U = \hat I
+\hat U{\hat U^\dagger } = {\hat U^\dagger }\hat U = \hat I
 \tag{4.39}\]</span></span></p>
-<p>Hence <span class="math inline">\({\hat U^\dag }\)</span> is the inverse of <span class="math inline">\(\hat U\)</span>. A change of orthonormal basis is unitary and preserves inner products, as expected because their physical significance cannot depend on the calculation basis.</p>
+<p>Hence <span class="math inline">\({\hat U^\dagger }\)</span> is the inverse of <span class="math inline">\(\hat U\)</span>. A change of orthonormal basis is unitary and preserves inner products, as expected because their physical significance cannot depend on the calculation basis.</p>
 <p>The matrix elements of transformation operator <span class="math inline">\(\hat U\)</span> in the <span class="math inline">\(\hat A\)</span> representation are</p>
 <p><span id="eq-ch04-p1238"><span class="math display">\[
 \langle {{a_l}}\vert {\hat U}\vert {{a_m}}\rangle = \sum\limits_i {\left\langle {{a_l}} \right.\left\vert  {{b_i}} \right\rangle \left\langle {{a_i}} \right\vert } \left. {{a_m}} \right\rangle = \sum\limits_i {\left\langle {{a_l}} \right.\left\vert  {{b_i}} \right\rangle {\delta _{im}}} = \left\langle {{a_l}} \right.\left\vert  {{b_m}} \right\rangle
@@ -925,13 +933,13 @@ window.Quarto = {
 <p><span id="eq-zeqnnum504142"><span class="math display">\[
 \hat U \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {{{a_1}}} \mathrel{\left \vert  {\vphantom {{{a_1}} {{b_1}}}} \right. \kern-1.2pt } {{{b_1}}} \right\rangle }&amp;{\left\langle {{{a_1}}} \mathrel{\left \vert  {\vphantom {{{a_1}} {{b_2}}}} \right. \kern-1.2pt } {{{b_2}}} \right\rangle }&amp; \cdots \\ {\left\langle {{{a_2}}} \mathrel{\left \vert  {\vphantom {{{a_2}} {{b_1}}}} \right. \kern-1.2pt } {{{b_1}}} \right\rangle }&amp;{\left\langle {{{a_2}}} \mathrel{\left \vert  {\vphantom {{{a_2}} {{b_2}}}} \right. \kern-1.2pt } {{{b_2}}} \right\rangle }&amp; \cdots \\ \vdots &amp; \vdots &amp; \ddots \end{array}} \right)
 \tag{4.42}\]</span></span></p>
-<p>Likewise, the inverse <span class="math inline">\({\hat U^\dag }\)</span> has the same matrix in both:</p>
+<p>Likewise, the inverse <span class="math inline">\({\hat U^\dagger }\)</span> has the same matrix in both:</p>
 <p><span id="eq-zeqnnum682052"><span class="math display">\[
-\hat U_{ij}^\dag = {\left( {{{\hat U}_{ji}}} \right)^*} = \left\langle {{{b_i}}} \mathrel{\left \vert  {\vphantom {{{b_i}} {{a_j}}}} \right. \kern-1.2pt } {{{a_j}}} \right\rangle
+\hat U_{ij}^\dagger = {\left( {{{\hat U}_{ji}}} \right)^*} = \left\langle {{{b_i}}} \mathrel{\left \vert  {\vphantom {{{b_i}} {{a_j}}}} \right. \kern-1.2pt } {{{a_j}}} \right\rangle
 \tag{4.43}\]</span></span></p>
 <p>For any vector <span class="math inline">\(\left\vert  \psi \right\rangle\)</span>,</p>
 <p><span id="eq-ch04-p1246"><span class="math display">\[
-\left\langle {{{b_i}}} \mathrel{\left \vert  {\vphantom {{{b_i}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \sum\limits_j {\left\langle {{{b_i}}} \mathrel{\left \vert  {\vphantom {{{b_i}} {{a_j}}}} \right. \kern-1.2pt } {{{a_j}}} \right\rangle } \left\langle {{{a_j}}} \mathrel{\left \vert  {\vphantom {{{a_j}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \sum\limits_j {\left\langle {{a_i}} \right\vert {{\hat U}^\dag }\left\vert  {{a_j}} \right\rangle } \left\langle {{{a_j}}} \mathrel{\left \vert  {\vphantom {{{a_j}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle
+\left\langle {{{b_i}}} \mathrel{\left \vert  {\vphantom {{{b_i}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \sum\limits_j {\left\langle {{{b_i}}} \mathrel{\left \vert  {\vphantom {{{b_i}} {{a_j}}}} \right. \kern-1.2pt } {{{a_j}}} \right\rangle } \left\langle {{{a_j}}} \mathrel{\left \vert  {\vphantom {{{a_j}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \sum\limits_j {\left\langle {{a_i}} \right\vert {{\hat U}^\dagger }\left\vert  {{a_j}} \right\rangle } \left\langle {{{a_j}}} \mathrel{\left \vert  {\vphantom {{{a_j}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle
 \tag{4.44}\]</span></span></p>
 <p>Therefore,</p>
 <p><span id="eq-ch04-p1248"><span class="math display">\[
@@ -939,15 +947,15 @@ window.Quarto = {
 \tag{4.45}\]</span></span></p>
 <p>The left side is the column of <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> in the <span class="math inline">\(\hat B\)</span> representation. The right side is the inverse transformation matrix times the column of <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> in the <span class="math inline">\(\hat A\)</span> representation. Thus,</p>
 <p><span id="eq-zeqnnum557165"><span class="math display">\[
-{\left\vert  \psi \right\rangle _B} = {\hat U^\dag }{\left\vert  \psi \right\rangle _A}
+{\left\vert  \psi \right\rangle _B} = {\hat U^\dagger }{\left\vert  \psi \right\rangle _A}
 \tag{4.46}\]</span></span></p>
 <p>For an operator, the corresponding transformation is</p>
 <p><span id="eq-zeqnnum132759"><span class="math display">\[
-\begin{array}{c} \left\langle {{b_i}} \right\vert \hat X\left\vert  {{b_j}} \right\rangle = \sum\limits_{l,m} {\left\langle {{{b_i}}} \mathrel{\left \vert  {\vphantom {{{b_i}} {{a_l}}}} \right. \kern-1.2pt } {{{a_l}}} \right\rangle } \left\langle {{a_l}} \right\vert \hat X\left\vert  {{a_m}} \right\rangle \left\langle {{{a_m}}} \mathrel{\left \vert  {\vphantom {{{a_m}} {{b_j}}}} \right. \kern-1.2pt } {{{b_j}}} \right\rangle \\ = \sum\limits_{l,m} {\left\langle {{a_i}} \right\vert {{\hat U}^\dag }\left\vert  {{a_l}} \right\rangle } \left\langle {{a_l}} \right\vert \hat X\left\vert  {{a_m}} \right\rangle \left\langle {{a_m}} \right\vert \hat U\left\vert  {{a_j}} \right\rangle \end{array}
+\begin{array}{c} \left\langle {{b_i}} \right\vert \hat X\left\vert  {{b_j}} \right\rangle = \sum\limits_{l,m} {\left\langle {{{b_i}}} \mathrel{\left \vert  {\vphantom {{{b_i}} {{a_l}}}} \right. \kern-1.2pt } {{{a_l}}} \right\rangle } \left\langle {{a_l}} \right\vert \hat X\left\vert  {{a_m}} \right\rangle \left\langle {{{a_m}}} \mathrel{\left \vert  {\vphantom {{{a_m}} {{b_j}}}} \right. \kern-1.2pt } {{{b_j}}} \right\rangle \\ = \sum\limits_{l,m} {\left\langle {{a_i}} \right\vert {{\hat U}^\dagger }\left\vert  {{a_l}} \right\rangle } \left\langle {{a_l}} \right\vert \hat X\left\vert  {{a_m}} \right\rangle \left\langle {{a_m}} \right\vert \hat U\left\vert  {{a_j}} \right\rangle \end{array}
 \tag{4.47}\]</span></span></p>
-<p>The left side is the matrix of <span class="math inline">\(\hat X\)</span> in the <span class="math inline">\(\hat B\)</span> representation; the three factors on the right are the matrices of <span class="math inline">\({\hat U^\dag },\hat X,\hat U\)</span> in the <span class="math inline">\(\hat A\)</span> representation. Hence</p>
+<p>The left side is the matrix of <span class="math inline">\(\hat X\)</span> in the <span class="math inline">\(\hat B\)</span> representation; the three factors on the right are the matrices of <span class="math inline">\({\hat U^\dagger },\hat X,\hat U\)</span> in the <span class="math inline">\(\hat A\)</span> representation. Hence</p>
 <p><span id="eq-zeqnnum834377"><span class="math display">\[
-{\hat X_B} = {\hat U^\dag }{\hat X_A}\hat U
+{\hat X_B} = {\hat U^\dagger }{\hat X_A}\hat U
 \tag{4.48}\]</span></span></p>
 <p>This is a similarity transformation of matrices.</p>
 <p><strong>Example.</strong> Find the matrix of <span class="math inline">\({\hat \sigma _x},{\hat \sigma _y},{\hat \sigma _z}\)</span> in the <span class="math inline">\({\hat \sigma _x}\)</span> representation.</p>
@@ -955,9 +963,9 @@ window.Quarto = {
 <p><span id="eq-ch04-p1258"><span class="math display">\[
 \hat U \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {U} \mathrel{\left \vert  {\vphantom {U R}} \right. \kern-1.2pt } {R} \right\rangle }&amp;{\left\langle {U} \mathrel{\left \vert  {\vphantom {U L}} \right. \kern-1.2pt } {L} \right\rangle }\\ {\left\langle {D} \mathrel{\left \vert  {\vphantom {D R}} \right. \kern-1.2pt } {R} \right\rangle }&amp;{\left\langle {D} \mathrel{\left \vert  {\vphantom {D L}} \right. \kern-1.2pt } {L} \right\rangle } \end{array}} \right) = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ 1&amp;{ - 1} \end{array}} \right)
 \tag{4.49}\]</span></span></p>
-<p>By <a href="#eq-zeqnnum682052" class="quarto-xref">Equation&nbsp;<span>4.43</span></a>, its inverse <span class="math inline">\({\hat U^\dag }\)</span> has matrix</p>
+<p>By <a href="#eq-zeqnnum682052" class="quarto-xref">Equation&nbsp;<span>4.43</span></a>, its inverse <span class="math inline">\({\hat U^\dagger }\)</span> has matrix</p>
 <p><span id="eq-ch04-p1260"><span class="math display">\[
-{\hat U^\dag } \buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ 1&amp;{ - 1} \end{array}} \right)
+{\hat U^\dagger } \buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ 1&amp;{ - 1} \end{array}} \right)
 \tag{4.50}\]</span></span></p>
 <p>Using <a href="#eq-zeqnnum834377" class="quarto-xref">Equation&nbsp;<span>4.48</span></a>, in the <span class="math inline">\({\hat \sigma _x}\)</span> representation we obtain</p>
 <p><span id="eq-ch04-p1262"><span class="math display">\[
@@ -969,7 +977,7 @@ window.Quarto = {
 \tag{4.52}\]</span></span></p>
 <p><strong>Proof.</strong> Use <a href="#eq-zeqnnum834377" class="quarto-xref">Equation&nbsp;<span>4.48</span></a> and the trace identity <span class="math inline">\({\rm{Tr}}\left( {AB} \right) = {\rm{Tr}}\left( {BA} \right)\)</span>.</p>
 <p><span id="eq-ch04-p1266"><span class="math display">\[
-{\text{Tr}}\left( {{{\hat X}_\text{new}}} \right) = {\text{Tr}}\;\left( {{{\hat U}^\dag }{{\hat X}_\text{old}}\hat U} \right) = {\text{Tr}}\;\left( {\hat U{{\hat U}^\dag }{{\hat X}_\text{old}}} \right) = {\text{Tr}}\left( {{{\hat X}_\text{old}}} \right)
+{\text{Tr}}\left( {{{\hat X}_\text{new}}} \right) = {\text{Tr}}\;\left( {{{\hat U}^\dagger }{{\hat X}_\text{old}}\hat U} \right) = {\text{Tr}}\;\left( {\hat U{{\hat U}^\dagger }{{\hat X}_\text{old}}} \right) = {\text{Tr}}\left( {{{\hat X}_\text{old}}} \right)
 \tag{4.53}\]</span></span></p>
 <p>The trace is therefore representation-independent. In its own eigenbasis, <a href="02-operators.html#eq-zeqnnum449673" class="quarto-xref">Equation&nbsp;<span>2.56</span></a>, the operator is diagonal, with each eigenvalue of degeneracy <span class="math inline">\(n\)</span> appearing <span class="math inline">\(n\)</span> times. Thus the trace in any basis is the eigenvalue sum, counting degeneracy <span class="math inline">\(n\)</span> with multiplicity <span class="math inline">\(n\)</span>.</p>
 </section>
@@ -984,13 +992,13 @@ window.Quarto = {
 <section id="summary-of-changes-of-representation" class="level3" data-number="4.5.3">
 <h3 data-number="4.5.3" class="anchored" data-anchor-id="summary-of-changes-of-representation"><span class="header-section-number">4.5.3</span> Summary of changes of representation</h3>
 <p>Define the transformation operator <span class="math inline">\(\hat U\)</span> for <span class="math inline">\(\hat A \to \hat B\)</span> by <span class="math inline">\(\left\vert  {{b_j}} \right\rangle = \hat U\left\vert  {{a_j}} \right\rangle\)</span>.</p>
-<p>Then <span class="math inline">\({\hat U^\dag }\)</span> transforms <span class="math inline">\(\hat B \to \hat A\)</span>: <span class="math inline">\(\left\vert  {{a_j}} \right\rangle = {\hat U^\dag }\left\vert  {{b_j}} \right\rangle\)</span>.</p>
-<p>The transformation operator is unitary: <span class="math inline">\(\hat U{\hat U^\dag } = {\hat U^\dag }\hat U = \hat I\)</span>.</p>
-<p>Vector representations are related by <span class="math inline">\({\left\vert  \psi \right\rangle _B} = {\hat U^\dag }{\left\vert  \psi \right\rangle _A}\)</span>.</p>
-<p>Operator representations are related by <span class="math inline">\({\hat X_B} = {\hat U^\dag }{\hat X_A}\hat U\)</span>.</p>
-<p>The matrices of <span class="math inline">\(\hat U\)</span> and <span class="math inline">\({\hat U^\dag }\)</span> are representation-independent.</p>
+<p>Then <span class="math inline">\({\hat U^\dagger }\)</span> transforms <span class="math inline">\(\hat B \to \hat A\)</span>: <span class="math inline">\(\left\vert  {{a_j}} \right\rangle = {\hat U^\dagger }\left\vert  {{b_j}} \right\rangle\)</span>.</p>
+<p>The transformation operator is unitary: <span class="math inline">\(\hat U{\hat U^\dagger } = {\hat U^\dagger }\hat U = \hat I\)</span>.</p>
+<p>Vector representations are related by <span class="math inline">\({\left\vert  \psi \right\rangle _B} = {\hat U^\dagger }{\left\vert  \psi \right\rangle _A}\)</span>.</p>
+<p>Operator representations are related by <span class="math inline">\({\hat X_B} = {\hat U^\dagger }{\hat X_A}\hat U\)</span>.</p>
+<p>The matrices of <span class="math inline">\(\hat U\)</span> and <span class="math inline">\({\hat U^\dagger }\)</span> are representation-independent.</p>
 <p><span id="eq-ch04-p1279"><span class="math display">\[
-\begin{array}{l} \langle {{a_l}}\vert {\hat U}\vert {{a_m}}\rangle = \langle {{b_l}}\vert {\hat U}\vert {{b_m}}\rangle = \langle {{a_l}}\vert {{b_m}}\rangle \\ \langle {{a_l}}\vert {{{\hat U}^\dag }}\vert {{a_m}}\rangle = \langle {{b_l}}\vert {{\hat U}^\dag }\vert {{b_m}}\rangle = \langle {b_l}\vert {{a_m}}\rangle \end{array}
+\begin{array}{l} \langle {{a_l}}\vert {\hat U}\vert {{a_m}}\rangle = \langle {{b_l}}\vert {\hat U}\vert {{b_m}}\rangle = \langle {{a_l}}\vert {{b_m}}\rangle \\ \langle {{a_l}}\vert {{{\hat U}^\dagger }}\vert {{a_m}}\rangle = \langle {{b_l}}\vert {{\hat U}^\dagger }\vert {{b_m}}\rangle = \langle {b_l}\vert {{a_m}}\rangle \end{array}
 \tag{4.55}\]</span></span></p>
 </section>
 </section>
@@ -1004,7 +1012,7 @@ window.Quarto = {
 \hat X\hat Y = \frac{1}{2}[\hat X,\hat Y] + \frac{1}{2}{\rm{\{ }}\hat X,\hat Y{\rm{\} }}
 \tag{4.56}\]</span></span></p>
 <p>Let <span class="math inline">\(\hat A,\hat B\)</span> be Hermitian operators.</p>
-<p>One readily proves <span class="math inline">\({[\hat A,\hat B]^\dag } = - [\hat A,\hat B], \qquad  \qquad  {\{ \hat A,\hat B\} ^\dag } = \{ \hat A,\hat B\}\)</span>.</p>
+<p>One readily proves <span class="math inline">\({[\hat A,\hat B]^\dagger } = - [\hat A,\hat B], \qquad  \qquad  {\{ \hat A,\hat B\} ^\dagger } = \{ \hat A,\hat B\}\)</span>.</p>
 <p>Consequently,</p>
 <p><span id="eq-zeqnnum864955"><span class="math display">\[
 \langle [\hat A,\hat B]\rangle \text{ is purely imaginary}, \qquad  \langle \{ \hat A,\hat B\} \rangle \text{ is real}
@@ -1054,7 +1062,7 @@ window.Quarto = {
 <p><span id="eq-ch04-p1312"><span class="math display">\[
 \left[ {{{{\bf{\hat S}}}^2},{{\hat S}_z}} \right] = 0, \qquad  \left[ {\hat S_x^2,\hat S_y^2} \right] = 0
 \tag{4.66}\]</span></span></p>
-<p><strong>4.4.</strong> Prove that the mean of an anti-Hermitian operator, <span class="math inline">\({\hat C^\dag } = - \hat C\)</span>, is purely imaginary.</p>
+<p><strong>4.4.</strong> Prove that the mean of an anti-Hermitian operator, <span class="math inline">\({\hat C^\dagger } = - \hat C\)</span>, is purely imaginary.</p>
 <p><strong>4.5.</strong> Write the matrix of <span class="math inline">\(\left\vert  R \right\rangle ,\left\vert  L \right\rangle ,{\hat \sigma _x}\)</span> in the <span class="math inline">\({\hat \sigma _{\rm{y}}}\)</span> representation.</p>
 <p>**4.6*.** Let <span class="math inline">\(\langle {\hat X}\rangle\)</span> be the expectation value of <span class="math inline">\(\hat X\)</span> in an arbitrary state, with <span class="math inline">\(\Delta \hat X \equiv \hat X - \langle \hat X\rangle = \hat X - \langle \hat X\rangle \hat I\)</span>. If <span class="math inline">\(\hat A,\hat B\)</span> are Hermitian, prove:</p>
 <ul>

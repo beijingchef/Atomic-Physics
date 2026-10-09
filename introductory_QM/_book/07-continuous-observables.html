@@ -581,7 +581,7 @@ V(\hat X,\hat Y,\hat Z) = V(x,y,z)
 <li>Physical laws are unchanged by translation. In particular, <span class="math inline">\(\hat \Gamma \left( {\Delta x} \right)\)</span> preserves inner products: for vectors <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> and <span class="math inline">\(\left\vert  \phi \right\rangle\)</span>, if <span class="math inline">\(\hat \Gamma \left( {\Delta x} \right)\left\vert  \psi \right\rangle = \left\vert  {\psi '} \right\rangle , \qquad  \hat \Gamma \left( {\Delta x} \right)\left\vert  \phi \right\rangle = \left\vert  {\phi '} \right\rangle\)</span>, then</li>
 </ul>
 <p><span id="eq-ch07-p1705"><span class="math display">\[
-\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \left\langle {{\phi '}} \mathrel{\left \vert  {\vphantom {{\phi '} {\psi '}}} \right. \kern-1.2pt } {{\psi '}} \right\rangle = \left\langle \phi \right\vert {\hat \Gamma ^\dag }\left( {\Delta x} \right)\hat \Gamma \left( {\Delta x} \right)\left\vert  \psi \right\rangle
+\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \left\langle {{\phi '}} \mathrel{\left \vert  {\vphantom {{\phi '} {\psi '}}} \right. \kern-1.2pt } {{\psi '}} \right\rangle = \left\langle \phi \right\vert {\hat \Gamma ^\dagger }\left( {\Delta x} \right)\hat \Gamma \left( {\Delta x} \right)\left\vert  \psi \right\rangle
 \tag{7.50}\]</span></span></p>
 <p>Consequently,</p>
 <p><span id="eq-ch07-p1707"><span class="math display">\[
@@ -589,13 +589,13 @@ V(\hat X,\hat Y,\hat Z) = V(x,y,z)
 \tag{7.51}\]</span></span></p>
 <p>Thus <span class="math inline">\(\hat \Gamma \left( {\Delta x} \right)\)</span> is unitary, and spatial translation is a unitary transformation.</p>
 <p><span id="eq-zeqnnum441973"><span class="math display">\[
-{\hat \Gamma ^\dag }\left( {\Delta x} \right) = \hat \Gamma \left( { - \Delta x} \right)
+{\hat \Gamma ^\dagger }\left( {\Delta x} \right) = \hat \Gamma \left( { - \Delta x} \right)
 \tag{7.52}\]</span></span></p>
 <p>These requirements suggest the form <span class="math inline">\(\hat \Gamma \left( {\Delta x} \right)\)</span>:</p>
 <p><span id="eq-zeqnnum676559"><span class="math display">\[
 \hat \Gamma \left( {\Delta x} \right) = \hat I - i\hat K\Delta x
 \tag{7.53}\]</span></span></p>
-<p>The first two requirements are satisfied. The third requires <span class="math inline">\({\hat K^\dag } = \hat K\)</span>.</p>
+<p>The first two requirements are satisfied. The third requires <span class="math inline">\({\hat K^\dagger } = \hat K\)</span>.</p>
 <p>Hence <span class="math inline">\(\hat K\)</span> is Hermitian and corresponds to an observable. From <a href="#eq-zeqnnum676559" class="quarto-xref">Equation&nbsp;<span>7.53</span></a>, <span class="math inline">\(\hat K\)</span> has inverse-length dimensions, like wave number <span class="math inline">\(k \equiv {{2\pi } \mathord{\left/ {\vphantom {{2\pi } \lambda }} \right. \kern-1.2pt } \lambda }\)</span>. The de Broglie relation <span class="math inline">\(p = {h \mathord{\left/ {\vphantom {h \lambda }} \right. \kern-1.2pt } \lambda }\)</span>, or <span class="math inline">\(k = {p \mathord{\left/ {\vphantom {p \hbar }} \right. \kern-1.2pt } \hbar }\)</span>, suggests</p>
 <p><span id="eq-zeqnnum551095"><span class="math display">\[
 \hat K = {{\hat P} \mathord{\left/ {\vphantom {{\hat P} \hbar }} \right. \kern-1.2pt } \hbar }
@@ -605,7 +605,7 @@ V(\hat X,\hat Y,\hat Z) = V(x,y,z)
 \hat \Gamma \left( {\Delta x} \right) = \hat I - i\frac{{\hat P}}{\hbar }\Delta x
 \tag{7.55}\]</span></span></p>
 <p>Experiment confirms this identification: momentum is the <strong>generator of spatial translations</strong>.</p>
-<p>From <a href="#eq-zeqnnum441973" class="quarto-xref">Equation&nbsp;<span>7.52</span></a>, <span class="math inline">\({\hat \Gamma ^\dag }(\Delta x)\vert x\rangle = \vert x - \Delta x\rangle\)</span>, and therefore</p>
+<p>From <a href="#eq-zeqnnum441973" class="quarto-xref">Equation&nbsp;<span>7.52</span></a>, <span class="math inline">\({\hat \Gamma ^\dagger }(\Delta x)\vert x\rangle = \vert x - \Delta x\rangle\)</span>, and therefore</p>
 <p><span id="eq-ch07-p1719"><span class="math display">\[
 \langle x\vert \hat \Gamma (\Delta x) = \langle x - \Delta x\vert
 \tag{7.56}\]</span></span></p>
@@ -798,7 +798,7 @@ V(\hat X,\hat Y,\hat Z) = V(x,y,z)
 <li><strong>Bra space</strong></li>
 </ul>
 <p><span id="eq-ch07-p1805"><span class="math display">\[
-\langle \phi \vert \hat O\xrightarrow{{\text{position representation}}}\langle \phi \vert \hat O\vert {\mathbf{r}}\rangle = {\langle {\mathbf{r}}\vert {\hat O^\dag }\vert \phi \rangle ^*} = {[\hat O_{}^\dag \phi ({\mathbf{r}})]^{\text{*}}}
+\langle \phi \vert \hat O\xrightarrow{{\text{position representation}}}\langle \phi \vert \hat O\vert {\mathbf{r}}\rangle = {\langle {\mathbf{r}}\vert {\hat O^\dagger }\vert \phi \rangle ^*} = {[\hat O_{}^\dagger \phi ({\mathbf{r}})]^{\text{*}}}
 \tag{7.94}\]</span></span></p>
 <p>For a Hermitian observable <span class="math inline">\(\hat A\)</span>,</p>
 <p><span id="eq-ch07-p1807"><span class="math display">\[

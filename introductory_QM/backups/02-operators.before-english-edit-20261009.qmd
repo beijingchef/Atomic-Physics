@@ -1,10 +1,10 @@
 # Operators
 
-Quantum states are represented by complex linear vectors. We now discuss the mathematical counterparts of dynamical quantities, which Heisenberg called **observables**: position, momentum, angular momentum, energy, and the SG quantity ${\bf{\sigma }} \cdot {\bf{n}}$, for example. An observable is represented by a **linear operator** on the vector space.
+Quantum states are represented by complex linear vectors. We now discuss the mathematical counterparts of dynamical quantities or **observables** such as position, momentum, angular momentum, ${\bf{\sigma }} \cdot {\bf{n}}$, etc. An observable is represented by a **linear operator** on the vector space.
 
 ## Linear operators
 
-An operator transforms one vector into another. We usually place a hat over its symbol to distinguish it from an ordinary variable. The action of an operator $\hat O$ on a ket is written
+An operator is a machine that transforms one vector into another. We usually place a hat over its symbol to distinguish it from an ordinary variable. The action of an operator $\hat O$ transforming $|\psi\rangle$ to $|\phi\rangle$ is written as
 
 $$
 \hat O\left\vert  \psi \right\rangle = \left\vert  \phi \right\rangle
@@ -52,15 +52,7 @@ $$
 {\hat X^n} \equiv \underbrace {\hat X\hat X \cdots \hat X}_{n\text{ terms}}
 $$ {#eq-ch02-p0274}
 
-Linear operators must also obey the following rules:
-
-$$
-\begin{gathered} \hat X\left( {c\left\vert  \psi \right\rangle } \right) = c\hat X\left\vert  \psi \right\rangle , \\ \hat X\left( {\left\vert  {{\psi _\alpha }} \right\rangle + \left\vert  {{\psi _\beta }} \right\rangle } \right) = \hat X\left\vert  {{\psi _\alpha }} \right\rangle + \hat X\left\vert  {{\psi _\beta }} \right\rangle , \\ \left( {\hat X + \hat Y} \right)\left\vert  \psi \right\rangle = \hat X\left\vert  \psi \right\rangle + \hat Y\left\vert  \psi \right\rangle \\ \hat X + \hat Y = \hat Y + \hat X, \\ \hat X + (\hat Y + \hat Z) = (\hat X + \hat Y) + \hat Z \\ \end{gathered}
-$$ {#eq-zeqnnum324323}
-
-Operator multiplication is associative:
-
-$$
+Operator multiplication is associative: $$
 \hat X\left( {\hat Y\hat Z} \right) = \left( {\hat X\hat Y} \right)\hat Z = \hat X\hat Y\hat Z
 $$ {#eq-ch02-p0278}
 
@@ -70,6 +62,12 @@ $$
 \hat I\hat X = \hat X\hat I = \hat X
 $$ {#eq-ch02-p0280}
 
+Linear operators must also obey the following rules:
+
+$$
+\begin{gathered} \hat X\left( {c\left\vert  \psi \right\rangle } \right) = c\hat X\left\vert  \psi \right\rangle , \\ \hat X\left( {\left\vert  {{\psi _\alpha }} \right\rangle + \left\vert  {{\psi _\beta }} \right\rangle } \right) = \hat X\left\vert  {{\psi _\alpha }} \right\rangle + \hat X\left\vert  {{\psi _\beta }} \right\rangle , \\ \left( {\hat X + \hat Y} \right)\left\vert  \psi \right\rangle = \hat X\left\vert  \psi \right\rangle + \hat Y\left\vert  \psi \right\rangle \\ \hat X + \hat Y = \hat Y + \hat X, \\ \hat X + (\hat Y + \hat Z) = (\hat X + \hat Y) + \hat Z \\ \end{gathered}
+$$ {#eq-zeqnnum324323}
+
 The third property in @eq-zeqnnum324323, together with the properties of the inner product, gives
 
 $$
@@ -78,7 +76,7 @@ $$ {#eq-ch02-p0282}
 
 ## Matrix representations of operators
 
-A vector has an expansion in a complete basis, @eq-zeqnnum935342, and an operator has a corresponding basis representation. Let $\left\{ {\left\vert  1 \right\rangle ,\left\vert  2 \right\rangle ...\left\vert  N \right\rangle } \right\}$ be a basis, and suppose $\hat M$ maps $\left\vert  \psi \right\rangle$ to $\left\vert  \phi \right\rangle$:
+A vector has an expansion in a complete basis, @eq-zeqnnum935342, and an operator has a corresponding basis representation. Let $\left\{ {\left\vert  1 \right\rangle ,\left\vert  2 \right\rangle ...\left\vert  N \right\rangle } \right\}$ be a basis, and suppose
 
 $$
 \hat M\left\vert  \psi \right\rangle = \left\vert  \phi \right\rangle

@@ -292,7 +292,7 @@ window.Quarto = {
 \tag{5.5}\]</span></span></p>
 <p><strong>Third:</strong> probability is conserved, <span class="math inline">\(\langle {\psi (t)}\vert {\psi (t)}\rangle = \langle {\psi (0)}\vert {\psi (0)}\rangle\)</span>, so</p>
 <p><span id="eq-ch05-p1339"><span class="math display">\[
-{\hat U^\dag }\left( t \right)\hat U\left( t \right) = \hat I
+{\hat U^\dagger }\left( t \right)\hat U\left( t \right) = \hat I
 \tag{5.6}\]</span></span></p>
 <p>Thus <span class="math inline">\(\hat U\)</span> is unitary: time evolution is a unitary transformation.</p>
 <p>These requirements suggest an infinitesimal evolution operator <span class="math inline">\(\hat U(dt)\)</span>:</p>
@@ -304,15 +304,15 @@ window.Quarto = {
 \tag{5.8}\]</span></span></p>
 <p>Neglecting higher-order terms in <span class="math inline">\(dt\)</span>, <span class="math inline">\(\hat U(dt)\)</span> satisfies the first two requirements. The third gives</p>
 <p><span id="eq-ch05-p1345"><span class="math display">\[
-\left( {\hat I{\rm{ + }}i{{\hat \Omega }^\dag }dt} \right)\left( {\hat I - i\hat \Omega dt} \right) = I
+\left( {\hat I{\rm{ + }}i{{\hat \Omega }^\dagger }dt} \right)\left( {\hat I - i\hat \Omega dt} \right) = I
 \tag{5.9}\]</span></span></p>
 <p>Expanding and neglecting higher-order terms in <span class="math inline">\(dt\)</span>,</p>
 <p><span id="eq-ch05-p1347"><span class="math display">\[
-\hat I{\rm{ + }}idt\hat I\left( {{{\hat \Omega }^\dag } - \hat \Omega } \right) = \hat I
+\hat I{\rm{ + }}idt\hat I\left( {{{\hat \Omega }^\dagger } - \hat \Omega } \right) = \hat I
 \tag{5.10}\]</span></span></p>
 <p>Hence</p>
 <p><span id="eq-ch05-p1349"><span class="math display">\[
-\hat \Omega = {\hat \Omega ^\dag }
+\hat \Omega = {\hat \Omega ^\dagger }
 \tag{5.11}\]</span></span></p>
 <p>Thus <span class="math inline">\(\hat \Omega\)</span> must be Hermitian, suggesting an observable. Equation <a href="#eq-zeqnnum759354" class="quarto-xref">Equation&nbsp;<span>5.8</span></a> shows that <span class="math inline">\(\hat \Omega\)</span> has frequency dimensions. Classical frequency describes a rate of variation rather than a fundamental dynamical observable. Planck’s frequency–energy relation, however, gives</p>
 <p><span id="eq-ch05-p1351"><span class="math display">\[
@@ -390,7 +390,7 @@ i\hbar \frac{\partial }{{\partial t}}\left\langle {{{E_j}}} \mathrel{\left \vert
 \tag{5.26}\]</span></span></p>
 <p>Without the final time-dependent phase in each summand, this is the expectation of <span class="math inline">\(\hat A\)</span> in initial state <span class="math inline">\(\vert {\psi (0)}\rangle\)</span>. If the initial state contains components <span class="math inline">\(\vert {E_j}\rangle\)</span> and <span class="math inline">\(\vert {E_k}\rangle\)</span> of different energies, with <span class="math inline">\(\left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi (0)}}} \right. \kern-1.2pt } {{\psi (0)}} \right\rangle\)</span> and <span class="math inline">\(\left\langle {{{E_k}}} \mathrel{\left \vert  {\vphantom {{{E_k}} {\psi (0)}}} \right. \kern-1.2pt } {{\psi (0)}} \right\rangle\)</span> both nonzero, and <span class="math inline">\(\hat A\)</span> has nonzero matrix element <span class="math inline">\({A_{jk}} \equiv \left\langle {{E_j}} \right\vert \hat A\left\vert  {{E_k}} \right\rangle \ne 0\)</span> between them, the mean of <span class="math inline">\(\hat A\)</span> contains an oscillation at frequency <span class="math inline">\({\omega _{jk}} \equiv {{({E_j} - {E_k})} \mathord{\left/ {\vphantom {{({E_j} - {E_k})} \hbar }} \right. \kern-1.2pt } \hbar }\)</span>. This offers a qualitative picture of atomic radiation: take <span class="math inline">\(\hat A\)</span> to be electron position. If a perturbation mixes energy state <span class="math inline">\(\vert {E_k}\rangle\)</span> into an initial eigenstate <span class="math inline">\(\vert {E_j}\rangle\)</span>, the mean position oscillates at <span class="math inline">\({\omega _{jk}}\)</span>, suggesting radiation at that frequency during a transition. Heisenberg arrived at <a href="#eq-zeqnnum188299" class="quarto-xref">Equation&nbsp;<span>5.26</span></a> while studying transitions and built matrix mechanics around this insight. The matrix form of <a href="#eq-zeqnnum188299" class="quarto-xref">Equation&nbsp;<span>5.26</span></a> is</p>
 <p><span id="eq-ch05-p1389"><span class="math display">\[
-\left\langle {\psi (t)} \right\vert \hat A\left\vert  {\psi (t)} \right\rangle \buildrel\textstyle.\over= {\left( {\begin{array}{*{20}{c}} {\langle 1\vert {\psi (0)}\rangle }\\ {\langle 2\vert {\psi (0)}\rangle }\\ \vdots \\ \vdots \end{array}} \right)^\dag }\left( {\begin{array}{*{20}{l}} {{A_{11}}}&amp;{{A_{12}}{e^{i{\omega _{12}}t}}}&amp;{{A_{13}}{e^{{\omega _{13}}t}}}&amp; \cdots \\ {{A_{21}}{e^{i{\omega _{21}}t}}}&amp;{{A_{22}}}&amp;{{A_{23}}{e^{{\omega _{23}}t}}}&amp; \cdots \\ {{A_{31}}{e^{i{\omega _{31}}t}}}&amp;{{A_{32}}{e^{{\omega _{32}}t}}}&amp;{{A_{33}}}&amp; \cdots \\ \vdots &amp; \vdots &amp; \vdots &amp; \ddots \end{array}} \right)\left( {\begin{array}{*{20}{c}} {\langle 1\vert {\psi (0)}\rangle }\\ {\langle 2\vert {\psi (0)}\rangle }\\ \vdots \\ \vdots \end{array}} \right)
+\left\langle {\psi (t)} \right\vert \hat A\left\vert  {\psi (t)} \right\rangle \buildrel\textstyle.\over= {\left( {\begin{array}{*{20}{c}} {\langle 1\vert {\psi (0)}\rangle }\\ {\langle 2\vert {\psi (0)}\rangle }\\ \vdots \\ \vdots \end{array}} \right)^\dagger }\left( {\begin{array}{*{20}{l}} {{A_{11}}}&amp;{{A_{12}}{e^{i{\omega _{12}}t}}}&amp;{{A_{13}}{e^{{\omega _{13}}t}}}&amp; \cdots \\ {{A_{21}}{e^{i{\omega _{21}}t}}}&amp;{{A_{22}}}&amp;{{A_{23}}{e^{{\omega _{23}}t}}}&amp; \cdots \\ {{A_{31}}{e^{i{\omega _{31}}t}}}&amp;{{A_{32}}{e^{{\omega _{32}}t}}}&amp;{{A_{33}}}&amp; \cdots \\ \vdots &amp; \vdots &amp; \vdots &amp; \ddots \end{array}} \right)\left( {\begin{array}{*{20}{c}} {\langle 1\vert {\psi (0)}\rangle }\\ {\langle 2\vert {\psi (0)}\rangle }\\ \vdots \\ \vdots \end{array}} \right)
 \tag{5.27}\]</span></span></p>
 </section>
 <section id="constants-of-motion" class="level2" data-number="5.4">

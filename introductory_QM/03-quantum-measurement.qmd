@@ -86,9 +86,9 @@ The eigenvalues differ, so $\left\langle {{\hat n + }} \mathrel{\left \vert  {\v
 
 We give the states memorable names. In the coordinates of Figure 3.1, the states for ${\sigma _z} = + 1$ and $- 1$ are $\left\vert  U \right\rangle$ and $\left\vert  D \right\rangle$ (Up and Down); those for ${\sigma _x} = + 1$ and $- 1$ are $\left\vert  R \right\rangle$ and $\left\vert  L \right\rangle$ (Right and Left). Measuring the projection along $y$, we call the states for ${\sigma _y} = + 1$ and $- 1$ $\left\vert  I \right\rangle$ and $\left\vert  O \right\rangle$ (In and Out).
 
-![](assets/image465.png){width=200px}
+![](assets/image465.png){width="200px"}
 
-::: {.source-caption}
+::: source-caption
 Figure 3.1. Coordinates defining Up and Down, Left and Right, and In and Out.
 :::
 
@@ -400,43 +400,43 @@ $$
 \left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \left( {\begin{array}{*{20}{c}} {{{\left\langle {{{a_1}}} \mathrel{\left \vert  {\vphantom {{{a_1}} \phi }} \right. \kern-1.2pt } {\phi } \right\rangle }^*}}&{{{\left\langle {{{a_2}}} \mathrel{\left \vert  {\vphantom {{{a_2}} \phi }} \right. \kern-1.2pt } {\phi } \right\rangle }^*}}& \cdots \end{array}} \right)\left( \begin{array}{c} \left\langle {{{a_1}}} \mathrel{\left \vert  {\vphantom {{{a_1}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \\ \left\langle {{{a_2}}} \mathrel{\left \vert  {\vphantom {{{a_2}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \\ \vdots \end{array} \right)
 $$ {#eq-ch03-p0580}
 
-- **Eigenvector $\left\vert  {{a_i}} \right\rangle$ of $\hat A$ in its own representation:**
+- **Eigenvector** $\left\vert  {{a_i}} \right\rangle$ of $\hat A$ in its own representation:
 
 $$
 \lvert a_i\rangle=\sum_j\lvert a_j\rangle\langle a_j\vert a_i\rangle=\sum_j\lvert a_j\rangle\delta_{ij}=\begin{pmatrix}0\\\vdots\\1\\\vdots\\0\end{pmatrix}\quad\text{(1 in row }i\text{)}
 $$ {#eq-ch03-p0582}
 
-- **Dirac expansion of an arbitrary operator $\hat M$ in the $\hat A$ representation:**
+- **Dirac expansion of an arbitrary operator** $\hat M$ in the $\hat A$ representation:
 
 $$
 \hat M = \sum\limits_{i,j} {\left\langle {{a_i}} \right\vert {\hat M}\left\vert  {{a_j}} \right\rangle \left\vert  {{a_i}} \right\rangle \left\langle {{a_j}} \right\vert } = \sum\limits_{i,j} {{M_{ij}}\left\vert  {{a_i}} \right\rangle \left\langle {{a_j}} \right\vert }
 $$ {#eq-ch03-p0584}
 
-- **Matrix of an arbitrary operator $\hat M$ in the $\hat A$ representation:**
+- **Matrix of an arbitrary operator** $\hat M$ in the $\hat A$ representation:
 
 $$
 \hat M = \left( {\begin{array}{*{20}{c}} {\left\langle {{a_1}} \right\vert \hat M\left\vert  {{a_1}} \right\rangle }&{\left\langle {{a_1}} \right\vert \hat M\left\vert  {{a_2}} \right\rangle }& \cdots \\ {\left\langle {{a_2}} \right\vert \hat M\left\vert  {{a_1}} \right\rangle }&{\left\langle {{a_2}} \right\vert \hat M\left\vert  {{a_2}} \right\rangle }& \cdots \\ \vdots & \vdots & \ddots \end{array}} \right)
 $$ {#eq-zeqnnum452145}
 
-- **Dirac expansion of $\hat A$ in its own representation:**
+- **Dirac expansion of** $\hat A$ in its own representation:
 
 $$
 \hat A = \hat A\sum\limits_i {\left\vert  {{a_i}} \right\rangle } \left\langle {{a_i}} \right\vert  = \sum\limits_i {{a_i}\left\vert  {{a_i}} \right\rangle } \left\langle {{a_i}} \right\vert
 $$ {#eq-ch03-p0588}
 
-- **Matrix of $\hat A$ in its own representation:** a diagonal matrix containing the eigenvalues of $\hat A$.
+- **Matrix of** $\hat A$ in its own representation: a diagonal matrix containing the eigenvalues of $\hat A$.
 
 $$
 \hat A = \left( {\begin{array}{*{20}{c}} {{a_1}}&0& \cdots \\ 0&{{a_2}}& \cdots \\ \vdots & \vdots & \ddots \end{array}} \right)
 $$ {#eq-zeqnnum761044}
 
-- **Matrix of $\left\vert  {{a_i}} \right\rangle \left\langle {{a_j}} \right\vert$ in the $\hat A$ representation:**
+- **Matrix of** $\left\vert  {{a_i}} \right\rangle \left\langle {{a_j}} \right\vert$ in the $\hat A$ representation:
 
 $$
 \lvert a_i\rangle\langle a_j\rvert=\bigl(\delta_{ki}\delta_{lj}\bigr)_{kl}\quad\text{(1 in row }i\text{, column }j\text{; 0 elsewhere)}
 $$ {#eq-ch03-p0592}
 
-- **Eigenvalue equation, eigenvalues, and eigenvectors of $\hat L$:**
+- **Eigenvalue equation, eigenvalues, and eigenvectors of** $\hat L$:
 
 $$
 \hat L\left\vert  {{\lambda _j}} \right\rangle = {\lambda _j}\left\vert  {{\lambda _j}} \right\rangle
@@ -466,7 +466,7 @@ $$ {#eq-zeqnnum662634}
 
 **3.3.** As shown, the projection of ${\bf{\hat \sigma }}$ along direction ${\bf{n}}{\rm{(}}\theta {\rm{,}}\phi )$ is ${\hat \sigma _n}$.
 
-- ![](assets/image677.png){width=172px} Write the matrix of ${\hat \sigma _n}$ in the ${\hat \sigma _z}$ representation. Show that its eigenvalues are $+ 1, - 1$, with the following eigenvectors:
+- ![](assets/image677.png){width="172px"} Write the matrix of ${\hat \sigma _n}$ in the ${\hat \sigma _z}$ representation. Show that its eigenvalues are $+ 1, - 1$, with the following eigenvectors:
 
 $$
 \left\vert  {\hat n + } \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {{e^{i\phi }}\sin \frac{\theta }{2}} \end{array}} \right), \qquad  \left\vert  {\hat n - } \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {{e^{ - i\phi }}\sin \frac{\theta }{2}}\\ { - \cos \frac{\theta }{2}} \end{array}} \right)

@@ -69,7 +69,7 @@ $$
 =\cos\theta.
 $$
 
-Thus the mean follows the familiar rule for projecting a spatial vector, even though each individual measurement gives only $+1$ or $-1$.
+Thus the mean follows the familiar rule for projecting a Cartesian vector, even though each individual measurement gives only $+1$ or $-1$.
 
 Keep these experiments in mind as we turn to the mathematics. We will build the language of quantum mechanics step by step, then return to the puzzles that brought us here.
 
@@ -77,17 +77,17 @@ Keep these experiments in mind as we turn to the mathematics. We will build the 
 
 In classical mechanics, a system’s state is specified by the instantaneous values of its dynamical variables, such as the positions and momenta of its particles. Given the forces, an exact initial state determines the subsequent motion. This is **classical determinism**; statistical predictions arise when our knowledge of the initial state is incomplete.
 
-A quantum state cannot be specified in the same way. Some observables, such as position and its corresponding momentum component, cannot simultaneously have definite values. Even a single electron cannot have definite spin projections along two nonparallel directions. We therefore distinguish the **quantum state** from the **observables** measured on the system. For an isolated system, the Schrödinger equation determines the state’s evolution, while the state generally predicts probabilities for measurement outcomes.
+A quantum state cannot be specified in the same way. Some observables, such as position and its corresponding momentum component, cannot simultaneously have definite values. Even a single electron cannot have definite spin projections along two nonparallel directions. We therefore distinguish the **quantum state** from the **observables** measured on the system. For an isolated system, the Schrödinger equation determines the state’s evolution, while the state generally predicts probabilities for measurement outcomes of the observables.
 
-We will use Dirac notation and the vector-space formulation of quantum mechanics: **pure states are represented by vectors, and observables by operators**. Matrix mechanics and wave mechanics provide concrete representations of this framework. This chapter introduces the vectors; the next introduces the operators.
+We will the vector-space formulation of quantum mechanics: **pure states are represented by vectors, and observables by operators**. Matrix mechanics and wave mechanics provide concrete representations of this framework. This chapter introduces the vectors; the next introduces the operators.
 
-**Quantum postulate for pure states.** A pure quantum state contains all the information supplied by quantum mechanics about a system at a given instant. It is represented by a nonzero vector in a complex vector space equipped with an inner product. We normally choose this vector to have unit norm. Multiplying a normalized state vector by an overall phase factor $e^{i\alpha}$ does not change the physical state.
+**Quantum postulate for pure states.** A pure quantum state contains all the information about a system at a given instant. It is represented by a nonzero vector in a complex vector space. We normally choose this vector to have unit norm. Multiplying a normalized state vector by an overall phase factor $e^{i\alpha}$ does not change the physical state.
 
-When you hear *vector*, you may picture an arrow in three-dimensional space. Keep that familiar picture, but make room for a second meaning: a vector can also represent a quantum state. We will call vectors in physical three-dimensional space **spatial vectors** and vectors representing quantum states **state vectors**. The latter belong to the system's **state space**, or **Hilbert space**.
+When you hear *vector*, you may picture an arrow in three-dimensional space. Keep that familiar picture, but make room for a second meaning: a vector can also represent a quantum state. We will call vectors in physical three-dimensional space **Cartesian vectors** and vectors representing quantum states **state vectors**. The latter belong to the system's **state space**, or **Hilbert space**.
 
 Dirac gave state vectors their own notation: $\lvert\text{vector name}\rangle$. A vector written this way is called a **ket**. The symbols may look unfamiliar at first, but they obey the vector-space rules we are about to use.
 
-For example, write $|+z\rangle$ for the state prepared by admitting particles from the $\sigma_z=+1$ exit of an SG detector, and $|-z\rangle$ for the state prepared from its $\sigma_z=-1$ exit. These kets belong to the spin state space; they are not arrows pointing along the spatial $z$ axis. Both spatial vectors and state vectors obey vector-space rules, but they belong to different spaces and have different physical meanings.
+For example, write $|+z\rangle$ for the state prepared by admitting particles from the $\sigma_z=+1$ exit of an SG detector, and $|-z\rangle$ for the state prepared from its $\sigma_z=-1$ exit. These kets belong to the spin state space; they are not arrows pointing along the spatial $z$ axis.
 
 Some useful vector-space identities are:
 
@@ -96,7 +96,7 @@ $$
 \text{Commutativity:}\quad &\lvert\psi_\alpha\rangle+\lvert\psi_\beta\rangle=\lvert\psi_\beta\rangle+\lvert\psi_\alpha\rangle\\
 \text{Associativity:}\quad &(\lvert\psi_\alpha\rangle+\lvert\psi_\beta\rangle)+\lvert\psi_\gamma\rangle
 =\lvert\psi_\alpha\rangle+(\lvert\psi_\beta\rangle+\lvert\psi_\gamma\rangle)\\
-\text{Complex scalars:}\quad &c\lvert\psi\rangle=\lvert\psi\rangle c\\
+\text{Scalar multiplication:}\quad &c\lvert\psi\rangle=\lvert\psi\rangle c\\
 \text{Scalar associativity:}\quad &c_1(c_2\lvert\psi\rangle)=(c_1c_2)\lvert\psi\rangle\\
 \text{Scalar identity:}\quad &1\lvert\psi\rangle=\lvert\psi\rangle\\
 \text{Distributivity:}\quad &(c_1+c_2)\lvert\psi\rangle=c_1\lvert\psi\rangle+c_2\lvert\psi\rangle\\
@@ -104,11 +104,9 @@ $$
 \end{aligned}
 $$ {#eq-zeqnnum995300}
 
-Here $c,{c_1},{c_2}$ are complex numbers. Read these identities as rules for working with vectors: we can change the order or grouping of addition and distribute scalar multiplication over a sum. The examples below will show what these operations look like in practice.
+Here $c,{c_1},{c_2}$ are complex numbers. Read these identities as rules for working with vectors. A vector space is closed under addition and scalar multiplication: these operations always produce another vector in the same space.
 
-A vector space is closed under addition and scalar multiplication: these operations always produce another vector in the same space.
-
-**Zero vector.** Every vector space contains a special zero vector, $\left\vert  {{\rm{null}}} \right\rangle$, which may be thought of as having zero length. It is defined by the following condition for every vector $|\psi\rangle$:
+**Zero vector.** Every vector space contains a zero vector, $\left\vert  {{\rm{null}}} \right\rangle$, which may be thought of as having zero length. It is defined by the following condition for every vector $|\psi\rangle$:
 
 $$
 \left\vert  {{\rm{null}}} \right\rangle + |\psi\rangle = |\psi\rangle , \qquad  \qquad  0|\psi\rangle = \left\vert  {{\rm{null}}} \right\rangle
@@ -116,15 +114,15 @@ $$ {#eq-zeqnnum835984}
 
 The zero vector is needed for vector addition and cancellation, but represents no physical state.
 
-If $|\psi_1\rangle$ and $|\psi_2\rangle$ belong to the same vector space, their linear combination $|\psi\rangle=c_1|\psi_1\rangle+c_2|\psi_2\rangle$ belongs to that space as well. A set of vectors is **linearly dependent** if some linear combination of them equals the zero vector with coefficients that are not all zero. In particular, the set $\{|\psi\rangle,|\psi_1\rangle,|\psi_2\rangle\}$ is dependent because $|\psi\rangle-c_1|\psi_1\rangle-c_2|\psi_2\rangle=0$.
+If $|\psi_1\rangle$ and $|\psi_2\rangle$ belong to the same vector space, their linear combination $|\psi\rangle=c_1|\psi_1\rangle+c_2|\psi_2\rangle$ belongs to that space as well. A set of vectors is **linearly dependent** if some linear combination of them equals the zero vector with coefficients that are not all zero. In particular, the set $\{|\psi\rangle,|\psi_1\rangle,|\psi_2\rangle\}$ is linearly dependent because $|\psi\rangle-c_1|\psi_1\rangle-c_2|\psi_2\rangle=0$.
 
 ## Examples of complex linear vector spaces
 
-The word *vector* may bring an arrow to mind, but a vector space can contain other kinds of objects. What matters is how those objects add and how they multiply by scalars. In each example below, check that adding two members or multiplying a member by a complex number keeps us within the collection.
+The word *vector* may bring an arrow to mind, but a vector space can contain other kinds of objects. What matters is how those objects add and how they multiply by scalars. In each example below, check that adding two members or multiplying a member by a complex number gives us another memeber within the collection.
 
 **Example 1: complex column vectors.**
 
-Start with something familiar: a column of $n$ complex numbers. Add two such columns entry by entry, or multiply every entry by a complex number. The result is still a column with $n$ components. These columns therefore form a complex vector space and give us a concrete way to represent quantum states.
+Let us start with some familiar object: a column of $n$ complex numbers. Add two such columns entry by entry, or multiply every entry by a complex number. The result is still a column with $n$ components. These columns therefore form a complex vector space.
 
 $$
 \begin{pmatrix}a_1\\a_2\\a_3\\\vdots\\a_n\end{pmatrix},\quad a_i\in\mathbb C;\qquad\lvert\mathrm{null}\rangle=\begin{pmatrix}0\\0\\0\\\vdots\\0\end{pmatrix}
@@ -138,23 +136,19 @@ $$
 \frac{{{d^2}}}{{d{t^2}}}x(t) + 2\beta \frac{d}{{dt}}x(t) + \omega _0^2x(t) = 0
 $$ {#eq-ch01-p0173}
 
-Here we allow complex-valued solutions. If ${x_1}(t)$ and ${x_2}(t)$ are solutions, any complex linear combination of them is also a solution. Thus, the collection of solutions forms a complex vector space. Restricting the solutions to real-valued functions would instead give a real vector space.
+Here we allow complex-valued solutions. If ${x_1}(t)$ and ${x_2}(t)$ are solutions, any complex linear combination of them is also a solution. Thus, the collection of solutions forms a complex vector space.
 
 ## Bras and inner products
 
-So far, we can add vectors and multiply them by complex numbers. To discuss their lengths and how they relate to one another, we need another operation. Think of the dot product of two Cartesian vectors: it takes two vectors and returns a number.
+So far, we can add vectors and multiply them by complex numbers. To discuss their lengths and how they relate to one another, we need another operation. Think of the dot product of two Cartesian vectors: it takes two vectors and returns a number. An **inner product** generalizes this idea to complex vector spaces. It is a rule that assigns a complex number to each ordered pair of vectors. To qualify as an inner product, the rule must satisfy three conditions: linearity in the second vector, conjugate symmetry when the vectors are exchanged, and positive definiteness when a vector is paired with itself. We will write these conditions explicitly below. Together, they let us define length and orthogonality in the vector space.
 
-An **inner product** generalizes this idea to complex vector spaces. It is a rule that assigns a complex number to each ordered pair of vectors. To qualify as an inner product, the rule must satisfy three conditions: linearity in the second vector, conjugate symmetry when the vectors are exchanged, and positive definiteness when a vector is paired with itself. We will write these conditions explicitly below. Together, they let us define length and orthogonality in the space.
-
-Dirac introduced a neat notation for this operation. To write the inner product of $|\varphi\rangle$ and $|\psi\rangle$, we write the first vector as a **bra**, $\langle\varphi|$, and place it next to the second vector's ket. The two brackets fit together:
+Dirac introduced a neat notation for this operation. To write the inner product of $|\varphi\rangle$ and $|\psi\rangle$, we write the first vector as $\langle\varphi|$, and place it next to the second vector's ket. The two brackets fit together:
 
 $$
 \langle \varphi|  \cdot |\psi\rangle \equiv \langle \varphi|\psi\rangle = c
 $$ {#eq-zeqnnum133573}
 
-Here $c$ is the resulting complex number. The inner product supplies the rule for calculating it; the bra–ket notation gives us a compact way to write it. A bra is the dual object associated with a ket. For now, we can work with this correspondence through the rules below; the column-matrix example will make it concrete.
-
-Kets and bras each form a complex vector space. The correspondence between them is **antilinear**: when we convert a ket into its corresponding bra, we take the complex conjugate of each coefficient. The conversion rules are
+Here $c$ is the resulting complex number. The inner product supplies the rule for calculating it; the bra–ket notation gives us a compact way to write it. $\langle\varphi|$ is called **bra.** A bra is the dual object associated with a ket. For now, we can work with this correspondence through the rules below. Kets and bras each form a complex vector space. The correspondence between them is **antilinear**: when we convert a ket into its corresponding bra, we take the complex conjugate of each coefficient. The conversion rules are
 
 $$
 \begin{aligned}
@@ -173,15 +167,13 @@ $$
 \begin{array}{l} \langle \gamma\vert \left( {{c_1}\vert \alpha\rangle + {c_2}\vert \beta\rangle } \right) = {c_1}\langle \gamma|\alpha\rangle + {c_2}\langle \gamma|\beta\rangle ,\\ \left( {{c_1}\langle \gamma\vert {\rm{ + }}{c_2}\langle \beta\vert } \right)\vert \alpha\rangle = {c_1}\langle \gamma|\alpha\rangle + {c_2}\langle \beta|\alpha\rangle \end{array}
 $$ {#eq-zeqnnum320588}
 
-The first line expresses linearity in the ket. The second expresses linearity in a bra that is already written as a sum. When forming that bra from a sum of kets, first conjugate the coefficients as in @eq-zeqnnum136783.
-
 **Conjugate symmetry:**
 
 $$
 \langle \varphi|\psi\rangle = \langle \psi|\varphi\rangle ^*
 $$ {#eq-zeqnnum921664}
 
-Now apply conjugate symmetry, @eq-zeqnnum921664, to a vector paired with itself. The result equals its own complex conjugate, so it must be real:
+Applying conjugate symmetry, @eq-zeqnnum921664, to the inner product of a vector with itself. The result equals its own complex conjugate, so it must be real:
 
 $$
 \langle \psi|\psi\rangle = \langle \psi|\psi\rangle ^*
@@ -205,8 +197,6 @@ $$
 \left\vert  {\tilde \psi } \right\rangle = \frac{{|\psi\rangle }}{{\sqrt {\langle \psi|\psi\rangle } }}
 $$ {#eq-ch01-p0194}
 
-Try a concrete example: $|\chi\rangle=\begin{pmatrix}1\\i\end{pmatrix}$. To obtain its bra, turn the column into a row and take the complex conjugate of each entry. This gives $\langle\chi|=\begin{pmatrix}1&-i\end{pmatrix}$, so $\langle\chi|\chi\rangle=1+(-i)i=2$. Divide by the square root of this squared norm to obtain the normalized ket $|\chi\rangle/\sqrt{2}$. Notice the minus sign in the bra: it comes from complex conjugation. Simply turning the column into a row would give the wrong inner product.
-
 Let us put the bra–ket notation to work with column vectors. Here we can see every step of the calculation.
 
 **Example: inner products of column vectors.** Complex column vectors form a complex vector space. Their standard inner product is obtained by multiplying the conjugate transpose of the first column by the second column. Thus, if a column represents a ket, its conjugate-transpose row represents the corresponding bra. For example,
@@ -229,7 +219,9 @@ $$ {#eq-ch01-p0201}
 
 ## Orthogonality and basis vectors
 
-Two Cartesian vectors ${\bf{a}},{\bf{b}}$ are perpendicular when ${\bf{a}} \cdot {\bf{b}} = 0$. At most three nonzero vectors in three-dimensional Cartesian space can be mutually perpendicular. Rotating such a set gives infinitely many alternative sets, but never more than three mutually perpendicular vectors; this is the dimension of the space. Given mutually perpendicular unit vectors ${\bf{x}},{\bf{y}},{\bf{z}}$, any Cartesian vector ${\bf{v}}$ can be expressed as their linear combination:
+Let us start with some familiar objects. Two Cartesian vectors ${\bf{a}},{\bf{b}}$ are perpendicular when ${\bf{a}} \cdot {\bf{b}} = 0$. At most three nonzero vectors in three-dimensional Cartesian space can be mutually perpendicular. Rotating such a set gives infinitely many alternative sets, but never more than three mutually perpendicular vectors; That is why the dimension of Cartesian space is three.
+
+Given mutually perpendicular unit vectors ${\bf{x}},{\bf{y}},{\bf{z}}$, any Cartesian vector ${\bf{v}}$ can be expressed as their linear combination:
 
 $$
 {\bf{v}} = \left( {{\bf{x}} \cdot {\bf{v}}} \right){\bf{x}} + \left( {{\bf{y}} \cdot {\bf{v}}} \right){\bf{y}} + \left( {{\bf{z}} \cdot {\bf{v}}} \right){\bf{z}} = {v_x}{\bf{x}} + {v_y}{\bf{y}} + {v_z}{\bf{z}}
@@ -247,7 +239,7 @@ $$
 {\bf{x}} = \left( {\begin{array}{*{20}{c}} 1\\ 0\\ 0 \end{array}} \right), \qquad  {\bf{y}} = \left( {\begin{array}{*{20}{c}} 0\\ 1\\ 0 \end{array}} \right), \qquad  {\bf{z}} = \left( {\begin{array}{*{20}{c}} 0\\ 0\\ 1 \end{array}} \right)
 $$ {#eq-ch01-p0208}
 
-We can carry this familiar geometry into an inner-product vector space. Two nonzero vectors $|\psi\rangle$ and $|\phi\rangle$ are **orthogonal** if their inner product vanishes, $\langle \psi\vert \phi\rangle = 0$. The dimension is the maximum number of mutually orthogonal nonzero vectors. Using the inner product defined in @eq-zeqnnum248635, we can find infinitely many orthogonal pairs of two-component columns. Here are three pairs of normalized vectors:
+We can carry this familiar geometry into the complex vector space. Two nonzero vectors $|\psi\rangle$ and $|\phi\rangle$ are **orthogonal** if and only if their inner product vanishes, $\langle \psi\vert \phi\rangle = 0$. The dimension of a complex vector space is the maximum number of mutually orthogonal nonzero vectors. Using the inner product defined in @eq-zeqnnum248635, we can find infinitely many orthogonal pairs of two-component columns. Here are three pairs of normalized vectors:
 
 $$
 \begin{aligned}
@@ -257,7 +249,7 @@ $$
 \end{aligned}
 $$ {#eq-zeqnnum282640}
 
-Choose any one of these pairs and try to find a third nonzero column vector orthogonal to both members. There is no room for one: the vector space of two-component columns has dimension two.
+Choose any one of these pairs and we cannot find a third nonzero column vector orthogonal to both members. Thus, the vector space of two-component columns has dimension two.
 
 A **basis** is a linearly independent set of vectors that spans the space; it need not be orthogonal or normalized. A set of $N$ mutually orthogonal, normalized vectors in an $N$-dimensional inner-product space forms a **complete orthonormal basis**. We use orthonormal bases throughout this chapter. For any two vectors $|i\rangle,|j\rangle$ in such a basis,
 
@@ -271,21 +263,21 @@ $$
 {\delta _{ij}} = \left\{ \begin{array}{l} 1, & i = j\\ 0, & i \ne j \end{array} \right.
 $$ {#eq-ch01-p0216}
 
-For spin-1/2, choose $|+z\rangle$ and $|-z\rangle$ as an orthonormal basis of the two-dimensional spin state space. Thus $\langle+z|+z\rangle=\langle-z|-z\rangle=1$ and $\langle+z|-z\rangle=0$. The measurement postulate introduced later will connect this orthogonality to the perfectly distinguishable outcomes of a $\sigma_z$ measurement.
+For spin-1/2, choose $|+z\rangle$ and $|-z\rangle$ as an orthonormal basis of the two-dimensional spin state space. Thus $\langle+z|+z\rangle=\langle-z|-z\rangle=1$ and $\langle+z|-z\rangle=0$. The measurement postulate introduced later will connect this orthogonality to the perfectly distinguishable outcomes of a measurement.
 
-A complex vector space of dimension at least two has infinitely many possible bases. Each pair in @eq-zeqnnum282640 is an orthonormal basis for the two-dimensional space. A basis acts like a coordinate system: every vector has a unique expansion as a linear combination of the basis vectors. In an $N$-dimensional space with basis $\{|i\rangle\}_{i=1}^{N}$, any vector $|\psi\rangle$ can be written as
+A basis acts like a the unit vector in the Cartesian coordinate system: every state vector has a unique expansion as a linear combination of the basis vectors. In an $N$-dimensional space with basis $\{|i\rangle\}_{i=1}^{N}$, any vector $|\psi\rangle$ can be written as
 
 $$
 |\psi\rangle = \sum\limits_i {{a_i}|i\rangle }
 $$ {#eq-ch01-p0218}
 
-Here ${a_i}$ is the complex coefficient of $|i\rangle$ in the expansion of $|\psi\rangle$. To find a particular coefficient, apply the bra $\langle j|$ to both sides. Orthogonality removes every term except the one we want:
+Here ${a_i}$ is the complex coefficient of $|i\rangle$ in the expansion of $|\psi\rangle$. To find a particular coefficient, lets say $a_j$, apply the bra $\langle j|$ to both sides. Orthogonality removes every term except the one we want:
 
 $$
 \langle j|\psi\rangle = \sum\limits_i {\langle j| {a_i}|i\rangle } = \sum\limits_i {{a_i}\langle j|i\rangle } = \sum\limits_i {{a_i}{\delta _{ij}}} = {a_j}
 $$ {#eq-ch01-p0220}
 
-Thus the component of $|\psi\rangle$ along $|i\rangle$ is $\langle i|\psi\rangle$, and
+Thus the component of $|\psi\rangle$ along $|j\rangle$ is $\langle j|\psi\rangle$, and
 
 $$
 |\psi\rangle = \sum\limits_i {\langle i|\psi\rangle |i\rangle } = \sum\limits_i {|i\rangle } \langle i|\psi\rangle
@@ -318,7 +310,7 @@ Always keep track of the basis attached to a column. Changing the basis changes 
 $$
 |\psi\rangle=\frac{\sqrt{3}}{2}|+z\rangle+\frac{1}{2}|-z\rangle,
 \qquad
-[|\psi\rangle]_z=\begin{pmatrix}\sqrt{3}/2\\1/2\end{pmatrix}.
+|\psi\rangle=\begin{pmatrix}\sqrt{3}/2\\1/2\end{pmatrix}.
 $$
 
 Now choose a second orthonormal basis:
@@ -335,12 +327,12 @@ $$
 |\psi\rangle=\frac{\sqrt{3}+1}{2\sqrt{2}}|u\rangle
 +\frac{\sqrt{3}-1}{2\sqrt{2}}|v\rangle,
 \qquad
-[|\psi\rangle]_{uv}=\begin{pmatrix}(\sqrt{3}+1)/(2\sqrt{2})\\(\sqrt{3}-1)/(2\sqrt{2})\end{pmatrix}.
+|\psi\rangle=\begin{pmatrix}(\sqrt{3}+1)/(2\sqrt{2})\\(\sqrt{3}-1)/(2\sqrt{2})\end{pmatrix}.
 $$
 
-Compare the two columns: their entries differ, yet they describe the same state vector. As a check, calculate its squared norm in each basis. We obtain $3/4+1/4=1$ in the first and $[(\sqrt{3}+1)^2+(\sqrt{3}-1)^2]/8=1$ in the second. The bracketed notation tells us which basis each column uses.
+Compare the two columns: their entries differ, yet they describe the same state vector. Thus when we write a state vector in column form we must be clear which basis it is attached to. As a check, calculate the squared norm of $|\psi\rangle$ in each basis. We obtain $3/4+1/4=1$ in the first and $[(\sqrt{3}+1)^2+(\sqrt{3}-1)^2]/8=1$ in the second.
 
-The comparison below connects state-vector notation to Cartesian geometry. Here $\mathbf{e}_i$ denotes a Cartesian coordinate unit vector. In both settings, an orthonormal basis lets us obtain a vector's components by taking products with the basis vectors:
+The comparison below connects state-vector notation to Cartesian geometry. Here $\mathbf{e}_i$ denotes a Cartesian coordinate unit vector. In both settings, an orthonormal basis lets us obtain a vector's components by taking inner products with the basis vectors:
 
 $$
 \begin{array}{ll}
@@ -360,9 +352,15 @@ $$ {#eq-ch01-p0232}
 
 ## Exercises
 
-**Warm-up.** Given $|\chi\rangle=\begin{pmatrix}2\\i\end{pmatrix}$ and $|\eta\rangle=\begin{pmatrix}1\\1\end{pmatrix}$, write their bras, calculate $\langle\chi|\eta\rangle$ and $\langle\eta|\chi\rangle$, and normalize $|\chi\rangle$. Check conjugate symmetry.
+**1.1** Given
 
-**1.1.** Test each collection below: does it form a complex vector space under the usual addition and scalar multiplication? Focus on the vector-space rules; an inner product and completeness are not required.
+$$
+|\chi\rangle=\begin{pmatrix}2\\i\end{pmatrix} \quad \rm{ and }\quad |\eta\rangle=\begin{pmatrix}1\\1\end{pmatrix}
+$$
+
+write their bras, calculate $\langle\chi|\eta\rangle$ and $\langle\eta|\chi\rangle$, and normalize $|\chi\rangle$. Check conjugate symmetry.
+
+**1.2.** Test each collection below: does it form a complex vector space under the usual addition and scalar multiplication? Focus on the vector-space rules; an inner product and completeness are not required.
 
 - All complex numbers.
 
@@ -374,11 +372,11 @@ $$
 \left[ { - \frac{{{\hbar ^2}}}{{2m}}\frac{{{d^2}}}{{d{x^2}}} + V(x)} \right]\psi (x) = E\psi (x)
 $$ {#eq-ch01-p0240}
 
-**1.2.** Prove the Cauchy–Schwarz inequality, $\langle \alpha|\alpha\rangle \langle \beta|\beta\rangle \ge {\left\vert  {\langle \alpha|\beta\rangle } \right\vert ^2}$.
+**1.3.** Prove the Cauchy–Schwarz inequality, $\langle \alpha|\alpha\rangle \langle \beta|\beta\rangle \ge {\left\vert  {\langle \alpha|\beta\rangle } \right\vert ^2}$.
 
 Hint: construct $\vert \psi \rangle$ as a suitable linear combination of $\vert \alpha\rangle$ and $\vert \beta\rangle$, and use the nonnegative squared norm in @eq-zeqnnum281628.
 
-**1.3.** A vector $|\psi\rangle$ in a two-dimensional complex vector space has the following expansion in the orthonormal basis $\left\{ {\vert {\alpha _1}\rangle ,\vert {\alpha _2}\rangle } \right\}$:
+**1.4.** A vector $|\psi\rangle$ in a two-dimensional complex vector space has the following expansion in the orthonormal basis $\left\{ {\vert {\alpha _1}\rangle ,\vert {\alpha _2}\rangle } \right\}$:
 
 $$
 \vert \psi \rangle = \vert {\alpha _1}\rangle + 3\vert {\alpha _2}\rangle

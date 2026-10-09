@@ -42,7 +42,7 @@ $$ {#eq-zeqnnum743287}
 
 Here ${\varepsilon _{ijk}}$ is the **Levi-Civita symbol**:
 
-![](assets/image715.png){width=177px}
+![](assets/image715.png){width="177px"}
 
 The indices $j,k,l$ are drawn from 1, 2, and 3. An ordering $j,k,l$ matching the left diagram gives ${\varepsilon _{jkl}} = + 1$; one matching the right gives ${\varepsilon _{jkl}} = - 1$. If any indices coincide, ${\varepsilon _{jkl}} = 0$. For example, ${\varepsilon _{312}} = {\varepsilon _{231}} = 1,\;\;{\varepsilon _{132}} = {\varepsilon _{213}} = - 1,\;\;{\varepsilon _{133}} = 0$.
 
@@ -146,15 +146,15 @@ We describe three patterns of compatibility. They may seem abstract initially; r
 
 - **Nondegenerate case.** In Figure 4.1, each dot represents an eigenstate $\vert {{a_j},{b_j}}\rangle$.
 
-|  |  | $\hat{B}$ |  |  |  |
-| --- | --- | --- | --- | --- | --- |
-|  |  | ${b}_{1}$ | ${b}_{2}$ | ${b}_{3}$ | ${b}_{4}$ |
-| $\hat{A}$ | ${a}_{1}$ | ● |  |  |  |
-|  | ${a}_{2}$ |  | ● |  |  |
-|  | ${a}_{3}$ |  |  | ● |  |
-|  | ${a}_{4}$ |  |  |  | ● |
+|           |           | $\hat{B}$ |           |           |           |
+|-----------|-----------|-----------|-----------|-----------|-----------|
+|           |           | ${b}_{1}$ | ${b}_{2}$ | ${b}_{3}$ | ${b}_{4}$ |
+| $\hat{A}$ | ${a}_{1}$ | ●         |           |           |           |
+|           | ${a}_{2}$ |           | ●         |           |           |
+|           | ${a}_{3}$ |           |           | ●         |           |
+|           | ${a}_{4}$ |           |           |           | ●         |
 
-::: {.source-caption}
+::: source-caption
 Figure 4.1. Nondegenerate common eigenstates.
 :::
 
@@ -170,28 +170,28 @@ Clearly $\hat H$ and ${\hat S_z}$ commute. Both have nondegenerate eigenvalues, 
 
 - **Degenerate case.** Eigenvalues of $\hat A$ may be degenerate. In Figure 4.2, the number of eigenstates (dots) belonging to an eigenvalue is its degeneracy.
 
-| Operator | Eigenvalue | Degeneracy |
-| --- | --- | --- |
-| $\hat{A}$ | ${a}_{1}$ | ●●●● |
-|  | ${a}_{2}$ | ●●● |
-|  | ${a}_{3}$ | ●●● |
-|  | ${a}_{4}$ | ● |
+| Operator  | Eigenvalue | Degeneracy |
+|-----------|------------|------------|
+| $\hat{A}$ | ${a}_{1}$  | ●●●●       |
+|           | ${a}_{2}$  | ●●●        |
+|           | ${a}_{3}$  | ●●●        |
+|           | ${a}_{4}$  | ●          |
 
-::: {.source-caption}
+::: source-caption
 Figure 4.2. Degenerate eigenvalues.
 :::
 
 For an eigenvalue of $\hat A$ with degeneracy $n$, we can construct $n$ mutually orthogonal eigenstates. Orthogonal states can be distinguished by a single measurement of a suitable observable. Suppose $\hat B$ commutes with $\hat A$, and these $n$ states are also eigenstates of $\hat B$ with distinct eigenvalues of $\hat B$. The eigenvalues of $\hat A$ and $\hat B$ then jointly identify a unique common eigenstate $\vert {{a_j},{b_l}}\rangle$, as in Figure 4.3. The degeneracy of eigenvalues ${b_2},{b_{3,}}{b_4}$ of $\hat B$ is resolved by measuring $\hat A$.
 
-|  |  | $\hat{B}$ |  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|   |   | $\hat{B}$ |   |   |   |   |   |   |
+|--------|--------|--------|--------|--------|--------|--------|--------|--------|
 |  |  | ${b}_{1}$ | ${b}_{2}$ | ${b}_{3}$ | ${b}_{4}$ | ${b}_{5}$ | ${b}_{6}$ | ${b}_{7}$ |
 | $\hat{A}$ | ${a}_{1}$ | ● | ● | ● |  |  | ● |  |
 |  | ${a}_{2}$ |  | ● |  | ● | ● |  |  |
 |  | ${a}_{3}$ |  |  | ● | ● |  |  | ● |
 |  | ${a}_{4}$ |  |  |  | ● |  |  |  |
 
-::: {.source-caption}
+::: source-caption
 Figure 4.3. Resolving degeneracy with a second observable.
 :::
 
@@ -201,29 +201,29 @@ $$
 \begin{array}{l} {{{\bf{\hat L}}}^2}\left\vert  {l,m} \right\rangle = l(l + 1){\hbar ^2}\left\vert  {l,m} \right\rangle , & & l = 0,1,2 \cdots \\ {{\hat L}_z}\left\vert  {l,m} \right\rangle = m\hbar \left\vert  {l,m} \right\rangle , & & m = - l, - l + 1, \cdots ,l & & \end{array}
 $$ {#eq-ch04-p0890}
 
-|  |  | ${\hat{L}}_{z}$ quantum number $m$ |  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|   |   | ${\hat{L}}_{z}$ quantum number $m$ |   |   |   |   |   |   |
+|--------|--------|--------|--------|--------|--------|--------|--------|--------|
 |  |  | $\cdots$ | $-2$ | $-1$ | $0$ | $1$ | $2$ | $\cdots$ |
 | ${\hat{L}}^{2}$ quantum number $l$ | $0$ |  |  |  | ● |  |  |  |
 |  | $1$ |  |  | ● | ● | ● |  |  |
 |  | $2$ |  | ● | ● | ● | ● | ● |  |
 |  | $\vdots$ | $\cdots$ | $\cdots$ | $\cdots$ | $\cdots$ | $\cdots$ | $\cdots$ | $\cdots$ |
 
-::: {.source-caption}
+::: source-caption
 Figure 4.4. Orbital angular-momentum quantum numbers.
 :::
 
 If measuring $\hat B$ does not completely remove the degeneracy, a fixed combination ${a_j},{b_l}$ may still label several states. In Figure 4.5, $({a_{3,}}{b_7})$ remains degenerate. We can seek another observable $\hat C$ commuting with both $\hat A$ and $\hat B$. If $\hat C$ still fails to resolve the degeneracy, add $\hat D$, and so on. Ultimately, a complete set of pairwise compatible observables $\left\{ {\hat A,\hat B,\hat C \cdots } \right\}$ removes it.
 
-|  |  | $\hat{B}$ |  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|   |   | $\hat{B}$ |   |   |   |   |   |   |
+|--------|--------|--------|--------|--------|--------|--------|--------|--------|
 |  |  | ${b}_{1}$ | ${b}_{2}$ | ${b}_{3}$ | ${b}_{4}$ | ${b}_{5}$ | ${b}_{6}$ | ${b}_{7}$ |
 | $\hat{A}$ | ${a}_{1}$ | ● | ● | ● |  |  | ● |  |
 |  | ${a}_{2}$ |  | ● |  | ● | ● |  |  |
 |  | ${a}_{3}$ |  |  |  |  |  |  | ●●● |
 |  | ${a}_{4}$ |  |  |  | ● |  |  |  |
 
-::: {.source-caption}
+::: source-caption
 Figure 4.5. A complete set of commuting observables.
 :::
 
@@ -243,15 +243,15 @@ $$ {#eq-ch04-p1093}
 
 - **Independent spaces.** $\hat A$ and $\hat B$ belong to different vector spaces; their values are independent.
 
-|  |  | $\hat{B}$ |  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|   |   | $\hat{B}$ |   |   |   |   |   |   |
+|--------|--------|--------|--------|--------|--------|--------|--------|--------|
 |  |  | ${b}_{1}$ | ${b}_{2}$ | ${b}_{3}$ | ${b}_{4}$ | ${b}_{5}$ | ${b}_{6}$ | ${b}_{7}$ |
 | $\hat{A}$ | ${a}_{1}$ | ● | ● | ● | ● | ● | ● | ● |
 |  | ${a}_{2}$ | ● | ● | ● | ● | ● | ● | ● |
 |  | ${a}_{3}$ | ● | ● | ● | ● | ● | ● | ● |
 |  | ${a}_{4}$ | ● | ● | ● | ● | ● | ● | ● |
 
-::: {.source-caption}
+::: source-caption
 Figure 4.6. Observables on independent vector spaces.
 :::
 
@@ -505,7 +505,7 @@ Let $\hat A,\hat B$ be Hermitian operators.
 
 One readily proves ${[\hat A,\hat B]^\dag } = - [\hat A,\hat B], \qquad  \qquad  {\{ \hat A,\hat B\} ^\dag } = \{ \hat A,\hat B\}$.
 
-Consequently, 
+Consequently,
 
 $$
 \langle [\hat A,\hat B]\rangle \text{ is purely imaginary}, \qquad  \langle \{ \hat A,\hat B\} \rangle \text{ is real}
@@ -513,7 +513,7 @@ $$ {#eq-zeqnnum864955}
 
 .
 
-Also, 
+Also,
 
 $$
 \langle [\Delta \hat A,\Delta \hat B]\rangle = \langle [\hat A,\hat B]\rangle , \qquad  \langle \{ \Delta \hat A,\Delta \hat B\} \rangle = \langle \{ \hat A,\hat B\} \rangle - 2\langle {\hat A}\rangle \langle {\hat B}\rangle
@@ -521,7 +521,7 @@ $$ {#eq-zeqnnum374297}
 
 .
 
-Combining these gives 
+Combining these gives
 
 $$
 \langle [\Delta \hat A,\Delta \hat B]\rangle = \langle [\hat A,\hat B]\rangle \;\text{ is purely imaginary}, \qquad  \langle \{ \Delta \hat A,\Delta \hat B\} \rangle \;\text{ is real}
@@ -583,7 +583,7 @@ $$ {#eq-ch04-p1312}
 
 **4.5.** Write the matrix of $\left\vert  R \right\rangle ,\left\vert  L \right\rangle ,{\hat \sigma _x}$ in the ${\hat \sigma _{\rm{y}}}$ representation.
 
-**4.6*.** Let $\langle {\hat X}\rangle$ be the expectation value of $\hat X$ in an arbitrary state, with $\Delta \hat X \equiv \hat X - \langle \hat X\rangle = \hat X - \langle \hat X\rangle \hat I$. If $\hat A,\hat B$ are Hermitian, prove:
+\*\*4.6\*.\*\* Let $\langle {\hat X}\rangle$ be the expectation value of $\hat X$ in an arbitrary state, with $\Delta \hat X \equiv \hat X - \langle \hat X\rangle = \hat X - \langle \hat X\rangle \hat I$. If $\hat A,\hat B$ are Hermitian, prove:
 
 - $\langle {[\hat A,\hat B]}\rangle$ is purely imaginary.
 
