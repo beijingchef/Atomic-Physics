@@ -1,5 +1,5 @@
 ---
-title: "Part 2 · Elements of quantum mechanics"
+title: "Part 2 · Introduction to quantum mechanics"
 ---
 
 ## Learning objectives
@@ -8,4 +8,6 @@ To be added.
 
 ## Topics
 
-To be added.
+[Introduction to Quantum Mechanics](introductory_QM/_book/index.html)
+
+Lecture notes on quantum states, operators, measurement, time evolution, and angular momentum, with exercises and solutions.

@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - introductory_QM/_book/**
   render:
     - index.qmd
     - schedule.qmd
@@ -59,8 +61,8 @@ website:
                 href: normal-zeeman-effect.qmd
               - text: "Exercises"
                 href: lorentz-exercises.qmd
-      - section: "Part 2 · Elements of quantum mechanics"
-        href: part-2.qmd
+      - text: "Part 2 · Introduction to quantum mechanics"
+        href: introductory_QM/_book/index.html
       - section: "Part 3 · Atomic Structure and Interactions with External Fields"
         href: part-3.qmd
 
