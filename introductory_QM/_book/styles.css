@@ -1,5 +1,22 @@
 main { line-height: 1.7; }
 .math.display { display:block; overflow-x:auto; padding:0.5rem 0; }
+/* Keep screen-reader math from enlarging the visible equation scroll area. */
+.math.display mjx-assistive-mml {
+  width:1px !important;
+  height:1px !important;
+  overflow:hidden !important;
+}
 .source-caption { font-size:0.9em; color:#52616b; margin:0.4rem 0 1.5rem; }
 img { max-width:100%; height:auto; }
 table { font-size:0.94em; }
+
+/* Operator labels span their full groups of eigenvalues in Chapter 4. */
+.eigenstate-table table th,
+.eigenstate-table table td {
+  text-align: center !important;
+  vertical-align: middle;
+}
+.eigenstate-table table td[rowspan] {
+  border-bottom: 1px solid var(--bs-border-color, #dee2e6);
+}
+.eigenstate-table table p { margin: 0; }

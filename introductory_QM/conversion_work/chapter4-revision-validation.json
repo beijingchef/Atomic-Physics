@@ -1,0 +1,69 @@
+{
+  "preservedAnchors": true,
+  "anchorCount": 66,
+  "unresolvedChapterReferences": [],
+  "missingSourceAssets": [],
+  "render": {
+    "mathExpressions": 421,
+    "sourceExpressions": 421,
+    "mathErrors": [],
+    "missingImages": [],
+    "brokenCrossrefs": []
+  },
+  "groupedHeadings": [
+    {
+      "rowSpan": 4,
+      "columnSpan": 4,
+      "axisText": "A^",
+      "horizontalAlignment": "center",
+      "verticalAlignment": "middle",
+      "dots": 4,
+      "codeBlocks": 0
+    },
+    {
+      "rowSpan": 4,
+      "columnSpan": null,
+      "axisText": "A^",
+      "horizontalAlignment": "center",
+      "verticalAlignment": "middle",
+      "dots": 11,
+      "codeBlocks": 0
+    },
+    {
+      "rowSpan": 4,
+      "columnSpan": 7,
+      "axisText": "A^",
+      "horizontalAlignment": "center",
+      "verticalAlignment": "middle",
+      "dots": 11,
+      "codeBlocks": 0
+    },
+    {
+      "rowSpan": 4,
+      "columnSpan": 7,
+      "axisText": "L^2\nquantum\nnumber l",
+      "horizontalAlignment": "center",
+      "verticalAlignment": "middle",
+      "dots": 9,
+      "codeBlocks": 0
+    },
+    {
+      "rowSpan": 4,
+      "columnSpan": 7,
+      "axisText": "A^",
+      "horizontalAlignment": "center",
+      "verticalAlignment": "middle",
+      "dots": 11,
+      "codeBlocks": 0
+    },
+    {
+      "rowSpan": 4,
+      "columnSpan": 7,
+      "axisText": "A^",
+      "horizontalAlignment": "center",
+      "verticalAlignment": "middle",
+      "dots": 28,
+      "codeBlocks": 0
+    }
+  ]
+}

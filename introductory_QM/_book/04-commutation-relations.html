@@ -231,10 +231,23 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#commutators-and-common-eigenstates" id="toc-commutators-and-common-eigenstates" class="nav-link active" data-scroll-target="#commutators-and-common-eigenstates"><span class="header-section-number">4.1</span> Commutators and common eigenstates</a></li>
+  <li><a href="#commutators-and-common-eigenstates" id="toc-commutators-and-common-eigenstates" class="nav-link active" data-scroll-target="#commutators-and-common-eigenstates"><span class="header-section-number">4.1</span> Commutators and common eigenstates</a>
+  <ul class="collapse">
+  <li><a href="#spin-incompatible-components-compatible-magnitude" id="toc-spin-incompatible-components-compatible-magnitude" class="nav-link" data-scroll-target="#spin-incompatible-components-compatible-magnitude"><span class="header-section-number">4.1.1</span> Spin: incompatible components, compatible magnitude</a></li>
+  </ul></li>
   <li><a href="#common-eigenstates-of-compatible-observables" id="toc-common-eigenstates-of-compatible-observables" class="nav-link" data-scroll-target="#common-eigenstates-of-compatible-observables"><span class="header-section-number">4.2</span> Common eigenstates of compatible observables</a></li>
-  <li><a href="#types-of-common-eigenstates" id="toc-types-of-common-eigenstates" class="nav-link" data-scroll-target="#types-of-common-eigenstates"><span class="header-section-number">4.3</span> Types of common eigenstates</a></li>
-  <li><a href="#quantum-logic-and-addition-of-probability-amplitudes" id="toc-quantum-logic-and-addition-of-probability-amplitudes" class="nav-link" data-scroll-target="#quantum-logic-and-addition-of-probability-amplitudes"><span class="header-section-number">4.4</span> Quantum logic and addition of probability amplitudes</a></li>
+  <li><a href="#cases-of-common-eigenstates-for-commuting-observables" id="toc-cases-of-common-eigenstates-for-commuting-observables" class="nav-link" data-scroll-target="#cases-of-common-eigenstates-for-commuting-observables"><span class="header-section-number">4.3</span> Cases of common eigenstates for commuting observables</a>
+  <ul class="collapse">
+  <li><a href="#when-either-value-identifies-the-state" id="toc-when-either-value-identifies-the-state" class="nav-link" data-scroll-target="#when-either-value-identifies-the-state"><span class="header-section-number">4.3.1</span> When either value identifies the state</a></li>
+  <li><a href="#resolving-degeneracy-with-additional-labels" id="toc-resolving-degeneracy-with-additional-labels" class="nav-link" data-scroll-target="#resolving-degeneracy-with-additional-labels"><span class="header-section-number">4.3.2</span> Resolving degeneracy with additional labels</a></li>
+  <li><a href="#independent-degrees-of-freedom" id="toc-independent-degrees-of-freedom" class="nav-link" data-scroll-target="#independent-degrees-of-freedom"><span class="header-section-number">4.3.3</span> Independent degrees of freedom</a></li>
+  </ul></li>
+  <li><a href="#measurement-paths-and-interference" id="toc-measurement-paths-and-interference" class="nav-link" data-scroll-target="#measurement-paths-and-interference"><span class="header-section-number">4.4</span> Measurement paths and interference</a>
+  <ul class="collapse">
+  <li><a href="#a-selected-intermediate-outcome" id="toc-a-selected-intermediate-outcome" class="nav-link" data-scroll-target="#a-selected-intermediate-outcome"><span class="header-section-number">4.4.1</span> A selected intermediate outcome</a></li>
+  <li><a href="#open-channels-recorded-or-coherently-recombined" id="toc-open-channels-recorded-or-coherently-recombined" class="nav-link" data-scroll-target="#open-channels-recorded-or-coherently-recombined"><span class="header-section-number">4.4.2</span> Open channels: recorded or coherently recombined?</a></li>
+  <li><a href="#spin-paths-that-cancel" id="toc-spin-paths-that-cancel" class="nav-link" data-scroll-target="#spin-paths-that-cancel"><span class="header-section-number">4.4.3</span> Spin paths that cancel</a></li>
+  </ul></li>
   <li><a href="#changing-representations" id="toc-changing-representations" class="nav-link" data-scroll-target="#changing-representations"><span class="header-section-number">4.5</span> Changing representations</a>
   <ul class="collapse">
   <li><a href="#transformation-rules" id="toc-transformation-rules" class="nav-link" data-scroll-target="#transformation-rules"><span class="header-section-number">4.5.1</span> Transformation rules</a></li>
@@ -268,14 +281,16 @@ window.Quarto = {
 </header>
 
 
-<p>If two observables share an eigenstate, they both have definite values in that state. This chapter asks when observables can possess simultaneous definite values in a complete set of states.</p>
+<p>Prepare a spin-<span class="math inline">\(1/2\)</span> particle with a definite <span class="math inline">\(z\)</span> component of spin. Measure that component again, and the same result returns. Insert a measurement along <span class="math inline">\(x\)</span>, however, and the final <span class="math inline">\(z\)</span> result becomes uncertain. What makes one measurement preserve a definite value while another disrupts it?</p>
+<p>The answer lies in the order of operator actions. This chapter introduces the <strong>commutator</strong>, connects it to simultaneous definite values, and shows how commuting observables label quantum states. We then follow measurement paths to see when probabilities add and when amplitudes interfere, develop changes of basis, and finally relate commutators to uncertainty.</p>
 <section id="commutators-and-common-eigenstates" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="commutators-and-common-eigenstates"><span class="header-section-number">4.1</span> Commutators and common eigenstates</h2>
-<p>The result of successive operator actions generally depends on their order: <span class="math inline">\(\hat A\hat B \ne \hat B\hat A\)</span>. We define the <strong>commutator</strong> <span class="math inline">\(\left[ {\hat A,\hat B} \right]\)</span> of <span class="math inline">\(\hat A\)</span> and <span class="math inline">\(\hat B\)</span> to measure the difference between the two products:</p>
+<p>Apply <span class="math inline">\(\hat B\)</span> first and then <span class="math inline">\(\hat A\)</span>: the resulting operator is <span class="math inline">\(\hat A\hat B\)</span>, because the rightmost operator acts first. Reversing the order gives <span class="math inline">\(\hat B\hat A\)</span>. These two actions need not agree. The <strong>commutator</strong> measures their difference:</p>
 <p><span id="eq-zeqnnum285812"><span class="math display">\[
 \left[ {\hat A,\hat B} \right] \equiv \hat A\hat B - \hat B\hat A
 \tag{4.1}\]</span></span></p>
-<p>If <span class="math inline">\(\left[ {\hat A,\hat B} \right] = 0\)</span>, operators <span class="math inline">\(\hat A\)</span> and <span class="math inline">\(\hat B\)</span> <strong>commute</strong>, or are <strong>compatible</strong>. If <span class="math inline">\(\left[ {\hat A,\hat B} \right] \ne 0\)</span>, <span class="math inline">\(\hat A\)</span> and <span class="math inline">\(\hat B\)</span> are incompatible. Definition <a href="#eq-zeqnnum285812" class="quarto-xref">Equation&nbsp;<span>4.1</span></a> gives the identities</p>
+<p>If <span class="math inline">\([\hat A,\hat B]=0\)</span>, the operators <strong>commute</strong>. For observables, we call them <strong>compatible</strong>. If <span class="math inline">\([\hat A,\hat B]\ne0\)</span>, the observables are <strong>incompatible</strong>. These statements concern the operators on the whole state space; a commutator may still annihilate a particular state.</p>
+<p>Following the definition <a href="#eq-zeqnnum285812" class="quarto-xref">Equation&nbsp;<span>4.1</span></a> we can derive the following identities. Here <span class="math inline">\(c\)</span> is a scalar, understood as <span class="math inline">\(c\hat I\)</span> when it appears alongside an operator, and <span class="math inline">\(m,n\)</span> are nonnegative integers:</p>
 <p><span id="eq-zeqnnum530166"><span class="math display">\[
 \left[ {\hat A,\hat B} \right] = - \left[ {\hat B,\hat A} \right], \qquad  \qquad  \left[ {c\hat A,\hat B} \right] = \left[ {\hat A,c\hat B} \right] = c\left[ {\hat A,\hat B} \right]
 \tag{4.2}\]</span></span></p>
@@ -288,7 +303,10 @@ window.Quarto = {
 <p><span id="eq-zeqnnum842864"><span class="math display">\[
 \left[ {\hat A\hat B,\hat C} \right] = \hat A\left[ {\hat B,\hat C} \right] + \left[ {\hat A,\hat C} \right]\hat B, \qquad  \qquad  \left[ {\hat A,\hat B\hat C} \right] = \hat B\left[ {\hat A,\hat C} \right] + \left[ {\hat A,\hat B} \right]\hat C
 \tag{4.5}\]</span></span></p>
-<p>For examples, return to the two-state spin system. Using the matrices of <span class="math inline">\({\hat S_n}\)</span> in <a href="03-quantum-measurement.html#eq-zeqnnum931030" class="quarto-xref">Equation&nbsp;<span>3.44</span></a>, one readily proves</p>
+<p>The product identities in <a href="#eq-zeqnnum842864" class="quarto-xref">Equation&nbsp;<span>4.5</span></a> are especially useful: they let us break a commutator of a product into simpler pieces without changing the operator order.</p>
+<section id="spin-incompatible-components-compatible-magnitude" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="spin-incompatible-components-compatible-magnitude"><span class="header-section-number">4.1.1</span> Spin: incompatible components, compatible magnitude</h3>
+<p>Return to the two-state spin system. Multiplying the matrices of <span class="math inline">\(\hat S_n\)</span> in <a href="03-quantum-measurement.html#eq-zeqnnum931030" class="quarto-xref">Equation&nbsp;<span>3.42</span></a> gives</p>
 <p><span id="eq-zeqnnum232011"><span class="math display">\[
 \left[ {{{\hat S}_x},{{\hat S}_y}} \right] = i\hbar {\hat S_z},\quad \qquad  \left[ {{{\hat S}_y},{{\hat S}_z}} \right] = i\hbar {\hat S_x},\quad \qquad  \left[ {{{\hat S}_z},{{\hat S}_x}} \right] = i\hbar {\hat S_y}
 \tag{4.6}\]</span></span></p>
@@ -296,15 +314,22 @@ window.Quarto = {
 <p><span id="eq-zeqnnum743287"><span class="math display">\[
 \left[ {{{\hat S}_j},{{\hat S}_k}} \right] = i\hbar {\varepsilon _{jkl}}{\hat S_l}
 \tag{4.7}\]</span></span></p>
-<p>Here <span class="math inline">\({\varepsilon _{ijk}}\)</span> is the <strong>Levi-Civita symbol</strong>:</p>
-<p><img src="assets/image715.png" class="img-fluid" width="177"></p>
+<p>Here <span class="math inline">\(\varepsilon_{jkl}\)</span> is the <strong>Levi-Civita symbol</strong>, and a repeated index <span class="math inline">\(l\)</span> is summed over <span class="math inline">\(1,2,3\)</span>. These indices correspond to <span class="math inline">\(x,y,z\)</span>. The diagram below is a mnemonic for the signs:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image715.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="177"></p>
+</figure>
+</div>
 <p>The indices <span class="math inline">\(j,k,l\)</span> are drawn from 1, 2, and 3. An ordering <span class="math inline">\(j,k,l\)</span> matching the left diagram gives <span class="math inline">\({\varepsilon _{jkl}} = + 1\)</span>; one matching the right gives <span class="math inline">\({\varepsilon _{jkl}} = - 1\)</span>. If any indices coincide, <span class="math inline">\({\varepsilon _{jkl}} = 0\)</span>. For example, <span class="math inline">\({\varepsilon _{312}} = {\varepsilon _{231}} = 1,\;\;{\varepsilon _{132}} = {\varepsilon _{213}} = - 1,\;\;{\varepsilon _{133}} = 0\)</span>.</p>
-<p>We will see that <a href="#eq-zeqnnum743287" class="quarto-xref">Equation&nbsp;<span>4.7</span></a> also holds for the components of orbital angular momentum <span class="math inline">\(L\equiv r\times p\)</span>, making it a general angular-momentum commutation relation.</p>
-<p>Define new observables:</p>
+<p>Each commutator produces the third component, with a sign fixed by the cyclic order <span class="math inline">\(x\to y\to z\to x\)</span>. We will see that the same algebra holds for orbital angular momentum <span class="math inline">\(\mathbf L=\mathbf r\times\mathbf p\)</span>. It is a general feature of angular momentum, rather than a peculiarity of two-state matrices.</p>
+<p>Although the spin components do not commute with one another, their squared magnitude can be definite together with any one component. To see this for spin <span class="math inline">\(1/2\)</span>, define</p>
 <p><span id="eq-ch04-p0638"><span class="math display">\[
-\begin{array}{c} \hat S_x^2 \equiv {{\hat S}_x}{{\hat S}_x}, &amp; \hat S_y^2 \equiv {{\hat S}_y}{{\hat S}_y}, &amp; \hat S_z^2 \equiv {{\hat S}_z}{{\hat S}_z}\\ {{{\bf{\hat S}}}^2} \equiv S_x^2 + S_y^2 + S_z^2 \end{array}
+\hat S_x^2\equiv\hat S_x\hat S_x,\qquad
+\hat S_y^2\equiv\hat S_y\hat S_y,\qquad
+\hat S_z^2\equiv\hat S_z\hat S_z,\qquad
+\mathbf{\hat S}^2\equiv\hat S_x^2+\hat S_y^2+\hat S_z^2
 \tag{4.8}\]</span></span></p>
-<p>These are the squared components and the squared magnitude of angular momentum. The matrices <a href="03-quantum-measurement.html#eq-zeqnnum931030" class="quarto-xref">Equation&nbsp;<span>3.44</span></a> of <span class="math inline">\({\hat S_{x,y,z}}\)</span> give</p>
+<p>These are the squared components and the squared magnitude of angular momentum. The matrices <a href="03-quantum-measurement.html#eq-zeqnnum931030" class="quarto-xref">Equation&nbsp;<span>3.42</span></a> of <span class="math inline">\({\hat S_{x,y,z}}\)</span> give</p>
 <p><span id="eq-ch04-p0640"><span class="math display">\[
 \hat S_x^2 = \hat S_y^2 = \hat S_z^2 = \frac{{{\hbar ^2}}}{4}\left( {\begin{array}{*{20}{c}} 1&amp;0\\ 0&amp;1 \end{array}} \right) = \frac{{{\hbar ^2}}}{4}\hat I
 \tag{4.9}\]</span></span></p>
@@ -319,14 +344,15 @@ window.Quarto = {
 <p><span id="eq-ch04-p0645"><span class="math display">\[
 {{\bf{S}}^2} = \frac{3}{4}{\hbar ^2}
 \tag{4.12}\]</span></span></p>
-<p>It may seem surprising that the largest component of spin <span class="math inline">\({\bf{\hat S}}\)</span> along any direction is <span class="math inline">\({\hbar \mathord{\left/ {\vphantom {\hbar 2}} \right. \kern-1.2pt } 2}\)</span>, yet <span class="math inline">\({{\bf{\hat S}}^2}\)</span> equals <span class="math inline">\({{3{\hbar ^2}} \mathord{\left/ {\vphantom {{3{\hbar ^2}} 4}} \right. \kern-1.2pt } 4}\)</span>, not <span class="math inline">\({{{\hbar ^2}} \mathord{\left/ {\vphantom {{{\hbar ^2}} 4}} \right. \kern-1.2pt } 4}\)</span>. This is a characteristic feature of angular momentum.</p>
-<p>The matrix of <span class="math inline">\({{\bf{\hat S}}^2}\)</span> is two-dimensional but has a single eigenvalue, which is therefore doubly degenerate. Any orthogonal pair of two-component vectors, such as <span class="math inline">\(\left\{ {\left\vert  U \right\rangle {\rm{,}}\left\vert  D \right\rangle } \right\},\;\;\left\{ {\left\vert  R \right\rangle {\rm{,}}\left\vert  L \right\rangle } \right\}\)</span> or <span class="math inline">\(\left\{ {\left\vert  I \right\rangle {\rm{,}}\left\vert  O \right\rangle } \right\}\)</span>, can serve as its eigenvectors. In an eigenstate of any component <span class="math inline">\({\hat S_n}\)</span>, both <span class="math inline">\({\hat S_n}\)</span> and <span class="math inline">\({{\bf{\hat S}}^2}\)</span> can be definite.</p>
+<p>A classical arrow aligned with <span class="math inline">\(z\)</span> has no transverse components. Quantum spin behaves differently. In <span class="math inline">\(\lvert U\rangle\)</span>, <span class="math inline">\(S_z=\hbar/2\)</span> is definite, while a measurement of either <span class="math inline">\(S_x\)</span> or <span class="math inline">\(S_y\)</span> yields <span class="math inline">\(\pm\hbar/2\)</span> with equal probability. Their means vanish, but their mean squares are <span class="math inline">\(\hbar^2/4\)</span>. Thus the definite squared magnitude is <span class="math inline">\(3\hbar^2/4\)</span>, even though the largest possible component along any axis is only <span class="math inline">\(\hbar/2\)</span>. The transverse fluctuations explain why the classical-arrow picture falls short.</p>
+<p>Because <span class="math inline">\(\mathbf{\hat S}^2\)</span> is proportional to the identity in a two-dimensional space, its single eigenvalue is <strong>doubly degenerate</strong>. Every spin state is its eigenstate. Any orthonormal pair—<span class="math inline">\(\{\lvert U\rangle,\lvert D\rangle\}\)</span>, <span class="math inline">\(\{\lvert R\rangle,\lvert L\rangle\}\)</span>, or <span class="math inline">\(\{\lvert I\rangle,\lvert O\rangle\}\)</span>—therefore supplies an eigenbasis for <span class="math inline">\(\mathbf{\hat S}^2\)</span>. The eigenbasis of <span class="math inline">\(\hat S_n\)</span> is also the eigenbasis of <span class="math inline">\(\mathbf{\hat S}^2\)</span>. This gives our first concrete example of a common eigenbasis.</p>
+</section>
 </section>
 <section id="common-eigenstates-of-compatible-observables" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="common-eigenstates-of-compatible-observables"><span class="header-section-number">4.2</span> Common eigenstates of compatible observables</h2>
-<p>If <span class="math inline">\(\hat A\)</span> is definite, the state must be an eigenstate of <span class="math inline">\(\hat A\)</span>. If <span class="math inline">\(\hat B\)</span> is also definite, it must also be an eigenstate of <span class="math inline">\(\hat B\)</span>, hence a common eigenstate of <span class="math inline">\(\hat A,\hat B\)</span>. If every eigenstate of <span class="math inline">\(\hat A\)</span> is an eigenstate of <span class="math inline">\(\hat B\)</span> and conversely, the observables commute.</p>
+<p>Two observables have simultaneous definite values in a state precisely when that state is an eigenstate of both. A single common eigenstate answers a question about one preparation. A <strong>complete common eigenbasis</strong> answers a stronger question: can the whole state space be described using states in which both observables are definite? The next two theorems connect that question to commutation.</p>
 <p><strong>Theorem 4.1.</strong> Two observables with a complete common eigenbasis commute.</p>
-<p><strong>Proof.</strong> Let <span class="math inline">\(\left\{ {\left\vert  i \right\rangle } \right\}\)</span> be a complete common eigenbasis of <span class="math inline">\(\hat A,\hat B\)</span>. For any basis vector <span class="math inline">\(\left\vert  i \right\rangle\)</span>,</p>
+<p><strong>Proof.</strong> Let <span class="math inline">\(\left\{ {\left\vert  i \right\rangle } \right\}\)</span> be a complete common eigenbasis of <span class="math inline">\(\hat A\)</span> and <span class="math inline">\(\hat B\)</span>. For any basis vector <span class="math inline">\(\left\vert  i \right\rangle\)</span>,</p>
 <p><span id="eq-ch04-p0652"><span class="math display">\[
 \hat A\left\vert  i \right\rangle = {a_i}\left\vert  i \right\rangle ,\quad \hat B\left\vert  i \right\rangle = {b_i}\left\vert  i \right\rangle
 \tag{4.13}\]</span></span></p>
@@ -339,11 +365,16 @@ window.Quarto = {
 \tag{4.15}\]</span></span></p>
 <p>Hence <span class="math inline">\(\hat A\hat B\vert i\rangle = \hat B\hat A\vert i\rangle\)</span>. Since <span class="math inline">\(\left\{ {\left\vert  i \right\rangle } \right\}\)</span> is complete, every vector can be expanded in it. For arbitrary <span class="math inline">\(\vert \psi\rangle = \sum\nolimits_i {{\psi _i}\vert i\rangle }\)</span>,</p>
 <p><span id="eq-ch04-p0657"><span class="math display">\[
-\hat A\hat B\vert \psi\rangle = \sum\limits_i {{\psi _i}\hat A\hat B\vert i\rangle } = \sum\limits_i {{\psi _i}\hat B\hat A\vert i\rangle } = \hat B\hat A\sum\limits_i {{\psi _i}\hat B\hat A\vert i\rangle } = \hat B\hat A\vert \psi\rangle
+\hat A\hat B\lvert\psi\rangle
+=\sum_i\psi_i\hat A\hat B\lvert i\rangle
+=\sum_i\psi_i\hat B\hat A\lvert i\rangle
+=\hat B\hat A\sum_i\psi_i\lvert i\rangle
+=\hat B\hat A\lvert\psi\rangle
 \tag{4.16}\]</span></span></p>
 <p>Thus <span class="math inline">\(\hat A\hat B = \hat B\hat A\)</span>.</p>
-<p>The contrapositive also holds: incompatible observables have no complete common eigenbasis. For spin 1/2, <span class="math inline">\({\hat \sigma _z}\)</span> and <span class="math inline">\({\hat \sigma _x}\)</span> do not commute, as in <a href="#eq-zeqnnum232011" class="quarto-xref">Equation&nbsp;<span>4.6</span></a>, and have no common eigenstate. A definite <span class="math inline">\({\hat \sigma _z}\)</span> requires an eigenstate of <span class="math inline">\({\hat \sigma _z}\)</span>, for example <span class="math inline">\(\left\vert  U \right\rangle\)</span>. But <span class="math inline">\(\left\vert  U \right\rangle\)</span> is not an eigenstate of <span class="math inline">\({\hat \sigma _x}\)</span>, so <span class="math inline">\({\hat \sigma _x}\)</span> is indefinite. Similarly, a definite <span class="math inline">\({\hat \sigma _x}\)</span> excludes a definite <span class="math inline">\({\hat \sigma _z}\)</span>.</p>
-<p>Simultaneous measurement can be difficult. Alternating measurements and finding that each observable’s result remains unchanged establishes simultaneous definite values.</p>
+<p>The contrapositive is useful: incompatible observables have no complete common eigenbasis. They may nevertheless share some eigenstates; noncommutation alone does not rule that out.</p>
+<p>For spin <span class="math inline">\(1/2\)</span>, <span class="math inline">\(\hat S_z\)</span> and <span class="math inline">\(\hat S_x\)</span> (equivalently, <span class="math inline">\(\hat\sigma_z\)</span> and <span class="math inline">\(\hat\sigma_x\)</span>) have no common eigenstate at all. In <span class="math inline">\(\lvert U\rangle\)</span>, the <span class="math inline">\(z\)</span> component is definite, but an <span class="math inline">\(x\)</span> measurement gives either outcome with equal probability. Preparing a definite <span class="math inline">\(x\)</span> component likewise leaves the <span class="math inline">\(z\)</span> component uncertain.</p>
+<p>This has an operational meaning. In a common eigenstate, ideal measurements of <span class="math inline">\(\hat A\)</span> and <span class="math inline">\(\hat B\)</span> return their respective eigenvalues and leave the state unchanged, so repeating them in either order preserves both results. The spin example at the start of the chapter fails this test.</p>
 <p><strong>Theorem 4.2.</strong> If <span class="math inline">\([\hat A,\hat B] = 0\)</span> and <span class="math inline">\(\hat A\)</span> has nondegenerate eigenvalues, every eigenstate of <span class="math inline">\(\hat A\)</span> is also an eigenstate of <span class="math inline">\(\hat B\)</span>.</p>
 <p><strong>Proof.</strong> Let <span class="math inline">\(\left\{ {\left\vert  {{a_j}} \right\rangle } \right\}\)</span> be the orthonormal eigenstates of <span class="math inline">\(\hat A\)</span>:</p>
 <p><span id="eq-ch04-p0664"><span class="math display">\[
@@ -353,75 +384,72 @@ window.Quarto = {
 <p><span id="eq-zeqnnum209049"><span class="math display">\[
 \hat A\left( {\hat B\left\vert  {{a_j}} \right\rangle } \right) = \hat B\left( {\hat A\left\vert  {{a_j}} \right\rangle } \right) = \hat B{a_j}\left\vert  {{a_j}} \right\rangle = {a_j}\left( {\hat B\left\vert  {{a_j}} \right\rangle } \right)
 \tag{4.18}\]</span></span></p>
-<p>Thus <span class="math inline">\(\hat B\vert {a_j}\rangle\)</span> is an eigenstate of <span class="math inline">\(\hat A\)</span> with eigenvalue <span class="math inline">\({a_j}\)</span>. Because eigenvalue <span class="math inline">\({a_j}\)</span> of <span class="math inline">\(\hat A\)</span> is nondegenerate, <span class="math inline">\(\hat B\vert {a_j}\rangle\)</span> and <span class="math inline">\(\vert {a_j}\rangle\)</span> must be linearly dependent. Write</p>
+<p>Equation <a href="#eq-zeqnnum209049" class="quarto-xref">Equation&nbsp;<span>4.18</span></a> says that <span class="math inline">\(\hat B\lvert a_j\rangle\)</span> remains in the eigenspace of <span class="math inline">\(\hat A\)</span> with eigenvalue <span class="math inline">\(a_j\)</span>. Nondegeneracy forces it to be proportional to <span class="math inline">\(\lvert a_j\rangle\)</span>,</p>
 <p><span id="eq-ch04-p0668"><span class="math display">\[
 \hat B\left\vert  {{a_j}} \right\rangle = {b_j}\left\vert  {{a_j}} \right\rangle
 \tag{4.19}\]</span></span></p>
-<p>Here <span class="math inline">\({b_j}\)</span> is constant. This is the eigenvalue equation of <span class="math inline">\(\hat B\)</span>: <span class="math inline">\(\vert {a_j}\rangle\)</span> is an eigenstate of <span class="math inline">\(\hat B\)</span>, and <span class="math inline">\({b_j}\)</span> is the eigenvalue associated with <span class="math inline">\(\vert {a_j}\rangle\)</span>. Therefore <span class="math inline">\(\vert {a_j}\rangle\)</span> is a common eigenstate of <span class="math inline">\(\hat A\)</span> and <span class="math inline">\(\hat B\)</span>. To label both observables symmetrically, rename <span class="math inline">\(\vert {a_j}\rangle\)</span> as <span class="math inline">\(\vert {a_j},{b_j}\rangle\)</span>.</p>
+<p>This is exactly the eigenvalue equation for <span class="math inline">\(\hat B\)</span>, so <span class="math inline">\(\lvert a_j\rangle\)</span> is a common eigenstate. Because <span class="math inline">\(\hat B\)</span> is Hermitian, <span class="math inline">\(b_j\)</span> is real. We can write <span class="math inline">\(\lvert a_j\rangle\)</span> as <span class="math inline">\(\lvert a_j,b_j\rangle\)</span> to display both definite values:</p>
 <p><span id="eq-zeqnnum348929"><span class="math display">\[
 \begin{array}{l} \hat A\left\vert  {{a_j},{b_j}} \right\rangle = {a_j}\left\vert  {{a_j},{b_j}} \right\rangle \\ \hat B\left\vert  {{a_j},{b_j}} \right\rangle = {b_j}\left\vert  {{a_j},{b_j}} \right\rangle \end{array}
 \tag{4.20}\]</span></span></p>
+<p><strong>Theorem 4.2.</strong> Two Hermitian operators commute if and only if they admit a complete common eigenbasis. Nondegeneracy made the proof simple: an eigenspace contained only one independent eigenvector. What happens when an eigenvalue labels several states? Commutation makes <a href="#eq-zeqnnum209049" class="quarto-xref">Equation&nbsp;<span>4.18</span></a> still valid and keeps <span class="math inline">\(\hat B\)</span> within each eigenspace of <span class="math inline">\(\hat A\)</span>, thus diagonalizing <span class="math inline">\(\hat B\)</span> within each such subspace gives a common orthonormal eigenbasis. Thus, in finite dimensions, <strong>two Hermitian operators commute if and only if they admit a complete common eigenbasis</strong>.</p>
 </section>
-<section id="types-of-common-eigenstates" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="types-of-common-eigenstates"><span class="header-section-number">4.3</span> Types of common eigenstates</h2>
-<p>We describe three patterns of compatibility. They may seem abstract initially; return to them after encountering more concrete examples.</p>
-<ul>
-<li><strong>Nondegenerate case.</strong> In Figure 4.1, each dot represents an eigenstate <span class="math inline">\(\vert {{a_j},{b_j}}\rangle\)</span>.</li>
-</ul>
+<section id="cases-of-common-eigenstates-for-commuting-observables" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="cases-of-common-eigenstates-for-commuting-observables"><span class="header-section-number">4.3</span> Cases of common eigenstates for commuting observables</h2>
+<p>The following tables show how the eigenvalues label that basis. Read a row as a fixed value of <span class="math inline">\(A\)</span>, a column as a fixed value of <span class="math inline">\(B\)</span>, and each dot as one common basis state.</p>
+<section id="when-either-value-identifies-the-state" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="when-either-value-identifies-the-state"><span class="header-section-number">4.3.1</span> When either value identifies the state</h3>
+<p>In Figure 4.1, both observables have nondegenerate eigenvalues. Each row and each column contains exactly one dot.</p>
+<!-- Edit this merged-cell table in source mode. -->
+<div class="eigenstate-table">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
 </colgroup>
 <thead>
 <tr class="header">
 <th></th>
 <th></th>
-<th><span class="math inline">\(\hat{B}\)</span></th>
+<th colspan="4"><span class="math inline">\(\hat{B}\)</span></th>
+</tr>
+<tr class="even">
 <th></th>
 <th></th>
-<th></th>
+<th><span class="math inline">\({b}_{1}\)</span></th>
+<th><span class="math inline">\({b}_{2}\)</span></th>
+<th><span class="math inline">\({b}_{3}\)</span></th>
+<th><span class="math inline">\({b}_{4}\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td></td>
-<td></td>
-<td><span class="math inline">\({b}_{1}\)</span></td>
-<td><span class="math inline">\({b}_{2}\)</span></td>
-<td><span class="math inline">\({b}_{3}\)</span></td>
-<td><span class="math inline">\({b}_{4}\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\hat{A}\)</span></td>
+<td rowspan="4"><span class="math inline">\(\hat{A}\)</span></td>
 <td><span class="math inline">\({a}_{1}\)</span></td>
 <td>●</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
-<td></td>
+<tr class="even">
 <td><span class="math inline">\({a}_{2}\)</span></td>
 <td></td>
 <td>●</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
-<td></td>
+<tr class="odd">
 <td><span class="math inline">\({a}_{3}\)</span></td>
 <td></td>
 <td></td>
 <td>●</td>
 <td></td>
 </tr>
-<tr class="odd">
-<td></td>
+<tr class="even">
 <td><span class="math inline">\({a}_{4}\)</span></td>
 <td></td>
 <td></td>
@@ -430,21 +458,28 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
+</div>
 <div class="source-caption">
 <p>Figure 4.1. Nondegenerate common eigenstates.</p>
 </div>
-<ul>
-<li><p>Each <span class="math inline">\(\vert {{a_j},{b_j}}\rangle\)</span> corresponds uniquely to eigenvalue <span class="math inline">\({a_j}\)</span> of <span class="math inline">\(\hat A\)</span> and eigenvalue <span class="math inline">\({b_j}\)</span> of <span class="math inline">\(\hat B\)</span>.</p></li>
-<li><p><strong>Example.</strong> An electron has magnetic moment <span class="math inline">\({\bf{\mu }} = - {{2{\mu _B}{\bf{S}}} \mathord{\left/ {\vphantom {{2{\mu _B}{\bf{S}}} \hbar }} \right. \kern-1.2pt } \hbar }\)</span>. Its energy in a magnetic field of magnitude <span class="math inline">\({B}_{0}\)</span> along <span class="math inline">\(z\)</span> is</p></li>
-</ul>
+<p>Either label <span class="math inline">\(a_j\)</span> or <span class="math inline">\(b_j\)</span> uniquely identifies the corresponding basis state <span class="math inline">\(\lvert a_j,b_j\rangle\)</span>.</p>
+<p><strong>Example: spin in a magnetic field.</strong> In the spin-only model, an electron has magnetic moment <span class="math inline">\(\mathbf{\hat\mu}=-2\mu_B\mathbf{\hat S}/\hbar\)</span>. Its energy in a nonzero magnetic field <span class="math inline">\(B_0\)</span> along <span class="math inline">\(z\)</span> is</p>
 <p><span id="eq-ch04-p0750"><span class="math display">\[
 \hat H = - {\bf{\hat \mu }} \cdot {\bf{B}} = - {\hat \mu _z}{B_0} = 2\frac{{{\mu _B}}}{\hbar }{B_0}{\hat S_z}
 \tag{4.21}\]</span></span></p>
 <p>Clearly <span class="math inline">\(\hat H\)</span> and <span class="math inline">\({\hat S_z}\)</span> commute. Both have nondegenerate eigenvalues, and their complete common eigenbasis is <span class="math inline">\(\left\{ {\vert U\rangle ,\vert D\rangle } \right\}\)</span>.</p>
-<ul>
-<li><strong>Degenerate case.</strong> Eigenvalues of <span class="math inline">\(\hat A\)</span> may be degenerate. In Figure 4.2, the number of eigenstates (dots) belonging to an eigenvalue is its degeneracy.</li>
-</ul>
+</section>
+<section id="resolving-degeneracy-with-additional-labels" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="resolving-degeneracy-with-additional-labels"><span class="header-section-number">4.3.2</span> Resolving degeneracy with additional labels</h3>
+<p>With degeneracy, one measurement value identifies a subspace rather than a unique state. Figure 4.2 shows the number of independent eigenstates belonging to each eigenvalue of <span class="math inline">\(\hat A\)</span>.</p>
+<!-- Edit this merged-cell table in source mode. -->
+<div class="eigenstate-table">
 <table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Operator</th>
@@ -454,70 +489,65 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(\hat{A}\)</span></td>
+<td rowspan="4"><span class="math inline">\(\hat{A}\)</span></td>
 <td><span class="math inline">\({a}_{1}\)</span></td>
 <td>●●●●</td>
 </tr>
 <tr class="even">
-<td></td>
 <td><span class="math inline">\({a}_{2}\)</span></td>
 <td>●●●</td>
 </tr>
 <tr class="odd">
-<td></td>
 <td><span class="math inline">\({a}_{3}\)</span></td>
 <td>●●●</td>
 </tr>
 <tr class="even">
-<td></td>
 <td><span class="math inline">\({a}_{4}\)</span></td>
 <td>●</td>
 </tr>
 </tbody>
 </table>
+</div>
 <div class="source-caption">
 <p>Figure 4.2. Degenerate eigenvalues.</p>
 </div>
-<p>For an eigenvalue of <span class="math inline">\(\hat A\)</span> with degeneracy <span class="math inline">\(n\)</span>, we can construct <span class="math inline">\(n\)</span> mutually orthogonal eigenstates. Orthogonal states can be distinguished by a single measurement of a suitable observable. Suppose <span class="math inline">\(\hat B\)</span> commutes with <span class="math inline">\(\hat A\)</span>, and these <span class="math inline">\(n\)</span> states are also eigenstates of <span class="math inline">\(\hat B\)</span> with distinct eigenvalues of <span class="math inline">\(\hat B\)</span>. The eigenvalues of <span class="math inline">\(\hat A\)</span> and <span class="math inline">\(\hat B\)</span> then jointly identify a unique common eigenstate <span class="math inline">\(\vert {{a_j},{b_l}}\rangle\)</span>, as in Figure 4.3. The degeneracy of eigenvalues <span class="math inline">\({b_2},{b_{3,}}{b_4}\)</span> of <span class="math inline">\(\hat B\)</span> is resolved by measuring <span class="math inline">\(\hat A\)</span>.</p>
+<p>An eigenvalue of <span class="math inline">\(\hat A\)</span> with degeneracy <span class="math inline">\(n\)</span> has an <span class="math inline">\(n\)</span>-dimensional eigenspace. Choose <span class="math inline">\(n\)</span> orthonormal states within it. If a commuting observable <span class="math inline">\(\hat B\)</span> has distinct eigenvalues on a common eigenbasis of this subspace, measuring <span class="math inline">\(B\)</span> distinguishes those states without losing the definite value of <span class="math inline">\(A\)</span>.</p>
+<p>In Figure 4.3, the pair <span class="math inline">\((a_j,b_l)\)</span> identifies one dot (state), even though neither label alone always does. For example, <span class="math inline">\(a_1\)</span> labels four states; measuring <span class="math inline">\(B\)</span> distinguishes them. Conversely, <span class="math inline">\(b_4\)</span> labels three states; measuring <span class="math inline">\(A\)</span> distinguishes them.</p>
+<!-- Edit this merged-cell table in source mode. -->
+<div class="eigenstate-table">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
 </colgroup>
 <thead>
 <tr class="header">
 <th></th>
 <th></th>
-<th><span class="math inline">\(\hat{B}\)</span></th>
+<th colspan="7"><span class="math inline">\(\hat{B}\)</span></th>
+</tr>
+<tr class="even">
 <th></th>
 <th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
+<th><span class="math inline">\({b}_{1}\)</span></th>
+<th><span class="math inline">\({b}_{2}\)</span></th>
+<th><span class="math inline">\({b}_{3}\)</span></th>
+<th><span class="math inline">\({b}_{4}\)</span></th>
+<th><span class="math inline">\({b}_{5}\)</span></th>
+<th><span class="math inline">\({b}_{6}\)</span></th>
+<th><span class="math inline">\({b}_{7}\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td></td>
-<td></td>
-<td><span class="math inline">\({b}_{1}\)</span></td>
-<td><span class="math inline">\({b}_{2}\)</span></td>
-<td><span class="math inline">\({b}_{3}\)</span></td>
-<td><span class="math inline">\({b}_{4}\)</span></td>
-<td><span class="math inline">\({b}_{5}\)</span></td>
-<td><span class="math inline">\({b}_{6}\)</span></td>
-<td><span class="math inline">\({b}_{7}\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\hat{A}\)</span></td>
+<td rowspan="4"><span class="math inline">\(\hat{A}\)</span></td>
 <td><span class="math inline">\({a}_{1}\)</span></td>
 <td>●</td>
 <td>●</td>
@@ -527,8 +557,7 @@ window.Quarto = {
 <td>●</td>
 <td></td>
 </tr>
-<tr class="odd">
-<td></td>
+<tr class="even">
 <td><span class="math inline">\({a}_{2}\)</span></td>
 <td></td>
 <td>●</td>
@@ -538,8 +567,7 @@ window.Quarto = {
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
-<td></td>
+<tr class="odd">
 <td><span class="math inline">\({a}_{3}\)</span></td>
 <td></td>
 <td></td>
@@ -549,8 +577,7 @@ window.Quarto = {
 <td></td>
 <td>●</td>
 </tr>
-<tr class="odd">
-<td></td>
+<tr class="even">
 <td><span class="math inline">\({a}_{4}\)</span></td>
 <td></td>
 <td></td>
@@ -562,52 +589,51 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
+</div>
 <div class="source-caption">
 <p>Figure 4.3. Resolving degeneracy with a second observable.</p>
 </div>
-<p><strong>Example.</strong> The squared orbital angular momentum <span class="math inline">\({{\bf{\hat L}}^2}\)</span> and its <span class="math inline">\(z\)</span> component <span class="math inline">\({\hat L_z}\)</span> (or a component along any chosen direction) commute. Their complete common eigenbasis is <span class="math inline">\(\left\vert  {l,m} \right\rangle\)</span>:</p>
+<p><strong>Example: orbital angular momentum.</strong> For orbital motion, <span class="math inline">\(\mathbf{\hat L}^2\)</span> commutes with <span class="math inline">\(\hat L_z\)</span>. Their common angular eigenstates are <span class="math inline">\(\lvert l,m\rangle\)</span>:</p>
 <p><span id="eq-ch04-p0890"><span class="math display">\[
 \begin{array}{l} {{{\bf{\hat L}}}^2}\left\vert  {l,m} \right\rangle = l(l + 1){\hbar ^2}\left\vert  {l,m} \right\rangle , &amp; &amp; l = 0,1,2 \cdots \\ {{\hat L}_z}\left\vert  {l,m} \right\rangle = m\hbar \left\vert  {l,m} \right\rangle , &amp; &amp; m = - l, - l + 1, \cdots ,l &amp; &amp; \end{array}
 \tag{4.22}\]</span></span></p>
+<!-- Edit this merged-cell table in source mode. -->
+<div class="eigenstate-table">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
 </colgroup>
 <thead>
 <tr class="header">
 <th></th>
 <th></th>
-<th><span class="math inline">\({\hat{L}}_{z}\)</span> quantum number <span class="math inline">\(m\)</span></th>
+<th colspan="7"><span class="math inline">\(\hat L_z\)</span>: quantum number <span class="math inline">\(m\)</span></th>
+</tr>
+<tr class="even">
 <th></th>
 <th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
+<th><span class="math inline">\(\cdots\)</span></th>
+<th><span class="math inline">\(-2\)</span></th>
+<th><span class="math inline">\(-1\)</span></th>
+<th><span class="math inline">\(0\)</span></th>
+<th><span class="math inline">\(1\)</span></th>
+<th><span class="math inline">\(2\)</span></th>
+<th><span class="math inline">\(\cdots\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td></td>
-<td></td>
-<td><span class="math inline">\(\cdots\)</span></td>
-<td><span class="math inline">\(-2\)</span></td>
-<td><span class="math inline">\(-1\)</span></td>
-<td><span class="math inline">\(0\)</span></td>
-<td><span class="math inline">\(1\)</span></td>
-<td><span class="math inline">\(2\)</span></td>
-<td><span class="math inline">\(\cdots\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\({\hat{L}}^{2}\)</span> quantum number <span class="math inline">\(l\)</span></td>
+<td rowspan="4"><p><span class="math inline">\(\hat L^2\)</span></p>
+<p>quantum</p>
+<p>number <span class="math inline">\(l\)</span></p></td>
 <td><span class="math inline">\(0\)</span></td>
 <td></td>
 <td></td>
@@ -617,8 +643,7 @@ window.Quarto = {
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
-<td></td>
+<tr class="even">
 <td><span class="math inline">\(1\)</span></td>
 <td></td>
 <td></td>
@@ -628,8 +653,7 @@ window.Quarto = {
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
-<td></td>
+<tr class="odd">
 <td><span class="math inline">\(2\)</span></td>
 <td></td>
 <td>●</td>
@@ -639,8 +663,7 @@ window.Quarto = {
 <td>●</td>
 <td></td>
 </tr>
-<tr class="odd">
-<td></td>
+<tr class="even">
 <td><span class="math inline">\(\vdots\)</span></td>
 <td><span class="math inline">\(\cdots\)</span></td>
 <td><span class="math inline">\(\cdots\)</span></td>
@@ -652,49 +675,47 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
+</div>
 <div class="source-caption">
 <p>Figure 4.4. Orbital angular-momentum quantum numbers.</p>
 </div>
-<p>If measuring <span class="math inline">\(\hat B\)</span> does not completely remove the degeneracy, a fixed combination <span class="math inline">\({a_j},{b_l}\)</span> may still label several states. In Figure 4.5, <span class="math inline">\(({a_{3,}}{b_7})\)</span> remains degenerate. We can seek another observable <span class="math inline">\(\hat C\)</span> commuting with both <span class="math inline">\(\hat A\)</span> and <span class="math inline">\(\hat B\)</span>. If <span class="math inline">\(\hat C\)</span> still fails to resolve the degeneracy, add <span class="math inline">\(\hat D\)</span>, and so on. Ultimately, a complete set of pairwise compatible observables <span class="math inline">\(\left\{ {\hat A,\hat B,\hat C \cdots } \right\}\)</span> removes it.</p>
+<p>For fixed <span class="math inline">\(l\)</span>, there are <span class="math inline">\(2l+1\)</span> allowed values of <span class="math inline">\(m\)</span>. The value of <span class="math inline">\(L^2\)</span> therefore leaves the orientation label unresolved, while <span class="math inline">\(L_z\)</span> supplies that label.</p>
+<p>Sometimes two labels still do not suffice. Figure 4.5 has three dots in the cell <span class="math inline">\((a_3,b_7)\)</span>: even knowing both values leaves a three-dimensional subspace. Then we need one more observable <span class="math inline">\(\hat C\)</span>, commuting with both <span class="math inline">\(\hat A\)</span> and <span class="math inline">\(\hat B\)</span>, to distinguish those states. Continue until each allowed combination of eigenvalues identifies a unique common basis state. Such a collection is a <strong>complete set of commuting observables</strong>.</p>
+<!-- Edit this merged-cell table in source mode. -->
+<div class="eigenstate-table">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
 </colgroup>
 <thead>
 <tr class="header">
 <th></th>
 <th></th>
-<th><span class="math inline">\(\hat{B}\)</span></th>
+<th colspan="7"><span class="math inline">\(\hat{B}\)</span></th>
+</tr>
+<tr class="even">
 <th></th>
 <th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
+<th><span class="math inline">\({b}_{1}\)</span></th>
+<th><span class="math inline">\({b}_{2}\)</span></th>
+<th><span class="math inline">\({b}_{3}\)</span></th>
+<th><span class="math inline">\({b}_{4}\)</span></th>
+<th><span class="math inline">\({b}_{5}\)</span></th>
+<th><span class="math inline">\({b}_{6}\)</span></th>
+<th><span class="math inline">\({b}_{7}\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td></td>
-<td></td>
-<td><span class="math inline">\({b}_{1}\)</span></td>
-<td><span class="math inline">\({b}_{2}\)</span></td>
-<td><span class="math inline">\({b}_{3}\)</span></td>
-<td><span class="math inline">\({b}_{4}\)</span></td>
-<td><span class="math inline">\({b}_{5}\)</span></td>
-<td><span class="math inline">\({b}_{6}\)</span></td>
-<td><span class="math inline">\({b}_{7}\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\hat{A}\)</span></td>
+<td rowspan="4"><span class="math inline">\(\hat{A}\)</span></td>
 <td><span class="math inline">\({a}_{1}\)</span></td>
 <td>●</td>
 <td>●</td>
@@ -704,8 +725,7 @@ window.Quarto = {
 <td>●</td>
 <td></td>
 </tr>
-<tr class="odd">
-<td></td>
+<tr class="even">
 <td><span class="math inline">\({a}_{2}\)</span></td>
 <td></td>
 <td>●</td>
@@ -715,8 +735,7 @@ window.Quarto = {
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
-<td></td>
+<tr class="odd">
 <td><span class="math inline">\({a}_{3}\)</span></td>
 <td></td>
 <td></td>
@@ -726,8 +745,7 @@ window.Quarto = {
 <td></td>
 <td>●●●</td>
 </tr>
-<tr class="odd">
-<td></td>
+<tr class="even">
 <td><span class="math inline">\({a}_{4}\)</span></td>
 <td></td>
 <td></td>
@@ -739,60 +757,58 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<div class="source-caption">
-<p>Figure 4.5. A complete set of commuting observables.</p>
 </div>
-<p>Theorem 2.11 states that the eigenvectors <span class="math inline">\(\{ \vert {a_1}\rangle ,\vert {a_2}\rangle \cdots \vert {a_N}\rangle \}\)</span> of an observable <span class="math inline">\(\hat A\)</span> form a complete basis when its eigenvalues are nondegenerate. Even with degeneracy, a set of compatible observables <span class="math inline">\(\left\{ {\hat A,\;\hat B,\;\hat C,\; \cdots } \right\}\)</span> can be found such that each eigenvalue combination <span class="math inline">\({\rm{(}}{a_j},{b_l},{c_u}, \cdots {\rm{)}}\)</span> uniquely identifies a common eigenstate <span class="math inline">\(\left\vert  {{a_j},{b_l},{c_u}, \cdots } \right\rangle\)</span>. These common eigenstates form a complete basis.</p>
+<div class="source-caption">
+<p>Figure 4.5. Residual degeneracy: two commuting observables need not form a complete set.</p>
+</div>
+<p>Degeneracy does not prevent a Hermitian operator from having a complete orthonormal eigenbasis; it prevents its eigenvalue alone from uniquely labeling the basis vectors. Additional commuting observables supply the missing labels. For a complete set <span class="math inline">\(\{\hat A,\hat B,\hat C,\ldots\}\)</span>, the common eigenstates <span class="math inline">\(\lvert a_j,b_l,c_u,\ldots\rangle\)</span> satisfy orthonormality and completeness:</p>
 <p><span id="eq-ch04-p1092"><span class="math display">\[
 \left\langle {{{a_i},{b_l},{c_u}{\rm{,}} \cdots }} \mathrel{\left \vert  {\vphantom {{{a_i},{b_l},{c_u}{\rm{,}} \cdots } {{a_j},{b_m},{c_v}, \cdots }}} \right. \kern-1.2pt } {{{a_j},{b_m},{c_v}, \cdots }} \right\rangle = {\delta _{ij}}{\delta _{lm}}{\delta _{uv}} \cdots
 \tag{4.23}\]</span></span></p>
 <p><span id="eq-ch04-p1093"><span class="math display">\[
 \sum\limits_i {\sum\limits_l {\sum\limits_u {\sum\limits_ \cdots {\left\vert  {{a_i},{b_l},{c_u}{\rm{,}} \cdots } \right\rangle \left\langle {{a_i},{b_l},{c_u}{\rm{,}} \cdots } \right\vert } } } } = \hat I
 \tag{4.24}\]</span></span></p>
-<p><strong>Example.</strong> Neglecting spin in hydrogen, electron energy, squared orbital angular momentum, and one angular-momentum component commute. Their common eigenstates are <span class="math inline">\(\left\vert  {n,l,m} \right\rangle\)</span>, where <span class="math inline">\(n,l,m\)</span> label their eigenvalues. Each quantum number alone is degenerate, but all three together specify a unique eigenstate. The states <span class="math inline">\(\left\vert  {n,l,m} \right\rangle\)</span> form a complete basis; their superpositions describe any orbital quantum state of the electron.</p>
-<ul>
-<li><p>There is another form of compatibility.</p></li>
-<li><p><strong>Independent spaces.</strong> <span class="math inline">\(\hat A\)</span> and <span class="math inline">\(\hat B\)</span> belong to different vector spaces; their values are independent.</p></li>
-</ul>
+<p><strong>Example: hydrogen bound states.</strong> Consider the bound-state subspace of hydrogen. The energy, <span class="math inline">\(\mathbf{\hat L}^2\)</span>, <span class="math inline">\(\hat L_z\)</span> and <span class="math inline">\(\hat s_z\)</span> commute. Their common eigenstates are <span class="math inline">\(\lvert n,l,m_l, m_s\rangle\)</span>: <span class="math inline">\(n\)</span> sets the energy, <span class="math inline">\(l\)</span> sets the squared orbital angular momentum, <span class="math inline">\(m_l\)</span> sets its <span class="math inline">\(z\)</span> component and <span class="math inline">\(m_s\)</span> sets the <span class="math inline">\(z\)</span> component of the electron spin. An energy value alone generally leaves several states possible; all four labels together identify one bound eigenstate. Superpositions of these states describe any state within the bound-state subspace. (A complete description of arbitrary states also requires the continuum of unbound states.)</p>
+</section>
+<section id="independent-degrees-of-freedom" class="level3" data-number="4.3.3">
+<h3 data-number="4.3.3" class="anchored" data-anchor-id="independent-degrees-of-freedom"><span class="header-section-number">4.3.3</span> Independent degrees of freedom</h3>
+<p>There is another way of observables commute: they act on different factors of a tensor-product state space. Examples include a orbital observable and a spin observable of one electron, or the spin observables of different electrons. In each case, the observables commute because they are belong to different state spaces.</p>
+<p>Every eigenvalue of one can then be paired with every eigenvalue of the other, as the full grid in Figure 4.6 shows.</p>
+<!-- Edit this merged-cell table in source mode. -->
+<div class="eigenstate-table">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
 </colgroup>
 <thead>
 <tr class="header">
 <th></th>
 <th></th>
-<th><span class="math inline">\(\hat{B}\)</span></th>
+<th colspan="7"><span class="math inline">\(\hat{B}\)</span></th>
+</tr>
+<tr class="even">
 <th></th>
 <th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
+<th><span class="math inline">\({b}_{1}\)</span></th>
+<th><span class="math inline">\({b}_{2}\)</span></th>
+<th><span class="math inline">\({b}_{3}\)</span></th>
+<th><span class="math inline">\({b}_{4}\)</span></th>
+<th><span class="math inline">\({b}_{5}\)</span></th>
+<th><span class="math inline">\({b}_{6}\)</span></th>
+<th><span class="math inline">\({b}_{7}\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td></td>
-<td></td>
-<td><span class="math inline">\({b}_{1}\)</span></td>
-<td><span class="math inline">\({b}_{2}\)</span></td>
-<td><span class="math inline">\({b}_{3}\)</span></td>
-<td><span class="math inline">\({b}_{4}\)</span></td>
-<td><span class="math inline">\({b}_{5}\)</span></td>
-<td><span class="math inline">\({b}_{6}\)</span></td>
-<td><span class="math inline">\({b}_{7}\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\hat{A}\)</span></td>
+<td rowspan="4"><span class="math inline">\(\hat{A}\)</span></td>
 <td><span class="math inline">\({a}_{1}\)</span></td>
 <td>●</td>
 <td>●</td>
@@ -802,8 +818,7 @@ window.Quarto = {
 <td>●</td>
 <td>●</td>
 </tr>
-<tr class="odd">
-<td></td>
+<tr class="even">
 <td><span class="math inline">\({a}_{2}\)</span></td>
 <td>●</td>
 <td>●</td>
@@ -813,8 +828,7 @@ window.Quarto = {
 <td>●</td>
 <td>●</td>
 </tr>
-<tr class="even">
-<td></td>
+<tr class="odd">
 <td><span class="math inline">\({a}_{3}\)</span></td>
 <td>●</td>
 <td>●</td>
@@ -824,8 +838,7 @@ window.Quarto = {
 <td>●</td>
 <td>●</td>
 </tr>
-<tr class="odd">
-<td></td>
+<tr class="even">
 <td><span class="math inline">\({a}_{4}\)</span></td>
 <td>●</td>
 <td>●</td>
@@ -837,27 +850,28 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
+</div>
 <div class="source-caption">
 <p>Figure 4.6. Observables on independent vector spaces.</p>
 </div>
-<ul>
-<li>Observables acting on different vector spaces always commute. Their common eigenstates are tensor products of eigenstates in the component spaces, written <span class="math inline">\(\left\vert  {{a_j}} \right\rangle \otimes \left\vert  {{b_l}} \right\rangle\)</span>, abbreviated <span class="math inline">\(\left\vert  {{a_j}} \right\rangle \left\vert  {{b_l}} \right\rangle\)</span>, or written <span class="math inline">\(\left\vert  {{a_j},{b_l}} \right\rangle\)</span>. The dimension is the dimension of the <span class="math inline">\(\hat A\)</span> space times that of the <span class="math inline">\(\hat B\)</span> space. An operator acts only on the vector factor belonging to its own space. For example,</li>
-</ul>
+<p>On the combined space, the operators are <span class="math inline">\(\hat A\otimes\hat I_B\)</span> and <span class="math inline">\(\hat I_A\otimes\hat B\)</span>, where <span class="math inline">\(\hat I_A\)</span> and <span class="math inline">\(\hat I_B\)</span> are the identity operator in the state space of <span class="math inline">\(\hat A\)</span> and <span class="math inline">\(\hat B\)</span>, respectively. Their product eigenstates are <span class="math inline">\(\lvert a_j\rangle\otimes\lvert b_l\rangle\)</span>, abbreviated <span class="math inline">\(\lvert a_j\rangle\lvert b_l\rangle\)</span> or <span class="math inline">\(\lvert a_j,b_l\rangle\)</span>. The dimension of the combined space is the product of the two dimensions.</p>
+<p>Suppressing the identity factors, we can see the independent actions directly:</p>
 <p><span id="eq-ch04-p1198"><span class="math display">\[
 \hat A\hat B\left\vert  {{a_1}} \right\rangle \left\vert  {{b_1}} \right\rangle = \left( {\hat A\left\vert  {{a_1}} \right\rangle } \right)\left( {\hat B\left\vert  {{b_1}} \right\rangle } \right) = {a_1}{b_1}\left\vert  {{a_1}} \right\rangle \left\vert  {{b_1}} \right\rangle
 \tag{4.25}\]</span></span></p>
-<ul>
-<li>Two common situations are: (1) <span class="math inline">\(\hat A\)</span> and <span class="math inline">\(\hat B\)</span> describe independent degrees of freedom of one system, such as electron orbital motion and intrinsic spin; (2) <span class="math inline">\(\hat A\)</span> and <span class="math inline">\(\hat B\)</span> belong to different subsystems, such as <span class="math inline">\({\hat S_z}\)</span> of electron A and <span class="math inline">\({\hat S_z}\)</span> of electron B.</li>
-</ul>
 </section>
-<section id="quantum-logic-and-addition-of-probability-amplitudes" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="quantum-logic-and-addition-of-probability-amplitudes"><span class="header-section-number">4.4</span> Quantum logic and addition of probability amplitudes</h2>
-<p>Classically, probabilities multiply for successive conditional steps and add for mutually exclusive alternative paths. Consider the following sequence of measurements.</p>
+</section>
+<section id="measurement-paths-and-interference" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="measurement-paths-and-interference"><span class="header-section-number">4.4</span> Measurement paths and interference</h2>
+<p>We have seen how an incompatible measurement can change later outcomes. Now consider a subtler question: what if an intermediate device offers several paths, and we allow them all to reach the final apparatus? The answer depends on whether the paths leave distinguishable records.</p>
+<p>For a selected sequence of ideal measurement outcomes, conditional probabilities multiply. For coherent alternatives that reach the same final outcome without a path record, probability <strong>amplitudes</strong> add before we take the squared magnitude. The spin experiments let us compare these two situations explicitly.</p>
+<section id="a-selected-intermediate-outcome" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="a-selected-intermediate-outcome"><span class="header-section-number">4.4.1</span> A selected intermediate outcome</h3>
 <p><span id="eq-measurement-paths-1203"><span class="math display">\[
 \boxed{\hat A}\xrightarrow{\lvert a\prime\rangle}\boxed{\hat B}\xrightarrow{\lvert b\prime\rangle}\boxed{\hat A}\xrightarrow{\lvert a\prime\prime\rangle}
 \tag{4.26}\]</span></span></p>
 <p>Figure 4.7. A selected sequence of measurement outcomes; other channels are blocked.</p>
-<p>Let <span class="math inline">\(\hat A,\hat B\)</span> be incompatible, with complete eigenbases <span class="math inline">\(\left\{ {\left\vert  {a'} \right\rangle } \right\}\)</span> and <span class="math inline">\(\left\{ {\left\vert  {b'} \right\rangle } \right\}\)</span>. Perform the measurements on <span class="math inline">\(\hat A,\hat B\)</span> shown in Figure 4.7. If the first result is <span class="math inline">\(a'\)</span>, the probability of <span class="math inline">\(b'\)</span> at the second step is <span class="math inline">\({\left\vert  {\left\langle {{b'}} \mathrel{\left \vert  {\vphantom {{b'} {a'}}} \right. \kern-1.2pt } {{a'}} \right\rangle } \right\vert ^2}\)</span>. If the second result is <span class="math inline">\(b'\)</span>, the probability of <span class="math inline">\(a''\)</span> at the third step is <span class="math inline">\({\left\vert  {\left\langle {{a''}} \mathrel{\left \vert  {\vphantom {{a''} {b'}}} \right. \kern-1.2pt } {{b'}} \right\rangle } \right\vert ^2}\)</span>. Thus, given <span class="math inline">\(a'\)</span> in the initial measurement of <span class="math inline">\(\hat A\)</span>, classical probability assigns the following probability to <span class="math inline">\(b'\)</span> at step two and <span class="math inline">\(a''\)</span> at step three:</p>
+<p>Let <span class="math inline">\(\hat A\)</span> and <span class="math inline">\(\hat B\)</span> be incompatible observables with complete, nondegenerate eigenbases. The first measurement prepares <span class="math inline">\(\lvert a'\rangle\)</span>. Selecting the intermediate outcome <span class="math inline">\(b'\)</span> then has probability <span class="math inline">\(\lvert\langle b'\vert a'\rangle\rvert^2\)</span> and prepares <span class="math inline">\(\lvert b'\rangle\)</span>. The final outcome <span class="math inline">\(a''\)</span> has conditional probability <span class="math inline">\(\lvert\langle a''\vert b'\rangle\rvert^2\)</span>. Given the initial preparation, the probability of this selected sequence is therefore</p>
 <p><span id="eq-zeqnnum197115"><span class="math display">\[
 {\left\vert  {\left\langle {{b'}} \mathrel{\left \vert  {\vphantom {{b'} {a'}}} \right. \kern-1.2pt } {{a'}} \right\rangle } \right\vert ^2} \times {\left\vert  {\left\langle {{a''}} \mathrel{\left \vert  {\vphantom {{a''} {b'}}} \right. \kern-1.2pt } {{b'}} \right\rangle } \right\vert ^2}
 \tag{4.27}\]</span></span></p>
@@ -865,21 +879,28 @@ window.Quarto = {
 \boxed{\hat A}\xrightarrow{\lvert a\prime\rangle}\boxed{\hat B}\xrightarrow{\text{all channels open}}\boxed{\hat A}\xrightarrow{\lvert a\prime\prime\rangle}
 \tag{4.28}\]</span></span></p>
 <p>Figure 4.8. All intermediate channels are open.</p>
-<p>In Figure 4.8, all output paths after measuring <span class="math inline">\(\hat B\)</span> are open. Given <span class="math inline">\(a'\)</span> at the first step, what is the probability of <span class="math inline">\(a''\)</span> at the third? Classical reasoning sums over the alternative intermediate values of <span class="math inline">\(\hat B\)</span>:</p>
+</section>
+<section id="open-channels-recorded-or-coherently-recombined" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="open-channels-recorded-or-coherently-recombined"><span class="header-section-number">4.4.2</span> Open channels: recorded or coherently recombined?</h3>
+<p>Figure 4.8 leaves all intermediate channels open, but that alone does not specify the final probability. First suppose <span class="math inline">\(\hat B\)</span> is actually measured, or a distinguishable record of its outcome is retained by a detector or the environment. Even if we ignore that record, the alternatives form a statistical mixture. The final probability is the sum of the probabilities for the separate sequences:</p>
 <p><span id="eq-zeqnnum885144"><span class="math display">\[
 \sum\limits_{b'} {{{\left\vert  {\left\langle {{b'}} \mathrel{\left \vert  {\vphantom {{b'} {a'}}} \right. \kern-1.2pt } {{a'}} \right\rangle } \right\vert }^2}{{\left\vert  {\left\langle {{a''}} \mathrel{\left \vert  {\vphantom {{a''} {b'}}} \right. \kern-1.2pt } {{b'}} \right\rangle } \right\vert }^2}} = \sum\limits_{b'} {\left\langle {{a'}} \mathrel{\left \vert  {\vphantom {{a'} {b'}}} \right. \kern-1.2pt } {{b'}} \right\rangle \left\langle {{b'}} \mathrel{\left \vert  {\vphantom {{b'} {a'}}} \right. \kern-1.2pt } {{a'}} \right\rangle \left\langle {{a''}} \mathrel{\left \vert  {\vphantom {{a''} {b'}}} \right. \kern-1.2pt } {{b'}} \right\rangle \left\langle {{b'}} \mathrel{\left \vert  {\vphantom {{b'} {a''}}} \right. \kern-1.2pt } {{a''}} \right\rangle }
 \tag{4.29}\]</span></span></p>
-<p>Quantum reasoning uses amplitudes. The probability of finding <span class="math inline">\(\vert \phi \rangle\)</span> in state <span class="math inline">\(\vert \psi \rangle\)</span> is <span class="math inline">\({\left\vert  {\langle \phi\vert \psi\rangle } \right\vert ^2}\)</span>, with probability amplitude <span class="math inline">\(\langle \phi\vert \psi\rangle\)</span>. Amplitudes multiply for successive steps. For indistinguishable alternative paths, amplitudes add. The probability is the squared magnitude of the resulting total amplitude.</p>
+<p>Now consider a different arrangement: the intermediate device separates the <span class="math inline">\(B\)</span> channels, then recombines them coherently, preserving their relative phases and leaving no distinguishable path record. In the ideal arrangement considered here, separation and recombination introduce no net relative phase or other change of state.</p>
+<p>For a single path, the amplitude is the product of its step amplitudes. For indistinguishable alternatives, we sum these products and then square the magnitude. Complex phases survive that sum and allow interference.</p>
 <p>The total amplitude for Figure 4.7 is <span class="math inline">\(\left\langle {{b'}} \mathrel{\left \vert  {\vphantom {{b'} {a'}}} \right. \kern-1.2pt } {{a'}} \right\rangle \left\langle {{a''}} \mathrel{\left \vert  {\vphantom {{a''} {b'}}} \right. \kern-1.2pt } {{b'}} \right\rangle\)</span>, so its probability is</p>
 <p><span id="eq-ch04-p1209"><span class="math display">\[
 {\left\vert  {\left\langle {{b'}} \mathrel{\left \vert  {\vphantom {{b'} {a'}}} \right. \kern-1.2pt } {{a'}} \right\rangle \left\langle {{a''}} \mathrel{\left \vert  {\vphantom {{a''} {b'}}} \right. \kern-1.2pt } {{b'}} \right\rangle } \right\vert ^2} = {\left\vert  {\left\langle {{b'}} \mathrel{\left \vert  {\vphantom {{b'} {a'}}} \right. \kern-1.2pt } {{a'}} \right\rangle } \right\vert ^2} \times {\left\vert  {\left\langle {{a''}} \mathrel{\left \vert  {\vphantom {{a''} {b'}}} \right. \kern-1.2pt } {{b'}} \right\rangle } \right\vert ^2}
 \tag{4.30}\]</span></span></p>
-<p>This agrees with the classical result <a href="#eq-zeqnnum885144" class="quarto-xref">Equation&nbsp;<span>4.29</span></a>. In Figure 4.8, however, the final result can arise through different intermediate paths, so the total amplitude is their sum:</p>
+<p>For one selected path, this reproduces <a href="#eq-zeqnnum197115" class="quarto-xref">Equation&nbsp;<span>4.27</span></a>. For the coherently recombined arrangement in Figure 4.8, we instead sum over the intermediate paths. Completeness of the <span class="math inline">\(B\)</span> basis, <span class="math inline">\(\sum_{b'}\lvert b'\rangle\langle b'\rvert=\hat I\)</span>, gives</p>
 <p><span id="eq-ch04-p1211"><span class="math display">\[
 \sum\limits_{b'} {\left\langle {{b'}} \mathrel{\left \vert  {\vphantom {{b'} {a'}}} \right. \kern-1.2pt } {{a'}} \right\rangle \left\langle {{a''}} \mathrel{\left \vert  {\vphantom {{a''} {b'}}} \right. \kern-1.2pt } {{b'}} \right\rangle } = \sum\limits_{b'} {\left\langle {{a''}} \mathrel{\left \vert  {\vphantom {{a''} {b'}}} \right. \kern-1.2pt } {{b'}} \right\rangle \left\langle {{b'}} \mathrel{\left \vert  {\vphantom {{b'} {a'}}} \right. \kern-1.2pt } {{a'}} \right\rangle } = \left\langle {{a''}} \mathrel{\left \vert  {\vphantom {{a''} {a'}}} \right. \kern-1.2pt } {{a'}} \right\rangle
 \tag{4.31}\]</span></span></p>
-<p>The probability is <span class="math inline">\({\left\vert  {\left\langle {{a''}} \mathrel{\left \vert  {\vphantom {{a''} {a'}}} \right. \kern-1.2pt } {{a'}} \right\rangle } \right\vert ^2}\)</span>, exactly as if the intermediate step were absent.</p>
-<p>We can now explain the final experiment in Figure 1.2. Particles initially in <span class="math inline">\(\left\vert  U \right\rangle\)</span> pass through a <span class="math inline">\({\hat \sigma _x}\)</span> device before a final measurement of <span class="math inline">\({\hat \sigma _z}\)</span>. Since no result from the <span class="math inline">\({\hat \sigma _x}\)</span> device is recorded, the probability of final state <span class="math inline">\(\left\vert  U \right\rangle\)</span> is</p>
+<p>The probability is therefore <span class="math inline">\(\lvert\langle a''\vert a'\rangle\rvert^2\)</span>, just as if the intermediate apparatus were absent. This result depends on coherent recombination; an unread intermediate measurement gives the probability sum in <a href="#eq-zeqnnum885144" class="quarto-xref">Equation&nbsp;<span>4.29</span></a> instead.</p>
+</section>
+<section id="spin-paths-that-cancel" class="level3" data-number="4.4.3">
+<h3 data-number="4.4.3" class="anchored" data-anchor-id="spin-paths-that-cancel"><span class="header-section-number">4.4.3</span> Spin paths that cancel</h3>
+<p>Interpret the final experiment in Figure 1.2 as this ideal coherent arrangement. A particle prepared in <span class="math inline">\(\lvert U\rangle\)</span> travels through the <span class="math inline">\(R\)</span> and <span class="math inline">\(L\)</span> channels of a <span class="math inline">\(\hat\sigma_x\)</span> device, which are recombined before the final <span class="math inline">\(\hat\sigma_z\)</span> measurement. No distinguishable path record remains. The probability of returning to <span class="math inline">\(\lvert U\rangle\)</span> is</p>
 <p><span id="eq-ch04-p1214"><span class="math display">\[
 {\left\vert  {\left\langle {U} \mathrel{\left \vert  {\vphantom {U U}} \right. \kern-1.2pt } {U} \right\rangle } \right\vert ^2} = 1
 \tag{4.32}\]</span></span></p>
@@ -889,22 +910,23 @@ window.Quarto = {
 \tag{4.33}\]</span></span></p>
 <p>These results also follow by evaluating each path amplitude. For example, the probability of final state <span class="math inline">\(\left\vert  D \right\rangle\)</span> is</p>
 <p><span id="eq-ch04-p1218"><span class="math display">\[
-{\left\vert  {\left\langle {R} \mathrel{\left \vert  {\vphantom {R U}} \right. \kern-1.2pt } {U} \right\rangle \left\langle {D} \mathrel{\left \vert  {\vphantom {D R}} \right. \kern-1.2pt } {R} \right\rangle + \left\langle {L} \mathrel{\left \vert  {\vphantom {L U}} \right. \kern-1.2pt } {U} \right\rangle \left\langle {D} \mathrel{\left \vert  {\vphantom {D L}} \right. \kern-1.2pt } {L} \right\rangle } \right\vert ^2} = {\left\vert  {\frac{1}{{\sqrt 2 }}\frac{1}{{\sqrt 2 }} + \left( { - \frac{1}{{\sqrt 2 }}} \right)\frac{1}{{\sqrt 2 }}} \right\vert ^2} = {\left\vert  {\frac{1}{2} - \frac{1}{2}} \right\vert ^2} = 0
+{\left\vert  {\left\langle {R} \mathrel{\left \vert  {\vphantom {R U}} \right. \kern-1.2pt } {U} \right\rangle \left\langle {D} \mathrel{\left \vert  {\vphantom {D R}} \right. \kern-1.2pt } {R} \right\rangle + \left\langle {L} \mathrel{\left \vert  {\vphantom {L U}} \right. \kern-1.2pt } {U} \right\rangle \left\langle {D} \mathrel{\left \vert  {\vphantom {D L}} \right. \kern-1.2pt } {L} \right\rangle } \right\vert ^2} = {\left\vert  {\frac{1}{{\sqrt 2 }}\frac{1}{{\sqrt 2 }} + \left( { - \frac{1}{{\sqrt 2 }}} \right)\frac{1}{{\sqrt 2 }}} \right\vert ^2} = 0
 \tag{4.34}\]</span></span></p>
-<p>The amplitudes of the two paths through the <span class="math inline">\({\hat \sigma _x}\)</span> device cancel by destructive interference.</p>
+<p>Each path contributes a nonzero amplitude to <span class="math inline">\(\lvert D\rangle\)</span>, but the two contributions have opposite signs. Their sum vanishes: <strong>destructive interference</strong> removes the <span class="math inline">\(D\)</span> outcome. If the intermediate <span class="math inline">\(x\)</span> outcome were recorded instead, each path would contribute a probability of <span class="math inline">\(1/4\)</span>, so the final probabilities would be <span class="math inline">\(P(D)=P(U)=1/2\)</span>. The relative sign matters only when the amplitudes can interfere.</p>
 <p>In classical optics, intensity at a screen point is proportional to the squared magnitude of the sum of electric fields arriving by different paths. Their relative phases produce constructive or destructive interference. The analogous relation between quantum probabilities and amplitudes motivates the description of quantum behavior as <strong>wave behavior</strong>.</p>
-<p>When should classical or quantum reasoning be applied to the apparently identical sequence in Figure 4.8? Fundamentally, quantum reasoning applies. Microscopic and macroscopic systems, however, have different interactions with their surroundings. An isolated microscopic particle can traverse the intermediate device without leaving any record of its path, so no measurement-induced collapse occurs there. A macroscopic object continually interacts with light and air. Even if nobody looks at the intermediate result, the environment retains a record. The intermediate outcome exists but is random, so probabilities must be combined statistically.</p>
+<p>The deciding question is whether a distinguishable path record remains, rather than whether anyone reads it. A detector or the environment can retain such a record and suppress interference through <strong>decoherence</strong>. Conversely, a microscopic particle can also lose coherence, and suitably isolated larger systems can display interference. Throughout, the same quantum rules apply: add probabilities for alternatives with distinguishable records, and add amplitudes for coherent alternatives.</p>
+</section>
 </section>
 <section id="changing-representations" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="changing-representations"><span class="header-section-number">4.5</span> Changing representations</h2>
-<p>Chapter 3 used eigenvectors <span class="math inline">\(\left\{ {\left\vert  U \right\rangle ,\left\vert  D \right\rangle } \right\}\)</span> of <span class="math inline">\({\hat \sigma _z}\)</span> as a basis. We could instead use eigenvectors <span class="math inline">\(\left\{ {\left\vert  R \right\rangle ,\left\vert  L \right\rangle } \right\}\)</span> of <span class="math inline">\({\hat \sigma _x}\)</span>. This section develops changes of representation, or changes of basis.</p>
+<p>The path amplitudes above are overlaps between two bases. Those same overlaps tell us how to rewrite a state in another representation. Chapter 3 used the <span class="math inline">\(\hat\sigma_z\)</span> eigenbasis <span class="math inline">\(\{\lvert U\rangle,\lvert D\rangle\}\)</span>; we could equally use the <span class="math inline">\(\hat\sigma_x\)</span> eigenbasis <span class="math inline">\(\{\lvert R\rangle,\lvert L\rangle\}\)</span>. The physical state stays the same, while its components in the chosen basis change—much as a spatial vector has different components along rotated Cartesian axes.</p>
 <section id="transformation-rules" class="level3" data-number="4.5.1">
 <h3 data-number="4.5.1" class="anchored" data-anchor-id="transformation-rules"><span class="header-section-number">4.5.1</span> Transformation rules</h3>
-<p>Let <span class="math inline">\(\left\{ {\left\vert  {{a_i}} \right\rangle } \right\}\)</span> and <span class="math inline">\(\left\{ {\left\vert  {{b_i}} \right\rangle } \right\}\)</span> be complete eigenbases of incompatible observables <span class="math inline">\(\hat A\)</span> and <span class="math inline">\(\hat B\)</span>. The operator <span class="math inline">\(\hat U\)</span> that maps each basis vector of the <span class="math inline">\(\hat A\)</span> representation to its counterpart in the <span class="math inline">\(\hat B\)</span> representation is the transformation operator for <span class="math inline">\(\hat A \to \hat B\)</span>:</p>
+<p>Let <span class="math inline">\(\{\lvert a_i\rangle\}\)</span> and <span class="math inline">\(\{\lvert b_i\rangle\}\)</span> be two complete orthonormal bases of the same space. They may be eigenbases of incompatible observables, but the transformation rules do not require incompatibility. Fix an ordering for each basis and define an operator that maps corresponding basis vectors:</p>
 <p><span id="eq-ch04-p1227"><span class="math display">\[
 \hat U\left\vert  {{a_j}} \right\rangle = \left\vert  {{b_j}} \right\rangle
 \tag{4.35}\]</span></span></p>
-<p>One readily verifies</p>
+<p>The outer-product expression makes this mapping explicit: when it acts on <span class="math inline">\(\lvert a_j\rangle\)</span>, orthonormality selects the term with <span class="math inline">\(i=j\)</span>.</p>
 <p><span id="eq-zeqnnum306910"><span class="math display">\[
 \hat U = \sum\limits_i {\left\vert  {{b_i}} \right\rangle \left\langle {{a_i}} \right\vert }
 \tag{4.36}\]</span></span></p>
@@ -912,7 +934,7 @@ window.Quarto = {
 <p><span id="eq-zeqnnum147961"><span class="math display">\[
 {\hat U^\dagger } = \sum\limits_i {\left\vert  {{a_i}} \right\rangle } \left\langle {{b_i}} \right\vert
 \tag{4.37}\]</span></span></p>
-<p>One also verifies</p>
+<p>Acting on <span class="math inline">\(\lvert b_j\rangle\)</span> shows that the adjoint reverses the mapping:</p>
 <p><span id="eq-ch04-p1233"><span class="math display">\[
 {\hat U^\dagger }\left\vert  {{b_j}} \right\rangle = \left\vert  {{a_j}} \right\rangle
 \tag{4.38}\]</span></span></p>
@@ -920,16 +942,20 @@ window.Quarto = {
 <p><span id="eq-ch04-p1235"><span class="math display">\[
 \hat U{\hat U^\dagger } = {\hat U^\dagger }\hat U = \hat I
 \tag{4.39}\]</span></span></p>
-<p>Hence <span class="math inline">\({\hat U^\dagger }\)</span> is the inverse of <span class="math inline">\(\hat U\)</span>. A change of orthonormal basis is unitary and preserves inner products, as expected because their physical significance cannot depend on the calculation basis.</p>
+<p>Thus <span class="math inline">\(\hat U\)</span> is <strong>unitary</strong>, with <span class="math inline">\(\hat U^{-1}=\hat U^\dagger\)</span>. Unitary transformations preserve inner products and norms. This is exactly what a change of orthonormal basis must do: probabilities cannot depend on which basis we use to calculate them.</p>
+<p>Keep two operations distinct. The operator <span class="math inline">\(\hat U\)</span> maps basis kets to new basis kets. Re-expressing the <em>same</em> physical state in the new basis will require the inverse matrix. We derive that rule below.</p>
 <p>The matrix elements of transformation operator <span class="math inline">\(\hat U\)</span> in the <span class="math inline">\(\hat A\)</span> representation are</p>
 <p><span id="eq-ch04-p1238"><span class="math display">\[
 \langle {{a_l}}\vert {\hat U}\vert {{a_m}}\rangle = \sum\limits_i {\left\langle {{a_l}} \right.\left\vert  {{b_i}} \right\rangle \left\langle {{a_i}} \right\vert } \left. {{a_m}} \right\rangle = \sum\limits_i {\left\langle {{a_l}} \right.\left\vert  {{b_i}} \right\rangle {\delta _{im}}} = \left\langle {{a_l}} \right.\left\vert  {{b_m}} \right\rangle
 \tag{4.40}\]</span></span></p>
 <p>The elements of <span class="math inline">\(\hat U\)</span> in the <span class="math inline">\(\hat B\)</span> representation are</p>
 <p><span id="eq-ch04-p1240"><span class="math display">\[
-\langle {{b_l}}\vert {\hat U}\vert {{b_m}}\rangle = \sum\limits_i {\left\langle {{b_l}} \right.\left\vert  {{b_i}} \right\rangle } = \sum\limits_i {\left\langle {{a_i}} \right\vert \left. {{b_m}} \right\rangle {\delta _{li}}} = \left\langle {{a_l}} \right.\left\vert  {{b_m}} \right\rangle
+\langle b_l\vert\hat U\vert b_m\rangle
+=\sum_i\langle b_l\vert b_i\rangle\langle a_i\vert b_m\rangle
+=\sum_i\delta_{li}\langle a_i\vert b_m\rangle
+=\langle a_l\vert b_m\rangle
 \tag{4.41}\]</span></span></p>
-<p>The transformation therefore has the same matrix in both representations:</p>
+<p>With the corresponding ordering, this particular mapping operator has the same matrix in the two chosen bases. Its columns are the new basis vectors expressed in the old basis:</p>
 <p><span id="eq-zeqnnum504142"><span class="math display">\[
 \hat U \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {{{a_1}}} \mathrel{\left \vert  {\vphantom {{{a_1}} {{b_1}}}} \right. \kern-1.2pt } {{{b_1}}} \right\rangle }&amp;{\left\langle {{{a_1}}} \mathrel{\left \vert  {\vphantom {{{a_1}} {{b_2}}}} \right. \kern-1.2pt } {{{b_2}}} \right\rangle }&amp; \cdots \\ {\left\langle {{{a_2}}} \mathrel{\left \vert  {\vphantom {{{a_2}} {{b_1}}}} \right. \kern-1.2pt } {{{b_1}}} \right\rangle }&amp;{\left\langle {{{a_2}}} \mathrel{\left \vert  {\vphantom {{{a_2}} {{b_2}}}} \right. \kern-1.2pt } {{{b_2}}} \right\rangle }&amp; \cdots \\ \vdots &amp; \vdots &amp; \ddots \end{array}} \right)
 \tag{4.42}\]</span></span></p>
@@ -937,7 +963,7 @@ window.Quarto = {
 <p><span id="eq-zeqnnum682052"><span class="math display">\[
 \hat U_{ij}^\dagger = {\left( {{{\hat U}_{ji}}} \right)^*} = \left\langle {{{b_i}}} \mathrel{\left \vert  {\vphantom {{{b_i}} {{a_j}}}} \right. \kern-1.2pt } {{{a_j}}} \right\rangle
 \tag{4.43}\]</span></span></p>
-<p>For any vector <span class="math inline">\(\left\vert  \psi \right\rangle\)</span>,</p>
+<p>To express a state vector in the new basis, insert the identity <span class="math inline">\(\sum_j\lvert a_j\rangle\langle a_j\rvert\)</span> into <span class="math inline">\(\langle b_i\vert\psi\rangle\)</span>. This expresses each new component as a sum of old components weighted by basis overlaps:</p>
 <p><span id="eq-ch04-p1246"><span class="math display">\[
 \left\langle {{{b_i}}} \mathrel{\left \vert  {\vphantom {{{b_i}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \sum\limits_j {\left\langle {{{b_i}}} \mathrel{\left \vert  {\vphantom {{{b_i}} {{a_j}}}} \right. \kern-1.2pt } {{{a_j}}} \right\rangle } \left\langle {{{a_j}}} \mathrel{\left \vert  {\vphantom {{{a_j}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \sum\limits_j {\left\langle {{a_i}} \right\vert {{\hat U}^\dagger }\left\vert  {{a_j}} \right\rangle } \left\langle {{{a_j}}} \mathrel{\left \vert  {\vphantom {{{a_j}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle
 \tag{4.44}\]</span></span></p>
@@ -945,7 +971,7 @@ window.Quarto = {
 <p><span id="eq-ch04-p1248"><span class="math display">\[
 \left( \begin{array}{c} \left\langle {{{b_1}}} \mathrel{\left \vert  {\vphantom {{{b_1}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \\ \left\langle {{{b_2}}} \mathrel{\left \vert  {\vphantom {{{b_2}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \\ \vdots \end{array} \right) = \left( {\begin{array}{*{20}{c}} {\left\langle {{{b_1}}} \mathrel{\left \vert  {\vphantom {{{b_1}} {{a_1}}}} \right. \kern-1.2pt } {{{a_1}}} \right\rangle }&amp;{\left\langle {{{b_1}}} \mathrel{\left \vert  {\vphantom {{{b_1}} {{a_2}}}} \right. \kern-1.2pt } {{{a_2}}} \right\rangle }&amp; \cdots \\ {\left\langle {{{b_2}}} \mathrel{\left \vert  {\vphantom {{{b_2}} {{a_1}}}} \right. \kern-1.2pt } {{{a_1}}} \right\rangle }&amp;{\left\langle {{{b_2}}} \mathrel{\left \vert  {\vphantom {{{b_2}} {{a_2}}}} \right. \kern-1.2pt } {{{a_2}}} \right\rangle }&amp; \cdots \\ \vdots &amp; \vdots &amp; \ddots \end{array}} \right)\left( \begin{array}{c} \left\langle {{{a_1}}} \mathrel{\left \vert  {\vphantom {{{a_1}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \\ \left\langle {{{a_2}}} \mathrel{\left \vert  {\vphantom {{{a_2}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \\ \vdots \end{array} \right)
 \tag{4.45}\]</span></span></p>
-<p>The left side is the column of <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> in the <span class="math inline">\(\hat B\)</span> representation. The right side is the inverse transformation matrix times the column of <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> in the <span class="math inline">\(\hat A\)</span> representation. Thus,</p>
+<p>The left-hand column contains the components of <span class="math inline">\(\lvert\psi\rangle\)</span> in the <span class="math inline">\(B\)</span> basis. The right-hand column contains its components in the <span class="math inline">\(A\)</span> basis, multiplied by the overlap matrix with elements <span class="math inline">\(\langle b_i\vert a_j\rangle\)</span>. That matrix is <span class="math inline">\(\hat U^\dagger\)</span>, so</p>
 <p><span id="eq-zeqnnum557165"><span class="math display">\[
 {\left\vert  \psi \right\rangle _B} = {\hat U^\dagger }{\left\vert  \psi \right\rangle _A}
 \tag{4.46}\]</span></span></p>
@@ -957,8 +983,8 @@ window.Quarto = {
 <p><span id="eq-zeqnnum834377"><span class="math display">\[
 {\hat X_B} = {\hat U^\dagger }{\hat X_A}\hat U
 \tag{4.48}\]</span></span></p>
-<p>This is a similarity transformation of matrices.</p>
-<p><strong>Example.</strong> Find the matrix of <span class="math inline">\({\hat \sigma _x},{\hat \sigma _y},{\hat \sigma _z}\)</span> in the <span class="math inline">\({\hat \sigma _x}\)</span> representation.</p>
+<p>Here the subscripts identify the bases used for the state-vector columns and operator matrices. The rule <span class="math inline">\(\hat X_B=\hat U^\dagger\hat X_A\hat U\)</span> is a <strong>unitary similarity transformation</strong>: the factor on the right expresses the input state vector in the <span class="math inline">\(A\)</span> basis, <span class="math inline">\(\hat X_A\)</span> acts, and the factor on the left expresses the result in the <span class="math inline">\(B\)</span> basis.</p>
+<p><strong>Example: view spin from the</strong> <span class="math inline">\(x\)</span> basis. Find the matrices of <span class="math inline">\(\hat\sigma_x\)</span>, <span class="math inline">\(\hat\sigma_y\)</span>, and <span class="math inline">\(\hat\sigma_z\)</span> in the <span class="math inline">\(\hat\sigma_x\)</span> eigenbasis. We expect <span class="math inline">\(\hat\sigma_x\)</span> to become diagonal, because the basis states have definite <span class="math inline">\(x\)</span> spin.</p>
 <p>The <span class="math inline">\({\hat \sigma _z}\)</span> basis is <span class="math inline">\(\left\vert  U \right\rangle ,\left\vert  D \right\rangle\)</span>, and the <span class="math inline">\({\hat \sigma _x}\)</span> basis is <span class="math inline">\(\left\vert  R \right\rangle ,\left\vert  L \right\rangle\)</span>. By <a href="#eq-zeqnnum504142" class="quarto-xref">Equation&nbsp;<span>4.42</span></a>, the matrix of <span class="math inline">\(\hat U\)</span> for the change <span class="math inline">\({\hat \sigma _z} \to {\hat \sigma _x}\)</span> is</p>
 <p><span id="eq-ch04-p1258"><span class="math display">\[
 \hat U \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {U} \mathrel{\left \vert  {\vphantom {U R}} \right. \kern-1.2pt } {R} \right\rangle }&amp;{\left\langle {U} \mathrel{\left \vert  {\vphantom {U L}} \right. \kern-1.2pt } {L} \right\rangle }\\ {\left\langle {D} \mathrel{\left \vert  {\vphantom {D R}} \right. \kern-1.2pt } {R} \right\rangle }&amp;{\left\langle {D} \mathrel{\left \vert  {\vphantom {D L}} \right. \kern-1.2pt } {L} \right\rangle } \end{array}} \right) = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ 1&amp;{ - 1} \end{array}} \right)
@@ -971,32 +997,36 @@ window.Quarto = {
 <p><span id="eq-ch04-p1262"><span class="math display">\[
 \begin{array}{l} {{\hat \sigma }_x} \buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ 1&amp;{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&amp;1\\ 1&amp;0 \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ 1&amp;{ - 1} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 1&amp;0\\ 0&amp;{ - 1} \end{array}} \right)\\ {{\hat \sigma }_y} \buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ 1&amp;{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&amp;{ - i}\\ i&amp;0 \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ 1&amp;{ - 1} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0&amp;i\\ { - i}&amp;0 \end{array}} \right)\\ {{\hat \sigma }_z} \buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ 1&amp;{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 1&amp;0\\ 0&amp;{ - 1} \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ 1&amp;{ - 1} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0&amp;1\\ 1&amp;0 \end{array}} \right) \end{array}
 \tag{4.51}\]</span></span></p>
-<p><strong>Theorem 4.3.</strong> An observable’s matrix has the same trace—the sum of diagonal entries—in every representation. It equals the sum of all eigenvalues, counting an eigenvalue of degeneracy <span class="math inline">\(n\)</span> exactly <span class="math inline">\(n\)</span> times.</p>
+<p><strong>Theorem 4.3.</strong> An observable’s matrix has the same trace—the sum of diagonal elements—in every representation. It equals the sum of all eigenvalues, counting an eigenvalue of degeneracy <span class="math inline">\(n\)</span> exactly <span class="math inline">\(n\)</span> times.</p>
 <p><span id="eq-ch04-p1264"><span class="math display">\[
 \sum\limits_i {\left\langle {{b_i}} \right\vert \hat X\left\vert  {{b_i}} \right\rangle } = \sum\limits_j {\left\langle {{a_j}} \right\vert \hat X\left\vert  {{a_j}} \right\rangle }
 \tag{4.52}\]</span></span></p>
 <p><strong>Proof.</strong> Use <a href="#eq-zeqnnum834377" class="quarto-xref">Equation&nbsp;<span>4.48</span></a> and the trace identity <span class="math inline">\({\rm{Tr}}\left( {AB} \right) = {\rm{Tr}}\left( {BA} \right)\)</span>.</p>
 <p><span id="eq-ch04-p1266"><span class="math display">\[
-{\text{Tr}}\left( {{{\hat X}_\text{new}}} \right) = {\text{Tr}}\;\left( {{{\hat U}^\dagger }{{\hat X}_\text{old}}\hat U} \right) = {\text{Tr}}\;\left( {\hat U{{\hat U}^\dagger }{{\hat X}_\text{old}}} \right) = {\text{Tr}}\left( {{{\hat X}_\text{old}}} \right)
+{\text{Tr}}\left( {{{\hat X}_B}} \right) = {\text{Tr}}\;\left( {{{\hat U}^\dagger }{{\hat X}_A}\hat U} \right) = {\text{Tr}}\;\left( {\hat U{{\hat U}^\dagger }{{\hat X}_A}} \right) = {\text{Tr}}\left( {{{\hat X}_A}} \right)
 \tag{4.53}\]</span></span></p>
-<p>The trace is therefore representation-independent. In its own eigenbasis, <a href="02-operators.html#eq-zeqnnum449673" class="quarto-xref">Equation&nbsp;<span>2.56</span></a>, the operator is diagonal, with each eigenvalue of degeneracy <span class="math inline">\(n\)</span> appearing <span class="math inline">\(n\)</span> times. Thus the trace in any basis is the eigenvalue sum, counting degeneracy <span class="math inline">\(n\)</span> with multiplicity <span class="math inline">\(n\)</span>.</p>
+<p>The trace is therefore independent of the basis. In an observable’s eigenbasis, its matrix is diagonal (<a href="02-operators.html#eq-zeqnnum449673" class="quarto-xref">Equation&nbsp;<span>2.56</span></a>), so the trace is simply the eigenvalue sum, with repeated eigenvalues counted according to their degeneracy. A basis change rearranges the matrix elements while preserving this sum.</p>
 </section>
 <section id="eigenvalue-equations-and-changes-of-basis" class="level3" data-number="4.5.2">
 <h3 data-number="4.5.2" class="anchored" data-anchor-id="eigenvalue-equations-and-changes-of-basis"><span class="header-section-number">4.5.2</span> Eigenvalue equations and changes of basis</h3>
-<p>Let <span class="math inline">\(\left\{ {\left\vert  {{a_i}} \right\rangle } \right\}\)</span> and <span class="math inline">\(\left\{ {\left\vert  {{b_i}} \right\rangle } \right\}\)</span> be eigenbases of incompatible observables <span class="math inline">\(\hat A\)</span> and <span class="math inline">\(\hat B\)</span>. The eigenvalue equation <span class="math inline">\(\hat B\vert {{b_m}}\rangle = {b_m}\vert {{b_m}}\rangle\)</span> of <span class="math inline">\(\hat B\)</span> has the following form in the <span class="math inline">\(\hat A\)</span> representation:</p>
+<p>Suppose the matrix of <span class="math inline">\(\hat B\)</span> is given in the <span class="math inline">\(A\)</span> basis. Solve its eigenvalue equation there. Taking the overlap with <span class="math inline">\(\langle a_l\rvert\)</span> gives</p>
 <p><span id="eq-ch04-p1270"><span class="math display">\[
-\begin{array}{c} \sum\limits_i {\langle {{a_l}}\vert {\hat B}\vert {{a_i}}\rangle \langle {{a_i}}\vert {{b_m}}\rangle } = \sum\limits_i {\langle {{a_l}}\vert {{b_m}}\vert {{a_i}}\rangle \langle {{a_i}}\vert {{b_m}}\rangle } \\ = {b_m}\langle {{a_l}}\vert {{b_m}}\rangle \end{array}
-\tag{4.54}\]</span></span></p>
-<p>The column of the <span class="math inline">\(m\)</span>th eigenvector of <span class="math inline">\(\hat B\)</span> in the <span class="math inline">\(\hat A\)</span> representation is column <span class="math inline">\(m\)</span> of transformation matrix <span class="math inline">\(\hat U\)</span> for <span class="math inline">\(\hat A \to \hat B\)</span>. Thus, assembling all eigenvector columns of <span class="math inline">\(\hat B\)</span> in the <span class="math inline">\(\hat A\)</span> basis gives transformation matrix <span class="math inline">\(\hat U\)</span> for <span class="math inline">\(\hat A \to \hat B\)</span>. By <a href="#eq-zeqnnum834377" class="quarto-xref">Equation&nbsp;<span>4.48</span></a>, this transforms <span class="math inline">\(\hat B\)</span> from its <span class="math inline">\(\hat A\)</span> matrix to a diagonal matrix in its own basis, with eigenvalues of <span class="math inline">\(\hat B\)</span> on the diagonal. This is <strong>diagonalization</strong>.</p>
+\sum_i\langle a_l\vert\hat B\vert a_i\rangle
+\langle a_i\vert b_m\rangle
+=b_m\langle a_l\vert b_m\rangle
+\tag{4.54}\]</span></span> <span class="math inline">\(m\)</span>th normalized eigenvector has components <span class="math inline">\(\langle a_i\vert b_m\rangle\)</span>—exactly column <span class="math inline">\(m\)</span> of <span class="math inline">\(\hat U\)</span>. Arrange an orthonormal set of these eigenvectors as columns. The resulting matrix is the <span class="math inline">\(\hat U\)</span> that transforms <span class="math inline">\(\hat B_A\)</span> to <span class="math inline">\(\hat U^\dagger\hat B_A\hat U=\hat B_B\)</span>, a diagonal matrix containing the eigenvalues <span class="math inline">\(b_m\)</span>. This is <strong>diagonalization</strong>.</p>
+<p>If an eigenvalue is degenerate, choose an orthonormal basis within its eigenspace; the choice is not unique.</p>
 </section>
 <section id="summary-of-changes-of-representation" class="level3" data-number="4.5.3">
 <h3 data-number="4.5.3" class="anchored" data-anchor-id="summary-of-changes-of-representation"><span class="header-section-number">4.5.3</span> Summary of changes of representation</h3>
-<p>Define the transformation operator <span class="math inline">\(\hat U\)</span> for <span class="math inline">\(\hat A \to \hat B\)</span> by <span class="math inline">\(\left\vert  {{b_j}} \right\rangle = \hat U\left\vert  {{a_j}} \right\rangle\)</span>.</p>
-<p>Then <span class="math inline">\({\hat U^\dagger }\)</span> transforms <span class="math inline">\(\hat B \to \hat A\)</span>: <span class="math inline">\(\left\vert  {{a_j}} \right\rangle = {\hat U^\dagger }\left\vert  {{b_j}} \right\rangle\)</span>.</p>
-<p>The transformation operator is unitary: <span class="math inline">\(\hat U{\hat U^\dagger } = {\hat U^\dagger }\hat U = \hat I\)</span>.</p>
-<p>Vector representations are related by <span class="math inline">\({\left\vert  \psi \right\rangle _B} = {\hat U^\dagger }{\left\vert  \psi \right\rangle _A}\)</span>.</p>
-<p>Operator representations are related by <span class="math inline">\({\hat X_B} = {\hat U^\dagger }{\hat X_A}\hat U\)</span>.</p>
-<p>The matrices of <span class="math inline">\(\hat U\)</span> and <span class="math inline">\({\hat U^\dagger }\)</span> are representation-independent.</p>
+<p>For quick reference, fix the convention <span class="math inline">\(\hat U\lvert a_j\rangle=\lvert b_j\rangle\)</span>. Its matrix columns are the new basis kets in the old basis, <span class="math inline">\(U_{ij}=\langle a_i\vert b_j\rangle\)</span>. Then:</p>
+<ul>
+<li><p><strong>Reverse the basis mapping:</strong> <span class="math inline">\(\lvert a_j\rangle=\hat U^\dagger\lvert b_j\rangle\)</span>.</p></li>
+<li><p><strong>Unitarity:</strong> <span class="math inline">\(\hat U\hat U^\dagger=\hat U^\dagger\hat U=\hat I\)</span>.</p></li>
+<li><p><strong>State vector in the new basis:</strong> <span class="math inline">\(\lvert\psi\rangle_B=\hat U^\dagger\lvert\psi\rangle_A\)</span>.</p></li>
+<li><p><strong>Operator matrices:</strong> <span class="math inline">\(\hat X_B=\hat U^\dagger\hat X_A\hat U\)</span>.</p></li>
+</ul>
+<p>For the mapping operator defined here, its matrices in these two specifically paired bases agree, as do those of its adjoint. This does not mean that either matrix is the same in every possible representation:</p>
 <p><span id="eq-ch04-p1279"><span class="math display">\[
 \begin{array}{l} \langle {{a_l}}\vert {\hat U}\vert {{a_m}}\rangle = \langle {{b_l}}\vert {\hat U}\vert {{b_m}}\rangle = \langle {{a_l}}\vert {{b_m}}\rangle \\ \langle {{a_l}}\vert {{{\hat U}^\dagger }}\vert {{a_m}}\rangle = \langle {{b_l}}\vert {{\hat U}^\dagger }\vert {{b_m}}\rangle = \langle {b_l}\vert {{a_m}}\rangle \end{array}
 \tag{4.55}\]</span></span></p>
@@ -1004,30 +1034,28 @@ window.Quarto = {
 </section>
 <section id="the-heisenberg-uncertainty-principle" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="the-heisenberg-uncertainty-principle"><span class="header-section-number">4.6</span> * The Heisenberg uncertainty principle</h2>
-<p>Define the deviation operator: <span class="math inline">\(\Delta \hat A \equiv \hat A - \langle \hat A\rangle \equiv \hat A - \langle \hat A\rangle , \qquad  \;\;\;\Delta \hat B \equiv \hat B - \langle \hat B\rangle\)</span>.</p>
-<p>Define the variance: <span class="math inline">\({\langle {(\Delta \hat A})^2}\rangle = \left\langle {{{\hat A}^2} - 2\hat A\langle {\hat A}\rangle + {{\langle {\hat A}\rangle }^2}} \right\rangle = \langle {{{\hat A}^2}}\rangle - {\langle {\hat A}\rangle ^2}\)</span>.</p>
-<p>Prove <span class="math inline">\(\langle {{{(\Delta \hat A)}^2}}\rangle \langle {{{(\Delta \hat B)}^2}}\rangle \ge {1/4}{\left\vert  {\langle [\hat A,\hat B]\rangle } \right\vert ^2}\)</span>.</p>
-<p><strong>Proof.</strong> Define <span class="math inline">\([\hat X,\hat Y] \equiv \hat X\hat Y - \hat Y\hat X,\;\;{\rm{\{ }}\hat X,\hat Y{\rm{\} }} \equiv \hat X\hat Y + \hat Y\hat X\)</span>. Clearly,</p>
+<p>Compatibility tells us when a common eigenbasis exists. Uncertainty quantifies the spread of outcomes in a particular state. A definite value has zero spread; a superposition of different eigenvalues generally does not. The commutator connects these two ideas.</p>
+<p>For a normalized state <span class="math inline">\(\lvert\psi\rangle\)</span>, all expectation values in this section refer to that same preparation. Define the <strong>deviation operators</strong> <span class="math inline">\(\Delta\hat A=\hat A-\langle\hat A\rangle\hat I\)</span> and <span class="math inline">\(\Delta\hat B=\hat B-\langle\hat B\rangle\hat I\)</span>. They subtract the mean from each observable.</p>
+<p>The <strong>variance</strong> is <span class="math inline">\(\langle(\Delta\hat A)^2\rangle=\langle\hat A^2\rangle-\langle\hat A\rangle^2\)</span>. Its square root, <span class="math inline">\(\Delta A\)</span>, is the standard deviation of the measurement outcomes. Distinguish the number <span class="math inline">\(\Delta A\)</span> from the operator <span class="math inline">\(\Delta\hat A\)</span>.</p>
+<p>We will prove the <strong>Robertson uncertainty relation</strong>, often called the generalized Heisenberg uncertainty relation: <span class="math inline">\(\Delta A\,\Delta B\ge\tfrac12\lvert\langle[\hat A,\hat B]\rangle\rvert\)</span>. The proof has three ingredients: subtract the means, apply the Schwarz inequality, and split the operator product into its symmetric and antisymmetric parts.</p>
+<p><strong>Proof.</strong> In addition to the commutator, define the <strong>anticommutator</strong> <span class="math inline">\(\{\hat X,\hat Y\}=\hat X\hat Y+\hat Y\hat X\)</span>. Any product separates into these two parts:</p>
 <p><span id="eq-zeqnnum676215"><span class="math display">\[
 \hat X\hat Y = \frac{1}{2}[\hat X,\hat Y] + \frac{1}{2}{\rm{\{ }}\hat X,\hat Y{\rm{\} }}
 \tag{4.56}\]</span></span></p>
 <p>Let <span class="math inline">\(\hat A,\hat B\)</span> be Hermitian operators.</p>
-<p>One readily proves <span class="math inline">\({[\hat A,\hat B]^\dagger } = - [\hat A,\hat B], \qquad  \qquad  {\{ \hat A,\hat B\} ^\dagger } = \{ \hat A,\hat B\}\)</span>.</p>
+<p>Taking adjoints reverses the order of a product. For Hermitian <span class="math inline">\(\hat A\)</span> and <span class="math inline">\(\hat B\)</span>, this gives <span class="math inline">\([\hat A,\hat B]^\dagger=-[\hat A,\hat B]\)</span> and <span class="math inline">\(\{\hat A,\hat B\}^\dagger=\{\hat A,\hat B\}\)</span>.</p>
 <p>Consequently,</p>
 <p><span id="eq-zeqnnum864955"><span class="math display">\[
 \langle [\hat A,\hat B]\rangle \text{ is purely imaginary}, \qquad  \langle \{ \hat A,\hat B\} \rangle \text{ is real}
 \tag{4.57}\]</span></span></p>
-<p>.</p>
 <p>Also,</p>
 <p><span id="eq-zeqnnum374297"><span class="math display">\[
 \langle [\Delta \hat A,\Delta \hat B]\rangle = \langle [\hat A,\hat B]\rangle , \qquad  \langle \{ \Delta \hat A,\Delta \hat B\} \rangle = \langle \{ \hat A,\hat B\} \rangle - 2\langle {\hat A}\rangle \langle {\hat B}\rangle
 \tag{4.58}\]</span></span></p>
-<p>.</p>
 <p>Combining these gives</p>
 <p><span id="eq-zeqnnum153390"><span class="math display">\[
 \langle [\Delta \hat A,\Delta \hat B]\rangle = \langle [\hat A,\hat B]\rangle \;\text{ is purely imaginary}, \qquad  \langle \{ \Delta \hat A,\Delta \hat B\} \rangle \;\text{ is real}
 \tag{4.59}\]</span></span></p>
-<p>.</p>
 <p>Substitute <span class="math inline">\(\hat X = \Delta \hat A,\;\hat Y = \Delta \hat B\)</span> into <a href="#eq-zeqnnum676215" class="quarto-xref">Equation&nbsp;<span>4.56</span></a> and take expectation values:</p>
 <p><span id="eq-zeqnnum473569"><span class="math display">\[
 \langle {\Delta \hat A\Delta \hat B}\rangle = \frac{1}{2}\langle {[\Delta \hat A,\Delta \hat B]}\rangle + \frac{1}{2}\langle {{\rm{\{ }}\Delta \hat A,\Delta \hat B{\rm{\} }}}\rangle
@@ -1036,7 +1064,7 @@ window.Quarto = {
 <p><span id="eq-zeqnnum750071"><span class="math display">\[
 \langle \alpha \vert \alpha \rangle \langle \beta \vert \beta \rangle \ge {\left\vert  {\langle \alpha \vert \beta \rangle } \right\vert ^2}
 \tag{4.61}\]</span></span></p>
-<p>For arbitrary state <span class="math inline">\(\vert \;\rangle\)</span>, set <span class="math inline">\(\vert \alpha \rangle = \Delta \hat A\vert \;\rangle ,\;\vert \beta \rangle = \Delta \hat B\vert \;\rangle\)</span> in <a href="#eq-zeqnnum750071" class="quarto-xref">Equation&nbsp;<span>4.61</span></a> and use <a href="#eq-zeqnnum473569" class="quarto-xref">Equation&nbsp;<span>4.60</span></a> and <a href="#eq-zeqnnum153390" class="quarto-xref">Equation&nbsp;<span>4.59</span></a>:</p>
+<p>Apply the Schwarz inequality to <span class="math inline">\(\lvert\alpha\rangle=\Delta\hat A\lvert\psi\rangle\)</span> and <span class="math inline">\(\lvert\beta\rangle=\Delta\hat B\lvert\psi\rangle\)</span>. Their squared norms are the two variances. Their overlap is <span class="math inline">\(\langle\Delta\hat A\Delta\hat B\rangle\)</span>, whose real and imaginary parts come from the anticommutator and commutator respectively. Thus</p>
 <p><span id="eq-zeqnnum813888"><span class="math display">\[
 \langle {{{(\Delta \hat A)}^2}}\rangle \langle {{{(\Delta \hat B)}^2}}\rangle \ge {\left\vert  {\langle {\Delta \hat A\Delta \hat B}\rangle } \right\vert ^2} = {\left( {\frac{1}{{2i}}\langle [\hat A,\hat B]\rangle } \right)^2} + {\left( {\frac{1}{2}\langle \{ \Delta \hat A,\Delta \hat B\} \rangle } \right)^2}
 \tag{4.62}\]</span></span></p>
@@ -1048,23 +1076,26 @@ window.Quarto = {
 <p><span id="eq-zeqnnum149609"><span class="math display">\[
 \Delta A\Delta B \ge \frac{1}{2}\left\vert  {\langle [\hat A,\hat B]\rangle } \right\vert
 \tag{4.64}\]</span></span></p>
-<p>This relation concerns the product of the standard deviations of two observables. Each standard deviation can be determined statistically from repeated measurements.</p>
-<p>Time is a parameter, not an observable in this formulation. What, then, is the precise meaning of the energy–time relation <span class="math inline">\(\Delta E\Delta t \ge {\hbar \mathord{\left/ {\vphantom {\hbar 2}} \right. \kern-1.2pt } 2}\)</span>?</p>
+<p>The relation describes statistical spreads in identically prepared systems. Determine <span class="math inline">\(\Delta A\)</span> from repeated measurements of <span class="math inline">\(A\)</span> on one ensemble and <span class="math inline">\(\Delta B\)</span> from measurements of <span class="math inline">\(B\)</span> on another ensemble with the same preparation. It does not, by itself, specify the disturbance caused by a sequential measurement.</p>
+<p>For position and momentum, <span class="math inline">\([\hat x,\hat p_x]=i\hbar\hat I\)</span> gives <span class="math inline">\(\Delta x\,\Delta p_x\ge\hbar/2\)</span>. For spin, <span class="math inline">\([\hat S_x,\hat S_y]=i\hbar\hat S_z\)</span> gives <span class="math inline">\(\Delta S_x\,\Delta S_y\ge(\hbar/2)\lvert\langle\hat S_z\rangle\rvert\)</span>. In <span class="math inline">\(\lvert U\rangle\)</span>, both transverse standard deviations are <span class="math inline">\(\hbar/2\)</span>, and the inequality is saturated. Notice that the spin bound depends on the state: noncommuting observables can have a zero lower bound in a state where the commutator’s expectation vanishes.</p>
+<p>Time is a parameter in this formulation, so an energy–time relation cannot be obtained simply by substituting a time operator into the result above. One precise version uses the time scale <span class="math inline">\(\tau_A=\Delta A/\lvert d\langle\hat A\rangle/dt\rvert\)</span> for the mean of an observable with no explicit time dependence to change by one standard deviation. For unitary evolution with a time-independent Hamiltonian and a nonzero rate of change, the uncertainty relation and the equation of motion give <span class="math inline">\(\Delta E\,\tau_A\ge\hbar/2\)</span>. Here <span class="math inline">\(\tau_A\)</span> is a dynamical time scale; the time-evolution chapter supplies the equation of motion.</p>
 </section>
 <section id="exercises" class="level2" data-number="4.7">
 <h2 data-number="4.7" class="anchored" data-anchor-id="exercises"><span class="header-section-number">4.7</span> Exercises</h2>
-<p><strong>4.1.</strong> Define <span class="math inline">\({\rm{\{ }}\hat A,\hat B{\rm{\} }} \equiv \hat A\hat B + \hat B\hat A\)</span>. Prove <span class="math inline">\(\hat A\hat B = {1/2}\left[ {\hat A,\hat B} \right] + {1/2}\left\{ {\hat A,\hat B} \right\}\)</span>.</p>
+<p><strong>4.1.</strong> Define <span class="math inline">\({\rm{\{ }}\hat A,\hat B{\rm{\} }} \equiv \hat A\hat B + \hat B\hat A\)</span>. Prove <span class="math display">\[
+\hat A\hat B = \frac{1}{2}\left[ {\hat A,\hat B} \right] + \frac{1}{2}\left\{ {\hat A,\hat B} \right\}
+\]</span>.</p>
 <p><strong>4.2.</strong> Eigenstates <span class="math inline">\(\vert {a_i}\rangle ,\vert {a_j}\rangle\)</span> of <span class="math inline">\(\hat A\)</span> have distinct eigenvalues <span class="math inline">\({a_i},{a_j}\)</span>. If <span class="math inline">\([\hat A,\hat B] = 0\)</span>, prove</p>
 <p><span id="eq-ch04-p1309"><span class="math display">\[
 \langle {{a_i}}\vert {\hat B}\vert {{a_j}}\rangle = 0
 \tag{4.65}\]</span></span></p>
-<p><strong>4.3.</strong> Using the commutator identity <a href="#eq-zeqnnum842864" class="quarto-xref">Equation&nbsp;<span>4.5</span></a> and spin commutation relations <a href="#eq-zeqnnum232011" class="quarto-xref">Equation&nbsp;<span>4.6</span></a>, prove</p>
+<p><strong>4.3.</strong> Using <a href="#eq-zeqnnum842864" class="quarto-xref">Equation&nbsp;<span>4.5</span></a> and <a href="#eq-zeqnnum232011" class="quarto-xref">Equation&nbsp;<span>4.6</span></a>, prove the first relation below for angular momentum of any spin. For the second, specialize to the spin-<span class="math inline">\(1/2\)</span> matrices in <a href="03-quantum-measurement.html#eq-zeqnnum931030" class="quarto-xref">Equation&nbsp;<span>3.42</span></a>:</p>
 <p><span id="eq-ch04-p1312"><span class="math display">\[
 \left[ {{{{\bf{\hat S}}}^2},{{\hat S}_z}} \right] = 0, \qquad  \left[ {\hat S_x^2,\hat S_y^2} \right] = 0
 \tag{4.66}\]</span></span></p>
 <p><strong>4.4.</strong> Prove that the mean of an anti-Hermitian operator, <span class="math inline">\({\hat C^\dagger } = - \hat C\)</span>, is purely imaginary.</p>
-<p><strong>4.5.</strong> Write the matrix of <span class="math inline">\(\left\vert  R \right\rangle ,\left\vert  L \right\rangle ,{\hat \sigma _x}\)</span> in the <span class="math inline">\({\hat \sigma _{\rm{y}}}\)</span> representation.</p>
-<p>**4.6*.** Let <span class="math inline">\(\langle {\hat X}\rangle\)</span> be the expectation value of <span class="math inline">\(\hat X\)</span> in an arbitrary state, with <span class="math inline">\(\Delta \hat X \equiv \hat X - \langle \hat X\rangle = \hat X - \langle \hat X\rangle \hat I\)</span>. If <span class="math inline">\(\hat A,\hat B\)</span> are Hermitian, prove:</p>
+<p><strong>4.5.</strong> Express <span class="math inline">\(\lvert R\rangle\)</span> and <span class="math inline">\(\lvert L\rangle\)</span> as column vectors, and <span class="math inline">\(\hat\sigma_x\)</span> as a matrix, in the <span class="math inline">\(\hat\sigma_y\)</span> eigenbasis.</p>
+<p><strong>4.6*.</strong> Let <span class="math inline">\(\langle\hat X\rangle\)</span> denote the expectation value in a normalized state, and define <span class="math inline">\(\Delta\hat X=\hat X-\langle\hat X\rangle\hat I\)</span>. For Hermitian <span class="math inline">\(\hat A\)</span> and <span class="math inline">\(\hat B\)</span>, prove:</p>
 <ul>
 <li><p><span class="math inline">\(\langle {[\hat A,\hat B]}\rangle\)</span> is purely imaginary.</p></li>
 <li><p><span class="math inline">\(\langle {{\rm{\{ }}\Delta \hat A,\Delta \hat B{\rm{\} }}}\rangle\)</span> is real.</p></li>

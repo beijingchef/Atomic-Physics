@@ -266,14 +266,14 @@ window.Quarto = {
 
 <p>So far we have discussed states at a given instant. Even sequences of measurements were implicitly performed immediately one after another, before appreciable evolution could occur. We now examine how a state changes with time.</p>
 <p><strong>Quantum postulate 6.</strong> Between measurements, a system’s state evolves according to the Schrödinger equation.</p>
-<p>The Schrödinger equation plays the role in quantum mechanics that Newton’s second law plays in classical mechanics. It cannot be deduced from more elementary principles within this presentation; its validity ultimately rests on experiment.</p>
+<p>The Schrödinger equation plays the role in quantum mechanics that Newton’s second law plays in classical mechanics. It cannot be derived from more elementary principles within this presentation; its validity ultimately rests on experiment. Here we consider a modern route to deduce the equation.</p>
 <section id="motivating-the-schrödinger-equation" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="motivating-the-schrödinger-equation"><span class="header-section-number">5.1</span> * Motivating the Schrödinger equation</h2>
-<p>Consider a modern route to the equation. An initial state <span class="math inline">\(\vert \psi (0)\rangle\)</span> evolves after time <span class="math inline">\(t\)</span> into <span class="math inline">\(\vert \psi (t)\rangle\)</span>. We seek the law governing this evolution:</p>
+<p>An initial state <span class="math inline">\(\vert \psi (0)\rangle\)</span> evolves after time <span class="math inline">\(t\)</span> into <span class="math inline">\(\vert \psi (t)\rangle\)</span>. We seek the law governing this evolution:</p>
 <p><span id="eq-ch05-p1328"><span class="math display">\[
 \left\vert  {\psi \left( 0 \right)} \right\rangle \xrightarrow{{\text{time evolution}}}\left\vert  {\psi \left( t \right)} \right\rangle
 \tag{5.1}\]</span></span></p>
-<p>Introduce a time-evolution operator <span class="math inline">\(\hat U(t)\)</span> relating the initial state to that after <span class="math inline">\(t\)</span>:</p>
+<p>Since operator changes state, we introduce a time-evolution operator <span class="math inline">\(\hat U(t)\)</span> relating the initial state to that after <span class="math inline">\(t\)</span>:</p>
 <p><span id="eq-zeqnnum681983"><span class="math display">\[
 \hat U\left( t \right)\left\vert  {\psi (0)} \right\rangle = \left\vert  {\psi (t)} \right\rangle
 \tag{5.2}\]</span></span></p>
@@ -282,7 +282,7 @@ window.Quarto = {
 <p><span id="eq-ch05-p1333"><span class="math display">\[
 \mathop {\lim }\limits_{t \to 0} \hat U\left( t \right) = \hat I
 \tag{5.3}\]</span></span></p>
-<p><strong>Second:</strong> two successive intervals compose to give evolution over the combined interval.</p>
+<p><strong>Second:</strong> Time evolution of two successive intervals compose to give evolution over the combined interval.</p>
 <p><span id="eq-ch05-p1335"><span class="math display">\[
 \hat U\left( {{t_2}} \right)\hat U\left( {{t_1}} \right)\left\vert  {\psi \left( 0 \right)} \right\rangle = \hat U\left( {{t_2}} \right)\left\vert  {\psi \left( {{t_1}} \right)} \right\rangle = \left\vert  {\psi \left( {{t_1} + {t_2}} \right)} \right\rangle = \hat U\left( {{t_1} + {t_2}} \right)\left\vert  {\psi \left( 0 \right)} \right\rangle
 \tag{5.4}\]</span></span></p>
@@ -299,6 +299,7 @@ window.Quarto = {
 <p><span id="eq-ch05-p1342"><span class="math display">\[
 \hat U\left( {dt} \right)\left\vert  {\psi (0)} \right\rangle = \left\vert  {\psi (dt)} \right\rangle
 \tag{5.7}\]</span></span></p>
+<p>where</p>
 <p><span id="eq-zeqnnum759354"><span class="math display">\[
 \hat U\left( {dt} \right) \equiv \hat I - i\hat \Omega dt
 \tag{5.8}\]</span></span></p>
@@ -326,7 +327,7 @@ E = \hbar \omega
 <p><span id="eq-ch05-p1355"><span class="math display">\[
 \hat U\left( {dt} \right) = \hat I - i\frac{{\hat H}}{\hbar }dt
 \tag{5.14}\]</span></span></p>
-<p>Because of the central role of <span class="math inline">\(\hat H\)</span>, energy is called the <strong>generator of time evolution</strong>.</p>
+<p>Because of the central role of <span class="math inline">\(\hat H\)</span> in time evolution, it is called the <strong>generator of time evolution</strong>.</p>
 <p>From <span class="math inline">\(\hat U(dt)\)</span>, we obtain a differential equation for <span class="math inline">\(\hat U(t)\)</span>, defined in <a href="#eq-zeqnnum681983" class="quarto-xref">Equation&nbsp;<span>5.2</span></a>:</p>
 <p><span id="eq-zeqnnum668676"><span class="math display">\[
 \hat U\left( {t + dt} \right) = \hat U\left( {dt} \right)\hat U\left( t \right) = \left( {\hat I - i\frac{{\hat H}}{\hbar }dt} \right)\hat U\left( t \right)
@@ -392,9 +393,6 @@ i\hbar \frac{\partial }{{\partial t}}\left\langle {{{E_j}}} \mathrel{\left \vert
 <p><span id="eq-ch05-p1389"><span class="math display">\[
 \left\langle {\psi (t)} \right\vert \hat A\left\vert  {\psi (t)} \right\rangle \buildrel\textstyle.\over= {\left( {\begin{array}{*{20}{c}} {\langle 1\vert {\psi (0)}\rangle }\\ {\langle 2\vert {\psi (0)}\rangle }\\ \vdots \\ \vdots \end{array}} \right)^\dagger }\left( {\begin{array}{*{20}{l}} {{A_{11}}}&amp;{{A_{12}}{e^{i{\omega _{12}}t}}}&amp;{{A_{13}}{e^{{\omega _{13}}t}}}&amp; \cdots \\ {{A_{21}}{e^{i{\omega _{21}}t}}}&amp;{{A_{22}}}&amp;{{A_{23}}{e^{{\omega _{23}}t}}}&amp; \cdots \\ {{A_{31}}{e^{i{\omega _{31}}t}}}&amp;{{A_{32}}{e^{{\omega _{32}}t}}}&amp;{{A_{33}}}&amp; \cdots \\ \vdots &amp; \vdots &amp; \vdots &amp; \ddots \end{array}} \right)\left( {\begin{array}{*{20}{c}} {\langle 1\vert {\psi (0)}\rangle }\\ {\langle 2\vert {\psi (0)}\rangle }\\ \vdots \\ \vdots \end{array}} \right)
 \tag{5.27}\]</span></span></p>
-</section>
-<section id="constants-of-motion" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="constants-of-motion"><span class="header-section-number">5.4</span> Constants of motion</h2>
 <p>If <span class="math inline">\(\hat A\)</span> has no explicit time dependence, there is a direct way to find the evolution of <span class="math inline">\(\left\langle {\psi (t)} \right\vert \hat A\left\vert  {\psi (t)} \right\rangle\)</span>.</p>
 <p>First write the Schrödinger equation in the bra space:</p>
 <p><span id="eq-ch05-p1393"><span class="math display">\[
@@ -412,13 +410,16 @@ i\hbar \frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right
 <p><span id="eq-zeqnnum974147"><span class="math display">\[
 i\hbar \frac{\partial }{{\partial t}}\langle \hat A(t)\rangle = \langle [\hat A,\hat H]\rangle
 \tag{5.31}\]</span></span></p>
+</section>
+<section id="constants-of-motion" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="constants-of-motion"><span class="header-section-number">5.4</span> Constants of motion</h2>
 <p>By <a href="#eq-zeqnnum848461" class="quarto-xref">Equation&nbsp;<span>5.30</span></a>, if <span class="math inline">\(\hat A\)</span> has no explicit time dependence and commutes with the Hamiltonian,</p>
 <p><span id="eq-ch05-p1401"><span class="math display">\[
 \frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle = 0
 \tag{5.32}\]</span></span></p>
 <p>The mean of <span class="math inline">\(\hat A\)</span> is constant. If <span class="math inline">\(\hat A\)</span> initially has a definite value, that value equals its mean and <span class="math inline">\(\hat A\)</span> retains it.</p>
 <p>An observable with no explicit time dependence that commutes with the Hamiltonian is a <strong>constant of motion</strong>. Its mean is constant, and any initially definite value remains definite and unchanged. Quantum numbers labeling conserved observables are called <strong>good quantum numbers</strong>.</p>
-<p>Whether a quantity is conserved depends on the system’s Hamiltonian. An operator always commutes with itself, so energy is conserved for the time-independent Hamiltonians considered here.</p>
+<p>Whether a quantity is conserved depends on the system’s Hamiltonian. An operator always commutes with itself, so energy is always conserved.</p>
 </section>
 <section id="exercises" class="level2" data-number="5.5">
 <h2 data-number="5.5" class="anchored" data-anchor-id="exercises"><span class="header-section-number">5.5</span> Exercises</h2>

@@ -4,7 +4,7 @@ We begin with a simple experiment and let its results guide us toward the princi
 
 ## The Stern–Gerlach experiment
 
-Spin angular momentum ${\bf{S}}$ is an intrinsic property of a microscopic particle, just as charge and mass are. Charge and mass are scalars, whereas spin is a vector. Its magnitude is fixed, but its projection along a chosen spatial direction can take different, quantized values. For electrons, neutrons, and protons, there are just two possibilities: $+ {\hbar/2}$ or $- {\hbar/2}$. These are spin-1/2 particles. To avoid repeatedly writing ${\hbar/2}$, we define a new quantity ${\boldsymbol{\sigma}}$:
+Spin angular momentum ${\bf{S}}$ is an intrinsic property of a microscopic particle, just as charge and mass are. Charge and mass are scalars, whereas spin is a vector. Its magnitude is fixed, but its projection along a chosen spatial direction can take different, quantized values. For electrons, neutrons, and protons, there are just two possibilities: $+ {\hbar/2}$ or $- {\hbar/2}$. These are spin-1/2 particles. To avoid repeatedly writing ${\hbar/2}$, we define a new quantity $\boldsymbol{\sigma}$:
 
 $$
 {\bf{S}} \equiv \frac{\hbar }{2}{\boldsymbol{\sigma}}
@@ -122,7 +122,7 @@ The word *vector* may bring an arrow to mind, but a vector space can contain oth
 
 **Example 1: complex column vectors.**
 
-Let us start with some familiar object: a column of $n$ complex numbers. Add two such columns entry by entry, or multiply every entry by a complex number. The result is still a column with $n$ components. These columns therefore form a complex vector space.
+Let us start with some familiar object: a column of $n$ complex numbers. Add two such columns element by element, or multiply every element by a complex number. The result is still a column with $n$ components. These columns therefore form a complex vector space.
 
 $$
 \begin{pmatrix}a_1\\a_2\\a_3\\\vdots\\a_n\end{pmatrix},\quad a_i\in\mathbb C;\qquad\lvert\mathrm{null}\rangle=\begin{pmatrix}0\\0\\0\\\vdots\\0\end{pmatrix}
@@ -140,15 +140,15 @@ Here we allow complex-valued solutions. If ${x_1}(t)$ and ${x_2}(t)$ are solutio
 
 ## Bras and inner products
 
-So far, we can add vectors and multiply them by complex numbers. To discuss their lengths and how they relate to one another, we need another operation. Think of the dot product of two Cartesian vectors: it takes two vectors and returns a number. An **inner product** generalizes this idea to complex vector spaces. It is a rule that assigns a complex number to each ordered pair of vectors. To qualify as an inner product, the rule must satisfy three conditions: linearity in the second vector, conjugate symmetry when the vectors are exchanged, and positive definiteness when a vector is paired with itself. We will write these conditions explicitly below. Together, they let us define length and orthogonality in the vector space.
+So far, we can add vectors and multiply them by complex numbers. To discuss their lengths and how they relate to one another, we need another operation. Think of the dot product of two Cartesian vectors: it takes two vectors and returns a number. An **inner product** generalizes this idea to complex vector spaces. It is a rule that assigns a complex number to each ordered pair of vectors.
 
 Dirac introduced a neat notation for this operation. To write the inner product of $|\varphi\rangle$ and $|\psi\rangle$, we write the first vector as $\langle\varphi|$, and place it next to the second vector's ket. The two brackets fit together:
 
 $$
 \langle \varphi|  \cdot |\psi\rangle \equiv \langle \varphi|\psi\rangle = c
-$$ {#eq-zeqnnum133573}
+$$ {#eq-zeqnnum133573} Here $c$ is the resulting complex number. The inner product supplies the rule for calculating it; the bra–ket notation gives us a compact way to write it.
 
-Here $c$ is the resulting complex number. The inner product supplies the rule for calculating it; the bra–ket notation gives us a compact way to write it. $\langle\varphi|$ is called **bra.** A bra is the dual object associated with a ket. For now, we can work with this correspondence through the rules below. Kets and bras each form a complex vector space. The correspondence between them is **antilinear**: when we convert a ket into its corresponding bra, we take the complex conjugate of each coefficient. The conversion rules are
+$\langle\varphi|$ is called **bra.** A bra is the dual object associated with a ket. For now, we can work with this correspondence through the rules below. Kets and bras each form a complex vector space. The correspondence between them is **antilinear**: when we convert a ket into its corresponding bra, we take the complex conjugate of each coefficient. The conversion rules are
 
 $$
 \begin{aligned}
@@ -173,27 +173,15 @@ $$
 \langle \varphi|\psi\rangle = \langle \psi|\varphi\rangle ^*
 $$ {#eq-zeqnnum921664}
 
-Applying conjugate symmetry, @eq-zeqnnum921664, to the inner product of a vector with itself. The result equals its own complex conjugate, so it must be real:
-
-$$
+Applying conjugate symmetry, @eq-zeqnnum921664, to the inner product of a vector with itself. $$
 \langle \psi|\psi\rangle = \langle \psi|\psi\rangle ^*
-$$ {#eq-ch01-p0188}
+$$ {#eq-ch01-p0188} The result equals its own complex conjugate, so $\langle \psi\|\psi\rangle$ must be real.
 
-**Positive definiteness.** To make this quantity behave like a squared length, we require
-
-$$
+**Positive definiteness.** To make this quantity behave like a squared length, we require $$
 \langle \psi|\psi\rangle \ge 0
-$$ {#eq-zeqnnum281628}
+$$ {#eq-zeqnnum281628} Equality holds only for $\vert \psi\rangle = \vert {{\rm{null}}}\rangle$.
 
-Equality holds only for $\vert \psi\rangle = \vert {{\rm{null}}}\rangle$. A vector $\vert \psi\rangle$ whose inner product with itself is one,
-
-$$
-\langle \psi|\psi\rangle = 1
-$$ {#eq-ch01-p0192}
-
-is **normalized**. Any nonzero, unnormalized vector $|\psi\rangle$ can be normalized as follows:
-
-$$
+A vector $\vert \psi\rangle$ whose inner product with itself is one, $\langle \psi\|\psi\rangle = 1$ is **normalized**. Any nonzero, unnormalized vector $|\psi\rangle$ can be normalized as follows: $$
 \left\vert  {\tilde \psi } \right\rangle = \frac{{|\psi\rangle }}{{\sqrt {\langle \psi|\psi\rangle } }}
 $$ {#eq-ch01-p0194}
 
@@ -203,15 +191,11 @@ Let us put the bra–ket notation to work with column vectors. Here we can see e
 
 $$
 \begin{array}{l} |\phi\rangle = \left( {\begin{array}{*{20}{c}} {{a_1}}\\ {{a_2}} \end{array}} \right) \leftrightarrow \langle \phi|  = \left( {\begin{array}{*{20}{c}} {a_1^*}&{a_2^*} \end{array}} \right)\\ |\psi\rangle = \left( {\begin{array}{*{20}{c}} {{b_1}}\\ {{b_2}} \end{array}} \right) \leftrightarrow \langle \psi|  = \left( {\begin{array}{*{20}{c}} {b_1^*}&{b_2^*} \end{array}} \right) \end{array}
-$$ {#eq-ch01-p0197}
-
-The inner product $\langle \phi|\psi\rangle$ can then be defined by ordinary matrix multiplication:
+$$ {#eq-ch01-p0197} inner product $\langle \phi|\psi\rangle$ can then be defined by ordinary matrix multiplication:
 
 $$
 \langle \phi|\psi\rangle = \left( {\begin{array}{*{20}{c}} {a_1^*}&{a_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{b_1}}\\ {{b_2}} \end{array}} \right) = a_1^*{b_1} + a_2^*{b_2}
-$$ {#eq-zeqnnum248635}
-
-These definitions satisfy all the required properties. Check conjugate symmetry, @eq-zeqnnum921664, explicitly by reversing the two vectors:
+$$ {#eq-zeqnnum248635} definitions satisfy all the required properties. Check conjugate symmetry, @eq-zeqnnum921664, explicitly by reversing the two vectors:
 
 $$
 \langle \psi|\phi\rangle = \left( {\begin{array}{*{20}{c}} {b_1^*}&{b_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{a_1}}\\ {{a_2}} \end{array}} \right) = b_1^*{a_1} + b_2^*{a_2} = {({b_1}a_1^* + {b_2}a_2^*)^*} = {\langle \phi|\psi\rangle ^*}
@@ -219,21 +203,19 @@ $$ {#eq-ch01-p0201}
 
 ## Orthogonality and basis vectors
 
-Let us start with some familiar objects. Two Cartesian vectors ${\bf{a}},{\bf{b}}$ are perpendicular when ${\bf{a}} \cdot {\bf{b}} = 0$. At most three nonzero vectors in three-dimensional Cartesian space can be mutually perpendicular. Rotating such a set gives infinitely many alternative sets, but never more than three mutually perpendicular vectors; That is why the dimension of Cartesian space is three.
+Let us start with some familiar objects. Two Cartesian vectors ${\bf{a}},{\bf{b}}$ are perpendicular when ${\bf{a}} \cdot {\bf{b}} = 0$. At most three nonzero vectors in three-dimensional Cartesian space can be mutually perpendicular. Rotating such a set gives infinitely many alternative sets. But we can never find more than three mutually perpendicular vectors. That is why the dimension of Cartesian space is three.
 
-Given mutually perpendicular unit vectors ${\bf{x}},{\bf{y}},{\bf{z}}$, any Cartesian vector ${\bf{v}}$ can be expressed as their linear combination:
+Given mutually perpendicular unit vectors ${\bf{x}},{\bf{y}},{\bf{z}}$ in a Cartesian space, they are called basis vectors. Any Cartesian vector ${\bf{v}}$ can be expressed as the linear combination of basis vectors:
 
 $$
 {\bf{v}} = \left( {{\bf{x}} \cdot {\bf{v}}} \right){\bf{x}} + \left( {{\bf{y}} \cdot {\bf{v}}} \right){\bf{y}} + \left( {{\bf{z}} \cdot {\bf{v}}} \right){\bf{z}} = {v_x}{\bf{x}} + {v_y}{\bf{y}} + {v_z}{\bf{z}}
-$$ {#eq-ch01-p0204}
-
-We can collect the three components of ${\bf{v}}$ into a column vector:
+$$ {#eq-ch01-p0204} can collect the three components of ${\bf{v}}$ into a column vector:
 
 $$
 {\bf{v}} = \left( {\begin{array}{*{20}{c}} {{v_x}}\\ {{v_y}}\\ {{v_z}} \end{array}} \right){\rm{ = }}\left( {\begin{array}{*{20}{c}} {{\bf{x}} \cdot {\bf{v}}}\\ {{\bf{y}} \cdot {\bf{v}}}\\ {{\bf{z}} \cdot {\bf{v}}} \end{array}} \right)
-$$ {#eq-ch01-p0206}
+$$ {#eq-ch01-p0206} a fixed vector ${\bf{v}}$ while you rotate the coordinate axes. Rotating the ${\bf{x}},{\bf{y}},{\bf{z}}$ axes changes the components of ${\bf{v}}$, even though the vector itself stays fixed.
 
-Picture a fixed vector ${\bf{v}}$ while you rotate the coordinate axes. Rotating the ${\bf{x}},{\bf{y}},{\bf{z}}$ axes changes the components of ${\bf{v}}$, even though the vector itself stays fixed. In their own coordinate system, the coordinate unit vectors always have the following column representations:
+In their own coordinate system, the Cartesian basis vectors always have the following column representations:
 
 $$
 {\bf{x}} = \left( {\begin{array}{*{20}{c}} 1\\ 0\\ 0 \end{array}} \right), \qquad  {\bf{y}} = \left( {\begin{array}{*{20}{c}} 0\\ 1\\ 0 \end{array}} \right), \qquad  {\bf{z}} = \left( {\begin{array}{*{20}{c}} 0\\ 0\\ 1 \end{array}} \right)
@@ -247,43 +229,33 @@ $$
 &\frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix},\quad \frac{1}{\sqrt{2}}\begin{pmatrix}1\\-1\end{pmatrix};\\[0.6em]
 &\frac{1}{\sqrt{2}}\begin{pmatrix}1\\i\end{pmatrix},\quad \frac{1}{\sqrt{2}}\begin{pmatrix}1\\-i\end{pmatrix}.
 \end{aligned}
-$$ {#eq-zeqnnum282640}
+$$ {#eq-zeqnnum282640} any one of these pairs and we cannot find a third nonzero column vector orthogonal to both members. Thus, the vector space of two-component columns has dimension two.
 
-Choose any one of these pairs and we cannot find a third nonzero column vector orthogonal to both members. Thus, the vector space of two-component columns has dimension two.
-
-A **basis** is a linearly independent set of vectors that spans the space; it need not be orthogonal or normalized. A set of $N$ mutually orthogonal, normalized vectors in an $N$-dimensional inner-product space forms a **complete orthonormal basis**. We use orthonormal bases throughout this chapter. For any two vectors $|i\rangle,|j\rangle$ in such a basis,
+A **basis** is a linearly independent set of vectors that spans the space; it need not be orthogonal or normalized. A set of $N$ mutually orthogonal, normalized vectors in an $N$-dimensional vector space forms a **complete orthonormal basis**. Unless stated otherwise, the bases used in this book are complete and orthonormal. For any two vectors $|i\rangle,|j\rangle$ in such a basis,
 
 $$
 \langle j|i\rangle = {\delta _{ij}}
-$$ {#eq-zeqnnum766490}
-
-The symbol ${\delta _{ij}}$ is the **Kronecker delta**, defined by
+$$ {#eq-zeqnnum766490} symbol ${\delta _{ij}}$ is the **Kronecker delta**, defined by
 
 $$
 {\delta _{ij}} = \left\{ \begin{array}{l} 1, & i = j\\ 0, & i \ne j \end{array} \right.
 $$ {#eq-ch01-p0216}
 
-For spin-1/2, choose $|+z\rangle$ and $|-z\rangle$ as an orthonormal basis of the two-dimensional spin state space. Thus $\langle+z|+z\rangle=\langle-z|-z\rangle=1$ and $\langle+z|-z\rangle=0$. The measurement postulate introduced later will connect this orthogonality to the perfectly distinguishable outcomes of a measurement.
-
-A basis acts like a the unit vector in the Cartesian coordinate system: every state vector has a unique expansion as a linear combination of the basis vectors. In an $N$-dimensional space with basis $\{|i\rangle\}_{i=1}^{N}$, any vector $|\psi\rangle$ can be written as
+Just like a Cartesian vector has a unique expansion in a Cartesian basis: every state vector has a unique expansion as a linear combination of the basis vectors. In an $N$-dimensional space with basis $\{|i\rangle\}_{i=1}^{N}$, any vector $|\psi\rangle$ can be written as
 
 $$
 |\psi\rangle = \sum\limits_i {{a_i}|i\rangle }
-$$ {#eq-ch01-p0218}
-
-Here ${a_i}$ is the complex coefficient of $|i\rangle$ in the expansion of $|\psi\rangle$. To find a particular coefficient, lets say $a_j$, apply the bra $\langle j|$ to both sides. Orthogonality removes every term except the one we want:
+$$ {#eq-ch01-p0218} ${a_i}$ is the complex coefficient of $|i\rangle$ in the expansion of $|\psi\rangle$. To find a particular coefficient, lets say $a_j$, apply the bra $\langle j|$ to both sides. Orthogonality removes every term except the one we want:
 
 $$
 \langle j|\psi\rangle = \sum\limits_i {\langle j| {a_i}|i\rangle } = \sum\limits_i {{a_i}\langle j|i\rangle } = \sum\limits_i {{a_i}{\delta _{ij}}} = {a_j}
-$$ {#eq-ch01-p0220}
-
-Thus the component of $|\psi\rangle$ along $|j\rangle$ is $\langle j|\psi\rangle$, and
+$$ {#eq-ch01-p0220} the component of $|\psi\rangle$ along $|j\rangle$ is $\langle j|\psi\rangle$, and
 
 $$
 |\psi\rangle = \sum\limits_i {\langle i|\psi\rangle |i\rangle } = \sum\limits_i {|i\rangle } \langle i|\psi\rangle
-$$ {#eq-zeqnnum935342}
+$$ {#eq-zeqnnum935342} identity reconstructs a vector from its components. In the final expression, moving the scalar $\langle i|\psi\rangle$ to the right of the ket groups the factors as $|i\rangle\langle i|$. The [section on outer products, projection operators, and completeness](02-operators.qmd#outer-products-projection-operators-and-completeness) explains the meaning of these factors.
 
-This identity reconstructs a vector from its components. In the final expression, moving the scalar $\langle i|\psi\rangle$ to the right of the ket groups the factors as $|i\rangle\langle i|$. The [section on outer products, projection operators, and completeness](02-operators.qmd#outer-products-projection-operators-and-completeness) explains how these factors act as projection operators. Taking the corresponding bra, using @eq-zeqnnum136783 and @eq-zeqnnum921664, gives
+Taking the corresponding bra, using @eq-zeqnnum136783 and @eq-zeqnnum921664, gives
 
 $$
 \langle \psi|  = \sum\limits_i {\langle \psi|i\rangle } \langle i|
@@ -291,48 +263,21 @@ $$ {#eq-ch01-p0224}
 
 ## Matrix representations of vectors
 
-Once we have chosen an ordered orthonormal basis, we can gather the expansion coefficients in @eq-zeqnnum935342 into a column. This gives a concrete representation of the state vector. In the equations below, equality with a column means representation in the chosen basis:
+Once we have chosen an ordered orthonormal basis, we can gather the expansion coefficients in @eq-zeqnnum935342 into a column. This gives a concrete representation of the state vector in the chosen basis:
 
 $$
-\lvert\psi\rangle=\begin{pmatrix}\langle 1\vert\psi\rangle\\\langle 2\vert\psi\rangle\\\vdots\\\langle N\vert\psi\rangle\end{pmatrix}
+\lvert\psi\rangle:=\begin{pmatrix}\langle 1\vert\psi\rangle\\\langle 2\vert\psi\rangle\\\vdots\\\langle N\vert\psi\rangle\end{pmatrix}
 $$ {#eq-zeqnnum343100}
 
-In this basis, each basis vector has one unit entry and zeros everywhere else:
+In this basis, each basis vector is represented as:
 
 $$
 |1\rangle = \left( {\begin{array}{*{20}{c}} 1\\ 0\\ \vdots \\ 0 \end{array}} \right), \qquad  |2\rangle = \left( {\begin{array}{*{20}{c}} 0\\ 1\\ \vdots \\ 0 \end{array}} \right), \qquad  \cdots \qquad  |N\rangle = \left( {\begin{array}{*{20}{c}} 0\\ 0\\ \vdots \\ 1 \end{array}} \right)
 $$ {#eq-ch01-p0229}
 
-Always keep track of the basis attached to a column. Changing the basis changes the entries, so columns written in different bases must first be converted to a common basis before we combine them in a matrix calculation.
+Always keep track of the basis attached to a column. Changing the basis changes the elements, so columns written in different bases must first be converted to a common basis before we combine them in a matrix calculation.
 
-**Worked example: changing the basis.** Let us describe one state using two different sets of coordinates. In the $z$ basis, take
-
-$$
-|\psi\rangle=\frac{\sqrt{3}}{2}|+z\rangle+\frac{1}{2}|-z\rangle,
-\qquad
-|\psi\rangle=\begin{pmatrix}\sqrt{3}/2\\1/2\end{pmatrix}.
-$$
-
-Now choose a second orthonormal basis:
-
-$$
-|u\rangle=\frac{|+z\rangle+|-z\rangle}{\sqrt{2}},
-\qquad
-|v\rangle=\frac{|+z\rangle-|-z\rangle}{\sqrt{2}}.
-$$
-
-Taking inner products gives $\langle u|\psi\rangle=(\sqrt{3}+1)/(2\sqrt{2})$ and $\langle v|\psi\rangle=(\sqrt{3}-1)/(2\sqrt{2})$. Therefore
-
-$$
-|\psi\rangle=\frac{\sqrt{3}+1}{2\sqrt{2}}|u\rangle
-+\frac{\sqrt{3}-1}{2\sqrt{2}}|v\rangle,
-\qquad
-|\psi\rangle=\begin{pmatrix}(\sqrt{3}+1)/(2\sqrt{2})\\(\sqrt{3}-1)/(2\sqrt{2})\end{pmatrix}.
-$$
-
-Compare the two columns: their entries differ, yet they describe the same state vector. Thus when we write a state vector in column form we must be clear which basis it is attached to. As a check, calculate the squared norm of $|\psi\rangle$ in each basis. We obtain $3/4+1/4=1$ in the first and $[(\sqrt{3}+1)^2+(\sqrt{3}-1)^2]/8=1$ in the second.
-
-The comparison below connects state-vector notation to Cartesian geometry. Here $\mathbf{e}_i$ denotes a Cartesian coordinate unit vector. In both settings, an orthonormal basis lets us obtain a vector's components by taking inner products with the basis vectors:
+The comparison below connects state-vector notation to Cartesian geometry. Here $\mathbf{e}_i$ denotes a Cartesian basis vector. In both settings, an orthonormal basis lets us obtain a vector's components by taking inner products with the basis vectors:
 
 $$
 \begin{array}{ll}
@@ -341,7 +286,7 @@ $$
 & \langle\phi|\psi\rangle=\langle\psi|\phi\rangle^*\\[0.5em]
 \mathbf{a}\cdot\mathbf{b}=0
 & \langle\phi|\psi\rangle=0\\[0.5em]
-\text{Orthonormal coordinate axes}
+\text{Orthonormal Cartesian basis}
 & \text{Orthonormal basis }\{|i\rangle\}\\[0.5em]
  v_i=\mathbf{e}_i\cdot\mathbf{v}
 & a_i=\langle i|\psi\rangle\\[0.5em]
@@ -356,9 +301,7 @@ $$ {#eq-ch01-p0232}
 
 $$
 |\chi\rangle=\begin{pmatrix}2\\i\end{pmatrix} \quad \rm{ and }\quad |\eta\rangle=\begin{pmatrix}1\\1\end{pmatrix}
-$$
-
-write their bras, calculate $\langle\chi|\eta\rangle$ and $\langle\eta|\chi\rangle$, and normalize $|\chi\rangle$. Check conjugate symmetry.
+$$write their bras, calculate $\langle\chi|\eta\rangle$ and $\langle\eta|\chi\rangle$, and normalize $|\chi\rangle$. Check conjugate symmetry.
 
 **1.2.** Test each collection below: does it form a complex vector space under the usual addition and scalar multiplication? Focus on the vector-space rules; an inner product and completeness are not required.
 
@@ -386,6 +329,4 @@ A second basis $\left\{ {\vert {\beta _1}\rangle ,\vert {\beta _2}\rangle } \rig
 
 $$
 \left\vert  {{\beta _1}} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\vert {\alpha _1}\rangle + i\vert {\alpha _2}\rangle } \right), \qquad  \left\vert  {{\beta _2}} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\vert {\alpha _1}\rangle - i\vert {\alpha _2}\rangle } \right)
-$$ {#eq-ch01-p0248}
-
-Express $|\psi\rangle$ in the second basis using two different methods, and check that your answers agree.
+$$ {#eq-ch01-p0248} $|\psi\rangle$ in the second basis using two different methods, and check that your answers agree.

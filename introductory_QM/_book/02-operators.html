@@ -275,24 +275,21 @@ window.Quarto = {
 </header>
 
 
-<p>A quantum state tells us about a system; an <strong>observable</strong> describes something we can measure, such as its position, momentum, or angular momentum. In the previous chapter, we represented states by vectors in a complex vector space. We now introduce the objects that act on those vectors: <strong>linear operators</strong>. These provide the mathematical language for observables and for transformations of quantum states.</p>
+<p>A quantum state tells us about a system; an <strong>observable</strong> describes something we can measure, such as its position, momentum, or angular momentum. In the previous chapter, we represented states by vectors in a complex vector space. We now introduce the objects that act on those vectors: <strong>linear operators</strong>. They not only transform quantum states but also provide the mathematical object for observables.</p>
 <section id="linear-operators" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="linear-operators"><span class="header-section-number">2.1</span> Linear operators</h2>
-<p>Think of an operator as a machine: put in a vector, and another vector comes out. We usually place a hat over its symbol to distinguish it from a number. If the operator <span class="math inline">\(\hat O\)</span> takes the input state <span class="math inline">\(|\psi\rangle\)</span> to the output vector <span class="math inline">\(|\phi\rangle\)</span>, we write</p>
+<p>Think of an operator as a machine: put in a vector, and another vector comes out. We usually place a hat over its symbol to distinguish it from a number variable. If the operator <span class="math inline">\(\hat O\)</span> takes the input vector <span class="math inline">\(|\psi\rangle\)</span> to the output vector <span class="math inline">\(|\phi\rangle\)</span>, we write</p>
 <p><span id="eq-ch02-p0259"><span class="math display">\[
 \hat O\left\vert  \psi \right\rangle = \left\vert  \phi \right\rangle
-\tag{2.1}\]</span></span></p>
-<p>An operator can also act on a bra, producing another bra:</p>
+\tag{2.1}\]</span></span> operator can also act on a bra, producing another bra:</p>
 <p><span id="eq-ch02-p0261"><span class="math display">\[
 \left\langle \alpha \right\vert \hat O = \left\langle \beta \right\vert
-\tag{2.2}\]</span></span></p>
-<p>An operator acting on a ket is written to its left; an operator acting on a bra is written to its right. An operator between a bra and a ket obeys associativity:</p>
+\tag{2.2}\]</span></span> operator acting on a ket is written to its left; an operator acting on a bra is written to its right. An operator between a bra and a ket obeys associativity:</p>
 <p><span id="eq-ch02-p0263"><span class="math display">\[
 \langle \alpha \vert \left( {\hat O\vert \beta\rangle } \right) \equiv \left( {\langle \alpha \vert \hat O} \right)\vert \beta\rangle \equiv \langle \alpha \vert \hat O\vert \beta\rangle
-\tag{2.3}\]</span></span></p>
-<p>The result is a complex number. You can read the expression in two steps: first let <span class="math inline">\(\hat O\)</span> act on <span class="math inline">\(|\beta\rangle\)</span>, then take the overlap of the resulting vector with <span class="math inline">\(|\alpha\rangle\)</span>. The parentheses change how we group the calculation, but not its answer.</p>
-<p>Before using operators in physics, let us learn their basic rules. Unless stated otherwise, the bases used in this chapter are complete and orthonormal.</p>
-<p><strong>Equality.</strong> Two operators are equal if they give the same output for <em>every</em> input vector: if <span class="math inline">\(\hat X|\psi\rangle=\hat Y|\psi\rangle\)</span> for every <span class="math inline">\(|\psi\rangle\)</span>, then <span class="math inline">\(\hat X=\hat Y\)</span>. Agreeing on just one vector is not enough.</p>
+\tag{2.3}\]</span></span> result is a complex number. You can read the expression in two steps: first let <span class="math inline">\(\hat O\)</span> act on <span class="math inline">\(|\beta\rangle\)</span>, then take the inner product of the resulting vector with <span class="math inline">\(|\alpha\rangle\)</span>. The parentheses change how we group the calculation, but not its answer.</p>
+<p>Let us first learn the basic rules of operators.</p>
+<p><strong>Equality.</strong> Two operators are equal if they give the same output for <em>every</em> input vector: if <span class="math inline">\(\hat X|\psi\rangle=\hat Y|\psi\rangle\)</span> for every <span class="math inline">\(|\psi\rangle\)</span>, then <span class="math inline">\(\hat X=\hat Y\)</span>.</p>
 <p><strong>Identity.</strong> The identity operator <span class="math inline">\(\hat I\)</span> is the machine that does nothing: every input comes out unchanged.</p>
 <p><span id="eq-ch02-p0268"><span class="math display">\[
 \hat I\left\vert  \psi \right\rangle = \left\vert  \psi \right\rangle
@@ -308,12 +305,10 @@ window.Quarto = {
 <p>Powers of an operator are defined by</p>
 <p><span id="eq-ch02-p0274"><span class="math display">\[
 {\hat X^n} \equiv \underbrace {\hat X\hat X \cdots \hat X}_{n\text{ terms}}
-\tag{2.7}\]</span></span></p>
-<p>Operator multiplication is associative: grouping the operations differently does not change their order or their result.</p>
+\tag{2.7}\]</span></span> multiplication is associative: grouping the operations differently does not change their order or their result.</p>
 <p><span id="eq-ch02-p0278"><span class="math display">\[
 \hat X\left( {\hat Y\hat Z} \right) = \left( {\hat X\hat Y} \right)\hat Z = \hat X\hat Y\hat Z
-\tag{2.8}\]</span></span></p>
-<p>Multiplying any operator by the identity leaves it unchanged:</p>
+\tag{2.8}\]</span></span> any operator by the identity leaves it unchanged:</p>
 <p><span id="eq-ch02-p0280"><span class="math display">\[
 \hat I\hat X = \hat X\hat I = \hat X
 \tag{2.9}\]</span></span></p>
@@ -321,46 +316,46 @@ window.Quarto = {
 <p><span id="eq-zeqnnum324323"><span class="math display">\[
 \begin{gathered} \hat X\left( {c\left\vert  \psi \right\rangle } \right) = c\hat X\left\vert  \psi \right\rangle , \\ \hat X\left( {\left\vert  {{\psi _\alpha }} \right\rangle + \left\vert  {{\psi _\beta }} \right\rangle } \right) = \hat X\left\vert  {{\psi _\alpha }} \right\rangle + \hat X\left\vert  {{\psi _\beta }} \right\rangle , \\ \left( {\hat X + \hat Y} \right)\left\vert  \psi \right\rangle = \hat X\left\vert  \psi \right\rangle + \hat Y\left\vert  \psi \right\rangle \\ \hat X + \hat Y = \hat Y + \hat X, \\ \hat X + (\hat Y + \hat Z) = (\hat X + \hat Y) + \hat Z \\ \end{gathered}
 \tag{2.10}\]</span></span></p>
-<p>The third property in <a href="#eq-zeqnnum324323" class="quarto-xref">Equation&nbsp;<span>2.10</span></a>, together with the properties of the inner product, gives</p>
+<p>The third property in <a href="#eq-zeqnnum324323" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-zeqnnum324323</span></a>, together with the properties of the inner product, gives</p>
 <p><span id="eq-ch02-p0282"><span class="math display">\[
 \left\langle \alpha \right\vert \left( {{\hat X + \hat Y}} \right)\left\vert  \beta \right\rangle = \left\langle \alpha \right\vert \hat X\left\vert  \beta \right\rangle + \left\langle \alpha \right\vert \hat Y\left\vert  \beta \right\rangle
 \tag{2.11}\]</span></span></p>
 </section>
 <section id="matrix-representations-of-operators" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="matrix-representations-of-operators"><span class="header-section-number">2.2</span> Matrix representations of operators</h2>
-<p>A basis turns an abstract vector into a column of numbers, as in <a href="01-vectors-and-quantum-states.html#eq-zeqnnum935342" class="quarto-xref">Equation&nbsp;<span>1.25</span></a>. It also turns an operator into a matrix. The operator itself stays the same; the matrix is its description in the chosen basis. Let <span class="math inline">\(\{|1\rangle,|2\rangle,\ldots,|N\rangle\}\)</span> be an orthonormal basis, and suppose</p>
+<p>A basis allows us to represent an abstract vector by a column of numbers, as in <a href="#eq-zeqnnum935342" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-zeqnnum935342</span></a>. It also allows us to represent an operator by a matrix. Let <span class="math inline">\(\{|1\rangle,|2\rangle,\ldots,|N\rangle\}\)</span> be an orthonormal basis, and suppose</p>
 <p><span id="eq-zeqnnum246664"><span class="math display">\[
 \hat M\left\vert  \psi \right\rangle = \left\vert  \phi \right\rangle
 \tag{2.12}\]</span></span></p>
-<p>To find the <span class="math inline">\(i\)</span>th component of the output, multiply both sides from the left by <span class="math inline">\(\langle i|\)</span>:</p>
+<p>Multiply both sides from the left by <span class="math inline">\(\langle i|\)</span>, we have both sides equal to the <span class="math inline">\(i\)</span> th component of <span class="math inline">\(|\phi\rangle\)</span></p>
 <p><span id="eq-zeqnnum456036"><span class="math display">\[
 \left\langle i \right\vert \hat M\left\vert  \psi \right\rangle = \left\langle {i} \mathrel{\left \vert  {\vphantom {i \phi }} \right. \kern-1.2pt } {\phi } \right\rangle
 \tag{2.13}\]</span></span></p>
-<p>Using <span class="math inline">\(\left\vert  \psi \right\rangle = \sum {\left\vert  j \right\rangle \left\langle {j} \mathrel{\left \vert  {\vphantom {j \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }\)</span>, we can rewrite <a href="#eq-zeqnnum456036" class="quarto-xref">Equation&nbsp;<span>2.13</span></a> as</p>
+<p>Using <span class="math inline">\(\left\vert  \psi \right\rangle = \sum {\left\vert  j \right\rangle \left\langle {j} \mathrel{\left \vert  {\vphantom {j \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }\)</span>, we can rewrite <a href="#eq-zeqnnum456036" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-zeqnnum456036</span></a> as</p>
 <p><span id="eq-zeqnnum775889"><span class="math display">\[
 \sum\limits_{j = 1}^N {\left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\langle {j} \mathrel{\left \vert  {\vphantom {j \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } = \left\langle {i} \mathrel{\left \vert  {\vphantom {i \phi }} \right. \kern-1.2pt } {\phi } \right\rangle
 \tag{2.14}\]</span></span></p>
-<p>The quantity <span class="math inline">\(\left\langle i \right\vert \hat M\left\vert  j \right\rangle\)</span> is a number. Write <span class="math inline">\({M_{ij}} \equiv \left\langle i \right\vert \hat M\left\vert  j \right\rangle\)</span> and let <span class="math inline">\(i\)</span> in <a href="#eq-zeqnnum775889" class="quarto-xref">Equation&nbsp;<span>2.14</span></a> run through the entire basis to obtain</p>
+<p>The quantity <span class="math inline">\(\left\langle i \right\vert \hat M\left\vert  j \right\rangle\)</span> is a number. Write <span class="math inline">\({M_{ij}} \equiv \left\langle i \right\vert \hat M\left\vert  j \right\rangle\)</span> and let <span class="math inline">\(i\)</span> in <a href="#eq-zeqnnum775889" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-zeqnnum775889</span></a> run through the entire basis to obtain</p>
 <p><span id="eq-ch02-p0291"><span class="math display">\[
 \left( {\begin{array}{*{20}{c}} {{M_{11}}}&amp;{{M_{12}}}&amp; \cdots &amp;{{M_{1N}}}\\ {{M_{21}}}&amp;{{M_{22}}}&amp; \cdots &amp;{{M_{2N}}}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ {{M_{N1}}}&amp;{{M_{N2}}}&amp; \cdots &amp;{{M_{NN}}} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {\langle 1\vert \psi\rangle }\\ {\langle 2\vert \psi\rangle }\\ \vdots \\ {\langle N\vert \psi\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\langle 1\vert \phi \rangle }\\ {\langle 2\vert \phi \rangle }\\ \vdots \\ {\langle N\vert \phi \rangle } \end{array}} \right)
 \tag{2.15}\]</span></span></p>
-<p>This is ordinary matrix multiplication: a matrix acts on the column of input components and produces the column of output components. It is the coordinate version of <span class="math inline">\(\hat M|\psi\rangle=|\phi\rangle\)</span>.</p>
-<p>Thus, the numbers <span class="math inline">\({M_{ij}}\)</span> form an <span class="math inline">\(N \times N\)</span> square matrix representing <span class="math inline">\(\hat M\)</span>, with <span class="math inline">\(i,j\)</span> specifying row and column indices. The matrix representation of <span class="math inline">\(\hat M\)</span> is</p>
+<p>This is ordinary matrix multiplication: a matrix acts on the column vector and produces another column vector. It represents <span class="math inline">\(\hat M|\psi\rangle=|\phi\rangle\)</span> in the chosen basis.</p>
+<p>Thus, the matrix representation of <span class="math inline">\(\hat M\)</span> in the chosen basis is</p>
 <p><span id="eq-ch02-p0294"><span class="math display">\[
 \hat M = \left( {\begin{array}{*{20}{c}} {{M_{11}}}&amp;{{M_{12}}}&amp; \cdots &amp;{{M_{1N}}}\\ {{M_{21}}}&amp;{{M_{22}}}&amp; \cdots &amp;{{M_{2N}}}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ {{M_{N1}}}&amp;{{M_{N2}}}&amp; \cdots &amp;{{M_{NN}}} \end{array}} \right), \qquad  {M_{ij}} \equiv \left\langle i \right\vert \hat M\left\vert  j \right\rangle
 \tag{2.16}\]</span></span></p>
-<p>A useful way to read the matrix is <strong>one column at a time</strong>. Column <span class="math inline">\(j\)</span> lists the components of <span class="math inline">\(\hat M|j\rangle\)</span>: it tells you what happens when basis vector <span class="math inline">\(|j\rangle\)</span> enters the machine. Like a vector’s coordinates, an operator’s matrix depends on the chosen basis.</p>
+<p>A useful way to read the matrix is <strong>one column at a time</strong>. Column <span class="math inline">\(j\)</span> lists the components of <span class="math inline">\(\hat M|j\rangle\)</span>. Like a state vector’s column representation, an operator’s matrix depends on the chosen basis.</p>
 </section>
 <section id="eigenvalues-and-eigenvectors" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="eigenvalues-and-eigenvectors"><span class="header-section-number">2.3</span> Eigenvalues and eigenvectors</h2>
-<p>Most vectors change their direction in vector space when an operator acts on them. An <strong>eigenvector</strong> is special: the output is simply a number times the input. That number is the <strong>eigenvalue</strong>. In a real vector space, picture an arrow that is stretched, shortened, or reversed without leaving its original line. In a complex vector space, the multiplier can also change its phase. An eigenvector must be nonzero. We often label it by its eigenvalue: <span class="math inline">\(|a_i\rangle\)</span> denotes an eigenvector with eigenvalue <span class="math inline">\(a_i\)</span>.</p>
+<p>Most vectors change their direction in vector space when an operator acts on them. An <strong>eigenvector</strong> of the operator is special: the output is simply a number times the input. That number is the <strong>eigenvalue</strong> corresponding to the eigenvector. In a real vector space, picture an arrow that is stretched, shortened, or reversed without leaving its original line. In a complex vector space, the eigenvalue can be a complex number. An eigenvector must be nonzero. We often label it by its eigenvalue: <span class="math inline">\(|a_i\rangle\)</span> denotes an eigenvector with eigenvalue <span class="math inline">\(a_i\)</span>.</p>
 <p><strong>Example.</strong> If <span class="math inline">\(\hat A\)</span> has eigenvectors <span class="math inline">\(\vert {a_i}\rangle\)</span> with eigenvalues <span class="math inline">\({a_i}\)</span>, then</p>
 <p><span id="eq-ch02-p0299"><span class="math display">\[
 \hat A\left\vert  {{a_1}} \right\rangle = {a_1}\left\vert  {{a_1}} \right\rangle ,\;\; \qquad  \hat A\left\vert  {{a_2}} \right\rangle = {a_2}\left\vert  {{a_2}} \right\rangle , \qquad  \cdots
 \tag{2.17}\]</span></span></p>
 <p>When operators are represented by square matrices and vectors by columns, these are precisely the matrix eigenvalues and eigenvectors of linear algebra. We can therefore find an operator’s eigenvalues and eigenvectors from its matrix representation.</p>
-<p>Several linearly independent eigenvectors can share the same eigenvalue. The number of independent eigenvectors with that value is its <strong>degeneracy</strong>. A degeneracy of one means the eigenvalue is <strong>nondegenerate</strong>. Multiplying <span class="math inline">\(|a\rangle\)</span> by any nonzero complex number <span class="math inline">\(c\)</span> gives another eigenvector with eigenvalue <span class="math inline">\(a\)</span>, because <span class="math inline">\(\hat A(c|a\rangle)=a(c|a\rangle)\)</span>. However, this does not add a new independent direction, so it does not increase the degeneracy.</p>
-<p><strong>Theorem 2.1.</strong> If several eigenvectors of <span class="math inline">\(\hat A\)</span> share an eigenvalue, any nonzero linear combination is an eigenvector with that same eigenvalue.</p>
+<p>Several linearly independent eigenvectors can share the same eigenvalue. The number of <strong>independent</strong> eigenvectors sharing that value is its <strong>degeneracy</strong>. A degeneracy of one means the eigenvalue is <strong>nondegenerate</strong>.</p>
+<p><strong>Theorem 2.1.</strong> If several eigenvectors of <span class="math inline">\(\hat A\)</span> share an eigenvalue, any nonzero linear combination of them is an eigenvector with that same eigenvalue.</p>
 <p><strong>Proof.</strong> Suppose eigenvalue <span class="math inline">\(a\)</span> of <span class="math inline">\(\hat A\)</span> has <span class="math inline">\(n\)</span> eigenvectors, denoted <span class="math inline">\(\vert 1\rangle ,\vert 2\rangle , \cdots \vert n\rangle\)</span>, so that</p>
 <p><span id="eq-ch02-p0304"><span class="math display">\[
 \hat A\left\vert  i \right\rangle = a\left\vert  i \right\rangle , \qquad  i = 1,2, \cdots n
@@ -368,120 +363,116 @@ window.Quarto = {
 <p>For any linear combination <span class="math inline">\(\sum\nolimits_i {{c_i}\vert i\rangle }\)</span> of these eigenvectors,</p>
 <p><span id="eq-zeqnnum130538"><span class="math display">\[
 \hat A\left( {\sum\limits_i {{c_i}\vert i\rangle } } \right) = \sum\limits_i {{c_i}\hat A\vert i\rangle } = \sum\limits_i {{c_i}a\vert i\rangle } = a\left( {\sum\limits_i {{c_i}\vert i\rangle } } \right)
-\tag{2.19}\]</span></span></p>
-<p>This proves the result: within a subspace whose vectors all share eigenvalue <span class="math inline">\(a\)</span>, the operator simply multiplies every vector by <span class="math inline">\(a\)</span>.</p>
+\tag{2.19}\]</span></span> proves the result: within a subspace whose vectors all share eigenvalue <span class="math inline">\(a\)</span>, the operator simply multiplies every vector by <span class="math inline">\(a\)</span>.</p>
 </section>
 <section id="outer-products-projection-operators-and-completeness" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="outer-products-projection-operators-and-completeness"><span class="header-section-number">2.4</span> Outer products, projection operators, and completeness</h2>
-<p>In Dirac notation, the order and shape of the symbols tell us what kind of object we have. An inner product <span class="math inline">\(\langle\phi|\psi\rangle\)</span> is a number, an operator acting on a ket produces a ket, and an operator acting on a bra produces a bra. You cannot add a bra to a ket, just as you cannot add a row matrix to a column matrix. Products such as <span class="math inline">\(\hat X\langle\psi|\)</span> and <span class="math inline">\(|\psi\rangle\hat X\)</span> are also not defined in the notation used here. Two kets placed side by side do not form an ordinary product.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> But what happens if we put a ket first and a bra second?</p>
-<p><span id="eq-zeqnnum460948"><span class="math display">\[
+<p>In Dirac notation, a combination of symbols is legal if it yields a valid object in vector space, which are a number, a ket , a bra or an operator. For example, <span class="math inline">\(\langle\phi|\psi\rangle\)</span> produces a number, an operator acting on a ket produces a ket, and an operator acting on a bra produces a bra. On the other hand, <span class="math inline">\(\langle\phi|+|\psi\rangle\)</span> is illegal, <span class="math inline">\(\hat X\langle\psi|\)</span> and <span class="math inline">\(|\psi\rangle\hat X\)</span> are also illegal. But what kind of object is this <span class="math display">\[
 \left\vert  \psi \right\rangle \left\langle \phi \right\vert
-\tag{2.20}\]</span></span></p>
-<p>This is an <strong>outer product</strong>. Unlike the inner product, it is an operator. The quickest way to see this is to give it an input ket.</p>
-<p>Dirac notation has a useful associative rule: in a product of kets, bras, scalars, and operators, brackets <span class="math inline">\(\left( {} \right)\)</span> may group adjacent factors in any way, provided the expression inside <span class="math inline">\(\left( {} \right)\)</span> is a valid scalar, vector, or operator.</p>
-<p>To interpret the outer product in <a href="#eq-zeqnnum460948" class="quarto-xref">Equation&nbsp;<span>2.20</span></a>, multiply it on the right by a ket and use associativity:</p>
+\]</span> {#eq-zeqnnum460948}This is an <strong>outer product</strong>. It is an operator. Why?</p>
+<p>Dirac notation has a useful <strong>associative rule</strong>: in a product of kets, bras, numbers, and operators, brackets <span class="math inline">\(\left( {} \right)\)</span> may group adjacent factors in any way, provided the expression inside <span class="math inline">\(\left( {} \right)\)</span> is a valid object.</p>
+<p>To interpret the outer product in <a href="#eq-zeqnnum460948" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-zeqnnum460948</span></a>, multiply it on the right by a ket and use associativity:</p>
 <p><span id="eq-ch02-p0314"><span class="math display">\[
-\left( {\left\vert  \psi \right\rangle \left\langle \phi \right\vert } \right)\;\left\vert  \alpha \right\rangle \equiv \left\vert  \psi \right\rangle \;\left( {\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \alpha }} \right. \kern-1.2pt } {\alpha } \right\rangle } \right)
-\tag{2.21}\]</span></span></p>
-<p>The right-hand side is the scalar <span class="math inline">\(\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \alpha }} \right. \kern-1.2pt } {\alpha } \right\rangle\)</span> times the ket <span class="math inline">\(\left\vert  \psi \right\rangle\)</span>, so it is another ket. An outer product therefore maps a ket to a ket: it is an operator.</p>
+\left( {\left\vert  \psi \right\rangle \left\langle \phi \right\vert } \right)\;\left\vert  \alpha \right\rangle = \left\vert  \psi \right\rangle \;\left( {\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \alpha }} \right. \kern-1.2pt } {\alpha } \right\rangle } \right)
+\tag{2.20}\]</span></span></p>
+<p>The right-hand side is the number <span class="math inline">\(\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \alpha }} \right. \kern-1.2pt } {\alpha } \right\rangle\)</span> times the ket <span class="math inline">\(\left\vert  \psi \right\rangle\)</span>, so it is another ket. An outer product therefore maps a ket to a ket: it is an operator.</p>
 <section id="projection-operators" class="level3" data-number="2.4.1">
 <h3 data-number="2.4.1" class="anchored" data-anchor-id="projection-operators"><span class="header-section-number">2.4.1</span> Projection operators</h3>
 <p>Let <span class="math inline">\(\{|j\rangle\}\)</span> be a complete orthonormal basis. We can split any vector <span class="math inline">\(|\psi\rangle\)</span> into components along the basis directions. Associativity lets us rewrite that expansion as</p>
-<p><span id="eq-zeqnnum153427"><span class="math display">\[
+<p><span class="math display">\[
 \left\vert  \psi \right\rangle = \sum\limits_j {\left\vert  j \right\rangle \left\langle {j} \mathrel{\left \vert  {\vphantom {j \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } = \sum\limits_j {\left( {\left\vert  j \right\rangle \left\langle j \right\vert } \right)\left\vert  \psi \right\rangle }
-\tag{2.22}\]</span></span></p>
-<p>Every term in this sum contains an outer-product operator.</p>
-<p><span id="eq-ch02-p0320"><span class="math display">\[
-\left\vert  j \right\rangle \left\langle j \right\vert
-\tag{2.23}\]</span></span></p>
-<p>This is a <strong>projection operator</strong>. Think of a vector’s shadow on a coordinate axis: the projector <span class="math inline">\(|j\rangle\langle j|\)</span> keeps the component along <span class="math inline">\(|j\rangle\)</span> and discards all components orthogonal to it.</p>
-<p><span id="eq-ch02-p0322"><span class="math display">\[
+\]</span> {#eq-zeqnnum153427}Every term in this sum contains an outer-product operator.</p>
+<p><span class="math display">\[
+\left\vert  j \right\rangle \left\langle j \right\vert \equiv {\hat P}_j
+\]</span> {#eq-ch02-p0320}This is a <strong>projection operator</strong>. Think of a Cartesian vector’s projection on a coordinate axis: the projector <span class="math inline">\(|j\rangle\langle j|\)</span> keeps the component along <span class="math inline">\(|j\rangle\)</span> and discards all components orthogonal to it.</p>
+<p><span class="math display">\[
 \left( {\left\vert  j \right\rangle \left\langle j \right\vert } \right)\left\vert  \psi \right\rangle = \left\vert  j \right\rangle \left\langle {j} \mathrel{\left \vert  {\vphantom {j \psi }} \right. \kern-1.2pt } {\psi } \right\rangle
-\tag{2.24}\]</span></span></p>
-<p>Projecting twice changes nothing further: once only the <span class="math inline">\(|j\rangle\)</span> component remains, the same projector leaves it alone. Thus <span class="math inline">\(\hat P_j^2=\hat P_j\)</span> for <span class="math inline">\(\hat P_j=|j\rangle\langle j|\)</span>.</p>
+\]</span> {#eq-ch02-p0322}Projecting twice changes nothing further: once only the <span class="math inline">\(|j\rangle\)</span> component remains, the same projector leaves it alone. Thus <span class="math inline">\(\hat P_j^2=\hat P_j\)</span>.</p>
 </section>
 <section id="the-completeness-relation" class="level3" data-number="2.4.2">
 <h3 data-number="2.4.2" class="anchored" data-anchor-id="the-completeness-relation"><span class="header-section-number">2.4.2</span> The completeness relation</h3>
-<p>In <a href="#eq-zeqnnum153427" class="quarto-xref">Equation&nbsp;<span>2.22</span></a>, <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> does not depend on the summation index <span class="math inline">\(j\)</span> and can be taken outside the sum:</p>
+<p>In <a href="#eq-zeqnnum153427" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-zeqnnum153427</span></a>, <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> does not depend on the summation index <span class="math inline">\(j\)</span> and can be taken outside the sum:</p>
 <p><span id="eq-ch02-p0325"><span class="math display">\[
 \left\vert  \psi \right\rangle = \left( {\sum\limits_j {\left\vert  j \right\rangle \left\langle j \right\vert } } \right)\left\vert  \psi \right\rangle
-\tag{2.25}\]</span></span></p>
-<p>Each projector keeps one component. Adding all the projectors puts every component back, so their sum leaves every vector unchanged. It must therefore be the identity operator:</p>
+\tag{2.21}\]</span></span></p>
+<p>Since <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> is arbitrary, the summation of the projectors must be the identity operator:</p>
 <p><span id="eq-zeqnnum286146"><span class="math display">\[
 \sum\limits_j {\left\vert  j \right\rangle \left\langle j \right\vert } = \hat I
-\tag{2.26}\]</span></span></p>
-<p>This is the <strong>completeness relation</strong>: splitting a vector into all its basis components and reassembling them recovers the original vector. We can insert this form of the identity anywhere an operator is allowed, without changing the expression. For example, inserting it on both sides of <span class="math inline">\(\hat M\)</span> gives</p>
-<p><span id="eq-ch02-p0329"><span class="math display">\[
+\tag{2.22}\]</span></span></p>
+<p>This is the <strong>completeness relation</strong>: splitting a vector into all its basis components and reassembling them recovers the original vector. We can insert this form of the identity anywhere an operator is allowed, without changing the expression. This is a very useful method.</p>
+<p>For example, inserting it on both sides of <span class="math inline">\(\hat M\)</span> gives</p>
+<p><span class="math display">\[
 \begin{array}{c} \hat M = \left( {\sum\limits_i {\left\vert  i \right\rangle \left\langle i \right\vert } } \right)\hat M\left( {\sum\limits_j {\left\vert  j \right\rangle \left\langle j \right\vert } } \right) = \sum\limits_{i,j} {\left\vert  i \right\rangle \left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\langle j \right\vert } \\ = \sum\limits_{i,j} {\left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{M_{ij}}\left\vert  i \right\rangle \left\langle j \right\vert } \end{array}
-\tag{2.27}\]</span></span></p>
-<p>If the orthonormal basis consists of eigenvectors satisfying <span class="math inline">\(\hat M|j\rangle=m_j|j\rangle\)</span>, the expression simplifies. Each projector selects one component, and the corresponding eigenvalue tells us how much <span class="math inline">\(\hat M\)</span> multiplies that component:</p>
+\]</span> {#eq-ch02-p0329}If the orthonormal basis consists of eigenvectors satisfying <span class="math inline">\(\hat M|j\rangle=m_j|j\rangle\)</span>, the expression simplifies. Each projector selects one component, and the corresponding eigenvalue tells us how much <span class="math inline">\(\hat M\)</span> multiplies that component:</p>
 <p><span id="eq-zeqnnum298708"><span class="math display">\[
 \begin{array}{c} \hat M = \sum\limits_{i,j} {\left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{m_j}\langle i\vert j\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{m_j}{\delta _{ij}}\left\vert  i \right\rangle \left\langle j \right\vert } \\ = \sum\limits_j {{m_j}\left\vert  j \right\rangle \left\langle j \right\vert } \end{array}
-\tag{2.28}\]</span></span></p>
+\tag{2.23}\]</span></span></p>
 </section>
 </section>
 <section id="hermitian-conjugates-of-operators" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="hermitian-conjugates-of-operators"><span class="header-section-number">2.5</span> Hermitian conjugates of operators</h2>
-<p>Taking the dual of a ket changes it into a bra. What happens to an operator acting on that ket? If <span class="math inline">\(\hat A|\psi\rangle=|\phi\rangle\)</span>, the corresponding bra relation is <span class="math inline">\(\langle\psi|\hat A^{\dagger}=\langle\phi|\)</span>. The operator <span class="math inline">\(\hat A^{\dagger}\)</span> is the <strong>Hermitian conjugate</strong>, also called the <strong>adjoint</strong>, of <span class="math inline">\(\hat A\)</span>. Read the superscript <span class="math inline">\(\dagger\)</span> as “dagger.” This relation must hold for every input ket.</p>
+<p>The dual of a ket is a bra. If <span class="math inline">\(\hat A|\psi\rangle=|\phi\rangle\)</span>, the corresponding bra relation is <span class="math inline">\(\langle\psi|\hat A^{\dagger}=\langle\phi|\)</span>. The operator <span class="math inline">\(\hat A^{\dagger}\)</span> is the <strong>Hermitian conjugate</strong>, or <strong>adjoint</strong>, of <span class="math inline">\(\hat A\)</span>. Read the superscript <span class="math inline">\(\dagger\)</span> as “dagger.” This relation must hold for every input ket.</p>
 <p><span id="eq-zeqnnum326007"><span class="math display">\[
-\hat A\left\vert  \psi \right\rangle \leftrightarrow \left\langle \psi \right\vert {\hat A^\dagger }
-\tag{2.29}\]</span></span></p>
-<p>The practical rule is: <strong>exchange bras and kets, conjugate numerical coefficients, and reverse the order of a product</strong>. For example, <span class="math inline">\((c\hat A)^{\dagger}=c^*\hat A^{\dagger}\)</span>. The following theorems spell out these rules for sums, products, and matrix elements.</p>
+\hat A \leftrightarrow {\hat A^\dagger }
+\tag{2.24}\]</span></span></p>
+<p>Hermitian conjugate obeys the following theorems <span class="math display">\[
+(c\hat A)^{\dagger}=c^*\hat A^{\dagger}
+\]</span>.</p>
 <p><strong>Theorem 2.2.</strong> The adjoint of a sum is the sum of the adjoints.</p>
 <p><span id="eq-zeqnnum665376"><span class="math display">\[
 {\left( {\hat X + \hat Y} \right)^\dagger } = {\hat X^\dagger } + {\hat Y^\dagger }
-\tag{2.30}\]</span></span></p>
-<p><strong>Proof.</strong> Apply the bra–ket duality rules <a href="01-vectors-and-quantum-states.html#eq-zeqnnum136783" class="quarto-xref">Equation&nbsp;<span>1.7</span></a> and <a href="#eq-zeqnnum326007" class="quarto-xref">Equation&nbsp;<span>2.29</span></a>:</p>
+\tag{2.25}\]</span></span></p>
+<p><strong>Proof.</strong> Apply the bra–ket duality rules <a href="#eq-zeqnnum136783" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-zeqnnum136783</span></a> and <a href="#eq-zeqnnum326007" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-zeqnnum326007</span></a>:</p>
 <p><span id="eq-ch02-p0339"><span class="math display">\[
 \begin{array}{c} \left( {\hat X + \hat Y} \right)\left\vert  \psi \right\rangle \leftrightarrow \left\langle \psi \right\vert {\left( {\hat X + \hat Y} \right)^\dagger }\\ \left( {\hat X + \hat Y} \right)\left\vert  \psi \right\rangle = \hat X\left\vert  \psi \right\rangle + \hat Y\left\vert  \psi \right\rangle \leftrightarrow \left\langle \psi \right\vert {{\hat X}^\dagger } + \left\langle \psi \right\vert {{\hat Y}^\dagger } = \left\langle \psi \right\vert ({{\hat X}^\dagger } + {{\hat Y}^\dagger }) \end{array}
-\tag{2.31}\]</span></span></p>
+\tag{2.26}\]</span></span></p>
 <p><strong>Theorem 2.3.</strong> Taking the adjoint of a product reverses the order of its factors.</p>
 <p><span id="eq-zeqnnum908109"><span class="math display">\[
 {\left( {\hat X\hat Y} \right)^\dagger } = {\hat Y^\dagger }{\hat X^\dagger }
-\tag{2.32}\]</span></span></p>
+\tag{2.27}\]</span></span></p>
 <p><strong>Proof.</strong></p>
 <p><span id="eq-ch02-p0343"><span class="math display">\[
 \begin{array}{c} \left( {\hat X\hat Y} \right)\left\vert  \psi \right\rangle \leftrightarrow \left\langle \psi \right\vert {\left( {\hat X\hat Y} \right)^\dagger }\\ \left( {\hat X\hat Y} \right)\left\vert  \psi \right\rangle = \hat X\left( {\hat Y\left\vert  \psi \right\rangle } \right) \leftrightarrow \left( {\left\langle \psi \right\vert {{\hat Y}^\dagger }} \right){{\hat X}^\dagger } = \left\langle \psi \right\vert {{\hat Y}^\dagger }{{\hat X}^\dagger } \end{array}
-\tag{2.33}\]</span></span></p>
+\tag{2.28}\]</span></span></p>
 <p><strong>Theorem 2.4.</strong> Taking the adjoint exchanges the two states in a matrix element and complex-conjugates the resulting number.</p>
 <p>For any two vectors <span class="math inline">\(\vert \alpha\rangle ,\vert \beta\rangle\)</span>,</p>
 <p><span id="eq-zeqnnum961324"><span class="math display">\[
 \langle\alpha|\hat M^{\dagger}|\beta\rangle=\bigl(\langle\beta|\hat M|\alpha\rangle\bigr)^*
-\tag{2.34}\]</span></span></p>
+\tag{2.29}\]</span></span></p>
 <p><strong>Proof.</strong> Put <span class="math inline">\(\hat M\left\vert  \alpha \right\rangle = \left\vert  \gamma \right\rangle\)</span>, so that <span class="math inline">\(\left\langle \alpha \right\vert {\hat M^\dagger } = \left\langle \gamma \right\vert\)</span>.</p>
 <p><span id="eq-ch02-p0348"><span class="math display">\[
 \langle\alpha|\hat M^{\dagger}|\beta\rangle=\langle\gamma|\beta\rangle=\bigl(\langle\beta|\gamma\rangle\bigr)^*=\bigl(\langle\beta|\hat M|\alpha\rangle\bigr)^*
-\tag{2.35}\]</span></span></p>
+\tag{2.30}\]</span></span></p>
 <p><strong>Theorem 2.5.</strong> Taking the adjoint twice returns the original operator.</p>
 <p><span id="eq-ch02-p0350"><span class="math display">\[
 {({\hat M^\dagger })^\dagger } = \hat M
-\tag{2.36}\]</span></span></p>
+\tag{2.31}\]</span></span></p>
 <p><strong>Proof.</strong> For any two vectors <span class="math inline">\(\vert \alpha\rangle ,\vert \beta\rangle\)</span>,</p>
 <p><span id="eq-ch02-p0352"><span class="math display">\[
 \langle\alpha|(\hat M^{\dagger})^{\dagger}|\beta\rangle=\bigl(\langle\beta|\hat M^{\dagger}|\alpha\rangle\bigr)^*=\Bigl[\bigl(\langle\alpha|\hat M|\beta\rangle\bigr)^*\Bigr]^*=\langle\alpha|\hat M|\beta\rangle
-\tag{2.37}\]</span></span></p>
+\tag{2.32}\]</span></span></p>
 <p>The first two equalities use Theorem 2.4. Hence <span class="math inline">\({({\hat M^\dagger })^\dagger } = \hat M\)</span>.</p>
 <section id="hermitian-conjugation-of-an-outer-product" class="level3" data-number="2.5.1">
 <h3 data-number="2.5.1" class="anchored" data-anchor-id="hermitian-conjugation-of-an-outer-product"><span class="header-section-number">2.5.1</span> Hermitian conjugation of an outer product</h3>
 <p>For an outer-product operator <span class="math inline">\(\vert \psi \rangle \langle \phi \vert\)</span>,</p>
 <p><span id="eq-ch02-p0356"><span class="math display">\[
 \left( {\left\vert  \psi \right\rangle \left\langle \phi \right\vert } \right)\left\vert  \alpha \right\rangle {\rm{ = }}\left\vert  \psi \right\rangle \left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \alpha }} \right. \kern-1.2pt } {\alpha } \right\rangle \leftrightarrow \left\langle {\alpha } \mathrel{\left \vert  {\vphantom {\alpha \phi }} \right. \kern-1.2pt } {\phi } \right\rangle \left\langle \psi \right\vert {\rm{ = }}\left\langle \alpha \right\vert \left( {\left\vert  \phi \right\rangle \left\langle \psi \right\vert } \right)
-\tag{2.38}\]</span></span></p>
+\tag{2.33}\]</span></span></p>
 <p>Therefore its Hermitian conjugate is</p>
 <p><span id="eq-zeqnnum917915"><span class="math display">\[
 {\left( {\left\vert  \psi \right\rangle \left\langle \phi \right\vert } \right)^\dagger } = \left\vert  \phi \right\rangle \left\langle \psi \right\vert
-\tag{2.39}\]</span></span></p>
+\tag{2.34}\]</span></span></p>
 </section>
 <section id="matrix-representation-of-the-hermitian-conjugate" class="level3" data-number="2.5.2">
 <h3 data-number="2.5.2" class="anchored" data-anchor-id="matrix-representation-of-the-hermitian-conjugate"><span class="header-section-number">2.5.2</span> Matrix representation of the Hermitian conjugate</h3>
-<p>In a basis <span class="math inline">\(\left\{ {\left\vert  1 \right\rangle ,\left\vert  2 \right\rangle ...\left\vert  N \right\rangle } \right\}\)</span>, <a href="#eq-zeqnnum961324" class="quarto-xref">Equation&nbsp;<span>2.34</span></a> relates the matrix elements of <span class="math inline">\(\hat M\)</span> and <span class="math inline">\({\hat M^\dagger }\)</span> as follows:</p>
+<p>In a basis <span class="math inline">\(\left\{ {\left\vert  1 \right\rangle ,\left\vert  2 \right\rangle ...\left\vert  N \right\rangle } \right\}\)</span>, <a href="#eq-zeqnnum961324" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-zeqnnum961324</span></a> relates the matrix elements of <span class="math inline">\(\hat M\)</span> and <span class="math inline">\({\hat M^\dagger }\)</span> as follows:</p>
 <p><span id="eq-zeqnnum366291"><span class="math display">\[
 \langle i|\hat M^{\dagger}|j\rangle=\bigl(\langle j|\hat M|i\rangle\bigr)^*\qquad\text{or}\qquad (M^{\dagger})_{ij}=M_{ji}^*
-\tag{2.40}\]</span></span></p>
-<p>For matrices, taking the adjoint is a two-step recipe: transpose the matrix (exchange rows and columns), then complex-conjugate every entry. For example,</p>
+\tag{2.35}\]</span></span></p>
+<p>For matrices, taking the adjoint is a two-step recipe: transpose the matrix (exchange rows and columns), then complex-conjugate every element. For example,</p>
 <p><span id="eq-ch02-p0363"><span class="math display">\[
 \text{If } \hat M = \left( {\begin{array}{*{20}{c}} {{M_{11}}}&amp;{{M_{12}}}&amp;{{M_{13}}} \\ {{M_{21}}}&amp;{{M_{22}}}&amp;{{M_{23}}} \\ {{M_{31}}}&amp;{{M_{32}}}&amp;{{M_{33}}} \end{array}} \right), \qquad  \;\;\;\;\text{then } {\hat M^\dagger } = \left( {\begin{array}{*{20}{c}} {M_{11}^*}&amp;{M_{21}^*}&amp;{M_{31}^*} \\ {M_{12}^*}&amp;{M_{22}^*}&amp;{M_{32}^*} \\ {M_{13}^*}&amp;{M_{23}^*}&amp;{M_{33}^*} \end{array}} \right)
-\tag{2.41}\]</span></span></p>
+\tag{2.36}\]</span></span></p>
 <p>The matrix representation makes it clear that <span class="math inline">\({\left( {{{\hat M}^\dagger }} \right)^\dagger } = \hat M\)</span>. Thus <span class="math inline">\(\hat M\)</span> and <span class="math inline">\({\hat M^\dagger }\)</span> are Hermitian conjugates of one another.</p>
 </section>
 </section>
@@ -490,14 +481,14 @@ window.Quarto = {
 <p><strong>Inverse.</strong> An inverse operator undoes the action of another operator. If <span class="math inline">\(\hat O\)</span> takes an input to an output, <span class="math inline">\(\hat O^{-1}\)</span> takes that output back to the input. Not every operator has an inverse: a projector onto a proper subspace, for instance, discards components that cannot be recovered. When the inverse exists, it satisfies</p>
 <p><span id="eq-ch02-p0367"><span class="math display">\[
 {\hat O^{ - 1}}\hat O = \hat O{\hat O^{ - 1}} = \hat I
-\tag{2.42}\]</span></span></p>
+\tag{2.37}\]</span></span></p>
 <p><strong>Unitary operator.</strong> An operator <span class="math inline">\(\hat U\)</span> is <strong>unitary</strong> when its adjoint is also its inverse: <span class="math inline">\(\hat U^{\dagger}=\hat U^{-1}\)</span>, or equivalently <span class="math inline">\(\hat U^{\dagger}\hat U=\hat U\hat U^{\dagger}=\hat I\)</span>. Its action is called a unitary transformation. Think of a rotation that preserves lengths and angles; a unitary transformation is the complex-vector-space counterpart. It preserves inner products.</p>
 <p><strong>Theorem 2.6.</strong> A unitary transformation preserves inner products.</p>
 <p><strong>Proof.</strong> Suppose <span class="math inline">\(\hat U\left\vert  \alpha \right\rangle = \left\vert  {\alpha '} \right\rangle\)</span> and <span class="math inline">\(\hat U\left\vert  \beta \right\rangle = \left\vert  {\beta '} \right\rangle\)</span>. Then</p>
 <p><span id="eq-ch02-p0371"><span class="math display">\[
 \left\langle {{\alpha '}} \mathrel{\left \vert  {\vphantom {{\alpha '} {\beta '}}} \right. \kern-1.2pt } {{\beta '}} \right\rangle = \left\langle \alpha \right\vert {\hat U^\dagger }\hat U\left\vert  \beta \right\rangle = \left\langle {\alpha } \mathrel{\left \vert  {\vphantom {\alpha \beta }} \right. \kern-1.2pt } {\beta } \right\rangle
-\tag{2.43}\]</span></span></p>
-<p>Setting the two input vectors equal in Theorem 2.6 shows that unitary transformations also preserve norms. A normalized quantum state therefore remains normalized.</p>
+\tag{2.38}\]</span></span></p>
+<p>Setting the two input vectors equal in Theorem 2.6 shows that unitary transformations also preserve norms.</p>
 </section>
 <section id="hermitian-operators" class="level2" data-number="2.7">
 <h2 data-number="2.7" class="anchored" data-anchor-id="hermitian-operators"><span class="header-section-number">2.7</span> Hermitian operators</h2>
@@ -505,78 +496,78 @@ window.Quarto = {
 <p>For a Hermitian operator, exchanging the two states in a matrix element gives its complex conjugate. Using the adjoint relation from Theorem 2.4, we obtain</p>
 <p><span id="eq-zeqnnum353712"><span class="math display">\[
 \langle\phi|\hat X|\psi\rangle=\bigl(\langle\psi|\hat X|\phi\rangle\bigr)^*
-\tag{2.44}\]</span></span></p>
+\tag{2.39}\]</span></span></p>
 <p><strong>Theorem 2.7.</strong> For a Hermitian operator <span class="math inline">\(\hat X\)</span>, <span class="math inline">\(\left\langle \psi \right\vert \hat X\left\vert  \psi \right\rangle\)</span> is real.</p>
-<p><strong>Proof.</strong> Set <span class="math inline">\(\left\vert  \phi \right\rangle = \left\vert  \psi \right\rangle\)</span> in <a href="#eq-zeqnnum353712" class="quarto-xref">Equation&nbsp;<span>2.44</span></a>:</p>
+<p><strong>Proof.</strong> Set <span class="math inline">\(\left\vert  \phi \right\rangle = \left\vert  \psi \right\rangle\)</span> in <a href="#eq-zeqnnum353712" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-zeqnnum353712</span></a>:</p>
 <p><span id="eq-ch02-p0378"><span class="math display">\[
 \langle\psi|\hat X|\psi\rangle=\bigl(\langle\psi|\hat X|\psi\rangle\bigr)^*
-\tag{2.45}\]</span></span></p>
+\tag{2.40}\]</span></span></p>
 <p><strong>Theorem 2.8.</strong> The eigenvalues of a Hermitian operator are real.</p>
 <p><strong>Proof.</strong> If <span class="math inline">\(\hat A\left\vert  a \right\rangle = a\left\vert  a \right\rangle\)</span>, duality gives <span class="math inline">\(\left\langle a \right\vert {\hat A^\dagger } = \left\langle a \right\vert {a^*}\)</span> and <span class="math inline">\(\hat A = {\hat A^\dagger }\)</span>, hence <span class="math inline">\(\left\langle a \right\vert \hat A = \left\langle a \right\vert {a^*}\)</span>. We can therefore evaluate <span class="math inline">\(\left\langle a \right\vert \hat A\left\vert  a \right\rangle\)</span> in two ways:</p>
 <p><span id="eq-ch02-p0381"><span class="math display">\[
 \begin{array}{c} \left\langle a \right\vert \hat A\left\vert  a \right\rangle = \left\langle a \right\vert \left( {\hat A\left\vert  a \right\rangle } \right) = a\left\langle {a} \mathrel{\left \vert  {\vphantom {a a}} \right. \kern-1.2pt } {a} \right\rangle \\ \left\langle a \right\vert \hat A\left\vert  a \right\rangle = \left( {\left\langle a \right\vert \hat A} \right)\left\vert  a \right\rangle = {a^*}\left\langle {a} \mathrel{\left \vert  {\vphantom {a a}} \right. \kern-1.2pt } {a} \right\rangle \end{array}
-\tag{2.46}\]</span></span></p>
+\tag{2.41}\]</span></span></p>
 <p>Since an eigenvector is nonzero, <span class="math inline">\(\langle a|a\rangle&gt;0\)</span>. Dividing both expressions by this squared norm gives <span class="math inline">\(a=a^*\)</span>, so <span class="math inline">\(a\)</span> is real.</p>
 <p>Physically, this ensures that measured values of observables are real.</p>
 <p><strong>Theorem 2.9.</strong> A Hermitian operator’s matrix equals its conjugate transpose, and its diagonal elements are real.</p>
-<p><strong>Proof.</strong> By <a href="#eq-zeqnnum961324" class="quarto-xref">Equation&nbsp;<span>2.34</span></a>, if <span class="math inline">\(\hat A\)</span> is Hermitian, then for any vectors <span class="math inline">\(\vert \alpha\rangle ,\vert \beta\rangle\)</span>,</p>
+<p><strong>Proof.</strong> By <a href="#eq-zeqnnum961324" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-zeqnnum961324</span></a>, if <span class="math inline">\(\hat A\)</span> is Hermitian, then for any vectors <span class="math inline">\(\vert \alpha\rangle ,\vert \beta\rangle\)</span>,</p>
 <p><span id="eq-ch02-p0386"><span class="math display">\[
 \langle\alpha|\hat A|\beta\rangle=\bigl(\langle\beta|\hat A|\alpha\rangle\bigr)^*
-\tag{2.47}\]</span></span></p>
+\tag{2.42}\]</span></span></p>
 <p>Consequently, the matrix elements of <span class="math inline">\(\hat A\)</span> in any complete basis obey</p>
 <p><span id="eq-ch02-p0388"><span class="math display">\[
 {A_{ij}} = A_{ji}^*
-\tag{2.48}\]</span></span></p>
-<p>On the diagonal, this becomes <span class="math inline">\(A_{ii}=A_{ii}^*\)</span>, so every diagonal entry is real. Off the diagonal, entries occur in complex-conjugate pairs across the main diagonal.</p>
-<p>This gives a quick visual check: the diagonal entries must be real, and each entry above the diagonal must be the complex conjugate of its partner below it.</p>
+\tag{2.43}\]</span></span></p>
+<p>On the diagonal, this becomes <span class="math inline">\(A_{ii}=A_{ii}^*\)</span>, so every diagonal element is real. Off the diagonal, elements occur in complex-conjugate pairs across the main diagonal.</p>
+<p>This gives a quick visual check: the diagonal elements must be real, and each element above the diagonal must be the complex conjugate of its partner below it.</p>
 <p><strong>Theorem 2.10.</strong> Eigenvectors of a Hermitian operator belonging to different eigenvalues are orthogonal.</p>
 <p><strong>Proof.</strong> Let <span class="math inline">\({a_i}\)</span> and <span class="math inline">\({a_j}\)</span> be eigenvalues of the Hermitian operator <span class="math inline">\(\hat A\)</span>, with corresponding eigenvectors <span class="math inline">\(\vert {a_i}\rangle ,\vert {a_j}\rangle\)</span>:</p>
 <p><span id="eq-ch02-p0393"><span class="math display">\[
 \begin{array}{c} \hat A\left\vert  {{a_i}} \right\rangle = {a_i}\left\vert  {{a_i}} \right\rangle \\ \hat A\left\vert  {{a_j}} \right\rangle = {a_j}\left\vert  {{a_j}} \right\rangle \end{array}
-\tag{2.49}\]</span></span></p>
+\tag{2.44}\]</span></span></p>
 <p>Duality gives</p>
 <p><span id="eq-ch02-p0395"><span class="math display">\[
 \left\langle {{a_i}} \right\vert {\hat A^\dagger } = \left\langle {{a_i}} \right\vert a_i^*
-\tag{2.50}\]</span></span></p>
+\tag{2.45}\]</span></span></p>
 <p>Since <span class="math inline">\(\hat A = {\hat A^\dagger }\)</span> and Hermitian eigenvalues are real, this becomes</p>
 <p><span id="eq-ch02-p0397"><span class="math display">\[
 \left\langle {{a_i}} \right\vert \hat A = \left\langle {{a_i}} \right\vert {a_i}
-\tag{2.51}\]</span></span></p>
+\tag{2.46}\]</span></span></p>
 <p>Multiply both sides on the right by <span class="math inline">\(\vert {a_j}\rangle\)</span>, then let <span class="math inline">\(\hat A\)</span> act first on <span class="math inline">\(\vert {a_j}\rangle\)</span>. Rearranging gives</p>
 <p><span id="eq-ch02-p0399"><span class="math display">\[
 \left( {{a_j} - {a_i}} \right)\left\langle {{{a_i}}} \mathrel{\left \vert  {\vphantom {{{a_i}} {{a_j}}}} \right. \kern-1.2pt } {{{a_j}}} \right\rangle = 0
-\tag{2.52}\]</span></span></p>
+\tag{2.47}\]</span></span></p>
 <p>Since <span class="math inline">\({a_i} \ne {a_j}\)</span>, we must have <span class="math inline">\(\langle {{a_i}}\vert {{a_j}}\rangle = 0\)</span>, proving the result.</p>
 <p>In an <span class="math inline">\(N\)</span>-dimensional space, <span class="math inline">\(N\)</span> mutually orthogonal nonzero vectors provide all the basis directions we need. Therefore,</p>
 <p><strong>Theorem 2.11.</strong> If all <span class="math inline">\(N\)</span> eigenvalues of a Hermitian operator <span class="math inline">\(\hat A\)</span> are nondegenerate, its <span class="math inline">\(N\)</span> mutually orthogonal eigenvectors <span class="math inline">\(\{ \vert {a_1}\rangle ,\vert {a_2}\rangle \cdots \vert {a_N}\rangle \}\)</span> form a complete basis for the vector space. After normalization, they form an orthonormal basis.</p>
 <p>The conclusion extends to degenerate Hermitian operators. Chapter 4 discusses how to choose the basis vectors within degenerate subspaces.</p>
 <section id="representations" class="level3" data-number="2.7.1">
 <h3 data-number="2.7.1" class="anchored" data-anchor-id="representations"><span class="header-section-number">2.7.1</span> Representations</h3>
-<p>Choosing a representation means choosing the basis in which we write coordinates. A complete orthonormal basis of eigenvectors of <span class="math inline">\(\hat A\)</span> defines the <strong><span class="math inline">\(\hat A\)</span> representation</strong>. In this basis, <span class="math inline">\(\hat A\)</span> acts particularly simply: it multiplies each component by its eigenvalue, without mixing components.</p>
+<p>Choosing a representation means choosing the basis in which we write vector space objects. A complete orthonormal basis of eigenvectors of <span class="math inline">\(\hat A\)</span> defines the <span class="math inline">\(\hat A\)</span> representation. In this basis, <span class="math inline">\(\hat A\)</span> acts particularly simply: it multiplies each component by its eigenvalue, without mixing components.</p>
 <ul>
 <li>An arbitrary vector <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> has the following column of components in the <span class="math inline">\(\hat A\)</span> representation:</li>
 </ul>
 <p><span id="eq-ch02-p0407"><span class="math display">\[
 \left\vert  \psi \right\rangle = \sum\limits_i {\left\vert  {{a_i}} \right\rangle \left\langle {{{a_i}}} \mathrel{\left \vert  {\vphantom {{{a_i}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {{{a_1}}} \mathrel{\left \vert  {\vphantom {{{a_1}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }\\ {\left\langle {{{a_2}}} \mathrel{\left \vert  {\vphantom {{{a_2}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }\\ \vdots \end{array}} \right)
-\tag{2.53}\]</span></span></p>
+\tag{2.48}\]</span></span></p>
 <ul>
 <li>The eigenvector <span class="math inline">\(\left\vert  {{a_i}} \right\rangle\)</span> of <span class="math inline">\(\hat A\)</span> has the following column representation in its own eigenbasis:</li>
 </ul>
 <p><span id="eq-ch02-p0409"><span class="math display">\[
 \lvert a_i\rangle=\begin{pmatrix}\langle a_1\vert a_i\rangle\\\vdots\\\langle a_i\vert a_i\rangle\\\vdots\\\langle a_N\vert a_i\rangle\end{pmatrix}=\begin{pmatrix}0\\\vdots\\1\\\vdots\\0\end{pmatrix}\quad\text{(1 in row }i\text{)}
-\tag{2.54}\]</span></span></p>
+\tag{2.49}\]</span></span></p>
 <ul>
 <li>An arbitrary Hermitian operator <span class="math inline">\(\hat B\)</span> has the following matrix in the <span class="math inline">\(\hat A\)</span> representation:</li>
 </ul>
 <p><span id="eq-ch02-p0411"><span class="math display">\[
 \hat B = \left( {\begin{array}{*{20}{c}} {\left\langle {{a_1}} \right\vert \hat B\left\vert  {{a_1}} \right\rangle }&amp;{\left\langle {{a_1}} \right\vert \hat B\left\vert  {{a_2}} \right\rangle }&amp; \cdots \\ {\left\langle {{a_2}} \right\vert \hat B\left\vert  {{a_1}} \right\rangle }&amp;{\left\langle {{a_2}} \right\vert \hat B\left\vert  {{a_2}} \right\rangle }&amp; \cdots \\ \vdots &amp; \vdots &amp; \ddots \end{array}} \right)
-\tag{2.55}\]</span></span></p>
+\tag{2.50}\]</span></span></p>
 <ul>
 <li>The matrix of <span class="math inline">\(\hat A\)</span> in its own representation is diagonal, with the eigenvalues of <span class="math inline">\(\hat A\)</span> on the diagonal:</li>
 </ul>
 <p><span id="eq-zeqnnum449673"><span class="math display">\[
 \hat A = \left( {\begin{array}{*{20}{c}} {\left\langle {{a_1}} \right\vert \hat A\left\vert  {{a_1}} \right\rangle }&amp;{\left\langle {{a_1}} \right\vert \hat A\left\vert  {{a_2}} \right\rangle }&amp; \cdots \\ {\left\langle {{a_2}} \right\vert \hat A\left\vert  {{a_1}} \right\rangle }&amp;{\left\langle {{a_2}} \right\vert \hat A\left\vert  {{a_2}} \right\rangle }&amp; \cdots \\ \vdots &amp; \vdots &amp; \ddots \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{a_1}}&amp;0&amp; \cdots \\ 0&amp;{{a_2}}&amp; \cdots \\ \vdots &amp; \vdots &amp; \ddots \end{array}} \right)
-\tag{2.56}\]</span></span></p>
+\tag{2.51}\]</span></span></p>
 </section>
 </section>
 <section id="exercises" class="level2" data-number="2.8">
@@ -584,28 +575,22 @@ window.Quarto = {
 <p><strong>2.1.</strong> Let {<span class="math inline">\(\left\vert  U \right\rangle ,\left\vert  D \right\rangle\)</span>} be an orthonormal basis of a two-dimensional vector space. The two basis vectors have the following matrices in this basis:</p>
 <p><span id="eq-ch02-p0416"><span class="math display">\[
 \vert U\rangle = \left( {\begin{array}{*{20}{c}} {\langle U\vert U\rangle }\\ {\langle D\vert U\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right), \qquad  \vert D\rangle = \left( {\begin{array}{*{20}{c}} {\langle U\vert D\rangle }\\ {\langle D\vert D\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0\\ 1 \end{array}} \right),
-\tag{2.57}\]</span></span></p>
+\tag{2.52}\]</span></span></p>
 <p>Three operators <span class="math inline">\(\hat A,\hat B,\hat C\)</span> in this space have the following properties:</p>
 <p><span id="eq-ch02-p0418"><span class="math display">\[
 \begin{array}{l} \hat A\vert U\rangle = \vert D\rangle , &amp; \hat A\vert D\rangle = \vert U\rangle \\ \hat B\vert U\rangle = i\vert D\rangle , &amp; \hat B\vert D\rangle = - i\vert U\rangle \\ \hat C\vert U\rangle = \vert U\rangle , &amp; \hat C\vert D\rangle = \vert D\rangle \end{array}
-\tag{2.58}\]</span></span></p>
+\tag{2.53}\]</span></span></p>
 <p>Write the matrix of each operator in this basis. Hint: column 1 contains the components of the output for <span class="math inline">\(|U\rangle\)</span>, and column 2 contains the components of the output for <span class="math inline">\(|D\rangle\)</span>.</p>
 <p><strong>2.2.</strong> Let <span class="math inline">\(\left\vert  1 \right\rangle ,\left\vert  2 \right\rangle\)</span> be an orthonormal basis of a two-dimensional space, with operator <span class="math inline">\(\hat H\)</span> given by</p>
 <p><span id="eq-ch02-p0422"><span class="math display">\[
 \hat H = \cos \theta \left\vert  1 \right\rangle \left\langle 1 \right\vert  + \sin \theta \left\vert  1 \right\rangle \left\langle 2 \right\vert  + \sin \theta \left\vert  2 \right\rangle \left\langle 1 \right\vert  - \cos \theta \left\vert  2 \right\rangle \left\langle 2 \right\vert
-\tag{2.59}\]</span></span></p>
+\tag{2.54}\]</span></span></p>
 <p>Find the eigenvalues and corresponding eigenstates of <span class="math inline">\(\hat H\)</span>.</p>
 <p><strong>2.3.</strong> A Hermitian operator <span class="math inline">\(\hat A\)</span> has nondegenerate eigenvalues <span class="math inline">\(\left\{ {{a_i}} \right\}\)</span> and eigenstates <span class="math inline">\(\left\{ {\left\vert  {{a_i}} \right\rangle } \right\}\)</span>. Assume that none of the eigenvalues is zero, so that the inverse exists. Find the eigenvalues and eigenstates of <span class="math inline">\({\hat A^{ - 1}}\)</span>.</p>
 <p><strong>2.4.</strong> Prove that if <span class="math inline">\(\hat A\)</span> is Hermitian, the eigenvalues of <span class="math inline">\({\hat A^2}\)</span> are nonnegative.</p>
 <p><strong>2.5.</strong> Prove that <span class="math inline">\(\hat A{\hat A^\dagger }\)</span> is Hermitian for any operator <span class="math inline">\(\hat A\)</span>.</p>
 
 
-</section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>For a composite system, kets belonging to the state spaces of its separate subsystems can be combined into a tensor-product state, written <span class="math inline">\(|\psi\rangle\otimes|\phi\rangle\)</span> or, when the meaning is clear, <span class="math inline">\(|\psi\rangle|\phi\rangle\)</span>. See Chapter 9.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
 </section>
 
 </main> <!-- /main -->

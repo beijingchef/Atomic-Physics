@@ -266,7 +266,7 @@ window.Quarto = {
 <p>We begin with a simple experiment and let its results guide us toward the principles of modern quantum mechanics. Our starting point is a spin-1/2 system: measuring its spin along any chosen direction gives only two possible outcomes. This two-state system provides a simple setting in which to explore quantum states and develop the vector-space language used to describe them.</p>
 <section id="the-sterngerlach-experiment" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="the-sterngerlach-experiment"><span class="header-section-number">1.1</span> The Stern–Gerlach experiment</h2>
-<p>Spin angular momentum <span class="math inline">\({\bf{S}}\)</span> is an intrinsic property of a microscopic particle, just as charge and mass are. Charge and mass are scalars, whereas spin is a vector. Its magnitude is fixed, but its projection along a chosen spatial direction can take different, quantized values. For electrons, neutrons, and protons, there are just two possibilities: <span class="math inline">\(+ {\hbar/2}\)</span> or <span class="math inline">\(- {\hbar/2}\)</span>. These are spin-1/2 particles. To avoid repeatedly writing <span class="math inline">\({\hbar/2}\)</span>, we define a new quantity <span class="math inline">\({\boldsymbol{\sigma}}\)</span>:</p>
+<p>Spin angular momentum <span class="math inline">\({\bf{S}}\)</span> is an intrinsic property of a microscopic particle, just as charge and mass are. Charge and mass are scalars, whereas spin is a vector. Its magnitude is fixed, but its projection along a chosen spatial direction can take different, quantized values. For electrons, neutrons, and protons, there are just two possibilities: <span class="math inline">\(+ {\hbar/2}\)</span> or <span class="math inline">\(- {\hbar/2}\)</span>. These are spin-1/2 particles. To avoid repeatedly writing <span class="math inline">\({\hbar/2}\)</span>, we define a new quantity <span class="math inline">\(\boldsymbol{\sigma}\)</span>:</p>
 <p><span id="eq-zeqnnum505139"><span class="math display">\[
 {\bf{S}} \equiv \frac{\hbar }{2}{\boldsymbol{\sigma}}
 \tag{1.1}\]</span></span></p>
@@ -358,7 +358,7 @@ P(\sigma_m=-1)=\sin^2(\theta/2).
 <h2 data-number="1.3" class="anchored" data-anchor-id="examples-of-complex-linear-vector-spaces"><span class="header-section-number">1.3</span> Examples of complex linear vector spaces</h2>
 <p>The word <em>vector</em> may bring an arrow to mind, but a vector space can contain other kinds of objects. What matters is how those objects add and how they multiply by scalars. In each example below, check that adding two members or multiplying a member by a complex number gives us another memeber within the collection.</p>
 <p><strong>Example 1: complex column vectors.</strong></p>
-<p>Let us start with some familiar object: a column of <span class="math inline">\(n\)</span> complex numbers. Add two such columns entry by entry, or multiply every entry by a complex number. The result is still a column with <span class="math inline">\(n\)</span> components. These columns therefore form a complex vector space.</p>
+<p>Let us start with some familiar object: a column of <span class="math inline">\(n\)</span> complex numbers. Add two such columns element by element, or multiply every element by a complex number. The result is still a column with <span class="math inline">\(n\)</span> components. These columns therefore form a complex vector space.</p>
 <p><span id="eq-ch01-p0170"><span class="math display">\[
 \begin{pmatrix}a_1\\a_2\\a_3\\\vdots\\a_n\end{pmatrix},\quad a_i\in\mathbb C;\qquad\lvert\mathrm{null}\rangle=\begin{pmatrix}0\\0\\0\\\vdots\\0\end{pmatrix}
 \tag{1.4}\]</span></span></p>
@@ -371,12 +371,12 @@ P(\sigma_m=-1)=\sin^2(\theta/2).
 </section>
 <section id="bras-and-inner-products" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="bras-and-inner-products"><span class="header-section-number">1.4</span> Bras and inner products</h2>
-<p>So far, we can add vectors and multiply them by complex numbers. To discuss their lengths and how they relate to one another, we need another operation. Think of the dot product of two Cartesian vectors: it takes two vectors and returns a number. An <strong>inner product</strong> generalizes this idea to complex vector spaces. It is a rule that assigns a complex number to each ordered pair of vectors. To qualify as an inner product, the rule must satisfy three conditions: linearity in the second vector, conjugate symmetry when the vectors are exchanged, and positive definiteness when a vector is paired with itself. We will write these conditions explicitly below. Together, they let us define length and orthogonality in the vector space.</p>
+<p>So far, we can add vectors and multiply them by complex numbers. To discuss their lengths and how they relate to one another, we need another operation. Think of the dot product of two Cartesian vectors: it takes two vectors and returns a number. An <strong>inner product</strong> generalizes this idea to complex vector spaces. It is a rule that assigns a complex number to each ordered pair of vectors.</p>
 <p>Dirac introduced a neat notation for this operation. To write the inner product of <span class="math inline">\(|\varphi\rangle\)</span> and <span class="math inline">\(|\psi\rangle\)</span>, we write the first vector as <span class="math inline">\(\langle\varphi|\)</span>, and place it next to the second vector’s ket. The two brackets fit together:</p>
 <p><span id="eq-zeqnnum133573"><span class="math display">\[
 \langle \varphi|  \cdot |\psi\rangle \equiv \langle \varphi|\psi\rangle = c
-\tag{1.6}\]</span></span></p>
-<p>Here <span class="math inline">\(c\)</span> is the resulting complex number. The inner product supplies the rule for calculating it; the bra–ket notation gives us a compact way to write it. <span class="math inline">\(\langle\varphi|\)</span> is called <strong>bra.</strong> A bra is the dual object associated with a ket. For now, we can work with this correspondence through the rules below. Kets and bras each form a complex vector space. The correspondence between them is <strong>antilinear</strong>: when we convert a ket into its corresponding bra, we take the complex conjugate of each coefficient. The conversion rules are</p>
+\tag{1.6}\]</span></span> Here <span class="math inline">\(c\)</span> is the resulting complex number. The inner product supplies the rule for calculating it; the bra–ket notation gives us a compact way to write it.</p>
+<p><span class="math inline">\(\langle\varphi|\)</span> is called <strong>bra.</strong> A bra is the dual object associated with a ket. For now, we can work with this correspondence through the rules below. Kets and bras each form a complex vector space. The correspondence between them is <strong>antilinear</strong>: when we convert a ket into its corresponding bra, we take the complex conjugate of each coefficient. The conversion rules are</p>
 <p><span id="eq-zeqnnum136783"><span class="math display">\[
 \begin{aligned}
 |\psi\rangle &amp;\longleftrightarrow \langle\psi|,\\
@@ -394,118 +394,83 @@ c_1|\alpha\rangle+c_2|\beta\rangle
 <p><span id="eq-zeqnnum921664"><span class="math display">\[
 \langle \varphi|\psi\rangle = \langle \psi|\varphi\rangle ^*
 \tag{1.9}\]</span></span></p>
-<p>Applying conjugate symmetry, <a href="#eq-zeqnnum921664" class="quarto-xref">Equation&nbsp;<span>1.9</span></a>, to the inner product of a vector with itself. The result equals its own complex conjugate, so it must be real:</p>
-<p><span id="eq-ch01-p0188"><span class="math display">\[
+<p>Applying conjugate symmetry, <a href="#eq-zeqnnum921664" class="quarto-xref">Equation&nbsp;<span>1.9</span></a>, to the inner product of a vector with itself. <span id="eq-ch01-p0188"><span class="math display">\[
 \langle \psi|\psi\rangle = \langle \psi|\psi\rangle ^*
-\tag{1.10}\]</span></span></p>
-<p><strong>Positive definiteness.</strong> To make this quantity behave like a squared length, we require</p>
-<p><span id="eq-zeqnnum281628"><span class="math display">\[
+\tag{1.10}\]</span></span> The result equals its own complex conjugate, so <span class="math inline">\(\langle \psi\|\psi\rangle\)</span> must be real.</p>
+<p><strong>Positive definiteness.</strong> To make this quantity behave like a squared length, we require <span id="eq-zeqnnum281628"><span class="math display">\[
 \langle \psi|\psi\rangle \ge 0
-\tag{1.11}\]</span></span></p>
-<p>Equality holds only for <span class="math inline">\(\vert \psi\rangle = \vert {{\rm{null}}}\rangle\)</span>. A vector <span class="math inline">\(\vert \psi\rangle\)</span> whose inner product with itself is one,</p>
-<p><span id="eq-ch01-p0192"><span class="math display">\[
-\langle \psi|\psi\rangle = 1
-\tag{1.12}\]</span></span></p>
-<p>is <strong>normalized</strong>. Any nonzero, unnormalized vector <span class="math inline">\(|\psi\rangle\)</span> can be normalized as follows:</p>
-<p><span id="eq-ch01-p0194"><span class="math display">\[
+\tag{1.11}\]</span></span> Equality holds only for <span class="math inline">\(\vert \psi\rangle = \vert {{\rm{null}}}\rangle\)</span>.</p>
+<p>A vector <span class="math inline">\(\vert \psi\rangle\)</span> whose inner product with itself is one, <span class="math inline">\(\langle \psi\|\psi\rangle = 1\)</span> is <strong>normalized</strong>. Any nonzero, unnormalized vector <span class="math inline">\(|\psi\rangle\)</span> can be normalized as follows: <span id="eq-ch01-p0194"><span class="math display">\[
 \left\vert  {\tilde \psi } \right\rangle = \frac{{|\psi\rangle }}{{\sqrt {\langle \psi|\psi\rangle } }}
-\tag{1.13}\]</span></span></p>
+\tag{1.12}\]</span></span></p>
 <p>Let us put the bra–ket notation to work with column vectors. Here we can see every step of the calculation.</p>
 <p><strong>Example: inner products of column vectors.</strong> Complex column vectors form a complex vector space. Their standard inner product is obtained by multiplying the conjugate transpose of the first column by the second column. Thus, if a column represents a ket, its conjugate-transpose row represents the corresponding bra. For example,</p>
 <p><span id="eq-ch01-p0197"><span class="math display">\[
 \begin{array}{l} |\phi\rangle = \left( {\begin{array}{*{20}{c}} {{a_1}}\\ {{a_2}} \end{array}} \right) \leftrightarrow \langle \phi|  = \left( {\begin{array}{*{20}{c}} {a_1^*}&amp;{a_2^*} \end{array}} \right)\\ |\psi\rangle = \left( {\begin{array}{*{20}{c}} {{b_1}}\\ {{b_2}} \end{array}} \right) \leftrightarrow \langle \psi|  = \left( {\begin{array}{*{20}{c}} {b_1^*}&amp;{b_2^*} \end{array}} \right) \end{array}
-\tag{1.14}\]</span></span></p>
-<p>The inner product <span class="math inline">\(\langle \phi|\psi\rangle\)</span> can then be defined by ordinary matrix multiplication:</p>
+\tag{1.13}\]</span></span> inner product <span class="math inline">\(\langle \phi|\psi\rangle\)</span> can then be defined by ordinary matrix multiplication:</p>
 <p><span id="eq-zeqnnum248635"><span class="math display">\[
 \langle \phi|\psi\rangle = \left( {\begin{array}{*{20}{c}} {a_1^*}&amp;{a_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{b_1}}\\ {{b_2}} \end{array}} \right) = a_1^*{b_1} + a_2^*{b_2}
-\tag{1.15}\]</span></span></p>
-<p>These definitions satisfy all the required properties. Check conjugate symmetry, <a href="#eq-zeqnnum921664" class="quarto-xref">Equation&nbsp;<span>1.9</span></a>, explicitly by reversing the two vectors:</p>
+\tag{1.14}\]</span></span> definitions satisfy all the required properties. Check conjugate symmetry, <a href="#eq-zeqnnum921664" class="quarto-xref">Equation&nbsp;<span>1.9</span></a>, explicitly by reversing the two vectors:</p>
 <p><span id="eq-ch01-p0201"><span class="math display">\[
 \langle \psi|\phi\rangle = \left( {\begin{array}{*{20}{c}} {b_1^*}&amp;{b_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{a_1}}\\ {{a_2}} \end{array}} \right) = b_1^*{a_1} + b_2^*{a_2} = {({b_1}a_1^* + {b_2}a_2^*)^*} = {\langle \phi|\psi\rangle ^*}
-\tag{1.16}\]</span></span></p>
+\tag{1.15}\]</span></span></p>
 </section>
 <section id="orthogonality-and-basis-vectors" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="orthogonality-and-basis-vectors"><span class="header-section-number">1.5</span> Orthogonality and basis vectors</h2>
-<p>Let us start with some familiar objects. Two Cartesian vectors <span class="math inline">\({\bf{a}},{\bf{b}}\)</span> are perpendicular when <span class="math inline">\({\bf{a}} \cdot {\bf{b}} = 0\)</span>. At most three nonzero vectors in three-dimensional Cartesian space can be mutually perpendicular. Rotating such a set gives infinitely many alternative sets, but never more than three mutually perpendicular vectors; That is why the dimension of Cartesian space is three.</p>
-<p>Given mutually perpendicular unit vectors <span class="math inline">\({\bf{x}},{\bf{y}},{\bf{z}}\)</span>, any Cartesian vector <span class="math inline">\({\bf{v}}\)</span> can be expressed as their linear combination:</p>
+<p>Let us start with some familiar objects. Two Cartesian vectors <span class="math inline">\({\bf{a}},{\bf{b}}\)</span> are perpendicular when <span class="math inline">\({\bf{a}} \cdot {\bf{b}} = 0\)</span>. At most three nonzero vectors in three-dimensional Cartesian space can be mutually perpendicular. Rotating such a set gives infinitely many alternative sets. But we can never find more than three mutually perpendicular vectors. That is why the dimension of Cartesian space is three.</p>
+<p>Given mutually perpendicular unit vectors <span class="math inline">\({\bf{x}},{\bf{y}},{\bf{z}}\)</span> in a Cartesian space, they are called basis vectors. Any Cartesian vector <span class="math inline">\({\bf{v}}\)</span> can be expressed as the linear combination of basis vectors:</p>
 <p><span id="eq-ch01-p0204"><span class="math display">\[
 {\bf{v}} = \left( {{\bf{x}} \cdot {\bf{v}}} \right){\bf{x}} + \left( {{\bf{y}} \cdot {\bf{v}}} \right){\bf{y}} + \left( {{\bf{z}} \cdot {\bf{v}}} \right){\bf{z}} = {v_x}{\bf{x}} + {v_y}{\bf{y}} + {v_z}{\bf{z}}
-\tag{1.17}\]</span></span></p>
-<p>We can collect the three components of <span class="math inline">\({\bf{v}}\)</span> into a column vector:</p>
+\tag{1.16}\]</span></span> can collect the three components of <span class="math inline">\({\bf{v}}\)</span> into a column vector:</p>
 <p><span id="eq-ch01-p0206"><span class="math display">\[
 {\bf{v}} = \left( {\begin{array}{*{20}{c}} {{v_x}}\\ {{v_y}}\\ {{v_z}} \end{array}} \right){\rm{ = }}\left( {\begin{array}{*{20}{c}} {{\bf{x}} \cdot {\bf{v}}}\\ {{\bf{y}} \cdot {\bf{v}}}\\ {{\bf{z}} \cdot {\bf{v}}} \end{array}} \right)
-\tag{1.18}\]</span></span></p>
-<p>Picture a fixed vector <span class="math inline">\({\bf{v}}\)</span> while you rotate the coordinate axes. Rotating the <span class="math inline">\({\bf{x}},{\bf{y}},{\bf{z}}\)</span> axes changes the components of <span class="math inline">\({\bf{v}}\)</span>, even though the vector itself stays fixed. In their own coordinate system, the coordinate unit vectors always have the following column representations:</p>
+\tag{1.17}\]</span></span> a fixed vector <span class="math inline">\({\bf{v}}\)</span> while you rotate the coordinate axes. Rotating the <span class="math inline">\({\bf{x}},{\bf{y}},{\bf{z}}\)</span> axes changes the components of <span class="math inline">\({\bf{v}}\)</span>, even though the vector itself stays fixed.</p>
+<p>In their own coordinate system, the Cartesian basis vectors always have the following column representations:</p>
 <p><span id="eq-ch01-p0208"><span class="math display">\[
 {\bf{x}} = \left( {\begin{array}{*{20}{c}} 1\\ 0\\ 0 \end{array}} \right), \qquad  {\bf{y}} = \left( {\begin{array}{*{20}{c}} 0\\ 1\\ 0 \end{array}} \right), \qquad  {\bf{z}} = \left( {\begin{array}{*{20}{c}} 0\\ 0\\ 1 \end{array}} \right)
-\tag{1.19}\]</span></span></p>
-<p>We can carry this familiar geometry into the complex vector space. Two nonzero vectors <span class="math inline">\(|\psi\rangle\)</span> and <span class="math inline">\(|\phi\rangle\)</span> are <strong>orthogonal</strong> if and only if their inner product vanishes, <span class="math inline">\(\langle \psi\vert \phi\rangle = 0\)</span>. The dimension of a complex vector space is the maximum number of mutually orthogonal nonzero vectors. Using the inner product defined in <a href="#eq-zeqnnum248635" class="quarto-xref">Equation&nbsp;<span>1.15</span></a>, we can find infinitely many orthogonal pairs of two-component columns. Here are three pairs of normalized vectors:</p>
+\tag{1.18}\]</span></span></p>
+<p>We can carry this familiar geometry into the complex vector space. Two nonzero vectors <span class="math inline">\(|\psi\rangle\)</span> and <span class="math inline">\(|\phi\rangle\)</span> are <strong>orthogonal</strong> if and only if their inner product vanishes, <span class="math inline">\(\langle \psi\vert \phi\rangle = 0\)</span>. The dimension of a complex vector space is the maximum number of mutually orthogonal nonzero vectors. Using the inner product defined in <a href="#eq-zeqnnum248635" class="quarto-xref">Equation&nbsp;<span>1.14</span></a>, we can find infinitely many orthogonal pairs of two-component columns. Here are three pairs of normalized vectors:</p>
 <p><span id="eq-zeqnnum282640"><span class="math display">\[
 \begin{aligned}
 &amp;\begin{pmatrix}1\\0\end{pmatrix},\quad \begin{pmatrix}0\\1\end{pmatrix};\\[0.6em]
 &amp;\frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix},\quad \frac{1}{\sqrt{2}}\begin{pmatrix}1\\-1\end{pmatrix};\\[0.6em]
 &amp;\frac{1}{\sqrt{2}}\begin{pmatrix}1\\i\end{pmatrix},\quad \frac{1}{\sqrt{2}}\begin{pmatrix}1\\-i\end{pmatrix}.
 \end{aligned}
-\tag{1.20}\]</span></span></p>
-<p>Choose any one of these pairs and we cannot find a third nonzero column vector orthogonal to both members. Thus, the vector space of two-component columns has dimension two.</p>
-<p>A <strong>basis</strong> is a linearly independent set of vectors that spans the space; it need not be orthogonal or normalized. A set of <span class="math inline">\(N\)</span> mutually orthogonal, normalized vectors in an <span class="math inline">\(N\)</span>-dimensional inner-product space forms a <strong>complete orthonormal basis</strong>. We use orthonormal bases throughout this chapter. For any two vectors <span class="math inline">\(|i\rangle,|j\rangle\)</span> in such a basis,</p>
+\tag{1.19}\]</span></span> any one of these pairs and we cannot find a third nonzero column vector orthogonal to both members. Thus, the vector space of two-component columns has dimension two.</p>
+<p>A <strong>basis</strong> is a linearly independent set of vectors that spans the space; it need not be orthogonal or normalized. A set of <span class="math inline">\(N\)</span> mutually orthogonal, normalized vectors in an <span class="math inline">\(N\)</span>-dimensional vector space forms a <strong>complete orthonormal basis</strong>. Unless stated otherwise, the bases used in this book are complete and orthonormal. For any two vectors <span class="math inline">\(|i\rangle,|j\rangle\)</span> in such a basis,</p>
 <p><span id="eq-zeqnnum766490"><span class="math display">\[
 \langle j|i\rangle = {\delta _{ij}}
-\tag{1.21}\]</span></span></p>
-<p>The symbol <span class="math inline">\({\delta _{ij}}\)</span> is the <strong>Kronecker delta</strong>, defined by</p>
+\tag{1.20}\]</span></span> symbol <span class="math inline">\({\delta _{ij}}\)</span> is the <strong>Kronecker delta</strong>, defined by</p>
 <p><span id="eq-ch01-p0216"><span class="math display">\[
 {\delta _{ij}} = \left\{ \begin{array}{l} 1, &amp; i = j\\ 0, &amp; i \ne j \end{array} \right.
-\tag{1.22}\]</span></span></p>
-<p>For spin-1/2, choose <span class="math inline">\(|+z\rangle\)</span> and <span class="math inline">\(|-z\rangle\)</span> as an orthonormal basis of the two-dimensional spin state space. Thus <span class="math inline">\(\langle+z|+z\rangle=\langle-z|-z\rangle=1\)</span> and <span class="math inline">\(\langle+z|-z\rangle=0\)</span>. The measurement postulate introduced later will connect this orthogonality to the perfectly distinguishable outcomes of a measurement.</p>
-<p>A basis acts like a the unit vector in the Cartesian coordinate system: every state vector has a unique expansion as a linear combination of the basis vectors. In an <span class="math inline">\(N\)</span>-dimensional space with basis <span class="math inline">\(\{|i\rangle\}_{i=1}^{N}\)</span>, any vector <span class="math inline">\(|\psi\rangle\)</span> can be written as</p>
+\tag{1.21}\]</span></span></p>
+<p>Just like a Cartesian vector has a unique expansion in a Cartesian basis: every state vector has a unique expansion as a linear combination of the basis vectors. In an <span class="math inline">\(N\)</span>-dimensional space with basis <span class="math inline">\(\{|i\rangle\}_{i=1}^{N}\)</span>, any vector <span class="math inline">\(|\psi\rangle\)</span> can be written as</p>
 <p><span id="eq-ch01-p0218"><span class="math display">\[
 |\psi\rangle = \sum\limits_i {{a_i}|i\rangle }
-\tag{1.23}\]</span></span></p>
-<p>Here <span class="math inline">\({a_i}\)</span> is the complex coefficient of <span class="math inline">\(|i\rangle\)</span> in the expansion of <span class="math inline">\(|\psi\rangle\)</span>. To find a particular coefficient, lets say <span class="math inline">\(a_j\)</span>, apply the bra <span class="math inline">\(\langle j|\)</span> to both sides. Orthogonality removes every term except the one we want:</p>
+\tag{1.22}\]</span></span> <span class="math inline">\({a_i}\)</span> is the complex coefficient of <span class="math inline">\(|i\rangle\)</span> in the expansion of <span class="math inline">\(|\psi\rangle\)</span>. To find a particular coefficient, lets say <span class="math inline">\(a_j\)</span>, apply the bra <span class="math inline">\(\langle j|\)</span> to both sides. Orthogonality removes every term except the one we want:</p>
 <p><span id="eq-ch01-p0220"><span class="math display">\[
 \langle j|\psi\rangle = \sum\limits_i {\langle j| {a_i}|i\rangle } = \sum\limits_i {{a_i}\langle j|i\rangle } = \sum\limits_i {{a_i}{\delta _{ij}}} = {a_j}
-\tag{1.24}\]</span></span></p>
-<p>Thus the component of <span class="math inline">\(|\psi\rangle\)</span> along <span class="math inline">\(|j\rangle\)</span> is <span class="math inline">\(\langle j|\psi\rangle\)</span>, and</p>
+\tag{1.23}\]</span></span> the component of <span class="math inline">\(|\psi\rangle\)</span> along <span class="math inline">\(|j\rangle\)</span> is <span class="math inline">\(\langle j|\psi\rangle\)</span>, and</p>
 <p><span id="eq-zeqnnum935342"><span class="math display">\[
 |\psi\rangle = \sum\limits_i {\langle i|\psi\rangle |i\rangle } = \sum\limits_i {|i\rangle } \langle i|\psi\rangle
-\tag{1.25}\]</span></span></p>
-<p>This identity reconstructs a vector from its components. In the final expression, moving the scalar <span class="math inline">\(\langle i|\psi\rangle\)</span> to the right of the ket groups the factors as <span class="math inline">\(|i\rangle\langle i|\)</span>. The <a href="./02-operators.html#outer-products-projection-operators-and-completeness">section on outer products, projection operators, and completeness</a> explains how these factors act as projection operators. Taking the corresponding bra, using <a href="#eq-zeqnnum136783" class="quarto-xref">Equation&nbsp;<span>1.7</span></a> and <a href="#eq-zeqnnum921664" class="quarto-xref">Equation&nbsp;<span>1.9</span></a>, gives</p>
+\tag{1.24}\]</span></span> identity reconstructs a vector from its components. In the final expression, moving the scalar <span class="math inline">\(\langle i|\psi\rangle\)</span> to the right of the ket groups the factors as <span class="math inline">\(|i\rangle\langle i|\)</span>. The <a href="./02-operators.html#outer-products-projection-operators-and-completeness">section on outer products, projection operators, and completeness</a> explains the meaning of these factors.</p>
+<p>Taking the corresponding bra, using <a href="#eq-zeqnnum136783" class="quarto-xref">Equation&nbsp;<span>1.7</span></a> and <a href="#eq-zeqnnum921664" class="quarto-xref">Equation&nbsp;<span>1.9</span></a>, gives</p>
 <p><span id="eq-ch01-p0224"><span class="math display">\[
 \langle \psi|  = \sum\limits_i {\langle \psi|i\rangle } \langle i|
-\tag{1.26}\]</span></span></p>
+\tag{1.25}\]</span></span></p>
 </section>
 <section id="matrix-representations-of-vectors" class="level2" data-number="1.6">
 <h2 data-number="1.6" class="anchored" data-anchor-id="matrix-representations-of-vectors"><span class="header-section-number">1.6</span> Matrix representations of vectors</h2>
-<p>Once we have chosen an ordered orthonormal basis, we can gather the expansion coefficients in <a href="#eq-zeqnnum935342" class="quarto-xref">Equation&nbsp;<span>1.25</span></a> into a column. This gives a concrete representation of the state vector. In the equations below, equality with a column means representation in the chosen basis:</p>
+<p>Once we have chosen an ordered orthonormal basis, we can gather the expansion coefficients in <a href="#eq-zeqnnum935342" class="quarto-xref">Equation&nbsp;<span>1.24</span></a> into a column. This gives a concrete representation of the state vector in the chosen basis:</p>
 <p><span id="eq-zeqnnum343100"><span class="math display">\[
-\lvert\psi\rangle=\begin{pmatrix}\langle 1\vert\psi\rangle\\\langle 2\vert\psi\rangle\\\vdots\\\langle N\vert\psi\rangle\end{pmatrix}
-\tag{1.27}\]</span></span></p>
-<p>In this basis, each basis vector has one unit entry and zeros everywhere else:</p>
+\lvert\psi\rangle:=\begin{pmatrix}\langle 1\vert\psi\rangle\\\langle 2\vert\psi\rangle\\\vdots\\\langle N\vert\psi\rangle\end{pmatrix}
+\tag{1.26}\]</span></span></p>
+<p>In this basis, each basis vector is represented as:</p>
 <p><span id="eq-ch01-p0229"><span class="math display">\[
 |1\rangle = \left( {\begin{array}{*{20}{c}} 1\\ 0\\ \vdots \\ 0 \end{array}} \right), \qquad  |2\rangle = \left( {\begin{array}{*{20}{c}} 0\\ 1\\ \vdots \\ 0 \end{array}} \right), \qquad  \cdots \qquad  |N\rangle = \left( {\begin{array}{*{20}{c}} 0\\ 0\\ \vdots \\ 1 \end{array}} \right)
-\tag{1.28}\]</span></span></p>
-<p>Always keep track of the basis attached to a column. Changing the basis changes the entries, so columns written in different bases must first be converted to a common basis before we combine them in a matrix calculation.</p>
-<p><strong>Worked example: changing the basis.</strong> Let us describe one state using two different sets of coordinates. In the <span class="math inline">\(z\)</span> basis, take</p>
-<p><span class="math display">\[
-|\psi\rangle=\frac{\sqrt{3}}{2}|+z\rangle+\frac{1}{2}|-z\rangle,
-\qquad
-|\psi\rangle=\begin{pmatrix}\sqrt{3}/2\\1/2\end{pmatrix}.
-\]</span></p>
-<p>Now choose a second orthonormal basis:</p>
-<p><span class="math display">\[
-|u\rangle=\frac{|+z\rangle+|-z\rangle}{\sqrt{2}},
-\qquad
-|v\rangle=\frac{|+z\rangle-|-z\rangle}{\sqrt{2}}.
-\]</span></p>
-<p>Taking inner products gives <span class="math inline">\(\langle u|\psi\rangle=(\sqrt{3}+1)/(2\sqrt{2})\)</span> and <span class="math inline">\(\langle v|\psi\rangle=(\sqrt{3}-1)/(2\sqrt{2})\)</span>. Therefore</p>
-<p><span class="math display">\[
-|\psi\rangle=\frac{\sqrt{3}+1}{2\sqrt{2}}|u\rangle
-+\frac{\sqrt{3}-1}{2\sqrt{2}}|v\rangle,
-\qquad
-|\psi\rangle=\begin{pmatrix}(\sqrt{3}+1)/(2\sqrt{2})\\(\sqrt{3}-1)/(2\sqrt{2})\end{pmatrix}.
-\]</span></p>
-<p>Compare the two columns: their entries differ, yet they describe the same state vector. Thus when we write a state vector in column form we must be clear which basis it is attached to. As a check, calculate the squared norm of <span class="math inline">\(|\psi\rangle\)</span> in each basis. We obtain <span class="math inline">\(3/4+1/4=1\)</span> in the first and <span class="math inline">\([(\sqrt{3}+1)^2+(\sqrt{3}-1)^2]/8=1\)</span> in the second.</p>
-<p>The comparison below connects state-vector notation to Cartesian geometry. Here <span class="math inline">\(\mathbf{e}_i\)</span> denotes a Cartesian coordinate unit vector. In both settings, an orthonormal basis lets us obtain a vector’s components by taking inner products with the basis vectors:</p>
+\tag{1.27}\]</span></span></p>
+<p>Always keep track of the basis attached to a column. Changing the basis changes the elements, so columns written in different bases must first be converted to a common basis before we combine them in a matrix calculation.</p>
+<p>The comparison below connects state-vector notation to Cartesian geometry. Here <span class="math inline">\(\mathbf{e}_i\)</span> denotes a Cartesian basis vector. In both settings, an orthonormal basis lets us obtain a vector’s components by taking inner products with the basis vectors:</p>
 <p><span id="eq-ch01-p0232"><span class="math display">\[
 \begin{array}{ll}
 \text{Cartesian vectors} &amp; \text{Complex state vectors}\\[0.5em]
@@ -513,22 +478,21 @@ c_1|\alpha\rangle+c_2|\beta\rangle
 &amp; \langle\phi|\psi\rangle=\langle\psi|\phi\rangle^*\\[0.5em]
 \mathbf{a}\cdot\mathbf{b}=0
 &amp; \langle\phi|\psi\rangle=0\\[0.5em]
-\text{Orthonormal coordinate axes}
+\text{Orthonormal Cartesian basis}
 &amp; \text{Orthonormal basis }\{|i\rangle\}\\[0.5em]
 v_i=\mathbf{e}_i\cdot\mathbf{v}
 &amp; a_i=\langle i|\psi\rangle\\[0.5em]
 \mathbf{v}=\sum_i v_i\mathbf{e}_i
 &amp; |\psi\rangle=\sum_i a_i|i\rangle
 \end{array}
-\tag{1.29}\]</span></span></p>
+\tag{1.28}\]</span></span></p>
 </section>
 <section id="exercises" class="level2" data-number="1.7">
 <h2 data-number="1.7" class="anchored" data-anchor-id="exercises"><span class="header-section-number">1.7</span> Exercises</h2>
 <p><strong>1.1</strong> Given</p>
 <p><span class="math display">\[
 |\chi\rangle=\begin{pmatrix}2\\i\end{pmatrix} \quad \rm{ and }\quad |\eta\rangle=\begin{pmatrix}1\\1\end{pmatrix}
-\]</span></p>
-<p>write their bras, calculate <span class="math inline">\(\langle\chi|\eta\rangle\)</span> and <span class="math inline">\(\langle\eta|\chi\rangle\)</span>, and normalize <span class="math inline">\(|\chi\rangle\)</span>. Check conjugate symmetry.</p>
+\]</span>write their bras, calculate <span class="math inline">\(\langle\chi|\eta\rangle\)</span> and <span class="math inline">\(\langle\eta|\chi\rangle\)</span>, and normalize <span class="math inline">\(|\chi\rangle\)</span>. Check conjugate symmetry.</p>
 <p><strong>1.2.</strong> Test each collection below: does it form a complex vector space under the usual addition and scalar multiplication? Focus on the vector-space rules; an inner product and completeness are not required.</p>
 <ul>
 <li><p>All complex numbers.</p></li>
@@ -537,18 +501,17 @@ v_i=\mathbf{e}_i\cdot\mathbf{v}
 </ul>
 <p><span id="eq-ch01-p0240"><span class="math display">\[
 \left[ { - \frac{{{\hbar ^2}}}{{2m}}\frac{{{d^2}}}{{d{x^2}}} + V(x)} \right]\psi (x) = E\psi (x)
-\tag{1.30}\]</span></span></p>
+\tag{1.29}\]</span></span></p>
 <p><strong>1.3.</strong> Prove the Cauchy–Schwarz inequality, <span class="math inline">\(\langle \alpha|\alpha\rangle \langle \beta|\beta\rangle \ge {\left\vert  {\langle \alpha|\beta\rangle } \right\vert ^2}\)</span>.</p>
 <p>Hint: construct <span class="math inline">\(\vert \psi \rangle\)</span> as a suitable linear combination of <span class="math inline">\(\vert \alpha\rangle\)</span> and <span class="math inline">\(\vert \beta\rangle\)</span>, and use the nonnegative squared norm in <a href="#eq-zeqnnum281628" class="quarto-xref">Equation&nbsp;<span>1.11</span></a>.</p>
 <p><strong>1.4.</strong> A vector <span class="math inline">\(|\psi\rangle\)</span> in a two-dimensional complex vector space has the following expansion in the orthonormal basis <span class="math inline">\(\left\{ {\vert {\alpha _1}\rangle ,\vert {\alpha _2}\rangle } \right\}\)</span>:</p>
 <p><span id="eq-ch01-p0246"><span class="math display">\[
 \vert \psi \rangle = \vert {\alpha _1}\rangle + 3\vert {\alpha _2}\rangle
-\tag{1.31}\]</span></span></p>
+\tag{1.30}\]</span></span></p>
 <p>A second basis <span class="math inline">\(\left\{ {\vert {\beta _1}\rangle ,\vert {\beta _2}\rangle } \right\}\)</span> satisfies</p>
 <p><span id="eq-ch01-p0248"><span class="math display">\[
 \left\vert  {{\beta _1}} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\vert {\alpha _1}\rangle + i\vert {\alpha _2}\rangle } \right), \qquad  \left\vert  {{\beta _2}} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\vert {\alpha _1}\rangle - i\vert {\alpha _2}\rangle } \right)
-\tag{1.32}\]</span></span></p>
-<p>Express <span class="math inline">\(|\psi\rangle\)</span> in the second basis using two different methods, and check that your answers agree.</p>
+\tag{1.31}\]</span></span> <span class="math inline">\(|\psi\rangle\)</span> in the second basis using two different methods, and check that your answers agree.</p>
 
 
 </section>
