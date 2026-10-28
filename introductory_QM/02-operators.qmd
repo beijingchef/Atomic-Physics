@@ -8,15 +8,21 @@ Think of an operator as a machine: put in a vector, and another vector comes out
 
 $$
 \hat O\left\vert  \psi \right\rangle = \left\vert  \phi \right\rangle
-$$ {#eq-ch02-p0259} operator can also act on a bra, producing another bra:
+$$ {#eq-ch02-p0259}
+
+An operator can also act on a bra, producing another bra:
 
 $$
 \left\langle \alpha \right\vert \hat O = \left\langle \beta \right\vert
-$$ {#eq-ch02-p0261} operator acting on a ket is written to its left; an operator acting on a bra is written to its right. An operator between a bra and a ket obeys associativity:
+$$ {#eq-ch02-p0261}
+
+An operator acting on a ket is written to its left; an operator acting on a bra is written to its right. An operator between a bra and a ket obeys associativity:
 
 $$
 \langle \alpha \vert \left( {\hat O\vert \beta\rangle } \right) \equiv \left( {\langle \alpha \vert \hat O} \right)\vert \beta\rangle \equiv \langle \alpha \vert \hat O\vert \beta\rangle
-$$ {#eq-ch02-p0263} result is a complex number. You can read the expression in two steps: first let $\hat O$ act on $|\beta\rangle$, then take the inner product of the resulting vector with $|\alpha\rangle$. The parentheses change how we group the calculation, but not its answer.
+$$ {#eq-ch02-p0263}
+
+The result is a complex number. You can read the expression in two steps: first let $\hat O$ act on $|\beta\rangle$, then take the inner product of the resulting vector with $|\alpha\rangle$. The parentheses change how we group the calculation, but not its answer.
 
 Let us first learn the basic rules of operators.
 
@@ -44,11 +50,15 @@ Powers of an operator are defined by
 
 $$
 {\hat X^n} \equiv \underbrace {\hat X\hat X \cdots \hat X}_{n\text{ terms}}
-$$ {#eq-ch02-p0274} multiplication is associative: grouping the operations differently does not change their order or their result.
+$$ {#eq-ch02-p0274}
+
+Operator multiplication is associative: grouping the operations differently does not change their order or their result.
 
 $$
 \hat X\left( {\hat Y\hat Z} \right) = \left( {\hat X\hat Y} \right)\hat Z = \hat X\hat Y\hat Z
-$$ {#eq-ch02-p0278} any operator by the identity leaves it unchanged:
+$$ {#eq-ch02-p0278}
+
+Multiplying any operator by the identity leaves it unchanged:
 
 $$
 \hat I\hat X = \hat X\hat I = \hat X
@@ -128,13 +138,19 @@ For any linear combination $\sum\nolimits_i {{c_i}\vert i\rangle }$ of these eig
 
 $$
 \hat A\left( {\sum\limits_i {{c_i}\vert i\rangle } } \right) = \sum\limits_i {{c_i}\hat A\vert i\rangle } = \sum\limits_i {{c_i}a\vert i\rangle } = a\left( {\sum\limits_i {{c_i}\vert i\rangle } } \right)
-$$ {#eq-zeqnnum130538} proves the result: within a subspace whose vectors all share eigenvalue $a$, the operator simply multiplies every vector by $a$.
+$$ {#eq-zeqnnum130538}
+
+This proves the result: within a subspace whose vectors all share eigenvalue $a$, the operator simply multiplies every vector by $a$.
 
 ## Outer products, projection operators, and completeness
 
-In Dirac notation, a combination of symbols is legal if it yields a valid object in vector space, which are a number, a ket , a bra or an operator. For example, $\langle\phi|\psi\rangle$ produces a number, an operator acting on a ket produces a ket, and an operator acting on a bra produces a bra. On the other hand, $\langle\phi|+|\psi\rangle$ is illegal, $\hat X\langle\psi|$ and $|\psi\rangle\hat X$ are also illegal. But what kind of object is this $$
+In Dirac notation, a combination of symbols is legal if it yields a valid object in vector space, which are a number, a ket , a bra or an operator. For example, $\langle\phi|\psi\rangle$ produces a number, an operator acting on a ket produces a ket, and an operator acting on a bra produces a bra. On the other hand, $\langle\phi|+|\psi\rangle$ is illegal, $\hat X\langle\psi|$ and $|\psi\rangle\hat X$ are also illegal. But what kind of object is this?
+
+$$
 \left\vert  \psi \right\rangle \left\langle \phi \right\vert
-$$ {#eq-zeqnnum460948} is an **outer product**. It is an operator. Why?
+$$ {#eq-zeqnnum460948}
+
+This is an **outer product**. It is an operator. Why?
 
 Dirac notation has a useful **associative rule**: in a product of kets, bras, numbers, and operators, brackets $\left( {} \right)$ may group adjacent factors in any way, provided the expression inside $\left( {} \right)$ is a valid object.
 
@@ -152,15 +168,21 @@ Let $\{|j\rangle\}$ be a complete orthonormal basis. We can split any vector $|\
 
 $$
 \left\vert  \psi \right\rangle = \sum\limits_j {\left\vert  j \right\rangle \left\langle {j} \mathrel{\left \vert  {\vphantom {j \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } = \sum\limits_j {\left( {\left\vert  j \right\rangle \left\langle j \right\vert } \right)\left\vert  \psi \right\rangle }
-$$ {#eq-zeqnnum153427} term in this sum contains an outer-product operator.
+$$ {#eq-zeqnnum153427}
+
+Each term in this sum contains an outer-product operator.
 
 $$
 \left\vert  j \right\rangle \left\langle j \right\vert \equiv {\hat P}_j
-$$ {#eq-ch02-p0320} is a **projection operator**. Think of a Cartesian vector's projection on a coordinate axis: the projector $|j\rangle\langle j|$ keeps the component along $|j\rangle$ and discards all components orthogonal to it.
+$$ {#eq-ch02-p0320}
+
+This is a **projection operator**. Think of a Cartesian vector's projection on a coordinate axis: the projector $|j\rangle\langle j|$ keeps the component along $|j\rangle$ and discards all components orthogonal to it.
 
 $$
 \left( {\left\vert  j \right\rangle \left\langle j \right\vert } \right)\left\vert  \psi \right\rangle = \left\vert  j \right\rangle \left\langle {j} \mathrel{\left \vert  {\vphantom {j \psi }} \right. \kern-1.2pt } {\psi } \right\rangle
-$$ {#eq-ch02-p0322} twice changes nothing further: once only the $|j\rangle$ component remains, the same projector leaves it alone. Thus $\hat P_j^2=\hat P_j$.
+$$ {#eq-ch02-p0322}
+
+Applying the projector twice changes nothing further: once only the $|j\rangle$ component remains, the same projector leaves it alone. Thus $\hat P_j^2=\hat P_j$.
 
 ### The completeness relation
 
@@ -182,7 +204,9 @@ For example, inserting it on both sides of $\hat M$ gives
 
 $$
 \begin{array}{c} \hat M = \left( {\sum\limits_i {\left\vert  i \right\rangle \left\langle i \right\vert } } \right)\hat M\left( {\sum\limits_j {\left\vert  j \right\rangle \left\langle j \right\vert } } \right) = \sum\limits_{i,j} {\left\vert  i \right\rangle \left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\langle j \right\vert } \\ = \sum\limits_{i,j} {\left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{M_{ij}}\left\vert  i \right\rangle \left\langle j \right\vert } \end{array}
-$$ {#eq-ch02-p0329} the orthonormal basis consists of eigenvectors satisfying $\hat M|j\rangle=m_j|j\rangle$, the expression simplifies. Each projector selects one component, and the corresponding eigenvalue tells us how much $\hat M$ multiplies that component:
+$$ {#eq-ch02-p0329}
+
+If the orthonormal basis consists of eigenvectors satisfying $\hat M|j\rangle=m_j|j\rangle$, the expression simplifies. Each projector selects one component, and the corresponding eigenvalue tells us how much $\hat M$ multiplies that component:
 
 $$
 \begin{array}{c} \hat M = \sum\limits_{i,j} {\left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{m_j}\langle i\vert j\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{m_j}{\delta _{ij}}\left\vert  i \right\rangle \left\langle j \right\vert } \\ = \sum\limits_j {{m_j}\left\vert  j \right\rangle \left\langle j \right\vert } \end{array}
@@ -196,9 +220,13 @@ $$
 \hat A \leftrightarrow {\hat A^\dagger }
 $$ {#eq-zeqnnum326007}
 
-Adjoints obey the following theorems $$
+Adjoints obey the following theorems.
+
+$$
  (c\hat A)^{\dagger}=c^*\hat A^{\dagger}.
- $$**Theorem 2.2.** The adjoint of a sum is the sum of the adjoints.
+$$
+
+**Theorem 2.2.** The adjoint of a sum is the sum of the adjoints.
 
 $$
 {\left( {\hat X + \hat Y} \right)^\dagger } = {\hat X^\dagger } + {\hat Y^\dagger }

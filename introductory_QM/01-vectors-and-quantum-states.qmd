@@ -253,7 +253,9 @@ $$ {#eq-ch01-p0220} the component of $|\psi\rangle$ along $|j\rangle$ is $\langl
 
 $$
 |\psi\rangle = \sum\limits_i {\langle i|\psi\rangle |i\rangle } = \sum\limits_i {|i\rangle } \langle i|\psi\rangle
-$$ {#eq-zeqnnum935342} identity reconstructs a vector from its components. In the final expression, moving the scalar $\langle i|\psi\rangle$ to the right of the ket groups the factors as $|i\rangle\langle i|$. The [section on outer products, projection operators, and completeness](02-operators.qmd#outer-products-projection-operators-and-completeness) explains the meaning of these factors.
+$$ {#eq-zeqnnum935342}
+
+This identity reconstructs a vector from its components. In the final expression, moving the scalar $\langle i|\psi\rangle$ to the right of the ket groups the factors as $|i\rangle\langle i|$. The [section on outer products, projection operators, and completeness](02-operators.qmd#outer-products-projection-operators-and-completeness) explains the meaning of these factors.
 
 Taking the corresponding bra, using @eq-zeqnnum136783 and @eq-zeqnnum921664, gives
 
