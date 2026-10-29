@@ -2,20 +2,6 @@
 
 ## Exercises for Chapter 1
 
-**1.1** Decide whether each of the following forms a complex vector space under the usual addition and scalar multiplication. No inner product or completeness condition is required.
-
-- All complex numbers.
-
-- All vectors in three-dimensional Cartesian space.
-
-- All complex-valued solutions $\psi(x)$ of the following equation on a fixed interval, with fixed real $E$ and a finite, continuous $V(x)$. No normalization or boundary conditions are imposed.
-
-$$
-\left[ { - \frac{{{\hbar ^2}}}{{2m}}\frac{{{d^2}}}{{d{x^2}}} + V(x)} \right]\psi (x) = E\psi (x)
-$$ {#eq-ch12-p2407}
-
-(a) Yes. (b) A real linear space, not a complex linear space: multiplying a real Cartesian vector by $i$ takes it outside the collection. (c) Yes: the equation is homogeneous and linear, so any complex linear combination of two solutions is another solution, and the zero function is a solution.
-
 **1.2** Prove that $\left\langle {\alpha } \mathrel{\left \vert  {\vphantom {\alpha \alpha }} \right. \kern-1.2pt } {\alpha } \right\rangle \left\langle {\beta } \mathrel{\left \vert  {\vphantom {\beta \beta }} \right. \kern-1.2pt } {\beta } \right\rangle \ge {\left\vert  {\left\langle {\alpha } \mathrel{\left \vert  {\vphantom {\alpha \beta }} \right. \kern-1.2pt } {\beta } \right\rangle } \right\vert ^2}$.
 
 Hint: Construct a suitable $\vert \psi \rangle$ as a linear combination of $\vert \alpha\rangle$ and $\vert \beta\rangle$, and use @eq-zeqnnum281628, $\left\langle {\psi } \mathrel{\left \vert  {\vphantom {\psi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \ge 0$.
@@ -204,7 +190,7 @@ Thus the energy eigenstates in a constant magnetic field are eigenstates of ${\h
 
 If we define $2{\mu }_{B}B\equiv \hbar {\omega }_{L}$, the transition frequency is ${\omega }_{L}$. The frequency associated with magnetic splitting is also called the Larmor frequency.
 
-![](assets/image677.png){width=172px} **3.3** As shown, the projection of ${\bf{\hat \sigma }}$ along direction ${\bf{n}}{\rm{(}}\theta {\rm{,}}\phi )$ is ${\hat \sigma _n}$.
+![](assets/image677.png){width="172px"} **3.3** As shown, the projection of ${\bf{\hat \sigma }}$ along direction ${\bf{n}}{\rm{(}}\theta {\rm{,}}\phi )$ is ${\hat \sigma _n}$.
 
 - Write the matrix of ${\hat \sigma _n}$ in the ${\hat \sigma _z}$ representation, and show that its eigenvalues are $+ 1, - 1$, with eigenvectors
 
@@ -394,9 +380,9 @@ Thus ${{\rm{\{ }}\Delta \hat A,\Delta \hat B{\rm{\} }}}$ is Hermitian. Since a H
 
 **5.1** The electron's magnetic moment is ${\bf{\mu }} = {{ - 2{\mu _B}{\bf{S}}} \mathord{\left/ {\vphantom {{ - 2{\mu _B}{\bf{S}}} \hbar }} \right. \kern-1.2pt } \hbar }$, and its magnetic energy is $H = - {\bf{\mu }} \cdot {\bf{B}}$. A stationary electron is placed in a static field of magnitude $B$ directed along positive ${\bf{\hat z}}$.
 
-1) If initially ${S_z} = - {\hbar \mathord{\left/ {\vphantom {\hbar 2}} \right. \kern-1.2pt } 2}$, find $\left\vert  {\psi \left( t \right)} \right\rangle$.
+1)  If initially ${S_z} = - {\hbar \mathord{\left/ {\vphantom {\hbar 2}} \right. \kern-1.2pt } 2}$, find $\left\vert  {\psi \left( t \right)} \right\rangle$.
 
-2) Let ${\bf{\hat n}}$ be a unit vector in the first quadrant of the x–z plane, at angle $\theta$ to z. Initially the projection of ${\bf{S}}$ along ${\bf{\hat n}}$ is $\hbar /2$. Using earlier exercise results, find the spin state $\left\vert  {\psi \left( t \right)} \right\rangle$ at time $t$ and the expectation values of ${\hat S_x},\;{\hat S_y},\;{\hat S_z}$. To simplify the result, define ${\omega _L} \equiv {{2B{\mu _B}} \mathord{\left/ {\vphantom {{2B{\mu _B}} \hbar }} \right. \kern-1.2pt } \hbar }$.
+2)  Let ${\bf{\hat n}}$ be a unit vector in the first quadrant of the x–z plane, at angle $\theta$ to z. Initially the projection of ${\bf{S}}$ along ${\bf{\hat n}}$ is $\hbar /2$. Using earlier exercise results, find the spin state $\left\vert  {\psi \left( t \right)} \right\rangle$ at time $t$ and the expectation values of ${\hat S_x},\;{\hat S_y},\;{\hat S_z}$. To simplify the result, define ${\omega _L} \equiv {{2B{\mu _B}} \mathord{\left/ {\vphantom {{2B{\mu _B}} \hbar }} \right. \kern-1.2pt } \hbar }$.
 
 Solution: Recall the results from Chapter 3.
 
@@ -416,7 +402,7 @@ $$ {#eq-ch12-p2578}
 
 Multiplication by an overall phase does not change the physical state. Thus this quantum state is stationary.
 
-2) The projection of the electron spin ${\bf{S}}$ along ${\bf{\hat n}}$ is $\hbar /2$; that is, ${\hat \sigma _n}$ equals $+1$. From the preceding chapter's exercises,
+2)  The projection of the electron spin ${\bf{S}}$ along ${\bf{\hat n}}$ is $\hbar /2$; that is, ${\hat \sigma _n}$ equals $+1$. From the preceding chapter's exercises,
 
 $$
 \left\vert  {{\lambda _ + }} \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {{e^{i\phi }}\sin \frac{\theta }{2}} \end{array}} \right),
@@ -448,7 +434,7 @@ $$ {#eq-ch12-p2588}
 
 Define $\langle {\bf{S}}\rangle \equiv \left( {\langle {{{\hat S}_y}(t)}\rangle ,\langle {{{\hat S}_y}(t)}\rangle ,\langle {{{\hat S}_z}(t)}\rangle } \right)$. As the figure shows, it is a vector of length $\hbar /2$ precessing about the field direction (the z axis) at frequency ${\omega _L}$. This Larmor precession is characteristic of particles with spin magnetic moments in a magnetic field.
 
-![](assets/image2447.png){width=243px}
+![](assets/image2447.png){width="243px"}
 
 *An interesting feature:* $\langle {{\bf{S}}(t)}\rangle$ has period $T = {{2\pi } \mathord{\left/ {\vphantom {{2\pi } {{\omega _L}}}} \right. \kern-1.2pt } {{\omega _L}}}$, whereas the state vector $\left\vert  {\psi \left( t \right)} \right\rangle$ has period ${{4\pi } \mathord{\left/ {\vphantom {{4\pi } {{\omega _L}}}} \right. \kern-1.2pt } {{\omega _L}}}$.
 
@@ -498,9 +484,9 @@ $$
 v \equiv \frac{d}{{dt}}\left\langle {\psi \left( t \right)} \right\vert \hat X\left\vert  {\psi \left( t \right)} \right\rangle = \frac{d}{{dt}}\langle \hat X\rangle
 $$ {#eq-ch12-p2616}
 
-1) Prove that $v = {{\langle \hat P\rangle } \mathord{\left/ {\vphantom {{\langle \hat P\rangle } m}} \right. \kern-1.2pt } m}$.
+1)  Prove that $v = {{\langle \hat P\rangle } \mathord{\left/ {\vphantom {{\langle \hat P\rangle } m}} \right. \kern-1.2pt } m}$.
 
-2) Prove the following:
+2)  Prove the following:
 
 $$
 \frac{d}{{dt}}\langle \hat P\rangle = - \left\langle {\frac{{dV\left( x \right)}}{{dx}}} \right\rangle
@@ -510,13 +496,13 @@ Hint: Use the equation of motion for expectation values and the position represe
 
 Solution:
 
-1)
+1)  
 
 $$
 \begin{array}{c} v = \frac{d}{{dt}}\langle \hat X\rangle = \frac{1}{{i\hbar }}\left\langle {[\hat X,\hat H]} \right\rangle = \frac{1}{{i\hbar }}\left\langle {[\hat X,\frac{{{{\hat P}^2}}}{{2m}} + \hat V(x)]} \right\rangle \\ = \frac{1}{{2mi\hbar }}\left\langle {[\hat X,{{\hat P}^2}]} \right\rangle = \frac{1}{{2mi\hbar }}\left\langle {\hat P[\hat X,\hat P] + [\hat X,\hat P]\hat P} \right\rangle \\ = \frac{{2i\hbar }}{{2mi\hbar }}\langle {\hat P}\rangle = \frac{{\langle {\hat P}\rangle }}{m} \end{array}
 $$ {#eq-ch12-p2623}
 
-2)
+2)  
 
 $$
 \frac{d}{{dt}}\langle \hat P\rangle = \frac{1}{{i\hbar }}\left\langle {[\hat P,\hat H]} \right\rangle = \frac{1}{{i\hbar }}\left\langle {[\hat P,\hat V(x)]} \right\rangle
@@ -590,7 +576,7 @@ $$
 \begin{array}{c} \psi ({\bf{r}}) = (x + y + 3z)f(r) = r(\sin \theta \cos \phi + \sin \theta \sin \phi + 3\cos \theta )f(r)\\ = \left( {\sin \theta \frac{{{e^{i\phi }} + {e^{ - i\phi }}}}{2} + \sin \theta \frac{{{e^{i\phi }} - {e^{ - i\phi }}}}{{2i}} + 3\cos \theta } \right)rf(r)\\ = \sqrt {\frac{{8\pi }}{3}} \left( {\frac{{ - {Y_{1,1}} + {Y_{1, - 1}}}}{2} + \frac{{ - {Y_{1,1}} - {Y_{1, - 1}}}}{{2i}} + \frac{3}{{\sqrt 2 }}{Y_{1,0}}} \right)rf(r)\\ {\rm{ = }}\sqrt {\frac{{8\pi }}{3}} \left( { - \frac{{1 - i}}{2}{Y_{1,1}} + \frac{{1 + i}}{2}{Y_{1, - 1}} + \frac{3}{{\sqrt 2 }}{Y_{1,0}}} \right)rf(r) \end{array}
 $$ {#eq-ch12-p2654}
 
-1) The angular part is a linear combination of spherical harmonics $l=1$, so
+1)  The angular part is a linear combination of spherical harmonics $l=1$, so
 
 $$
 {{\bf{L}}^2}\psi ({\bf{r}}) = 1(1 + 1){\hbar ^2}\;\psi ({\bf{r}})
@@ -598,7 +584,7 @@ $$ {#eq-ch12-p2656}
 
 It is therefore an eigenstate of ${{\bf{\hat L}}^2}$, with $l = 1$.
 
-2) The possible values of ${\hat L_z}$ are $m\hbar$ and $m = 1, - 1,0$, with probability amplitudes $- {(1 - i)/2},\;\;{(1 + i)/2},\;\;{3/\sqrt 2}$.
+2)  The possible values of ${\hat L_z}$ are $m\hbar$ and $m = 1, - 1,0$, with probability amplitudes $- {(1 - i)/2},\;\;{(1 + i)/2},\;\;{3/\sqrt 2}$.
 
 Thus each $m = \pm 1$ has probability $(1/2)/(1/2+1/2+9/2) = 1/11$, while $m = 0$ has probability $9/11$.
 

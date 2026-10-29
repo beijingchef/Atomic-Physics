@@ -146,9 +146,9 @@ Dirac introduced a neat notation for this operation. To write the inner product 
 
 $$
 \langle \varphi|  \cdot |\psi\rangle \equiv \langle \varphi|\psi\rangle = c
-$$ {#eq-zeqnnum133573} Here $c$ is the resulting complex number. The inner product supplies the rule for calculating it; the bra–ket notation gives us a compact way to write it.
+$$ {#eq-zeqnnum133573} Here $c$ is the resulting complex number. The bra–ket notation gives us a compact way to write the inner product.
 
-$\langle\varphi|$ is called **bra.** A bra is the dual object associated with a ket. For now, we can work with this correspondence through the rules below. Kets and bras each form a complex vector space. The correspondence between them is **antilinear**: when we convert a ket into its corresponding bra, we take the complex conjugate of each coefficient. The conversion rules are
+$\langle\varphi|$ is called **bra.** A bra is the dual object associated with a ket. Kets and bras each form a complex vector space. The correspondence between them is **antilinear**: when we convert a ket into its corresponding bra, we take the complex conjugate of each coefficient. The conversion rules are
 
 $$
 \begin{aligned}
@@ -173,15 +173,15 @@ $$
 \langle \varphi|\psi\rangle = \langle \psi|\varphi\rangle ^*
 $$ {#eq-zeqnnum921664}
 
-Applying conjugate symmetry, @eq-zeqnnum921664, to the inner product of a vector with itself. $$
+Applying conjugate symmetry, @eq-zeqnnum921664, to the inner product of a vector with itself, we have $$
 \langle \psi|\psi\rangle = \langle \psi|\psi\rangle ^*
-$$ {#eq-ch01-p0188} The result equals its own complex conjugate, so $\langle \psi\|\psi\rangle$ must be real.
+$$ {#eq-ch01-p0188} So $\langle \psi |\psi\rangle$ must be real.
 
-**Positive definiteness.** To make this quantity behave like a squared length, we require $$
+**Positive definiteness.** For the vector used in quantum mechanics, we require $$
 \langle \psi|\psi\rangle \ge 0
 $$ {#eq-zeqnnum281628} Equality holds only for $\vert \psi\rangle = \vert {{\rm{null}}}\rangle$.
 
-A vector $\vert \psi\rangle$ whose inner product with itself is one, $\langle \psi\|\psi\rangle = 1$ is **normalized**. Any nonzero, unnormalized vector $|\psi\rangle$ can be normalized as follows: $$
+A vector $\vert \psi\rangle$ satisfying $\langle \psi |\psi\rangle = 1$ is **normalized**. Any nonzero, unnormalized vector $|\psi\rangle$ can be normalized as follows: $$
 \left\vert  {\tilde \psi } \right\rangle = \frac{{|\psi\rangle }}{{\sqrt {\langle \psi|\psi\rangle } }}
 $$ {#eq-ch01-p0194}
 
@@ -195,7 +195,7 @@ $$ {#eq-ch01-p0197} inner product $\langle \phi|\psi\rangle$ can then be defined
 
 $$
 \langle \phi|\psi\rangle = \left( {\begin{array}{*{20}{c}} {a_1^*}&{a_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{b_1}}\\ {{b_2}} \end{array}} \right) = a_1^*{b_1} + a_2^*{b_2}
-$$ {#eq-zeqnnum248635} definitions satisfy all the required properties. Check conjugate symmetry, @eq-zeqnnum921664, explicitly by reversing the two vectors:
+$$ {#eq-zeqnnum248635} These definitions satisfy all the required properties for inner product. Check conjugate symmetry, @eq-zeqnnum921664 for example:
 
 $$
 \langle \psi|\phi\rangle = \left( {\begin{array}{*{20}{c}} {b_1^*}&{b_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{a_1}}\\ {{a_2}} \end{array}} \right) = b_1^*{a_1} + b_2^*{a_2} = {({b_1}a_1^* + {b_2}a_2^*)^*} = {\langle \phi|\psi\rangle ^*}
@@ -249,19 +249,19 @@ $$ {#eq-ch01-p0218} ${a_i}$ is the complex coefficient of $|i\rangle$ in the exp
 
 $$
 \langle j|\psi\rangle = \sum\limits_i {\langle j| {a_i}|i\rangle } = \sum\limits_i {{a_i}\langle j|i\rangle } = \sum\limits_i {{a_i}{\delta _{ij}}} = {a_j}
-$$ {#eq-ch01-p0220} the component of $|\psi\rangle$ along $|j\rangle$ is $\langle j|\psi\rangle$, and
+$$ {#eq-ch01-p0220}
 
 $$
 |\psi\rangle = \sum\limits_i {\langle i|\psi\rangle |i\rangle } = \sum\limits_i {|i\rangle } \langle i|\psi\rangle
 $$ {#eq-zeqnnum935342}
 
-This identity reconstructs a vector from its components. In the final expression, moving the scalar $\langle i|\psi\rangle$ to the right of the ket groups the factors as $|i\rangle\langle i|$. The [section on outer products, projection operators, and completeness](02-operators.qmd#outer-products-projection-operators-and-completeness) explains the meaning of these factors.
+In the final expression, moving the scalar $\langle i|\psi\rangle$ to the right of the ket groups the factors as $|i\rangle\langle i|$. The [section on outer products, projection operators, and completeness](02-operators.qmd#outer-products-projection-operators-and-completeness) explains the meaning of these factors.
 
 Taking the corresponding bra, using @eq-zeqnnum136783 and @eq-zeqnnum921664, gives
 
 $$
-\langle \psi|  = \sum\limits_i {\langle \psi|i\rangle } \langle i|
-$$ {#eq-ch01-p0224}
+\langle \psi|  = \sum\limits_i {\langle \psi|i\rangle } \langle i|=\sum\limits_i a_i^*\langle i|
+$$
 
 ## Matrix representations of vectors
 
@@ -279,7 +279,7 @@ $$ {#eq-ch01-p0229}
 
 Always keep track of the basis attached to a column. Changing the basis changes the elements, so columns written in different bases must first be converted to a common basis before we combine them in a matrix calculation.
 
-The comparison below connects state-vector notation to Cartesian geometry. Here $\mathbf{e}_i$ denotes a Cartesian basis vector. In both settings, an orthonormal basis lets us obtain a vector's components by taking inner products with the basis vectors:
+The comparison below connects state-vector relations to Cartesian-vector relations. Here $\mathbf{e}_i$ denotes a Cartesian basis vector.
 
 $$
 \begin{array}{ll}
@@ -305,23 +305,11 @@ $$
 |\chi\rangle=\begin{pmatrix}2\\i\end{pmatrix} \quad \rm{ and }\quad |\eta\rangle=\begin{pmatrix}1\\1\end{pmatrix}
 $$write their bras, calculate $\langle\chi|\eta\rangle$ and $\langle\eta|\chi\rangle$, and normalize $|\chi\rangle$. Check conjugate symmetry.
 
-**1.2.** Test each collection below: does it form a complex vector space under the usual addition and scalar multiplication? Focus on the vector-space rules; an inner product and completeness are not required.
-
-- All complex numbers.
-
-- All vectors in three-dimensional Cartesian space.
-
-- All complex-valued solutions $\psi(x)$ of the following equation on a fixed interval, with fixed real $E$ and a finite, continuous $V(x)$. No normalization or boundary conditions are imposed.
-
-$$
-\left[ { - \frac{{{\hbar ^2}}}{{2m}}\frac{{{d^2}}}{{d{x^2}}} + V(x)} \right]\psi (x) = E\psi (x)
-$$ {#eq-ch01-p0240}
-
-**1.3.** Prove the Cauchy–Schwarz inequality, $\langle \alpha|\alpha\rangle \langle \beta|\beta\rangle \ge {\left\vert  {\langle \alpha|\beta\rangle } \right\vert ^2}$.
+**1.2.** Prove the Cauchy–Schwarz inequality, $\langle \alpha|\alpha\rangle \langle \beta|\beta\rangle \ge {\left\vert  {\langle \alpha|\beta\rangle } \right\vert ^2}$.
 
 Hint: construct $\vert \psi \rangle$ as a suitable linear combination of $\vert \alpha\rangle$ and $\vert \beta\rangle$, and use the nonnegative squared norm in @eq-zeqnnum281628.
 
-**1.4.** A vector $|\psi\rangle$ in a two-dimensional complex vector space has the following expansion in the orthonormal basis $\left\{ {\vert {\alpha _1}\rangle ,\vert {\alpha _2}\rangle } \right\}$:
+**1.3.** A vector $|\psi\rangle$ in a two-dimensional complex vector space has the following expansion in the orthonormal basis $\left\{ {\vert {\alpha _1}\rangle ,\vert {\alpha _2}\rangle } \right\}$:
 
 $$
 \vert \psi \rangle = \vert {\alpha _1}\rangle + 3\vert {\alpha _2}\rangle
@@ -331,4 +319,4 @@ A second basis $\left\{ {\vert {\beta _1}\rangle ,\vert {\beta _2}\rangle } \rig
 
 $$
 \left\vert  {{\beta _1}} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\vert {\alpha _1}\rangle + i\vert {\alpha _2}\rangle } \right), \qquad  \left\vert  {{\beta _2}} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\vert {\alpha _1}\rangle - i\vert {\alpha _2}\rangle } \right)
-$$ {#eq-ch01-p0248} $|\psi\rangle$ in the second basis using two different methods, and check that your answers agree.
+$$ {#eq-ch01-p0248} Expand $|\psi\rangle$ in the second basis using two different methods, and check that your answers agree.
