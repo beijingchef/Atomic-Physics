@@ -283,9 +283,9 @@ window.Quarto = {
 <h2 data-number="3.1" class="anchored" data-anchor-id="the-measurement-postulates"><span class="header-section-number">3.1</span> The measurement postulates</h2>
 <p>We begin with <strong>pure states</strong> and <strong>ideal projective measurements</strong> of observables with discrete spectra. Unless stated otherwise, the eigenvalues are nondegenerate and the eigenstates form a complete orthonormal basis.</p>
 <ul>
-<li><p><strong>Quantum postulate 1—observables.</strong> An observable is represented by a Hermitian operator <span class="math inline">\(\hat A\)</span>. Its eigenvalues are the possible measurement outcomes.</p></li>
+<li><p><strong>Quantum postulate 1—observables.</strong> An physical observable is represented by a Hermitian operator <span class="math inline">\(\hat A\)</span>, whose eigenvalues give all the possible measurement outcomes of that observable.</p></li>
 <li><p><strong>Quantum postulate 2—states.</strong> A pure state is represented by a normalized vector <span class="math inline">\(\lvert\psi\rangle\)</span>, with <span class="math inline">\(\langle\psi\vert\psi\rangle=1\)</span>. This vector determines the probabilities of all measurement outcomes. Vectors <span class="math inline">\(e^{i\alpha}\lvert\psi\rangle\)</span> and <span class="math inline">\(\lvert\psi\rangle\)</span> represent the same physical state: an overall phase has no observable effect.</p></li>
-<li><p><strong>Quantum postulate 3—superposition.</strong> Any nonzero linear combination of allowed state vectors is also an allowed state vector after normalization. In an orthonormal basis <span class="math inline">\(\{\lvert\psi_j\rangle\}\)</span>, the superposition <span class="math inline">\(\sum_j c_j\lvert\psi_j\rangle\)</span> is normalized when <span class="math inline">\(\sum_j\lvert c_j\rvert^2=1\)</span>.</p></li>
+<li><p><strong>Quantum postulate 3—superposition.</strong> Any nonzero linear combination of allowed state vectors is also an allowed state vector after normalization. In an orthonormal basis <span class="math inline">\(\{\lvert j\rangle\}\)</span>, the superposition <span class="math inline">\(\sum_j c_j\lvert j\rangle\)</span> is normalized when <span class="math inline">\(\sum_j\lvert c_j\rvert^2=1\)</span>.</p></li>
 <li><p><strong>Quantum postulate 4—definite values.</strong> An observable <span class="math inline">\(\hat A\)</span> has a definite value <span class="math inline">\(a\)</span> in a state if and only if that state lies in the eigenspace with eigenvalue <span class="math inline">\(a\)</span>. For a nondegenerate eigenvalue, this means the state is <span class="math inline">\(\lvert a\rangle\)</span>, up to an overall phase.</p></li>
 <li><p><strong>Quantum postulate 5—the measurement principle.</strong> Measuring <span class="math inline">\(\hat A\)</span> in a normalized state <span class="math inline">\(\lvert\psi\rangle\)</span> yields <span class="math inline">\(a_j\)</span> with probability <span class="math inline">\(p(a_j)=\lvert\langle a_j\vert\psi\rangle\rvert^2\)</span>. Immediately after an ideal measurement that gives <span class="math inline">\(a_j\)</span>, the state is <span class="math inline">\(\lvert a_j\rangle\)</span>, up to an overall phase. The overlap <span class="math inline">\(\langle a_j\vert\psi\rangle\)</span> is the <strong>probability amplitude</strong>. More generally, <span class="math inline">\(\lvert\langle\phi\vert\psi\rangle\rvert^2\)</span> is the probability that a projective test for the normalized state <span class="math inline">\(\lvert\phi\rangle\)</span> succeeds when the initial state is <span class="math inline">\(\lvert\psi\rangle\)</span>.</p></li>
 </ul>
@@ -431,7 +431,7 @@ a_j &amp; \lvert a_j\rangle &amp; \lvert\langle a_j\vert\psi\rangle\rvert^2 \\
 <p>Matrices greatly simplify calculations, but the representation must always be clear. All matrices combined in a calculation must nevertheless use the same basis. Physical predictions are independent of the chosen representation.</p>
 <section id="matrices-of-the-sigma-_xyz-eigenstates" class="level3" data-number="3.4.1">
 <h3 data-number="3.4.1" class="anchored" data-anchor-id="matrices-of-the-sigma-_xyz-eigenstates"><span class="header-section-number">3.4.1</span> Matrices of the <span class="math inline">\({\sigma }_{x,y,z}\)</span> eigenstates</h3>
-<p>From <a href="01-vectors-and-quantum-states.html#eq-zeqnnum935342" class="quarto-xref">Equation&nbsp;<span>1.24</span></a> and <a href="01-vectors-and-quantum-states.html#eq-zeqnnum343100" class="quarto-xref">Equation&nbsp;<span>1.26</span></a>, choosing <span class="math inline">\(\left\vert  U \right\rangle\)</span> and <span class="math inline">\(\left\vert  D \right\rangle\)</span> as basis vectors gives the following column for any state <span class="math inline">\(\left\vert  \psi \right\rangle\)</span>:</p>
+<p>From <a href="01-vectors-and-quantum-states.html#eq-zeqnnum935342" class="quarto-xref">Equation&nbsp;<span>1.24</span></a> and <a href="01-vectors-and-quantum-states.html#eq-zeqnnum343100" class="quarto-xref">Equation&nbsp;<span>1.25</span></a>, choosing <span class="math inline">\(\left\vert  U \right\rangle\)</span> and <span class="math inline">\(\left\vert  D \right\rangle\)</span> as basis vectors gives the following column for any state <span class="math inline">\(\left\vert  \psi \right\rangle\)</span>:</p>
 <p><span id="eq-ch03-p0519"><span class="math display">\[
 \left\vert  \psi \right\rangle = \left\vert  U \right\rangle \left\langle {U} \mathrel{\left \vert  {\vphantom {U \psi }} \right. \kern-1.2pt } {\psi } \right\rangle + \left\vert  D \right\rangle \left\langle {D} \mathrel{\left \vert  {\vphantom {D \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {U} \mathrel{\left \vert  {\vphantom {U \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }\\ {\left\langle {D} \mathrel{\left \vert  {\vphantom {D \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \end{array}} \right)
 \tag{3.28}\]</span></span></p>
@@ -455,7 +455,7 @@ a_j &amp; \lvert a_j\rangle &amp; \lvert\langle a_j\vert\psi\rangle\rvert^2 \\
 </section>
 <section id="matrices-of-the-sigma-_xyz-operators" class="level3" data-number="3.4.2">
 <h3 data-number="3.4.2" class="anchored" data-anchor-id="matrices-of-the-sigma-_xyz-operators"><span class="header-section-number">3.4.2</span> Matrices of the <span class="math inline">\({\sigma }_{x,y,z}\)</span> operators</h3>
-<p>By <a href="02-operators.html#eq-zeqnnum449673" class="quarto-xref">Equation&nbsp;<span>2.56</span></a>, the matrix of <span class="math inline">\({\hat \sigma _z}\)</span> in the <span class="math inline">\({\hat \sigma _z}\)</span> representation is</p>
+<p>By <a href="02-operators.html#eq-zeqnnum449673" class="quarto-xref">Equation&nbsp;<span>2.55</span></a>, the matrix of <span class="math inline">\({\hat \sigma _z}\)</span> in the <span class="math inline">\({\hat \sigma _z}\)</span> representation is</p>
 <p><span id="eq-ch03-p0531"><span class="math display">\[
 {\hat \sigma _z} = \left( {\begin{array}{*{20}{c}} 1&amp;0\\ 0&amp;{ - 1} \end{array}} \right)
 \tag{3.34}\]</span></span></p>
@@ -493,12 +493,12 @@ a_j &amp; \lvert a_j\rangle &amp; \lvert\langle a_j\vert\psi\rangle\rvert^2 \\
 <p>Two useful pairs of relations are <span id="eq-ch03-p0546"><span class="math display">\[
 {\hat \sigma _x}\vert U\rangle = \vert D\rangle , \qquad  {\hat \sigma _x}\vert D\rangle = \vert U\rangle
 \tag{3.41}\]</span></span></p>
-<p><span class="math display">\[
+<p><span id="eq-ch03-p0547"><span class="math display">\[
 {\hat \sigma _y}\vert U\rangle = i\vert D\rangle , \qquad  {\hat \sigma _y}\vert D\rangle = - i\vert U\rangle
-\]</span> {#eq-ch03-p0547}Using <span class="math inline">\(\hat{\mathbf S}=(\hbar/2)\hat{\boldsymbol\sigma}\)</span>, the three Cartesian spin-component operators for a spin-<span class="math inline">\(1/2\)</span> particle have the following matrices in the <span class="math inline">\(\hat\sigma_z\)</span> representation:</p>
+\tag{3.42}\]</span></span> <span class="math inline">\(\hat{\mathbf S}=(\hbar/2)\hat{\boldsymbol\sigma}\)</span>, the three Cartesian spin-component operators for a spin-<span class="math inline">\(1/2\)</span> particle have the following matrices in the <span class="math inline">\(\hat\sigma_z\)</span> representation:</p>
 <p><span id="eq-zeqnnum931030"><span class="math display">\[
 {\hat S_x} = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&amp;1\\ 1&amp;0 \end{array}} \right),\;\;\;\;\;{\hat S_y} = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&amp;{ - i}\\ i&amp;0 \end{array}} \right),\;\;\;\;\;{\hat S_z} = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 1&amp;0\\ 0&amp;{ - 1} \end{array}} \right)
-\tag{3.42}\]</span></span></p>
+\tag{3.43}\]</span></span></p>
 <p>For teaching purposes, we inferred the eigenvalues and eigenstate relationships of <span class="math inline">\({\hat \sigma _{x,y,z}}\)</span> from experiments and then obtained the operator matrices. In applications, we usually start with the Hermitian operator representing an observable and solve its eigenvalue equation to obtain its eigenvalues and eigenvectors.</p>
 </section>
 </section>
@@ -519,7 +519,7 @@ a_j &amp; \lvert a_j\rangle &amp; \lvert\langle a_j\vert\psi\rangle\rvert^2 \\
 <p>In a quantum model, observables are represented by operators. An externally applied field can nevertheless be treated as a prescribed classical quantity when its quantum fluctuations and the system’s effect on it are negligible. For example, the spin magnetic interaction of an electron in a field <span class="math inline">\(\mathbf B=B_z\mathbf e_z\)</span> is</p>
 <p><span id="eq-zeqnnum392782"><span class="math display">\[
 \hat H=-\hat{\boldsymbol\mu}\cdot\mathbf B=-\hat\mu_z B_z
-\tag{3.43}\]</span></span> Here <span class="math inline">\({B_z}\)</span> is a numerical variable, whether produced by Earth’s field or a current-carrying coil. The <span class="math inline">\(z\)</span> component <span class="math inline">\({\hat \mu _z}\)</span> of the electron magnetic moment is a Hermitian operator, as is the energy <span class="math inline">\(\hat H\)</span>.</p>
+\tag{3.44}\]</span></span> Here <span class="math inline">\({B_z}\)</span> is a numerical variable, whether produced by Earth’s field or a current-carrying coil. The <span class="math inline">\(z\)</span> component <span class="math inline">\({\hat \mu _z}\)</span> of the electron magnetic moment is a Hermitian operator, as is the energy <span class="math inline">\(\hat H\)</span>.</p>
 </section>
 <section id="an-observable-versus-its-value" class="level3" data-number="3.5.3">
 <h3 data-number="3.5.3" class="anchored" data-anchor-id="an-observable-versus-its-value"><span class="header-section-number">3.5.3</span> An observable versus its value</h3>
@@ -532,7 +532,7 @@ a_j &amp; \lvert a_j\rangle &amp; \lvert\langle a_j\vert\psi\rangle\rvert^2 \\
 <p>Several kinds of spatial vectors occur in quantum mechanics:</p>
 <ul>
 <li><p>Cartesian basis vectors have definite directions and are not observables.</p></li>
-<li><p>Macroscopic vector quantities, such as applied magnetic and electric fields or electromagnetic waves, may be approximated by classical vectors; <span class="math inline">\({\bf{B}}\)</span> in <a href="#eq-zeqnnum392782" class="quarto-xref">Equation&nbsp;<span>3.43</span></a> is an example.</p></li>
+<li><p>Macroscopic vector quantities, such as applied magnetic and electric fields or electromagnetic waves, may be approximated by classical vectors; <span class="math inline">\({\bf{B}}\)</span> in <a href="#eq-zeqnnum392782" class="quarto-xref">Equation&nbsp;<span>3.44</span></a> is an example.</p></li>
 <li><p>A vector observable consists of three component operators. For spin <span class="math inline">\(1/2\)</span>, <span class="math inline">\(\hat S_x\)</span>, <span class="math inline">\(\hat S_y\)</span>, and <span class="math inline">\(\hat S_z\)</span> have no common eigenstate, so all three components cannot be definite simultaneously. The expectation values of a vector observable form an ordinary spatial vector, <span class="math inline">\(\langle\hat{\mathbf S}\rangle=\langle\hat S_x\rangle\mathbf e_x+\langle\hat S_y\rangle\mathbf e_y+\langle\hat S_z\rangle\mathbf e_z\)</span>.</p></li>
 <li><p>The three Cartesian position components can have simultaneous definite values. So do the three Cartesian momentum components.</p></li>
 </ul>
@@ -549,7 +549,7 @@ a_j &amp; \lvert a_j\rangle &amp; \lvert\langle a_j\vert\psi\rangle\rvert^2 \\
 \lvert\psi\rangle=\sum_j\lvert a_j\rangle\langle a_j\vert\psi\rangle
 \quad\longleftrightarrow\quad
 \begin{pmatrix}\langle a_1\vert\psi\rangle\\\langle a_2\vert\psi\rangle\\\vdots\end{pmatrix}
-\tag{3.44}\]</span></span> The expression on the right depends on the representation. For example, the matrices of <span class="math inline">\(\left\vert  R \right\rangle\)</span> in the <span class="math inline">\({\hat \sigma _z}\)</span> and <span class="math inline">\({\hat \sigma _x}\)</span> representations are</p>
+\tag{3.45}\]</span></span> The expression on the right depends on the representation. For example, the matrices of <span class="math inline">\(\left\vert  R \right\rangle\)</span> in the <span class="math inline">\({\hat \sigma _z}\)</span> and <span class="math inline">\({\hat \sigma _x}\)</span> representations are</p>
 <p><span id="eq-ch03-p0576"><span class="math display">\[
 \begin{aligned}
 \lvert R\rangle&amp;=\frac{\lvert U\rangle+\lvert D\rangle}{\sqrt2}
@@ -559,7 +559,7 @@ a_j &amp; \lvert a_j\rangle &amp; \lvert\langle a_j\vert\psi\rangle\rvert^2 \\
 \quad\longleftrightarrow\quad\begin{pmatrix}1\\0\end{pmatrix}
 &amp;&amp;\text{in the ordered }(R,L)\text{ basis}.
 \end{aligned}
-\tag{3.45}\]</span></span></p>
+\tag{3.46}\]</span></span></p>
 <ul>
 <li><strong>Bra matrix:</strong> the conjugate transpose of the ket column.</li>
 </ul>
@@ -567,7 +567,7 @@ a_j &amp; \lvert a_j\rangle &amp; \lvert\langle a_j\vert\psi\rangle\rvert^2 \\
 \langle\psi\rvert=\sum_j\langle\psi\vert a_j\rangle\langle a_j\rvert
 \quad\longleftrightarrow\quad
 \begin{pmatrix}\langle\psi\vert a_1\rangle&amp;\langle\psi\vert a_2\rangle&amp;\cdots\end{pmatrix}
-\tag{3.46}\]</span></span></p>
+\tag{3.47}\]</span></span></p>
 <ul>
 <li><strong>Inner product:</strong> <span class="math inline">\(\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle\)</span> is a row matrix multiplied by a column matrix.</li>
 </ul>
@@ -578,56 +578,56 @@ a_j &amp; \lvert a_j\rangle &amp; \lvert\langle a_j\vert\psi\rangle\rvert^2 \\
 &amp;=\begin{pmatrix}\langle\phi\vert a_1\rangle&amp;\langle\phi\vert a_2\rangle&amp;\cdots\end{pmatrix}
 \begin{pmatrix}\langle a_1\vert\psi\rangle\\\langle a_2\vert\psi\rangle\\\vdots\end{pmatrix}.
 \end{aligned}
-\tag{3.47}\]</span></span></p>
+\tag{3.48}\]</span></span></p>
 <ul>
 <li><strong>Eigenvector</strong> <span class="math inline">\(\left\vert  {{a_i}} \right\rangle\)</span> of <span class="math inline">\(\hat A\)</span> in its own representation:</li>
 </ul>
 <p><span id="eq-ch03-p0582"><span class="math display">\[
 \lvert a_i\rangle=\sum_j\lvert a_j\rangle\delta_{ji}\quad\longleftrightarrow\quad\begin{pmatrix}0\\\vdots\\1\\\vdots\\0\end{pmatrix}\quad\text{(1 in row }i\text{)}
-\tag{3.48}\]</span></span></p>
+\tag{3.49}\]</span></span></p>
 <ul>
 <li><strong>Dirac expansion of an arbitrary operator</strong> <span class="math inline">\(\hat M\)</span> in the <span class="math inline">\(\hat A\)</span> representation:</li>
 </ul>
 <p><span id="eq-ch03-p0584"><span class="math display">\[
 \hat M=\sum_{i,j}M_{ij}\lvert a_i\rangle\langle a_j\rvert,\qquad M_{ij}=\langle a_i\vert\hat M\vert a_j\rangle
-\tag{3.49}\]</span></span></p>
+\tag{3.50}\]</span></span></p>
 <ul>
 <li><strong>Matrix of an arbitrary operator</strong> <span class="math inline">\(\hat M\)</span> in the <span class="math inline">\(\hat A\)</span> representation:</li>
 </ul>
 <p><span id="eq-zeqnnum452145"><span class="math display">\[
 \hat M\quad\longleftrightarrow\quad\begin{pmatrix}M_{11}&amp;M_{12}&amp;\cdots\\M_{21}&amp;M_{22}&amp;\cdots\\\vdots&amp;\vdots&amp;\ddots\end{pmatrix}
-\tag{3.50}\]</span></span></p>
+\tag{3.51}\]</span></span></p>
 <ul>
 <li><strong>Dirac expansion of</strong> <span class="math inline">\(\hat A\)</span> in its own representation:</li>
 </ul>
 <p><span id="eq-ch03-p0588"><span class="math display">\[
 \hat A=\hat A\sum_i\lvert a_i\rangle\langle a_i\rvert=\sum_i a_i\lvert a_i\rangle\langle a_i\rvert
-\tag{3.51}\]</span></span></p>
+\tag{3.52}\]</span></span></p>
 <ul>
 <li><strong>Matrix of</strong> <span class="math inline">\(\hat A\)</span> in its own representation: a diagonal matrix containing the eigenvalues of <span class="math inline">\(\hat A\)</span>.</li>
 </ul>
 <p><span id="eq-zeqnnum761044"><span class="math display">\[
 \hat A\quad\longleftrightarrow\quad\begin{pmatrix}a_1&amp;0&amp;\cdots\\0&amp;a_2&amp;\cdots\\\vdots&amp;\vdots&amp;\ddots\end{pmatrix}
-\tag{3.52}\]</span></span></p>
+\tag{3.53}\]</span></span></p>
 <ul>
 <li><strong>Matrix of</strong> <span class="math inline">\(\left\vert  {{a_i}} \right\rangle \left\langle {{a_j}} \right\vert\)</span> in the <span class="math inline">\(\hat A\)</span> representation:</li>
 </ul>
 <p><span id="eq-ch03-p0592"><span class="math display">\[
 \lvert a_i\rangle\langle a_j\rvert\quad\longleftrightarrow\quad\bigl(\delta_{ki}\delta_{lj}\bigr)_{kl}\quad\text{(1 in row }i\text{, column }j\text{; 0 elsewhere)}
-\tag{3.53}\]</span></span></p>
+\tag{3.54}\]</span></span></p>
 <ul>
 <li><strong>Eigenvalue equation, eigenvalues, and eigenvectors of</strong> <span class="math inline">\(\hat L\)</span>:</li>
 </ul>
 <p><span id="eq-ch03-p0594"><span class="math display">\[
 \hat L\left\vert  {{\lambda _j}} \right\rangle = {\lambda _j}\left\vert  {{\lambda _j}} \right\rangle
-\tag{3.54}\]</span></span></p>
+\tag{3.55}\]</span></span></p>
 <p>In the <span class="math inline">\(\hat A\)</span> representation, this equation becomes <span id="eq-zeqnnum662634"><span class="math display">\[
 \begin{pmatrix}L_{11}&amp;L_{12}&amp;\cdots\\L_{21}&amp;L_{22}&amp;\cdots\\\vdots&amp;\vdots&amp;\ddots\end{pmatrix}
 \begin{pmatrix}v_1^{(j)}\\v_2^{(j)}\\\vdots\end{pmatrix}
 =\lambda_j\begin{pmatrix}v_1^{(j)}\\v_2^{(j)}\\\vdots\end{pmatrix},
 \qquad L_{ik}=\langle a_i\vert\hat L\vert a_k\rangle,\quad
 v_i^{(j)}=\langle a_i\vert\lambda_j\rangle.
-\tag{3.55}\]</span></span></p>
+\tag{3.56}\]</span></span></p>
 </section>
 <section id="exercises" class="level2" data-number="3.7">
 <h2 data-number="3.7" class="anchored" data-anchor-id="exercises"><span class="header-section-number">3.7</span> Exercises</h2>
@@ -647,7 +647,7 @@ v_i^{(j)}=\langle a_i\vert\lambda_j\rangle.
 </ul>
 <p><span id="eq-ch03-p0610"><span class="math display">\[
 \left\vert  {\hat n + } \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {{e^{i\phi }}\sin \frac{\theta }{2}} \end{array}} \right), \qquad  \left\vert  {\hat n - } \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {{e^{ - i\phi }}\sin \frac{\theta }{2}}\\ { - \cos \frac{\theta }{2}} \end{array}} \right)
-\tag{3.56}\]</span></span></p>
+\tag{3.57}\]</span></span></p>
 <ul>
 <li><p>A particle is prepared in <span class="math inline">\(\lvert R\rangle\)</span>, so <span class="math inline">\(\sigma_x=+1\)</span> is definite. Find the probability that a measurement of <span class="math inline">\(\hat\sigma_n\)</span> gives <span class="math inline">\(-1\)</span>.</p></li>
 <li><p>Find the expectation-value vector <span class="math inline">\(\langle\hat{\boldsymbol\sigma}\rangle=(\langle\hat\sigma_x\rangle,\langle\hat\sigma_y\rangle,\langle\hat\sigma_z\rangle)\)</span> in <span class="math inline">\(\lvert\hat n+\rangle\)</span>, and compare its direction and length with those of <span class="math inline">\(\mathbf n\)</span>.</p></li>
@@ -655,11 +655,11 @@ v_i^{(j)}=\langle a_i\vert\lambda_j\rangle.
 <p><strong>Hint:</strong></p>
 <p><span id="eq-ch03-p0614"><span class="math display">\[
 {\hat \sigma _n} = {\bf{\hat \sigma }} \cdot {\bf{n}} = \left( {{{\hat \sigma }_x}{\bf{x}} + {{\hat \sigma }_y}{\bf{y}} + {{\hat \sigma }_z}{\bf{z}}} \right) \cdot \left( {{n_x}{\bf{x}} + {n_y}{\bf{y}} + {n_z}{\bf{z}}} \right){\rm{ = }}{\hat \sigma _x}{n_x} + {\hat \sigma _y}{n_y} + {\hat \sigma _z}{n_z}
-\tag{3.57}\]</span></span></p>
+\tag{3.58}\]</span></span></p>
 <p><span class="math inline">\({\bf{x}},{\bf{y}},{\bf{z}}\)</span> and <span class="math inline">\({\bf{n}}\)</span> are spatial unit vectors. The components of <span class="math inline">\({\bf{n}}\)</span> along <span class="math inline">\({\bf{x}},{\bf{y}},{\bf{z}}\)</span> are numbers:</p>
 <p><span id="eq-ch03-p0616"><span class="math display">\[
 {\rm{(}}{n_x},\;{n_y},\;{n_z}) = (\sin \theta \cos \phi ,\;\sin \theta \sin \phi ,\;\cos \theta )
-\tag{3.58}\]</span></span></p>
+\tag{3.59}\]</span></span></p>
 <p>By contrast, <span class="math inline">\({\bf{\hat \sigma }}\)</span> is a vector observable; its projections along the three <span class="math inline">\({\bf{x}},{\bf{y}},{\bf{z}}\)</span> directions are operators.</p>
 
 

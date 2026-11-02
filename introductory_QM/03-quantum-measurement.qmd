@@ -6,11 +6,11 @@ The previous chapters introduced state vectors and operators. We now use them to
 
 We begin with **pure states** and **ideal projective measurements** of observables with discrete spectra. Unless stated otherwise, the eigenvalues are nondegenerate and the eigenstates form a complete orthonormal basis.
 
-- **Quantum postulate 1—observables.** An observable is represented by a Hermitian operator $\hat A$. Its eigenvalues are the possible measurement outcomes.
+- **Quantum postulate 1—observables.** An physical observable is represented by a Hermitian operator $\hat A$, whose eigenvalues give all the possible measurement outcomes of that observable.
 
 - **Quantum postulate 2—states.** A pure state is represented by a normalized vector $\lvert\psi\rangle$, with $\langle\psi\vert\psi\rangle=1$. This vector determines the probabilities of all measurement outcomes. Vectors $e^{i\alpha}\lvert\psi\rangle$ and $\lvert\psi\rangle$ represent the same physical state: an overall phase has no observable effect.
 
-- **Quantum postulate 3—superposition.** Any nonzero linear combination of allowed state vectors is also an allowed state vector after normalization. In an orthonormal basis $\{\lvert\psi_j\rangle\}$, the superposition $\sum_j c_j\lvert\psi_j\rangle$ is normalized when $\sum_j\lvert c_j\rvert^2=1$.
+- **Quantum postulate 3—superposition.** Any nonzero linear combination of allowed state vectors is also an allowed state vector after normalization. In an orthonormal basis $\{\lvert j\rangle\}$, the superposition $\sum_j c_j\lvert j\rangle$ is normalized when $\sum_j\lvert c_j\rvert^2=1$.
 
 - **Quantum postulate 4—definite values.** An observable $\hat A$ has a definite value $a$ in a state if and only if that state lies in the eigenspace with eigenvalue $a$. For a nondegenerate eigenvalue, this means the state is $\lvert a\rangle$, up to an overall phase.
 
@@ -35,16 +35,11 @@ Measuring $\hat A$ must yield some eigenvalue of $\hat A$, so the probabilities 
 
 $$
 \sum_j p(a_j)=\sum_j\lvert\langle a_j\vert\psi\rangle\rvert^2=1
-$$ {#eq-ch03-p0443}
-Equivalently,
-$$
+$$ {#eq-ch03-p0443} Equivalently, $$
 \sum_j\langle\psi\vert a_j\rangle\langle a_j\vert\psi\rangle=1
-$$ {#eq-ch03-p0445} 
-By completeness, @eq-zeqnnum286146, this simplifies to
-$$
+$$ {#eq-ch03-p0445} By completeness, @eq-zeqnnum286146, this simplifies to $$
 \langle\psi\vert\psi\rangle=1
-$$ {#eq-ch03-p0447} 
-Normalization ensures that the probabilities of all possible outcomes sum to one.
+$$ {#eq-ch03-p0447} Normalization ensures that the probabilities of all possible outcomes sum to one.
 
 For a degenerate eigenvalue $a$, an ideal projective measurement uses the projector $\hat P_a$ onto the whole eigenspace: $p(a)=\langle\psi\vert\hat P_a\vert\psi\rangle$. Conditional on this outcome, the state becomes $\hat P_a\lvert\psi\rangle/\sqrt{p(a)}$. Obtaining $a$ need not select a unique eigenvector within that eigenspace.
 
@@ -68,8 +63,7 @@ $$
  &=\sum_i a_i\lvert\langle a_i\vert\psi\rangle\rvert^2
  =\sum_i a_i p(a_i).
 \end{aligned}
-$$ {#eq-zeqnnum739477}
-The final expression is the probability-weighted average of all outcomes, proving the theorem. We write $\langle\hat A\rangle$ when the state is understood. Repeated measurements on a single system generally do not sample the initial distribution, because the first measurement changes its state.
+$$ {#eq-zeqnnum739477} The final expression is the probability-weighted average of all outcomes, proving the theorem. We write $\langle\hat A\rangle$ when the state is understood. Repeated measurements on a single system generally do not sample the initial distribution, because the first measurement changes its state.
 
 ## A two-state spin system
 
@@ -99,8 +93,7 @@ The eigenstates of ${\hat \sigma _z}$ are $\left\vert  U \right\rangle$ and $\le
 
 $$
 {\hat \sigma _z}\left\vert  U \right\rangle = + \left\vert  U \right\rangle , \qquad  \qquad  {\hat \sigma _z}\left\vert  D \right\rangle = - \left\vert  D \right\rangle , \qquad  \qquad  \left\langle {U} \mathrel{\left \vert  {\vphantom {U D}} \right. \kern-1.2pt } {D} \right\rangle = 0
-$$ {#eq-ch03-p0470}
-Similarly, for ${\hat \sigma _x}$ and ${\hat \sigma _y}$,
+$$ {#eq-ch03-p0470} Similarly, for ${\hat \sigma _x}$ and ${\hat \sigma _y}$,
 
 $$
 {\hat \sigma _x}\left\vert  R \right\rangle = + \left\vert  R \right\rangle , \qquad  \qquad  {\hat \sigma _x}\left\vert  L \right\rangle = - \left\vert  L \right\rangle , \qquad  \qquad  \left\langle {R} \mathrel{\left \vert  {\vphantom {R L}} \right. \kern-1.2pt } {L} \right\rangle = 0
@@ -120,8 +113,7 @@ We begin with eigenstates of different observables. In a spin-$1/2$ state space,
 
 $$
 \left\vert  U \right\rangle \left\langle U \right\vert  + \left\vert  D \right\rangle \left\langle D \right\vert  = \hat I
-$$ {#eq-ch03-p0477}
-Any spin state $\left\vert  \psi \right\rangle$ is a linear combination of $\left\vert  U \right\rangle$ and $\left\vert  D \right\rangle$. Following @eq-zeqnnum935342,
+$$ {#eq-ch03-p0477} Any spin state $\left\vert  \psi \right\rangle$ is a linear combination of $\left\vert  U \right\rangle$ and $\left\vert  D \right\rangle$. Following @eq-zeqnnum935342,
 
 $$
 \left\vert  \psi \right\rangle = \left\vert  U \right\rangle \left\langle {U} \mathrel{\left \vert  {\vphantom {U \psi }} \right. \kern-1.2pt } {\psi } \right\rangle + \left\vert  D \right\rangle \left\langle {D} \mathrel{\left \vert  {\vphantom {D \psi }} \right. \kern-1.2pt } {\psi } \right\rangle
@@ -133,46 +125,34 @@ To express $\left\vert  R \right\rangle$ and $\left\vert  L \right\rangle$ in ba
 
 $$
 \begin{array}{l} \left\vert  R \right\rangle = \left\vert  U \right\rangle \left\langle {U} \mathrel{\left \vert  {\vphantom {U R}} \right. \kern-1.2pt } {R} \right\rangle + \left\vert  D \right\rangle \left\langle {D} \mathrel{\left \vert  {\vphantom {D R}} \right. \kern-1.2pt } {R} \right\rangle \\ \left\vert  L \right\rangle = \left\vert  U \right\rangle \left\langle {U} \mathrel{\left \vert  {\vphantom {U L}} \right. \kern-1.2pt } {L} \right\rangle + \left\vert  D \right\rangle \left\langle {D} \mathrel{\left \vert  {\vphantom {D L}} \right. \kern-1.2pt } {L} \right\rangle \end{array}
-$$ {#eq-ch03-p0481}
-In a Stern–Gerlach (SG) experiment, a system prepared in $\lvert R\rangle$ has the definite value $\sigma_x=+1$. A measurement along $z$ then gives $+1$ or $-1$ with probability $1/2$ each. Therefore,
+$$ {#eq-ch03-p0481} In a Stern–Gerlach (SG) experiment, a system prepared in $\lvert R\rangle$ has the definite value $\sigma_x=+1$. A measurement along $z$ then gives $+1$ or $-1$ with probability $1/2$ each. Therefore,
 
 $$\begin{equation}
 {\left\vert  {\left\langle {U} \mathrel{\left \vert  {\vphantom {U R}} \right. \kern-1.2pt } {R} \right\rangle } \right\vert ^2} = {\left\vert  {\left\langle {D} \mathrel{\left \vert  {\vphantom {D R}} \right. \kern-1.2pt } {R} \right\rangle } \right\vert ^2} = 1/2
 \end{equation}
 $$ {#eq-zeqnnum248257}
 
-The general solution is
-$$
+The general solution is $$
 \left\langle {U} \mathrel{\left \vert  {\vphantom {U R}} \right. \kern-1.2pt } {R} \right\rangle = \frac{1}{{\sqrt 2 }}{e^{i{\phi _U}}}, \qquad  \qquad  \left\langle {D} \mathrel{\left \vert  {\vphantom {D R}} \right. \kern-1.2pt } {R} \right\rangle = \frac{1}{{\sqrt 2 }}{e^{i{\phi _D}}}
-$$ {#eq-ch03-p0485}
-The angles ${\phi _U}$ and ${\phi _D}$ are undetermined phases. The expansion of $\left\vert  R \right\rangle$ is therefore
-$$
+$$ {#eq-ch03-p0485} The angles ${\phi _U}$ and ${\phi _D}$ are undetermined phases. The expansion of $\left\vert  R \right\rangle$ is therefore $$
 \left\vert  R \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  U \right\rangle + {e^{i\delta }}\left\vert  D \right\rangle } \right){e^{i{\phi _U}}}
-$$ {#eq-zeqnnum575274}
-Here $\delta = {\phi _D} - {\phi _U}$. Since an overall phase is arbitrary, choose ${\phi _U} = 0$, or ${e^{i{\phi _U}}} = 1$, giving
+$$ {#eq-zeqnnum575274} Here $\delta = {\phi _D} - {\phi _U}$. Since an overall phase is arbitrary, choose ${\phi _U} = 0$, or ${e^{i{\phi _U}}} = 1$, giving
 
 $$
 \left\vert  R \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  U \right\rangle + {e^{i\delta }}\left\vert  D \right\rangle } \right)
-$$ {#eq-zeqnnum655177}
-The relative phase $e^{i\delta}$ is not fixed by the $z$-measurement probabilities. Once the laboratory axes are fixed, however, it is not a freely adjustable physical property of $\lvert R\rangle$. We may choose the phases of the basis vectors $\lvert U\rangle$ and $\lvert D\rangle$ so that this particular state has real, positive coefficients. With that basis convention, $\delta=0$, giving
+$$ {#eq-zeqnnum655177} The relative phase $e^{i\delta}$ is not fixed by the $z$-measurement probabilities. Once the laboratory axes are fixed, however, it is not a freely adjustable physical property of $\lvert R\rangle$. We may choose the phases of the basis vectors $\lvert U\rangle$ and $\lvert D\rangle$ so that this particular state has real, positive coefficients. With that basis convention, $\delta=0$, giving
 
 $$
 \left\vert  R \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  U \right\rangle + \left\vert  D \right\rangle } \right)
-$$ {#eq-zeqnnum225749}
-That is,
-$$
+$$ {#eq-zeqnnum225749} That is, $$
 \left\langle {U} \mathrel{\left \vert  {\vphantom {U R}} \right. \kern-1.2pt } {R} \right\rangle = \frac{1}{{\sqrt 2 }}, \qquad  \left\langle {D} \mathrel{\left \vert  {\vphantom {D R}} \right. \kern-1.2pt } {R} \right\rangle = \frac{1}{{\sqrt 2 }}
-$$ {#eq-ch03-p0493}
-Next express $\left\vert  L \right\rangle$ in the ${\hat \sigma _z}$ representation. Using $\left\langle {L} \mathrel{\left \vert  {\vphantom {L R}} \right. \kern-1.2pt } {R} \right\rangle = 0$ and $\left\langle {L} \mathrel{\left \vert  {\vphantom {L L}} \right. \kern-1.2pt } {L} \right\rangle = 1$, and setting an irrelevant overall phase to $1$, gives
-$$
+$$ {#eq-ch03-p0493} Next express $\left\vert  L \right\rangle$ in the ${\hat \sigma _z}$ representation. Using $\left\langle {L} \mathrel{\left \vert  {\vphantom {L R}} \right. \kern-1.2pt } {R} \right\rangle = 0$ and $\left\langle {L} \mathrel{\left \vert  {\vphantom {L L}} \right. \kern-1.2pt } {L} \right\rangle = 1$, and setting an irrelevant overall phase to $1$, gives $$
 \left\vert  L \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  U \right\rangle - \left\vert  D \right\rangle } \right)
-$$ {#eq-zeqnnum448258}
-The states $\lvert R\rangle$ and $\lvert L\rangle$ give identical probabilities for a $z$ measurement, but opposite definite outcomes for an $x$ measurement. The relative sign therefore matters physically. A coherent superposition is different from a statistical mixture: a 50:50 mixture of $U$ and $D$ gives both $x$ outcomes with equal probability, whereas $\lvert R\rangle$ gives $+1$ with certainty.
+$$ {#eq-zeqnnum448258} The states $\lvert R\rangle$ and $\lvert L\rangle$ give identical probabilities for a $z$ measurement, but opposite definite outcomes for an $x$ measurement. The relative sign therefore matters physically. A coherent superposition is different from a statistical mixture: a 50:50 mixture of $U$ and $D$ gives both $x$ outcomes with equal probability, whereas $\lvert R\rangle$ gives $+1$ with certainty.
 
 Equations @eq-zeqnnum225749 and @eq-zeqnnum448258 expand $\left\vert  R \right\rangle {\rm{,}}\left\vert  L \right\rangle$ in the ${\hat \sigma _z}$ representation. Inverting them gives the expansion of $\left\vert  U \right\rangle {\rm{,}}\left\vert  D \right\rangle$ in the ${\hat \sigma _x}$ representation:
 
-$$ \left\vert  U \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle + \left\vert  L \right\rangle } \right), \qquad  \qquad  \left\vert  D \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle - \left\vert  L \right\rangle } \right) $$
-Thus, when ${\sigma _z}$ is definitely $+ 1$ or $- 1$, a measurement of ${\sigma _x}$ yields $+ 1$ and $- 1$ with equal 50% probabilities, agreeing with experiment.
+$$ \left\vert  U \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle + \left\vert  L \right\rangle } \right), \qquad  \qquad  \left\vert  D \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle - \left\vert  L \right\rangle } \right) $$ Thus, when ${\sigma _z}$ is definitely $+ 1$ or $- 1$, a measurement of ${\sigma _x}$ yields $+ 1$ and $- 1$ with equal 50% probabilities, agreeing with experiment.
 
 ### States for measurements along $y$
 
@@ -180,17 +160,13 @@ Finally, express the eigenstates $\left\vert  I \right\rangle$ and $\left\vert  
 
 $$
 {\left\vert  {\left\langle {U} \mathrel{\left \vert  {\vphantom {U I}} \right. \kern-1.2pt } {I} \right\rangle } \right\vert ^2} = {\left\vert  {\left\langle {D} \mathrel{\left \vert  {\vphantom {D I}} \right. \kern-1.2pt } {I} \right\rangle } \right\vert ^2} = \frac{1}{2}
-$$ {#eq-ch03-p0500} 
-The reasoning from @eq-zeqnnum248257 to @eq-zeqnnum655177 gives
-$$
+$$ {#eq-ch03-p0500} The reasoning from @eq-zeqnnum248257 to @eq-zeqnnum655177 gives $$
 \left\vert  I \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  U \right\rangle + {e^{i\delta }}\left\vert  D \right\rangle } \right)
-$$ {#eq-zeqnnum757923} 
-have now fixed the relative phase convention of the $U,D$ basis using $\lvert R\rangle$. In this same basis, the phase in $\lvert I\rangle$ must reproduce the probabilities for measurements along both $z$ and $x$. A $y$-up state gives either $x$ outcome with probability $1/2$, so
+$$ {#eq-zeqnnum757923} have now fixed the relative phase convention of the $U,D$ basis using $\lvert R\rangle$. In this same basis, the phase in $\lvert I\rangle$ must reproduce the probabilities for measurements along both $z$ and $x$. A $y$-up state gives either $x$ outcome with probability $1/2$, so
 
 $$
 {\left\vert  {\left\langle {R} \mathrel{\left \vert  {\vphantom {R I}} \right. \kern-1.2pt } {I} \right\rangle } \right\vert ^2} = {\left\vert  {\left\langle {L} \mathrel{\left \vert  {\vphantom {L I}} \right. \kern-1.2pt } {I} \right\rangle } \right\vert ^2} = \frac{1}{2}
-$$ {#eq-zeqnnum871161} 
-@eq-zeqnnum225749 and @eq-zeqnnum757923 into @eq-zeqnnum871161 gives
+$$ {#eq-zeqnnum871161} @eq-zeqnnum225749 and @eq-zeqnnum757923 into @eq-zeqnnum871161 gives
 
 $$
 \left\langle {R} \mathrel{\left \vert  {\vphantom {R I}} \right. \kern-1.2pt } {I} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\langle U \right\vert  + \left\langle D \right\vert } \right) \cdot \frac{1}{{\sqrt 2 }}\left( {\left\vert  U \right\rangle + {e^{i\delta }}\left\vert  D \right\rangle } \right) = \frac{{1 + {e^{i\delta }}}}{2}
@@ -202,8 +178,7 @@ $$ {#eq-ch03-p0507}
 
 $$
 \delta=\pm\frac{\pi}{2}
-$$ {#eq-ch03-p0509} 
-The condition $\lvert\langle L\vert I\rangle\rvert^2=1/2$ gives the same result. The phase $\delta$ still has two choices because these probabilities alone do not distinguish $+y$ from $-y$. If we use a right-handed coordinate system, the $+y$ eigenstate has $\delta=\pi/2$, and hence
+$$ {#eq-ch03-p0509} The condition $\lvert\langle L\vert I\rangle\rvert^2=1/2$ gives the same result. The phase $\delta$ still has two choices because these probabilities alone do not distinguish $+y$ from $-y$. If we use a right-handed coordinate system, the $+y$ eigenstate has $\delta=\pi/2$, and hence
 
 $$
 \left\vert  I \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  U \right\rangle + i\left\vert  D \right\rangle } \right)
@@ -213,8 +188,7 @@ Using $\left\langle {I} \mathrel{\left \vert  {\vphantom {I O}} \right. \kern-1.
 
 $$
 \left\vert  O \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  U \right\rangle - i\left\vert  D \right\rangle } \right)
-$$ {#eq-ch03-p0513}
-With the $x$ eigenstates chosen to have real coefficients, the $y$ eigenstates necessarily involve $i$. Relative phases are essential for describing spin states along all three axes.
+$$ {#eq-ch03-p0513} With the $x$ eigenstates chosen to have real coefficients, the $y$ eigenstates necessarily involve $i$. Relative phases are essential for describing spin states along all three axes.
 
 ## Matrix representations of states and observables
 
@@ -228,8 +202,7 @@ $$
 \left\vert  \psi \right\rangle = \left\vert  U \right\rangle \left\langle {U} \mathrel{\left \vert  {\vphantom {U \psi }} \right. \kern-1.2pt } {\psi } \right\rangle + \left\vert  D \right\rangle \left\langle {D} \mathrel{\left \vert  {\vphantom {D \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {U} \mathrel{\left \vert  {\vphantom {U \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }\\ {\left\langle {D} \mathrel{\left \vert  {\vphantom {D \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \end{array}} \right)
 $$ {#eq-ch03-p0519}
 
-Thus,
-$$
+Thus, $$
 \left\vert  U \right\rangle = \left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right), \qquad  \left\vert  D \right\rangle = \left( {\begin{array}{*{20}{c}} 0\\ 1 \end{array}} \right)
 $$ {#eq-ch03-p0521}
 
@@ -247,8 +220,7 @@ As an example, prove ${\left\vert  {\left\langle {I} \mathrel{\left \vert  {\vph
 
 $$
 \left\langle {I} \mathrel{\left \vert  {\vphantom {I R}} \right. \kern-1.2pt } {R} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&{ - i} \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ 1 \end{array}} \right) = \frac{{1 - i}}{2}
-$$ {#eq-zeqnnum316358}
-When converting a ket column into a bra row, remember to take the complex conjugate as well as the transpose.
+$$ {#eq-zeqnnum316358} When converting a ket column into a bra row, remember to take the complex conjugate as well as the transpose.
 
 $$
 {\left\vert  {\left\langle {I} \mathrel{\left \vert  {\vphantom {I R}} \right. \kern-1.2pt } {R} \right\rangle } \right\vert ^2} = \frac{{1 - i}}{2} \cdot \frac{{1 + i}}{2} = \frac{1}{2}
@@ -268,8 +240,7 @@ Next find the matrix of ${\hat \sigma _x}$ in the ${\hat \sigma _z}$ representat
 
 $$
 \begin{array}{l} {{\hat \sigma }_x}\vert U\rangle = \frac{1}{{\sqrt 2 }}{{\hat \sigma }_x}\left( {\vert R\rangle + \vert L\rangle } \right) = \frac{1}{{\sqrt 2 }}\left( {\vert R\rangle - \vert L\rangle } \right) = \vert D\rangle \\ {{\hat \sigma }_x}\vert D\rangle = \frac{1}{{\sqrt 2 }}{{\hat \sigma }_x}\left( {\vert R\rangle - \vert L\rangle } \right) = \frac{1}{{\sqrt 2 }}\left( {\vert R\rangle + \vert L\rangle } \right) = \vert U\rangle \end{array}
-$$ {#eq-ch03-p0534}
-Thus ${\hat \sigma _x}$ has the following matrix in the ${\hat \sigma _z}$ representation:
+$$ {#eq-ch03-p0534} Thus ${\hat \sigma _x}$ has the following matrix in the ${\hat \sigma _z}$ representation:
 
 $$
 \hat\sigma_x
@@ -288,32 +259,25 @@ $$ {#eq-ch03-p0536}
 
 $$
 {\hat \sigma _x} = {\hat \sigma _x}\hat I = {\hat \sigma _x}\left( {\left\vert  R \right\rangle \left\langle R \right\vert  + \left\vert  L \right\rangle \left\langle L \right\vert } \right) = \left\vert  R \right\rangle \left\langle R \right\vert  - \left\vert  L \right\rangle \left\langle L \right\vert
-$$ {#eq-zeqnnum507960}
-Substitute the matrices @eq-zeqnnum109578 of $\vert R\rangle ,\vert L\rangle$ in the ${\hat \sigma _z}$ representation into @eq-zeqnnum507960:
-$$
+$$ {#eq-zeqnnum507960} Substitute the matrices @eq-zeqnnum109578 of $\vert R\rangle ,\vert L\rangle$ in the ${\hat \sigma _z}$ representation into @eq-zeqnnum507960: $$
 \hat\sigma_x
  =\lvert R\rangle\langle R\rvert-\lvert L\rangle\langle L\rvert
  =\frac12\begin{pmatrix}1\\1\end{pmatrix}\begin{pmatrix}1&1\end{pmatrix}
  -\frac12\begin{pmatrix}1\\-1\end{pmatrix}\begin{pmatrix}1&-1\end{pmatrix}
  =\begin{pmatrix}0&1\\1&0\end{pmatrix}
-$$ {#eq-ch03-p0540}
-Similarly, the matrix of ${\hat \sigma _y}$ in the ${\hat \sigma _z}$ representation follows from @eq-zeqnnum298708 and @eq-zeqnnum389239:
-$$
+$$ {#eq-ch03-p0540} Similarly, the matrix of ${\hat \sigma _y}$ in the ${\hat \sigma _z}$ representation follows from @eq-zeqnnum298708 and @eq-zeqnnum389239: $$
 {\hat \sigma _y} = \left\vert  I \right\rangle \left\langle I \right\vert  - \left\vert  O \right\rangle \left\langle O \right\vert  = \left( {\begin{array}{*{20}{c}} 0&{ - i}\\ i&0 \end{array}} \right)
-$$ {#eq-zeqnnum872439}
-For reference, the matrices of ${\hat \sigma _x}$, ${\hat \sigma _y}$, and ${\hat \sigma _z}$ in the ${\hat \sigma _z}$ representation are the **Pauli matrices**:
-$$
+$$ {#eq-zeqnnum872439} For reference, the matrices of ${\hat \sigma _x}$, ${\hat \sigma _y}$, and ${\hat \sigma _z}$ in the ${\hat \sigma _z}$ representation are the **Pauli matrices**: $$
 {\hat \sigma _x} = \left( {\begin{array}{*{20}{c}} 0&1\\ 1&0 \end{array}} \right),{\rm{ }}\;\;\;{\hat \sigma _y} = \left( {\begin{array}{*{20}{c}} 0&{ - i}\\ i&0 \end{array}} \right),{\rm{ }}\;\;\;{\hat \sigma _z} = \left( {\begin{array}{*{20}{c}} 1&0\\ 0&{ - 1} \end{array}} \right)
 $$ {#eq-zeqnnum418366}
 
-Two useful pairs of relations are
-$$
+Two useful pairs of relations are $$
 {\hat \sigma _x}\vert U\rangle = \vert D\rangle , \qquad  {\hat \sigma _x}\vert D\rangle = \vert U\rangle
 $$ {#eq-ch03-p0546}
 
 $$
 {\hat \sigma _y}\vert U\rangle = i\vert D\rangle , \qquad  {\hat \sigma _y}\vert D\rangle = - i\vert U\rangle
-$$ {#eq-ch03-p0547}Using $\hat{\mathbf S}=(\hbar/2)\hat{\boldsymbol\sigma}$, the three Cartesian spin-component operators for a spin-$1/2$ particle have the following matrices in the $\hat\sigma_z$ representation:
+$$ {#eq-ch03-p0547} $\hat{\mathbf S}=(\hbar/2)\hat{\boldsymbol\sigma}$, the three Cartesian spin-component operators for a spin-$1/2$ particle have the following matrices in the $\hat\sigma_z$ representation:
 
 $$
 {\hat S_x} = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&1\\ 1&0 \end{array}} \right),\;\;\;\;\;{\hat S_y} = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&{ - i}\\ i&0 \end{array}} \right),\;\;\;\;\;{\hat S_z} = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 1&0\\ 0&{ - 1} \end{array}} \right)
@@ -341,8 +305,7 @@ In a quantum model, observables are represented by operators. An externally appl
 
 $$
 \hat H=-\hat{\boldsymbol\mu}\cdot\mathbf B=-\hat\mu_z B_z
-$$ {#eq-zeqnnum392782}
-Here ${B_z}$ is a numerical variable, whether produced by Earth's field or a current-carrying coil. The $z$ component ${\hat \mu _z}$ of the electron magnetic moment is a Hermitian operator, as is the energy $\hat H$.
+$$ {#eq-zeqnnum392782} Here ${B_z}$ is a numerical variable, whether produced by Earth's field or a current-carrying coil. The $z$ component ${\hat \mu _z}$ of the electron magnetic moment is a Hermitian operator, as is the energy $\hat H$.
 
 ### An observable versus its value
 
@@ -376,8 +339,7 @@ $$
 \lvert\psi\rangle=\sum_j\lvert a_j\rangle\langle a_j\vert\psi\rangle
 \quad\longleftrightarrow\quad
 \begin{pmatrix}\langle a_1\vert\psi\rangle\\\langle a_2\vert\psi\rangle\\\vdots\end{pmatrix}
-$$ {#eq-zeqnnum168984}
-The expression on the right depends on the representation. For example, the matrices of $\left\vert  R \right\rangle$ in the ${\hat \sigma _z}$ and ${\hat \sigma _x}$ representations are
+$$ {#eq-zeqnnum168984} The expression on the right depends on the representation. For example, the matrices of $\left\vert  R \right\rangle$ in the ${\hat \sigma _z}$ and ${\hat \sigma _x}$ representations are
 
 $$
 \begin{aligned}
@@ -451,8 +413,7 @@ $$
 \hat L\left\vert  {{\lambda _j}} \right\rangle = {\lambda _j}\left\vert  {{\lambda _j}} \right\rangle
 $$ {#eq-ch03-p0594}
 
-In the $\hat A$ representation, this equation becomes
-$$
+In the $\hat A$ representation, this equation becomes $$
 \begin{pmatrix}L_{11}&L_{12}&\cdots\\L_{21}&L_{22}&\cdots\\\vdots&\vdots&\ddots\end{pmatrix}
 \begin{pmatrix}v_1^{(j)}\\v_2^{(j)}\\\vdots\end{pmatrix}
 =\lambda_j\begin{pmatrix}v_1^{(j)}\\v_2^{(j)}\\\vdots\end{pmatrix},

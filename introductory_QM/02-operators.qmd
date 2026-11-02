@@ -140,7 +140,7 @@ $$
 \hat A\left( {\sum\limits_i {{c_i}\vert i\rangle } } \right) = \sum\limits_i {{c_i}\hat A\vert i\rangle } = \sum\limits_i {{c_i}a\vert i\rangle } = a\left( {\sum\limits_i {{c_i}\vert i\rangle } } \right)
 $$ {#eq-zeqnnum130538}
 
-This proves the result: within a subspace whose vectors all share eigenvalue $a$, the operator simply multiplies every vector by $a$.
+The subspace formed by vectors all sharing the same eigenvalue $a$ is called the **eigenspace** of $a$.
 
 ## Outer products, projection operators, and completeness
 
