@@ -12,9 +12,9 @@ We begin with **pure states** and **ideal projective measurements** of observabl
 
 - **Quantum postulate 3—superposition.** Any nonzero linear combination of allowed state vectors is also an allowed state vector after normalization. In an orthonormal basis $\{\lvert j\rangle\}$, the superposition $\sum_j c_j\lvert j\rangle$ is normalized when $\sum_j\lvert c_j\rvert^2=1$.
 
-- **Quantum postulate 4—definite values.** An observable $\hat A$ has a definite value $a$ in a state if and only if that state lies in the eigenspace with eigenvalue $a$. For a nondegenerate eigenvalue, this means the state is $\lvert a\rangle$, up to an overall phase.
+- **Quantum postulate 4—definite values.** An observable $\hat A$ has a definite value $a$ in a state if and only if that state lies in the eigenspace with eigenvalue $a$. For a nondegenerate eigenvalue, this means the state is $\lvert a\rangle$.
 
-- **Quantum postulate 5—the measurement principle.** Measuring $\hat A$ in a normalized state $\lvert\psi\rangle$ yields $a_j$ with probability $p(a_j)=\lvert\langle a_j\vert\psi\rangle\rvert^2$. Immediately after an ideal measurement that gives $a_j$, the state is $\lvert a_j\rangle$, up to an overall phase. The overlap $\langle a_j\vert\psi\rangle$ is the **probability amplitude**. More generally, $\lvert\langle\phi\vert\psi\rangle\rvert^2$ is the probability that a projective test for the normalized state $\lvert\phi\rangle$ succeeds when the initial state is $\lvert\psi\rangle$.
+- **Quantum postulate 5—the measurement principle.** Measuring $\hat A$ in a state $\lvert\psi\rangle$ yields $a_j$ with probability $p(a_j)=\lvert\langle a_j\vert\psi\rangle\rvert^2$. Immediately after an ideal measurement that gives $a_j$, the state becomes $\lvert a_j\rangle$. The overlap $\langle a_j\vert\psi\rangle$ is the **probability amplitude** and its square $\lvert\langle\phi\vert\psi\rangle\rvert^2$ is the probability that a projective test for the normalized state $\lvert\phi\rangle$ succeeds when the initial state is $\lvert\psi\rangle$.
 
 To apply the measurement principle, solve $\hat A\lvert a_j\rangle=a_j\lvert a_j\rangle$ for the eigenvalues and normalized eigenstates. For an initial state $\lvert\psi\rangle$, the possible outcomes and the corresponding states are
 
@@ -67,7 +67,7 @@ $$ {#eq-zeqnnum739477} The final expression is the probability-weighted average 
 
 ## A two-state spin system
 
-A **two-state system** has a two-dimensional state space: two orthonormal basis states suffice to describe every state, although there are infinitely many superpositions. The spin state of a spin-$1/2$ particle is an example. Write $\hat\sigma_n=\hat{\boldsymbol\sigma}\cdot\mathbf n$, where $\mathbf n$ is a spatial unit vector and $\hat{\boldsymbol\sigma}=2\hat{\mathbf S}/\hbar$. Thus $\hat\sigma_n$ is a dimensionless spin component; the physical component $\hat S_n=(\hbar/2)\hat\sigma_n$ has outcomes $\pm\hbar/2$.
+A **two-state system** has a two-dimensional state space: two orthonormal basis states suffice to describe every state. The spin state of a spin-$1/2$ particle is an example. Write $\hat\sigma_n=\hat{\boldsymbol\sigma}\cdot\mathbf n$, where $\mathbf n$ is a spatial unit vector and $\hat{\boldsymbol\sigma}=2\hat{\mathbf S}/\hbar$. Thus $\hat\sigma_n$ is a dimensionless spin component; the physical component $\hat S_n=(\hbar/2)\hat\sigma_n$ has outcomes $\pm\hbar/2$.
 
 - **Experiment:** measuring ${\hat \sigma _n}$ yields either $+ 1$ or $- 1$.
 
