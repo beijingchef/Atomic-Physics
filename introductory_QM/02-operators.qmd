@@ -326,7 +326,7 @@ Setting the two input vectors equal in Theorem 2.6 shows that unitary transforma
 
 ## Hermitian operators
 
-An operator $\hat A$ is **Hermitian** if it equals its own adjoint: $\hat A^{\dagger}=\hat A$. Hermitian operators are central to quantum mechanics because they represent observables. The results below explain why: their eigenvalues are real, and their eigenvectors can form an orthonormal basis.
+An operator $\hat A$ is **Hermitian**, or **self-adjoint** if it equals its own adjoint: $\hat A^{\dagger}=\hat A$. Hermitian operators are central to quantum mechanics because they represent observables. The results below explain why: their eigenvalues are real, and their eigenvectors can form an orthonormal basis.
 
 For a Hermitian operator, exchanging the two states in a matrix element gives its complex conjugate. Using the adjoint relation from Theorem 2.4, we obtain
 
