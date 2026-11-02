@@ -250,11 +250,7 @@ $$
 \begin{array}{c} \left( {\hat X\hat Y} \right)\left\vert  \psi \right\rangle \leftrightarrow \left\langle \psi \right\vert {\left( {\hat X\hat Y} \right)^\dagger }\\ \left( {\hat X\hat Y} \right)\left\vert  \psi \right\rangle = \hat X\left( {\hat Y\left\vert  \psi \right\rangle } \right) \leftrightarrow \left( {\left\langle \psi \right\vert {{\hat Y}^\dagger }} \right){{\hat X}^\dagger } = \left\langle \psi \right\vert {{\hat Y}^\dagger }{{\hat X}^\dagger } \end{array}
 $$ {#eq-ch02-p0343}
 
-**Theorem 2.4.** Taking the adjoint exchanges the two states in a matrix element and complex-conjugates the resulting number.
-
-For any two vectors $\vert \alpha\rangle ,\vert \beta\rangle$,
-
-$$
+**Theorem 2.4.** For any two vectors $\vert \alpha\rangle ,\vert \beta\rangle$, $$
 \langle\alpha|\hat M^{\dagger}|\beta\rangle=\bigl(\langle\beta|\hat M|\alpha\rangle\bigr)^*
 $$ {#eq-zeqnnum961324}
 
@@ -316,7 +312,7 @@ $$
 {\hat O^{ - 1}}\hat O = \hat O{\hat O^{ - 1}} = \hat I
 $$ {#eq-ch02-p0367}
 
-**Unitary operator.** An operator $\hat U$ is **unitary** when its adjoint is also its inverse: $\hat U^{\dagger}=\hat U^{-1}$, or equivalently $\hat U^{\dagger}\hat U=\hat U\hat U^{\dagger}=\hat I$. Its action is called a unitary transformation. Think of a rotation that preserves lengths and angles; a unitary transformation is the complex-vector-space counterpart. It preserves inner products.
+**Unitary operator.** An operator $\hat U$ is **unitary** when its adjoint is also its inverse: $\hat U^{\dagger}=\hat U^{-1}$, or equivalently $\hat U^{\dagger}\hat U=\hat U\hat U^{\dagger}=\hat I$. Its action is called a unitary transformation. Think of a rotation in Cartesian space that preserves lengths and relative angles of Cartesian vectors; a unitary transformation is the complex-vector-space counterpart. It preserves inner products.
 
 **Theorem 2.6.** A unitary transformation preserves inner products.
 

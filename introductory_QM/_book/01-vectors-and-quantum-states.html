@@ -375,8 +375,8 @@ P(\sigma_m=-1)=\sin^2(\theta/2).
 <p>Dirac introduced a neat notation for this operation. To write the inner product of <span class="math inline">\(|\varphi\rangle\)</span> and <span class="math inline">\(|\psi\rangle\)</span>, we write the first vector as <span class="math inline">\(\langle\varphi|\)</span>, and place it next to the second vector’s ket. The two brackets fit together:</p>
 <p><span id="eq-zeqnnum133573"><span class="math display">\[
 \langle \varphi|  \cdot |\psi\rangle \equiv \langle \varphi|\psi\rangle = c
-\tag{1.6}\]</span></span> Here <span class="math inline">\(c\)</span> is the resulting complex number. The inner product supplies the rule for calculating it; the bra–ket notation gives us a compact way to write it.</p>
-<p><span class="math inline">\(\langle\varphi|\)</span> is called <strong>bra.</strong> A bra is the dual object associated with a ket. For now, we can work with this correspondence through the rules below. Kets and bras each form a complex vector space. The correspondence between them is <strong>antilinear</strong>: when we convert a ket into its corresponding bra, we take the complex conjugate of each coefficient. The conversion rules are</p>
+\tag{1.6}\]</span></span> Here <span class="math inline">\(c\)</span> is the resulting complex number. The bra–ket notation gives us a compact way to write the inner product.</p>
+<p><span class="math inline">\(\langle\varphi|\)</span> is called <strong>bra.</strong> A bra is the dual object associated with a ket. Kets and bras each form a complex vector space. The correspondence between them is <strong>antilinear</strong>: when we convert a ket into its corresponding bra, we take the complex conjugate of each coefficient. The conversion rules are</p>
 <p><span id="eq-zeqnnum136783"><span class="math display">\[
 \begin{aligned}
 |\psi\rangle &amp;\longleftrightarrow \langle\psi|,\\
@@ -394,13 +394,14 @@ c_1|\alpha\rangle+c_2|\beta\rangle
 <p><span id="eq-zeqnnum921664"><span class="math display">\[
 \langle \varphi|\psi\rangle = \langle \psi|\varphi\rangle ^*
 \tag{1.9}\]</span></span></p>
-<p>Applying conjugate symmetry, <a href="#eq-zeqnnum921664" class="quarto-xref">Equation&nbsp;<span>1.9</span></a>, to the inner product of a vector with itself. <span id="eq-ch01-p0188"><span class="math display">\[
+<p><strong>Real norm</strong>:</p>
+<p>Applying conjugate symmetry, <a href="#eq-zeqnnum921664" class="quarto-xref">Equation&nbsp;<span>1.9</span></a>, to the inner product of a vector with itself, we have <span id="eq-ch01-p0188"><span class="math display">\[
 \langle \psi|\psi\rangle = \langle \psi|\psi\rangle ^*
-\tag{1.10}\]</span></span> The result equals its own complex conjugate, so <span class="math inline">\(\langle \psi\|\psi\rangle\)</span> must be real.</p>
-<p><strong>Positive definiteness.</strong> To make this quantity behave like a squared length, we require <span id="eq-zeqnnum281628"><span class="math display">\[
+\tag{1.10}\]</span></span> So <span class="math inline">\(\langle \psi |\psi\rangle\)</span> , which is also called the <strong>norm</strong> of a vector, must be real.</p>
+<p><strong>Positive definiteness.</strong> For the vector used in quantum mechanics, we require <span id="eq-zeqnnum281628"><span class="math display">\[
 \langle \psi|\psi\rangle \ge 0
 \tag{1.11}\]</span></span> Equality holds only for <span class="math inline">\(\vert \psi\rangle = \vert {{\rm{null}}}\rangle\)</span>.</p>
-<p>A vector <span class="math inline">\(\vert \psi\rangle\)</span> whose inner product with itself is one, <span class="math inline">\(\langle \psi\|\psi\rangle = 1\)</span> is <strong>normalized</strong>. Any nonzero, unnormalized vector <span class="math inline">\(|\psi\rangle\)</span> can be normalized as follows: <span id="eq-ch01-p0194"><span class="math display">\[
+<p>A vector <span class="math inline">\(\vert \psi\rangle\)</span> satisfying <span class="math inline">\(\langle \psi |\psi\rangle = 1\)</span> is <strong>normalized</strong>. Any nonzero, unnormalized vector <span class="math inline">\(|\psi\rangle\)</span> can be normalized as follows: <span id="eq-ch01-p0194"><span class="math display">\[
 \left\vert  {\tilde \psi } \right\rangle = \frac{{|\psi\rangle }}{{\sqrt {\langle \psi|\psi\rangle } }}
 \tag{1.12}\]</span></span></p>
 <p>Let us put the bra–ket notation to work with column vectors. Here we can see every step of the calculation.</p>
@@ -410,7 +411,7 @@ c_1|\alpha\rangle+c_2|\beta\rangle
 \tag{1.13}\]</span></span> inner product <span class="math inline">\(\langle \phi|\psi\rangle\)</span> can then be defined by ordinary matrix multiplication:</p>
 <p><span id="eq-zeqnnum248635"><span class="math display">\[
 \langle \phi|\psi\rangle = \left( {\begin{array}{*{20}{c}} {a_1^*}&amp;{a_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{b_1}}\\ {{b_2}} \end{array}} \right) = a_1^*{b_1} + a_2^*{b_2}
-\tag{1.14}\]</span></span> definitions satisfy all the required properties. Check conjugate symmetry, <a href="#eq-zeqnnum921664" class="quarto-xref">Equation&nbsp;<span>1.9</span></a>, explicitly by reversing the two vectors:</p>
+\tag{1.14}\]</span></span> These definitions satisfy all the required properties for inner product. Check conjugate symmetry, <a href="#eq-zeqnnum921664" class="quarto-xref">Equation&nbsp;<span>1.9</span></a> for example:</p>
 <p><span id="eq-ch01-p0201"><span class="math display">\[
 \langle \psi|\phi\rangle = \left( {\begin{array}{*{20}{c}} {b_1^*}&amp;{b_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{a_1}}\\ {{a_2}} \end{array}} \right) = b_1^*{a_1} + b_2^*{a_2} = {({b_1}a_1^* + {b_2}a_2^*)^*} = {\langle \phi|\psi\rangle ^*}
 \tag{1.15}\]</span></span></p>
@@ -450,28 +451,28 @@ c_1|\alpha\rangle+c_2|\beta\rangle
 \tag{1.22}\]</span></span> <span class="math inline">\({a_i}\)</span> is the complex coefficient of <span class="math inline">\(|i\rangle\)</span> in the expansion of <span class="math inline">\(|\psi\rangle\)</span>. To find a particular coefficient, lets say <span class="math inline">\(a_j\)</span>, apply the bra <span class="math inline">\(\langle j|\)</span> to both sides. Orthogonality removes every term except the one we want:</p>
 <p><span id="eq-ch01-p0220"><span class="math display">\[
 \langle j|\psi\rangle = \sum\limits_i {\langle j| {a_i}|i\rangle } = \sum\limits_i {{a_i}\langle j|i\rangle } = \sum\limits_i {{a_i}{\delta _{ij}}} = {a_j}
-\tag{1.23}\]</span></span> the component of <span class="math inline">\(|\psi\rangle\)</span> along <span class="math inline">\(|j\rangle\)</span> is <span class="math inline">\(\langle j|\psi\rangle\)</span>, and</p>
+\tag{1.23}\]</span></span></p>
 <p><span id="eq-zeqnnum935342"><span class="math display">\[
 |\psi\rangle = \sum\limits_i {\langle i|\psi\rangle |i\rangle } = \sum\limits_i {|i\rangle } \langle i|\psi\rangle
 \tag{1.24}\]</span></span></p>
-<p>This identity reconstructs a vector from its components. In the final expression, moving the scalar <span class="math inline">\(\langle i|\psi\rangle\)</span> to the right of the ket groups the factors as <span class="math inline">\(|i\rangle\langle i|\)</span>. The <a href="./02-operators.html#outer-products-projection-operators-and-completeness">section on outer products, projection operators, and completeness</a> explains the meaning of these factors.</p>
+<p>In the final expression, moving the scalar <span class="math inline">\(\langle i|\psi\rangle\)</span> to the right of the ket groups the factors as <span class="math inline">\(|i\rangle\langle i|\)</span>. The <a href="./02-operators.html#outer-products-projection-operators-and-completeness">section on outer products, projection operators, and completeness</a> explains the meaning of these factors.</p>
 <p>Taking the corresponding bra, using <a href="#eq-zeqnnum136783" class="quarto-xref">Equation&nbsp;<span>1.7</span></a> and <a href="#eq-zeqnnum921664" class="quarto-xref">Equation&nbsp;<span>1.9</span></a>, gives</p>
-<p><span id="eq-ch01-p0224"><span class="math display">\[
-\langle \psi|  = \sum\limits_i {\langle \psi|i\rangle } \langle i|
-\tag{1.25}\]</span></span></p>
+<p><span class="math display">\[
+\langle \psi|  = \sum\limits_i {\langle \psi|i\rangle } \langle i|=\sum\limits_i a_i^*\langle i|
+\]</span></p>
 </section>
 <section id="matrix-representations-of-vectors" class="level2" data-number="1.6">
 <h2 data-number="1.6" class="anchored" data-anchor-id="matrix-representations-of-vectors"><span class="header-section-number">1.6</span> Matrix representations of vectors</h2>
 <p>Once we have chosen an ordered orthonormal basis, we can gather the expansion coefficients in <a href="#eq-zeqnnum935342" class="quarto-xref">Equation&nbsp;<span>1.24</span></a> into a column. This gives a concrete representation of the state vector in the chosen basis:</p>
 <p><span id="eq-zeqnnum343100"><span class="math display">\[
 \lvert\psi\rangle:=\begin{pmatrix}\langle 1\vert\psi\rangle\\\langle 2\vert\psi\rangle\\\vdots\\\langle N\vert\psi\rangle\end{pmatrix}
-\tag{1.26}\]</span></span></p>
+\tag{1.25}\]</span></span></p>
 <p>In this basis, each basis vector is represented as:</p>
 <p><span id="eq-ch01-p0229"><span class="math display">\[
 |1\rangle = \left( {\begin{array}{*{20}{c}} 1\\ 0\\ \vdots \\ 0 \end{array}} \right), \qquad  |2\rangle = \left( {\begin{array}{*{20}{c}} 0\\ 1\\ \vdots \\ 0 \end{array}} \right), \qquad  \cdots \qquad  |N\rangle = \left( {\begin{array}{*{20}{c}} 0\\ 0\\ \vdots \\ 1 \end{array}} \right)
-\tag{1.27}\]</span></span></p>
+\tag{1.26}\]</span></span></p>
 <p>Always keep track of the basis attached to a column. Changing the basis changes the elements, so columns written in different bases must first be converted to a common basis before we combine them in a matrix calculation.</p>
-<p>The comparison below connects state-vector notation to Cartesian geometry. Here <span class="math inline">\(\mathbf{e}_i\)</span> denotes a Cartesian basis vector. In both settings, an orthonormal basis lets us obtain a vector’s components by taking inner products with the basis vectors:</p>
+<p>The comparison below connects state-vector relations to Cartesian-vector relations. Here <span class="math inline">\(\mathbf{e}_i\)</span> denotes a Cartesian basis vector.</p>
 <p><span id="eq-ch01-p0232"><span class="math display">\[
 \begin{array}{ll}
 \text{Cartesian vectors} &amp; \text{Complex state vectors}\\[0.5em]
@@ -486,7 +487,7 @@ v_i=\mathbf{e}_i\cdot\mathbf{v}
 \mathbf{v}=\sum_i v_i\mathbf{e}_i
 &amp; |\psi\rangle=\sum_i a_i|i\rangle
 \end{array}
-\tag{1.28}\]</span></span></p>
+\tag{1.27}\]</span></span></p>
 </section>
 <section id="exercises" class="level2" data-number="1.7">
 <h2 data-number="1.7" class="anchored" data-anchor-id="exercises"><span class="header-section-number">1.7</span> Exercises</h2>
@@ -494,25 +495,16 @@ v_i=\mathbf{e}_i\cdot\mathbf{v}
 <p><span class="math display">\[
 |\chi\rangle=\begin{pmatrix}2\\i\end{pmatrix} \quad \rm{ and }\quad |\eta\rangle=\begin{pmatrix}1\\1\end{pmatrix}
 \]</span>write their bras, calculate <span class="math inline">\(\langle\chi|\eta\rangle\)</span> and <span class="math inline">\(\langle\eta|\chi\rangle\)</span>, and normalize <span class="math inline">\(|\chi\rangle\)</span>. Check conjugate symmetry.</p>
-<p><strong>1.2.</strong> Test each collection below: does it form a complex vector space under the usual addition and scalar multiplication? Focus on the vector-space rules; an inner product and completeness are not required.</p>
-<ul>
-<li><p>All complex numbers.</p></li>
-<li><p>All vectors in three-dimensional Cartesian space.</p></li>
-<li><p>All complex-valued solutions <span class="math inline">\(\psi(x)\)</span> of the following equation on a fixed interval, with fixed real <span class="math inline">\(E\)</span> and a finite, continuous <span class="math inline">\(V(x)\)</span>. No normalization or boundary conditions are imposed.</p></li>
-</ul>
-<p><span id="eq-ch01-p0240"><span class="math display">\[
-\left[ { - \frac{{{\hbar ^2}}}{{2m}}\frac{{{d^2}}}{{d{x^2}}} + V(x)} \right]\psi (x) = E\psi (x)
-\tag{1.29}\]</span></span></p>
-<p><strong>1.3.</strong> Prove the Cauchy–Schwarz inequality, <span class="math inline">\(\langle \alpha|\alpha\rangle \langle \beta|\beta\rangle \ge {\left\vert  {\langle \alpha|\beta\rangle } \right\vert ^2}\)</span>.</p>
+<p><strong>1.2.</strong> Prove the Cauchy–Schwarz inequality, <span class="math inline">\(\langle \alpha|\alpha\rangle \langle \beta|\beta\rangle \ge {\left\vert  {\langle \alpha|\beta\rangle } \right\vert ^2}\)</span>.</p>
 <p>Hint: construct <span class="math inline">\(\vert \psi \rangle\)</span> as a suitable linear combination of <span class="math inline">\(\vert \alpha\rangle\)</span> and <span class="math inline">\(\vert \beta\rangle\)</span>, and use the nonnegative squared norm in <a href="#eq-zeqnnum281628" class="quarto-xref">Equation&nbsp;<span>1.11</span></a>.</p>
-<p><strong>1.4.</strong> A vector <span class="math inline">\(|\psi\rangle\)</span> in a two-dimensional complex vector space has the following expansion in the orthonormal basis <span class="math inline">\(\left\{ {\vert {\alpha _1}\rangle ,\vert {\alpha _2}\rangle } \right\}\)</span>:</p>
+<p><strong>1.3.</strong> A vector <span class="math inline">\(|\psi\rangle\)</span> in a two-dimensional complex vector space has the following expansion in the orthonormal basis <span class="math inline">\(\left\{ {\vert {\alpha _1}\rangle ,\vert {\alpha _2}\rangle } \right\}\)</span>:</p>
 <p><span id="eq-ch01-p0246"><span class="math display">\[
 \vert \psi \rangle = \vert {\alpha _1}\rangle + 3\vert {\alpha _2}\rangle
-\tag{1.30}\]</span></span></p>
+\tag{1.28}\]</span></span></p>
 <p>A second basis <span class="math inline">\(\left\{ {\vert {\beta _1}\rangle ,\vert {\beta _2}\rangle } \right\}\)</span> satisfies</p>
 <p><span id="eq-ch01-p0248"><span class="math display">\[
 \left\vert  {{\beta _1}} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\vert {\alpha _1}\rangle + i\vert {\alpha _2}\rangle } \right), \qquad  \left\vert  {{\beta _2}} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\vert {\alpha _1}\rangle - i\vert {\alpha _2}\rangle } \right)
-\tag{1.31}\]</span></span> <span class="math inline">\(|\psi\rangle\)</span> in the second basis using two different methods, and check that your answers agree.</p>
+\tag{1.29}\]</span></span> Expand <span class="math inline">\(|\psi\rangle\)</span> in the second basis using two different methods, and check that your answers agree.</p>
 
 
 </section>

@@ -173,9 +173,11 @@ $$
 \langle \varphi|\psi\rangle = \langle \psi|\varphi\rangle ^*
 $$ {#eq-zeqnnum921664}
 
+**Real norm**:
+
 Applying conjugate symmetry, @eq-zeqnnum921664, to the inner product of a vector with itself, we have $$
 \langle \psi|\psi\rangle = \langle \psi|\psi\rangle ^*
-$$ {#eq-ch01-p0188} So $\langle \psi |\psi\rangle$ must be real.
+$$ {#eq-ch01-p0188} So $\langle \psi |\psi\rangle$ , which is also called the **norm** of a vector, must be real.
 
 **Positive definiteness.** For the vector used in quantum mechanics, we require $$
 \langle \psi|\psi\rangle \ge 0
