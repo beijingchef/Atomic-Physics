@@ -328,21 +328,7 @@ Setting the two input vectors equal in Theorem 2.6 shows that unitary transforma
 
 An operator $\hat A$ is **Hermitian**, or **self-adjoint** if it equals its own adjoint: $\hat A^{\dagger}=\hat A$. Hermitian operators are central to quantum mechanics because they represent observables. The results below explain why: their eigenvalues are real, and their eigenvectors can form an orthonormal basis.
 
-For a Hermitian operator, exchanging the two states in a matrix element gives its complex conjugate. Using the adjoint relation from Theorem 2.4, we obtain
-
-$$
-\langle\phi|\hat X|\psi\rangle=\bigl(\langle\psi|\hat X|\phi\rangle\bigr)^*
-$$ {#eq-zeqnnum353712}
-
-**Theorem 2.7.** For a Hermitian operator $\hat X$, $\left\langle \psi \right\vert \hat X\left\vert  \psi \right\rangle$ is real.
-
-**Proof.** Set $\left\vert  \phi \right\rangle = \left\vert  \psi \right\rangle$ in @eq-zeqnnum353712:
-
-$$
-\langle\psi|\hat X|\psi\rangle=\bigl(\langle\psi|\hat X|\psi\rangle\bigr)^*
-$$ {#eq-ch02-p0378}
-
-**Theorem 2.8.** The eigenvalues of a Hermitian operator are real.
+**Theorem 2.7.** The eigenvalues of a Hermitian operator are real.
 
 **Proof.** If $\hat A\left\vert  a \right\rangle = a\left\vert  a \right\rangle$, duality gives $\left\langle a \right\vert {\hat A^\dagger } = \left\langle a \right\vert {a^*}$ and $\hat A = {\hat A^\dagger }$, hence $\left\langle a \right\vert \hat A = \left\langle a \right\vert {a^*}$. We can therefore evaluate $\left\langle a \right\vert \hat A\left\vert  a \right\rangle$ in two ways:
 
@@ -350,17 +336,25 @@ $$
 \begin{array}{c} \left\langle a \right\vert \hat A\left\vert  a \right\rangle = \left\langle a \right\vert \left( {\hat A\left\vert  a \right\rangle } \right) = a\left\langle {a} \mathrel{\left \vert  {\vphantom {a a}} \right. \kern-1.2pt } {a} \right\rangle \\ \left\langle a \right\vert \hat A\left\vert  a \right\rangle = \left( {\left\langle a \right\vert \hat A} \right)\left\vert  a \right\rangle = {a^*}\left\langle {a} \mathrel{\left \vert  {\vphantom {a a}} \right. \kern-1.2pt } {a} \right\rangle \end{array}
 $$ {#eq-ch02-p0381}
 
-Since an eigenvector is nonzero, $\langle a|a\rangle>0$. Dividing both expressions by this squared norm gives $a=a^*$, so $a$ is real.
+Since $\langle a|a\rangle>0$, we have $a=a^*$, so $a$ is real.
 
 Physically, this ensures that measured values of observables are real.
 
-**Theorem 2.9.** A Hermitian operator's matrix equals its conjugate transpose, and its diagonal elements are real.
+**Theorem 2.8.** A Hermitian operator's matrix equals its conjugate transpose, and its diagonal elements are real.
 
-**Proof.** By @eq-zeqnnum961324, if $\hat A$ is Hermitian, then for any vectors $\vert \alpha\rangle ,\vert \beta\rangle$,
+**Proof.** Using the adjoint relation from Theorem 2.4, on a Hermitian operator $\hat A$ , we have
 
 $$
-\langle\alpha|\hat A|\beta\rangle=\bigl(\langle\beta|\hat A|\alpha\rangle\bigr)^*
-$$ {#eq-ch02-p0386}
+\langle\phi|\hat A|\psi\rangle=\bigl(\langle\psi|\hat A|\phi\rangle\bigr)^*
+$$ {#eq-zeqnnum353712}
+
+Set $\left\vert  \phi \right\rangle = \left\vert  \psi \right\rangle$ in @eq-zeqnnum353712:
+
+$$
+\langle\psi|\hat A|\psi\rangle=\bigl(\langle\psi|\hat A|\psi\rangle\bigr)^*
+$$ {#eq-ch02-p0378}
+
+Thus, $\left\langle \psi \right\vert \hat A\left\vert  \psi \right\rangle$ is real.
 
 Consequently, the matrix elements of $\hat A$ in any complete basis obey
 
@@ -368,11 +362,11 @@ $$
 {A_{ij}} = A_{ji}^*
 $$ {#eq-ch02-p0388}
 
-On the diagonal, this becomes $A_{ii}=A_{ii}^*$, so every diagonal element is real. Off the diagonal, elements occur in complex-conjugate pairs across the main diagonal.
+On the diagonal, this becomes $A_{ii}=A_{ii}^*$, so every diagonal element is real. Other elements occur in complex-conjugate pairs across the main diagonal.
 
 This gives a quick visual check: the diagonal elements must be real, and each element above the diagonal must be the complex conjugate of its partner below it.
 
-**Theorem 2.10.** Eigenvectors of a Hermitian operator belonging to different eigenvalues are orthogonal.
+**Theorem 2.9.** Eigenvectors of a Hermitian operator belonging to different eigenvalues are orthogonal.
 
 **Proof.** Let ${a_i}$ and ${a_j}$ be eigenvalues of the Hermitian operator $\hat A$, with corresponding eigenvectors $\vert {a_i}\rangle ,\vert {a_j}\rangle$:
 
@@ -402,7 +396,7 @@ Since ${a_i} \ne {a_j}$, we must have $\langle {{a_i}}\vert {{a_j}}\rangle = 0$,
 
 In an $N$-dimensional space, $N$ mutually orthogonal nonzero vectors provide all the basis directions we need. Therefore,
 
-**Theorem 2.11.** If all $N$ eigenvalues of a Hermitian operator $\hat A$ are nondegenerate, its $N$ mutually orthogonal eigenvectors $\{ \vert {a_1}\rangle ,\vert {a_2}\rangle \cdots \vert {a_N}\rangle \}$ form a complete basis for the vector space. After normalization, they form an orthonormal basis.
+**Theorem 2.10.** If all $N$ eigenvalues of a Hermitian operator $\hat A$ are nondegenerate, its $N$ mutually orthogonal eigenvectors $\{ \vert {a_1}\rangle ,\vert {a_2}\rangle \cdots \vert {a_N}\rangle \}$ form a complete basis for the vector space. After normalization, they form an orthonormal basis.
 
 The conclusion extends to degenerate Hermitian operators. Chapter 4 discusses how to choose the basis vectors within degenerate subspaces.
 

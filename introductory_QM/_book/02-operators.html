@@ -504,53 +504,49 @@ window.Quarto = {
 <section id="hermitian-operators" class="level2" data-number="2.7">
 <h2 data-number="2.7" class="anchored" data-anchor-id="hermitian-operators"><span class="header-section-number">2.7</span> Hermitian operators</h2>
 <p>An operator <span class="math inline">\(\hat A\)</span> is <strong>Hermitian</strong>, or <strong>self-adjoint</strong> if it equals its own adjoint: <span class="math inline">\(\hat A^{\dagger}=\hat A\)</span>. Hermitian operators are central to quantum mechanics because they represent observables. The results below explain why: their eigenvalues are real, and their eigenvectors can form an orthonormal basis.</p>
-<p>For a Hermitian operator, exchanging the two states in a matrix element gives its complex conjugate. Using the adjoint relation from Theorem 2.4, we obtain</p>
-<p><span id="eq-zeqnnum353712"><span class="math display">\[
-\langle\phi|\hat X|\psi\rangle=\bigl(\langle\psi|\hat X|\phi\rangle\bigr)^*
-\tag{2.44}\]</span></span></p>
-<p><strong>Theorem 2.7.</strong> For a Hermitian operator <span class="math inline">\(\hat X\)</span>, <span class="math inline">\(\left\langle \psi \right\vert \hat X\left\vert  \psi \right\rangle\)</span> is real.</p>
-<p><strong>Proof.</strong> Set <span class="math inline">\(\left\vert  \phi \right\rangle = \left\vert  \psi \right\rangle\)</span> in <a href="#eq-zeqnnum353712" class="quarto-xref">Equation&nbsp;<span>2.44</span></a>:</p>
-<p><span id="eq-ch02-p0378"><span class="math display">\[
-\langle\psi|\hat X|\psi\rangle=\bigl(\langle\psi|\hat X|\psi\rangle\bigr)^*
-\tag{2.45}\]</span></span></p>
-<p><strong>Theorem 2.8.</strong> The eigenvalues of a Hermitian operator are real.</p>
+<p><strong>Theorem 2.7.</strong> The eigenvalues of a Hermitian operator are real.</p>
 <p><strong>Proof.</strong> If <span class="math inline">\(\hat A\left\vert  a \right\rangle = a\left\vert  a \right\rangle\)</span>, duality gives <span class="math inline">\(\left\langle a \right\vert {\hat A^\dagger } = \left\langle a \right\vert {a^*}\)</span> and <span class="math inline">\(\hat A = {\hat A^\dagger }\)</span>, hence <span class="math inline">\(\left\langle a \right\vert \hat A = \left\langle a \right\vert {a^*}\)</span>. We can therefore evaluate <span class="math inline">\(\left\langle a \right\vert \hat A\left\vert  a \right\rangle\)</span> in two ways:</p>
 <p><span id="eq-ch02-p0381"><span class="math display">\[
 \begin{array}{c} \left\langle a \right\vert \hat A\left\vert  a \right\rangle = \left\langle a \right\vert \left( {\hat A\left\vert  a \right\rangle } \right) = a\left\langle {a} \mathrel{\left \vert  {\vphantom {a a}} \right. \kern-1.2pt } {a} \right\rangle \\ \left\langle a \right\vert \hat A\left\vert  a \right\rangle = \left( {\left\langle a \right\vert \hat A} \right)\left\vert  a \right\rangle = {a^*}\left\langle {a} \mathrel{\left \vert  {\vphantom {a a}} \right. \kern-1.2pt } {a} \right\rangle \end{array}
-\tag{2.46}\]</span></span></p>
-<p>Since an eigenvector is nonzero, <span class="math inline">\(\langle a|a\rangle&gt;0\)</span>. Dividing both expressions by this squared norm gives <span class="math inline">\(a=a^*\)</span>, so <span class="math inline">\(a\)</span> is real.</p>
+\tag{2.44}\]</span></span></p>
+<p>Since <span class="math inline">\(\langle a|a\rangle&gt;0\)</span>, we have <span class="math inline">\(a=a^*\)</span>, so <span class="math inline">\(a\)</span> is real.</p>
 <p>Physically, this ensures that measured values of observables are real.</p>
-<p><strong>Theorem 2.9.</strong> A Hermitian operator’s matrix equals its conjugate transpose, and its diagonal elements are real.</p>
-<p><strong>Proof.</strong> By <a href="#eq-zeqnnum961324" class="quarto-xref">Equation&nbsp;<span>2.34</span></a>, if <span class="math inline">\(\hat A\)</span> is Hermitian, then for any vectors <span class="math inline">\(\vert \alpha\rangle ,\vert \beta\rangle\)</span>,</p>
-<p><span id="eq-ch02-p0386"><span class="math display">\[
-\langle\alpha|\hat A|\beta\rangle=\bigl(\langle\beta|\hat A|\alpha\rangle\bigr)^*
-\tag{2.47}\]</span></span></p>
+<p><strong>Theorem 2.8.</strong> A Hermitian operator’s matrix equals its conjugate transpose, and its diagonal elements are real.</p>
+<p><strong>Proof.</strong> Using the adjoint relation from Theorem 2.4, on a Hermitian operator <span class="math inline">\(\hat A\)</span> , we have</p>
+<p><span id="eq-zeqnnum353712"><span class="math display">\[
+\langle\phi|\hat A|\psi\rangle=\bigl(\langle\psi|\hat A|\phi\rangle\bigr)^*
+\tag{2.45}\]</span></span></p>
+<p>Set <span class="math inline">\(\left\vert  \phi \right\rangle = \left\vert  \psi \right\rangle\)</span> in <a href="#eq-zeqnnum353712" class="quarto-xref">Equation&nbsp;<span>2.45</span></a>:</p>
+<p><span id="eq-ch02-p0378"><span class="math display">\[
+\langle\psi|\hat A|\psi\rangle=\bigl(\langle\psi|\hat A|\psi\rangle\bigr)^*
+\tag{2.46}\]</span></span></p>
+<p>Thus, <span class="math inline">\(\left\langle \psi \right\vert \hat A\left\vert  \psi \right\rangle\)</span> is real.</p>
 <p>Consequently, the matrix elements of <span class="math inline">\(\hat A\)</span> in any complete basis obey</p>
 <p><span id="eq-ch02-p0388"><span class="math display">\[
 {A_{ij}} = A_{ji}^*
-\tag{2.48}\]</span></span></p>
-<p>On the diagonal, this becomes <span class="math inline">\(A_{ii}=A_{ii}^*\)</span>, so every diagonal element is real. Off the diagonal, elements occur in complex-conjugate pairs across the main diagonal.</p>
+\tag{2.47}\]</span></span></p>
+<p>On the diagonal, this becomes <span class="math inline">\(A_{ii}=A_{ii}^*\)</span>, so every diagonal element is real. Other elements occur in complex-conjugate pairs across the main diagonal.</p>
 <p>This gives a quick visual check: the diagonal elements must be real, and each element above the diagonal must be the complex conjugate of its partner below it.</p>
-<p><strong>Theorem 2.10.</strong> Eigenvectors of a Hermitian operator belonging to different eigenvalues are orthogonal.</p>
+<p><strong>Theorem 2.9.</strong> Eigenvectors of a Hermitian operator belonging to different eigenvalues are orthogonal.</p>
 <p><strong>Proof.</strong> Let <span class="math inline">\({a_i}\)</span> and <span class="math inline">\({a_j}\)</span> be eigenvalues of the Hermitian operator <span class="math inline">\(\hat A\)</span>, with corresponding eigenvectors <span class="math inline">\(\vert {a_i}\rangle ,\vert {a_j}\rangle\)</span>:</p>
 <p><span id="eq-ch02-p0393"><span class="math display">\[
 \begin{array}{c} \hat A\left\vert  {{a_i}} \right\rangle = {a_i}\left\vert  {{a_i}} \right\rangle \\ \hat A\left\vert  {{a_j}} \right\rangle = {a_j}\left\vert  {{a_j}} \right\rangle \end{array}
-\tag{2.49}\]</span></span></p>
+\tag{2.48}\]</span></span></p>
 <p>Duality gives</p>
 <p><span id="eq-ch02-p0395"><span class="math display">\[
 \left\langle {{a_i}} \right\vert {\hat A^\dagger } = \left\langle {{a_i}} \right\vert a_i^*
-\tag{2.50}\]</span></span></p>
+\tag{2.49}\]</span></span></p>
 <p>Since <span class="math inline">\(\hat A = {\hat A^\dagger }\)</span> and Hermitian eigenvalues are real, this becomes</p>
 <p><span id="eq-ch02-p0397"><span class="math display">\[
 \left\langle {{a_i}} \right\vert \hat A = \left\langle {{a_i}} \right\vert {a_i}
-\tag{2.51}\]</span></span></p>
+\tag{2.50}\]</span></span></p>
 <p>Multiply both sides on the right by <span class="math inline">\(\vert {a_j}\rangle\)</span>, then let <span class="math inline">\(\hat A\)</span> act first on <span class="math inline">\(\vert {a_j}\rangle\)</span>. Rearranging gives</p>
 <p><span id="eq-ch02-p0399"><span class="math display">\[
 \left( {{a_j} - {a_i}} \right)\left\langle {{{a_i}}} \mathrel{\left \vert  {\vphantom {{{a_i}} {{a_j}}}} \right. \kern-1.2pt } {{{a_j}}} \right\rangle = 0
-\tag{2.52}\]</span></span></p>
+\tag{2.51}\]</span></span></p>
 <p>Since <span class="math inline">\({a_i} \ne {a_j}\)</span>, we must have <span class="math inline">\(\langle {{a_i}}\vert {{a_j}}\rangle = 0\)</span>, proving the result.</p>
 <p>In an <span class="math inline">\(N\)</span>-dimensional space, <span class="math inline">\(N\)</span> mutually orthogonal nonzero vectors provide all the basis directions we need. Therefore,</p>
-<p><strong>Theorem 2.11.</strong> If all <span class="math inline">\(N\)</span> eigenvalues of a Hermitian operator <span class="math inline">\(\hat A\)</span> are nondegenerate, its <span class="math inline">\(N\)</span> mutually orthogonal eigenvectors <span class="math inline">\(\{ \vert {a_1}\rangle ,\vert {a_2}\rangle \cdots \vert {a_N}\rangle \}\)</span> form a complete basis for the vector space. After normalization, they form an orthonormal basis.</p>
+<p><strong>Theorem 2.10.</strong> If all <span class="math inline">\(N\)</span> eigenvalues of a Hermitian operator <span class="math inline">\(\hat A\)</span> are nondegenerate, its <span class="math inline">\(N\)</span> mutually orthogonal eigenvectors <span class="math inline">\(\{ \vert {a_1}\rangle ,\vert {a_2}\rangle \cdots \vert {a_N}\rangle \}\)</span> form a complete basis for the vector space. After normalization, they form an orthonormal basis.</p>
 <p>The conclusion extends to degenerate Hermitian operators. Chapter 4 discusses how to choose the basis vectors within degenerate subspaces.</p>
 <section id="representations" class="level3" data-number="2.7.1">
 <h3 data-number="2.7.1" class="anchored" data-anchor-id="representations"><span class="header-section-number">2.7.1</span> Representations</h3>
@@ -560,25 +556,25 @@ window.Quarto = {
 </ul>
 <p><span id="eq-ch02-p0407"><span class="math display">\[
 \left\vert  \psi \right\rangle = \sum\limits_i {\left\vert  {{a_i}} \right\rangle \left\langle {{{a_i}}} \mathrel{\left \vert  {\vphantom {{{a_i}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {{{a_1}}} \mathrel{\left \vert  {\vphantom {{{a_1}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }\\ {\left\langle {{{a_2}}} \mathrel{\left \vert  {\vphantom {{{a_2}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }\\ \vdots \end{array}} \right)
-\tag{2.53}\]</span></span></p>
+\tag{2.52}\]</span></span></p>
 <ul>
 <li>The eigenvector <span class="math inline">\(\left\vert  {{a_i}} \right\rangle\)</span> of <span class="math inline">\(\hat A\)</span> has the following column representation in its own eigenbasis:</li>
 </ul>
 <p><span id="eq-ch02-p0409"><span class="math display">\[
 \lvert a_i\rangle=\begin{pmatrix}\langle a_1\vert a_i\rangle\\\vdots\\\langle a_i\vert a_i\rangle\\\vdots\\\langle a_N\vert a_i\rangle\end{pmatrix}=\begin{pmatrix}0\\\vdots\\1\\\vdots\\0\end{pmatrix}\quad\text{(1 in row }i\text{)}
-\tag{2.54}\]</span></span></p>
+\tag{2.53}\]</span></span></p>
 <ul>
 <li>An arbitrary Hermitian operator <span class="math inline">\(\hat B\)</span> has the following matrix in the <span class="math inline">\(\hat A\)</span> representation:</li>
 </ul>
 <p><span id="eq-ch02-p0411"><span class="math display">\[
 \hat B = \left( {\begin{array}{*{20}{c}} {\left\langle {{a_1}} \right\vert \hat B\left\vert  {{a_1}} \right\rangle }&amp;{\left\langle {{a_1}} \right\vert \hat B\left\vert  {{a_2}} \right\rangle }&amp; \cdots \\ {\left\langle {{a_2}} \right\vert \hat B\left\vert  {{a_1}} \right\rangle }&amp;{\left\langle {{a_2}} \right\vert \hat B\left\vert  {{a_2}} \right\rangle }&amp; \cdots \\ \vdots &amp; \vdots &amp; \ddots \end{array}} \right)
-\tag{2.55}\]</span></span></p>
+\tag{2.54}\]</span></span></p>
 <ul>
 <li>The matrix of <span class="math inline">\(\hat A\)</span> in its own representation is diagonal, with the eigenvalues of <span class="math inline">\(\hat A\)</span> on the diagonal:</li>
 </ul>
 <p><span id="eq-zeqnnum449673"><span class="math display">\[
 \hat A = \left( {\begin{array}{*{20}{c}} {\left\langle {{a_1}} \right\vert \hat A\left\vert  {{a_1}} \right\rangle }&amp;{\left\langle {{a_1}} \right\vert \hat A\left\vert  {{a_2}} \right\rangle }&amp; \cdots \\ {\left\langle {{a_2}} \right\vert \hat A\left\vert  {{a_1}} \right\rangle }&amp;{\left\langle {{a_2}} \right\vert \hat A\left\vert  {{a_2}} \right\rangle }&amp; \cdots \\ \vdots &amp; \vdots &amp; \ddots \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{a_1}}&amp;0&amp; \cdots \\ 0&amp;{{a_2}}&amp; \cdots \\ \vdots &amp; \vdots &amp; \ddots \end{array}} \right)
-\tag{2.56}\]</span></span></p>
+\tag{2.55}\]</span></span></p>
 </section>
 </section>
 <section id="exercises" class="level2" data-number="2.8">
@@ -586,16 +582,16 @@ window.Quarto = {
 <p><strong>2.1.</strong> Let {<span class="math inline">\(\left\vert  U \right\rangle ,\left\vert  D \right\rangle\)</span>} be an orthonormal basis of a two-dimensional vector space. The two basis vectors have the following matrices in this basis:</p>
 <p><span id="eq-ch02-p0416"><span class="math display">\[
 \vert U\rangle = \left( {\begin{array}{*{20}{c}} {\langle U\vert U\rangle }\\ {\langle D\vert U\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right), \qquad  \vert D\rangle = \left( {\begin{array}{*{20}{c}} {\langle U\vert D\rangle }\\ {\langle D\vert D\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0\\ 1 \end{array}} \right),
-\tag{2.57}\]</span></span></p>
+\tag{2.56}\]</span></span></p>
 <p>Three operators <span class="math inline">\(\hat A,\hat B,\hat C\)</span> in this space have the following properties:</p>
 <p><span id="eq-ch02-p0418"><span class="math display">\[
 \begin{array}{l} \hat A\vert U\rangle = \vert D\rangle , &amp; \hat A\vert D\rangle = \vert U\rangle \\ \hat B\vert U\rangle = i\vert D\rangle , &amp; \hat B\vert D\rangle = - i\vert U\rangle \\ \hat C\vert U\rangle = \vert U\rangle , &amp; \hat C\vert D\rangle = \vert D\rangle \end{array}
-\tag{2.58}\]</span></span></p>
+\tag{2.57}\]</span></span></p>
 <p>Write the matrix of each operator in this basis. Hint: column 1 contains the components of the output for <span class="math inline">\(|U\rangle\)</span>, and column 2 contains the components of the output for <span class="math inline">\(|D\rangle\)</span>.</p>
 <p><strong>2.2.</strong> Let <span class="math inline">\(\left\vert  1 \right\rangle ,\left\vert  2 \right\rangle\)</span> be an orthonormal basis of a two-dimensional space, with operator <span class="math inline">\(\hat H\)</span> given by</p>
 <p><span id="eq-ch02-p0422"><span class="math display">\[
 \hat H = \cos \theta \left\vert  1 \right\rangle \left\langle 1 \right\vert  + \sin \theta \left\vert  1 \right\rangle \left\langle 2 \right\vert  + \sin \theta \left\vert  2 \right\rangle \left\langle 1 \right\vert  - \cos \theta \left\vert  2 \right\rangle \left\langle 2 \right\vert
-\tag{2.59}\]</span></span></p>
+\tag{2.58}\]</span></span></p>
 <p>Find the eigenvalues and corresponding eigenstates of <span class="math inline">\(\hat H\)</span>.</p>
 <p><strong>2.3.</strong> A Hermitian operator <span class="math inline">\(\hat A\)</span> has nondegenerate eigenvalues <span class="math inline">\(\left\{ {{a_i}} \right\}\)</span> and eigenstates <span class="math inline">\(\left\{ {\left\vert  {{a_i}} \right\rangle } \right\}\)</span>. Assume that none of the eigenvalues is zero, so that the inverse exists. Find the eigenvalues and eigenstates of <span class="math inline">\({\hat A^{ - 1}}\)</span>.</p>
 <p><strong>2.4.</strong> Prove that if <span class="math inline">\(\hat A\)</span> is Hermitian, the eigenvalues of <span class="math inline">\({\hat A^2}\)</span> are nonnegative.</p>
