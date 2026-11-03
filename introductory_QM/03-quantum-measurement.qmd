@@ -1,22 +1,22 @@
 # Quantum Measurement
 
-The previous chapters introduced state vectors and operators. We now use them to predict measurement outcomes: which values can occur, how likely each value is, and what state remains after a measurement. Spin-$1/2$ provides a concrete example.
+The previous chapters introduced state vectors and operators. We now use them to predict measurement outcomes: which values can occur, how likely each value is, and what the state is after a measurement. A spin-$1/2$ system provides a concrete example.
 
 ## The measurement postulates
 
 We begin with **pure states** and **ideal projective measurements** of observables with discrete spectra. Unless stated otherwise, the eigenvalues are nondegenerate and the eigenstates form a complete orthonormal basis.
 
-- **Quantum postulate 1—observables.** An physical observable is represented by a Hermitian operator $\hat A$, whose eigenvalues give all the possible measurement outcomes of that observable.
+- **Quantum postulate 1—observables.** A physical observable is represented by a Hermitian operator $\hat A$, whose eigenvalues are the possible outcomes of measuring that observable.
 
-- **Quantum postulate 2—states.** A pure state is represented by a normalized vector $\lvert\psi\rangle$, with $\langle\psi\vert\psi\rangle=1$. This vector determines the probabilities of all measurement outcomes. Vectors $e^{i\alpha}\lvert\psi\rangle$ and $\lvert\psi\rangle$ represent the same physical state: an overall phase has no observable effect.
+- **Quantum postulate 2—states.** A pure state is represented by a normalized vector $\lvert\psi\rangle$, with $\langle\psi\vert\psi\rangle=1$. This vector determines the probabilities of all measurement outcomes. The vectors $e^{i\alpha}\lvert\psi\rangle$ and $\lvert\psi\rangle$ represent the same physical state: an overall phase has no observable effect.
 
 - **Quantum postulate 3—superposition.** Any nonzero linear combination of allowed state vectors is also an allowed state vector after normalization. In an orthonormal basis $\{\lvert j\rangle\}$, the superposition $\sum_j c_j\lvert j\rangle$ is normalized when $\sum_j\lvert c_j\rvert^2=1$.
 
 - **Quantum postulate 4—definite values.** An observable $\hat A$ has a definite value $a$ in a state if and only if that state lies in the eigenspace with eigenvalue $a$. For a nondegenerate eigenvalue, this means the state is $\lvert a\rangle$.
 
-- **Quantum postulate 5—the measurement principle.** Measuring $\hat A$ in a state $\lvert\psi\rangle$ yields $a_j$ with probability $p(a_j)=\lvert\langle a_j\vert\psi\rangle\rvert^2$. Immediately after an ideal measurement that gives $a_j$, the state becomes $\lvert a_j\rangle$. The overlap $\langle a_j\vert\psi\rangle$ is the **probability amplitude** and its square $\lvert\langle\phi\vert\psi\rangle\rvert^2$ is the probability that a projective test for the normalized state $\lvert\phi\rangle$ succeeds when the initial state is $\lvert\psi\rangle$.
+- **Quantum postulate 5—the measurement principle.** Measuring $\hat A$ in a state $\lvert\psi\rangle$ yields $a_j$ with probability $p(a_j)=\lvert\langle a_j\vert\psi\rangle\rvert^2$. Immediately after an ideal measurement that gives $a_j$, the state becomes $\lvert a_j\rangle$. The overlap $\langle a_j\vert\psi\rangle$ is the **probability amplitude**, and its squared magnitude gives the probability of obtaining $a_j$. More generally, $\lvert\langle\phi\vert\psi\rangle\rvert^2$ is the probability that a projective test for the normalized state $\lvert\phi\rangle$ succeeds when the initial state is $\lvert\psi\rangle$.
 
-To apply the measurement principle, solve $\hat A\lvert a_j\rangle=a_j\lvert a_j\rangle$ for the eigenvalues and normalized eigenstates. For an initial state $\lvert\psi\rangle$, the possible outcomes and the corresponding states are
+To apply the measurement principle, solve $\hat A\lvert a_j\rangle=a_j\lvert a_j\rangle$ for the eigenvalues and normalized eigenstates. For an initial state $\lvert\psi\rangle$, the possible outcomes, resulting states, and probabilities are
 
 $$
 \begin{array}{c|c|c}
@@ -31,27 +31,27 @@ $$ {#eq-ch03-p0440}
 
 The outcome is generally random: the state determines the probabilities, but does not specify which outcome occurs in a particular trial. If the initial state is already an eigenstate $\lvert a\rangle$, the outcome is certainly $a$ and an ideal measurement leaves the physical state unchanged. An immediate repetition therefore gives the same result, provided no intervening evolution or measurement changes the state.
 
-Measuring $\hat A$ must yield some eigenvalue of $\hat A$, so the probabilities sum to $1$:
+Measuring $\hat A$ must yield one of its eigenvalues, so the probabilities sum to $1$:
 
 $$
 \sum_j p(a_j)=\sum_j\lvert\langle a_j\vert\psi\rangle\rvert^2=1
 $$ {#eq-ch03-p0443} Equivalently, $$
 \sum_j\langle\psi\vert a_j\rangle\langle a_j\vert\psi\rangle=1
-$$ {#eq-ch03-p0445} By completeness, @eq-zeqnnum286146, this simplifies to $$
+$$ {#eq-ch03-p0445} Using the completeness relation, @eq-zeqnnum286146, this simplifies to $$
 \langle\psi\vert\psi\rangle=1
 $$ {#eq-ch03-p0447} Normalization ensures that the probabilities of all possible outcomes sum to one.
 
-For a degenerate eigenvalue $a$, an ideal projective measurement uses the projector $\hat P_a$ onto the whole eigenspace: $p(a)=\langle\psi\vert\hat P_a\vert\psi\rangle$. Conditional on this outcome, the state becomes $\hat P_a\lvert\psi\rangle/\sqrt{p(a)}$. Obtaining $a$ need not select a unique eigenvector within that eigenspace.
+For a degenerate eigenvalue $a$, an ideal projective measurement uses the projector $\hat P_a$ onto the entire eigenspace: $p(a)=\langle\psi\vert\hat P_a\vert\psi\rangle$. If this outcome is obtained, the state becomes $\hat P_a\lvert\psi\rangle/\sqrt{p(a)}$. Obtaining $a$ need not select a unique eigenvector within that eigenspace.
 
-The postulates also imply the following.
+The postulates also have the following consequences.
 
 - **State preparation.** Keeping only systems for which the measurement gives $a_j$ prepares the state $\lvert a_j\rangle$. This selection is called postselection.
 
 - **Distinguishability.** Two pure states can be distinguished with certainty in a single trial only if they are orthogonal. Orthogonal states can be included in an orthonormal measurement basis.
 
-- **Sequential measurements.** Starting in $\lvert a\rangle$, the probability of obtaining $b$ when measuring $\hat B$ is $\lvert\langle b\vert a\rangle\rvert^2$. If that outcome occurs, the state becomes $\lvert b\rangle$, so a subsequent measurement of $\hat A$ returns $a$ with probability $\lvert\langle a\vert b\rangle\rvert^2$. The joint probability of both outcomes is the product of these two probabilities. We assume ideal measurements and no evolution between them.
+- **Sequential measurements.** For a system initially in $\lvert a\rangle$, the probability of obtaining $b$ when measuring $\hat B$ is $\lvert\langle b\vert a\rangle\rvert^2$. If that outcome occurs, the state becomes $\lvert b\rangle$, so a subsequent measurement of $\hat A$ returns $a$ with probability $\lvert\langle a\vert b\rangle\rvert^2$. The joint probability of obtaining $b$ and then $a$ is the product of these two probabilities. We assume ideal measurements and no evolution between them.
 
-**Theorem 3.1.** In a normalized state $\lvert\psi\rangle$, the **expectation value** of $\hat A$ is $\langle\hat A\rangle=\langle\psi\vert\hat A\vert\psi\rangle$. This is the average of measurements on many systems prepared in the same initial state; it need not itself be a possible outcome.
+**Theorem 3.1.** In a normalized state $\lvert\psi\rangle$, the **expectation value** of $\hat A$ is $\langle\hat A\rangle=\langle\psi\vert\hat A\vert\psi\rangle$. This is the average measurement outcome for many systems prepared in the same initial state; it need not itself be a possible outcome.
 
 **Proof.**
 
@@ -67,13 +67,13 @@ $$ {#eq-zeqnnum739477} The final expression is the probability-weighted average 
 
 ## A two-state spin system
 
-A **two-state system** has a two-dimensional state space: two orthonormal basis states suffice to describe every state. The spin state of a spin-$1/2$ particle is an example. Write $\hat\sigma_n=\hat{\boldsymbol\sigma}\cdot\mathbf n$, where $\mathbf n$ is a spatial unit vector and $\hat{\boldsymbol\sigma}=2\hat{\mathbf S}/\hbar$. Thus $\hat\sigma_n$ is a dimensionless spin component; the physical component $\hat S_n=(\hbar/2)\hat\sigma_n$ has outcomes $\pm\hbar/2$.
+A **two-state system** has a two-dimensional state space: two orthonormal basis states suffice to describe every state. The spin state of a spin-$1/2$ particle is an example. Write $\hat\sigma_n=\hat{\boldsymbol\sigma}\cdot\mathbf n$, where $\mathbf n$ is a spatial unit vector and $\hat{\boldsymbol\sigma}=2\hat{\mathbf S}/\hbar$. Thus $\hat\sigma_n$ is a dimensionless spin component with outcomes $\pm 1$; the physical component $\hat S_n=(\hbar/2)\hat\sigma_n$ has outcomes $\pm\hbar/2$.
 
 - **Experiment:** measuring ${\hat \sigma _n}$ yields either $+ 1$ or $- 1$.
 
 - **Postulate:** a measurement of an observable always yields one of its eigenvalues.
 
-- **Conclusion:** ${\hat \sigma _n}$ has only two eigenvalues, $+ 1$ and $- 1$. Assuming each is nondegenerate, call their eigenstates $\left\vert  {\hat n + } \right\rangle$ and $\left\vert  {\hat n - } \right\rangle$:
+- **Conclusion:** ${\hat \sigma _n}$ has only two eigenvalues, $+ 1$ and $- 1$. Assuming each is nondegenerate, denote the corresponding eigenstates by $\left\vert  {\hat n + } \right\rangle$ and $\left\vert  {\hat n - } \right\rangle$:
 
 $$
 {\hat \sigma _n}\left\vert  {\hat n + } \right\rangle = + \left\vert  {\hat n + } \right\rangle , \qquad  \qquad  {\hat \sigma _n}\left\vert  {\hat n - } \right\rangle = - \left\vert  {\hat n - } \right\rangle
@@ -81,7 +81,7 @@ $$ {#eq-ch03-p0464}
 
 The eigenvalues differ, so $\left\langle {{\hat n + }} \mathrel{\left \vert  {\vphantom {{\hat n + } {\hat n - }}} \right. \kern-1.2pt } {{\hat n - }} \right\rangle = 0$. These normalized eigenstates form an orthonormal basis. Expressing states and operators in this basis defines the ${\hat \sigma _n}$ representation.
 
-We give the states memorable names. In the coordinates of Figure 3.1, the states for ${\sigma _z} = + 1$ and $- 1$ are $\left\vert  U \right\rangle$ and $\left\vert  D \right\rangle$ (Up and Down); those for ${\sigma _x} = + 1$ and $- 1$ are $\left\vert  R \right\rangle$ and $\left\vert  L \right\rangle$ (Right and Left). Measuring the projection along $y$, we call the states for ${\sigma _y} = + 1$ and $- 1$ $\left\vert  I \right\rangle$ and $\left\vert  O \right\rangle$ (In and Out).
+We give these states memorable names. Using the coordinate system in Figure 3.1, we label the states with ${\sigma _z} = + 1$ and $- 1$ as $\left\vert  U \right\rangle$ and $\left\vert  D \right\rangle$ (Up and Down), respectively. Similarly, the states with ${\sigma _x} = + 1$ and $- 1$ are $\left\vert  R \right\rangle$ and $\left\vert  L \right\rangle$ (Right and Left), and those with ${\sigma _y} = + 1$ and $- 1$ are $\left\vert  I \right\rangle$ and $\left\vert  O \right\rangle$ (In and Out).
 
 ![](assets/image465.png){width="200px"}
 
@@ -109,7 +109,7 @@ To explain the experiments, we must now determine the relationships between thes
 
 ### Choosing a basis
 
-We begin with eigenstates of different observables. In a spin-$1/2$ state space, at most two states can be mutually orthogonal, such as $\left\vert  U \right\rangle$ and $\left\vert  D \right\rangle$, $\left\vert  R \right\rangle$ and $\left\vert  L \right\rangle$, or $\left\vert  I \right\rangle$ and $\left\vert  O \right\rangle$. Choosing the ${\hat \sigma _z}$ representation with basis $\left\vert  U \right\rangle$ and $\left\vert  D \right\rangle$, completeness @eq-zeqnnum286146 gives
+We begin by relating the eigenstates of different observables. In a spin-$1/2$ state space, at most two states can be mutually orthogonal. Examples of orthogonal pairs are $\left\vert  U \right\rangle$ and $\left\vert  D \right\rangle$, $\left\vert  R \right\rangle$ and $\left\vert  L \right\rangle$, and $\left\vert  I \right\rangle$ and $\left\vert  O \right\rangle$. Choosing the ${\hat \sigma _z}$ representation with basis states $\left\vert  U \right\rangle$ and $\left\vert  D \right\rangle$, we obtain from the completeness relation, @eq-zeqnnum286146,
 
 $$
 \left\vert  U \right\rangle \left\langle U \right\vert  + \left\vert  D \right\rangle \left\langle D \right\vert  = \hat I
@@ -121,11 +121,11 @@ $$ {#eq-zeqnnum905994}
 
 ### States for measurements along $x$
 
-To express $\left\vert  R \right\rangle$ and $\left\vert  L \right\rangle$ in basis $\left\{ {\left\vert  U \right\rangle ,\left\vert  D \right\rangle } \right\}$, use @eq-zeqnnum905994:
+To express $\left\vert  R \right\rangle$ and $\left\vert  L \right\rangle$ in the basis $\left\{ {\left\vert  U \right\rangle ,\left\vert  D \right\rangle } \right\}$, use @eq-zeqnnum905994:
 
 $$
 \begin{array}{l} \left\vert  R \right\rangle = \left\vert  U \right\rangle \left\langle {U} \mathrel{\left \vert  {\vphantom {U R}} \right. \kern-1.2pt } {R} \right\rangle + \left\vert  D \right\rangle \left\langle {D} \mathrel{\left \vert  {\vphantom {D R}} \right. \kern-1.2pt } {R} \right\rangle \\ \left\vert  L \right\rangle = \left\vert  U \right\rangle \left\langle {U} \mathrel{\left \vert  {\vphantom {U L}} \right. \kern-1.2pt } {L} \right\rangle + \left\vert  D \right\rangle \left\langle {D} \mathrel{\left \vert  {\vphantom {D L}} \right. \kern-1.2pt } {L} \right\rangle \end{array}
-$$ {#eq-ch03-p0481} In a Stern–Gerlach (SG) experiment, a system prepared in $\lvert R\rangle$ has the definite value $\sigma_x=+1$. A measurement along $z$ then gives $+1$ or $-1$ with probability $1/2$ each. Therefore,
+$$ {#eq-ch03-p0481} In a Stern–Gerlach (SG) experiment, a system prepared in $\lvert R\rangle$ has the definite value $\sigma_x=+1$. Measuring ${\hat\sigma}_z$ in this state gives $+1$ or $-1$, each with probability $1/2$. Therefore,
 
 $$\begin{equation}
 {\left\vert  {\left\langle {U} \mathrel{\left \vert  {\vphantom {U R}} \right. \kern-1.2pt } {R} \right\rangle } \right\vert ^2} = {\left\vert  {\left\langle {D} \mathrel{\left \vert  {\vphantom {D R}} \right. \kern-1.2pt } {R} \right\rangle } \right\vert ^2} = 1/2
@@ -140,33 +140,37 @@ $$ {#eq-zeqnnum575274} Here $\delta = {\phi _D} - {\phi _U}$. Since an overall p
 
 $$
 \left\vert  R \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  U \right\rangle + {e^{i\delta }}\left\vert  D \right\rangle } \right)
-$$ {#eq-zeqnnum655177} The relative phase $e^{i\delta}$ is not fixed by the $z$-measurement probabilities. Once the laboratory axes are fixed, however, it is not a freely adjustable physical property of $\lvert R\rangle$. We may choose the phases of the basis vectors $\lvert U\rangle$ and $\lvert D\rangle$ so that this particular state has real, positive coefficients. With that basis convention, $\delta=0$, giving
+$$ {#eq-zeqnnum655177} The relative phase $e^{i\delta}$ is not fixed by the $z$-measurement probabilities. For simplicity, we choose a phase convention in which $\delta=0$, giving
 
 $$
 \left\vert  R \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  U \right\rangle + \left\vert  D \right\rangle } \right)
 $$ {#eq-zeqnnum225749} That is, $$
 \left\langle {U} \mathrel{\left \vert  {\vphantom {U R}} \right. \kern-1.2pt } {R} \right\rangle = \frac{1}{{\sqrt 2 }}, \qquad  \left\langle {D} \mathrel{\left \vert  {\vphantom {D R}} \right. \kern-1.2pt } {R} \right\rangle = \frac{1}{{\sqrt 2 }}
-$$ {#eq-ch03-p0493} Next express $\left\vert  L \right\rangle$ in the ${\hat \sigma _z}$ representation. Using $\left\langle {L} \mathrel{\left \vert  {\vphantom {L R}} \right. \kern-1.2pt } {R} \right\rangle = 0$ and $\left\langle {L} \mathrel{\left \vert  {\vphantom {L L}} \right. \kern-1.2pt } {L} \right\rangle = 1$, and setting an irrelevant overall phase to $1$, gives $$
+$$ {#eq-ch03-p0493} Next, express $\left\vert  L \right\rangle$ in the ${\hat \sigma _z}$ representation. Using $\left\langle {L} \mathrel{\left \vert  {\vphantom {L R}} \right. \kern-1.2pt } {R} \right\rangle = 0$ and $\left\langle {L} \mathrel{\left \vert  {\vphantom {L L}} \right. \kern-1.2pt } {L} \right\rangle = 1$, and setting the arbitrary overall phase factor to $1$, we obtain $$
 \left\vert  L \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  U \right\rangle - \left\vert  D \right\rangle } \right)
-$$ {#eq-zeqnnum448258} The states $\lvert R\rangle$ and $\lvert L\rangle$ give identical probabilities for a $z$ measurement, but opposite definite outcomes for an $x$ measurement. The relative sign therefore matters physically. A coherent superposition is different from a statistical mixture: a 50:50 mixture of $U$ and $D$ gives both $x$ outcomes with equal probability, whereas $\lvert R\rangle$ gives $+1$ with certainty.
+$$ {#eq-zeqnnum448258}
+
+The states $\lvert R\rangle$ and $\lvert L\rangle$ give identical probabilities for a $z$ measurement, but opposite definite outcomes for an $x$ measurement. The relative sign therefore matters physically. A coherent superposition is different from a statistical mixture: a 50:50 mixture of $U$ and $D$ gives both $x$ outcomes with equal probability, whereas $\lvert R\rangle$ gives $+1$ with certainty.
 
 Equations @eq-zeqnnum225749 and @eq-zeqnnum448258 expand $\left\vert  R \right\rangle {\rm{,}}\left\vert  L \right\rangle$ in the ${\hat \sigma _z}$ representation. Inverting them gives the expansion of $\left\vert  U \right\rangle {\rm{,}}\left\vert  D \right\rangle$ in the ${\hat \sigma _x}$ representation:
 
-$$ \left\vert  U \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle + \left\vert  L \right\rangle } \right), \qquad  \qquad  \left\vert  D \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle - \left\vert  L \right\rangle } \right) $$ Thus, when ${\sigma _z}$ is definitely $+ 1$ or $- 1$, a measurement of ${\sigma _x}$ yields $+ 1$ and $- 1$ with equal 50% probabilities, agreeing with experiment.
+$$ \left\vert  U \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle + \left\vert  L \right\rangle } \right), \qquad  \qquad  \left\vert  D \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle - \left\vert  L \right\rangle } \right) $$ Thus, when ${\sigma _z}=1$ or $- 1$, a measurement of ${\sigma _x}$ yields $+ 1$ and $- 1$ with equal 50% probabilities, agreeing with experiment.
 
 ### States for measurements along $y$
 
-Finally, express the eigenstates $\left\vert  I \right\rangle$ and $\left\vert  O \right\rangle$ of ${\hat \sigma _y}$ in the ${\hat \sigma _z}$ representation. In an eigenstate of ${\hat \sigma _z}$, measurements of ${\hat \sigma _y}$ and ${\hat \sigma _x}$ are symmetric, so, as in @eq-zeqnnum248257,
+Finally, express the eigenstates $\left\vert  I \right\rangle$ and $\left\vert  O \right\rangle$ of ${\hat \sigma _y}$ in the ${\hat \sigma _z}$ representation. By symmetry, measurements along $y$ and $x$ give the same probabilities for a system in an eigenstate of ${\hat \sigma _z}$. Thus, as in @eq-zeqnnum248257,
 
 $$
 {\left\vert  {\left\langle {U} \mathrel{\left \vert  {\vphantom {U I}} \right. \kern-1.2pt } {I} \right\rangle } \right\vert ^2} = {\left\vert  {\left\langle {D} \mathrel{\left \vert  {\vphantom {D I}} \right. \kern-1.2pt } {I} \right\rangle } \right\vert ^2} = \frac{1}{2}
 $$ {#eq-ch03-p0500} The reasoning from @eq-zeqnnum248257 to @eq-zeqnnum655177 gives $$
 \left\vert  I \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  U \right\rangle + {e^{i\delta }}\left\vert  D \right\rangle } \right)
-$$ {#eq-zeqnnum757923} have now fixed the relative phase convention of the $U,D$ basis using $\lvert R\rangle$. In this same basis, the phase in $\lvert I\rangle$ must reproduce the probabilities for measurements along both $z$ and $x$. A $y$-up state gives either $x$ outcome with probability $1/2$, so
+$$ {#eq-zeqnnum757923}
+
+To determine $\delta$, note that a measurement along $x$ in the $y$-up state gives either outcome with probability $1/2$, so
 
 $$
 {\left\vert  {\left\langle {R} \mathrel{\left \vert  {\vphantom {R I}} \right. \kern-1.2pt } {I} \right\rangle } \right\vert ^2} = {\left\vert  {\left\langle {L} \mathrel{\left \vert  {\vphantom {L I}} \right. \kern-1.2pt } {I} \right\rangle } \right\vert ^2} = \frac{1}{2}
-$$ {#eq-zeqnnum871161} @eq-zeqnnum225749 and @eq-zeqnnum757923 into @eq-zeqnnum871161 gives
+$$ {#eq-zeqnnum871161} Substituting the state expressions from @eq-zeqnnum225749 and @eq-zeqnnum757923, we obtain
 
 $$
 \left\langle {R} \mathrel{\left \vert  {\vphantom {R I}} \right. \kern-1.2pt } {I} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\langle U \right\vert  + \left\langle D \right\vert } \right) \cdot \frac{1}{{\sqrt 2 }}\left( {\left\vert  U \right\rangle + {e^{i\delta }}\left\vert  D \right\rangle } \right) = \frac{{1 + {e^{i\delta }}}}{2}
@@ -178,25 +182,27 @@ $$ {#eq-ch03-p0507}
 
 $$
 \delta=\pm\frac{\pi}{2}
-$$ {#eq-ch03-p0509} The condition $\lvert\langle L\vert I\rangle\rvert^2=1/2$ gives the same result. The phase $\delta$ still has two choices because these probabilities alone do not distinguish $+y$ from $-y$. If we use a right-handed coordinate system, the $+y$ eigenstate has $\delta=\pi/2$, and hence
+$$ {#eq-ch03-p0509} The condition $\lvert\langle L\vert I\rangle\rvert^2=1/2$ gives the same result. There are still two possible values of $\delta$ because these probabilities alone do not distinguish $+y$ from $-y$. In a right-handed coordinate system, the $+y$ state corresponds to $\delta=\pi/2$, and hence
 
 $$
 \left\vert  I \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  U \right\rangle + i\left\vert  D \right\rangle } \right)
 $$ {#eq-zeqnnum920345}
 
-Using $\left\langle {I} \mathrel{\left \vert  {\vphantom {I O}} \right. \kern-1.2pt } {O} \right\rangle = 0,\;\left\langle {O} \mathrel{\left \vert  {\vphantom {O O}} \right. \kern-1.2pt } {O} \right\rangle = 1,\;{\left\vert  {\left\langle {U} \mathrel{\left \vert  {\vphantom {U O}} \right. \kern-1.2pt } {O} \right\rangle } \right\vert ^2} = {\left\vert  {\left\langle {D} \mathrel{\left \vert  {\vphantom {D O}} \right. \kern-1.2pt } {O} \right\rangle } \right\vert ^2} = {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}$ then gives
+Using $\left\langle {I} \mathrel{\left \vert  {\vphantom {I O}} \right. \kern-1.2pt } {O} \right\rangle = 0,\;\left\langle {O} \mathrel{\left \vert  {\vphantom {O O}} \right. \kern-1.2pt } {O} \right\rangle = 1,\;{\left\vert  {\left\langle {U} \mathrel{\left \vert  {\vphantom {U O}} \right. \kern-1.2pt } {O} \right\rangle } \right\vert ^2} = {\left\vert  {\left\langle {D} \mathrel{\left \vert  {\vphantom {D O}} \right. \kern-1.2pt } {O} \right\rangle } \right\vert ^2} = {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}$ , we have
 
 $$
 \left\vert  O \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  U \right\rangle - i\left\vert  D \right\rangle } \right)
-$$ {#eq-ch03-p0513} With the $x$ eigenstates chosen to have real coefficients, the $y$ eigenstates necessarily involve $i$. Relative phases are essential for describing spin states along all three axes.
+$$ {#eq-ch03-p0513}
+
+With the $x$ eigenstates chosen to have real coefficients, the $y$ eigenstates necessarily involve $i$. This simple example illustrates why we use a complex vector space to describe quantum states.
 
 ## Matrix representations of states and observables
 
-Matrices greatly simplify calculations, but the representation must always be clear. All matrices combined in a calculation must nevertheless use the same basis. Physical predictions are independent of the chosen representation.
+Matrices greatly simplify calculations, but the basis must always be specified. All matrices combined in a calculation must use the same basis. Physical predictions are independent of the chosen representation.
 
 ### Matrices of the ${\sigma }_{x,y,z}$ eigenstates
 
-From @eq-zeqnnum935342 and @eq-zeqnnum343100, choosing $\left\vert  U \right\rangle$ and $\left\vert  D \right\rangle$ as basis vectors gives the following column for any state $\left\vert  \psi \right\rangle$:
+Using @eq-zeqnnum935342 and @eq-zeqnnum343100, we can represent any state $\left\vert  \psi \right\rangle$ by the following column vector in the basis $\left\vert  U \right\rangle$, $\left\vert  D \right\rangle$:
 
 $$
 \left\vert  \psi \right\rangle = \left\vert  U \right\rangle \left\langle {U} \mathrel{\left \vert  {\vphantom {U \psi }} \right. \kern-1.2pt } {\psi } \right\rangle + \left\vert  D \right\rangle \left\langle {D} \mathrel{\left \vert  {\vphantom {D \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {U} \mathrel{\left \vert  {\vphantom {U \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }\\ {\left\langle {D} \mathrel{\left \vert  {\vphantom {D \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \end{array}} \right)
@@ -255,11 +261,11 @@ $$
  =\begin{pmatrix}0&1\\1&0\end{pmatrix}
 $$ {#eq-ch03-p0536}
 
-**Method 2.** First expand ${\hat \sigma _x}$ in its own eigenvectors:
+**Method 2.** First express ${\hat \sigma _x}$ in terms of projectors onto its eigenstates:
 
 $$
 {\hat \sigma _x} = {\hat \sigma _x}\hat I = {\hat \sigma _x}\left( {\left\vert  R \right\rangle \left\langle R \right\vert  + \left\vert  L \right\rangle \left\langle L \right\vert } \right) = \left\vert  R \right\rangle \left\langle R \right\vert  - \left\vert  L \right\rangle \left\langle L \right\vert
-$$ {#eq-zeqnnum507960} Substitute the matrices @eq-zeqnnum109578 of $\vert R\rangle ,\vert L\rangle$ in the ${\hat \sigma _z}$ representation into @eq-zeqnnum507960: $$
+$$ {#eq-zeqnnum507960} Substituting the column vectors for $\vert R\rangle ,\vert L\rangle$ from @eq-zeqnnum109578 into @eq-zeqnnum507960 gives the matrix in the ${\hat \sigma _z}$ representation: $$
 \hat\sigma_x
  =\lvert R\rangle\langle R\rvert-\lvert L\rangle\langle L\rvert
  =\frac12\begin{pmatrix}1\\1\end{pmatrix}\begin{pmatrix}1&1\end{pmatrix}
@@ -277,19 +283,19 @@ $$ {#eq-ch03-p0546}
 
 $$
 {\hat \sigma _y}\vert U\rangle = i\vert D\rangle , \qquad  {\hat \sigma _y}\vert D\rangle = - i\vert U\rangle
-$$ {#eq-ch03-p0547} $\hat{\mathbf S}=(\hbar/2)\hat{\boldsymbol\sigma}$, the three Cartesian spin-component operators for a spin-$1/2$ particle have the following matrices in the $\hat\sigma_z$ representation:
+$$ {#eq-ch03-p0547} Using $\hat{\mathbf S}=(\hbar/2)\hat{\boldsymbol\sigma}$, we obtain the following matrices for the three Cartesian components of spin for a spin-$1/2$ particle in the $\hat\sigma_z$ representation:
 
 $$
 {\hat S_x} = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&1\\ 1&0 \end{array}} \right),\;\;\;\;\;{\hat S_y} = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&{ - i}\\ i&0 \end{array}} \right),\;\;\;\;\;{\hat S_z} = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 1&0\\ 0&{ - 1} \end{array}} \right)
 $$ {#eq-zeqnnum931030}
 
-For teaching purposes, we inferred the eigenvalues and eigenstate relationships of ${\hat \sigma _{x,y,z}}$ from experiments and then obtained the operator matrices. In applications, we usually start with the Hermitian operator representing an observable and solve its eigenvalue equation to obtain its eigenvalues and eigenvectors.
+Here we used experimental results to infer the eigenvalues of ${\hat \sigma _{x,y,z}}$ and the relationships between their eigenstates, then derived the operator matrices. In applications, we usually start with the Hermitian operator representing an observable and solve its eigenvalue equation to obtain its eigenvalues and eigenvectors.
 
 ## Common conceptual confusions
 
 ### How to express a measurement
 
-If we measure $\hat A$ in state $\left\vert  \psi \right\rangle$, does the state become $\hat A\left\vert  \psi \right\rangle$?
+If we measure $\hat A$ in the state $\left\vert  \psi \right\rangle$, does the state become $\hat A\left\vert  \psi \right\rangle$?
 
 Measurement is not simply multiplication by the observable. The vector $\hat A\lvert\psi\rangle$ is generally neither normalized nor an eigenstate of $\hat A$. For an ideal measurement, the outcome is selected according to the Born probabilities. Once an outcome $a_j$ is known, the state update is expressed by the projector $\hat P_j=\lvert a_j\rangle\langle a_j\rvert$:
 
@@ -297,15 +303,17 @@ $$
 \lvert\psi\rangle\longrightarrow
 \frac{\hat P_j\lvert\psi\rangle}{\sqrt{\langle\psi\vert\hat P_j\vert\psi\rangle}}
 \qquad\text{with probability }p(a_j)=\langle\psi\vert\hat P_j\vert\psi\rangle.
-$$The conditional state is determined once the outcome is specified; the choice of outcome is generally random. For a nondegenerate eigenvalue, the conditional state is $\lvert a_j\rangle$ up to an overall phase.
+$$
+
+The conditional state is determined once the outcome is specified; the outcome itself is generally random. For a nondegenerate eigenvalue, the conditional state is $\lvert a_j\rangle$ up to an overall phase.
 
 ### Quantum and classical dynamical quantities
 
-In a quantum model, observables are represented by operators. An externally applied field can nevertheless be treated as a prescribed classical quantity when its quantum fluctuations and the system's effect on it are negligible. For example, the spin magnetic interaction of an electron in a field $\mathbf B=B_z\mathbf e_z$ is
+In a quantum model, observables are represented by operators. An externally applied field can be treated as a prescribed classical quantity when its quantum fluctuations and the system's effect on it are negligible. For example, the interaction energy of an electron's spin magnetic moment with a field $\mathbf B=B_z\mathbf e_z$ is
 
 $$
 \hat H=-\hat{\boldsymbol\mu}\cdot\mathbf B=-\hat\mu_z B_z
-$$ {#eq-zeqnnum392782} Here ${B_z}$ is a numerical variable, whether produced by Earth's field or a current-carrying coil. The $z$ component ${\hat \mu _z}$ of the electron magnetic moment is a Hermitian operator, as is the energy $\hat H$.
+$$ {#eq-zeqnnum392782} Here ${B_z}$ is a numerical quantity, whether the field is Earth's magnetic field or is produced by a current-carrying coil. The $z$ component ${\hat \mu _z}$ of the electron's magnetic moment is a Hermitian operator, as is the energy operator $\hat H$.
 
 ### An observable versus its value
 
@@ -325,7 +333,7 @@ Several kinds of spatial vectors occur in quantum mechanics:
 
 - A vector observable consists of three component operators. For spin $1/2$, $\hat S_x$, $\hat S_y$, and $\hat S_z$ have no common eigenstate, so all three components cannot be definite simultaneously. The expectation values of a vector observable form an ordinary spatial vector, $\langle\hat{\mathbf S}\rangle=\langle\hat S_x\rangle\mathbf e_x+\langle\hat S_y\rangle\mathbf e_y+\langle\hat S_z\rangle\mathbf e_z$.
 
-- The three Cartesian position components can have simultaneous definite values. So do the three Cartesian momentum components.
+- The three Cartesian components of position can have definite values simultaneously. The same is true of the three Cartesian components of momentum.
 
 The next chapter develops the conditions for simultaneous definite values in terms of commutators.
 
@@ -427,13 +435,13 @@ $$ {#eq-zeqnnum662634}
 
 - Normalize $\left. \vert \psi \right\rangle$.
 
-- In state $\left. \vert \psi \right\rangle$, what is the probability that measuring ${\sigma }_{z}$ gives $+1$?
+- For the state $\left. \vert \psi \right\rangle$, what is the probability that measuring ${\sigma }_{z}$ gives $+1$?
 
-- In state $\left. \vert \psi \right\rangle$, what is the probability that measuring ${\sigma }_{x}$ gives $-1$?
+- For the state $\left. \vert \psi \right\rangle$, what is the probability that measuring ${\sigma }_{x}$ gives $-1$?
 
-- In state $\left. \vert \psi \right\rangle$, first measure ${\sigma }_{z}$, then ${\sigma }_{x}$. What is the probability that both results equal $+1$?
+- Starting in the state $\left. \vert \psi \right\rangle$, first measure ${\sigma }_{z}$, then ${\sigma }_{x}$. What is the probability that both results equal $+1$?
 
-- In state $\left. \vert \psi \right\rangle$, first measure $\sigma_x$, then ${\sigma }_{z}$. What is the probability that both results equal $+1$?
+- Starting in the state $\left. \vert \psi \right\rangle$, first measure $\sigma_x$, then ${\sigma }_{z}$. What is the probability that both results equal $+1$?
 
 **3.2.** In the approximation $g=2$, the electron spin magnetic moment is $\hat{\boldsymbol\mu}=-2\mu_{\mathrm B}\hat{\mathbf S}/\hbar$, where $\mu_{\mathrm B}>0$ is the Bohr magneton. Consider only its spin interaction with a uniform, prescribed magnetic field $\mathbf B=B\mathbf n$, where $B>0$ and $\mathbf n$ is a unit vector. Using $\hat H=-\hat{\boldsymbol\mu}\cdot\mathbf B$, find its energy eigenvalues, eigenstates, and level separation. **Hint:** Choose the quantization axis along the field. Ignore orbital motion and the small correction to $g=2$.
 
