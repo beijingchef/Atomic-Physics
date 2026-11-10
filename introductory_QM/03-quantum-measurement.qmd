@@ -14,7 +14,7 @@ We begin with **pure states** and **ideal projective measurements** of observabl
 
 - **Quantum postulate 4—definite values.** An observable $\hat A$ has a definite value $a$ in a state if and only if that state lies in the eigenspace with eigenvalue $a$. For a nondegenerate eigenvalue, this means the state is $\lvert a\rangle$.
 
-- **Quantum postulate 5—the measurement principle.** Measuring $\hat A$ in a state $\lvert\psi\rangle$ yields $a_j$ with probability $p(a_j)=\lvert\langle a_j\vert\psi\rangle\rvert^2$. Immediately after an ideal measurement that gives $a_j$, the state becomes $\lvert a_j\rangle$. The overlap $\langle a_j\vert\psi\rangle$ is called **probability amplitude.**
+- **Quantum postulate 5—the measurement principle.** Measuring $\hat A$ in a state $\lvert\psi\rangle$ yields $a_j$ with probability $p(a_j)=\lvert\langle a_j\vert\psi\rangle\rvert^2$. Immediately after an ideal measurement that gives $a_j$, the state becomes $\lvert a_j\rangle$. The inner product $\langle a_j\vert\psi\rangle$ is called **probability amplitude.**
 
 To apply the measurement principle, solve $\hat A\lvert a_j\rangle=a_j\lvert a_j\rangle$ for the eigenvalues and normalized eigenstates. For an initial state $\lvert\psi\rangle$, the possible outcomes and the corresponding states are
 
@@ -331,11 +331,13 @@ Several kinds of Cartesian vectors occur in quantum mechanics:
 
 - Macroscopic vector quantities, such as applied magnetic and electric fields or electromagnetic waves, may be approximated by classical vectors; ${\bf{B}}$ in @eq-zeqnnum392782 is an example.
 
-- A quantum vector observable consists of three component operators.
+- A quantum vector consists of three component operators, $\hat{\mathbf V}=\hat V_x\mathbf e_x+\hat V_y\mathbf e_y+\hat V_z\mathbf e_z$, such as spin, particle position or momentum.
 
-- For a spin, its three components $\hat S_x$, $\hat S_y$, and $\hat S_z$ are quantum observables. The expectation values of a vector observable is an ordinary spatial vector, $\langle\hat{\mathbf S}\rangle=\langle\hat S_x\rangle\mathbf e_x+\langle\hat S_y\rangle\mathbf e_y+\langle\hat S_z\rangle\mathbf e_z$.
+  For some quantum vector, the three Cartesion components can have simultaneous definite values, such as position and momentum.
 
-- The three position components can have simultaneous definite values. So do the three momentum components.
+  But the three components of spin or angular momentum cannot have simultaneous definite values.
+
+  However, the expectation values of any quantum vector is a classical vector, $\langle\hat{\mathbf V}\rangle=\langle\hat V_x\rangle\mathbf e_x+\langle\hat V_y\rangle\mathbf e_y+\langle\hat V_z\rangle\mathbf e_z$.
 
 The next chapter develops the conditions for simultaneous definite values in terms of commutators.
 

@@ -1,20 +1,20 @@
 # Commutation Relations of Observables
 
-Prepare a spin-$1/2$ particle with a definite $z$ component of spin. Measure that component again, and the same result returns. Insert a measurement along $x$, however, and the final $z$ result becomes uncertain. What makes one measurement preserve a definite value while another disrupts it?
+Imagine that you prepare a spin-$1/2$ particle with a definite $z$ component of spin. If you measure that component again straight away, you get the same answer. Now put an $x$-component measurement between the two $z$-component measurements. Suddenly, the last answer is no longer certain. Why should measuring the spin component along a different direction change what you can predict?
 
-The answer lies in the order of operator actions. This chapter introduces the **commutator**, connects it to simultaneous definite values, and shows how commuting observables label quantum states. We then follow measurement paths to see when probabilities add and when amplitudes interfere, develop changes of basis, and finally relate commutators to uncertainty.
+To understand this, we need to look at what difference will it make by changing the order in which operators act. We'll introduce a tool called the **commutator** to keep track of that difference. Then we'll ask which quantities can have definite values together. Finally, we'll learn how to change basis and see how commutators lead to the uncertainty principle.
 
 ## Commutators and common eigenstates
 
-Apply $\hat B$ first and then $\hat A$: the resulting operator is $\hat A\hat B$, because the rightmost operator acts first. Reversing the order gives $\hat B\hat A$. These two actions need not agree. The **commutator** measures their difference:
+Let's start with two operators, $\hat A$ and $\hat B$. If $\hat B$ acts first and $\hat A$ acts second, we write the result as $\hat A\hat B$. Remember to read this from right to left: the operator closest to the ket acts first. Reversing the order gives $\hat B\hat A$, which need not give the same result. The **commutator** is the difference between these two orders:
 
 $$
 \left[ {\hat A,\hat B} \right] \equiv \hat A\hat B - \hat B\hat A
 $$ {#eq-zeqnnum285812}
 
-If $[\hat A,\hat B]=0$, the operators **commute**. For observables, we call them **compatible**. If $[\hat A,\hat B]\ne0$, the observables are **incompatible**. These statements concern the operators on the whole state space; a commutator may still annihilate a particular state.
+If $[\hat A,\hat B]=0$, the order makes no difference: we say the operators **commute**. The corresponding observables are called **compatible**. If $[\hat A,\hat B]\ne0$, they are **incompatible**. Here, zero means the zero operator: it gives $\lvert\mathrm{null}\rangle$ when acting on *every* state. A nonzero commutator might still give $\lvert\mathrm{null}\rangle$ on one particular state, so checking just one state is not enough.
 
-Following the definition @eq-zeqnnum285812 we can derive the following identities. Here $c$ is a scalar, understood as $c\hat I$ when it appears alongside an operator, and $m,n$ are nonnegative integers:
+You can work out the following rules just by expanding the definition in @eq-zeqnnum285812. There's no new physics in them; they are useful shortcuts for calculations. Here $c$ is an ordinary number. When we add it to an operator or put it in a commutator, it means $c\hat I$. The exponents $m,n$ are nonnegative integers:
 
 $$
 \left[ {\hat A,\hat B} \right] = - \left[ {\hat B,\hat A} \right], \qquad  \qquad  \left[ {c\hat A,\hat B} \right] = \left[ {\hat A,c\hat B} \right] = c\left[ {\hat A,\hat B} \right]
@@ -32,31 +32,31 @@ $$
 \left[ {\hat A\hat B,\hat C} \right] = \hat A\left[ {\hat B,\hat C} \right] + \left[ {\hat A,\hat C} \right]\hat B, \qquad  \qquad  \left[ {\hat A,\hat B\hat C} \right] = \hat B\left[ {\hat A,\hat C} \right] + \left[ {\hat A,\hat B} \right]\hat C
 $$ {#eq-zeqnnum842864}
 
-The product identities in @eq-zeqnnum842864 are especially useful: they let us break a commutator of a product into simpler pieces without changing the operator order.
+The product rules in @eq-zeqnnum842864 are especially handy when an operator contains several factors. They let you tackle one factor at a time. 
 
 ### Spin: incompatible components, compatible magnitude
 
-Return to the two-state spin system. Multiplying the matrices of $\hat S_n$ in @eq-zeqnnum931030 gives
+Let's try these ideas on the two-state spin system you already know. Using the matrices of $\hat S_n$ in @eq-zeqnnum931030, multiply in both orders and subtract. You get
 
 $$
 \left[ {{{\hat S}_x},{{\hat S}_y}} \right] = i\hbar {\hat S_z},\quad \qquad  \left[ {{{\hat S}_y},{{\hat S}_z}} \right] = i\hbar {\hat S_x},\quad \qquad  \left[ {{{\hat S}_z},{{\hat S}_x}} \right] = i\hbar {\hat S_y}
 $$ {#eq-zeqnnum232011}
 
-These three equations are often abbreviated as
+We can fit all three equations into one line:
 
 $$
 \left[ {{{\hat S}_j},{{\hat S}_k}} \right] = i\hbar {\varepsilon _{jkl}}{\hat S_l}
 $$ {#eq-zeqnnum743287}
 
-Here $\varepsilon_{jkl}$ is the **Levi-Civita symbol**, and a repeated index $l$ is summed over $1,2,3$. These indices correspond to $x,y,z$. The diagram below is a mnemonic for the signs:
+The **Levi-Civita symbol**, $\varepsilon_{jkl}$, is a number that can be $+1$, $-1$, or $0$. The indices $1,2,3$ stand for $x,y,z$. In @eq-zeqnnum743287, for two different components $j$ and $k$, $l$ denotes the remaining direction; there is no sum over $l$ here. If any two indices are the same, you get $\varepsilon_{jkl} = 0$. If all three indices are different, you use the diagram below to remember whether it is $+1$ or $-1$.:
 
 ![](assets/image715.png){width="177px" fig-align="center"}
 
-The indices $j,k,l$ are drawn from 1, 2, and 3. An ordering $j,k,l$ matching the left diagram gives ${\varepsilon _{jkl}} = + 1$; one matching the right gives ${\varepsilon _{jkl}} = - 1$. If any indices coincide, ${\varepsilon _{jkl}} = 0$. For example, ${\varepsilon _{312}} = {\varepsilon _{231}} = 1,\;\;{\varepsilon _{132}} = {\varepsilon _{213}} = - 1,\;\;{\varepsilon _{133}} = 0$.
+Follow the order $1\to2\to3\to1$ around the left diagram and you get $+1$. Go the other way, as in the right diagram, and you get $-1$.  For example, ${\varepsilon _{312}} = {\varepsilon _{231}} = 1,\;\;{\varepsilon _{132}} = {\varepsilon _{213}} = - 1,\;\;{\varepsilon _{133}} = 0$.
 
-Each commutator produces the third component, with a sign fixed by the cyclic order $x\to y\to z\to x$. We will see that the same algebra holds for orbital angular momentum $\mathbf L=\mathbf r\times\mathbf p$. It is a general feature of angular momentum, rather than a peculiarity of two-state matrices.
+So the commutator of two different spin components gives the third component. We'll meet exactly the same pattern for the three components of orbital angular momentum, $\mathbf L=\mathbf r\times\mathbf p$. It turns out that this pattern belongs to angular momentum in general.
 
-Although the spin components do not commute with one another, their squared magnitude can be definite together with any one component. To see this for spin $1/2$, define
+The components of spin don't commute with each other. But what about the total squared magnitude? Can that be definite at the same time as one component? For spin $1/2$, we can answer by direct calculation. First define
 
 $$
 \hat S_x^2\equiv\hat S_x\hat S_x,\qquad
@@ -65,7 +65,7 @@ $$
 \mathbf{\hat S}^2\equiv\hat S_x^2+\hat S_y^2+\hat S_z^2
 $$ {#eq-ch04-p0638}
 
-These are the squared components and the squared magnitude of angular momentum. The matrices @eq-zeqnnum931030 of ${\hat S_{x,y,z}}$ give
+The first three operators square the individual components; adding them gives the squared magnitude. Substituting the spin-$1/2$ matrices from @eq-zeqnnum931030 gives
 
 $$
 \hat S_x^2 = \hat S_y^2 = \hat S_z^2 = \frac{{{\hbar ^2}}}{4}\left( {\begin{array}{*{20}{c}} 1&0\\ 0&1 \end{array}} \right) = \frac{{{\hbar ^2}}}{4}\hat I
@@ -75,35 +75,35 @@ $$
 {{\bf{\hat S}}^2} \equiv \frac{3}{4}{\hbar ^2}\hat I
 $$ {#eq-ch04-p0641}
 
-Each is a constant times the identity. Since the identity commutes with every operator on the same space, they commute with all spin components:
+Notice each operator is just a number times the identity. The identity leaves any state alone, so it commutes with every operator on the same space. It follows that
 
 $$
 \left[ {\hat S_n^2,{{\hat S}_{n'}}} \right] = 0, \qquad  \left[ {{{{\bf{\hat S}}}^2},{{\hat S}_n}} \right] = 0 \qquad  n,n' \in \{ x,y,z\}
 $$ {#eq-ch04-p0643}
 
-From its matrix, ${{\bf{\hat S}}^2}$ has only one eigenvalue:
+In particular, every spin state gives the same value when we measure the squared magnitude:
 
 $$
 {{\bf{S}}^2} = \frac{3}{4}{\hbar ^2}
 $$ {#eq-ch04-p0645}
 
-A classical arrow aligned with $z$ has no transverse components. Quantum spin behaves differently. In $\lvert U\rangle$, $S_z=\hbar/2$ is definite, while a measurement of either $S_x$ or $S_y$ yields $\pm\hbar/2$ with equal probability. Their means vanish, but their mean squares are $\hbar^2/4$. Thus the definite squared magnitude is $3\hbar^2/4$, even though the largest possible component along any axis is only $\hbar/2$. The transverse fluctuations explain why the classical-arrow picture falls short.
+This is a good place to pause and check our intuition. A classical arrow pointing along $z$ has no $x$ or $y$ component. Spin doesn't behave that way. In $\lvert U\rangle$, measuring $S_z$ always gives $\hbar/2$, but measuring either $S_x$ or $S_y$ gives $+\hbar/2$ or $-\hbar/2$ with equal probability. Those positive and negative results average to zero. Their *squares*, however, always equal $\hbar^2/4$. Adding the three squared components gives $3\hbar^2/4$, even though no component can exceed $\hbar/2$. So a classical arrow can help us picture directions, but it cannot capture all the properties of spin.
 
-Because $\mathbf{\hat S}^2$ is proportional to the identity in a two-dimensional space, its single eigenvalue is **doubly degenerate**. Every spin state is its eigenstate. Any orthonormal pair—$\{\lvert U\rangle,\lvert D\rangle\}$, $\{\lvert R\rangle,\lvert L\rangle\}$, or $\{\lvert I\rangle,\lvert O\rangle\}$—therefore supplies an eigenbasis for $\mathbf{\hat S}^2$. The eigenbasis of $\hat S_n$ is also the eigenbasis of $\mathbf{\hat S}^2$. This gives our first concrete example of a common eigenbasis.
+Every spin state is an eigenstate of $\mathbf{\hat S}^2$ with that same eigenvalue. Since the spin space has dimension two, we call this eigenvalue **doubly degenerate**: two independent states share it. You can choose any orthonormal pair as an eigenbasis, including $\{\lvert U\rangle,\lvert D\rangle\}$, $\{\lvert R\rangle,\lvert L\rangle\}$, or $\{\lvert I\rangle,\lvert O\rangle\}$. Each pair is also an eigenbasis of one spin component. We have found a **common eigenbasis**: a basis whose states give definite values for both observables.
 
 ## Common eigenstates of compatible observables
 
-Two observables have simultaneous definite values in a state precisely when that state is an eigenstate of both. A single common eigenstate answers a question about one preparation. A **complete common eigenbasis** answers a stronger question: can the whole state space be described using states in which both observables are definite? The next two theorems connect that question to commutation.
+What does it mean for two observables to have definite values together? It means that the prepared state is an eigenstate of both operators. Finding one such state tells us about one possible preparation. Finding a **complete common eigenbasis** tells us much more: we can build *any* state as a superposition of states in which both quantities are definite. Let's see how this connects to commuting operators.
 
 **Theorem 4.1.** Two observables with a complete common eigenbasis commute.
 
-**Proof.** Let $\left\{ {\left\vert  i \right\rangle } \right\}$ be a complete common eigenbasis of $\hat A$ and $\hat B$. For any basis vector $\left\vert  i \right\rangle$,
+**Proof.** Choose a complete common eigenbasis $\left\{ {\left\vert i \right\rangle} \right\}$. On each basis state, $\hat A$ and $\hat B$ simply multiply the ket by their respective eigenvalues:
 
 $$
 \hat A\left\vert  i \right\rangle = {a_i}\left\vert  i \right\rangle ,\quad \hat B\left\vert  i \right\rangle = {b_i}\left\vert  i \right\rangle
 $$ {#eq-ch04-p0652}
 
-Therefore,
+Now apply the operators in both orders. The eigenvalues are ordinary numbers, so multiplying them in either order gives the same answer:
 
 $$
 \hat A\hat B\left\vert  i \right\rangle = \hat A{b_i}\left\vert  i \right\rangle = {a_i}{b_i}\left\vert  i \right\rangle
@@ -113,7 +113,7 @@ $$
 \hat B\hat A\left\vert  i \right\rangle = \hat B{a_i}\left\vert  i \right\rangle = {a_i}{b_i}\left\vert  i \right\rangle
 $$ {#eq-ch04-p0655}
 
-Hence $\hat A\hat B\vert i\rangle = \hat B\hat A\vert i\rangle$. Since $\left\{ {\left\vert  i \right\rangle } \right\}$ is complete, every vector can be expanded in it. For arbitrary $\vert \psi\rangle = \sum\nolimits_i {{\psi _i}\vert i\rangle }$,
+Thus $\hat A\hat B\vert i\rangle = \hat B\hat A\vert i\rangle$ for every basis state. Why is that enough? Because the basis is complete: any state is a sum of these basis states. Write an arbitrary state as $\vert\psi\rangle=\sum_i\psi_i\vert i\rangle$ and apply the operators term by term:
 
 $$
 \hat A\hat B\lvert\psi\rangle
@@ -123,49 +123,49 @@ $$
 =\hat B\hat A\lvert\psi\rangle
 $$ {#eq-ch04-p0657}
 
-Thus $\hat A\hat B = \hat B\hat A$.
+The two orders agree on every state, so $\hat A\hat B=\hat B\hat A$. That is exactly what it means to commute.
 
-The contrapositive is useful: incompatible observables have no complete common eigenbasis. They may nevertheless share some eigenstates; noncommutation alone does not rule that out.
+We can also read the theorem the other way around: if two observables do not commute, they cannot have a complete common eigenbasis. Be careful about the word *complete*. They might still share some eigenstates; the theorem does not exclude that possibility.
 
-For spin $1/2$, $\hat S_z$ and $\hat S_x$ (equivalently, $\hat\sigma_z$ and $\hat\sigma_x$) have no common eigenstate at all. In $\lvert U\rangle$, the $z$ component is definite, but an $x$ measurement gives either outcome with equal probability. Preparing a definite $x$ component likewise leaves the $z$ component uncertain.
+For spin $1/2$, the situation is stronger: $\hat S_z$ and $\hat S_x$ (or $\hat\sigma_z$ and $\hat\sigma_x$) share no eigenstate at all. Prepare $\lvert U\rangle$ and you know the $z$ component, but an $x$ measurement still has two equally likely outcomes. Prepare a definite $x$ component and the $z$ result becomes uncertain instead.
 
-This has an operational meaning. In a common eigenstate, ideal measurements of $\hat A$ and $\hat B$ return their respective eigenvalues and leave the state unchanged, so repeating them in either order preserves both results. The spin example at the start of the chapter fails this test.
+You can give a common eigenstate a direct experimental meaning. Prepare that state, then make ideal measurements of $A$ and $B$. Each measurement returns the corresponding eigenvalue and leaves the state unchanged. You can repeat the measurements in either order and keep getting the same answers. The spin experiment at the start of the chapter does not have this property.
 
-**Theorem 4.2.** If $[\hat A,\hat B] = 0$ and $\hat A$ has nondegenerate eigenvalues, every eigenstate of $\hat A$ is also an eigenstate of $\hat B$.
+**Theorem 4.2.** If $[\hat A,\hat B] = 0$ and $\hat A$'s eigenvalues are all nondegenerate, then every eigenstate of $\hat A$ is also an eigenstate of $\hat B$.
 
-**Proof.** Let $\left\{ {\left\vert  {{a_j}} \right\rangle } \right\}$ be the orthonormal eigenstates of $\hat A$:
+**Proof.** Start with an orthonormal eigenbasis $\left\{ {\left\vert {{a_j}} \right\rangle} \right\}$ of $\hat A$. Each state satisfies
 
 $$
 \hat A\left\vert  {{a_j}} \right\rangle = {a_j}\left\vert  {{a_j}} \right\rangle
 $$ {#eq-ch04-p0664}
 
-Then
+Apply $\hat B$ to one of these states. Because the operators commute, we can move $\hat A$ past $\hat B$:
 
 $$
 \hat A\left( {\hat B\left\vert  {{a_j}} \right\rangle } \right) = \hat B\left( {\hat A\left\vert  {{a_j}} \right\rangle } \right) = \hat B{a_j}\left\vert  {{a_j}} \right\rangle = {a_j}\left( {\hat B\left\vert  {{a_j}} \right\rangle } \right)
 $$ {#eq-zeqnnum209049}
 
-Equation @eq-zeqnnum209049 says that $\hat B\lvert a_j\rangle$ remains in the eigenspace of $\hat A$ with eigenvalue $a_j$. Nondegeneracy forces it to be proportional to $\lvert a_j\rangle$,
+Read @eq-zeqnnum209049 as an eigenvalue equation: it says that $\hat B\lvert a_j\rangle$ is the eigenket of $A$ with eigenvalue, $a_j$. But $a_j$ is nondegenerate, so there is only one independent eigenstate with that value. Applying $\hat B$ can therefore only multiply $\lvert a_j\rangle$ by a number including zero:
 
 $$
 \hat B\left\vert  {{a_j}} \right\rangle = {b_j}\left\vert  {{a_j}} \right\rangle
 $$ {#eq-ch04-p0668}
 
-This is exactly the eigenvalue equation for $\hat B$, so $\lvert a_j\rangle$ is a common eigenstate. Because $\hat B$ is Hermitian, $b_j$ is real. We can write $\lvert a_j\rangle$ as $\lvert a_j,b_j\rangle$ to display both definite values:
+This is the eigenvalue equation for $\hat B$. So $\lvert a_j\rangle$ is an eigenstate of both operators, and $b_j$ is real because $\hat B$ is Hermitian. We can make both definite values visible by writing the same ket as $\lvert a_j,b_j\rangle$:
 
 $$
 \begin{array}{l} \hat A\left\vert  {{a_j},{b_j}} \right\rangle = {a_j}\left\vert  {{a_j},{b_j}} \right\rangle \\ \hat B\left\vert  {{a_j},{b_j}} \right\rangle = {b_j}\left\vert  {{a_j},{b_j}} \right\rangle \end{array}
 $$ {#eq-zeqnnum348929}
 
-**Theorem 4.2.** Two Hermitian operators commute if and only if they admit a complete common eigenbasis. Nondegeneracy made the proof simple: an eigenspace contained only one independent eigenvector. What happens when an eigenvalue labels several states? Commutation makes @eq-zeqnnum209049 still valid and keeps $\hat B$ within each eigenspace of $\hat A$, thus diagonalizing $\hat B$ within each such subspace gives a common orthonormal eigenbasis. Thus, in finite dimensions, **two Hermitian operators commute if and only if they admit a complete common eigenbasis**.
+What changes if an eigenvalue of $\hat A$ is degenerate? Now several independent states share the same value, so $\hat B$ can turn one of them into a combination of the others. Equation @eq-zeqnnum209049 still tells us that it stays within that eigenspace. We can choose an eigenbasis of $\hat B$ inside each such space; all those states remain eigenstates of $\hat A$ as well. Putting these bases together gives a complete common eigenbasis. Thus, in finite dimensions, **two Hermitian operators commute if and only if they have a complete common eigenbasis**.
 
-## Cases of common eigenstates for commuting observables
+## Using compatible observables to label states
 
-The following tables show how the eigenvalues label that basis. Read a row as a fixed value of $A$, a column as a fixed value of $B$, and each dot as one common basis state.
+Once we have a common eigenbasis, we can use its eigenvalues as labels for the basis states. But how many labels do we need? The following tables make the possibilities easier to see. Each dot is one basis state. A row fixes the value of $A$, and a column fixes the value of $B$.
 
 ### When either value identifies the state
 
-In Figure 4.1, both observables have nondegenerate eigenvalues. Each row and each column contains exactly one dot.
+Start with the simplest case, Figure 4.1. Both observables have nondegenerate eigenvalues, so each row and each column contains exactly one dot.
 
 {{< include _tables/_ch04-nondegenerate.qmd >}}
 
@@ -173,19 +173,19 @@ In Figure 4.1, both observables have nondegenerate eigenvalues. Each row and eac
 Figure 4.1. Nondegenerate common eigenstates.
 :::
 
-Either label $a_j$ or $b_j$ uniquely identifies the corresponding basis state $\lvert a_j,b_j\rangle$.
+Knowing either $a_j$ or $b_j$ is enough to pick out the basis state $\lvert a_j,b_j\rangle$. You can include both labels, but either one does the job.
 
-**Example: spin in a magnetic field.** In the spin-only model, an electron has magnetic moment $\mathbf{\hat\mu}=-2\mu_B\mathbf{\hat S}/\hbar$. Its energy in a nonzero magnetic field $B_0$ along $z$ is
+**Example: spin in a magnetic field.** Consider an electron in a nonzero magnetic field $B_0$ along $z$, keeping only its spin contribution to the energy. In this model its magnetic moment is $\mathbf{\hat\mu}=-2\mu_B\mathbf{\hat S}/\hbar$, so its energy operator is
 
 $$
 \hat H = - {\bf{\hat \mu }} \cdot {\bf{B}} = - {\hat \mu _z}{B_0} = 2\frac{{{\mu _B}}}{\hbar }{B_0}{\hat S_z}
 $$ {#eq-ch04-p0750}
 
-Clearly $\hat H$ and ${\hat S_z}$ commute. Both have nondegenerate eigenvalues, and their complete common eigenbasis is $\left\{ {\vert U\rangle ,\vert D\rangle } \right\}$.
+Here $\hat H$ is just a constant times $\hat S_z$, so the two operators commute. Both have two distinct eigenvalues, with common eigenbasis $\{\lvert U\rangle,\lvert D\rangle\}$. In this model, knowing the spin energy tells you the $z$ component of spin, and knowing the $z$ component tells you the spin energy.
 
 ### Resolving degeneracy with additional labels
 
-With degeneracy, one measurement value identifies a subspace rather than a unique state. Figure 4.2 shows the number of independent eigenstates belonging to each eigenvalue of $\hat A$.
+Degeneracy means that several independent states give the same measurement value. That value alone no longer tells us which basis state we have. Figure 4.2 shows how many independent eigenstates share each eigenvalue of $\hat A$.
 
 {{< include _tables/_ch04-degenerate.qmd >}}
 
@@ -193,9 +193,9 @@ With degeneracy, one measurement value identifies a subspace rather than a uniqu
 Figure 4.2. Degenerate eigenvalues.
 :::
 
-An eigenvalue of $\hat A$ with degeneracy $n$ has an $n$-dimensional eigenspace. Choose $n$ orthonormal states within it. If a commuting observable $\hat B$ has distinct eigenvalues on a common eigenbasis of this subspace, measuring $B$ distinguishes those states without losing the definite value of $A$.
+If $n$ independent states share an eigenvalue of $\hat A$, they span an $n$-dimensional eigenspace. Within that space, we can choose $n$ orthonormal basis states. To tell those states apart, we need more information. A commuting observable $\hat B$ can supply it: if those states are also eigenstates of $\hat B$ with distinct eigenvalues, a measurement of $B$ distinguishes them while keeping $A$ definite.
 
-In Figure 4.3, the pair $(a_j,b_l)$ identifies one dot (state), even though neither label alone always does. For example, $a_1$ labels four states; measuring $B$ distinguishes them. Conversely, $b_4$ labels three states; measuring $A$ distinguishes them.
+Look at Figure 4.3. The label $a_1$ leaves four dots to choose from, but adding a $B$ value picks out just one. Similarly, $b_4$ alone leaves three possibilities, and an $A$ value tells them apart. Each pair $(a_j,b_l)$ now identifies a single dot, even when neither label does so on its own.
 
 {{< include _tables/_ch04-resolved-degeneracy.qmd >}}
 
@@ -203,7 +203,7 @@ In Figure 4.3, the pair $(a_j,b_l)$ identifies one dot (state), even though neit
 Figure 4.3. Resolving degeneracy with a second observable.
 :::
 
-**Example: orbital angular momentum.** For orbital motion, $\mathbf{\hat L}^2$ commutes with $\hat L_z$. Their common angular eigenstates are $\lvert l,m\rangle$:
+**Example: orbital angular momentum.** We can label angular momentum states using the squared orbital angular momentum, $\mathbf{\hat L}^2$, and one component, $\hat L_z$. These operators commute. Their common eigenstates are written $\lvert l,m\rangle$, with
 
 $$
 \begin{array}{l} {{{\bf{\hat L}}}^2}\left\vert  {l,m} \right\rangle = l(l + 1){\hbar ^2}\left\vert  {l,m} \right\rangle , & & l = 0,1,2 \cdots \\ {{\hat L}_z}\left\vert  {l,m} \right\rangle = m\hbar \left\vert  {l,m} \right\rangle , & & m = - l, - l + 1, \cdots ,l & & \end{array}
@@ -215,9 +215,9 @@ $$ {#eq-ch04-p0890}
 Figure 4.4. Orbital angular-momentum quantum numbers.
 :::
 
-For fixed $l$, there are $2l+1$ allowed values of $m$. The value of $L^2$ therefore leaves the orientation label unresolved, while $L_z$ supplies that label.
+For each $l$, there are $2l+1$ allowed values of $m$. For example, $l=1$ allows $m=-1,0,1$. These three angular states have the same $L^2$ value, but different $L_z$ values. That is why we need both labels.
 
-Sometimes two labels still do not suffice. Figure 4.5 has three dots in the cell $(a_3,b_7)$: even knowing both values leaves a three-dimensional subspace. Then we need one more observable $\hat C$, commuting with both $\hat A$ and $\hat B$, to distinguish those states. Continue until each allowed combination of eigenvalues identifies a unique common basis state. Such a collection is a **complete set of commuting observables**.
+Sometimes even two labels are not enough. In Figure 4.5, the cell $(a_3,b_7)$ contains three dots. Knowing both $A$ and $B$ still leaves three independent states to distinguish. We need another observable $\hat C$ that commutes with both and supplies the missing information. We keep adding compatible observables until each allowed set of eigenvalues picks out one common basis state. We then have a **complete set of commuting observables**, whose common eigenvectors form a complete common eigenbasis.
 
 {{< include _tables/_ch04-residual-degeneracy.qmd >}}
 
@@ -225,7 +225,7 @@ Sometimes two labels still do not suffice. Figure 4.5 has three dots in the cell
 Figure 4.5. Residual degeneracy: two commuting observables need not form a complete set.
 :::
 
-Degeneracy does not prevent a Hermitian operator from having a complete orthonormal eigenbasis; it prevents its eigenvalue alone from uniquely labeling the basis vectors. Additional commuting observables supply the missing labels. For a complete set $\{\hat A,\hat B,\hat C,\ldots\}$, the common eigenstates $\lvert a_j,b_l,c_u,\ldots\rangle$ satisfy orthonormality and completeness:
+So degeneracy is a problem of labels: we can still choose a complete orthonormal eigenbasis, but one eigenvalue may name several basis states. Additional commuting observables let us tell them apart. Once the labels are complete, write the states as $\lvert a_j,b_l,c_u,\ldots\rangle$. The next two equations say that different basis states are orthogonal and that, together, the basis states span the space:
 
 $$
 \left\langle {{{a_i},{b_l},{c_u}{\rm{,}} \cdots }} \mathrel{\left \vert  {\vphantom {{{a_i},{b_l},{c_u}{\rm{,}} \cdots } {{a_j},{b_m},{c_v}, \cdots }}} \right. \kern-1.2pt } {{{a_j},{b_m},{c_v}, \cdots }} \right\rangle = {\delta _{ij}}{\delta _{lm}}{\delta _{uv}} \cdots
@@ -235,13 +235,15 @@ $$
 \sum\limits_i {\sum\limits_l {\sum\limits_u {\sum\limits_ \cdots {\left\vert  {{a_i},{b_l},{c_u}{\rm{,}} \cdots } \right\rangle \left\langle {{a_i},{b_l},{c_u}{\rm{,}} \cdots } \right\vert } } } } = \hat I
 $$ {#eq-ch04-p1093}
 
-**Example: hydrogen bound states.** Consider the bound-state subspace of hydrogen. The energy, $\mathbf{\hat L}^2$, $\hat L_z$ and $\hat s_z$ commute. Their common eigenstates are $\lvert n,l,m_l, m_s\rangle$: $n$ sets the energy, $l$ sets the squared orbital angular momentum, $m_l$ sets its $z$ component and $m_s$ sets the $z$ component of the electron spin. An energy value alone generally leaves several states possible; all four labels together identify one bound eigenstate. Superpositions of these states describe any state within the bound-state subspace. (A complete description of arbitrary states also requires the continuum of unbound states.)
+**Example: hydrogen bound states.** In the basic hydrogen model, before including interactions such as spin–orbit coupling, the energy, $\mathbf{\hat L}^2$, $\hat L_z$, and $\hat s_z$ commute. We label their common bound eigenstates $\lvert n,l,m_l,m_s\rangle$. Each label answers a different question: $n$ tells us the energy, $l$ tells us the squared orbital angular momentum, $m_l$ tells us its $z$ component, and $m_s$ tells us the $z$ component of the electron spin.
+
+An energy value alone usually leaves several possibilities. All four labels together pick out one bound eigenstate, and superpositions of these eigenstates describe any state in the bound-state subspace. To describe unbound states too, we would also need the continuum of states in which the electron is not bound to the atom.
 
 ### Independent degrees of freedom
 
-There is another way of observables commute: they act on different factors of a tensor-product state space. Examples include a orbital observable and a spin observable of one electron, or the spin observables of different electrons. In each case, the observables commute because they are belong to different state spaces.
+Observables can also commute for a simple reason: they act on different parts of a system. One might describe an electron's orbital motion and the other its spin. Or one might act on the spin of one electron and the other on the spin of a second electron. We describe these separate degrees of freedom using a **tensor-product state space**.
 
-Every eigenvalue of one can then be paired with every eigenvalue of the other, as the full grid in Figure 4.6 shows.
+Each eigenvalue of the first observable can be paired with every eigenvalue of the second. That is why Figure 4.6 has a dot at every position in the grid.
 
 {{< include _tables/_ch04-independent-spaces.qmd >}}
 
@@ -249,51 +251,52 @@ Every eigenvalue of one can then be paired with every eigenvalue of the other, a
 Figure 4.6. Observables on independent vector spaces.
 :::
 
-On the combined space, the operators are $\hat A\otimes\hat I_B$ and $\hat I_A\otimes\hat B$, where $\hat I_A$ and $\hat I_B$ are the identity operator in the state space of $\hat A$ and $\hat B$, respectively. Their product eigenstates are $\lvert a_j\rangle\otimes\lvert b_l\rangle$, abbreviated $\lvert a_j\rangle\lvert b_l\rangle$ or $\lvert a_j,b_l\rangle$. The dimension of the combined space is the product of the two dimensions.
+On the combined space, we write the operators as $\hat A\otimes\hat I_B$ and $\hat I_A\otimes\hat B$. The identity factors say "leave the other part alone." Here $\hat I_A$ and $\hat I_B$ are the identities on the first and second spaces. The product eigenstates are $\lvert a_j\rangle\otimes\lvert b_l\rangle$, often shortened to $\lvert a_j\rangle\lvert b_l\rangle$ or $\lvert a_j,b_l\rangle$. If the first space has dimension two and the second has dimension three, the combined space has dimension six. In general, the dimensions multiply.
 
-Suppressing the identity factors, we can see the independent actions directly:
+Leaving out the identity factors for readability, we can see that each operator acts only on its own ket:
 
 $$
 \hat A\hat B\left\vert  {{a_1}} \right\rangle \left\vert  {{b_1}} \right\rangle = \left( {\hat A\left\vert  {{a_1}} \right\rangle } \right)\left( {\hat B\left\vert  {{b_1}} \right\rangle } \right) = {a_1}{b_1}\left\vert  {{a_1}} \right\rangle \left\vert  {{b_1}} \right\rangle
 $$ {#eq-ch04-p1198}
 
+
 ## Measurement paths and interference
 
-We have seen how an incompatible measurement can change later outcomes. Now consider a subtler question: what if an intermediate device offers several paths, and we allow them all to reach the final apparatus? The answer depends on whether the paths leave distinguishable records.
+Let's return to the measurement experiment. Suppose an intermediate device separates the particles into several paths, and we leave all those paths open to the final apparatus. Is that the same as removing the intermediate device? It depends on whether anything keeps a record of which path was taken.
 
-For a selected sequence of ideal measurement outcomes, conditional probabilities multiply. For coherent alternatives that reach the same final outcome without a path record, probability **amplitudes** add before we take the squared magnitude. The spin experiments let us compare these two situations explicitly.
+There are two rules to keep track of. For a selected sequence of ideal measurement outcomes, we multiply conditional probabilities. For coherent paths that lead to the same final outcome and leave no distinguishable record, we add **amplitudes** first and then square the magnitude. Let's work through both cases.
 
 ### A selected intermediate outcome
 
 $$
-\boxed{\hat A}\xrightarrow{\lvert a\prime\rangle}\boxed{\hat B}\xrightarrow{\lvert b\prime\rangle}\boxed{\hat A}\xrightarrow{\lvert a\prime\prime\rangle}
+\boxed{\hat A}\xrightarrow{\lvert a'\rangle}\boxed{\hat B}\xrightarrow{\lvert b'\rangle}\boxed{\hat A}\xrightarrow{\lvert a''\rangle}
 $$ {#eq-measurement-paths-1203}
 
 Figure 4.7. A selected sequence of measurement outcomes; other channels are blocked.
 
-Let $\hat A$ and $\hat B$ be incompatible observables with complete, nondegenerate eigenbases. The first measurement prepares $\lvert a'\rangle$. Selecting the intermediate outcome $b'$ then has probability $\lvert\langle b'\vert a'\rangle\rvert^2$ and prepares $\lvert b'\rangle$. The final outcome $a''$ has conditional probability $\lvert\langle a''\vert b'\rangle\rvert^2$. Given the initial preparation, the probability of this selected sequence is therefore
+In Figure 4.7, only one intermediate channel is allowed through. Let $\hat A$ and $\hat B$ be incompatible observables with complete, nondegenerate eigenbases. The first measurement prepares $\lvert a'\rangle$. The chance of then getting $b'$ is $\lvert\langle b'\vert a'\rangle\rvert^2$. If we get that result, the state becomes $\lvert b'\rangle$, so the chance of the final result $a''$ is $\lvert\langle a''\vert b'\rangle\rvert^2$. To find the probability of getting *both* selected results, given the initial preparation, multiply these two probabilities:
 
 $$
 {\left\vert  {\left\langle {{b'}} \mathrel{\left \vert  {\vphantom {{b'} {a'}}} \right. \kern-1.2pt } {{a'}} \right\rangle } \right\vert ^2} \times {\left\vert  {\left\langle {{a''}} \mathrel{\left \vert  {\vphantom {{a''} {b'}}} \right. \kern-1.2pt } {{b'}} \right\rangle } \right\vert ^2}
 $$ {#eq-zeqnnum197115}
 
 $$
-\boxed{\hat A}\xrightarrow{\lvert a\prime\rangle}\boxed{\hat B}\xrightarrow{\text{all channels open}}\boxed{\hat A}\xrightarrow{\lvert a\prime\prime\rangle}
+\boxed{\hat A}\xrightarrow{\lvert a'\rangle}\boxed{\hat B}\xrightarrow{\text{all channels open}}\boxed{\hat A}\xrightarrow{\lvert a''\rangle}
 $$ {#eq-measurement-paths-1205}
 
 Figure 4.8. All intermediate channels are open.
 
 ### Open channels: recorded or coherently recombined?
 
-Figure 4.8 leaves all intermediate channels open, but that alone does not specify the final probability. First suppose $\hat B$ is actually measured, or a distinguishable record of its outcome is retained by a detector or the environment. Even if we ignore that record, the alternatives form a statistical mixture. The final probability is the sum of the probabilities for the separate sequences:
+Now open all the intermediate channels, as in Figure 4.8. First suppose a detector actually measures $B$, or the environment keeps a record that distinguishes its possible outcomes. Ignoring the record does not undo the measurement. The particles form a **statistical mixture** of the intermediate outcomes, so we add the probabilities of the separate sequences:
 
 $$
 \sum\limits_{b'} {{{\left\vert  {\left\langle {{b'}} \mathrel{\left \vert  {\vphantom {{b'} {a'}}} \right. \kern-1.2pt } {{a'}} \right\rangle } \right\vert }^2}{{\left\vert  {\left\langle {{a''}} \mathrel{\left \vert  {\vphantom {{a''} {b'}}} \right. \kern-1.2pt } {{b'}} \right\rangle } \right\vert }^2}} = \sum\limits_{b'} {\left\langle {{a'}} \mathrel{\left \vert  {\vphantom {{a'} {b'}}} \right. \kern-1.2pt } {{b'}} \right\rangle \left\langle {{b'}} \mathrel{\left \vert  {\vphantom {{b'} {a'}}} \right. \kern-1.2pt } {{a'}} \right\rangle \left\langle {{a''}} \mathrel{\left \vert  {\vphantom {{a''} {b'}}} \right. \kern-1.2pt } {{b'}} \right\rangle \left\langle {{b'}} \mathrel{\left \vert  {\vphantom {{b'} {a''}}} \right. \kern-1.2pt } {{a''}} \right\rangle }
 $$ {#eq-zeqnnum885144}
 
-Now consider a different arrangement: the intermediate device separates the $B$ channels, then recombines them coherently, preserving their relative phases and leaving no distinguishable path record. In the ideal arrangement considered here, separation and recombination introduce no net relative phase or other change of state.
+Next, imagine separating the $B$ channels and bringing them back together **coherently**. This means keeping their relative phases well defined and leaving no record that distinguishes the paths. For the ideal arrangement here, we also assume that splitting and recombining the paths produces no net relative phase shift or other change of state.
 
-For a single path, the amplitude is the product of its step amplitudes. For indistinguishable alternatives, we sum these products and then square the magnitude. Complex phases survive that sum and allow interference.
+For each path, multiply the amplitudes for its successive steps. Then add the amplitudes of the coherent alternatives and take the squared magnitude of the total. Doing the addition first preserves the relative phases, which can make the contributions reinforce or cancel each other.
 
 The total amplitude for Figure 4.7 is $\left\langle {{b'}} \mathrel{\left \vert  {\vphantom {{b'} {a'}}} \right. \kern-1.2pt } {{a'}} \right\rangle \left\langle {{a''}} \mathrel{\left \vert  {\vphantom {{a''} {b'}}} \right. \kern-1.2pt } {{b'}} \right\rangle$, so its probability is
 
@@ -301,17 +304,17 @@ $$
 {\left\vert  {\left\langle {{b'}} \mathrel{\left \vert  {\vphantom {{b'} {a'}}} \right. \kern-1.2pt } {{a'}} \right\rangle \left\langle {{a''}} \mathrel{\left \vert  {\vphantom {{a''} {b'}}} \right. \kern-1.2pt } {{b'}} \right\rangle } \right\vert ^2} = {\left\vert  {\left\langle {{b'}} \mathrel{\left \vert  {\vphantom {{b'} {a'}}} \right. \kern-1.2pt } {{a'}} \right\rangle } \right\vert ^2} \times {\left\vert  {\left\langle {{a''}} \mathrel{\left \vert  {\vphantom {{a''} {b'}}} \right. \kern-1.2pt } {{b'}} \right\rangle } \right\vert ^2}
 $$ {#eq-ch04-p1209}
 
-For one selected path, this reproduces @eq-zeqnnum197115. For the coherently recombined arrangement in Figure 4.8, we instead sum over the intermediate paths. Completeness of the $B$ basis, $\sum_{b'}\lvert b'\rangle\langle b'\rvert=\hat I$, gives
+For one selected path, we recover @eq-zeqnnum197115. But with the paths coherently recombined in Figure 4.8, we must sum their amplitudes. The $B$ basis is complete, meaning $\sum_{b'}\lvert b'\rangle\langle b'\rvert=\hat I$. This lets the whole sum collapse to a single inner product:
 
 $$
 \sum\limits_{b'} {\left\langle {{b'}} \mathrel{\left \vert  {\vphantom {{b'} {a'}}} \right. \kern-1.2pt } {{a'}} \right\rangle \left\langle {{a''}} \mathrel{\left \vert  {\vphantom {{a''} {b'}}} \right. \kern-1.2pt } {{b'}} \right\rangle } = \sum\limits_{b'} {\left\langle {{a''}} \mathrel{\left \vert  {\vphantom {{a''} {b'}}} \right. \kern-1.2pt } {{b'}} \right\rangle \left\langle {{b'}} \mathrel{\left \vert  {\vphantom {{b'} {a'}}} \right. \kern-1.2pt } {{a'}} \right\rangle } = \left\langle {{a''}} \mathrel{\left \vert  {\vphantom {{a''} {a'}}} \right. \kern-1.2pt } {{a'}} \right\rangle
 $$ {#eq-ch04-p1211}
 
-The probability is therefore $\lvert\langle a''\vert a'\rangle\rvert^2$, just as if the intermediate apparatus were absent. This result depends on coherent recombination; an unread intermediate measurement gives the probability sum in @eq-zeqnnum885144 instead.
+Squaring the magnitude gives $\lvert\langle a''\vert a'\rangle\rvert^2$, the same probability we would get with no intermediate apparatus. The assumptions about recombination matter here. If the device measures $B$ and we simply ignore the result, we must use the probability sum in @eq-zeqnnum885144.
 
 ### Spin paths that cancel
 
-Interpret the final experiment in Figure 1.2 as this ideal coherent arrangement. A particle prepared in $\lvert U\rangle$ travels through the $R$ and $L$ channels of a $\hat\sigma_x$ device, which are recombined before the final $\hat\sigma_z$ measurement. No distinguishable path record remains. The probability of returning to $\lvert U\rangle$ is
+Let's put numbers into this using spin. Interpret the final experiment in Figure 1.2 as the ideal coherent arrangement just described. Start with $\lvert U\rangle$, split it into the $R$ and $L$ channels of a $\hat\sigma_x$ device, and recombine those channels before measuring $\hat\sigma_z$. No path record remains. The probability of getting $\hat U$ again is
 
 $$
 {\left\vert  {\left\langle {U} \mathrel{\left \vert  {\vphantom {U U}} \right. \kern-1.2pt } {U} \right\rangle } \right\vert ^2} = 1
@@ -323,66 +326,59 @@ $$
 {\left\vert  {\left\langle {D} \mathrel{\left \vert  {\vphantom {D U}} \right. \kern-1.2pt } {U} \right\rangle } \right\vert ^2} = 0
 $$ {#eq-ch04-p1216}
 
-These results also follow by evaluating each path amplitude. For example, the probability of final state $\left\vert  D \right\rangle$ is
+How can the $D$ probability be zero when either path on its own could lead to $D$? Calculate the two path amplitudes explicitly:
 
 $$
 {\left\vert  {\left\langle {R} \mathrel{\left \vert  {\vphantom {R U}} \right. \kern-1.2pt } {U} \right\rangle \left\langle {D} \mathrel{\left \vert  {\vphantom {D R}} \right. \kern-1.2pt } {R} \right\rangle + \left\langle {L} \mathrel{\left \vert  {\vphantom {L U}} \right. \kern-1.2pt } {U} \right\rangle \left\langle {D} \mathrel{\left \vert  {\vphantom {D L}} \right. \kern-1.2pt } {L} \right\rangle } \right\vert ^2} = {\left\vert  {\frac{1}{{\sqrt 2 }}\frac{1}{{\sqrt 2 }} + \left( { - \frac{1}{{\sqrt 2 }}} \right)\frac{1}{{\sqrt 2 }}} \right\vert ^2} = 0
 $$ {#eq-ch04-p1218}
 
-Each path contributes a nonzero amplitude to $\lvert D\rangle$, but the two contributions have opposite signs. Their sum vanishes: **destructive interference** removes the $D$ outcome. If the intermediate $x$ outcome were recorded instead, each path would contribute a probability of $1/4$, so the final probabilities would be $P(D)=P(U)=1/2$. The relative sign matters only when the amplitudes can interfere.
+The two contributions are $+1/2$ and $-1/2$. Each is nonzero, but their sum is zero. This is **destructive interference**: the $D$ outcome disappears because its amplitudes cancel. If we recorded the intermediate $x$ result, we would instead square each contribution first. Each path would contribute a probability of $1/4$, giving $P(D)=1/2$ and likewise $P(U)=1/2$. Adding first or squaring first makes a measurable difference.
 
-In classical optics, intensity at a screen point is proportional to the squared magnitude of the sum of electric fields arriving by different paths. Their relative phases produce constructive or destructive interference. The analogous relation between quantum probabilities and amplitudes motivates the description of quantum behavior as **wave behavior**.
+You have seen a similar idea in optics. When light reaches a point on a screen by two paths, we add the electric fields and then square the magnitude to find the intensity. Depending on their relative phase, the fields reinforce or cancel each other. Quantum amplitudes combine in the same mathematical way. This is one reason we speak of **wave behavior** in quantum mechanics.
 
-The deciding question is whether a distinguishable path record remains, rather than whether anyone reads it. A detector or the environment can retain such a record and suppress interference through **decoherence**. Conversely, a microscopic particle can also lose coherence, and suitably isolated larger systems can display interference. Throughout, the same quantum rules apply: add probabilities for alternatives with distinguishable records, and add amplitudes for coherent alternatives.
+When deciding which rule to use, ask whether a distinguishable path record remains. A detector or the environment can keep that record even if nobody reads it. Losing interference this way is called **decoherence**. Small particles can lose coherence, and larger systems can show interference if they are suitably isolated. The rule is the same in each case: add probabilities for alternatives with distinguishable records; add amplitudes for coherent alternatives.
+
 
 ## Changing representations
 
-The path amplitudes above are overlaps between two bases. Those same overlaps tell us how to rewrite a state in another representation. Chapter 3 used the $\hat\sigma_z$ eigenbasis $\{\lvert U\rangle,\lvert D\rangle\}$; we could equally use the $\hat\sigma_x$ eigenbasis $\{\lvert R\rangle,\lvert L\rangle\}$. The physical state stays the same, while its components in the chosen basis change—much as a spatial vector has different components along rotated Cartesian axes.
+In Chapter 3 we expressed every object using the $\hat\sigma_z$ eigenbasis $\{\lvert U\rangle,\lvert D\rangle\}$. We could instead use the $\hat\sigma_x$ eigenbasis $\{\lvert R\rangle,\lvert L\rangle\}$. Think of describing a spatial vector using a new set of coordinate axes. Its components change, but the vector itself does not. A change of **representation** works the same way for a quantum state.
 
 ### Transformation rules
 
-Let $\{\lvert a_i\rangle\}$ and $\{\lvert b_i\rangle\}$ be two complete orthonormal bases of the same space. They may be eigenbases of incompatible observables, but the transformation rules do not require incompatibility. Fix an ordering for each basis and define an operator that maps corresponding basis vectors:
-
-$$
-\hat U\left\vert  {{a_j}} \right\rangle = \left\vert  {{b_j}} \right\rangle
-$$ {#eq-ch04-p1227}
-
-The outer-product expression makes this mapping explicit: when it acts on $\lvert a_j\rangle$, orthonormality selects the term with $i=j$.
-
+Take two complete orthonormal bases, $\{\lvert a_i\rangle\}$ and $\{\lvert b_i\rangle\}$, which are the eigenvectos of two incompatible observables $\hat A$ and $\hat B$. Choose an order for each basis and pair up the first kets, the second kets, and so on. Define an operator $\hat U$ as
 $$
 \hat U = \sum\limits_i {\left\vert  {{b_i}} \right\rangle \left\langle {{a_i}} \right\vert }
 $$ {#eq-zeqnnum306910}
+For any basis vector in $\{\lvert a_i\rangle\}$, we have
+$$
+\hat U\left\vert  {{a_j}} \right\rangle = \left\vert  {{b_j}} \right\rangle
+$$ {#eq-ch04-p1227}
+Thus $\hat U$ is the transformation operator that map each old basis ket to its partner in the new basis:
 
-By @eq-zeqnnum917915,
-
+Taking the adjoint of $\hat U$ using @eq-zeqnnum917915 gives
 $$
 {\hat U^\dagger } = \sum\limits_i {\left\vert  {{a_i}} \right\rangle } \left\langle {{b_i}} \right\vert
 $$ {#eq-zeqnnum147961}
-
-Acting on $\lvert b_j\rangle$ shows that the adjoint reverses the mapping:
-
+Try acting with this on $\lvert b_j\rangle$. It takes us back to the original basis ket:
 $$
 {\hat U^\dagger }\left\vert  {{b_j}} \right\rangle = \left\vert  {{a_j}} \right\rangle
 $$ {#eq-ch04-p1233}
 
-Thus ${\hat U^\dagger }$ transforms the representation $\hat B \to \hat A$. Combining @eq-zeqnnum306910 and @eq-zeqnnum147961 gives
-
+So $\hat U^\dagger$ is the inverse transformation. Multiplying the expressions in @eq-zeqnnum306910 and @eq-zeqnnum147961 confirms that
 $$
 \hat U{\hat U^\dagger } = {\hat U^\dagger }\hat U = \hat I
 $$ {#eq-ch04-p1235}
 
-Thus $\hat U$ is **unitary**, with $\hat U^{-1}=\hat U^\dagger$. Unitary transformations preserve inner products and norms. This is exactly what a change of orthonormal basis must do: probabilities cannot depend on which basis we use to calculate them.
+An operator with this property is called **unitary**: its inverse is its adjoint, $\hat U^{-1}=\hat U^\dagger$. Unitary operators preserve inner products and lengths. That is what we need here, because choosing a different orthonormal basis must preserve the probabilities we calculate.
 
-Keep two operations distinct. The operator $\hat U$ maps basis kets to new basis kets. Re-expressing the *same* physical state in the new basis will require the inverse matrix. We derive that rule below.
+**The matrix of $\hat U$**
 
-The matrix elements of transformation operator $\hat U$ in the $\hat A$ representation are
-
+Now lets look at the matrix of $\hat U$ in each representation. In the $\hat A$ representation, $\hat U$'s matrix elements are
 $$
 \langle {{a_l}}\vert {\hat U}\vert {{a_m}}\rangle = \sum\limits_i {\left\langle {{a_l}} \right.\left\vert  {{b_i}} \right\rangle \left\langle {{a_i}} \right\vert } \left. {{a_m}} \right\rangle = \sum\limits_i {\left\langle {{a_l}} \right.\left\vert  {{b_i}} \right\rangle {\delta _{im}}} = \left\langle {{a_l}} \right.\left\vert  {{b_m}} \right\rangle
 $$ {#eq-ch04-p1238}
 
-The elements of $\hat U$ in the $\hat B$ representation are
-
+In the $\hat B$ representation, $\hat U$ becomes
 $$
 \langle b_l\vert\hat U\vert b_m\rangle
 =\sum_i\langle b_l\vert b_i\rangle\langle a_i\vert b_m\rangle
@@ -390,99 +386,98 @@ $$
 =\langle a_l\vert b_m\rangle
 $$ {#eq-ch04-p1240}
 
-With the corresponding ordering, this particular mapping operator has the same matrix in the two chosen bases. Its columns are the new basis vectors expressed in the old basis:
-
+Thus the basis transformation operator has the same matrix form in both bases：
 $$
 \hat U \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {{{a_1}}} \mathrel{\left \vert  {\vphantom {{{a_1}} {{b_1}}}} \right. \kern-1.2pt } {{{b_1}}} \right\rangle }&{\left\langle {{{a_1}}} \mathrel{\left \vert  {\vphantom {{{a_1}} {{b_2}}}} \right. \kern-1.2pt } {{{b_2}}} \right\rangle }& \cdots \\ {\left\langle {{{a_2}}} \mathrel{\left \vert  {\vphantom {{{a_2}} {{b_1}}}} \right. \kern-1.2pt } {{{b_1}}} \right\rangle }&{\left\langle {{{a_2}}} \mathrel{\left \vert  {\vphantom {{{a_2}} {{b_2}}}} \right. \kern-1.2pt } {{{b_2}}} \right\rangle }& \cdots \\ \vdots & \vdots & \ddots \end{array}} \right)
 $$ {#eq-zeqnnum504142}
 
-Likewise, the inverse ${\hat U^\dagger }$ has the same matrix in both:
+The inverse $\hat U^\dagger$ also has the same matrix in these two bases. Its elements are
 
 $$
 \hat U_{ij}^\dagger = {\left( {{{\hat U}_{ji}}} \right)^*} = \left\langle {{{b_i}}} \mathrel{\left \vert  {\vphantom {{{b_i}} {{a_j}}}} \right. \kern-1.2pt } {{{a_j}}} \right\rangle
 $$ {#eq-zeqnnum682052}
 
-To express a state vector in the new basis, insert the identity $\sum_j\lvert a_j\rangle\langle a_j\rvert$ into $\langle b_i\vert\psi\rangle$. This expresses each new component as a sum of old components weighted by basis overlaps:
+**Transformation of state representation**
+
+Now let's find relation between the components of a state $\lvert\psi\rangle$ in the two bases. The $i$th new component is $\langle b_i\vert\psi\rangle$. Insert the identity $\sum_j\lvert a_j\rangle\langle a_j\rvert$ to express it in terms of the old components:
 
 $$
 \left\langle {{{b_i}}} \mathrel{\left \vert  {\vphantom {{{b_i}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \sum\limits_j {\left\langle {{{b_i}}} \mathrel{\left \vert  {\vphantom {{{b_i}} {{a_j}}}} \right. \kern-1.2pt } {{{a_j}}} \right\rangle } \left\langle {{{a_j}}} \mathrel{\left \vert  {\vphantom {{{a_j}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \sum\limits_j {\left\langle {{a_i}} \right\vert {{\hat U}^\dagger }\left\vert  {{a_j}} \right\rangle } \left\langle {{{a_j}}} \mathrel{\left \vert  {\vphantom {{{a_j}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle
 $$ {#eq-ch04-p1246}
 
-Therefore,
+Collect all the components into columns and this becomes an ordinary matrix multiplication:
 
 $$
 \left( \begin{array}{c} \left\langle {{{b_1}}} \mathrel{\left \vert  {\vphantom {{{b_1}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \\ \left\langle {{{b_2}}} \mathrel{\left \vert  {\vphantom {{{b_2}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \\ \vdots \end{array} \right) = \left( {\begin{array}{*{20}{c}} {\left\langle {{{b_1}}} \mathrel{\left \vert  {\vphantom {{{b_1}} {{a_1}}}} \right. \kern-1.2pt } {{{a_1}}} \right\rangle }&{\left\langle {{{b_1}}} \mathrel{\left \vert  {\vphantom {{{b_1}} {{a_2}}}} \right. \kern-1.2pt } {{{a_2}}} \right\rangle }& \cdots \\ {\left\langle {{{b_2}}} \mathrel{\left \vert  {\vphantom {{{b_2}} {{a_1}}}} \right. \kern-1.2pt } {{{a_1}}} \right\rangle }&{\left\langle {{{b_2}}} \mathrel{\left \vert  {\vphantom {{{b_2}} {{a_2}}}} \right. \kern-1.2pt } {{{a_2}}} \right\rangle }& \cdots \\ \vdots & \vdots & \ddots \end{array}} \right)\left( \begin{array}{c} \left\langle {{{a_1}}} \mathrel{\left \vert  {\vphantom {{{a_1}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \\ \left\langle {{{a_2}}} \mathrel{\left \vert  {\vphantom {{{a_2}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \\ \vdots \end{array} \right)
 $$ {#eq-ch04-p1248}
-
-The left-hand column contains the components of $\lvert\psi\rangle$ in the $B$ basis. The right-hand column contains its components in the $A$ basis, multiplied by the overlap matrix with elements $\langle b_i\vert a_j\rangle$. That matrix is $\hat U^\dagger$, so
-
+So we can write
 $$
 {\left\vert  \psi \right\rangle _B} = {\hat U^\dagger }{\left\vert  \psi \right\rangle _A}
 $$ {#eq-zeqnnum557165}
+Compare @eq-zeqnnum557165 with @eq-ch04-p1233, we see that the state representation transforms in the opsite way as the basis kets.
 
-For an operator, the corresponding transformation is
+**Transformation of operator representation**
 
+As the representatin of a state changes in the new basis, an operator's matrix must change too, so that its action on a state is independent of the basis we use to describe that state. In the $B$ basis, the matrix elements of an operator $\hat X$ are:
 $$
 \begin{array}{c} \left\langle {{b_i}} \right\vert \hat X\left\vert  {{b_j}} \right\rangle = \sum\limits_{l,m} {\left\langle {{{b_i}}} \mathrel{\left \vert  {\vphantom {{{b_i}} {{a_l}}}} \right. \kern-1.2pt } {{{a_l}}} \right\rangle } \left\langle {{a_l}} \right\vert \hat X\left\vert  {{a_m}} \right\rangle \left\langle {{{a_m}}} \mathrel{\left \vert  {\vphantom {{{a_m}} {{b_j}}}} \right. \kern-1.2pt } {{{b_j}}} \right\rangle \\ = \sum\limits_{l,m} {\left\langle {{a_i}} \right\vert {{\hat U}^\dagger }\left\vert  {{a_l}} \right\rangle } \left\langle {{a_l}} \right\vert \hat X\left\vert  {{a_m}} \right\rangle \left\langle {{a_m}} \right\vert \hat U\left\vert  {{a_j}} \right\rangle \end{array}
 $$ {#eq-zeqnnum132759}
-
-The left side is the matrix of $\hat X$ in the $\hat B$ representation; the three factors on the right are the matrices of ${\hat U^\dagger },\hat X,\hat U$ in the $\hat A$ representation. Hence
+The left side is a matrix element of $\hat X$ in the $B$ basis. The three factors on the right are matrix elements of $\hat U^\dagger$, $X_A$, and $\hat U$ in the $\hat A$ basis. In matrix notation,
 
 $$
 {\hat X_B} = {\hat U^\dagger }{\hat X_A}\hat U
 $$ {#eq-zeqnnum834377}
+The rule $\hat X_B=\hat U^\dagger\hat X_A\hat U$ is called a **unitary similarity transformation**. You can remember it by following a state column from right to left: $\hat U$ converts its $\hat B$ components to $\hat A$ components, $X_A$ acts on them, and $U^\dagger$ converts the result back to $B$ components.
 
-Here the subscripts identify the bases used for the state-vector columns and operator matrices. The rule $\hat X_B=\hat U^\dagger\hat X_A\hat U$ is a **unitary similarity transformation**: the factor on the right expresses the input state vector in the $A$ basis, $\hat X_A$ acts, and the factor on the left expresses the result in the $B$ basis.
+**Example: spin in the $x$ basis.** Let's find the matrices of $\hat\sigma_x$, $\hat\sigma_y$, and $\hat\sigma_z$ in the $\hat\sigma_x$ eigenbasis. Before calculating, predict one feature of the answer: $\hat\sigma_x$ must be diagonal, because each basis state has a definite $x$ spin.
 
-**Example: view spin from the** $x$ basis. Find the matrices of $\hat\sigma_x$, $\hat\sigma_y$, and $\hat\sigma_z$ in the $\hat\sigma_x$ eigenbasis. We expect $\hat\sigma_x$ to become diagonal, because the basis states have definite $x$ spin.
-
-The ${\hat \sigma _z}$ basis is $\left\vert  U \right\rangle ,\left\vert  D \right\rangle$, and the ${\hat \sigma _x}$ basis is $\left\vert  R \right\rangle ,\left\vert  L \right\rangle$. By @eq-zeqnnum504142, the matrix of $\hat U$ for the change ${\hat \sigma _z} \to {\hat \sigma _x}$ is
+Our old basis is $\{\lvert U\rangle,\lvert D\rangle\}$, and our new basis is $\{\lvert R\rangle,\lvert L\rangle\}$. Following @eq-zeqnnum504142, we get
 
 $$
 \hat U \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {U} \mathrel{\left \vert  {\vphantom {U R}} \right. \kern-1.2pt } {R} \right\rangle }&{\left\langle {U} \mathrel{\left \vert  {\vphantom {U L}} \right. \kern-1.2pt } {L} \right\rangle }\\ {\left\langle {D} \mathrel{\left \vert  {\vphantom {D R}} \right. \kern-1.2pt } {R} \right\rangle }&{\left\langle {D} \mathrel{\left \vert  {\vphantom {D L}} \right. \kern-1.2pt } {L} \right\rangle } \end{array}} \right) = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&1\\ 1&{ - 1} \end{array}} \right)
 $$ {#eq-ch04-p1258}
-
-By @eq-zeqnnum682052, its inverse ${\hat U^\dagger }$ has matrix
-
+In this example the matrix is real and symmetric, so taking its conjugate transpose leaves it unchanged. Its inverse is therefore
 $$
 {\hat U^\dagger } \buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&1\\ 1&{ - 1} \end{array}} \right)
 $$ {#eq-ch04-p1260}
 
-Using @eq-zeqnnum834377, in the ${\hat \sigma _x}$ representation we obtain
-
+Now apply @eq-zeqnnum834377 to each Pauli matrix. In the $\hat\sigma_x$ basis, the results are
 $$
 \begin{array}{l} {{\hat \sigma }_x} \buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&1\\ 1&{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&1\\ 1&0 \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&1\\ 1&{ - 1} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 1&0\\ 0&{ - 1} \end{array}} \right)\\ {{\hat \sigma }_y} \buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&1\\ 1&{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&{ - i}\\ i&0 \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&1\\ 1&{ - 1} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0&i\\ { - i}&0 \end{array}} \right)\\ {{\hat \sigma }_z} \buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&1\\ 1&{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 1&0\\ 0&{ - 1} \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&1\\ 1&{ - 1} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0&1\\ 1&0 \end{array}} \right) \end{array}
 $$ {#eq-ch04-p1262}
 
-**Theorem 4.3.** An observable's matrix has the same trace—the sum of diagonal elements—in every representation. It equals the sum of all eigenvalues, counting an eigenvalue of degeneracy $n$ exactly $n$ times.
+One useful check on a basis change is the **trace**, the sum of a matrix's diagonal elements. The individual elements may change, but their sum stays the same.
+
+**Theorem 4.3.** An observable's matrix has the same trace in every basis. The trace equals the sum of its eigenvalues, counting each eigenvalue as many times as its degeneracy.
 
 $$
 \sum\limits_i {\left\langle {{b_i}} \right\vert \hat X\left\vert  {{b_i}} \right\rangle } = \sum\limits_j {\left\langle {{a_j}} \right\vert \hat X\left\vert  {{a_j}} \right\rangle }
 $$ {#eq-ch04-p1264}
 
-**Proof.** Use @eq-zeqnnum834377 and the trace identity ${\rm{Tr}}\left( {AB} \right) = {\rm{Tr}}\left( {BA} \right)$.
+**Proof.** Use the transformation rule @eq-zeqnnum834377 and the identity ${\rm Tr}(AB)={\rm Tr}(BA)$. This identity lets us move the last factor to the front inside the trace, where $\hat U\hat U^\dagger=\hat I$:
 
 $$
 {\text{Tr}}\left( {{{\hat X}_B}} \right) = {\text{Tr}}\;\left( {{{\hat U}^\dagger }{{\hat X}_A}\hat U} \right) = {\text{Tr}}\;\left( {\hat U{{\hat U}^\dagger }{{\hat X}_A}} \right) = {\text{Tr}}\left( {{{\hat X}_A}} \right)
 $$ {#eq-ch04-p1266}
 
-The trace is therefore independent of the basis. In an observable's eigenbasis, its matrix is diagonal (@eq-zeqnnum449673), so the trace is simply the eigenvalue sum, with repeated eigenvalues counted according to their degeneracy. A basis change rearranges the matrix elements while preserving this sum.
+To see why the trace also equals the sum of eigenvalues, choose the observable's eigenbasis. The matrix is then diagonal (@eq-zeqnnum449673), with the eigenvalues on its diagonal. Add them up, including repeated elements for degenerate eigenvalues. Since the trace does not depend on the basis, you get the same sum in any representation.
 
 ### Eigenvalue equations and changes of basis
 
-Suppose the matrix of $\hat B$ is given in the $A$ basis. Solve its eigenvalue equation there. Taking the overlap with $\langle a_l\rvert$ gives
-
+We can find the basis-transformation matrix given the matrix of $\hat B$ in the $\hat A$ basis. Solve its eigenvalue equation in that basis:
 $$
 \sum_i\langle a_l\vert\hat B\vert a_i\rangle
 \langle a_i\vert b_m\rangle
 =b_m\langle a_l\vert b_m\rangle
-$$ {#eq-ch04-p1270} $m$th normalized eigenvector has components $\langle a_i\vert b_m\rangle$—exactly column $m$ of $\hat U$. Arrange an orthonormal set of these eigenvectors as columns. The resulting matrix is the $\hat U$ that transforms $\hat B_A$ to $\hat U^\dagger\hat B_A\hat U=\hat B_B$, a diagonal matrix containing the eigenvalues $b_m$. This is **diagonalization**.
+$$ {#eq-ch04-p1270}
 
-If an eigenvalue is degenerate, choose an orthonormal basis within its eigenspace; the choice is not unique.
+The $m$th normalized eigenvector has components $\langle a_i\vert b_m\rangle$. Those are exactly the elements we need for column $m$ of $\hat U$. So solve for an orthonormal set of eigenvectors and place them side by side as columns. The resulting matrix is $\hat U$. It transforms $\hat B_A$ into $\hat U^\dagger\hat B_A\hat U=\hat B_B$, whose diagonal elements are the eigenvalues $b_m$. This process is called **diagonalization**.
+
+If an eigenvalue is degenerate, you have some freedom: several choices of basis inside its eigenspace will work. Choose an orthonormal set there so that the full basis-transformation matrix remains unitary.
 
 ### Summary of changes of representation
 
-For quick reference, fix the convention $\hat U\lvert a_j\rangle=\lvert b_j\rangle$. Its matrix columns are the new basis kets in the old basis, $U_{ij}=\langle a_i\vert b_j\rangle$. Then:
+Here are the rules to keep nearby when doing calculations. We define the basis-tranformation operator as $\hat U\lvert a_j\rangle=\lvert b_j\rangle$, so column $j$ of $\hat U$ contains the new ket $\lvert b_j\rangle$ expressed in the old basis: $U_{ij}=\langle a_i\vert b_j\rangle$. With that convention:
 
 - **Reverse the basis mapping:** $\lvert a_j\rangle=\hat U^\dagger\lvert b_j\rangle$.
 
@@ -492,7 +487,7 @@ For quick reference, fix the convention $\hat U\lvert a_j\rangle=\lvert b_j\rang
 
 - **Operator matrices:** $\hat X_B=\hat U^\dagger\hat X_A\hat U$.
 
-For the mapping operator defined here, its matrices in these two specifically paired bases agree, as do those of its adjoint. This does not mean that either matrix is the same in every possible representation:
+The basis-transformation operator has the same matrices in the two bases it connects, and the same is true of its adjoint:
 
 $$
 \begin{array}{l} \langle {{a_l}}\vert {\hat U}\vert {{a_m}}\rangle = \langle {{b_l}}\vert {\hat U}\vert {{b_m}}\rangle = \langle {{a_l}}\vert {{b_m}}\rangle \\ \langle {{a_l}}\vert {{{\hat U}^\dagger }}\vert {{a_m}}\rangle = \langle {{b_l}}\vert {{\hat U}^\dagger }\vert {{b_m}}\rangle = \langle {b_l}\vert {{a_m}}\rangle \end{array}
@@ -500,101 +495,107 @@ $$ {#eq-ch04-p1279}
 
 ## \* The Heisenberg uncertainty principle
 
-Compatibility tells us when a common eigenbasis exists. Uncertainty quantifies the spread of outcomes in a particular state. A definite value has zero spread; a superposition of different eigenvalues generally does not. The commutator connects these two ideas.
+So far, we've asked whether observables can have definite values together. Now let's ask how widely the measurement results are spread when a value is not definite, especially the relation between the spreads of two observables. 
 
-For a normalized state $\lvert\psi\rangle$, all expectation values in this section refer to that same preparation. Define the **deviation operators** $\Delta\hat A=\hat A-\langle\hat A\rangle\hat I$ and $\Delta\hat B=\hat B-\langle\hat B\rangle\hat I$. They subtract the mean from each observable.
+Prepare many systems in the same state and measure the same quantity on each one. If every result is identical, the spread is zero. If the results vary, we need a number to describe that spread. 
+It is helpful to measure each result relative to its mean. We do that with the **deviation operators** $\Delta\hat A=\hat A-\langle\hat A\rangle\hat I$ and $\Delta\hat B=\hat B-\langle\hat B\rangle\hat I$. They simply subtract the mean from the observable.
 
-The **variance** is $\langle(\Delta\hat A)^2\rangle=\langle\hat A^2\rangle-\langle\hat A\rangle^2$. Its square root, $\Delta A$, is the standard deviation of the measurement outcomes. Distinguish the number $\Delta A$ from the operator $\Delta\hat A$.
+The average squared deviation is the **variance**, $\langle(\Delta\hat A)^2\rangle=\langle\hat A^2\rangle-\langle\hat A\rangle^2$. Taking its square root gives the **standard deviation**, $\Delta A$, a measure of the spread in the same units as $A$. Watch the notation: $\Delta A$ is a number describing the spread, while $\Delta\hat A$ is an operator.
 
-We will prove the **Robertson uncertainty relation**, often called the generalized Heisenberg uncertainty relation: $\Delta A\,\Delta B\ge\tfrac12\lvert\langle[\hat A,\hat B]\rangle\rvert$. The proof has three ingredients: subtract the means, apply the Schwarz inequality, and split the operator product into its symmetric and antisymmetric parts.
+We will show that these spreads obey the **Heisenberg uncertainty relation** (first derived by Robertson): $\Delta A\,\Delta B\ge\tfrac12\lvert\langle[\hat A,\hat B]\rangle\rvert$. If the right side is nonzero, both spreads cannot be arbitrarily small. The proof has several steps, but the plan is simple: Use the Schwarz inequality to relate the spreads, and separate the real and imaginary parts of an expectation value.
 
-**Proof.** In addition to the commutator, define the **anticommutator** $\{\hat X,\hat Y\}=\hat X\hat Y+\hat Y\hat X$. Any product separates into these two parts:
-
+**Proof.** Alongside the commutator, introduce the **anticommutator**, $\{\hat X,\hat Y\}=\hat X\hat Y+\hat Y\hat X$. Thus, we can write any product of two operators as a sum of a commutator and an anticommutator:
 $$
 \hat X\hat Y = \frac{1}{2}[\hat X,\hat Y] + \frac{1}{2}{\rm{\{ }}\hat X,\hat Y{\rm{\} }}
 $$ {#eq-zeqnnum676215}
 
-Let $\hat A,\hat B$ be Hermitian operators.
+Now take $\hat A$ and $\hat B$ to be Hermitian, as required for observables.
 
-Taking adjoints reverses the order of a product. For Hermitian $\hat A$ and $\hat B$, this gives $[\hat A,\hat B]^\dagger=-[\hat A,\hat B]$ and $\{\hat A,\hat B\}^\dagger=\{\hat A,\hat B\}$.
+Remember that taking an adjoint reverses the order of a product. Since $\hat A$ and $\hat B$ are Hermitian, this gives $[\hat A,\hat B]^\dagger=-[\hat A,\hat B]$ and $\{\hat A,\hat B\}^\dagger=\{\hat A,\hat B\}$. In other words, the commutator is anti-Hermitian and the anticommutator is Hermitian.
 
-Consequently,
+Their expectation values therefore have a useful property:
 
 $$
 \langle [\hat A,\hat B]\rangle \text{ is purely imaginary}, \qquad  \langle \{ \hat A,\hat B\} \rangle \text{ is real}
 $$ {#eq-zeqnnum864955}
 
-Also,
+Subtracting the means does not change the commutator, because numbers times the identity commute with everything. For the anticommutator, expanding the two products gives
 
 $$
 \langle [\Delta \hat A,\Delta \hat B]\rangle = \langle [\hat A,\hat B]\rangle , \qquad  \langle \{ \Delta \hat A,\Delta \hat B\} \rangle = \langle \{ \hat A,\hat B\} \rangle - 2\langle {\hat A}\rangle \langle {\hat B}\rangle
 $$ {#eq-zeqnnum374297}
 
-Combining these gives
+So the same distinction between imaginary and real parts holds for the deviation operators:
 
 $$
 \langle [\Delta \hat A,\Delta \hat B]\rangle = \langle [\hat A,\hat B]\rangle \;\text{ is purely imaginary}, \qquad  \langle \{ \Delta \hat A,\Delta \hat B\} \rangle \;\text{ is real}
 $$ {#eq-zeqnnum153390}
 
-Substitute $\hat X = \Delta \hat A,\;\hat Y = \Delta \hat B$ into @eq-zeqnnum676215 and take expectation values:
+Now put $\hat X=\Delta\hat A$ and $\hat Y=\Delta\hat B$ into @eq-zeqnnum676215 and take the expectation value. We have separated one possibly complex number into an imaginary part and a real part:
 
 $$
 \langle {\Delta \hat A\Delta \hat B}\rangle = \frac{1}{2}\langle {[\Delta \hat A,\Delta \hat B]}\rangle + \frac{1}{2}\langle {{\rm{\{ }}\Delta \hat A,\Delta \hat B{\rm{\} }}}\rangle
 $$ {#eq-zeqnnum473569}
 
-The Schwarz inequality states that for any states $\vert \alpha \rangle ,\;\vert \beta \rangle$,
+The next ingredient is the Schwarz inequality, which relates the lengths of two vectors to their inner product. For any kets $\vert\alpha\rangle$ and $\vert\beta\rangle$, it says
 
 $$
 \langle \alpha \vert \alpha \rangle \langle \beta \vert \beta \rangle \ge {\left\vert  {\langle \alpha \vert \beta \rangle } \right\vert ^2}
 $$ {#eq-zeqnnum750071}
 
-Apply the Schwarz inequality to $\lvert\alpha\rangle=\Delta\hat A\lvert\psi\rangle$ and $\lvert\beta\rangle=\Delta\hat B\lvert\psi\rangle$. Their squared norms are the two variances. Their overlap is $\langle\Delta\hat A\Delta\hat B\rangle$, whose real and imaginary parts come from the anticommutator and commutator respectively. Thus
+Choose $\lvert\alpha\rangle=\Delta\hat A\lvert\psi\rangle$ and $\lvert\beta\rangle=\Delta\hat B\lvert\psi\rangle$. Their squared lengths are exactly the two variances we want to relate. Their inner product is $\langle\Delta\hat A\Delta\hat B\rangle$, which we have just split into real and imaginary parts. The squared magnitude of a complex number is the sum of the squares of those two parts, so
 
 $$
 \langle {{{(\Delta \hat A)}^2}}\rangle \langle {{{(\Delta \hat B)}^2}}\rangle \ge {\left\vert  {\langle {\Delta \hat A\Delta \hat B}\rangle } \right\vert ^2} = {\left( {\frac{1}{{2i}}\langle [\hat A,\hat B]\rangle } \right)^2} + {\left( {\frac{1}{2}\langle \{ \Delta \hat A,\Delta \hat B\} \rangle } \right)^2}
 $$ {#eq-zeqnnum813888}
 
-The second term on the right of @eq-zeqnnum813888 is a real square and is nonnegative. Hence
+We are almost there. The second term on the right of @eq-zeqnnum813888 is a real number squared, so it cannot be negative. Dropping it gives a weaker inequality that is still true:
 
 $$
 \langle {{{(\Delta \hat A)}^2}}\rangle \langle {{{(\Delta \hat B)}^2}}\rangle \ge \frac{1}{4}{\left( {i\langle [\hat A,\hat B]\rangle } \right)^2}
 $$ {#eq-zeqnnum704405}
 
-Define the standard deviation $\Delta A \equiv \sqrt {\langle {{{(\Delta \hat A)}^2}}\rangle }$ and take square roots to obtain the familiar uncertainty relation:
+Finally, use $\Delta A=\sqrt{\langle(\Delta\hat A)^2\rangle}$, and similarly for $\Delta B$. Taking square roots gives
 
 $$
 \Delta A\Delta B \ge \frac{1}{2}\left\vert  {\langle [\hat A,\hat B]\rangle } \right\vert
 $$ {#eq-zeqnnum149609}
 
-The relation describes statistical spreads in identically prepared systems. Determine $\Delta A$ from repeated measurements of $A$ on one ensemble and $\Delta B$ from measurements of $B$ on another ensemble with the same preparation. It does not, by itself, specify the disturbance caused by a sequential measurement.
+What would this mean in an experiment? Prepare two groups of systems in exactly the same way. Measure $A$ on the first group and use the results to find $\Delta A$. Measure $B$ on the second group and find $\Delta B$. These spreads obey the inequality above. The relation concerns the spread inherent in a preparation; by itself, it does not tell us how much one measurement disturbs a later one.
 
-For position and momentum, $[\hat x,\hat p_x]=i\hbar\hat I$ gives $\Delta x\,\Delta p_x\ge\hbar/2$. For spin, $[\hat S_x,\hat S_y]=i\hbar\hat S_z$ gives $\Delta S_x\,\Delta S_y\ge(\hbar/2)\lvert\langle\hat S_z\rangle\rvert$. In $\lvert U\rangle$, both transverse standard deviations are $\hbar/2$, and the inequality is saturated. Notice that the spin bound depends on the state: noncommuting observables can have a zero lower bound in a state where the commutator's expectation vanishes.
+For position and momentum, $[\hat x,\hat p_x]=i\hbar\hat I$, so $\Delta x\,\Delta p_x\ge\hbar/2$. A preparation with a very narrow position spread must therefore have a larger momentum spread.
 
-Time is a parameter in this formulation, so an energy–time relation cannot be obtained simply by substituting a time operator into the result above. One precise version uses the time scale $\tau_A=\Delta A/\lvert d\langle\hat A\rangle/dt\rvert$ for the mean of an observable with no explicit time dependence to change by one standard deviation. For unitary evolution with a time-independent Hamiltonian and a nonzero rate of change, the uncertainty relation and the equation of motion give $\Delta E\,\tau_A\ge\hbar/2$. Here $\tau_A$ is a dynamical time scale; the time-evolution chapter supplies the equation of motion.
+For spin, $[\hat S_x,\hat S_y]=i\hbar\hat S_z$ gives $\Delta S_x\,\Delta S_y\ge(\hbar/2)\lvert\langle\hat S_z\rangle\rvert$. In $\lvert U\rangle$, both spreads are $\hbar/2$, so the two sides are equal: this state reaches the lower bound. Unlike the position–momentum bound, the spin bound depends on the state. If $\langle\hat S_z\rangle=0$, its right side is zero. That makes this particular inequality less informative; it does not tell us that both spin components are definite.
+
+You may also have heard of an energy–time uncertainty relation. Time plays a different role here: it is a parameter describing evolution, so we cannot simply put a time operator into the inequality we just proved. One precise version asks how quickly an observable's mean changes. For an observable with no explicit time dependence, define $\tau_A=\Delta A/\lvert d\langle\hat A\rangle/dt\rvert$. This is the time scale estimated by dividing its spread by the current rate of change of its mean.
+
+For unitary evolution with a time-independent Hamiltonian and a nonzero rate of change, the uncertainty relation and the equation of motion give $\Delta E\,\tau_A\ge\hbar/2$. A smaller energy spread therefore sets a longer minimum time scale for this change. We'll meet the equation of motion in the chapter on time evolution.
 
 ## Exercises
 
-**4.1.** Define ${\rm{\{ }}\hat A,\hat B{\rm{\} }} \equiv \hat A\hat B + \hat B\hat A$. Prove $$
-\hat A\hat B = \frac{1}{2}\left[ {\hat A,\hat B} \right] + \frac{1}{2}\left\{ {\hat A,\hat B} \right\}
-$$.
+**4.1.** The anticommutator is defined by ${\rm{\{ }}\hat A,\hat B{\rm{\} }}\equiv\hat A\hat B+\hat B\hat A$. Show that adding half the commutator and half the anticommutator gives back the original product:
 
-**4.2.** Eigenstates $\vert {a_i}\rangle ,\vert {a_j}\rangle$ of $\hat A$ have distinct eigenvalues ${a_i},{a_j}$. If $[\hat A,\hat B] = 0$, prove
+$$
+\hat A\hat B = \frac{1}{2}\left[ {\hat A,\hat B} \right] + \frac{1}{2}\left\{ {\hat A,\hat B} \right\}
+$$
+
+**4.2.** Let $\vert a_i\rangle$ and $\vert a_j\rangle$ be eigenstates of $\hat A$ with different eigenvalues $a_i$ and $a_j$. Suppose $[\hat A,\hat B]=0$. Show that
 
 $$
 \langle {{a_i}}\vert {\hat B}\vert {{a_j}}\rangle = 0
 $$ {#eq-ch04-p1309}
 
-**4.3.** Using @eq-zeqnnum842864 and @eq-zeqnnum232011, prove the first relation below for angular momentum of any spin. For the second, specialize to the spin-$1/2$ matrices in @eq-zeqnnum931030:
+**4.3.** Use @eq-zeqnnum842864 and @eq-zeqnnum232011 to prove the first relation below for any spin. To prove the second relation, use the spin-$1/2$ matrices in @eq-zeqnnum931030:
 
 $$
 \left[ {{{{\bf{\hat S}}}^2},{{\hat S}_z}} \right] = 0, \qquad  \left[ {\hat S_x^2,\hat S_y^2} \right] = 0
 $$ {#eq-ch04-p1312}
 
-**4.4.** Prove that the mean of an anti-Hermitian operator, ${\hat C^\dagger } = - \hat C$, is purely imaginary.
+**4.4.** An anti-Hermitian operator satisfies $\hat C^\dagger=-\hat C$. Show that its expectation value is purely imaginary.
 
-**4.5.** Express $\lvert R\rangle$ and $\lvert L\rangle$ as column vectors, and $\hat\sigma_x$ as a matrix, in the $\hat\sigma_y$ eigenbasis.
+**4.5.** Use the $\hat\sigma_y$ eigenbasis to write $\lvert R\rangle$ and $\lvert L\rangle$ as column vectors. Then find the matrix of $\hat\sigma_x$ in that same basis.
 
-**4.6\*.** Let $\langle\hat X\rangle$ denote the expectation value in a normalized state, and define $\Delta\hat X=\hat X-\langle\hat X\rangle\hat I$. For Hermitian $\hat A$ and $\hat B$, prove:
+**4.6\*.** In a normalized state, write the expectation value of $\hat X$ as $\langle\hat X\rangle$ and define $\Delta\hat X=\hat X-\langle\hat X\rangle\hat I$. For Hermitian operators $\hat A$ and $\hat B$, show that:
 
 - $\langle {[\hat A,\hat B]}\rangle$ is purely imaginary.
 

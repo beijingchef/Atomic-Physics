@@ -368,11 +368,11 @@ b{\hbar ^2} = {m^2}{\hbar ^2} + \frac{1}{2}\left\langle {b,m} \right\vert {\hat 
 \tag{8.24}\]</span></span></p>
 <p>By the quantum postulates, <span class="math inline">\(\langle \psi \vert \psi\rangle \ge 0\)</span>. The second and third terms on the right are both <span class="math inline">\(\ge 0\)</span>, so <span class="math inline">\(b \ge {m^2}\)</span>. Thus <span class="math inline">\(b \ge 0\)</span>, and for fixed <span class="math inline">\(b\)</span>, the allowed range of <span class="math inline">\(m\)</span> is finite. Repeatedly applying the raising operator to <span class="math inline">\(\vert {b,m = {m_0}}\rangle\)</span> using <a href="#eq-zeqnnum904731" class="quarto-xref">Equation&nbsp;<span>8.23</span></a> must therefore reach an upper limit <span class="math inline">\({m_{\max }}\)</span>, with <span class="math inline">\(m_{\max }^2 \le b &lt; {({m_{\max }} + 1)^2}\)</span>. To ensure <span class="math inline">\(b \ge {m^2}\)</span>, we require <span class="math inline">\({C_ + }\left( {b,{m_{\max }}} \right) = 0\)</span>, so that</p>
 <p><span id="eq-zeqnnum446313"><span class="math display">\[
-{\hat J_ + }\vert b,{m_{\max }}\rangle = 0
+{\hat J_ + }\vert b,{m_{\max }}\rangle = \lvert\mathrm{null}\rangle
 \tag{8.25}\]</span></span></p>
 <p>Similarly, repeated application of the lowering operator to <span class="math inline">\(\vert {b,m = {m_0}}\rangle\)</span> reaches a value <span class="math inline">\({m_{\min }}\)</span> such that, when <span class="math inline">\(m = {m_{\min }}\)</span>, <span class="math inline">\({C_ - }\left( {b,{m_{\min }}} \right) = 0\)</span></p>
 <p><span id="eq-zeqnnum736764"><span class="math display">\[
-{\hat J_ - }\vert b,{m_{\min }}\rangle = 0
+{\hat J_ - }\vert b,{m_{\min }}\rangle = \lvert\mathrm{null}\rangle
 \tag{8.26}\]</span></span></p>
 <p>.</p>
 <p>Let</p>
@@ -527,7 +527,7 @@ b = j\left( {j + 1} \right)
 \tag{8.49}\]</span></span></p>
 <p>These two equations automatically reproduce the results required by <a href="#eq-zeqnnum446313" class="quarto-xref">Equation&nbsp;<span>8.25</span></a> and <a href="#eq-zeqnnum736764" class="quarto-xref">Equation&nbsp;<span>8.26</span></a>:</p>
 <p><span id="eq-ch08-p2033"><span class="math display">\[
-{\hat J_ + }\vert {j,j}\rangle = 0, \qquad  \qquad  {\hat J_ - }\vert {j, - j}\rangle = 0
+{\hat J_ + }\vert {j,j}\rangle = \lvert\mathrm{null}\rangle, \qquad  \qquad  {\hat J_ - }\vert {j, - j}\rangle = \lvert\mathrm{null}\rangle
 \tag{8.50}\]</span></span></p>
 <p>The nonzero matrix elements of the ladder operators are therefore</p>
 <p><span id="eq-zeqnnum713322"><span class="math display">\[
@@ -543,7 +543,7 @@ b = j\left( {j + 1} \right)
 \left\langle {j,m - 1} \right\vert {{J_y}}\left\vert  {j,m} \right\rangle = - \left\langle {j,m} \right\vert {{J_y}}\left\vert  {j,m - 1} \right\rangle = \frac{{i\hbar }}{2}\sqrt {j(j + 1) - m(m - 1)}
 \tag{8.53}\]</span></span></p>
 <p>For an angular-momentum operator <span class="math inline">\(\hat A\)</span> with fixed <span class="math inline">\(j\)</span>, we order the matrix elements by decreasing <span class="math inline">\(m\)</span>, so that the upper-left element is <span class="math inline">\(\langle {j,j}\vert {\hat A}\vert {j,j}\rangle\)</span>.</p>
-<p>Example 1: <span class="math inline">\(j = {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}\)</span>. The matrices <span class="math inline">\({\hat S_{x,y,z}}\)</span> introduced earlier use this convention; see <a href="03-quantum-measurement.html#eq-zeqnnum931030" class="quarto-xref">Equation&nbsp;<span>3.42</span></a>.</p>
+<p>Example 1: <span class="math inline">\(j = {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}\)</span>. The matrices <span class="math inline">\({\hat S_{x,y,z}}\)</span> introduced earlier use this convention; see <a href="03-quantum-measurement.html#eq-zeqnnum931030" class="quarto-xref">Equation&nbsp;<span>3.43</span></a>.</p>
 <p>Example 2: <span class="math inline">\(j = 1\)</span>.</p>
 <p><span id="eq-ch08-p2042"><span class="math display">\[
 \frac{{{{\hat J}^2}}}{{{\hbar ^2}}} = 2\left[ {\begin{array}{*{20}{c}} 1&amp;0&amp;0\\ 0&amp;1&amp;0\\ 0&amp;0&amp;1 \end{array}} \right], \qquad  \frac{{{{\hat J}_z}}}{\hbar } = \left[ {\begin{array}{*{20}{c}} 1&amp;0&amp;0\\ 0&amp;0&amp;0\\ 0&amp;0&amp;{ - 1} \end{array}} \right]

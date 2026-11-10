@@ -143,13 +143,13 @@ $$ {#eq-ch08-p1939}
 By the quantum postulates, $\langle \psi \vert \psi\rangle \ge 0$. The second and third terms on the right are both $\ge 0$, so $b \ge {m^2}$. Thus $b \ge 0$, and for fixed $b$, the allowed range of $m$ is finite. Repeatedly applying the raising operator to $\vert {b,m = {m_0}}\rangle$ using @eq-zeqnnum904731 must therefore reach an upper limit ${m_{\max }}$, with $m_{\max }^2 \le b < {({m_{\max }} + 1)^2}$. To ensure $b \ge {m^2}$, we require ${C_ + }\left( {b,{m_{\max }}} \right) = 0$, so that
 
 $$
-{\hat J_ + }\vert b,{m_{\max }}\rangle = 0
+{\hat J_ + }\vert b,{m_{\max }}\rangle = \lvert\mathrm{null}\rangle
 $$ {#eq-zeqnnum446313}
 
 Similarly, repeated application of the lowering operator to $\vert {b,m = {m_0}}\rangle$ reaches a value ${m_{\min }}$ such that, when $m = {m_{\min }}$, ${C_ - }\left( {b,{m_{\min }}} \right) = 0$ 
 
 $$
-{\hat J_ - }\vert b,{m_{\min }}\rangle = 0
+{\hat J_ - }\vert b,{m_{\min }}\rangle = \lvert\mathrm{null}\rangle
 $$ {#eq-zeqnnum736764}
 
 .
@@ -323,7 +323,7 @@ $$ {#eq-zeqnnum592417}
 These two equations automatically reproduce the results required by @eq-zeqnnum446313 and @eq-zeqnnum736764:
 
 $$
-{\hat J_ + }\vert {j,j}\rangle = 0, \qquad  \qquad  {\hat J_ - }\vert {j, - j}\rangle = 0
+{\hat J_ + }\vert {j,j}\rangle = \lvert\mathrm{null}\rangle, \qquad  \qquad  {\hat J_ - }\vert {j, - j}\rangle = \lvert\mathrm{null}\rangle
 $$ {#eq-ch08-p2033}
 
 The nonzero matrix elements of the ladder operators are therefore

@@ -114,7 +114,7 @@ $$ {#eq-zeqnnum835984}
 
 The zero vector is needed for vector addition and cancellation, but represents no physical state.
 
-If $|\psi_1\rangle$ and $|\psi_2\rangle$ belong to the same vector space, their linear combination $|\psi\rangle=c_1|\psi_1\rangle+c_2|\psi_2\rangle$ belongs to that space as well. A set of vectors is **linearly dependent** if some linear combination of them equals the zero vector with coefficients that are not all zero. In particular, the set $\{|\psi\rangle,|\psi_1\rangle,|\psi_2\rangle\}$ is linearly dependent because $|\psi\rangle-c_1|\psi_1\rangle-c_2|\psi_2\rangle=0$.
+If $|\psi_1\rangle$ and $|\psi_2\rangle$ belong to the same vector space, their linear combination $|\psi\rangle=c_1|\psi_1\rangle+c_2|\psi_2\rangle$ belongs to that space as well. A set of vectors is **linearly dependent** if some linear combination of them equals the zero vector with coefficients that are not all zero. In particular, the set $\{|\psi\rangle,|\psi_1\rangle,|\psi_2\rangle\}$ is linearly dependent because $|\psi\rangle-c_1|\psi_1\rangle-c_2|\psi_2\rangle=\lvert\mathrm{null}\rangle$.
 
 ## Examples of complex linear vector spaces
 
