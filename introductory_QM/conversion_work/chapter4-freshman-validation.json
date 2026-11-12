@@ -1,0 +1,16 @@
+{
+  "unresolvedReferences": [],
+  "theoremLabels": [
+    "4.1.",
+    "4.2.",
+    "4.3."
+  ],
+  "render": {
+    "mathExpressions": 455,
+    "mathErrors": [],
+    "missingImages": [],
+    "brokenCrossrefs": [],
+    "opening": "Imagine that you prepare a spin-1/2 particle with a definite z component of spin. If you measure that component again straight away, you get the same answer. Now put an x measurement between the two z measurements. Suddenly, the last answer is no longer certain. Why should measuring along a different direction change what you can predict?",
+    "exercises": "4.7 Exercises\n\n4.1. The anticommutator is defined by \n{\n𝐴\n^\n,\n𝐵\n^\n}\n≡\n𝐴\n^\n𝐵\n^\n+\n𝐵\n^\n𝐴\n^\n. Show that adding half the commutator and half the anticommutator gives back the original product:\n\n𝐴\n^\n𝐵\n^\n=\n1\n2\n[\n𝐴\n^\n,\n𝐵\n^\n]\n+\n1\n2\n{\n𝐴\n^\n,\n𝐵\n^\n}\n\n4.2. Let \n|\n𝑎\n𝑖\n⟩\n and \n|\n𝑎\n𝑗\n⟩\n be eigenstates of \n𝐴\n^\n with different eigenvalues \n𝑎\n𝑖\n and \n𝑎\n𝑗\n. Suppose \n[\n𝐴\n^\n,\n𝐵\n^\n]\n=\n0\n. Show that\n\n(4.65)\n⟨\n𝑎\n𝑖\n|\n𝐵\n^\n|\n𝑎\n𝑗\n⟩\n=\n0\n\n4.3. Use Equation 4.5 and Equation 4.6 to prove the first relation below for any spin. To prove the second relation, use the spin-\n1\n/\n2\n matrices in Equation 3.43:\n\n(4.66)\n[\n𝑆\n^\n2\n,\n𝑆\n^\n𝑧\n]\n=\n0\n,\n[\n𝑆\n^\n𝑥\n2\n,\n𝑆\n^\n𝑦\n2\n]\n=\n0\n\n4.4. An anti-Hermitian operator satisfies \n𝐶\n^\n†\n=\n−\n𝐶\n^\n. Show that its expectation value is purely imaginary.\n\n4.5. Use the \n𝜎\n^\n𝑦\n eigenbasis to write \n|\n𝑅\n⟩\n and \n|\n𝐿\n⟩\n as column vectors. Then find the matrix of \n𝜎\n^\n𝑥\n in that same basis.\n\n4.6*. In a normalized state, write the expectation value of \n𝑋\n^\n as \n⟨\n𝑋\n^\n⟩\n and define \nΔ\n𝑋\n^\n=\n𝑋\n^\n−\n⟨\n𝑋\n^\n⟩\n𝐼\n^\n. For Hermitian operators \n𝐴\n^\n and \n𝐵\n^\n, show that:\n\n⟨\n[\n𝐴\n^\n,\n𝐵\n^\n]\n⟩\n is purely imaginary.\n\n⟨\n{\nΔ\n𝐴\n^\n,\nΔ\n𝐵\n^\n}\n⟩\n is real."
+  }
+}

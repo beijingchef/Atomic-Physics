@@ -201,7 +201,7 @@ $$ {#eq-ch05-p1393}
 Therefore,
 
 $$
-\begin{array}{c} \frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle = \left( {\frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right\vert } \right)\hat A\left\vert  {\psi \left( t \right)} \right\rangle + \left\langle {\psi \left( t \right)} \right\vert \hat A\frac{\partial }{{\partial t}}\left\vert  {\psi \left( t \right)} \right\rangle \\ = \frac{{ - 1}}{{i\hbar }}\left\langle {\psi \left( t \right)} \right\vert \hat H\hat A\left\vert  {\psi \left( t \right)} \right\rangle + \frac{1}{{i\hbar }}\left\langle {\psi \left( t \right)} \right\vert \hat A\hat H\left\vert  {\psi \left( t \right)} \right\rangle \end{array}
+\begin{array}{c} \frac{\partial }{{\partial t}}\left(\left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle\right) = \left( {\frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right\vert } \right)\hat A\left\vert  {\psi \left( t \right)} \right\rangle + \left\langle {\psi \left( t \right)} \right\vert \hat A \left(\frac{\partial }{{\partial t}}\left\vert  {\psi \left( t \right)} \right\rangle \right) \\ = \frac{{ - 1}}{{i\hbar }}\left\langle {\psi \left( t \right)} \right\vert \hat H\hat A\left\vert  {\psi \left( t \right)} \right\rangle + \frac{1}{{i\hbar }}\left\langle {\psi \left( t \right)} \right\vert \hat A\hat H\left\vert  {\psi \left( t \right)} \right\rangle \end{array}
 $$ {#eq-zeqnnum471083}
 
 Multiply by $i\hbar$ to obtain
@@ -218,22 +218,22 @@ $$ {#eq-zeqnnum974147}
 
 ## Constants of motion
 
-By @eq-zeqnnum848461, if $\hat A$ has no explicit time dependence and commutes with the Hamiltonian,
+By @eq-zeqnnum848461, if $\hat A$ has no explicit time dependence and commutes with the Hamiltonian, $[\hat A,\hat H]=0$, then,
 
 $$
 \frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle = 0
 $$ {#eq-ch05-p1401}
 
-The mean of $\hat A$ is constant. If $\hat A$ initially has a definite value, that value equals its mean and $\hat A$ retains it.
+The expectation value of $\hat A$ is constant. If $\hat A$ initially has a definite value, that value equals its mean and $\hat A$ retains it.
 
-An observable with no explicit time dependence that commutes with the Hamiltonian is a **constant of motion**. Its mean is constant, and any initially definite value remains definite and unchanged. Quantum numbers labeling conserved observables are called **good quantum numbers**.
-
-Whether a quantity is conserved depends on the system's Hamiltonian. An operator always commutes with itself, so energy is always conserved.
+Therefore, an observable with no explicit time dependence that commutes with the Hamiltonian is a **constant of motion** or a **conserved observable**. Quantum numbers labeling conserved observables are called **good quantum numbers**. Scince $[\hat H, \hat H]=0$, energy is always conserved.
 
 ## Exercises
 
 **5.1.** An electron has magnetic moment ${\bf{\mu }} = {{ - 2{\mu _{\rm{B}}}{\bf{S}}} \mathord{\left/ {\vphantom {{ - 2{\mu _{\rm{B}}}{\bf{S}}} \hbar }} \right. \kern-1.2pt } \hbar }$ and magnetic energy $H = - {\bf{\mu }} \cdot {\bf{B}}$. Place a stationary electron in a static field ${\bf{B}} = B{\bf{\hat z}}$.
 
-1.  Given the initial condition ${S_z} = - {\hbar \mathord{\left/ {\vphantom {\hbar 2}} \right. \kern-1.2pt } 2}$, find $\left\vert  {\psi \left( t \right)} \right\rangle$.
+(1) Given the initial condition ${S_z} = - {\hbar \mathord{\left/ {\vphantom {\hbar 2}} \right. \kern-1.2pt } 2}$, find $\left\vert  {\psi \left( t \right)} \right\rangle$.
 
-2.  Let ${\bf{\hat n}}$ be a unit vector in the first quadrant of the $x$–$z$ plane, making angle $\theta$ with $z$. Initially the projection of ${\bf{S}}$ along ${\bf{\hat n}}$ is ${\hbar \mathord{\left/ {\vphantom {\hbar 2}} \right. \kern-1.2pt } 2}$. Using the preceding chapter's exercises, find spin state $\left\vert  {\psi \left( t \right)} \right\rangle$ at time $t$ and the expectation value of ${\hat S_x},\;{\hat S_y},\;{\hat S_z}$. You may define ${\omega _L} \equiv {{2{\mu _{\rm{B}}}B} \mathord{\left/ {\vphantom {{2{\mu _{\rm{B}}}B} \hbar }} \right. \kern-1.2pt } \hbar }$ to simplify the result.
+(2) Let ${\bf{\hat n}}$ be a unit vector in the first quadrant of the $x$–$z$ plane, making angle $\theta$ with $z$. Initially the projection of ${\bf{S}}$ along ${\bf{\hat n}}$ is ${\hbar \mathord{\left/ {\vphantom {\hbar 2}} \right. \kern-1.2pt } 2}$. Using the preceding chapter's exercises, find spin state $\left\vert  {\psi \left( t \right)} \right\rangle$ at time $t$ and the expectation value of ${\hat S_x},\;{\hat S_y},\;{\hat S_z}$. You may define ${\omega _L} \equiv {{2{\mu _{\rm{B}}}B} \mathord{\left/ {\vphantom {{2{\mu _{\rm{B}}}B} \hbar }} \right. \kern-1.2pt } \hbar }$ to simplify the result.
+
+\***5.2.** Prove that if an observable $\hat A$ is conserved, then the entire probability distribution of its eigenvalues remains constant. For simplicity, you can assume that $\hat A$ has a discrete spectrum. Hint: consider the projection operator $\hat P_j$ onto the eigenspace of eigenvalue $a_j$. Show that $\hat P_j$ is also conserved, and use it to show that the probability of measuring $a_j$ is constant in time.
