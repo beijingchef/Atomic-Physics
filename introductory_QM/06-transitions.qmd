@@ -337,22 +337,22 @@ $$ {#eq-ch06-p1506}
 Combine the two solutions to get the general one:
 
 $$
-\left( {\begin{array}{*{20}{c}} {{d_1}(t)}\\ {{d_2}(t)} \end{array}} \right) = {g_ + }\left( {\begin{array}{*{20}{c}} {{\Omega _0}}\\ {\Delta - \Omega } \end{array}} \right)\exp \left( {{{i{\lambda _ + }t} \mathord{\left/ {\vphantom {{i{\lambda _ + }t} 2}} \right. \kern-1.2pt } 2}} \right) + {g_ - }\left( {\begin{array}{*{20}{c}} {{\Omega _0}}\\ {\Delta + \Omega } \end{array}} \right)\exp \left( {{{i{\lambda _ - }t} \mathord{\left/ {\vphantom {{i{\lambda _ - }t} 2}} \right. \kern-1.2pt } 2}} \right)
+\left( {\begin{array}{*{20}{c}} {{d_1}(t)}\\ {{d_2}(t)} \end{array}} \right) = {c_ + }\left( {\begin{array}{*{20}{c}} {{\Omega _0}}\\ {\Delta - \Omega } \end{array}} \right)e^{i\lambda_+ t/2} + {c_ - }\left( {\begin{array}{*{20}{c}} {{\Omega _0}}\\ {\Delta + \Omega } \end{array}} \right)e^{i\lambda_- t/2}
 $$ {#eq-zeqnnum771504}
 
-The initial state fixes the coefficients $g_\pm$:
+The initial state fixes the coefficients $c_\pm$:
 
 $$
-\left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right) = {g_ + }\left( {\begin{array}{*{20}{c}} {{\Omega _0}}\\ {\Delta - \Omega } \end{array}} \right) + {g_ - }\left( {\begin{array}{*{20}{c}} {{\Omega _0}}\\ {\Delta + \Omega } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{\Omega _0}}&{{\Omega _0}}\\ {\Delta - \Omega }&{\Delta + \Omega } \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{g_ + }}\\ {{g_ - }} \end{array}} \right) = D\left( {\begin{array}{*{20}{c}} {{g_ + }}\\ {{g_ - }} \end{array}} \right)
+\left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right) = {c_ + }\left( {\begin{array}{*{20}{c}} {{\Omega _0}}\\ {\Delta - \Omega } \end{array}} \right) + {c_ - }\left( {\begin{array}{*{20}{c}} {{\Omega _0}}\\ {\Delta + \Omega } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{\Omega _0}}&{{\Omega _0}}\\ {\Delta - \Omega }&{\Delta + \Omega } \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{c_ + }}\\ {{c_ - }} \end{array}} \right) = D\left( {\begin{array}{*{20}{c}} {{c_ + }}\\ {{c_ - }} \end{array}} \right)
 $$ {#eq-ch06-p1510}
 
 Therefore,
 
 $$
-\left( {\begin{array}{*{20}{c}} {{g_ + }}\\ {{g_ - }} \end{array}} \right) = {D^{ - 1}}\left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right) = \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {\Omega + \Delta }&{ - {\Omega _0}}\\ {\Omega - \Delta }&{{\Omega _0}} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right) = \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {\Omega + \Delta }\\ {\Omega - \Delta } \end{array}} \right)
+\left( {\begin{array}{*{20}{c}} {{c_ + }}\\ {{c_ - }} \end{array}} \right) = {D^{ - 1}}\left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right) = \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {\Omega + \Delta }&{ - {\Omega _0}}\\ {\Omega - \Delta }&{{\Omega _0}} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right) = \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {\Omega + \Delta }\\ {\Omega - \Delta } \end{array}} \right)
 $$ {#eq-ch06-p1512}
 
-Substituting ${g_ \pm }$ into @eq-zeqnnum771504 gives
+Substituting ${c_ \pm }$ into @eq-zeqnnum771504 gives
 
 $$
 \begin{aligned}
