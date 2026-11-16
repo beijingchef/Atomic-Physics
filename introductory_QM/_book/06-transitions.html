@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; * Transitions – Introduction to Quantum Mechanics</title>
+<title>6&nbsp; Transitions – Introduction to Quantum Mechanics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -118,7 +118,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06-transitions.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06-transitions.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Transitions</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -182,7 +182,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06-transitions.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Transitions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -231,7 +231,11 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#magnetic-resonance" id="toc-magnetic-resonance" class="nav-link active" data-scroll-target="#magnetic-resonance"><span class="header-section-number">6.1</span> Magnetic resonance</a></li>
+  <li><a href="#magnetic-resonance" id="toc-magnetic-resonance" class="nav-link active" data-scroll-target="#magnetic-resonance"><span class="header-section-number">6.1</span> Magnetic resonance</a>
+  <ul class="collapse">
+  <li><a href="#circularly-polarized-drive" id="toc-circularly-polarized-drive" class="nav-link" data-scroll-target="#circularly-polarized-drive"><span class="header-section-number">6.1.1</span> Circularly polarized drive</a></li>
+  <li><a href="#linearly-polarized-drive" id="toc-linearly-polarized-drive" class="nav-link" data-scroll-target="#linearly-polarized-drive"><span class="header-section-number">6.1.2</span> Linearly polarized drive</a></li>
+  </ul></li>
   <li><a href="#transitions-in-a-general-two-level-system" id="toc-transitions-in-a-general-two-level-system" class="nav-link" data-scroll-target="#transitions-in-a-general-two-level-system"><span class="header-section-number">6.2</span> Transitions in a general two-level system</a></li>
   <li><a href="#density-matrices-and-the-bloch-vector" id="toc-density-matrices-and-the-bloch-vector" class="nav-link" data-scroll-target="#density-matrices-and-the-bloch-vector"><span class="header-section-number">6.3</span> * Density matrices and the Bloch vector</a></li>
   <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix"><span class="header-section-number">6.4</span> Appendix</a></li>
@@ -243,7 +247,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Transitions</span></h1>
 </div>
 
 
@@ -269,7 +273,9 @@ window.Quarto = {
 <p><span id="eq-zeqnnum692846"><span class="math display">\[
 {\bf{B'}} = {B'_x}{\bf{\hat x}} + {B'_y}{\bf{\hat y}}
 \tag{6.1}\]</span></span></p>
-<p>a first example, let <span class="math inline">\(\mathbf B'\)</span> rotate in the transverse plane in the same sense as the electron’s precession in <span class="math inline">\(\mathbf B_0\)</span>:</p>
+<section id="circularly-polarized-drive" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="circularly-polarized-drive"><span class="header-section-number">6.1.1</span> Circularly polarized drive</h3>
+<p>As a first example, let <span class="math inline">\(\mathbf B'\)</span> rotate in the transverse plane in the same sense as the electron’s precession in <span class="math inline">\(\mathbf B_0\)</span>:</p>
 <p><span id="eq-zeqnnum766276"><span class="math display">\[
 {B'_x} = B'\cos \omega t; \qquad  \qquad  {B'_y} = B'\sin \omega t
 \tag{6.2}\]</span></span></p>
@@ -315,9 +321,9 @@ window.Quarto = {
 \begin{gathered} {P_1}(t) \equiv {\left\vert  {{c_1}(t)} \right\vert ^2} = \frac{1}{2}\left( {1 + \frac{{{\Delta ^2}}}{{{\Omega ^2}}}} \right) + \frac{1}{2}\frac{{\Omega _0^2}}{{{\Omega ^2}}}\cos \Omega t\xrightarrow{{\Delta = 0}}\frac{1}{2}\left( {1 + \cos {\Omega _0}t} \right)  \\ {P_2}(t) \equiv {\left\vert  {{c_2}(t)} \right\vert ^2} = \frac{1}{2}\frac{{\Omega _0^2}}{{{\Omega ^2}}}\left( {1 - \cos \Omega t} \right)\xrightarrow{{\Delta = 0}}\frac{1}{2}\left( {1 - \cos {\Omega _0}t} \right)  \\ \Delta \equiv \omega - {\omega _0},\, \qquad  {\Omega _0} \equiv {{2{\mu _{\text{B}}}B'} \mathord{\left/ {\vphantom {{2{\mu _{\text{B}}}B'} \hbar }} \right. \kern-1.2pt } \hbar }, \qquad  \;\;\;\;\;\;\Omega \equiv \sqrt {{\Delta ^2} + \Omega _0^2} ,  \\ \end{gathered}
 \tag{6.12}\]</span></span></p>
 <p>The probabilities <span class="math inline">\(P_1\)</span> and <span class="math inline">\(P_2\)</span> oscillate at angular frequency <span class="math inline">\(\Omega\)</span>. Population flows from one level to the other and then back again. We call this motion <strong>Rabi oscillation</strong>.</p>
-<p>Figure 6.1 shows what changes when we vary the detuning. At <span class="math inline">\(\Delta=0\)</span>, the drive is on <strong>resonance</strong>. The probability <span class="math inline">\(P_2\)</span> swings all the way from zero to one. The oscillation is slowest here, but its range is largest.</p>
-<p>Away from resonance, the oscillations get faster and their range shrinks. <a href="#eq-zeqnnum748213" class="quarto-xref">Equation&nbsp;<span>6.12</span></a> gives the timing: at even multiples of <span class="math inline">\(\pi\)</span> in <span class="math inline">\(\Omega t\)</span>, the initial population returns, with <span class="math inline">\(P_2=0\)</span> and <span class="math inline">\(P_1=1\)</span>. At odd multiples, <span class="math inline">\(P_2\)</span> reaches its maximum for that detuning. Only on resonance does that maximum reach one, giving complete transfer to the other level.</p>
-<p>As <span class="math inline">\(P_2\)</span> grows, the electron moves toward the lower-energy state. Its mean magnetic energy decreases, and energy goes to the drive. This is <strong>stimulated emission</strong>. As <span class="math inline">\(P_2\)</span> falls, the electron takes energy from the drive. This is <strong>stimulated absorption</strong>. The same coupling produces both processes, which explains why the corresponding Einstein coefficients are equal in this two-state case.</p>
+<p>Figure 6.1 shows how <span class="math inline">\(P_2(t)\)</span> changes when we vary the detuning. At <span class="math inline">\(\Delta=0\)</span>, the drive is on <strong>resonance</strong>. The probability <span class="math inline">\(P_2\)</span> swings all the way from zero to one. The oscillation is slowest here, but its range is largest. Away from resonance, the oscillations get faster and their range shrinks.</p>
+<p>According to @eq-zeqnnum748213: at even multiples of <span class="math inline">\(\pi\)</span> in <span class="math inline">\(\Omega t\)</span>, the initial population returns, with <span class="math inline">\(P_2=0\)</span> and <span class="math inline">\(P_1=1\)</span>. At odd multiples, <span class="math inline">\(P_2\)</span> reaches its maximum for that detuning. Only on resonance does that maximum reach one, giving complete transfer to the other level.</p>
+<p>As <span class="math inline">\(P_2\)</span> grows, the electron spin moves toward the lower-energy state. Its mean magnetic energy decreases, and energy goes to the drive. This is <strong>stimulated emission</strong>. As <span class="math inline">\(P_2\)</span> falls, the electron takes energy from the drive. This is <strong>stimulated absorption</strong>. The same coupling produces both processes, which explains why the corresponding Einstein coefficients are equal.</p>
 <div class="text-center">
 <p><img src="assets/image1150.png" class="img-fluid" width="410"></p>
 <div class="source-caption">
@@ -328,7 +334,7 @@ window.Quarto = {
 <p><span id="eq-zeqnnum340775"><span class="math display">\[
 {P_0}(\Delta ) = \frac{1}{2}\frac{{\Omega _0^2}}{{{\Omega ^2}}} = \frac{1}{2}\frac{{\Omega _0^2}}{{{\Delta ^2} + \Omega _0^2}}
 \tag{6.13}\]</span></span></p>
-<p>Keep the drive strength <span class="math inline">\(\Omega_0\)</span> fixed and scan its frequency. The maximum transfer <span class="math inline">\(P_0(\Delta)\)</span> traces the peak in Figure 6.2. Its half-width at half-maximum (HWHM) is <span class="math inline">\(\Omega_0\)</span>: at that detuning, the peak has fallen to half its height. A stronger drive therefore makes the resonance broader. We call this <strong>power broadening</strong>. It matters when we use magnetic resonance or spectroscopy to measure energy-level separations.</p>
+<p>Figure 6.2 shows the detuning dependence of <span class="math inline">\(P_0(\Delta)\)</span> with fixed drive strength <span class="math inline">\(\Omega_0\)</span>. It is a Lorentizian peak whose half-width at half-maximum (HWHM) is <span class="math inline">\(\Omega_0\)</span>: at that detuning, the peak has fallen to half its height. A stronger drive therefore makes the resonance broader. We call this <strong>power broadening</strong>. It matters when we use magnetic resonance or spectroscopy to measure energy-level separations.</p>
 <div class="text-center">
 <p><img src="assets/image1158.png" class="img-fluid" width="379"><img src="assets/image1159.svg" class="img-fluid" width="379"></p>
 <div class="source-caption">
@@ -345,7 +351,10 @@ window.Quarto = {
 <p><span id="eq-ch06-p1455"><span class="math display">\[
 \begin{gathered} \langle {{{\hat S}_y}(t)}\rangle = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {c_1^*,}&amp;{c_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&amp;{ - i} \\ i&amp;0 \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{c_1}} \\ {{c_2}} \end{array}} \right) = \frac{{i\hbar }}{2}\left( {{c_1}c_2^* - c_1^*{c_2}} \right) \\ = - \frac{\hbar }{2}\frac{{{\Omega _0}}}{{{\Omega ^2}}}\left[ {\Omega \sin \Omega t\cos \omega t + \Delta (1 - \cos \Omega t)\sin \omega t} \right] \\ \xrightarrow{{\Delta = 0}} - \frac{\hbar }{2}\sin {\Omega _0}t\cos {\omega _0}t \\ \end{gathered}
 \tag{6.16}\]</span></span></p>
-<p>In the laboratory, a linearly polarized field is easier to produce. Let it point along <span class="math inline">\(x\)</span> and have amplitude <span class="math inline">\(2B'\)</span>. We can write it as</p>
+</section>
+<section id="linearly-polarized-drive" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="linearly-polarized-drive"><span class="header-section-number">6.1.2</span> Linearly polarized drive</h3>
+<p>We have worked out the transition caused by a circularly polarized drive. Now let us study the case for a linearly polarized drive. Let it point along <span class="math inline">\(x\)</span> and have amplitude <span class="math inline">\(2B'\)</span>. We can write it as</p>
 <p><span id="eq-ch06-p1457"><span class="math display">\[
 {B'_x} = 2B'\cos \omega t; \qquad  \qquad  {B'_y} = 0
 \tag{6.17}\]</span></span></p>
@@ -361,28 +370,35 @@ window.Quarto = {
 <p><span id="eq-zeqnnum877206"><span class="math display">\[
 \begin{array}{c} {{\dot d}_1} = \frac{i}{2}\left[ {\Delta {d_1} - {\Omega _0}({e^{2i\omega t}} + 1){d_2}} \right],\\ {{\dot d}_2} = \frac{i}{2}\left[ { - {\Omega _0}(1 + {e^{ - 2i\omega t}}){d_1} - \Delta {d_2}} \right], \end{array}
 \tag{6.20}\]</span></span></p>
-<p>Now assume a weak drive close to resonance: <span class="math inline">\(B'\ll B_0\)</span> and <span class="math inline">\(\Omega_0,|\Delta|\ll\omega_0,\omega\)</span>. In <a href="#eq-zeqnnum877206" class="quarto-xref">Equation&nbsp;<span>6.20</span></a>, the factors <span class="math inline">\(e^{\pm2i\omega t}\)</span> then cycle much faster than <span class="math inline">\(d_1\)</span> and <span class="math inline">\(d_2\)</span> change. Their effects largely average out. Dropping these fast terms is the <strong>rotating-wave approximation</strong>.</p>
-<p>The equation reduces to <a href="#eq-zeqnnum721542" class="quarto-xref">Equation&nbsp;<span>6.10</span></a>, so we can reuse the solution we already have. Near resonance, a weak linear drive acts approximately like a circular drive with half its amplitude.</p>
+<p>Now assume the weak drive is close to resonance: <span class="math inline">\(B'\ll B_0\)</span> and <span class="math inline">\(\Omega_0,|\Delta|\ll\omega_0,\omega\)</span>. In <a href="#eq-zeqnnum877206" class="quarto-xref">Equation&nbsp;<span>6.20</span></a>, the factors <span class="math inline">\(e^{\pm2i\omega t}\)</span> then cycle much faster than <span class="math inline">\(d_1\)</span> and <span class="math inline">\(d_2\)</span> change. Their effects largely average out. Dropping these fast oscillating terms is called the <strong>rotating-wave approximation</strong>. Then the equation reduces to <a href="#eq-zeqnnum721542" class="quarto-xref">Equation&nbsp;<span>6.10</span></a>, so we can reuse the solution we already have.</p>
+<p>Therefore, near resonance, a weak linear drive acts approximately like a circular drive with half its amplitude.</p>
+</section>
 </section>
 <section id="transitions-in-a-general-two-level-system" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="transitions-in-a-general-two-level-system"><span class="header-section-number">6.2</span> Transitions in a general two-level system</h2>
 <p>The same mathematics works far beyond electron spin. Consider any two-level system with energy separation <span class="math inline">\(\hbar\omega_0\)</span>. We can choose the zero of energy halfway between the levels and write</p>
 <p><span id="eq-ch06-p1468"><span class="math display">\[
-\begin{array}{l} {{\hat H}_0}\vert e\rangle = \hbar \frac{{{\omega _0}}}{2}\vert e\rangle \\ {{\hat H}_0}\vert g\rangle = - \hbar \frac{{{\omega _0}}}{2}\vert g\rangle \end{array}
+\begin{array}{l} {{\hat H}_0}\vert 1\rangle = \hbar \frac{{{\omega _0}}}{2}\vert 1\rangle \\ {{\hat H}_0}\vert 2\rangle = - \hbar \frac{{{\omega _0}}}{2}\vert 2\rangle \end{array}
 \tag{6.21}\]</span></span></p>
-<p>Here <span class="math inline">\(\vert e\rangle\)</span> is the excited state and <span class="math inline">\(\vert g\rangle\)</span> is the ground state. In this energy basis,</p>
+<p>Here <span class="math inline">\(\vert 1\rangle\)</span> is the excited state and <span class="math inline">\(\vert 2\rangle\)</span> is the ground state. In this energy basis,</p>
 <p><span id="eq-zeqnnum616848"><span class="math display">\[
 {\hat H_0} = \hbar \left( {\begin{array}{*{20}{c}} {{{{\omega _0}} \mathord{\left/ {\vphantom {{{\omega _0}} 2}} \right. \kern-1.2pt } 2}}&amp;0\\ 0&amp;{{{ - {\omega _0}} \mathord{\left/ {\vphantom {{ - {\omega _0}} 2}} \right. \kern-1.2pt } 2}} \end{array}} \right)
 \tag{6.22}\]</span></span></p>
-<p>Adding a perturbation <span class="math inline">\(\hat V(t) = {\hat V_0}\cos \omega t\)</span> gives</p>
+<p>Adding a oscillating perturbation <span class="math inline">\(\hat V(t) = {\hat V_0}\cos \omega t\)</span> gives</p>
 <p><span id="eq-ch06-p1472"><span class="math display">\[
 \hat V(t) = \left( {\begin{array}{*{20}{c}} {\langle 1\vert {{{\hat V}_0}}\vert 1\rangle }&amp;{\langle 1\vert {{{\hat V}_0}}\vert 2\rangle }\\ {{{\langle 1\vert {{{\hat V}}_0}\vert 2\rangle }^*}}&amp;{\langle 2\vert {{{\hat V}_0}}\vert 2\rangle } \end{array}} \right)\cos \omega t
 \tag{6.23}\]</span></span></p>
-<p>A common case has zero diagonal elements, <span class="math inline">\(\langle1\vert\hat V_0\vert1\rangle=\langle2\vert\hat V_0\vert2\rangle=0\)</span>, and a real off-diagonal element <span class="math inline">\(\langle1\vert\hat V_0\vert2\rangle\)</span>. The labels <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span> refer to <span class="math inline">\(e\)</span> and <span class="math inline">\(g\)</span>. Define <span class="math inline">\(\Omega_0\equiv\langle1\vert\hat V_0\vert2\rangle/\hbar\)</span>. Then</p>
+<p>It is very common we will see cases with zero diagonal elements <span class="math inline">\(\langle1\vert\hat V_0\vert1\rangle=\langle2\vert\hat V_0\vert2\rangle=0\)</span>, and a real off-diagonal element <span class="math inline">\(\langle1\vert\hat V_0\vert2\rangle\)</span>. Define <span class="math inline">\(\Omega_0\equiv\langle1\vert\hat V_0\vert2\rangle/\hbar\)</span>. Then</p>
 <p><span id="eq-zeqnnum790744"><span class="math display">\[
 \hat V(t) = \hbar \left( {\begin{array}{*{20}{c}} 0&amp;{{\Omega _0}\cos \omega t}\\ {\Omega _0^{}\cos \omega t}&amp;0 \end{array}} \right)
 \tag{6.24}\]</span></span></p>
 <p>Compare <a href="#eq-zeqnnum616848" class="quarto-xref">Equation&nbsp;<span>6.22</span></a> and <a href="#eq-zeqnnum790744" class="quarto-xref">Equation&nbsp;<span>6.24</span></a> with <a href="#eq-zeqnnum864064" class="quarto-xref">Equation&nbsp;<span>6.4</span></a> and <a href="#eq-zeqnnum472633" class="quarto-xref">Equation&nbsp;<span>6.18</span></a>. They have the same form. We can therefore use the spin-1/2 magnetic-resonance calculation to describe this two-level transition too.</p>
+<p>Thus, we obtain some common properties of transitions:</p>
+<ol type="1">
+<li>A transition is possible only when the perturbation have non-zero matrix element connecting the two end states of the transition, thus they are called transition matrix elements.</li>
+<li>When the oscillating frequency of the perturbation is resonant with the energy gap of the two states, largest population swing occurs.</li>
+<li>The resonant transition rate ( <span class="math inline">\(\Omega_0\)</span> ) is proportional to the transition matrix element.</li>
+</ol>
 </section>
 <section id="density-matrices-and-the-bloch-vector" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="density-matrices-and-the-bloch-vector"><span class="header-section-number">6.3</span> * Density matrices and the Bloch vector</h2>
@@ -423,7 +439,6 @@ window.Quarto = {
 \frac{{d{\bf{P}}}}{{dt}} = {\bf{\Omega }} \times {\bf{P}}
 \tag{6.33}\]</span></span></p>
 <p>The vector <span class="math inline">\(\boldsymbol\Omega\)</span> is constant. <a href="#eq-zeqnnum862867" class="quarto-xref">Equation&nbsp;<span>6.33</span></a> therefore describes precession: <span class="math inline">\(\mathbf P\)</span> sweeps around <span class="math inline">\(\boldsymbol\Omega\)</span> at angular speed <span class="math inline">\(|\boldsymbol\Omega|=\sqrt{\Omega_0^2+\Delta^2}\)</span>. This is the geometric picture behind our two-level solution.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> For a linear drive, it holds within the rotating-wave approximation.</p>
-<p>There is a deeper mathematical connection here. A unitary transformation from <span class="math inline">\(\mathrm{SU}(2)\)</span> acts on the two complex state amplitudes. It induces a rotation from <span class="math inline">\(\mathrm{SO}(3)\)</span> of the Bloch vector in real three-dimensional space.</p>
 </section>
 <section id="appendix" class="level2" data-number="6.4">
 <h2 data-number="6.4" class="anchored" data-anchor-id="appendix"><span class="header-section-number">6.4</span> Appendix</h2>

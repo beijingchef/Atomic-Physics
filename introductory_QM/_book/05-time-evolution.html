@@ -328,22 +328,18 @@ E = \hbar \omega
 \hat U\left( {dt} \right) = \hat I - i\frac{{\hat H}}{\hbar }dt
 \tag{5.14}\]</span></span></p>
 <p>The Hamiltonian tells the state how to change at each tiny time step. For this reason, we call it the <strong>generator of time evolution</strong>.</p>
-<p>Now use this small step to find an equation for <span class="math inline">\(\hat U(t)\)</span>, as defined in <a href="#eq-zeqnnum681983" class="quarto-xref">Equation&nbsp;<span>5.2</span></a>:</p>
-<p><span id="eq-zeqnnum668676"><span class="math display">\[
-\hat U\left( {t + dt} \right) = \hat U\left( {dt} \right)\hat U\left( t \right) = \left( {\hat I - i\frac{{\hat H}}{\hbar }dt} \right)\hat U\left( t \right)
-\tag{5.15}\]</span></span></p>
+<p>let both sides of <a href="#eq-ch05-p1355" class="quarto-xref">Equation&nbsp;<span>5.14</span></a> act on <span class="math inline">\(\vert \psi (t)\rangle\)</span>:</p>
+<p><span class="math display">\[
+\vert \psi (t+dt)\rangle = \vert \psi (t)\rangle - i\frac{{\hat H}}{\hbar }dt\vert \psi (t)\rangle
+\]</span></p>
 <p>Thus,</p>
 <p><span id="eq-zeqnnum963010"><span class="math display">\[
-\frac{{\hat U\left( {t + dt} \right) - \hat U\left( t \right)}}{{dt}} = - i\frac{{\hat H}}{\hbar }\hat U\left( t \right)
-\tag{5.16}\]</span></span></p>
+\frac{\vert \psi (t+dt)\rangle - \vert \psi (t)\rangle}{{dt}} = - i\frac{{\hat H}}{\hbar }\vert \psi (t)\rangle
+\tag{5.15}\]</span></span></p>
 <p>Multiplying by <span class="math inline">\(i\hbar\)</span> gives</p>
-<p><span id="eq-zeqnnum680102"><span class="math display">\[
-i\hbar \frac{\partial }{{\partial t}}\hat U\left( t \right) = \hat H\hat U\left( t \right)
-\tag{5.17}\]</span></span></p>
-<p><a href="#eq-zeqnnum680102" class="quarto-xref">Equation&nbsp;<span>5.17</span></a> is the Schrödinger equation for the evolution operator. To get an equation for the state itself, let both sides of <a href="#eq-zeqnnum963010" class="quarto-xref">Equation&nbsp;<span>5.16</span></a> act on <span class="math inline">\(\vert \psi (0)\rangle\)</span>:</p>
 <p><span id="eq-zeqnnum131431"><span class="math display">\[
 i\hbar \frac{\partial }{{\partial t}}\left\vert  {\psi \left( t \right)} \right\rangle = \hat H\left\vert  {\psi \left( t \right)} \right\rangle
-\tag{5.18}\]</span></span></p>
+\tag{5.16}\]</span></span></p>
 </section>
 <section id="solving-the-schrödinger-equation" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="solving-the-schrödinger-equation"><span class="header-section-number">5.2</span> Solving the Schrödinger equation</h2>
@@ -351,74 +347,74 @@ i\hbar \frac{\partial }{{\partial t}}\left\vert  {\psi \left( t \right)} \right\
 <p>Let us start with a Hamiltonian that has no explicit time dependence. Its energy eigenvalues <span class="math inline">\(E_j\)</span> and eigenvectors <span class="math inline">\(\vert E_j\rangle\)</span> are then fixed:</p>
 <p><span id="eq-zeqnnum782147"><span class="math display">\[
 \hat H\left\vert  {{E_j}} \right\rangle = {E_j}\left\vert  {{E_j}} \right\rangle
-\tag{5.19}\]</span></span></p>
+\tag{5.17}\]</span></span></p>
 <p>We call this eigenvalue equation the <strong>time-independent Schrödinger equation</strong>. It appears again and again in quantum mechanics. In many problems, our main task is to write down the Hamiltonian and find its energy eigenstates, either exactly or approximately.</p>
-<p>The energy basis makes the next step easier because <span class="math inline">\(\hat H\)</span> acts so simply on each basis vector. Multiply <a href="#eq-zeqnnum131431" class="quarto-xref">Equation&nbsp;<span>5.18</span></a> on the left by <span class="math inline">\(\langle E_j\vert\)</span>:</p>
+<p>The energy basis makes the next step easier because <span class="math inline">\(\hat H\)</span> acts so simply on each basis vector. Multiply <a href="#eq-zeqnnum131431" class="quarto-xref">Equation&nbsp;<span>5.16</span></a> on the left by <span class="math inline">\(\langle E_j\vert\)</span>:</p>
 <p><span id="eq-ch05-p1371"><span class="math display">\[
 i\hbar \frac{\partial }{{\partial t}}\left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( t \right)}}} \right. \kern-1.2pt } {{\psi \left( t \right)}} \right\rangle = \left\langle {{E_j}} \right\vert \hat H\left\vert  {\psi \left( t \right)} \right\rangle = {E_j}\left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( t \right)}}} \right. \kern-1.2pt } {{\psi \left( t \right)}} \right\rangle
-\tag{5.20}\]</span></span></p>
+\tag{5.18}\]</span></span></p>
 <p>Each amplitude <span class="math inline">\(\langle E_j\vert\psi(t)\rangle\)</span> now obeys its own first-order differential equation. Its solution is</p>
 <p><span id="eq-zeqnnum909538"><span class="math display">\[
 \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( t \right)}}} \right. \kern-1.2pt } {{\psi \left( t \right)}} \right\rangle = \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle {e^{ - {{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}
-\tag{5.21}\]</span></span></p>
+\tag{5.19}\]</span></span></p>
 <p>Put these amplitudes back into the energy-basis expansion:</p>
 <p><span id="eq-zeqnnum925440"><span class="math display">\[
 \left\vert  {\psi \left( t \right)} \right\rangle = \sum\limits_j {\left\vert  {{E_j}} \right\rangle \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( t \right)}}} \right. \kern-1.2pt } {{\psi \left( t \right)}} \right\rangle } = \sum\limits_j {\left\vert  {{E_j}} \right\rangle \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle {e^{ - {{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}}
-\tag{5.22}\]</span></span></p>
+\tag{5.20}\]</span></span></p>
 <p>This solves the problem for a time-independent Hamiltonian. The rule is simple: expand the initial state in energy eigenstates, then multiply each component by its own phase factor. Compare the two expansions:</p>
 <p><span id="eq-zeqnnum160654"><span class="math display">\[
 \begin{array}{c} \left\vert  {\psi \left( 0 \right)} \right\rangle = \sum\limits_j {\left\vert  {{E_j}} \right\rangle \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle } \\ \left\vert  {\psi \left( t \right)} \right\rangle = \sum\limits_j {\left\vert  {{E_j}} \right\rangle \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle {e^{ - {{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}} \end{array}
-\tag{5.23}\]</span></span></p>
+\tag{5.21}\]</span></span></p>
 <section id="stationary-states" class="level3" data-number="5.2.1">
 <h3 data-number="5.2.1" class="anchored" data-anchor-id="stationary-states"><span class="header-section-number">5.2.1</span> Stationary states</h3>
 <p>What happens if we start with just one energy eigenstate? Suppose</p>
 <p><span id="eq-ch05-p1380"><span class="math display">\[
 \left\vert  {\psi {\rm{(}}0)} \right\rangle = \left\vert  {{E_m}} \right\rangle
-\tag{5.24}\]</span></span></p>
-<p>Then <a href="#eq-zeqnnum925440" class="quarto-xref">Equation&nbsp;<span>5.22</span></a> becomes</p>
+\tag{5.22}\]</span></span></p>
+<p>Then <a href="#eq-zeqnnum925440" class="quarto-xref">Equation&nbsp;<span>5.20</span></a> becomes</p>
 <p><span id="eq-ch05-p1382"><span class="math display">\[
 \begin{array}{c} \left\vert  {\psi (t)} \right\rangle = \sum\limits_j {\left\vert  {{E_j}} \right\rangle {\delta _{jm}}{e^{ - {{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}} = \left\vert  {{E_m}} \right\rangle {e^{ - {{i{E_m}t} \mathord{\left/ {\vphantom {{i{E_m}t} \hbar }} \right. \kern-1.2pt } \hbar }}}\\ = {e^{ - {{i{E_m}t} \mathord{\left/ {\vphantom {{i{E_m}t} \hbar }} \right. \kern-1.2pt } \hbar }}}\left\vert  {\psi (0)} \right\rangle \end{array}
-\tag{5.25}\]</span></span></p>
+\tag{5.23}\]</span></span></p>
 <p>Only an overall phase has changed. As we learned earlier, that phase does not change the physical state. We call an energy eigenstate of a time-independent Hamiltonian a <strong>stationary state</strong>. Its measurement probabilities stay the same, even though its ket acquires a time-dependent phase.</p>
 </section>
 </section>
 <section id="time-evolution-of-expectation-values" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="time-evolution-of-expectation-values"><span class="header-section-number">5.3</span> Time evolution of expectation values</h2>
-<p>Once we know the state, we can calculate an observable’s expectation value. For <span class="math inline">\(\hat A\)</span>, it is <span class="math inline">\(\langle\hat A(t)\rangle\equiv\langle\psi(t)\vert\hat A\vert\psi(t)\rangle\)</span>. Use <a href="#eq-zeqnnum160654" class="quarto-xref">Equation&nbsp;<span>5.23</span></a> to evolve the ket, take its adjoint to get the bra, and place <span class="math inline">\(\hat A\)</span> between them.</p>
-<p>Using <a href="03-quantum-measurement.html#eq-zeqnnum739477" class="quarto-xref">Equation&nbsp;<span>3.5</span></a> and <a href="#eq-zeqnnum160654" class="quarto-xref">Equation&nbsp;<span>5.23</span></a>, we get</p>
+<p>Once we know the state, we can calculate an observable’s expectation value. For <span class="math inline">\(\hat A\)</span>, it is <span class="math inline">\(\langle\hat A(t)\rangle\equiv\langle\psi(t)\vert\hat A\vert\psi(t)\rangle\)</span>. Use <a href="#eq-zeqnnum160654" class="quarto-xref">Equation&nbsp;<span>5.21</span></a> to evolve the ket, take its adjoint to get the bra, and place <span class="math inline">\(\hat A\)</span> between them.</p>
+<p>Using <a href="03-quantum-measurement.html#eq-zeqnnum739477" class="quarto-xref">Equation&nbsp;<span>3.5</span></a> and <a href="#eq-zeqnnum160654" class="quarto-xref">Equation&nbsp;<span>5.21</span></a>, we get</p>
 <p><span id="eq-zeqnnum188299"><span class="math display">\[
 \begin{array}{c} \left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle = \sum\limits_{j,k} {{e^{{{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}\left\langle {{\psi (0)}} \mathrel{\left \vert  {\vphantom {{\psi (0)} {{E_j}}}} \right. \kern-1.2pt } {{{E_j}}} \right\rangle \left\langle {{E_j}} \right\vert \hat A\left\vert  {{E_k}} \right\rangle \left\langle {{{E_k}}} \mathrel{\left \vert  {\vphantom {{{E_k}} {\psi (0)}}} \right. \kern-1.2pt } {{\psi (0)}} \right\rangle {e^{{{ - i{E_k}t} \mathord{\left/ {\vphantom {{ - i{E_k}t} \hbar }} \right. \kern-1.2pt } \hbar }}}} \\ = \sum\limits_{j,k} {\left\langle {{\psi (0)}} \mathrel{\left \vert  {\vphantom {{\psi (0)} {{E_j}}}} \right. \kern-1.2pt } {{{E_j}}} \right\rangle \left\langle {{{E_k}}} \mathrel{\left \vert  {\vphantom {{{E_k}} {\psi (0)}}} \right. \kern-1.2pt } {{\psi (0)}} \right\rangle \left\langle {{E_j}} \right\vert \hat A\left\vert  {{E_k}} \right\rangle {e^{{{i\left( {{E_j} - {E_k}} \right)t} \mathord{\left/ {\vphantom {{i\left( {{E_j} - {E_k}} \right)t} \hbar }} \right. \kern-1.2pt } \hbar }}}} \end{array}
-\tag{5.26}\]</span></span></p>
+\tag{5.24}\]</span></span></p>
 <p>Look at the phase factor at the end of each term. At <span class="math inline">\(t=0\)</span>, it is one, and the expression gives the initial expectation value. As time passes, components with different energies acquire different phases. These relative phases can make the expectation value oscillate.</p>
 <p>For a particular pair of energy states, both initial amplitudes must be nonzero. The matrix element <span class="math inline">\(A_{jk}\equiv\langle E_j\vert\hat A\vert E_k\rangle\)</span> must also be nonzero. That pair then contributes a term with angular frequency <span class="math inline">\(\omega_{jk}=(E_j-E_k)/\hbar\)</span>.</p>
-<p>To picture the connection with atomic radiation, take <span class="math inline">\(\hat A\)</span> to be the electron’s position. A perturbation can mix two energy states, making the mean position oscillate at their energy-difference frequency. This gives useful intuition for the frequency of a spectral line. It is not a full account of spontaneous emission. Heisenberg used the link between transition frequencies and matrix elements to develop matrix mechanics. We can write <a href="#eq-zeqnnum188299" class="quarto-xref">Equation&nbsp;<span>5.26</span></a> in matrix form as</p>
+<p>To picture the connection with atomic radiation, take <span class="math inline">\(\hat A\)</span> to be the electron’s position. A perturbation can mix two energy states, making the mean position oscillate at their energy-difference frequency. This gives useful intuition for the frequency of a spectral line. It is not a full account of spontaneous emission. Heisenberg used the link between transition frequencies and matrix elements to develop matrix mechanics. We can write <a href="#eq-zeqnnum188299" class="quarto-xref">Equation&nbsp;<span>5.24</span></a> in matrix form as</p>
 <p><span id="eq-ch05-p1389"><span class="math display">\[
 \left\langle {\psi (t)} \right\vert \hat A\left\vert  {\psi (t)} \right\rangle \buildrel\textstyle.\over= {\left( {\begin{array}{*{20}{c}} {\langle 1\vert {\psi (0)}\rangle }\\ {\langle 2\vert {\psi (0)}\rangle }\\ \vdots \\ \vdots \end{array}} \right)^\dagger }\left( {\begin{array}{*{20}{l}} {{A_{11}}}&amp;{{A_{12}}{e^{i{\omega _{12}}t}}}&amp;{{A_{13}}{e^{{\omega _{13}}t}}}&amp; \cdots \\ {{A_{21}}{e^{i{\omega _{21}}t}}}&amp;{{A_{22}}}&amp;{{A_{23}}{e^{{\omega _{23}}t}}}&amp; \cdots \\ {{A_{31}}{e^{i{\omega _{31}}t}}}&amp;{{A_{32}}{e^{{\omega _{32}}t}}}&amp;{{A_{33}}}&amp; \cdots \\ \vdots &amp; \vdots &amp; \vdots &amp; \ddots \end{array}} \right)\left( {\begin{array}{*{20}{c}} {\langle 1\vert {\psi (0)}\rangle }\\ {\langle 2\vert {\psi (0)}\rangle }\\ \vdots \\ \vdots \end{array}} \right)
-\tag{5.27}\]</span></span></p>
+\tag{5.25}\]</span></span></p>
 <p>We can also find how an expectation value changes without solving for the whole state first. Assume that <span class="math inline">\(\hat A\)</span> has no explicit time dependence.</p>
 <p>First, take the adjoint of the Schrödinger equation to get its bra form:</p>
 <p><span id="eq-ch05-p1393"><span class="math display">\[
 - i\hbar \frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right\vert  = \left\langle {\psi \left( t \right)} \right\vert \hat H
-\tag{5.28}\]</span></span></p>
+\tag{5.26}\]</span></span></p>
 <p>Therefore,</p>
 <p><span id="eq-zeqnnum471083"><span class="math display">\[
 \begin{array}{c} \frac{\partial }{{\partial t}}\left(\left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle\right) = \left( {\frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right\vert } \right)\hat A\left\vert  {\psi \left( t \right)} \right\rangle + \left\langle {\psi \left( t \right)} \right\vert \hat A \left(\frac{\partial }{{\partial t}}\left\vert  {\psi \left( t \right)} \right\rangle \right) \\ = \frac{{ - 1}}{{i\hbar }}\left\langle {\psi \left( t \right)} \right\vert \hat H\hat A\left\vert  {\psi \left( t \right)} \right\rangle + \frac{1}{{i\hbar }}\left\langle {\psi \left( t \right)} \right\vert \hat A\hat H\left\vert  {\psi \left( t \right)} \right\rangle \end{array}
-\tag{5.29}\]</span></span></p>
+\tag{5.27}\]</span></span></p>
 <p>Multiply by <span class="math inline">\(i\hbar\)</span> to obtain</p>
 <p><span id="eq-zeqnnum848461"><span class="math display">\[
 i\hbar \frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle = \left\langle {\psi \left( t \right)} \right\vert [\hat A,\hat H]\left\vert  {\psi \left( t \right)} \right\rangle
-\tag{5.30}\]</span></span></p>
+\tag{5.28}\]</span></span></p>
 <p>This is often abbreviated as</p>
 <p><span id="eq-zeqnnum974147"><span class="math display">\[
 i\hbar \frac{\partial }{{\partial t}}\langle \hat A(t)\rangle = \langle [\hat A,\hat H]\rangle
-\tag{5.31}\]</span></span></p>
+\tag{5.29}\]</span></span></p>
 </section>
 <section id="constants-of-motion" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="constants-of-motion"><span class="header-section-number">5.4</span> Constants of motion</h2>
-<p>Now suppose <span class="math inline">\(\hat A\)</span> has no explicit time dependence and commutes with the Hamiltonian: <span class="math inline">\([\hat A,\hat H]=0\)</span>. <a href="#eq-zeqnnum848461" class="quarto-xref">Equation&nbsp;<span>5.30</span></a> then gives</p>
+<p>Now suppose <span class="math inline">\(\hat A\)</span> has no explicit time dependence and commutes with the Hamiltonian: <span class="math inline">\([\hat A,\hat H]=0\)</span>. <a href="#eq-zeqnnum848461" class="quarto-xref">Equation&nbsp;<span>5.28</span></a> then gives</p>
 <p><span id="eq-ch05-p1401"><span class="math display">\[
 \frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle = 0
-\tag{5.32}\]</span></span></p>
+\tag{5.30}\]</span></span></p>
 <p>The expectation value stays constant. There is an even stronger result: if <span class="math inline">\(\hat A\)</span> starts with a definite value, it keeps that value. Exercise 5.2 explores why the whole probability distribution stays fixed.</p>
 <p>We call such an observable a <strong>constant of motion</strong>, or a <strong>conserved observable</strong>. Its quantum numbers are <strong>good quantum numbers</strong>: we can use them to label the state throughout the evolution. Energy provides a familiar example. Since <span class="math inline">\([\hat H,\hat H]=0\)</span>, energy is conserved when the Hamiltonian has no explicit time dependence.</p>
 </section>
