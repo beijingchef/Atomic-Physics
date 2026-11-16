@@ -260,15 +260,16 @@ window.Quarto = {
 </header>
 
 
-<p>A state that is not an energy eigenstate evolves and can exhibit oscillations. Here we begin in an eigenstate of a dominant Hamiltonian and apply a small periodic perturbation that does not commute with it. This can drive oscillations between its eigenstates. Electron spin in a magnetic field remains our example.</p>
+<p>An energy eigenstate stays stationary under a time-independent Hamiltonian. How can we move the system into another energy state? We can apply a weak, periodic disturbance. If it couples the states, even a small disturbance can transfer the population back and forth. Let us see how this works for an electron’s spin in a magnetic field.</p>
 <section id="magnetic-resonance" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="magnetic-resonance"><span class="header-section-number">6.1</span> Magnetic resonance</h2>
-<p>An electron in static field <span class="math inline">\({{\bf{B}}_0} = {B_0}{\bf{\hat z}}\)</span> initially has spin state <span class="math inline">\(\vert U\rangle\)</span>. States <span class="math inline">\(\vert U\rangle\)</span> and <span class="math inline">\(\vert D\rangle\)</span> have energies <span class="math inline">\({\mu _{\rm{B}}}B\)</span> and <span class="math inline">\(- {\mu _{\rm{B}}}{B_0}\)</span>. Both are stationary, so the system remains in either state without a perturbation. Apply a transverse oscillating field <span class="math inline">\({\bf{B'}}\)</span> at frequency <span class="math inline">\(\omega\)</span>, perpendicular to <span class="math inline">\({{\bf{B}}_0}\)</span>, with <span class="math inline">\(\left\vert  {{\bf{B'}}} \right\vert  \ll \left\vert  {{{\bf{B}}_0}} \right\vert\)</span>. Although weak, the periodic perturbation can profoundly affect the evolution under suitable conditions.</p>
-<p>Write the transverse field as</p>
+<p>Start with an electron in a static field <span class="math inline">\(\mathbf B_0=B_0\hat{\mathbf z}\)</span> and prepare its spin in <span class="math inline">\(\vert U\rangle\)</span>. The states <span class="math inline">\(\vert U\rangle\)</span> and <span class="math inline">\(\vert D\rangle\)</span> have energies <span class="math inline">\(\mu_{\mathrm B}B_0\)</span> and <span class="math inline">\(-\mu_{\mathrm B}B_0\)</span>. With the static field alone, each is stationary.</p>
+<p>Now add a much weaker field <span class="math inline">\(\mathbf B'\)</span> in the transverse plane, perpendicular to <span class="math inline">\(\mathbf B_0\)</span>. Let it oscillate at angular frequency <span class="math inline">\(\omega\)</span>, with <span class="math inline">\(|\mathbf B'|\ll|\mathbf B_0|\)</span>. Think of a small, repeated push: its timing can matter as much as its strength.</p>
+<p>Write the transverse field in components:</p>
 <p><span id="eq-zeqnnum692846"><span class="math display">\[
 {\bf{B'}} = {B'_x}{\bf{\hat x}} + {B'_y}{\bf{\hat y}}
 \tag{6.1}\]</span></span></p>
-<p>Let <span class="math inline">\({\bf{B'}}\)</span> be a constant-magnitude circularly polarized field rotating in the same sense as the electron’s precession in <span class="math inline">\({{\bf{B}}_0}\)</span>:</p>
+<p>For a first example, let <span class="math inline">\(\mathbf B'\)</span> rotate in the transverse plane while keeping a constant magnitude. Choose the same rotation sense as the electron’s precession in <span class="math inline">\(\mathbf B_0\)</span>:</p>
 <p><span id="eq-zeqnnum766276"><span class="math display">\[
 {B'_x} = B'\cos \omega t; \qquad  \qquad  {B'_y} = B'\sin \omega t
 \tag{6.2}\]</span></span></p>
@@ -276,20 +277,20 @@ window.Quarto = {
 <p><span id="eq-zeqnnum126030"><span class="math display">\[
 \hat H = - {{\bf{\mu }}_{\rm{S}}} \cdot \left( {{{\bf{B}}_0} + {\bf{B'}}} \right) = {\hat H_0} + \hat V(t)
 \tag{6.3}\]</span></span></p>
-<p>Here <span class="math inline">\({\hat H_0}\)</span> and <span class="math inline">\(\hat V\)</span> are the static-field and oscillating-field energy operators. In the <span class="math inline">\({\hat \sigma _z}\)</span> representation,</p>
+<p>We have split the Hamiltonian into two parts. The static field gives <span class="math inline">\(\hat H_0\)</span>, and the rotating field gives <span class="math inline">\(\hat V\)</span>. In the <span class="math inline">\(\hat\sigma_z\)</span> basis,</p>
 <p><span id="eq-zeqnnum864064"><span class="math display">\[
 {\hat H_0} = - {{\bf{\mu }}_{\rm{S}}} \cdot {{\bf{B}}_0} = {\mu _{\rm{B}}}{\hat \sigma _z}{B_0} \buildrel\textstyle.\over= {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} {{B_0}}&amp;0\\ 0&amp;{ - {B_0}} \end{array}} \right) = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&amp;0\\ 0&amp;{ - {\omega _0}} \end{array}} \right)
 \tag{6.4}\]</span></span></p>
-<p>Here <span class="math inline">\({\omega _0} \equiv {{({E_1} - {E_2})} \mathord{\left/ {\vphantom {{({E_1} - {E_2})} \hbar }} \right. \kern-1.2pt } \hbar } = {{2{\mu _{\rm{B}}}{B_0}} \mathord{\left/ {\vphantom {{2{\mu _{\rm{B}}}{B_0}} \hbar }} \right. \kern-1.2pt } \hbar }\)</span> is the static-field Larmor frequency.</p>
+<p>Here <span class="math inline">\(\omega_0\equiv(E_1-E_2)/\hbar=2\mu_{\mathrm B}B_0/\hbar\)</span> is the <strong>Larmor frequency</strong> in the static field. It sets the natural angular frequency against which we compare the drive.</p>
 <p><span id="eq-zeqnnum833059"><span class="math display">\[
 \begin{array}{c} \hat V(t) = - {{\bf{\mu }}_{\rm{S}}} \cdot {\bf{B'}} = {\mu _{\rm{B}}}\left( {{{\hat \sigma }_x}{{B'}_x} + {{\hat \sigma }_y}{{B'}_y}} \right) \buildrel\textstyle.\over= {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} 0&amp;{{{B'}_x} - i{{B'}_y}}\\ {{{B'}_x} + i{{B'}_y}}&amp;0 \end{array}} \right)\\ = {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} 0&amp;{B'{e^{ - i\omega t}}}\\ {B'{e^{i\omega t}}}&amp;0 \end{array}} \right) = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&amp;{{\Omega _0}{e^{ - i\omega t}}}\\ {{\Omega _0}{e^{i\omega t}}}&amp;0 \end{array}} \right) \end{array}
 \tag{6.5}\]</span></span></p>
-<p>The quantity <span class="math inline">\({\Omega _0} \equiv {{2{\mu _{\rm{B}}}B'} \mathord{\left/ {\vphantom {{2{\mu _{\rm{B}}}B'} \hbar }} \right. \kern-1.2pt } \hbar }\)</span> is the <strong>Rabi frequency</strong>, or resonant Rabi frequency. Rabi received the 1944 Nobel Prize in Physics for the atomic and molecular beam magnetic-resonance method.</p>
+<p>We call <span class="math inline">\(\Omega_0\equiv2\mu_{\mathrm B}B'/\hbar\)</span> the <strong>resonant Rabi frequency</strong>. It measures the strength of the drive in frequency units. Rabi received the 1944 Nobel Prize in Physics for his magnetic-resonance method using atomic and molecular beams.</p>
 <p>The total Hamiltonian is therefore</p>
 <p><span id="eq-zeqnnum963082"><span class="math display">\[
 \hat H \buildrel\textstyle.\over= \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&amp;{{\Omega _0}{e^{ - i\omega t}}}\\ {{\Omega _0}{e^{i\omega t}}}&amp;{ - {\omega _0}} \end{array}} \right)
 \tag{6.6}\]</span></span></p>
-<p>Expand spin state <span class="math inline">\(\vert {\psi (t)}\rangle\)</span> at time <span class="math inline">\(t\)</span> in the <span class="math inline">\({\hat \sigma _z}\)</span> representation, incorporating the initial condition:</p>
+<p>Expand the spin state in the <span class="math inline">\(\hat\sigma_z\)</span> basis. We also include the initial condition, which puts all the population in <span class="math inline">\(\vert U\rangle\)</span>:</p>
 <p><span id="eq-zeqnnum361616"><span class="math display">\[
 \vert {\psi (t)}\rangle = {c_1}(t)\vert U\rangle + {c_2}(t)\left\vert  D \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {{c_1}(t)}\\ {{c_2}(t)} \end{array}} \right), \qquad  {\left\vert  {{c_1}} \right\vert ^2} + {\left\vert  {{c_2}} \right\vert ^2} = 1,\;\;\left( {\begin{array}{*{20}{c}} {{c_1}(0) = 1}\\ {{c_2}(0) = 0} \end{array}} \right),\;\;
 \tag{6.7}\]</span></span></p>
@@ -297,39 +298,40 @@ window.Quarto = {
 <p><span id="eq-zeqnnum927934"><span class="math display">\[
 \left( {\begin{array}{*{20}{c}} {{{\dot c}_1}}\\ {{{\dot c}_2}} \end{array}} \right) = - \frac{i}{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&amp;{{\Omega _0}{e^{ - i\omega t}}}\\ {{\Omega _0}{e^{i\omega t}}}&amp;{ - {\omega _0}} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{c_1}}\\ {{c_2}} \end{array}} \right)
 \tag{6.8}\]</span></span></p>
-<p>Introduce a rotating-frame transformation:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>The rapidly changing phase factors make these equations look more complicated than they need to. We can remove them by moving to a rotating frame:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p><span id="eq-zeqnnum414068"><span class="math display">\[
 {c_1}(t) = {d_1}(t){e^{ - {{i\omega t} \mathord{\left/ {\vphantom {{i\omega t} 2}} \right. \kern-1.2pt } 2}}}; \qquad  {c_2}(t) = {d_2}(t){e^{{{i\omega t} \mathord{\left/ {\vphantom {{i\omega t} 2}} \right. \kern-1.2pt } 2}}}.
 \tag{6.9}\]</span></span></p>
-<p>Equation <a href="#eq-zeqnnum927934" class="quarto-xref">Equation&nbsp;<span>6.8</span></a> becomes a system without the rapid oscillating factors:</p>
+<p>In this frame, <a href="#eq-zeqnnum927934" class="quarto-xref">Equation&nbsp;<span>6.8</span></a> becomes</p>
 <p><span id="eq-zeqnnum721542"><span class="math display">\[
 \left( {\begin{array}{*{20}{c}} {{{\dot d}_1}}\\ {{{\dot d}_2}} \end{array}} \right) = \frac{i}{2}\left( {\begin{array}{*{20}{c}} \Delta &amp;{ - {\Omega _0}}\\ { - {\Omega _0}}&amp;{ - \Delta } \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{d_1}}\\ {{d_2}} \end{array}} \right), \qquad  \left( {\begin{array}{*{20}{c}} {{d_1}(0)}\\ {{d_2}(0)} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right)
 \tag{6.10}\]</span></span></p>
-<p>Here <span class="math inline">\(\Delta \equiv \omega - {\omega _0}\)</span> is the <strong>detuning</strong>. The solution of <a href="#eq-zeqnnum721542" class="quarto-xref">Equation&nbsp;<span>6.10</span></a> is given below; the derivation appears in this chapter’s appendix.</p>
+<p>The difference <span class="math inline">\(\Delta\equiv\omega-\omega_0\)</span> is the <strong>detuning</strong>. It tells us how far the drive is from the natural transition frequency. The solution of <a href="#eq-zeqnnum721542" class="quarto-xref">Equation&nbsp;<span>6.10</span></a> is below; you can follow its derivation in the appendix.</p>
 <p><span id="eq-zeqnnum460032"><span class="math display">\[
 \begin{array}{l} {d_1}(t) = \cos \frac{{\Omega t}}{2} + i\frac{\Delta }{\Omega }\sin \frac{{\Omega t}}{2}\\ {d_2}(t) = - i\frac{{{\Omega _0}}}{\Omega }\sin \frac{{\Omega t}}{2} \end{array}
 \tag{6.11}\]</span></span></p>
-<p>The quantity <span class="math inline">\(\Omega \equiv \sqrt {{\Delta ^2} + \Omega _0^2}\)</span> is the <strong>generalized Rabi frequency</strong>. Substituting <a href="#eq-zeqnnum460032" class="quarto-xref">Equation&nbsp;<span>6.11</span></a> into <a href="#eq-zeqnnum414068" class="quarto-xref">Equation&nbsp;<span>6.9</span></a> and then <a href="#eq-zeqnnum361616" class="quarto-xref">Equation&nbsp;<span>6.7</span></a> gives <span class="math inline">\(\vert {\psi (t)}\rangle\)</span> at any time. The probabilities of states <span class="math inline">\(\vert U\rangle\)</span> and <span class="math inline">\(\vert D\rangle\)</span> are</p>
+<p>Here <span class="math inline">\(\Omega\equiv\sqrt{\Delta^2+\Omega_0^2}\)</span> is the <strong>generalized Rabi frequency</strong>. To recover <span class="math inline">\(\vert\psi(t)\rangle\)</span>, substitute <a href="#eq-zeqnnum460032" class="quarto-xref">Equation&nbsp;<span>6.11</span></a> into <a href="#eq-zeqnnum414068" class="quarto-xref">Equation&nbsp;<span>6.9</span></a> and then into <a href="#eq-zeqnnum361616" class="quarto-xref">Equation&nbsp;<span>6.7</span></a>. The probabilities for the two spin states are</p>
 <p><span id="eq-zeqnnum748213"><span class="math display">\[
 \begin{gathered} {P_1}(t) \equiv {\left\vert  {{c_1}(t)} \right\vert ^2} = \frac{1}{2}\left( {1 + \frac{{{\Delta ^2}}}{{{\Omega ^2}}}} \right) + \frac{1}{2}\frac{{\Omega _0^2}}{{{\Omega ^2}}}\cos \Omega t\xrightarrow{{\Delta = 0}}\frac{1}{2}\left( {1 + \cos {\Omega _0}t} \right)  \\ {P_2}(t) \equiv {\left\vert  {{c_2}(t)} \right\vert ^2} = \frac{1}{2}\frac{{\Omega _0^2}}{{{\Omega ^2}}}\left( {1 - \cos \Omega t} \right)\xrightarrow{{\Delta = 0}}\frac{1}{2}\left( {1 - \cos {\Omega _0}t} \right)  \\ \Delta \equiv \omega - {\omega _0},\, \qquad  {\Omega _0} \equiv {{2{\mu _{\text{B}}}B'} \mathord{\left/ {\vphantom {{2{\mu _{\text{B}}}B'} \hbar }} \right. \kern-1.2pt } \hbar }, \qquad  \;\;\;\;\;\;\Omega \equiv \sqrt {{\Delta ^2} + \Omega _0^2} ,  \\ \end{gathered}
 \tag{6.12}\]</span></span></p>
-<p>Both <span class="math inline">\({P}_{1}\)</span> and <span class="math inline">\({P}_{2}\)</span> oscillate at <span class="math inline">\(\Omega\)</span>, describing population transfer between the two levels.</p>
-<p>Figure 6.1 plots <span class="math inline">\({P_2}\)</span> for several detunings. At <span class="math inline">\(\Delta = 0\)</span>, <span class="math inline">\({P_2}\)</span> oscillates most slowly but with maximum contrast, ranging from zero to one. The condition <span class="math inline">\(\Delta = 0\)</span> is <strong>resonance</strong>. Increasing detuning increases the oscillation frequency of <span class="math inline">\({P_2}\)</span> but reduces its amplitude and the transition probability. By <a href="#eq-zeqnnum748213" class="quarto-xref">Equation&nbsp;<span>6.12</span></a>, whenever <span class="math inline">\(\Omega t\)</span> is an even multiple of <span class="math inline">\(\pi\)</span>, <span class="math inline">\({P}_{2}=0\)</span> and <span class="math inline">\({P}_{1}=1\)</span>, so the initial population returns. Whenever <span class="math inline">\(\Omega t\)</span> is an odd multiple of <span class="math inline">\(\pi\)</span>, <span class="math inline">\({P}_{2}\)</span> reaches its maximum for that detuning. At resonance, <span class="math inline">\({P}_{2}=1\)</span>, corresponding to complete transfer to the other level.</p>
-<p>The drive <span class="math inline">\({\bf{B'}}\)</span> makes <span class="math inline">\({P}_{2}\)</span> oscillate at <span class="math inline">\(\Omega\)</span>. As <span class="math inline">\({P}_{2}\)</span> increases, the electron’s mean magnetic energy decreases, transferring energy to the drive: <strong>stimulated emission</strong>. As <span class="math inline">\({P}_{2}\)</span> decreases, its mean energy increases by absorbing energy from the drive: <strong>stimulated absorption</strong>. Both arise from the same mechanism, explaining the equality of Einstein’s corresponding coefficients for this two-state case.</p>
+<p>The probabilities <span class="math inline">\(P_1\)</span> and <span class="math inline">\(P_2\)</span> oscillate at angular frequency <span class="math inline">\(\Omega\)</span>. Population flows from one level to the other and then back again. We call this motion <strong>Rabi oscillation</strong>.</p>
+<p>Figure 6.1 shows what changes when we vary the detuning. At <span class="math inline">\(\Delta=0\)</span>, the drive is on <strong>resonance</strong>. The probability <span class="math inline">\(P_2\)</span> swings all the way from zero to one. The oscillation is slowest here, but its range is largest.</p>
+<p>Away from resonance, the oscillations get faster and their range shrinks. <a href="#eq-zeqnnum748213" class="quarto-xref">Equation&nbsp;<span>6.12</span></a> gives the timing: at even multiples of <span class="math inline">\(\pi\)</span> in <span class="math inline">\(\Omega t\)</span>, the initial population returns, with <span class="math inline">\(P_2=0\)</span> and <span class="math inline">\(P_1=1\)</span>. At odd multiples, <span class="math inline">\(P_2\)</span> reaches its maximum for that detuning. Only on resonance does that maximum reach one, giving complete transfer to the other level.</p>
+<p>As <span class="math inline">\(P_2\)</span> grows, the electron moves toward the lower-energy state. Its mean magnetic energy decreases, and energy goes to the drive. This is <strong>stimulated emission</strong>. As <span class="math inline">\(P_2\)</span> falls, the electron takes energy from the drive. This is <strong>stimulated absorption</strong>. The same coupling produces both processes, which explains why the corresponding Einstein coefficients are equal in this two-state case.</p>
 <p><img src="assets/image1150.png" class="img-fluid" width="410"></p>
 <div class="source-caption">
 <p>Figure 6.1. Probability of electron spin state <span class="math inline">\(\vert D\rangle\)</span> versus time at different detunings.</p>
 </div>
-<p>By <a href="#eq-zeqnnum748213" class="quarto-xref">Equation&nbsp;<span>6.12</span></a>, the oscillatory amplitudes of <span class="math inline">\({P}_{2}\)</span> and <span class="math inline">\({P}_{1}\)</span> are both</p>
+<p>How much population can the drive transfer? By <a href="#eq-zeqnnum748213" class="quarto-xref">Equation&nbsp;<span>6.12</span></a>, the size of the oscillating part of either probability is</p>
 <p><span id="eq-zeqnnum340775"><span class="math display">\[
 {P_0}(\Delta ) = \frac{1}{2}\frac{{\Omega _0^2}}{{{\Omega ^2}}} = \frac{1}{2}\frac{{\Omega _0^2}}{{{\Delta ^2} + \Omega _0^2}}
 \tag{6.13}\]</span></span></p>
-<p>At fixed <span class="math inline">\({\Omega _0}\)</span>, <span class="math inline">\({P_0}(\Delta )\)</span> is a peaked function of detuning <span class="math inline">\(\Delta\)</span>, as in Figure 6.2. Its half-width at half-maximum (HWHM) is <span class="math inline">\({\Omega _0}\)</span>. Since <span class="math inline">\({\Omega _0}\)</span> is proportional to drive amplitude, stronger excitation broadens the line. This <strong>power broadening</strong> occurs in magnetic-resonance and spectroscopic measurements of level separations, such as absorption spectra.</p>
+<p>Keep the drive strength <span class="math inline">\(\Omega_0\)</span> fixed and scan its frequency. The maximum transfer <span class="math inline">\(P_0(\Delta)\)</span> traces the peak in Figure 6.2. Its half-width at half-maximum (HWHM) is <span class="math inline">\(\Omega_0\)</span>: at that detuning, the peak has fallen to half its height. A stronger drive therefore makes the resonance broader. We call this <strong>power broadening</strong>. It matters when we use magnetic resonance or spectroscopy to measure energy-level separations.</p>
 <p><img src="assets/image1158.png" class="img-fluid" width="379"><img src="assets/image1159.svg" class="img-fluid" width="379"></p>
 <div class="source-caption">
 <p>Figure 6.2. <span class="math inline">\({P_0}(\Delta )\)</span> peaks at <span class="math inline">\(\Delta = 0\)</span> and has HWHM <span class="math inline">\({\Omega _0}\)</span>. Zero detuning is resonance.</p>
 </div>
-<p>We can also calculate the evolution of the mean spin vector <span class="math inline">\(\langle {\psi (t)}\vert {{{\hat S}_{x,y,z}}}\vert {\psi (t)}\rangle\)</span>.</p>
+<p>We can also follow the mean spin vector by calculating <span class="math inline">\(\langle\psi(t)\vert\hat S_{x,y,z}\vert\psi(t)\rangle\)</span>:</p>
 <p><span id="eq-ch06-p1453"><span class="math display">\[
 \begin{gathered} \langle {{{\hat S}_z}}(t)\rangle = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {c_1^*,}&amp;{c_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 1&amp;0 \\ 0&amp;{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{c_1}} \\ {{c_2}} \end{array}} \right) = \frac{\hbar }{2}\left( {{{\left\vert  {{c_1}} \right\vert }^2} - {{\left\vert  {{c_2}} \right\vert }^2}} \right) \\ = \frac{\hbar }{2}\left[ {\left( {1 - \frac{{\Omega _0^2}}{{{\Omega ^2}}}} \right) + \frac{{\Omega _0^2}}{{{\Omega ^2}}}\cos \Omega t} \right]\xrightarrow{{\Delta = 0}}\frac{\hbar }{2}\cos {\Omega _0}t \\ \end{gathered}
 \tag{6.14}\]</span></span></p>
@@ -339,11 +341,11 @@ window.Quarto = {
 <p><span id="eq-ch06-p1455"><span class="math display">\[
 \begin{gathered} \langle {{{\hat S}_y}(t)}\rangle = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {c_1^*,}&amp;{c_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&amp;{ - i} \\ i&amp;0 \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{c_1}} \\ {{c_2}} \end{array}} \right) = \frac{{i\hbar }}{2}\left( {{c_1}c_2^* - c_1^*{c_2}} \right) \\ = - \frac{\hbar }{2}\frac{{{\Omega _0}}}{{{\Omega ^2}}}\left[ {\Omega \sin \Omega t\cos \omega t + \Delta (1 - \cos \Omega t)\sin \omega t} \right] \\ \xrightarrow{{\Delta = 0}} - \frac{\hbar }{2}\sin {\Omega _0}t\cos {\omega _0}t \\ \end{gathered}
 \tag{6.16}\]</span></span></p>
-<p>A linearly polarized drive <span class="math inline">\({\bf{B'}}\)</span> is easier to produce than a circularly polarized one. For polarization along <span class="math inline">\(x\)</span> with amplitude <span class="math inline">\(2B'\)</span>, write <span class="math inline">\({\bf{B'}}\)</span> as</p>
+<p>In the laboratory, a linearly polarized field is easier to produce. Let it point along <span class="math inline">\(x\)</span> and have amplitude <span class="math inline">\(2B'\)</span>. We can write it as</p>
 <p><span id="eq-ch06-p1457"><span class="math display">\[
 {B'_x} = 2B'\cos \omega t; \qquad  \qquad  {B'_y} = 0
 \tag{6.17}\]</span></span></p>
-<p>Its interaction <span class="math inline">\({\bf{B'}}\)</span> with the electron magnetic moment has Hamiltonian</p>
+<p>Its interaction with the electron’s magnetic moment gives</p>
 <p><span id="eq-zeqnnum472633"><span class="math display">\[
 \begin{array}{c} \hat V(t) = 2{\mu _{\rm{B}}}B'\cos \omega t\left( {\begin{array}{*{20}{c}} 0&amp;1\\ 1&amp;0 \end{array}} \right) = \hbar \left( {\begin{array}{*{20}{c}} 0&amp;{{\Omega _0}\cos \omega t}\\ {{\Omega _0}\cos \omega t}&amp;0 \end{array}} \right)\\ = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&amp;{{\Omega _0}({e^{i\omega t}} + {e^{ - i\omega t}})}\\ {{\Omega _0}({e^{i\omega t}} + {e^{ - i\omega t}})}&amp;0 \end{array}} \right) \end{array}
 \tag{6.18}\]</span></span></p>
@@ -355,15 +357,16 @@ window.Quarto = {
 <p><span id="eq-zeqnnum877206"><span class="math display">\[
 \begin{array}{c} {{\dot d}_1} = \frac{i}{2}\left[ {\Delta {d_1} - {\Omega _0}({e^{2i\omega t}} + 1){d_2}} \right],\\ {{\dot d}_2} = \frac{i}{2}\left[ { - {\Omega _0}(1 + {e^{ - 2i\omega t}}){d_1} - \Delta {d_2}} \right], \end{array}
 \tag{6.20}\]</span></span></p>
-<p>Assume <span class="math inline">\(B' \ll {B_0}\)</span> and near resonance between <span class="math inline">\(\omega\)</span> and <span class="math inline">\({\omega _0}\)</span>, namely <span class="math inline">\({\Omega _0},\;\left\vert  \Delta \right\vert  \ll {\omega _0},\omega\)</span>. These are the near-resonant, weak-drive conditions. In <a href="#eq-zeqnnum877206" class="quarto-xref">Equation&nbsp;<span>6.20</span></a>, the factors <span class="math inline">\({e^{ \pm 2i\omega t}}\)</span> oscillate much faster than changes on the scales <span class="math inline">\(\Delta\)</span> and <span class="math inline">\({\Omega _0}\)</span>, so they may be replaced by their zero time average. This is the <strong>rotating-wave approximation</strong>. Equation <a href="#eq-zeqnnum877206" class="quarto-xref">Equation&nbsp;<span>6.20</span></a> then reduces to <a href="#eq-zeqnnum721542" class="quarto-xref">Equation&nbsp;<span>6.10</span></a> and has the same solution. A weak near-resonant linear drive is therefore approximately equivalent to a circular drive with half its amplitude.</p>
+<p>Now assume a weak drive close to resonance: <span class="math inline">\(B'\ll B_0\)</span> and <span class="math inline">\(\Omega_0,|\Delta|\ll\omega_0,\omega\)</span>. In <a href="#eq-zeqnnum877206" class="quarto-xref">Equation&nbsp;<span>6.20</span></a>, the factors <span class="math inline">\(e^{\pm2i\omega t}\)</span> then cycle much faster than <span class="math inline">\(d_1\)</span> and <span class="math inline">\(d_2\)</span> change. Their effects largely average out. Dropping these fast terms is the <strong>rotating-wave approximation</strong>.</p>
+<p>The equation reduces to <a href="#eq-zeqnnum721542" class="quarto-xref">Equation&nbsp;<span>6.10</span></a>, so we can reuse the solution we already have. Near resonance, a weak linear drive acts approximately like a circular drive with half its amplitude.</p>
 </section>
 <section id="transitions-in-a-general-two-level-system" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="transitions-in-a-general-two-level-system"><span class="header-section-number">6.2</span> Transitions in a general two-level system</h2>
-<p>The magnetic-resonance analysis extends to other two-level transitions. For any two-level system of separation <span class="math inline">\(\hbar {\omega _0}\)</span>, shifting the energy origin gives the unperturbed eigenvalue equation</p>
+<p>The same mathematics works far beyond electron spin. Consider any two-level system with energy separation <span class="math inline">\(\hbar\omega_0\)</span>. We can choose the zero of energy halfway between the levels and write</p>
 <p><span id="eq-ch06-p1468"><span class="math display">\[
 \begin{array}{l} {{\hat H}_0}\vert e\rangle = \hbar \frac{{{\omega _0}}}{2}\vert e\rangle \\ {{\hat H}_0}\vert g\rangle = - \hbar \frac{{{\omega _0}}}{2}\vert g\rangle \end{array}
 \tag{6.21}\]</span></span></p>
-<p>Here <span class="math inline">\(\vert e\rangle ,{\rm{ }}\vert g\rangle\)</span> denote excited and ground states. In the <span class="math inline">\({\hat H_0}\)</span> representation,</p>
+<p>Here <span class="math inline">\(\vert e\rangle\)</span> is the excited state and <span class="math inline">\(\vert g\rangle\)</span> is the ground state. In this energy basis,</p>
 <p><span id="eq-zeqnnum616848"><span class="math display">\[
 {\hat H_0} = \hbar \left( {\begin{array}{*{20}{c}} {{{{\omega _0}} \mathord{\left/ {\vphantom {{{\omega _0}} 2}} \right. \kern-1.2pt } 2}}&amp;0\\ 0&amp;{{{ - {\omega _0}} \mathord{\left/ {\vphantom {{ - {\omega _0}} 2}} \right. \kern-1.2pt } 2}} \end{array}} \right)
 \tag{6.22}\]</span></span></p>
@@ -371,20 +374,20 @@ window.Quarto = {
 <p><span id="eq-ch06-p1472"><span class="math display">\[
 \hat V(t) = \left( {\begin{array}{*{20}{c}} {\langle 1\vert {{{\hat V}_0}}\vert 1\rangle }&amp;{\langle 1\vert {{{\hat V}_0}}\vert 2\rangle }\\ {{{\langle 1\vert {{{\hat V}}_0}\vert 2\rangle }^*}}&amp;{\langle 2\vert {{{\hat V}_0}}\vert 2\rangle } \end{array}} \right)\cos \omega t
 \tag{6.23}\]</span></span></p>
-<p>Frequently <span class="math inline">\({\hat V_0}\)</span> has zero diagonal elements, <span class="math inline">\(\langle 1\vert {{{\hat V}_0}}\vert 1\rangle = \langle 2\vert {{{\hat V}_0}}\vert 2\rangle = 0\)</span>, and <span class="math inline">\(\langle 1\vert {{{\hat V}_0}}\vert 2\rangle\)</span> is real. Defining <span class="math inline">\({\Omega _0} \equiv {{\langle 1\vert {{{\hat V}_0}}\vert 2\rangle } \mathord{\left/ {\vphantom {{\langle 1\vert {{{\hat V}_0}}\vert 2\rangle } \hbar }} \right. \kern-1.2pt } \hbar }\)</span> gives</p>
+<p>A common case has zero diagonal elements, <span class="math inline">\(\langle1\vert\hat V_0\vert1\rangle=\langle2\vert\hat V_0\vert2\rangle=0\)</span>, and a real off-diagonal element <span class="math inline">\(\langle1\vert\hat V_0\vert2\rangle\)</span>. The labels <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span> refer to <span class="math inline">\(e\)</span> and <span class="math inline">\(g\)</span>. Define <span class="math inline">\(\Omega_0\equiv\langle1\vert\hat V_0\vert2\rangle/\hbar\)</span>. Then</p>
 <p><span id="eq-zeqnnum790744"><span class="math display">\[
 \hat V(t) = \hbar \left( {\begin{array}{*{20}{c}} 0&amp;{{\Omega _0}\cos \omega t}\\ {\Omega _0^{}\cos \omega t}&amp;0 \end{array}} \right)
 \tag{6.24}\]</span></span></p>
-<p>Equations <a href="#eq-zeqnnum616848" class="quarto-xref">Equation&nbsp;<span>6.22</span></a> and <a href="#eq-zeqnnum790744" class="quarto-xref">Equation&nbsp;<span>6.24</span></a> have the same form as <a href="#eq-zeqnnum864064" class="quarto-xref">Equation&nbsp;<span>6.4</span></a> and <a href="#eq-zeqnnum472633" class="quarto-xref">Equation&nbsp;<span>6.18</span></a>. Such a two-level transition is therefore mathematically equivalent to spin-1/2 magnetic resonance.</p>
+<p>Compare <a href="#eq-zeqnnum616848" class="quarto-xref">Equation&nbsp;<span>6.22</span></a> and <a href="#eq-zeqnnum790744" class="quarto-xref">Equation&nbsp;<span>6.24</span></a> with <a href="#eq-zeqnnum864064" class="quarto-xref">Equation&nbsp;<span>6.4</span></a> and <a href="#eq-zeqnnum472633" class="quarto-xref">Equation&nbsp;<span>6.18</span></a>. They have the same form. We can therefore use the spin-1/2 magnetic-resonance calculation to describe this two-level transition too.</p>
 </section>
 <section id="density-matrices-and-the-bloch-vector" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="density-matrices-and-the-bloch-vector"><span class="header-section-number">6.3</span> * Density matrices and the Bloch vector</h2>
-<p>The preceding sections reduce two-level evolution to <a href="#eq-zeqnnum460032" class="quarto-xref">Equation&nbsp;<span>6.11</span></a>, the evolution of <span class="math inline">\({d_1},{d_2}\)</span>. We now give it a geometric interpretation.</p>
-<p>An arbitrary pure state of a two-level system can be written as</p>
+<p>So far, we have followed two complex amplitudes, <span class="math inline">\(d_1\)</span> and <span class="math inline">\(d_2\)</span>. Can we picture their evolution? The <strong>Bloch vector</strong> turns this algebra into motion in ordinary three-dimensional space.</p>
+<p>After choosing an overall phase, we can write any pure state of a two-level system as</p>
 <p><span id="eq-ch06-p1479"><span class="math display">\[
 \left( {\begin{array}{*{20}{c}} {{d_1}}\\ {{d_2}} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {{e^{i\phi }}\sin \frac{\theta }{2}} \end{array}} \right)
 \tag{6.25}\]</span></span></p>
-<p>Define the Cartesian <strong>Bloch vector</strong> <span class="math inline">\({\bf{P}} = \left\{ {u,v,w} \right\}\)</span>:</p>
+<p>Define a real vector <span class="math inline">\(\mathbf P=\{u,v,w\}\)</span>, called the <strong>Bloch vector</strong>:</p>
 <p><span id="eq-zeqnnum365247"><span class="math display">\[
 \begin{array}{l} u = {\rho _{12}} + {\rho _{21}}\\ v = i({\rho _{12}} - {\rho _{21}})\\ \omega = {\rho _{11}} - {\rho _{22}} \end{array}
 \tag{6.26}\]</span></span></p>
@@ -399,11 +402,11 @@ window.Quarto = {
 <p><span id="eq-ch06-p1486"><span class="math display">\[
 \begin{array}{l} u = {\rho _{12}} + {\rho _{21}} = \sin \theta \cos \phi \\ v = i({\rho _{12}} - {\rho _{21}}) = \sin \theta \sin \phi \\ \omega = {\rho _{11}} - {\rho _{22}} = \cos \theta \end{array}
 \tag{6.29}\]</span></span></p>
-<p>One verifies <span class="math inline">\({u^2} + {v^2} + {w^2} = 1\)</span>, so <span class="math inline">\({\bf{P}}\)</span> is a unit vector. The parameters <span class="math inline">\(\theta ,\phi\)</span> are its spherical angles. All pure states lie on the surface traced by its tip, the <strong>Bloch sphere</strong>. For example,</p>
+<p>Check that <span class="math inline">\(u^2+v^2+w^2=1\)</span>. The Bloch vector has unit length, and <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\phi\)</span> give its direction. Its tip lies on the <strong>Bloch sphere</strong>. Each point on this surface represents a pure state. For example,</p>
 <p><span id="eq-ch06-p1488"><span class="math display">\[
 \begin{array}{*{20}{c}} {\left( {0,0,1} \right) \leftrightarrow \;\vert U\rangle }&amp;{\left( {0,0, - 1} \right) \leftrightarrow \;\vert D\rangle }\\ {\left( {1,0,0} \right) \leftrightarrow \;\frac{1}{{\sqrt 2 }}\left( {\;\vert U\rangle + \;\vert D\rangle } \right)}&amp;{\left( { - 1,0,0} \right) \leftrightarrow \frac{1}{{\sqrt 2 }}\left( {\;\vert U\rangle - \;\vert D\rangle } \right)}\\ {\left( {0,1,0} \right) \leftrightarrow \;\;\frac{1}{{\sqrt 2 }}\left( {\;\vert U\rangle + i\;\vert D\rangle } \right)}&amp;{\left( {0, - 1,0} \right) \leftrightarrow \;\frac{1}{{\sqrt 2 }}\left( {\;\vert U\rangle - i\;\vert D\rangle } \right)} \end{array}
 \tag{6.30}\]</span></span></p>
-<p>The motion of <span class="math inline">\({\bf{P}}\)</span> describes state evolution <a href="#eq-zeqnnum721542" class="quarto-xref">Equation&nbsp;<span>6.10</span></a>. From <a href="#eq-zeqnnum721542" class="quarto-xref">Equation&nbsp;<span>6.10</span></a> and <a href="#eq-zeqnnum448235" class="quarto-xref">Equation&nbsp;<span>6.27</span></a>,</p>
+<p>To see how the vector moves, differentiate its components. <a href="#eq-zeqnnum721542" class="quarto-xref">Equation&nbsp;<span>6.10</span></a> and <a href="#eq-zeqnnum448235" class="quarto-xref">Equation&nbsp;<span>6.27</span></a> give</p>
 <p><span id="eq-zeqnnum821674"><span class="math display">\[
 \begin{array}{l} {{\dot \rho }_{12}} = i\Delta {\rho _{12}} + i\frac{{{\Omega _0}}}{2}\left( {{\rho _{11}} - {\rho _{22}}} \right)\\ {{\dot \rho }_{21}} = - i\Delta {\rho _{21}} - i\frac{{{\Omega _0}}}{2}\left( {{\rho _{11}} - {\rho _{22}}} \right)\\ {{\dot \rho }_{11}} = i\frac{{{\Omega _0}}}{2}\left( {{\rho _{12}} - {\rho _{21}}} \right)\\ {{\dot \rho }_{22}} = - i\frac{{{\Omega _0}}}{2}\left( {{\rho _{12}} - {\rho _{21}}} \right) \end{array}
 \tag{6.31}\]</span></span></p>
@@ -411,36 +414,36 @@ window.Quarto = {
 <p><span id="eq-zeqnnum729193"><span class="math display">\[
 \begin{array}{l} \frac{{du}}{{dt}} = \Delta v\\ \frac{{dv}}{{dt}} = - \Delta u - {\Omega _0}w\\ \frac{{dw}}{{dt}} = {\Omega _0}v \end{array}
 \tag{6.32}\]</span></span></p>
-<p>Define <span class="math inline">\({\bf{\Omega }} = \left\{ {{\Omega _0},0, - \Delta } \right\}\)</span>. Equation <a href="#eq-zeqnnum729193" class="quarto-xref">Equation&nbsp;<span>6.32</span></a> becomes</p>
+<p>Now define <span class="math inline">\(\boldsymbol\Omega=\{\Omega_0,0,-\Delta\}\)</span>. We can gather the three equations in <a href="#eq-zeqnnum729193" class="quarto-xref">Equation&nbsp;<span>6.32</span></a> into one vector equation:</p>
 <p><span id="eq-zeqnnum862867"><span class="math display">\[
 \frac{{d{\bf{P}}}}{{dt}} = {\bf{\Omega }} \times {\bf{P}}
 \tag{6.33}\]</span></span></p>
-<p>Since <span class="math inline">\({\bf{\Omega }}\)</span> is constant, <a href="#eq-zeqnnum862867" class="quarto-xref">Equation&nbsp;<span>6.33</span></a> describes <span class="math inline">\({\bf{P}}\)</span> precessing about <span class="math inline">\({\bf{\Omega }}\)</span> with angular speed <span class="math inline">\(\left\vert  {\bf{\Omega }} \right\vert  = \sqrt {\Omega _0^2 + {\Delta ^2}}\)</span>. Under the preceding rotating-wave treatment, two-state dynamics thus becomes a Bloch-vector equation,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> giving a useful geometric picture of transitions.</p>
-<p>This corresponds to the group-theoretic connection between a unitary transformation <span class="math inline">\({\rm{SU}}(2)\)</span> in a two-dimensional complex space and a rotation <span class="math inline">\({\rm{SO}}(3)\)</span> in three-dimensional Cartesian space.</p>
+<p>The vector <span class="math inline">\(\boldsymbol\Omega\)</span> is constant. <a href="#eq-zeqnnum862867" class="quarto-xref">Equation&nbsp;<span>6.33</span></a> therefore describes precession: <span class="math inline">\(\mathbf P\)</span> sweeps around <span class="math inline">\(\boldsymbol\Omega\)</span> at angular speed <span class="math inline">\(|\boldsymbol\Omega|=\sqrt{\Omega_0^2+\Delta^2}\)</span>. This is the geometric picture behind our two-level solution.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> For a linear drive, it holds within the rotating-wave approximation.</p>
+<p>There is a deeper mathematical connection here. A unitary transformation from <span class="math inline">\(\mathrm{SU}(2)\)</span> acts on the two complex state amplitudes. It induces a rotation from <span class="math inline">\(\mathrm{SO}(3)\)</span> of the Bloch vector in real three-dimensional space.</p>
 </section>
 <section id="appendix" class="level2" data-number="6.4">
 <h2 data-number="6.4" class="anchored" data-anchor-id="appendix"><span class="header-section-number">6.4</span> Appendix</h2>
-<p>We solve the linear differential system <a href="#eq-zeqnnum721542" class="quarto-xref">Equation&nbsp;<span>6.10</span></a> as follows.</p>
+<p>Let us work through the solution of <a href="#eq-zeqnnum721542" class="quarto-xref">Equation&nbsp;<span>6.10</span></a>. First write the two equations together:</p>
 <p><span id="eq-ch06-p1500"><span class="math display">\[
 \left( {\begin{array}{*{20}{c}} {{{\dot d}_1}}\\ {{{\dot d}_2}} \end{array}} \right) = \frac{i}{2}\left( {\begin{array}{*{20}{c}} \Delta &amp;{ - {\Omega _0}}\\ { - {\Omega _0}}&amp;{ - \Delta } \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{d_1}}\\ {{d_2}} \end{array}} \right), \qquad  \left( {\begin{array}{*{20}{c}} {{d_1}(0)}\\ {{d_2}(0)} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right)
 \tag{6.34}\]</span></span></p>
-<p>Try <span class="math inline">\(\left( {{d_1},{d_2}} \right) = \left( {{k_1},{k_2}} \right){e^{{{i\lambda t} \mathord{\left/ {\vphantom {{i\lambda t} 2}} \right. \kern-1.2pt } 2}}}\)</span>, with time-independent <span class="math inline">\({k_{1,2}}\)</span>. Substitution gives the eigenvalue equation</p>
+<p>Try an exponential solution, <span class="math inline">\((d_1,d_2)=(k_1,k_2)e^{i\lambda t/2}\)</span>, with constant <span class="math inline">\(k_1\)</span> and <span class="math inline">\(k_2\)</span>. Substitution gives an eigenvalue problem:</p>
 <p><span id="eq-zeqnnum238012"><span class="math display">\[
 \lambda \left( {\begin{array}{*{20}{c}} {{k_1}}\\ {{k_2}} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} \Delta &amp;{ - {\Omega _0}}\\ { - {\Omega _0}}&amp;{ - \Delta } \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{k_1}}\\ {{k_2}} \end{array}} \right) \Rightarrow \left( {\begin{array}{*{20}{c}} {\Delta - \lambda }&amp;{ - {\Omega _0}}\\ { - {\Omega _0}}&amp;{ - \Delta - \lambda } \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{k_1}}\\ {{k_2}} \end{array}} \right) = \lvert\mathrm{null}\rangle,
 \tag{6.35}\]</span></span></p>
-<p>A nonzero solution requires</p>
+<p>For a nonzero eigenvector, the determinant must vanish:</p>
 <p><span id="eq-ch06-p1504"><span class="math display">\[
 \left\vert  {\begin{array}{*{20}{c}} {\Delta - \lambda }&amp;{ - {\Omega _0}}\\ { - {\Omega _0}}&amp;{ - \Delta - \lambda } \end{array}} \right\vert  = 0
 \tag{6.36}\]</span></span></p>
-<p>The eigenvalues are <span class="math inline">\({\lambda _ \pm } = \pm \Omega\)</span>, where <span class="math inline">\(\Omega \equiv \sqrt {\Omega _0^2 + {\Delta ^2}}\)</span>. Substituting <span class="math inline">\({\lambda _ \pm }\)</span> into <a href="#eq-zeqnnum238012" class="quarto-xref">Equation&nbsp;<span>6.35</span></a> gives the eigenvectors</p>
+<p>The two eigenvalues are <span class="math inline">\(\lambda_\pm=\pm\Omega\)</span>, where <span class="math inline">\(\Omega=\sqrt{\Omega_0^2+\Delta^2}\)</span>. Put each one into <a href="#eq-zeqnnum238012" class="quarto-xref">Equation&nbsp;<span>6.35</span></a> to find its eigenvector:</p>
 <p><span id="eq-ch06-p1506"><span class="math display">\[
 \vert \lambda\rangle \equiv \left( {\begin{array}{*{20}{c}} {{k_1}}\\ {{k_2}} \end{array}} \right): \qquad  \vert {{\lambda _ + }}\rangle = \left( {\begin{array}{*{20}{c}} {{\Omega _0}}\\ {\Delta - \Omega } \end{array}} \right), \qquad  \vert {{\lambda _ - }}\rangle = \left( {\begin{array}{*{20}{c}} {{\Omega _0}}\\ {\Delta + \Omega } \end{array}} \right)
 \tag{6.37}\]</span></span></p>
-<p>The general solution is a linear combination of these particular solutions:</p>
+<p>Combine the two solutions to get the general one:</p>
 <p><span id="eq-zeqnnum771504"><span class="math display">\[
 \left( {\begin{array}{*{20}{c}} {{d_1}(t)}\\ {{d_2}(t)} \end{array}} \right) = {g_ + }\left( {\begin{array}{*{20}{c}} {{\Omega _0}}\\ {\Delta - \Omega } \end{array}} \right)\exp \left( {{{i{\lambda _ + }t} \mathord{\left/ {\vphantom {{i{\lambda _ + }t} 2}} \right. \kern-1.2pt } 2}} \right) + {g_ - }\left( {\begin{array}{*{20}{c}} {{\Omega _0}}\\ {\Delta + \Omega } \end{array}} \right)\exp \left( {{{i{\lambda _ - }t} \mathord{\left/ {\vphantom {{i{\lambda _ - }t} 2}} \right. \kern-1.2pt } 2}} \right)
 \tag{6.38}\]</span></span></p>
-<p>Determine coefficients <span class="math inline">\({g_ \pm }\)</span> from the initial condition:</p>
+<p>The initial state fixes the coefficients <span class="math inline">\(g_\pm\)</span>:</p>
 <p><span id="eq-ch06-p1510"><span class="math display">\[
 \left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right) = {g_ + }\left( {\begin{array}{*{20}{c}} {{\Omega _0}}\\ {\Delta - \Omega } \end{array}} \right) + {g_ - }\left( {\begin{array}{*{20}{c}} {{\Omega _0}}\\ {\Delta + \Omega } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{\Omega _0}}&amp;{{\Omega _0}}\\ {\Delta - \Omega }&amp;{\Delta + \Omega } \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{g_ + }}\\ {{g_ - }} \end{array}} \right) = D\left( {\begin{array}{*{20}{c}} {{g_ + }}\\ {{g_ - }} \end{array}} \right)
 \tag{6.39}\]</span></span></p>

@@ -1,20 +1,22 @@
 # Coupling Two Angular Momenta
 
-Angular-momentum coupling underlies many phenomena in atomic physics: fine and hyperfine structure, magnetic splitting, and $LS$ and $jj$ coupling in many-electron atoms. It is equally important in nuclear physics. Although often postponed to advanced quantum mechanics, its basic ideas are accessible without the more complicated coefficient formulas. We give a brief introduction here.
+An electron can carry both orbital angular momentum and spin. How do we combine them? The same question arises for two electrons, or for an electron and a nucleus. The answer helps us understand fine structure, hyperfine structure, magnetic splitting, and the $LS$ and $jj$ coupling schemes of many-electron atoms. We can learn the main ideas without starting with complicated coefficient formulas.
 
-We often encounter observables belonging either to different particles, such as the momenta of two electrons, or to different degrees of freedom of one particle, such as its orbital and spin angular momenta. The observables belong to distinct vector subspaces. Each operator acts only on its own subsystem, so operators belonging to different subsystems commute.
+First distinguish the two subsystems. They may be different particles, or different degrees of freedom of one particle, such as orbital motion and spin. Each has its own state space. An operator for one subsystem leaves the other alone, so operators acting on different subsystems commute.
 
 ## Composite Vector Spaces (Tensor Products)
 
-Consider two angular momenta ${{\bf{J}}_1},\;{{\bf{J}}_2}$ belonging to different subspaces: two spins, two orbital angular momenta, or the spin and orbital angular momentum of one particle. With their quantum numbers fixed at ${j_1},\;{j_2}$, how do we describe the state of the composite system? Complete bases for ${{\bf{J}}_1},\;{{\bf{J}}_2}$ are $\left\{ {\left\vert  {{j_1},{m_1}} \right\rangle } \right\}$ and $\left\{ {\left\vert  {{j_2},{m_2}} \right\rangle } \right\}$, containing $2{j_1} + 1$ and $2{j_2} + 1$ basis vectors. One might initially suppose that the total state is always a tensor product of definite subsystem states:
+Take two angular momenta, $\mathbf J_1$ and $\mathbf J_2$, with fixed quantum numbers $j_1$ and $j_2$. The first subsystem has $2j_1+1$ basis states; the second has $2j_2+1$. Their bases are $\{\vert j_1,m_1\rangle\}$ and $\{\vert j_2,m_2\rangle\}$.
+
+How do we describe both together? A natural first guess is to give each subsystem its own state and multiply the two:
 
 $$
 \vert \Psi \rangle = \vert {\psi _1}\rangle \otimes \vert {\psi _2}\rangle \equiv \vert {\psi _1}\rangle \vert {\psi _2}\rangle = \left( {\sum\limits_{{m_1}} {\left\vert  {{j_1}{m_1}} \right\rangle \left\langle {{{j_1}{m_1}}} \mathrel{\left \vert  {\vphantom {{{j_1}{m_1}} {{\psi _1}}}} \right. \kern-1.2pt } {{{\psi _1}}} \right\rangle } } \right)\left( {\sum\limits_{{m_2}} {\left\vert  {{j_2}{m_2}} \right\rangle \left\langle {{{j_2}{m_2}}} \mathrel{\left \vert  {\vphantom {{{j_2}{m_2}} {{\psi _2}}}} \right. \kern-1.2pt } {{{\psi _2}}} \right\rangle } } \right)
 $$ {#eq-zeqnnum878336}
 
-This description uses $(2{j_1} + 1) + (2{j_2} + 1)$ probability amplitudes. Nature, however, allows a more general possibility.
+This **product state** uses $2j_1+1$ amplitudes for the first subsystem and $2j_2+1$ for the second. But product states do not exhaust the possibilities. We need a larger space.
 
-**Quantum Postulate 7:** A basis of a composite vector space consists of tensor products of subsystem basis vectors. Its dimension is the product of the subsystem dimensions.
+**Quantum Postulate 7:** To build a basis for a composite system, take every product of subsystem basis vectors. The dimension of the composite space is the product of the subsystem dimensions.
 
 For the two angular momenta considered here, the composite basis vectors are
 
@@ -22,15 +24,17 @@ $$
 \left\vert  {{j_1},{m_1}} \right\rangle \otimes \left\vert  {{j_2},{m_2}} \right\rangle \equiv \left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle \equiv \left\vert  {{j_1}{m_1};{j_2}{m_2}} \right\rangle , \qquad  ( - {j_1} \le {m_1} \le {j_1},\; - {j_2} \le {m_2} \le {j_2})
 $$ {#eq-ch09-p2154}
 
-There are $(2{j_1} + 1)(2{j_2} + 1)$ such vectors, spanning the $(2{j_1} + 1)(2{j_2} + 1)$-dimensional composite or tensor-product space of ${{\bf{J}}_1},\;{{\bf{J}}_2}$. An arbitrary state in this space expands as
+There are $(2j_1+1)(2j_2+1)$ such products: one for every pair $(m_1,m_2)$. Together they span the **tensor-product space**. A general state is a superposition of these product basis states:
 
 $$
 \vert \Psi \rangle = \sum\limits_{{m_1}} {\sum\limits_{{m_2}} {\left\vert  {{j_1}{m_1};{j_2}{m_2}} \right\rangle \left\langle {{{j_1}{m_1};{j_2}{m_2}}} \mathrel{\left \vert  {\vphantom {{{j_1}{m_1};{j_2}{m_2}} \Psi }} \right. \kern-1.2pt } {\Psi } \right\rangle } }
 $$ {#eq-zeqnnum695918}
 
-This state can require $(2{j_1} + 1)(2{j_2} + 1)$ probability amplitudes, so @eq-zeqnnum695918 describes more states than @eq-zeqnnum878336. A state of the latter form can always be expanded into the former, but the reverse is not always possible. Some states in @eq-zeqnnum695918 cannot be written as a product of two subsystem states. These are entangled states: the total system has a definite pure state, while its subsystems have no individual pure states. For two spin-1/2 particles, $\vert U{\rangle _1}\vert D{\rangle _2} + \vert D{\rangle _1}\vert U{\rangle _2}$ is an example.
+A general state can need $(2j_1+1)(2j_2+1)$ amplitudes. We can always expand a product state, @eq-zeqnnum878336, in the form @eq-zeqnnum695918. But we cannot always reverse the process and factor the result into two individual states.
 
-Let ${\hat A_1},\left\vert  {{\psi _1}} \right\rangle$ and ${\hat A_2},\left\vert  {{\psi _2}} \right\rangle$ denote operators and vectors belonging to subspaces $1$ and 2. In the composite space, each operator acts only on the vector in its own subspace. For example,
+We call a pure state **entangled** when this factorization is impossible. The pair has a pure state, but neither subsystem has a pure state of its own. For two spin-1/2 particles, an example is the normalized superposition $(\vert U\rangle_1\vert D\rangle_2+\vert D\rangle_1\vert U\rangle_2)/\sqrt2$. The correlations belong to the pair.
+
+Let $\hat A_1$ act on subsystem 1 and $\hat A_2$ act on subsystem 2. Each operator affects only its own factor in a product state. For example,
 
 $$
 \begin{array}{c} \hat J_1^2{{\hat J}_{2z}}\vert {j_1}{m_1};{j_2}{m_2}\rangle \equiv \hat J_1^2{{\hat J}_{2z}}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle = \left( {\hat J_1^2\left\vert  {{j_1},{m_1}} \right\rangle } \right)\left( {{{\hat J}_{2z}}\left\vert  {{j_2},{m_2}} \right\rangle } \right)\\ = {j_1}({j_1} + 1){m_2}{\hbar ^3}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle \end{array}
@@ -40,25 +44,25 @@ $$
 \begin{array}{c} \left( {\hat J_1^2 + \hat J_{2z}^2} \right)\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle = \left( {\hat J_1^2\left\vert  {{j_1},{m_1}} \right\rangle } \right)\left\vert  {{j_2},{m_2}} \right\rangle + \left\vert  {{j_1},{m_1}} \right\rangle \left( {\hat J_{2z}^2\left\vert  {{j_2},{m_2}} \right\rangle } \right)\\ = \left[ {{j_1}({j_1} + 1) + m_2^2} \right]{\hbar ^2}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle \end{array}
 $$ {#eq-zeqnnum297307}
 
-Notice that $\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle = \left\vert  {{j_2},{m_2}} \right\rangle \left\vert  {{j_1},{m_1}} \right\rangle$. Provided the subsystem labels are retained, changing the written order of the factors does not change the physical state. In calculations, keep a fixed ordering to avoid confusion.
+Keep the subsystem labels attached to the kets. They tell us which angular momentum each state describes. We sometimes rearrange labeled factors as a shorthand, but a tensor-product calculation uses a fixed factor order. Reordering the written labels does not mean physically exchanging the particles.
 
 ## Matrix Representations in the Tensor-Product Space
 
-Composite operations can be expressed as matrices using the tensor product (denoted $\otimes$) and the sum of operators acting on different factors. The rules are illustrated below.
+To calculate with matrices, we need two operations: a tensor product, written $\otimes$, and a sum of operators acting on different factors. A small example makes the distinction clear.
 
-Suppose the states $\left\vert  {{\psi _1}} \right\rangle ,\;\left\vert  {{\psi _2}} \right\rangle$ in subspaces 1 and 2 have matrix representations
+Suppose each subsystem has two basis states. Write its state as a column:
 
 $$
 \left\vert  {{\psi _1}} \right\rangle = \left( {\begin{array}{*{20}{c}} {{\alpha _1}}\\ {{\beta _1}} \end{array}} \right), \qquad  \qquad  \left\vert  {{\psi _2}} \right\rangle = \left( {\begin{array}{*{20}{c}} {{\alpha _2}}\\ {{\beta _2}} \end{array}} \right)
 $$ {#eq-ch09-p2165}
 
-Then in the composite representation,
+The product state has one entry for each pair of subsystem basis states:
 
 $$
 \left\vert  {{\psi _1}} \right\rangle \left\vert  {{\psi _2}} \right\rangle \equiv \left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle = \left( {\begin{array}{*{20}{c}} {{\alpha _1}\left\vert  {{\psi _2}} \right\rangle }\\ {{\beta _1}\left\vert  {{\psi _2}} \right\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{\alpha _1}\left( {\begin{array}{*{20}{c}} {{\alpha _2}}\\ {{\beta _2}} \end{array}} \right)}\\ {{\beta _1}\left( {\begin{array}{*{20}{c}} {{\alpha _2}}\\ {{\beta _2}} \end{array}} \right)} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\begin{array}{*{20}{c}} {{\alpha _1}{\alpha _2}}\\ {{\alpha _1}{\beta _2}} \end{array}}\\ {\begin{array}{*{20}{c}} {{\beta _1}{\alpha _2}}\\ {{\beta _1}{\beta _2}} \end{array}} \end{array}} \right)
 $$ {#eq-ch09-p2167}
 
-Suppose the operators ${\hat A_1},\;{\hat A_2}$ have the following matrices in subspaces 1 and 2:
+Now give each subsystem an operator with the following matrix:
 
 $$
 {\hat A_1} = \left( {\begin{array}{*{20}{c}} {{a_1}}&{{b_1}}\\ {{c_1}}&{{d_1}} \end{array}} \right), \qquad  \qquad  {\hat A_2} = \left( {\begin{array}{*{20}{c}} {{a_2}}&{{b_2}}\\ {{c_2}}&{{d_2}} \end{array}} \right),
@@ -66,23 +70,23 @@ $$ {#eq-ch09-p2169}
 
 In the composite representation,
 
-${\hat A_1} \otimes {\hat A_2}$: tensor product.
+**Tensor product, $\hat A_1\otimes\hat A_2$.** Each entry of the first matrix multiplies the whole second matrix:
 
 $$
 {\hat A_1} \otimes {\hat A_2} = \left( {\begin{array}{*{20}{c}} {{a_1}{{\hat A}_2}}&{{b_1}{{\hat A}_2}}\\ {{c_1}{{\hat A}_2}}&{{d_1}{{\hat A}_2}} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\begin{array}{*{20}{c}} {{a_1}{a_2}}&{{a_1}{b_2}}\\ {{a_1}{c_2}}&{{a_1}{d_2}} \end{array}}&{\begin{array}{*{20}{c}} {{b_1}{a_2}}&{{b_1}{b_2}}\\ {{b_1}{c_2}}&{{b_1}{d_2}} \end{array}}\\ {\begin{array}{*{20}{c}} {{c_1}{a_2}}&{{c_1}{b_2}}\\ {{c_1}{c_2}}&{{c_1}{d_2}} \end{array}}&{\begin{array}{*{20}{c}} {{d_1}{a_2}}&{{d_1}{b_2}}\\ {{d_1}{c_2}}&{{d_1}{d_2}} \end{array}} \end{array}} \right)
 $$ {#eq-ch09-p2172}
 
-${\hat A_1} + {\hat A_2}$: sum in the composite space.
+**Sum, $\hat A_1+\hat A_2$.** Each operator must first be extended to act on the full composite space.
 
-Since the spaces of ${\hat A_1},\;{\hat A_2}$ need not have equal dimensions, ${\hat A_1} + {\hat A_2}$ is not a simple element-by-element matrix sum. The notation ${\hat A_1} + {\hat A_2}$ means
+We cannot simply add the original matrices entry by entry. They describe different spaces, which may even have different dimensions. Instead, use an identity operator on the factor that is left alone:
 
 $$
 \begin{array}{c} {{\hat A}_1} + {{\hat A}_2} \equiv {{\hat A}_1} \otimes {{\hat I}_2} + {{\hat I}_1} \otimes {{\hat A}_2}\\ {\rm{ = }}\left( {\begin{array}{*{20}{c}} {{a_1}}&0&{{b_1}}&0\\ 0&{{a_1}}&0&{{b_1}}\\ {{c_1}}&0&{{d_1}}&0\\ 0&{{c_1}}&0&{{d_1}} \end{array}} \right) + \left( {\begin{array}{*{20}{c}} {{a_2}}&0&{{b_2}}&0\\ 0&{{a_2}}&0&{{b_2}}\\ {{c_2}}&0&{{d_2}}&0\\ 0&{{c_2}}&0&{{d_2}} \end{array}} \right)\\ = \left( {\begin{array}{*{20}{c}} {{a_1} + {a_2}}&0&{{b_1} + {b_2}}&0\\ 0&{{a_1} + {a_2}}&0&{{b_1} + {b_2}}\\ {{c_1} + {c_2}}&0&{{d_1} + {d_2}}&0\\ 0&{{c_1} + {c_2}}&0&{{d_1} + {d_2}} \end{array}} \right) \end{array}
 $$ {#eq-ch09-p2175}
 
-In this example, subspaces 1 and 2 happen to have equal dimensions. The tensor-product and composite-sum rules also apply when their dimensions differ.
+Our example uses two equal-sized spaces, but the same rules work when the subsystem dimensions differ.
 
-These matrix rules readily imply
+Use these matrix rules to check
 
 $$
 \left( {{{\hat A}_1} \otimes {{\hat A}_2}} \right)\left( {\left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle } \right) = \left( {{{\hat A}_1}\left\vert  {{\psi _1}} \right\rangle } \right) \otimes \left( {{{\hat A}_2}\left\vert  {{\psi _2}} \right\rangle } \right)
@@ -92,7 +96,7 @@ $$
 \begin{array}{c} \left( {{{\hat A}_1} + {{\hat A}_2}} \right)\left( {\left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle } \right) = \left( {{{\hat A}_1} \otimes {{\hat I}_2} + {{\hat I}_1} \otimes {{\hat A}_2}} \right)\left( {\left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle } \right)\\ = \left( {{{\hat A}_1} \otimes {{\hat I}_2}} \right)\left( {\left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle } \right) + \left( {{{\hat I}_1} \otimes {{\hat A}_2}} \right)\left( {\left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle } \right)\\ = {{\hat A}_1}\left\vert  {{\psi _1}} \right\rangle \otimes {{\hat I}_2}\left\vert  {{\psi _2}} \right\rangle + {{\hat I}_1}\left\vert  {{\psi _1}} \right\rangle \otimes {{\hat A}_2}\left\vert  {{\psi _2}} \right\rangle \\ = {{\hat A}_1}\left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle + \left\vert  {{\psi _1}} \right\rangle \otimes {{\hat A}_2}\left\vert  {{\psi _2}} \right\rangle \end{array}
 $$ {#eq-ch09-p2179}
 
-In retrospect, the operation in @eq-zeqnnum356609 suppresses the symbol $\otimes$. Its explicit form is
+We omitted the symbol $\otimes$ in @eq-zeqnnum356609. Written out explicitly, the operation is
 
 $$
 \left( {\hat J_1^2 \otimes {{\hat J}_{2z}}} \right)\left( {\left\vert  {{j_1},{m_1}} \right\rangle \otimes \left\vert  {{j_2},{m_2}} \right\rangle } \right) = \left( {\hat J_1^2\left\vert  {{j_1},{m_1}} \right\rangle } \right) \otimes \left( {{{\hat J}_{2z}}\left\vert  {{j_2},{m_2}} \right\rangle } \right)
@@ -104,17 +108,17 @@ $$
 \left( {\hat J_1^2 \otimes {{\hat I}_2} + {{\hat I}_1} \otimes \hat J_{2z}^2} \right)\left( {\left\vert  {{j_1},{m_1}} \right\rangle \otimes \left\vert  {{j_2},{m_2}} \right\rangle } \right) = \left( {\hat J_1^2\left\vert  {{j_1},{m_1}} \right\rangle } \right) \otimes \left\vert  {{j_2},{m_2}} \right\rangle + \left\vert  {{j_1},{m_1}} \right\rangle \otimes \left( {\hat J_{2z}^2\left\vert  {{j_2},{m_2}} \right\rangle } \right)
 $$ {#eq-ch09-p2183}
 
-We shall continue to omit $\otimes$ for simplicity, provided each operator acts only on its own subsystem's vector.
+We will often omit $\otimes$ to keep the notation short. Remember the rule behind the shorthand: each operator acts on its own subsystem.
 
 ## The Uncoupled Basis
 
-For two angular momenta ${{\bf{J}}_1},\;{{\bf{J}}_2}$ in different subspaces, with magnitudes specified by ${j_1},\;{j_2}$, the following four operators commute pairwise:
+Let us first label the two angular momenta separately. For fixed $j_1$ and $j_2$, the following four operators commute with one another:
 
 $$
 \left[ {{\bf{\hat J}}_1^2,\;{{\hat J}_{1z}},\;{\bf{\hat J}}_2^2{\rm{,}}\;{\rm{ }}{{\hat J}_{2z}}} \right] = 0
 $$ {#eq-zeqnnum597965}
 
-Their simultaneous eigenstates $\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle$ form the uncoupled basis, also written $\left\vert  {{j_1}{j_2}{m_1}{m_2}} \right\rangle$ or, more briefly, $\vert {m_1},{m_2}\rangle$.
+Their common eigenstates form the **uncoupled basis**. Each state specifies the two individual projections, $m_1$ and $m_2$. We may write it as $\vert j_1,m_1\rangle\vert j_2,m_2\rangle$, as $\vert j_1j_2m_1m_2\rangle$, or simply as $\vert m_1,m_2\rangle$ when $j_1,j_2$ are understood.
 
 $$
 \begin{array}{l} {\bf{\hat J}}_1^2\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle = {j_1}({j_1} + 1){\hbar ^2}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle \\ {\bf{\hat J}}_2^2\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle = {j_2}({j_2} + 1){\hbar ^2}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle \\ {{\hat J}_{1z}}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle = {m_1}\hbar \left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle , & {m_1} = {j_1},{j_1} - 1, \cdots , - {j_1}\\ {{\hat J}_{2z}}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle = {m_2}\hbar \left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle , & {m_2} = {j_2},{j_2} - 1, \cdots , - {j_2} \end{array}
@@ -122,9 +126,9 @@ $$ {#eq-ch09-p2189}
 
 ## The Coupled Basis
 
-A vector space has more than one possible basis, and so does a composite space. Besides the uncoupled basis, the composite space of ${{\bf{J}}_1},\;{{\bf{J}}_2}$ has another especially useful basis: the coupled basis.
+Sometimes we care more about the total angular momentum than the individual projections. We can choose a new basis for the same space: the **coupled basis**.
 
-First define the total angular momentum ${\bf{\hat J}} \equiv {{\bf{\hat J}}_1} + {{\bf{\hat J}}_2}$ by its three components:
+First add the component operators to define the total angular momentum, $\mathbf{\hat J}\equiv\mathbf{\hat J}_1+\mathbf{\hat J}_2$:
 
 $$
 {\hat J_z} \equiv {\hat J_{1z}} + {\hat J_{2z}}, \qquad  {\hat J_x} \equiv {\hat J_{1x}} + {\hat J_{2x}}, \qquad  {\hat J_y} \equiv {\hat J_{1y}} + {\hat J_{2y}}
@@ -142,43 +146,43 @@ $$
 {{\bf{\hat J}}^2} = {\left( {{{{\bf{\hat J}}}_1} + {{{\bf{\hat J}}}_2}} \right)^2} = {\bf{\hat J}}_1^2 + {\bf{\hat J}}_2^2 + 2{{\bf{\hat J}}_1} \cdot {{\bf{\hat J}}_2} = \hat J_x^2 + \hat J_y^2 + \hat J_z^2
 $$ {#eq-zeqnnum961018}
 
-These definitions imply that ${\bf{\hat J}}$ satisfies the defining angular-momentum relations:
+Check that the total components obey the angular-momentum algebra:
 
 $$
 \left[ {{{\hat J}_x},{{\hat J}_y}} \right] = i\hbar {\hat J_z}, \qquad  \qquad  \left[ {{{{\bf{\hat J}}}^2},{{\hat J}_z}} \right] = 0
 $$ {#eq-ch09-p2199}
 
-We can also prove, as an exercise, that
+You can also show that
 
 $$
 \left[ {{{\hat J}_z},{\mathbf{\hat J}}_1^2} \right] = \left[ {{{\hat J}_z},{\mathbf{\hat J}}_2^2} \right] = 0, \qquad  \qquad  \left[ {{{{\mathbf{\hat J}}}^2},{\mathbf{\hat J}}_1^2} \right] = \left[ {{{{\mathbf{\hat J}}}^2},{\mathbf{\hat J}}_2^2} \right] = 0
 $$ {#eq-ch09-p2201}
 
-This gives a new set of four pairwise commuting operators:
+We now have another set of four operators that commute with one another:
 
 $$
 \left[ {{\bf{\hat J}}_1^2,{\bf{\hat J}}_2^2,{{{\bf{\hat J}}}^2},{{\hat J}_z}} \right] = 0
 $$ {#eq-zeqnnum733299}
 
-Their simultaneous eigenstates form the coupled basis, usually denoted $\left\vert  {{j_1}{j_2}jm} \right\rangle$ or, briefly, $\vert j,m\rangle$.
+Their common eigenstates form the coupled basis. The labels $j$ and $m$ specify the total magnitude and total projection. We write these states as $\vert j_1j_2jm\rangle$, or as $\vert j,m\rangle$ when the individual magnitudes are understood.
 
 $$
 \begin{array}{l} {\bf{\hat J}}_1^2\left\vert  {{j_1}{j_2}jm} \right\rangle = {j_1}({j_1} + 1){\hbar ^2}\left\vert  {{j_1}{j_2}jm} \right\rangle \\ {\bf{\hat J}}_2^2\left\vert  {{j_1}{j_2}jm} \right\rangle = {j_2}({j_2} + 1){\hbar ^2}\left\vert  {{j_1}{j_2}jm} \right\rangle \\ {{{\bf{\hat J}}}^2}\left\vert  {{j_1}{j_2}jm} \right\rangle = j(j + 1){\hbar ^2}\left\vert  {{j_1}{j_2}jm} \right\rangle \\ {{\hat J}_z}\left\vert  {{j_1}{j_2}jm} \right\rangle = m\hbar \left\vert  {{j_1}{j_2}jm} \right\rangle \end{array}
 $$ {#eq-ch09-p2205}
 
-Without giving the full proof, let us examine the allowed values of $j$. First, for ${{\bf{J}}_1}$ and ${{\bf{J}}_2}$,
+Which total values of $j$ can occur? We will outline the result rather than give the full proof. First recall the possible projections of the individual angular momenta:
 
 $$
 - {j_1} \le {m_1} \le {j_1},\;\; \qquad  - {j_2} \le {m_2} \le {j_2}
 $$ {#eq-ch09-p2207}
 
-Conservation of angular momentum requires $m = {m_1} + {m_2}$, so
+The component identity $\hat J_z=\hat J_{1z}+\hat J_{2z}$ requires $m=m_1+m_2$. Hence
 
 $$
 - {j_1} \le m - {m_2} \le {j_1},\; \qquad  - {j_2} \le m - {m_1} \le {j_2}
 $$ {#eq-zeqnnum783552}
 
-General angular-momentum theory requires each $j$ to have $2j + 1$ values of $m$, namely $m = - j,\; - j + 1,\; \cdots ,\;j - 1,\;j$. Substituting the maximum value of $m,{m_1},{m_2}$ into @eq-zeqnnum783552 gives
+For each total $j$, the projection runs from $-j$ to $j$ in unit steps. Its greatest value cannot exceed $j_1+j_2$:
 
 $$
 - {j_1} \le j - {j_2} \le {j_1},\; \qquad  \qquad  - {j_2} \le j - {j_1} \le {j_2}
@@ -190,45 +194,45 @@ $$
 {j_2} - {j_1} \le j \le {j_1} + {j_2},\; \qquad  {j_1} - {j_2} \le j \le {j_1} + {j_2}
 $$ {#eq-ch09-p2213}
 
-Both inequalities must hold, so the allowed range of $j$ is
+The allowed total quantum numbers are therefore
 
 $$
 \left\vert  {{j_1} - {j_2}} \right\vert  \le j \le {j_1} + {j_2}
 $$ {#eq-zeqnnum838538}
 
-The same result follows intuitively from vector addition.
+The endpoints resemble ordinary vector addition: two lengths combine to give a total between their difference and their sum. Quantum mechanics adds a further rule: the allowed $j$ values occur in unit steps.
 
-Equation @eq-zeqnnum838538 specifies the range of $j$. For each $j$, the total magnetic quantum number $m$ has $2j + 1$ values. Assuming ${j_1} > {j_2}$, the number of coupled basis vectors is
+For each allowed $j$ in @eq-zeqnnum838538, there are $2j+1$ values of $m$. Let us count all the coupled basis states. Taking $j_1>j_2$ for this count gives
 
 $$
 \sum\limits_{j = {j_1} - {j_2}}^{{j_1} + {j_2}} {2j + 1} = (2{j_1} + 1)(2{j_2} + 1)
 $$ {#eq-ch09-p2218}
 
-This equals the number of uncoupled basis vectors, as it must: both are bases of the same composite space.
+The count matches the uncoupled basis. That is a useful check: changing the basis must not change the size of the state space.
 
-Notice that although $[{\hat J_z}{\rm{,}}\;{\hat J_{1z}}] = 0,\;\;[{\hat J_z}{\rm{,}}\;{\hat J_{2z}}] = 0$, we have $[{{\bf{\hat J}}^2}{\rm{,}}\;{\hat J_{1z}}] \ne 0,\;\;[{{\bf{\hat J}}^2}{\rm{,}}\;{\hat J_{2z}}] \ne 0$. Thus we cannot simultaneously specify ${{\bf{\hat J}}^2}$ and both ${\hat J_{1z}}$ and ${\hat J_{2z}}$.
+There is a tradeoff in the labels. The total projection $\hat J_z$ commutes with both individual projections. But $\mathbf{\hat J}^2$ generally does not: $[\mathbf{\hat J}^2,\hat J_{1z}]\ne0$ and $[\mathbf{\hat J}^2,\hat J_{2z}]\ne0$. We therefore cannot use all these observables together as a simultaneous eigenbasis.
 
 ## Relating the Coupled and Uncoupled Bases
 
-Completeness allows us to expand a coupled basis vector in the uncoupled basis:
+The two bases describe the same space, so we can expand either one in the other. For a coupled state,
 
 $$
 \left\vert  {{j_1}{j_2}jm} \right\rangle = \sum\limits_{{m_1} = - {j_1}}^{{j_1}} {\sum\limits_{{m_2} = - {j_2}}^{{j_2}} {\left\vert  {{j_1}{m_1};{j_2}{m_2}} \right\rangle \left\langle {{{j_1}{m_1};{j_2}{m_2}}} \mathrel{\left \vert  {\vphantom {{{j_1}{m_1};{j_2}{m_2}} {{j_1}{j_2}jm}}} \right. \kern-1.2pt } {{{j_1}{j_2}jm}} \right\rangle } }
 $$ {#eq-zeqnnum358642}
 
-Conversely, an uncoupled basis vector expands in the coupled basis as
+In the other direction,
 
 $$
 \left\vert  {{j_1}{m_1};{j_2}{m_2}} \right\rangle = \sum\limits_{j = \left\vert  {{j_1} - {j_2}} \right\vert }^{{j_1} + {j_2}} {\sum\limits_{m = - j}^j {\left\vert  {{j_1}{j_2}jm} \right\rangle \left\langle {{{j_1}{j_2}jm}} \mathrel{\left \vert  {\vphantom {{{j_1}{j_2}jm} {{j_1}{m_1};{j_2}{m_2}}}} \right. \kern-1.2pt } {{{j_1}{m_1};{j_2}{m_2}}} \right\rangle } }
 $$ {#eq-zeqnnum779006}
 
-The transformation coefficients $\left\langle {{{j_1}{m_1};{j_2}{m_2}}} \mathrel{\left \vert  {\vphantom {{{j_1}{m_1};{j_2}{m_2}} {{j_1}{j_2}jm}}} \right. \kern-1.2pt } {{{j_1}{j_2}jm}} \right\rangle$ are called Clebsch–Gordan (CG) coefficients. Their calculation is discussed below. For now, note these properties:
+The overlap amplitudes in these expansions are the **Clebsch–Gordan coefficients**, or **CG coefficients**. They tell us how much of each uncoupled basis state appears in a coupled state. Before calculating them, note three rules:
 
-1) CG coefficients are defined only for $\left\vert  {{j_1} - {j_2}} \right\vert  \le j \le {j_1} + {j_2}$ and $- j \le m \le \;j,\; - {j_2} \le m \le \;{j_2},\; - {j_2} \le {m_2} \le \;{j_2}$.
+1) The labels must be allowed quantum numbers: $|j_1-j_2|\le j\le j_1+j_2$, $-j\le m\le j$, $-j_1\le m_1\le j_1$, and $-j_2\le m_2\le j_2$, with the usual unit steps.
 
-2) They can be nonzero only when $m = {m_1} + {m_2}$, expressing conservation of angular momentum.
+2) A coefficient can be nonzero only if $m=m_1+m_2$. The total projection must equal the sum of the individual projections.
 
-3) The overall phase is conventional and is chosen so that all CG coefficients are real.
+3) We can choose phases for the basis states so that all the CG coefficients are real. Their signs then follow the chosen convention.
 
 Let us prove the second property.
 
@@ -242,7 +246,7 @@ $$ {#eq-ch09-p2233}
 
 Thus $\left\langle {{{j_1}{m_1};{j_2}{m_2}}} \mathrel{\left \vert  {\vphantom {{{j_1}{m_1};{j_2}{m_2}} {{j_1}{j_2}jm}}} \right. \kern-1.2pt } {{{j_1}{j_2}jm}} \right\rangle$ can be nonzero only when $m = {m_1} + {m_2}$.
 
-Consequently, in @eq-zeqnnum358642 we need sum over only one of ${m_1}$ and ${m_2}$, since the other is not independent. The equation simplifies to
+Once we choose $m_1$, the condition fixes $m_2=m-m_1$. The double sum in @eq-zeqnnum358642 therefore reduces to a single sum:
 
 $$
 \left\vert  {{j_1}{j_2}jm} \right\rangle = \sum\limits_{{m_1} = - {j_1}}^{{j_1}} {\vert {j_1}{m_1};{j_2}m - {m_1}\rangle \langle {j_1}{m_1};{j_2}m - {m_1}\vert {j_1}{j_2}jm\rangle }
@@ -254,39 +258,43 @@ $$
 \left\vert  {{j_1}{m_1};{j_2}{m_2}} \right\rangle = \sum\limits_{j = \vert {j_1} - {j_2}\vert }^{{j_1} + {j_2}} {\vert {j_1}{j_2}j,{m_1} + {m_2}\rangle \langle {j_1}{j_2}j,{m_1} + {m_2}\vert {j_1}{m_1};{j_2}{m_2}\rangle }
 $$ {#eq-ch09-p2238}
 
-For brevity, we shall often write the coupled vector $\left\vert  {{j_1}{j_2}jm} \right\rangle$ as $\left\vert  {j,m} \right\rangle$, and the uncoupled vector $\left\vert  {{j_1}{m_1};{j_2}{m_2}} \right\rangle$ as $\left\vert  {{m_1};{m_2}} \right\rangle$. A semicolon separates the two quantum numbers in the uncoupled notation, whereas a comma separates them in the coupled notation.
+To keep the next example readable, write a coupled state as $\vert j,m\rangle$ and an uncoupled state as $\vert m_1;m_2\rangle$. Notice the punctuation: a comma separates the total labels, while a semicolon separates the two individual projections.
 
 ### Coupling Two Spin-1/2 Particles
 
-Consider two spin-1/2 particles, ${j_1} = {j_2} = {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}$. How are the coupled and uncoupled bases related?
+Take two spin-1/2 particles, so $j_1=j_2=1/2$. Each spin has two states, so the pair has four basis states. Let us describe those same four dimensions in the two bases.
 
-First list the uncoupled basis vectors in the notation $\left\vert  {{m_1};{m_2}} \right\rangle$:
+First list the uncoupled states, using $\vert m_1;m_2\rangle$:
 
 $$
 \left\vert  {\frac{1}{2};\frac{1}{2}} \right\rangle ,\;\;\;\;\;\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle ,\;\;\;\;\;\left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle ,\;\;\;\;\;\left\vert  { - \frac{1}{2}; - \frac{1}{2}} \right\rangle
 $$ {#eq-ch09-p2243}
 
-Next list the coupled basis vectors in the notation $\left\vert  {j,m} \right\rangle$. From @eq-zeqnnum838538, $j = 1,0$:
+The total quantum number can be $j=1$ or $j=0$, by @eq-zeqnnum838538. The coupled states are
 
 $$
 \left\vert  {1,1} \right\rangle ,\;\;\;\;\;\left\vert  {1,0} \right\rangle ,\;\;\;\;\;\left\vert  {1, - 1} \right\rangle ,\;\;\;\;\;\left\vert  {0,0} \right\rangle
 $$ {#eq-ch09-p2245}
 
-The three states with $j = 1$ form a triplet, while the one state with $j = 0$ is a singlet. Using @eq-zeqnnum358642 and the CG coefficients calculated below, the coupled states expand as
+The three $j=1$ states form a **triplet**. The single $j=0$ state is a **singlet**. Using @eq-zeqnnum358642 and the CG coefficients derived below gives
 
 $$
 \begin{array}{c} \left\vert  {j,m} \right\rangle = \sum\nolimits_{{m_1},{m_2}} {\left\vert  {{m_1};{m_2}} \right\rangle \left\langle {{{m_1};{m_2}}} \mathrel{\left \vert  {\vphantom {{{m_1};{m_2}} {j,m}}} \right. \kern-1.2pt } {{j,m}} \right\rangle } \\ \begin{array}{*{20}{l}} \begin{array}{c} \left\vert  {1,1} \right\rangle = \left\vert  {\frac{1}{2};\frac{1}{2}} \right\rangle \\ \left\vert  {1,0} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle + \;\left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle } \right)\;,\;\;\;\\ \left\vert  {1, - 1} \right\rangle = \left\vert  { - \frac{1}{2}; - \frac{1}{2}} \right\rangle \; \end{array}&{\left\vert  {0,0} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle - \left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle } \right)} \end{array} \end{array}
 $$ {#eq-zeqnnum909689}
 
-Because $m = {m_1} + {m_2}$, and since ${m_1} \le {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}$ and ${m_2} \le {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}$, the uncoupled expansion of $\left\vert  {1,1} \right\rangle$ contains only the term in which both ${m_1},{m_2}$ are maximal. Similarly, $\left\vert  {1, - 1} \right\rangle$ contains only the term in which both ${m_1},{m_2}$ are minimal. The state $\left\vert  {1,0} \right\rangle$ must be a linear combination of $\left\vert  {{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}; - {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}} \right\rangle$ and $\left\vert  { - {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2};{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}} \right\rangle$, and $\left\vert  {0,0} \right\rangle$ a linear combination of $\left\vert  {{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}; - {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}} \right\rangle$ and $\left\vert  { - {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2};{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}} \right\rangle$. Why does the difference between the expansions of $\left\vert  {1,0} \right\rangle$ and $\left\vert  {0,0} \right\rangle$ give different $j$? Measuring ${\hat J_z} = {\hat J_{1z}} + {\hat J_{2z}}$ in either state produces $\left\vert  {{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}; - {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}} \right\rangle$ or $\left\vert  {{{ - 1} \mathord{\left/ {\vphantom {{ - 1} 2}} \right. \kern-1.2pt } 2};{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}} \right\rangle$ with equal 50% probabilities. The measured values of ${\hat J_{1z}},{\hat J_{2z}}$ are opposite, so ${\hat J_z}$ is $0$. To see the difference, express $\left\vert  {1,0} \right\rangle$ and $\left\vert  {0,0} \right\rangle$ in the ${\hat J_{1x}} \otimes {\hat J_{2x}}$ product representation.
+The extreme states are easy to understand. To get $m=1$, both spins must have projection $+1/2$. To get $m=-1$, both must have projection $-1/2$.
+
+The two $m=0$ states are more interesting. Each combines one up spin and one down spin, but their relative signs differ. If we measure the two individual $z$ components, either state gives opposite results with equal probabilities. A measurement of total $J_z$ alone gives zero; it does not distinguish those two individual arrangements.
+
+So how can the triplet state $\vert1,0\rangle$ differ from the singlet $\vert0,0\rangle$? The relative sign changes correlations along other axes. To see this, expand the states in the product basis for the individual $x$ components:
 
 $$
 \begin{array}{c} \left\vert  {1,0} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle + \;\left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle } \right) \equiv \frac{1}{{\sqrt 2 }}\left( {\left\vert  U \right\rangle \left\vert  D \right\rangle + \left\vert  D \right\rangle \;\left\vert  U \right\rangle } \right)\\ = \frac{1}{{\sqrt 2 }}\left[ {\frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle + \left\vert  L \right\rangle } \right)\frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle - \left\vert  L \right\rangle } \right) + \frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle - \left\vert  L \right\rangle } \right)\frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle + \left\vert  L \right\rangle } \right)} \right]\\ = \frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle \left\vert  R \right\rangle - \left\vert  L \right\rangle \left\vert  L \right\rangle } \right) \end{array}
 $$ {#eq-zeqnnum419967}
 
-Keep the order of the two ket factors fixed throughout the calculation. From @eq-zeqnnum419967, measuring ${\hat J_x} = {\hat J_{1x}} + {\hat J_{2x}}$ in $\left\vert  {1,0} \right\rangle$ yields $\vert R\rangle \vert R\rangle$ or $\vert L\rangle \vert L\rangle$, each with probability $50\%$. In the former, both ${\hat J_{1x}},{\hat J_{2x}}$ equal $\hbar /2$ and ${\hat J_x}$ is $\hbar$; in the latter, both ${\hat J_{1x}},{\hat J_{2x}}$ equal $-\hbar /2$ and ${\hat J_x}$ is $-\hbar$. Likewise, in $\left\vert  {1,0} \right\rangle$, ${\hat J_y}$ takes the values $\pm \hbar$ with equal 50% probabilities. Thus, in $\left\vert  {1,0} \right\rangle$, the two z components are opposite, but the $x$ or $y$ components are always equal.
+Keep the two ket factors in a fixed order. @eq-zeqnnum419967 says that, in $\vert1,0\rangle$, measurements of the individual $x$ components give $\vert R\rangle\vert R\rangle$ or $\vert L\rangle\vert L\rangle$, each with probability $50\%$. The total $J_x$ is therefore $+\hbar$ or $-\hbar$. The same holds along $y$. In this state, the two spins give opposite projections along $z$, but matching projections along $x$ or $y$.
 
-Similarly, expand $\left\vert  {0,0} \right\rangle$ in the ${\hat J_{1x}} \otimes {\hat J_{2x}}$ product representation:
+Now try the singlet. Its expansion in the same $x$ basis is
 
 $$
 \left\vert  {0,0} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\vert R\rangle \vert L\rangle - \vert L\rangle \vert R\rangle } \right)
@@ -310,11 +318,11 @@ $$ {#eq-ch09-p2252}
 
 Figure 9.1. Vector illustrations of the triplet and singlet formed by coupling two spin-1/2 particles. Each individual vector has an uncertain direction, but the directions are correlated. Dashed lines show the range of possible directions. The vector-addition sketches are reproduced from Yang Fujia, *Atomic Physics*.
 
-Measuring ${\hat J_x} = {\hat J_{1x}} + {\hat J_{2x}}$ in $\left\vert  {0,0} \right\rangle$ gives $\vert R\rangle \vert L\rangle$ or $\vert L\rangle \vert R\rangle$, each with probability $50\%$. The values of ${\hat J_{1x}}$ and ${\hat J_{2x}}$ are always opposite, so ${\hat J_x}$ is always zero. Likewise, ${\hat J_y}$ is always zero. Thus, in $\left\vert  {0,0} \right\rangle$, the two angular-momentum components are opposite along every direction.
+In $\vert0,0\rangle$, measurements of the individual $x$ components give $\vert R\rangle\vert L\rangle$ or $\vert L\rangle\vert R\rangle$, each with probability $50\%$. Their sum is always zero. The same is true along $y$, along $z$, and along any common measurement axis. This is the singlet's distinctive correlation: the two results are always opposite.
 
 ### Spin–Orbit Coupling
 
-An atomic electron has intrinsic spin ${\bf{S}}$ and may also have orbital angular momentum ${\bf{L}}$ of definite magnitude. Its spin quantum number is always ${1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}$. If the orbital quantum number is $l = 0$, the total angular-momentum quantum number $j$ has just one value, $j = {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}$. If $l > 0$, there are two possible values of $j$:
+An atomic electron always has spin $s=1/2$. It may also have orbital angular momentum with quantum number $l$. If $l=0$, only $j=1/2$ is possible. If $l>0$, the total has two possible values:
 
 $$
 j = l \pm \frac{1}{2}
@@ -322,21 +330,21 @@ $$ {#eq-ch09-p2257}
 
 ## \* Calculating Clebsch–Gordan Coefficients
 
-The overall phase of CG coefficients is conventional. We choose the phase convention in which they are real:
+We can choose the phases of the basis states so that the CG coefficients are real. With this convention,
 
 $$
 \left\langle {{{j_1}{m_1};{j_2}{m_2}}} \mathrel{\left \vert  {\vphantom {{{j_1}{m_1};{j_2}{m_2}} {{j_1}{j_2}jm}}} \right. \kern-1.2pt } {{{j_1}{j_2}jm}} \right\rangle = \left\langle {{{j_1}{j_2}jm}} \mathrel{\left \vert  {\vphantom {{{j_1}{j_2}jm} {{j_1}{m_1};{j_2}{m_2}}}} \right. \kern-1.2pt } {{{j_1}{m_1};{j_2}{m_2}}} \right\rangle
 $$ {#eq-ch09-p2260}
 
-Abbreviate the coupled vectors $\left\vert  {{j_1}{j_2}jm} \right\rangle$ as $\left\vert  {j,m} \right\rangle$, and uncoupled vectors $\left\vert  {{j_1}{m_1};{j_2}{m_2}} \right\rangle$ as $\left\vert  {{m_1};{m_2}} \right\rangle$. Let
+As before, use $\vert j,m\rangle$ for a coupled state and $\vert m_1;m_2\rangle$ for an uncoupled state. Start with the largest allowed total:
 
 $$
 {j_{\max }} \equiv {j_1} + {j_2}
 $$ {#eq-ch09-p2262}
 
-Step 1: Find the uncoupled-basis expansions of all $\left\vert  {{j_{\max }},m} \right\rangle$.
+**Step 1: build the states with $j=j_{\max}$.**
 
-Start with the extreme state $\left\vert  {{j_{\max }},{j_{\max }}} \right\rangle$. To satisfy $m = {m_1} + {m_2}$, its expansion must be
+Begin at the top of the ladder, $m=j_{\max}$. There is only one way to make this projection: both individual spins must have their largest projections. Thus
 
 $$
 \left\vert  {{j_{\max }},{j_{\max }}} \right\rangle = \left\vert  {{j_1};{j_2}} \right\rangle
@@ -348,43 +356,43 @@ $$
 \begin{array}{c} {{\hat J}_ - }\left\vert  {{j_{\max }},{j_{\max }}} \right\rangle = {{\hat J}_{1 - }}\left\vert  {{j_1};{j_2}} \right\rangle + {{\hat J}_{2 - }}\left\vert  {{j_1};{j_2}} \right\rangle \\ \sqrt {2{j_{\max }}} \left\vert  {{j_{\max }},{j_{\max }} - 1} \right\rangle = \sqrt {2{j_1}} \left\vert  {{j_1} - 1;{j_2}} \right\rangle + \sqrt {2{j_2}} \left\vert  {{j_1};{j_2} - 1} \right\rangle \end{array}
 $$ {#eq-ch09-p2267}
 
-This determines the expansion of $\left\vert  {{j_{\max }},{j_{\max }} - 1} \right\rangle$. Repeated lowering generates the expansions of all $\left\vert  {{j_{\max }},m} \right\rangle$.
+This gives the expansion of the next state down, $\vert j_{\max},j_{\max}-1\rangle$. Keep lowering to build the whole $j_{\max}$ ladder.
 
-Step 2: Find the expansions of all $\left\vert  {{j_{\max }} - 1,m} \right\rangle$.
+**Step 2: build the states with $j=j_{\max}-1$.**
 
-Again begin with the extreme state $\left\vert  {{j_{\max }} - 1,{j_{\max }} - 1} \right\rangle$. Since only coefficients satisfying $m = {m_1} + {m_2}$ can be nonzero, write
+Start at the top of this new ladder, where $m=j_{\max}-1$. The projection-sum rule leaves two possible uncoupled terms:
 
 $$
 \begin{array}{c} \left\vert  {{j_{\max }} - 1,{j_{\max }} - 1} \right\rangle = {c_1}\left\vert  {{j_1} - 1;{j_2}} \right\rangle + {c_2}\left\vert  {{j_1};{j_2} - 1} \right\rangle \\ c_1^2 + c_2^2 = 1 \end{array}
 $$ {#eq-ch09-p2271}
 
-Use the result for $\left\langle {{j_{\max }},{j_{\max }} - 1} \right\vert$ from step 1 and orthogonality of the coupled basis:
+The new state must be orthogonal to the state with the same $m$ from step 1. It must also be normalized:
 
 $$
 \left\langle {{{j_{\max }},{j_{\max }} - 1}} \mathrel{\left \vert  {\vphantom {{{j_{\max }},{j_{\max }} - 1} {{j_{\max }} - 1,{j_{\max }} - 1}}} \right. \kern-1.2pt } {{{j_{\max }} - 1,{j_{\max }} - 1}} \right\rangle = 0
 $$ {#eq-ch09-p2273}
 
-This determines ${c_1},{c_2}$ and hence the expansion of $\left\vert  {{j_{\max }} - 1,{j_{\max }} - 1} \right\rangle$. Repeated application of ${J_ - } = {J_{1 - }} + {J_{2 - }}$ then gives all $\left\vert  {{j_{\max }} - 1,m} \right\rangle$.
+These conditions determine $c_1$ and $c_2$, up to an overall phase. Once we have the top state, apply $\hat J_-=\hat J_{1-}+\hat J_{2-}$ repeatedly to build the rest of this ladder.
 
-Step 3: Find the expansions of all coupled vectors $\left\vert  {{j_{\max }} - 2,m} \right\rangle$.
+**Step 3: build the states with $j=j_{\max}-2$.**
 
-Begin again with the extreme state and write
+Again start at the top. This time, three uncoupled terms can contribute:
 
 $$
 \begin{array}{c} \left\vert  {{j_{\max }} - 2,{j_{\max }} - 2} \right\rangle = {d_1}\left\vert  {{j_1} - 2;{j_2}} \right\rangle + {d_2}\left\vert  {{j_1} - 1;{j_2} - 1} \right\rangle + {d_3}\left\vert  {{j_1};{j_2} - 2} \right\rangle \\ d_1^2 + d_2^2 + d_3^2 = 1 \end{array}
 $$ {#eq-ch09-p2277}
 
-Use the results of the preceding steps and orthogonality:
+Require normalization and orthogonality to the two states already found at this $m$:
 
 $$
 \begin{array}{c} \left\langle {{{j_{\max }} - 1,{j_{\max }} - 2}} \mathrel{\left \vert  {\vphantom {{{j_{\max }} - 1,{j_{\max }} - 2} {{j_{\max }} - 2,{j_{\max }} - 2}}} \right. \kern-1.2pt } {{{j_{\max }} - 2,{j_{\max }} - 2}} \right\rangle = 0\\ \left\langle {{{j_{\max }},{j_{\max }} - 2}} \mathrel{\left \vert  {\vphantom {{{j_{\max }},{j_{\max }} - 2} {{j_{\max }} - 2,{j_{\max }} - 2}}} \right. \kern-1.2pt } {{{j_{\max }} - 2,{j_{\max }} - 2}} \right\rangle = 0 \end{array}
 $$ {#eq-ch09-p2279}
 
-This determines ${d_1},{d_2},{d_3}$ and the expansion of $\left\vert  {{j_{\max }} - 2,{j_{\max }} - 2} \right\rangle$. Continue with the lowering operator in the same way.
+These conditions fix $d_1,d_2,d_3$, up to an overall phase. Then lower again. Continue the pattern until every allowed $j$ has its own ladder.
 
-This systematic procedure can be implemented recursively. Mathematica provides the built-in CG-coefficient function $ClebschGordan[{{j}_{1},{m}_{1}},{{j}_{2},{m}_{2}},{j,m}]$.
+The pattern makes a useful recursive algorithm: find a new top state by orthogonality, then lower through its ladder. For numerical work, Mathematica also provides $ClebschGordan[\{j_1,m_1\},\{j_2,m_2\},\{j,m\}]$.
 
-Example: Use this method to expand the coupled basis vectors in the uncoupled basis.
+**Example.** The following calculation shows how the method expands coupled states in the uncoupled basis.
 
 $$
 \left\vert  {j,m} \right\rangle = \sum\limits_{{m_1} = - {j_1}}^{{j_1}} {\left\vert  {{m_1};m - {m_1}} \right\rangle \left\langle {{{m_1};m - {m_1}}} \mathrel{\left \vert  {\vphantom {{{m_1};m - {m_1}} {j,m}}} \right. \kern-1.2pt } {{j,m}} \right\rangle }
@@ -414,19 +422,19 @@ $$
 \left\langle {{{j_1}{m_1};{j_2}{m_2}}} \mathrel{\left \vert  {\vphantom {{{j_1}{m_1};{j_2}{m_2}} {jm}}} \right. \kern-1.2pt } {{jm}} \right\rangle = {\left( { - 1} \right)^{{j_1} + {j_2} - j}}\left\langle {{{j_2}{m_2};{j_1}{m_1}}} \mathrel{\left \vert  {\vphantom {{{j_2}{m_2};{j_1}{m_1}} {jm}}} \right. \kern-1.2pt } {{jm}} \right\rangle
 $$ {#eq-zeqnnum431426}
 
-If ${j_1}$ and ${j_2}$ represent the angular momenta of two particles, this relation shows that the exchange symmetry of the CG coefficients and total state $\vert j,m\rangle$ depends on the parity of ${j_1} + {j_2} - j$. We use this to prove a rule for $L{\rm{ - }}S$ coupling, known as the even-sum rule.
+If the two angular momenta belong to two particles, this relation tells us how the coefficients change when we exchange their labels. The sign depends on whether $j_1+j_2-j$ is even or odd. We can use it to find a useful rule for two equivalent valence electrons in $LS$ coupling.
 
-**Even-sum rule:** For an atomic state in $L{\rm{ - }}S$ coupling with two equivalent valence electrons, $L + S$ must be even.
+**Even-sum rule:** For two equivalent valence electrons in $LS$ coupling, an allowed state must have even $L+S$.
 
-Proof: Consider two equivalent valence electrons in $L{\rm{ - }}S$ coupling. Write their total state as $\left\vert  {R({r_1},{r_2})} \right\rangle \left\vert  {LSJM} \right\rangle$, where $\left\vert  R \right\rangle$ is the radial part and $\left\vert  {LSJM} \right\rangle$ the angular-momentum part. The total state of fermions must be antisymmetric under exchange, so $\left\vert  R \right\rangle$ and $\left\vert  {LSJM} \right\rangle$ must have opposite exchange symmetries.
+**Proof.** Write the two-electron state as a radial factor $\vert R(r_1,r_2)\rangle$ times an angular-and-spin factor $\vert LSJM\rangle$. Electrons are fermions, so the full state must change sign when we exchange them. The two factors must therefore have opposite exchange symmetries.
 
-Both equivalent electrons have the same radial state $\left\vert  {nl} \right\rangle$, so the total radial factor is
+Equivalent electrons occupy the same $nl$ subshell. Their radial factor is
 
 $$
 \left\vert  {R({r_1},{r_2})} \right\rangle = {\left\vert  {nl} \right\rangle _1}{\left\vert  {nl} \right\rangle _2}
 $$ {#eq-ch09-p2295}
 
-which is symmetric. Therefore $\left\vert  {LSJM} \right\rangle$ must be antisymmetric. Expand it in the uncoupled basis:
+This factor is symmetric under exchange. The angular-and-spin factor must therefore be antisymmetric. Expand it as
 
 $$
 \left\vert  {LSJM} \right\rangle = \sum\limits_{{M_L}{M_S}} {\left\vert  {L{M_L};S{M_S}} \right\rangle \left\langle {{L{M_L};S{M_S}}} \mathrel{\left \vert  {\vphantom {{L{M_L};S{M_S}} {LSJM}}} \right. \kern-1.2pt } {{LSJM}} \right\rangle }
@@ -438,7 +446,7 @@ $$
 \begin{array}{l} {l_1} = {l_2} = l \to {l_1} + {l_2} = 2l,\;\left\vert  {{l_1} - {l_2}} \right\vert  = 0\\ {s_1} = {s_2} = {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2} \to {s_1} + {s_2} = 1,\;\left\vert  {{s_1} - {s_2}} \right\vert  = 0 \end{array}
 $$ {#eq-ch09-p2299}
 
-Thus the total orbital angular momentum is $L = 2l,2l - 1, \cdots 0$ and the total spin is $S = 1,0$.
+Before imposing exchange symmetry, the addition rules allow $L=2l,2l-1,\ldots,0$ and $S=1,0$.
 
 Let $\hat X$ be the electron-exchange operator. Using the CG identity @eq-zeqnnum431426 gives
 
@@ -452,9 +460,11 @@ $$
 \hat X\left\vert  {S{M_S}} \right\rangle = {( - 1)^{2s - S}}\left\vert  {S{M_S}} \right\rangle = {( - 1)^{1 - S}}\left\vert  {S{M_S}} \right\rangle
 $$ {#eq-ch09-p2304}
 
-Since $2l$ is even, odd $L$ gives $\hat X\left\vert  {L{M_L}} \right\rangle = - \left\vert  {L{M_L}} \right\rangle$, so $\left\vert  {L{M_L}} \right\rangle$ is antisymmetric under exchange. Conversely, even $L$ makes $\left\vert  {L{M_L}} \right\rangle$ symmetric. Likewise, $S = 1$ makes $\left\vert  {S{M_S}} \right\rangle$ symmetric, whereas $S = 0$ makes it antisymmetric. Consequently, $\left\vert  {L{M_L}} \right\rangle \left\vert  {S{M_S}} \right\rangle$ is antisymmetric when $L + S$ is even and symmetric when it is odd.
+Since $2l$ is even, odd $L$ gives an antisymmetric orbital factor and even $L$ gives a symmetric one. For spin, the triplet $S=1$ is symmetric and the singlet $S=0$ is antisymmetric.
 
-Returning to @eq-zeqnnum649848, every term $\left\vert  {L{M_L}} \right\rangle \left\vert  {S{M_S}} \right\rangle$ in the expansion of $\left\vert  {LSJM} \right\rangle$ has the same $L$ and $S$. Thus $\left\vert  {LSJM} \right\rangle$ has the same exchange symmetry as $\left\vert  {L{M_L}} \right\rangle \left\vert  {S{M_S}} \right\rangle$. To make $\left\vert  {LSJM} \right\rangle$ antisymmetric, $L + S$ must be even.
+Their product is antisymmetric in two cases: even $L$ with $S=0$, or odd $L$ with $S=1$. In both cases, $L+S$ is even.
+
+Every term in @eq-zeqnnum649848 has the same $L$ and $S$, so every term has the same exchange symmetry. The full angular-and-spin state inherits that symmetry. To make the two-electron state antisymmetric, we must therefore choose even $L+S$.
 
 ## Exercises
 

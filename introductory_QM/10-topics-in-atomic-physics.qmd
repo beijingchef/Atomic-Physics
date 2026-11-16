@@ -1,75 +1,79 @@
 # Topics in Atomic Physics
 
+Let us connect the angular-momentum tools with atomic energy shifts. The first two sections below are placeholders in the source notes. The developed sections discuss $s$ electrons, spin–orbit coupling, and the contact interaction. They also retain an unfinished argument whose limitation is explained where it appears.
+
 ## Integrals of Three Spherical Harmonics
 
 ## Alkali-Atom Energy Levels in an External Magnetic Field
 
 ## Fine Structure of S Electrons and the Darwin Term
 
+An $s$ electron has $l=0$. Its orbital angular momentum vanishes, so it has no ordinary spin–orbit energy shift. Yet it still has a fine-structure correction called the **Darwin term**. Let us compare this with the spin–orbit formula for states with $l>0$:
+
 $$
 {E_{{\rm{SO}}}} = \frac{{j(j + 1) - l(l + 1) - {3 \mathord{\left/ {\vphantom {3 4}} \right. \kern-1.2pt } 4}}}{2}{\beta _{nl}}
 $$ {#eq-ch10-p2321}
 
-where
+Here the radial coefficient is
 
 $$
 \;{\beta _{nl}} \equiv {\hbar ^2}\int_0^\infty {b\left( r \right)R_{n,l}^2\left( r \right){r^2}dr} \; = \frac{{{Z^4}{\alpha ^2}}}{{{n^3}l\left( {l + 1} \right)\left( {l + 1/2} \right)}}{E_{\rm{H}}}{\rm{,}} \qquad  \;\;\;\;l > 0
 $$ {#eq-ch10-p2323}
 
-Therefore
+The total quantum number is $j=l\pm1/2$ when $l>0$. Substitution gives the two branches below. For $l=0$, the spin–orbit shift is zero:
 
 $$
 \begin{array}{c} {E_{{\rm{SO}}}}(j) = \frac{{j(j + 1) - l(l + 1) - {3 \mathord{\left/ {\vphantom {3 4}} \right. \kern-1.2pt } 4}}}{2}{\beta _{nl}}\\ = \left\{ {\begin{array}{*{20}{c}} 0&{,\;l = 0}\\ {\left\{ {\begin{array}{*{20}{c}} {\frac{l}{2}{\beta _{nl}},\;\;\;\;\;\;\;\;\;j = l + \frac{1}{2}}\\ { - \frac{{l + 1}}{2}{\beta _{nl}},\;\;j = l - \frac{1}{2}} \end{array}} \right.}&{,\;l > 0} \end{array}} \right. \end{array}
 $$ {#eq-ch10-p2325}
 
-An interesting observation is that, although for $l=0$ the first factor of ${E_{{\rm{SO}}}}$ vanishes and there is no spin–orbit coupling, and although ${\beta }_{nl}$ is meaningful only for $l>0$, formally evaluating the expression at $j=l+1/2$ while ignoring the condition $l>0$ allows $l$ to cancel between numerator and denominator, giving
+There is a tempting algebraic observation. In the $j=l+1/2$ branch, a factor of $l$ cancels between the prefactor and $\beta_{nl}$. If we then formally set $l=0$, we obtain the expression below. But remember the restriction: the formula for $\beta_{nl}$ was derived for $l>0$. This substitution is not a valid derivation at $l=0$.
 
 $$
 {E_{{\rm{SO}}}} = \frac{{{Z^2}{\alpha ^2}}}{n}\left\vert  {E_n^{(0)}} \right\vert \;, \qquad  {\rm{for}}\;l = 0,j = 1/2
 $$ {#eq-ch10-p2327}
 
-This equals the Darwin term for an $s$ electron.
+The expression matches the Darwin correction for a hydrogen-like $s$ state. That agreement is a formal observation, not evidence that an $s$ electron has a spin–orbit interaction.
 
 ## Fine and Hyperfine Structure of S Electrons
 
-First consider the origin of the Fermi contact interaction in hyperfine structure.
+Now consider hyperfine structure. An $s$ wavefunction can be nonzero right at the nucleus. This makes the **Fermi contact interaction** important: the electron's spin magnetic moment couples to the nuclear magnetic moment through the electron density at the nucleus.
 
-Because the nucleus is much heavier than an electron, its spatial distribution can be approximated as a point relative to the electron cloud. With the nucleus at the origin, the probability density of an S electron at the nucleus is
+Treat the much heavier nucleus as fixed at the origin. For a hydrogen-like $s$ state, the electron probability density there is
 
 $$
 {\left\vert  {{\psi _{n,l = 0}}(0)} \right\vert ^2} = \frac{1}{\pi }{\left( {\frac{Z}{{n{a_0}}}} \right)^3}
 $$ {#eq-ch10-p2332}
 
-The magnetization at the nucleus due to the electron's magnetic moment is
+Multiply this density by the electron's magnetic moment to get the magnetization at the nucleus:
 
 $$
 {\bf{M}} = {{\bf{\mu }}_S}{\left\vert  {{\psi _{n,l = 0}}(r = 0)} \right\vert ^2}
 $$ {#eq-ch10-p2334}
 
-Electrodynamics gives the magnetic field inside a uniformly magnetized sphere as
+To describe the contact field, use the electrodynamic result for the field inside a uniformly magnetized sphere:
 
 $$
 {{\bf{B}}_{\rm{e}}} = \frac{2}{3}{\mu _0}{\bf{M}}
 $$ {#eq-ch10-p2336}
 
-The potential energy of the nuclear magnetic moment in this magnetized electron cloud—the Fermi contact interaction—is therefore
+The nuclear magnetic moment interacts with this field. Its energy gives the Fermi contact Hamiltonian:
 
 $$
 \begin{array}{c} {{\hat H}_{{\rm{NS}}}}(l = 0) = - {{{\bf{\hat \mu }}}_I} \cdot {{{\bf{\hat B}}}_{\rm{e}}} = {g_I}{\mu _{\rm{B}}}\frac{{{\bf{\hat I}}}}{\hbar } \cdot \left[ { - \frac{2}{3}{\mu _0}{g_S}{\mu _B}\frac{{{\bf{\hat S}}}}{\hbar }\frac{1}{\pi }{{\left( {\frac{Z}{{n{a_0}}}} \right)}^3}} \right]\\ = {g_I}\mu _{\rm{B}}^2\frac{{4{\mu _0}}}{{3\pi }}{\left( {\frac{Z}{{{a_0}n}}} \right)^3}\frac{{{\bf{\hat I}} \cdot {\bf{\hat S}}}}{{{\hbar ^2}}}\\ = \frac{{8{g_I}{Z^3}{\alpha ^2}}}{{3{n^3}}}{E_{\rm{H}}}\frac{{{\bf{\hat I}} \cdot {\bf{\hat S}}}}{{{\hbar ^2}}} \end{array}
 $$ {#eq-zeqnnum480315}
 
-Darwin term, the following analysis is wrong and it is missing a factor of Z. The Darwin term comes from Coulomb potential and has nothing to do with magnetic dipole interaction.
+**An unfinished argument: why the magnetic analogy fails.** The source notes next try to obtain the Darwin term from the electron's own magnetic field. That argument is incorrect, and its final expression also lacks a factor of $Z$ compared with the Darwin correction. The Darwin term comes from the relativistic treatment of the Coulomb potential. Keep this limitation in mind as you read the retained steps below.
 
-By analogy, replacing the nuclear magnetic moment ${{\bf{\hat \mu }}_I}$ in @eq-zeqnnum480315 with the electron moment ${{\bf{\hat \mu }}_S}$ would give the electron's potential energy in its own magnetic field:
+The attempted analogy replaces the nuclear moment $\mathbf{\hat\mu}_I$ in @eq-zeqnnum480315 with the electron moment $\mathbf{\hat\mu}_S$. It would assign the electron the following energy in its own field:
 
 $$
 \begin{array}{c} {{\hat H}_{{\rm{SS}}}}(l = 0) = - {{{\bf{\hat \mu }}}_S} \cdot {{{\bf{\hat B}}}_{\rm{e}}} = - {{{\bf{\hat \mu }}}_S} \cdot \frac{2}{3}{\mu _0}{\bf{M}}\\ = - \frac{2}{3}{\mu _0}{\bf{\mu }}_S^2{\left\vert  {{\psi _{n,l = 0}}(r = 0)} \right\vert ^2} = - \frac{{8{g_S}{Z^3}{\alpha ^2}}}{{3{n^3}}}{E_{\rm{H}}}\frac{{{{{\bf{\hat S}}}^2}}}{{{\hbar ^2}}}\\ = - \frac{{4{Z^3}{\alpha ^2}}}{{{n^3}}}{E_{\rm{H}}} \end{array}
 $$ {#eq-ch10-p2341}
 
-This calculation is not self-consistent: ${{\bf{\hat \mu }}_S}$ treats the electron as a point, whereas ${{\bf{\hat B}}_{\rm{e}}}$ treats it as a distribution. If it is treated consistently as a distribution, the self-energy of a uniformly magnetized sphere from electrodynamics is
+There is already a mismatch in this picture. The moment $\mathbf{\hat\mu}_S$ represents a point electron, while $\mathbf{\hat B}_{\mathrm e}$ comes from a spatially distributed magnetization. The notes then try a classical self-energy calculation for a uniformly magnetized sphere instead:
 
 $$
 \begin{array}{c} {H_{SS}} = \frac{{{\mu _{0}}}}{6}{{\bf{M}}^2}V = \frac{2}{3}{\mu _0}{\bf{M}} \cdot \frac{1}{4}{\bf{M}}V = = \frac{2}{3}{\mu _0}{\bf{M}} \cdot \frac{{{{\bf{\mu }}_S}}}{4}\\ = \frac{{{Z^3}{\alpha ^2}}}{{{n^3}}}{E_{\rm{H}}} = \frac{{Z{\alpha ^2}}}{n}\left\vert  {E_n^{(0)}} \right\vert  \end{array}
 $$ {#eq-ch10-p2343}
 
-This result equals the Darwin term.
+This result does not establish the Darwin term. In particular, its $Z$ dependence differs from the correction discussed above. The retained calculation shows where the analogy leads, but a derivation of the Darwin term needs the relativistic Coulomb treatment.

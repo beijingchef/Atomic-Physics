@@ -270,10 +270,10 @@ window.Quarto = {
 </header>
 
 
-<p>After energy, angular momentum is one of the most important observables in atomic physics. The Coulomb attraction, the dominant interaction in an atom, is a central force, so an electron’s orbital angular momentum about the nucleus is conserved in a central-field description. Moreover, magnetic moments are proportional to angular momenta. Both internal magnetic interactions and the energy of an atom in an external magnetic field are therefore closely related to angular momentum. We now examine its properties in detail.</p>
+<p>Why does angular momentum appear so often in atomic physics? First, the Coulomb force pulls an electron toward the nucleus. In a central-field description, this force conserves the electron’s orbital angular momentum. Second, angular momentum is tied to magnetic moment. It therefore helps us understand both magnetic interactions inside an atom and the atom’s response to an applied field. Let us build the rules one step at a time.</p>
 <section id="general-angular-momentum" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="general-angular-momentum"><span class="header-section-number">8.1</span> General Angular Momentum</h2>
-<p>In classical mechanics, orbital angular momentum about a reference point is the cross product of a particle’s displacement from that point and its momentum. In Cartesian coordinates with that point as the origin,</p>
+<p>Start with the classical idea. About a chosen origin, a particle has orbital angular momentum <span class="math inline">\(\mathbf L=\mathbf r\times\mathbf p\)</span>. In Cartesian components,</p>
 <p><span id="eq-ch08-p1897"><span class="math display">\[
 {\bf{L}} = {\bf{r}} \times {\bf{p}} = \left\vert  {\begin{array}{*{20}{c}} {\bf{i}}&amp;{\bf{j}}&amp;{\bf{k}}\\ x&amp;y&amp;z\\ {{p_x}}&amp;{{p_y}}&amp;{{p_z}} \end{array}} \right\vert
 \tag{8.1}\]</span></span></p>
@@ -281,7 +281,7 @@ window.Quarto = {
 <p><span id="eq-zeqnnum826605"><span class="math display">\[
 \begin{array}{l} {{\hat L}_x} = \hat Y{{\hat P}_z} - \hat Z{{\hat P}_y} \buildrel\textstyle.\over= - i\hbar \left( {y\frac{\partial }{{\partial z}} - z\frac{\partial }{{\partial y}}} \right)\\ {{\hat L}_y} = \hat Z{{\hat P}_x} - \hat X{{\hat P}_z} \buildrel\textstyle.\over= - i\hbar \left( {z\frac{\partial }{{\partial x}} - x\frac{\partial }{{\partial z}}} \right)\;\;\\ {{\hat L}_z} = \hat X{{\hat P}_y} - \hat Y{{\hat P}_x} \buildrel\textstyle.\over= - i\hbar \left( {x\frac{\partial }{{\partial y}} - y\frac{\partial }{{\partial x}}} \right) \end{array}
 \tag{8.2}\]</span></span></p>
-<p>By applying these operators to an arbitrary wavefunction <span class="math inline">\(\psi \left( {x,y,z} \right)\)</span>, or by using the position–momentum commutator <a href="07-continuous-observables.html#eq-zeqnnum944007" class="quarto-xref">Equation&nbsp;<span>7.73</span></a>, we readily verify that</p>
+<p>Let these operators act on a test wavefunction <span class="math inline">\(\psi(x,y,z)\)</span>. Alternatively, use the position–momentum commutator <a href="07-continuous-observables.html#eq-zeqnnum944007" class="quarto-xref">Equation&nbsp;<span>7.73</span></a>. Either route gives</p>
 <p><span id="eq-ch08-p1901"><span class="math display">\[
 \left[ {{{\hat L}_x},{{\hat L}_y}} \right] = i\hbar {\hat L_z},\;\;\;\;\;\left[ {{{\hat L}_y},{{\hat L}_z}} \right] = i\hbar {\hat L_x},\;\;\;\;\;\left[ {{{\hat L}_z},{{\hat L}_x}} \right] = i\hbar {\hat L_y}
 \tag{8.3}\]</span></span></p>
@@ -289,11 +289,11 @@ window.Quarto = {
 <p><span id="eq-ch08-p1903"><span class="math display">\[
 \left[ {{{\hat L}_i},{{\hat L}_j}} \right] = i\hbar {\varepsilon _{ijk}}{\hat L_k} \qquad  {\rm{or}} \qquad  {\bf{L}} \times {\bf{L}} = i\hbar {\bf{L}}
 \tag{8.4}\]</span></span></p>
-<p>Recall that spin angular momentum obeys the same commutation relations:</p>
+<p>These relations should look familiar. Spin obeys the same rules:</p>
 <p><span id="eq-ch08-p1905"><span class="math display">\[
 \left[ {{{\hat S}_i},{{\hat S}_j}} \right] = i\hbar {\varepsilon _{ijk}}{\hat S_k}
 \tag{8.5}\]</span></span></p>
-<p>In quantum mechanics, these commutation relations define angular momentum: a vector observable <span class="math inline">\({\bf{J}}\)</span> is an angular momentum if its Cartesian components <span class="math inline">\({\hat J_x},{\hat J_y},{\hat J_z}\)</span> satisfy</p>
+<p>This shared algebra is our starting point. In quantum mechanics, we call a vector observable <span class="math inline">\(\mathbf J\)</span> an <strong>angular momentum</strong> when its components obey</p>
 <p><span id="eq-zeqnnum502879"><span class="math display">\[
 \left[ {{{\hat J}_x},{{\hat J}_y}} \right] = i\hbar {\hat J_z}{\rm{,}}\;\;\;\;\;\left[ {{{\hat J}_y},{{\hat J}_z}} \right] = i\hbar {\hat J_x}{\rm{,}}\;\;\;\;\;\left[ {{{\hat J}_z},{{\hat J}_x}} \right] = i\hbar {\hat J_y}
 \tag{8.6}\]</span></span></p>
@@ -301,15 +301,15 @@ window.Quarto = {
 <p><span id="eq-ch08-p1909"><span class="math display">\[
 {\bf{J}} \times {\bf{J}} = i\hbar {\bf{J}}
 \tag{8.7}\]</span></span></p>
-<p>Besides the three components, another important angular-momentum observable is <span class="math inline">\({{\bf{\hat J}}^2}\)</span>, defined by</p>
+<p>We also need an operator for the squared magnitude:</p>
 <p><span id="eq-ch08-p1911"><span class="math display">\[
 {{\bf{\hat J}}^2} = \hat J_x^2 + \hat J_y^2 + \hat J_z^2
 \tag{8.8}\]</span></span></p>
-<p>Using the defining relations <a href="#eq-zeqnnum502879" class="quarto-xref">Equation&nbsp;<span>8.6</span></a>, we can show that <span class="math inline">\({{\bf{\hat J}}^2}\)</span> commutes with all three components:</p>
+<p>Use <a href="#eq-zeqnnum502879" class="quarto-xref">Equation&nbsp;<span>8.6</span></a> to check that <span class="math inline">\(\mathbf{\hat J}^2\)</span> commutes with each component:</p>
 <p><span id="eq-ch08-p1913"><span class="math display">\[
 \left[ {{{{\bf{\hat J}}}^2},{{\hat J}_z}} \right] = \left[ {{{{\bf{\hat J}}}^2},{{\hat J}_x}} \right] = \left[ {{{{\bf{\hat J}}}^2},{{\hat J}_y}} \right] = 0
 \tag{8.9}\]</span></span></p>
-<p>By symmetry, <span class="math inline">\({\hat J_x},{\hat J_y}\)</span> and <span class="math inline">\({\hat J_z}\)</span> are on an equal footing. Conventionally we choose <span class="math inline">\({{\bf{\hat J}}^2}\)</span> and <span class="math inline">\({\hat J_z}\)</span>. Since they commute, they have simultaneous eigenstates. Let us determine their eigenvalues.</p>
+<p>No spatial direction is special, so we may choose any component to accompany <span class="math inline">\(\mathbf{\hat J}^2\)</span>. By convention, we choose <span class="math inline">\(\hat J_z\)</span>. These two operators commute and share eigenstates. What values can their measurements give?</p>
 <section id="deriving-the-eigenvalues-of-j2-and-j_z" class="level3" data-number="8.1.1">
 <h3 data-number="8.1.1" class="anchored" data-anchor-id="deriving-the-eigenvalues-of-j2-and-j_z"><span class="header-section-number">8.1.1</span> * Deriving the Eigenvalues of <span class="math inline">\({J}^{2}\)</span> and <span class="math inline">\({J}_{z}\)</span></h3>
 <p>We can always write their eigenvalue equations in the form</p>
@@ -319,7 +319,7 @@ window.Quarto = {
 <p><span id="eq-zeqnnum784176"><span class="math display">\[
 {\hat J_z}\left\vert  {b,m} \right\rangle = m\hbar \left\vert  {b,m} \right\rangle
 \tag{8.11}\]</span></span></p>
-<p>Here <span class="math inline">\(b\)</span> and <span class="math inline">\(m\)</span> are real numbers to be determined. In the simultaneous eigenstate <span class="math inline">\(\left\vert  {b,m} \right\rangle\)</span>, the observables <span class="math inline">\({{\bf{\hat J}}^2}\)</span> and <span class="math inline">\({\hat J_z}\)</span> have definite values <span class="math inline">\(b{\hbar ^2}\)</span> and <span class="math inline">\(m\hbar\)</span>. To determine <span class="math inline">\(b\)</span> and <span class="math inline">\(m\)</span>, first construct two operators <span class="math inline">\({\hat J_ \pm }\)</span>, called ladder operators: <span class="math inline">\({\hat J_ + }\)</span> is the raising operator and <span class="math inline">\({\hat J_ - }\)</span> the lowering operator.</p>
+<p>We do not yet know the allowed real numbers <span class="math inline">\(b\)</span> and <span class="math inline">\(m\)</span>. They label a state with <span class="math inline">\(\mathbf{\hat J}^2=b\hbar^2\)</span> and <span class="math inline">\(\hat J_z=m\hbar\)</span>. To find them, introduce two <strong>ladder operators</strong>. The raising operator <span class="math inline">\(\hat J_+\)</span> moves us up the ladder of <span class="math inline">\(m\)</span> values; the lowering operator <span class="math inline">\(\hat J_-\)</span> moves us down:</p>
 <p><span id="eq-ch08-p1920"><span class="math display">\[
 {\hat J_ + } \equiv {\hat J_x} + i{\hat J_y}, \qquad  \qquad  {\hat J_ - } \equiv {\hat J_x} - i{\hat J_y}
 \tag{8.12}\]</span></span></p>
@@ -327,7 +327,7 @@ window.Quarto = {
 <p><span id="eq-zeqnnum857737"><span class="math display">\[
 {\hat J_x} = \frac{1}{2}\left( {{{\hat J}_ + } + {{\hat J}_ - }} \right), \qquad  \qquad  {\hat J_y} = \frac{1}{{2i}}\left( {{{\hat J}_ + } - {{\hat J}_ - }} \right)
 \tag{8.13}\]</span></span></p>
-<p>Let us examine the properties of <span class="math inline">\({\hat J_ \pm }\)</span>. It is straightforward to verify that <span class="math inline">\({\hat J_ + },{\hat J_ - }\)</span> satisfies the following identities:</p>
+<p>Before climbing the ladder, work out a few identities from these definitions:</p>
 <p><span id="eq-zeqnnum223798"><span class="math display">\[
 \hat J_ + ^\dagger = {\hat J_ - }, \qquad  \qquad  \hat J_ - ^\dagger = {\hat J_ + }
 \tag{8.14}\]</span></span></p>
@@ -349,7 +349,7 @@ window.Quarto = {
 <p><span id="eq-zeqnnum867638"><span class="math display">\[
 {{\bf{J}}^2} = \hat J_z^2 + \frac{1}{2}\left( {{{\hat J}_ + }{{\hat J}_ - } + {{\hat J}_ - }{{\hat J}_ + }} \right)
 \tag{8.20}\]</span></span></p>
-<p>To understand the meaning of <span class="math inline">\({\hat J_ \pm }\left\vert  {b,m} \right\rangle\)</span>, use <a href="#eq-zeqnnum242044" class="quarto-xref">Equation&nbsp;<span>8.17</span></a> to obtain</p>
+<p>Now let a ladder operator act on <span class="math inline">\(\vert b,m\rangle\)</span>. <a href="#eq-zeqnnum242044" class="quarto-xref">Equation&nbsp;<span>8.17</span></a> gives</p>
 <p><span id="eq-zeqnnum973611"><span class="math display">\[
 {{\bf{\hat J}}^2}\left( {{{\hat J}_ \pm }\left\vert  {b,m} \right\rangle } \right) = {\hat J_ \pm }{{\bf{\hat J}}^2}\left\vert  {b,m} \right\rangle = b{\hbar ^2}\left( {{{\hat J}_ \pm }\left\vert  {b,m} \right\rangle } \right)
 \tag{8.21}\]</span></span></p>
@@ -357,29 +357,30 @@ window.Quarto = {
 <p><span id="eq-zeqnnum643676"><span class="math display">\[
 {\hat J_z}\left( {{{\hat J}_ \pm }\left\vert  {b,m} \right\rangle } \right) = \left( {{{\hat J}_z}{{\hat J}_ \pm }} \right)\left\vert  {b,m} \right\rangle = \left( { \pm \hbar {{\hat J}_ \pm } + {{\hat J}_ \pm }{{\hat J}_z}} \right)\left\vert  {b,m} \right\rangle = \left( {m \pm 1} \right)\hbar \left( {{{\hat J}_ \pm }\left\vert  {b,m} \right\rangle } \right)
 \tag{8.22}\]</span></span></p>
-<p>Combining <a href="#eq-zeqnnum973611" class="quarto-xref">Equation&nbsp;<span>8.21</span></a> and <a href="#eq-zeqnnum643676" class="quarto-xref">Equation&nbsp;<span>8.22</span></a>, we find that <span class="math inline">\({\hat J_ \pm }\left\vert  {b,m} \right\rangle\)</span> remains a simultaneous eigenstate of <span class="math inline">\({{\bf{\hat J}}^2}\)</span> and <span class="math inline">\({\hat J_z}\)</span>. For <span class="math inline">\({{\bf{\hat J}}^2}\)</span>, the states <span class="math inline">\({\hat J_ \pm }\left\vert  {b,m} \right\rangle\)</span> and <span class="math inline">\(\left\vert  {b,m} \right\rangle\)</span> share the eigenvalue <span class="math inline">\(b{\hbar ^2}\)</span>. For <span class="math inline">\({\hat J_z}\)</span>, however, the eigenvalue of <span class="math inline">\({\hat J_ \pm }\left\vert  {b,m} \right\rangle\)</span> is raised or lowered by <span class="math inline">\(\hbar\)</span> relative to that of <span class="math inline">\(\left\vert  {b,m} \right\rangle\)</span>, becoming <span class="math inline">\(\left( {m \pm 1} \right)\hbar\)</span>. This explains the names raising and lowering operators. Thus <span class="math inline">\({\hat J_ \pm }\left\vert  {b,m} \right\rangle\)</span> and <span class="math inline">\(\left\vert  {b,m \pm 1} \right\rangle\)</span> represent the same state and differ at most by a constant factor:</p>
+<p>Compare <a href="#eq-zeqnnum973611" class="quarto-xref">Equation&nbsp;<span>8.21</span></a> with <a href="#eq-zeqnnum643676" class="quarto-xref">Equation&nbsp;<span>8.22</span></a>. Unless the result is the zero vector, <span class="math inline">\(\hat J_\pm\vert b,m\rangle\)</span> is another simultaneous eigenstate. Its squared magnitude stays at <span class="math inline">\(b\hbar^2\)</span>, but its <span class="math inline">\(z\)</span> component changes by one step, <span class="math inline">\(\pm\hbar\)</span>. This is why we call the operators raising and lowering operators. The new state is proportional to <span class="math inline">\(\vert b,m\pm1\rangle\)</span>:</p>
 <p><span id="eq-zeqnnum904731"><span class="math display">\[
 {\hat J_ \pm }\left\vert  {b,m} \right\rangle = {C_ \pm }\left( {b,m} \right)\left\vert  {b,m \pm 1} \right\rangle
 \tag{8.23}\]</span></span></p>
-<p>Here <span class="math inline">\({C_ \pm }\left( {b,m} \right)\)</span> is a coefficient depending on <span class="math inline">\(b,m\)</span>.</p>
-<p>It appears that applying <span class="math inline">\({\hat J_ \pm }\)</span> to an eigenstate <span class="math inline">\(\left\vert  {b,m} \right\rangle\)</span> always produces another eigenstate with <span class="math inline">\(m\)</span> increased or decreased by one. But when <span class="math inline">\(b\)</span> (the squared angular momentum) is fixed, <span class="math inline">\(m\)</span> (its projection) should be bounded. Indeed, taking expectation values of <a href="#eq-zeqnnum867638" class="quarto-xref">Equation&nbsp;<span>8.20</span></a> in <span class="math inline">\(\left\vert  {b,m} \right\rangle\)</span> and using <a href="#eq-zeqnnum223798" class="quarto-xref">Equation&nbsp;<span>8.14</span></a> gives</p>
+<p>The coefficient <span class="math inline">\(C_\pm(b,m)\)</span> sets the length and phase of the resulting vector.</p>
+<p>Can we keep raising <span class="math inline">\(m\)</span> forever? A fixed angular-momentum magnitude should limit its projection. To find the limit, take the expectation value of <a href="#eq-zeqnnum867638" class="quarto-xref">Equation&nbsp;<span>8.20</span></a> in <span class="math inline">\(\vert b,m\rangle\)</span> and use <a href="#eq-zeqnnum223798" class="quarto-xref">Equation&nbsp;<span>8.14</span></a>:</p>
 <p><span id="eq-ch08-p1939"><span class="math display">\[
 b{\hbar ^2} = {m^2}{\hbar ^2} + \frac{1}{2}\left\langle {b,m} \right\vert {\hat J_ - ^\dagger {{\hat J}_ - }}\;\left\vert  {b,m} \right\rangle + \frac{1}{2}\left\langle {b,m} \right\vert \hat J_ + ^\dagger {\hat J_ + }\left\vert  {b,m} \right\rangle
 \tag{8.24}\]</span></span></p>
-<p>By the quantum postulates, <span class="math inline">\(\langle \psi \vert \psi\rangle \ge 0\)</span>. The second and third terms on the right are both <span class="math inline">\(\ge 0\)</span>, so <span class="math inline">\(b \ge {m^2}\)</span>. Thus <span class="math inline">\(b \ge 0\)</span>, and for fixed <span class="math inline">\(b\)</span>, the allowed range of <span class="math inline">\(m\)</span> is finite. Repeatedly applying the raising operator to <span class="math inline">\(\vert {b,m = {m_0}}\rangle\)</span> using <a href="#eq-zeqnnum904731" class="quarto-xref">Equation&nbsp;<span>8.23</span></a> must therefore reach an upper limit <span class="math inline">\({m_{\max }}\)</span>, with <span class="math inline">\(m_{\max }^2 \le b &lt; {({m_{\max }} + 1)^2}\)</span>. To ensure <span class="math inline">\(b \ge {m^2}\)</span>, we require <span class="math inline">\({C_ + }\left( {b,{m_{\max }}} \right) = 0\)</span>, so that</p>
+<p>A squared norm cannot be negative: <span class="math inline">\(\langle\psi\vert\psi\rangle\ge0\)</span>. The last two terms are therefore nonnegative, which gives <span class="math inline">\(b\ge m^2\)</span>. For fixed <span class="math inline">\(b\)</span>, the ladder must have a top and a bottom.</p>
+<p>Start at any allowed <span class="math inline">\(m_0\)</span> and apply <span class="math inline">\(\hat J_+\)</span> repeatedly. Eventually we reach <span class="math inline">\(m_{\max}\)</span>. The next step must give the zero vector, so <span class="math inline">\(C_+(b,m_{\max})=0\)</span>:</p>
 <p><span id="eq-zeqnnum446313"><span class="math display">\[
 {\hat J_ + }\vert b,{m_{\max }}\rangle = \lvert\mathrm{null}\rangle
 \tag{8.25}\]</span></span></p>
-<p>Similarly, repeated application of the lowering operator to <span class="math inline">\(\vert {b,m = {m_0}}\rangle\)</span> reaches a value <span class="math inline">\({m_{\min }}\)</span> such that, when <span class="math inline">\(m = {m_{\min }}\)</span>, <span class="math inline">\({C_ - }\left( {b,{m_{\min }}} \right) = 0\)</span></p>
+<p>The same reasoning works downward. At the bottom, <span class="math inline">\(C_-(b,m_{\min})=0\)</span>, so</p>
 <p><span id="eq-zeqnnum736764"><span class="math display">\[
 {\hat J_ - }\vert b,{m_{\min }}\rangle = \lvert\mathrm{null}\rangle
 \tag{8.26}\]</span></span></p>
-<p>.</p>
+<p>The ladder stops at both ends.</p>
 <p>Let</p>
 <p><span id="eq-zeqnnum714513"><span class="math display">\[
 {m_{\max }} - {m_{\min }} = n
 \tag{8.27}\]</span></span></p>
-<p>Then <span class="math inline">\(n\)</span> must be a nonnegative integer. From <a href="#eq-zeqnnum732391" class="quarto-xref">Equation&nbsp;<span>8.18</span></a> and <a href="#eq-zeqnnum324145" class="quarto-xref">Equation&nbsp;<span>8.19</span></a>, respectively, we obtain</p>
+<p>Each step changes <span class="math inline">\(m\)</span> by one, so <span class="math inline">\(n\)</span> is a nonnegative integer. At the two endpoints, <a href="#eq-zeqnnum732391" class="quarto-xref">Equation&nbsp;<span>8.18</span></a> and <a href="#eq-zeqnnum324145" class="quarto-xref">Equation&nbsp;<span>8.19</span></a> give</p>
 <p><span id="eq-ch08-p1946"><span class="math display">\[
 \begin{array}{l} b\vert b,{m_{\max }}\rangle = (m_{\max }^2 + {m_{\max }})\vert b,{m_{\max }}\rangle \\ b\vert b,{m_{\min }}\rangle = (m_{\min }^2 - {m_{\min }})\vert b,{m_{\min }}\rangle \end{array}
 \tag{8.28}\]</span></span></p>
@@ -395,15 +396,15 @@ b = m_{\max }^2 + {m_{\max }} = m_{\min }^2 - {m_{\min }}
 <p><span id="eq-zeqnnum434099"><span class="math display">\[
 {m_{\min }} = - {m_{\max }}
 \tag{8.31}\]</span></span></p>
-<p>This agrees with the symmetry of the system. The sign of <span class="math inline">\(m\)</span> depends on our choice of the positive z direction, so the range of <span class="math inline">\(m\)</span> should be symmetric about zero. From <a href="#eq-zeqnnum714513" class="quarto-xref">Equation&nbsp;<span>8.27</span></a> and <a href="#eq-zeqnnum434099" class="quarto-xref">Equation&nbsp;<span>8.31</span></a>,</p>
+<p>The allowed projections are symmetric about zero. This makes sense: reversing our choice of the positive <span class="math inline">\(z\)</span> direction should not change the physics. Using <a href="#eq-zeqnnum714513" class="quarto-xref">Equation&nbsp;<span>8.27</span></a> and <a href="#eq-zeqnnum434099" class="quarto-xref">Equation&nbsp;<span>8.31</span></a>, we obtain</p>
 <p><span id="eq-zeqnnum239811"><span class="math display">\[
 {m_{\max }} = {n \mathord{\left/ {\vphantom {n {2 = j}}} \right. \kern-1.2pt } {2 = j}}, \qquad  {m_{\min }} = - {n \mathord{\left/ {\vphantom {n 2}} \right. \kern-1.2pt } 2} = - j
 \tag{8.32}\]</span></span></p>
-<p>where <span class="math inline">\(j \equiv {n \mathord{\left/ {\vphantom {n 2}} \right. \kern-1.2pt } 2}\)</span>. Since <span class="math inline">\(n\)</span> is a nonnegative integer, the only possible values of <span class="math inline">\(j\)</span> are</p>
+<p>Here <span class="math inline">\(j\equiv n/2\)</span>. Since <span class="math inline">\(n\)</span> is a nonnegative integer, <span class="math inline">\(j\)</span> can take only the values</p>
 <p><span id="eq-ch08-p1956"><span class="math display">\[
 j = 0,\frac{1}{2},1,\frac{3}{2},2,\frac{5}{2}, \ldots
 \tag{8.33}\]</span></span></p>
-<p>For a given <span class="math inline">\(j\)</span>, <span class="math inline">\(m\)</span> runs from <span class="math inline">\({m_{\max }}\)</span> to <span class="math inline">\({m_{\min }}\)</span>, giving <span class="math inline">\(2j + 1\)</span> possible values:</p>
+<p>For each <span class="math inline">\(j\)</span>, the ladder has <span class="math inline">\(2j+1\)</span> rungs. Its <span class="math inline">\(m\)</span> values are</p>
 <p><span id="eq-ch08-p1958"><span class="math display">\[
 m = j,j - 1,j - 2, \cdots , - j
 \tag{8.34}\]</span></span></p>
@@ -411,19 +412,20 @@ m = j,j - 1,j - 2, \cdots , - j
 <p><span id="eq-ch08-p1960"><span class="math display">\[
 b = j\left( {j + 1} \right)
 \tag{8.35}\]</span></span></p>
-<p>We shall henceforth use <span class="math inline">\(j\)</span>, instead of <span class="math inline">\(b\)</span>, as the quantum number specifying the eigenvalue of <span class="math inline">\({{\bf{\hat J}}^2}\)</span>, setting <span class="math inline">\(\left\vert  {j,m} \right\rangle \equiv \left\vert  {b,m} \right\rangle\)</span>.</p>
+<p>From now on, use <span class="math inline">\(j\)</span> instead of <span class="math inline">\(b\)</span> to label the squared magnitude. We write the same eigenstate as <span class="math inline">\(\vert j,m\rangle\)</span>.</p>
 </section>
 <section id="results-for-general-angular-momentum" class="level3" data-number="8.1.2">
 <h3 data-number="8.1.2" class="anchored" data-anchor-id="results-for-general-angular-momentum"><span class="header-section-number">8.1.2</span> Results for General Angular Momentum</h3>
-<p>We have obtained the complete solution of the general angular-momentum eigenvalue equations:</p>
+<p>Let us collect the results. Any angular momentum with the algebra above obeys</p>
 <p><span id="eq-ch08-p1964"><span class="math display">\[
 {{\bf{\hat J}}^2}\left\vert  {j,m} \right\rangle = j\left( {j + 1} \right){\hbar ^2}\left\vert  {j,m} \right\rangle , \qquad  j = 0,\frac{1}{2},1,\frac{3}{2},2,\frac{5}{2}, \ldots
 \tag{8.36}\]</span></span></p>
 <p><span id="eq-ch08-p1965"><span class="math display">\[
 {\hat J_z}\left\vert  {j,m} \right\rangle = m\hbar \left\vert  {j,m} \right\rangle , \qquad  m = \underbrace {j,j - 1, \cdots - j + 1, - j}_{2j + 1\text{ terms}}
 \tag{8.37}\]</span></span></p>
-<p>The angular-momentum quantum number <span class="math inline">\(j\)</span> specifies the magnitude, while the magnetic or projection quantum number <span class="math inline">\(m\)</span> specifies a component. For spin, <span class="math inline">\(j\)</span> is also called the spin quantum number. If <span class="math inline">\(j\)</span> is an integer, <span class="math inline">\(m\)</span> is an integer and includes <span class="math inline">\(m = 0\)</span>. If <span class="math inline">\(j\)</span> is a half-integer, <span class="math inline">\(m\)</span> is also a half-integer and never equals <span class="math inline">\(m = 0\)</span>. All measured angular momenta follow these rules. From the abstract commutation relation <a href="#eq-zeqnnum502879" class="quarto-xref">Equation&nbsp;<span>8.6</span></a>, quantum mechanics yields a remarkable set of experimentally confirmed predictions.</p>
-<p>In the next section we shall see that orbital angular momentum, associated with spatial motion, has integer quantum numbers from zero upward. Each particle species also has a definite spin quantum number, either integer or half-integer. Like mass and charge, spin is an intrinsic property.</p>
+<p>The number <span class="math inline">\(j\)</span> sets the magnitude. The number <span class="math inline">\(m\)</span> sets the measured projection along our chosen axis, so we call it the <strong>magnetic quantum number</strong> or <strong>projection quantum number</strong>. For spin, <span class="math inline">\(j\)</span> is the spin quantum number.</p>
+<p>If <span class="math inline">\(j\)</span> is an integer, the ladder includes <span class="math inline">\(m=0\)</span>. If <span class="math inline">\(j\)</span> is a half-integer, the ladder skips zero. These discrete possibilities follow from the commutation relations alone. They are a striking example of how a little operator algebra leads to testable predictions.</p>
+<p>We will soon see that orbital angular momentum allows only integer <span class="math inline">\(l\)</span>, starting at zero. Spin can be integer or half-integer. Each particle species has its own spin quantum number, just as it has its own mass and charge.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -462,23 +464,24 @@ b = j\left( {j + 1} \right)
 </tr>
 </tbody>
 </table>
-<p>Particles with half-integer spin are called fermions; those with integer spin are bosons. Their behavior differs profoundly: identical bosons favor occupation of the same state, whereas identical fermions obey the Pauli exclusion principle. This is distinct from classical attraction or repulsion. It arises from the quantum indistinguishability of identical particles.</p>
+<p>We call particles with half-integer spin <strong>fermions</strong> and those with integer spin <strong>bosons</strong>. Identical bosons can share a state, while identical fermions obey the Pauli exclusion principle. These rules come from quantum indistinguishability. They do not mean that the particles simply attract or repel one another.</p>
 </section>
 <section id="the-vector-model-of-angular-momentum-eigenstates" class="level3" data-number="8.1.3">
 <h3 data-number="8.1.3" class="anchored" data-anchor-id="the-vector-model-of-angular-momentum-eigenstates"><span class="header-section-number">8.1.3</span> The Vector Model of Angular-Momentum Eigenstates</h3>
-<p>Since the eigenvalues of <span class="math inline">\({{\bf{\hat J}}^2}\)</span> are <span class="math inline">\(j\left( {j + 1} \right){\hbar ^2}\)</span>, the magnitude of <span class="math inline">\({\bf{J}}\)</span> is described by</p>
+<p>Can we draw a picture of <span class="math inline">\(\vert j,m\rangle\)</span>? The eigenvalue of <span class="math inline">\(\mathbf{\hat J}^2\)</span> suggests a vector length</p>
 <p><span id="eq-ch08-p2006"><span class="math display">\[
 \left\vert  {\bf{J}} \right\vert  = \sqrt {j\left( {j + 1} \right)} \hbar
 \tag{8.38}\]</span></span></p>
-<p>Clearly <span class="math inline">\(\left\vert  {\bf{J}} \right\vert  &gt; j\hbar\)</span>. Why is the maximum value of <span class="math inline">\({\hat J_z}\)</span> equal to <span class="math inline">\(j\hbar\)</span>, rather than <span class="math inline">\(\left\vert  {\bf{J}} \right\vert\)</span>? When <span class="math inline">\({\hat J_z}\)</span> is definite, <span class="math inline">\({\hat J_x}\)</span> and <span class="math inline">\({\hat J_y}\)</span> are uncertain and cannot both vanish. By symmetry, for definite <span class="math inline">\({\hat J_z}\)</span>, the uncertainties of <span class="math inline">\({\hat J_x}\)</span> and <span class="math inline">\({\hat J_y}\)</span> are equal. We therefore represent <span class="math inline">\(\vert j,m\rangle\)</span> approximately by a cone with its vertex at the origin and its axis along z. Its base intersects the z axis at <span class="math inline">\(z = m\)</span> and has radius <span class="math inline">\(\sqrt {j(j + 1) - {m^2}}\)</span>. The figure illustrates <span class="math inline">\(j = 2\)</span>; the five cones in panel (b) represent the eigenstates <span class="math inline">\(\left\vert  {j = 2,m} \right\rangle ,\;\;m = 2,1,0, - 1, - 2\)</span>. In the eigenstate <span class="math inline">\({\hat J_z}\)</span>, the mean values of <span class="math inline">\({\hat J_x},{\hat J_y}\)</span> are zero.</p>
+<p>For <span class="math inline">\(j&gt;0\)</span>, this length is larger than <span class="math inline">\(j\hbar\)</span>, the greatest allowed <span class="math inline">\(z\)</span> projection. Why can the vector not point exactly along <span class="math inline">\(z\)</span>? In a state with definite <span class="math inline">\(J_z\)</span>, the transverse components have fluctuations. They cannot both be sharply zero.</p>
+<p>The <strong>vector model</strong> pictures the tip of <span class="math inline">\(\mathbf J\)</span> on a cone around the <span class="math inline">\(z\)</span> axis. In units of <span class="math inline">\(\hbar\)</span>, the cone has height <span class="math inline">\(m\)</span> and radius <span class="math inline">\(\sqrt{j(j+1)-m^2}\)</span>. For <span class="math inline">\(j=2\)</span>, there are five allowed projections and hence five cones, as in panel (b). Symmetry gives zero mean for both <span class="math inline">\(J_x\)</span> and <span class="math inline">\(J_y\)</span>:</p>
 <p><span id="eq-ch08-p2008"><span class="math display">\[
 \langle {{{\hat J}_x}}\rangle = \langle {{{\hat J}_y}}\rangle = 0
 \tag{8.39}\]</span></span></p>
-<p>These results can be proved rigorously with ladder operators. In the state <span class="math inline">\(\vert j,m\rangle\)</span>, we can also show that</p>
+<p>Ladder operators let us prove these results directly. They also give</p>
 <p><span id="eq-ch08-p2010"><span class="math display">\[
 \langle {\hat J_x^2}\rangle = \langle {\hat J_y^2}\rangle = \frac{{\langle {{{{\bf{\hat J}}}^2}}\rangle - \langle {\hat J_z^2}\rangle }}{2} = \frac{{j(j + 1) - {m^2}}}{2}{\hbar ^2}
 \tag{8.40}\]</span></span></p>
-<p>The vector model provides an intuitive approximation and sometimes yields the same results as a rigorous quantum calculation. It describes angular-momentum eigenstates, not the expectation-value vector, whose magnitude and direction are definite in any given quantum state.</p>
+<p>Use the cone as a picture of the allowed magnitude, projection, and transverse fluctuations. It is not a literal path traced by a hidden classical vector. Also keep it distinct from the mean vector <span class="math inline">\(\langle\mathbf J\rangle\)</span>. In <span class="math inline">\(\vert j,m\rangle\)</span>, that mean vector points along <span class="math inline">\(z\)</span> and has <span class="math inline">\(z\)</span> component <span class="math inline">\(m\hbar\)</span>.</p>
 <p><img src="assets/image1750.png" class="img-fluid" width="465"></p>
 <div class="source-caption">
 <p>Figure 8.1. The vector model of angular momentum. Source: http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/vecmod.html</p>
@@ -486,9 +489,9 @@ b = j\left( {j + 1} \right)
 </section>
 <section id="matrix-elements-of-angular-momentum-operators" class="level3" data-number="8.1.4">
 <h3 data-number="8.1.4" class="anchored" data-anchor-id="matrix-elements-of-angular-momentum-operators"><span class="header-section-number">8.1.4</span> * Matrix Elements of Angular-Momentum Operators</h3>
-<p>We now write the matrix elements of the angular-momentum operators in the <span class="math inline">\(\{ {{\bf{\hat J}}^2},{\hat J_z}\}\)</span>, or <span class="math inline">\(\left\{ {\left\vert  {j,m} \right\rangle } \right\}\)</span>, representation.</p>
+<p>We now know how the angular-momentum operators act on <span class="math inline">\(\vert j,m\rangle\)</span>. Let us turn those rules into matrices in this basis.</p>
 <ol type="1">
-<li><span class="math inline">\({{\bf{\hat J}}^2}\)</span> and <span class="math inline">\({\hat J_z}\)</span>: Since <span class="math inline">\(\left\vert  {j,m} \right\rangle\)</span> are simultaneous eigenstates of <span class="math inline">\({{\bf{\hat J}}^2}\)</span> and <span class="math inline">\({\hat J_z}\)</span>, the matrices of <span class="math inline">\({{\bf{\hat J}}^2}\)</span> and <span class="math inline">\({\hat J_z}\)</span> are diagonal:</li>
+<li><strong><span class="math inline">\(\mathbf{\hat J}^2\)</span> and <span class="math inline">\(\hat J_z\)</span>.</strong> The basis states are eigenstates of both operators, so both matrices are diagonal:</li>
 </ol>
 <p><span id="eq-ch08-p2017"><span class="math display">\[
 \left\langle {j',m'} \right\vert {\hat J^2}\left\vert  {j,m} \right\rangle = {\delta _{j'j}}{\delta _{m'm}}j\left( {j + 1} \right){\hbar ^2}
@@ -497,12 +500,12 @@ b = j\left( {j + 1} \right)
 \left\langle {j',m'} \right\vert {\hat J_z}\left\vert  {j,m} \right\rangle = {\delta _{j'j}}{\delta _{m'm}}m\hbar
 \tag{8.42}\]</span></span></p>
 <ol start="2" type="1">
-<li><span class="math inline">\({\hat J_ \pm }\)</span>: From <a href="#eq-zeqnnum904731" class="quarto-xref">Equation&nbsp;<span>8.23</span></a>, <span class="math inline">\({\hat J_ \pm }\left\vert  {j,m} \right\rangle = {C_ \pm }\left( {j,m} \right)\left\vert  {j,m \pm 1} \right\rangle\)</span>, and therefore</li>
+<li><strong>The ladder operators <span class="math inline">\(\hat J_\pm\)</span>.</strong> <a href="#eq-zeqnnum904731" class="quarto-xref">Equation&nbsp;<span>8.23</span></a> tells us that each operator connects neighboring <span class="math inline">\(m\)</span> values. To find the coefficient’s magnitude, take the squared norm:</li>
 </ol>
 <p><span id="eq-zeqnnum141497"><span class="math display">\[
 \left\langle {j,m} \right\vert \hat J_ + ^\dagger {\hat J_ + }\left\vert  {j,m} \right\rangle = {\left\vert  {{C_ + }\left( {j,m} \right)} \right\vert ^2}
 \tag{8.43}\]</span></span></p>
-<p>Since <span class="math inline">\(\hat J_ + ^\dagger = {\hat J_ - }\)</span>, and since <a href="#eq-zeqnnum732391" class="quarto-xref">Equation&nbsp;<span>8.18</span></a> gives <span class="math inline">\({\hat J_ - }{\hat J_ + } = {{\bf{\hat J}}^2} - \hat J_z^2 - \hbar {\hat J_z}\)</span>, this can also be written as</p>
+<p>Now use <span class="math inline">\(\hat J_+^\dagger=\hat J_-\)</span> and the identity <span class="math inline">\(\hat J_-\hat J_+=\mathbf{\hat J}^2-\hat J_z^2-\hbar\hat J_z\)</span> from <a href="#eq-zeqnnum732391" class="quarto-xref">Equation&nbsp;<span>8.18</span></a>:</p>
 <p><span id="eq-zeqnnum904686"><span class="math display">\[
 \begin{array}{c} \left\langle {j,m} \right\vert \hat J_ + ^\dagger {{\hat J}_ + }\left\vert  {j,m} \right\rangle = \left\langle {j,m} \right\vert {{\hat J}_ - }{{\hat J}_ + }\left\vert  {j,m} \right\rangle \\ = \left\langle {j,m} \right\vert {{{\bf{\hat J}}}^2} - \hat J_z^2 - \hbar {{\hat J}_z}\left\vert  {j,m} \right\rangle \\ = j\left( {j + 1} \right){\hbar ^2} - {m^2}{\hbar ^2} - m{\hbar ^2}\\ = {\hbar ^2}\left[ {j\left( {j + 1} \right) - m\left( {m + 1} \right)} \right] \end{array}
 \tag{8.44}\]</span></span></p>
@@ -510,7 +513,7 @@ b = j\left( {j + 1} \right)
 <p><span id="eq-ch08-p2024"><span class="math display">\[
 {\left\vert  {{C_ + }\left( {j,m} \right)} \right\vert ^2} = {\hbar ^2}\left[ {j\left( {j + 1} \right) - m\left( {m + 1} \right)} \right]
 \tag{8.45}\]</span></span></p>
-<p>By convention, <span class="math inline">\({C_ + }\left( {j,m} \right)\)</span> is chosen to be real and positive, so</p>
+<p>Choose the phases of the basis states so that <span class="math inline">\(C_+(j,m)\)</span> is real and positive away from the endpoint:</p>
 <p><span id="eq-ch08-p2026"><span class="math display">\[
 {C_ + }\left( {j,m} \right) = \hbar \sqrt {j\left( {j + 1} \right) - m\left( {m + 1} \right)} = \hbar \sqrt {\left( {{j^2} + j} \right) - \left( {{m^2} + m} \right)}
 \tag{8.46}\]</span></span></p>
@@ -525,7 +528,7 @@ b = j\left( {j + 1} \right)
 <p><span id="eq-zeqnnum592417"><span class="math display">\[
 {\hat J_ - }\left\vert  {j,m} \right\rangle = \hbar \sqrt {j\left( {j + 1} \right) - m\left( {m - 1} \right)} \vert {j,m} - 1\rangle
 \tag{8.49}\]</span></span></p>
-<p>These two equations automatically reproduce the results required by <a href="#eq-zeqnnum446313" class="quarto-xref">Equation&nbsp;<span>8.25</span></a> and <a href="#eq-zeqnnum736764" class="quarto-xref">Equation&nbsp;<span>8.26</span></a>:</p>
+<p>Check the endpoints. The square roots vanish at precisely the places required by <a href="#eq-zeqnnum446313" class="quarto-xref">Equation&nbsp;<span>8.25</span></a> and <a href="#eq-zeqnnum736764" class="quarto-xref">Equation&nbsp;<span>8.26</span></a>:</p>
 <p><span id="eq-ch08-p2033"><span class="math display">\[
 {\hat J_ + }\vert {j,j}\rangle = \lvert\mathrm{null}\rangle, \qquad  \qquad  {\hat J_ - }\vert {j, - j}\rangle = \lvert\mathrm{null}\rangle
 \tag{8.50}\]</span></span></p>
@@ -534,7 +537,7 @@ b = j\left( {j + 1} \right)
 \left\langle {j,m - 1} \right\vert {\hat J_ - }\left\vert  {j,m} \right\rangle = \left\langle {j,m} \right\vert {\hat J_ + }\left\vert  {j,m - 1} \right\rangle = \hbar \sqrt {j\left( {j + 1} \right) - m\left( {m - 1} \right)}
 \tag{8.51}\]</span></span></p>
 <ol start="3" type="1">
-<li><span class="math inline">\({\hat J_x},{\hat J_y}\)</span>: Using <a href="#eq-zeqnnum857737" class="quarto-xref">Equation&nbsp;<span>8.13</span></a> and <a href="#eq-zeqnnum713322" class="quarto-xref">Equation&nbsp;<span>8.51</span></a>, the nonzero matrix elements of <span class="math inline">\({\hat J_x},{\hat J_y}\)</span> are</li>
+<li><strong><span class="math inline">\(\hat J_x\)</span> and <span class="math inline">\(\hat J_y\)</span>.</strong> Express them in terms of the ladder operators. Using <a href="#eq-zeqnnum857737" class="quarto-xref">Equation&nbsp;<span>8.13</span></a> and <a href="#eq-zeqnnum713322" class="quarto-xref">Equation&nbsp;<span>8.51</span></a> gives their nonzero matrix elements:</li>
 </ol>
 <p><span id="eq-ch08-p2037"><span class="math display">\[
 \left\langle {j,m - 1} \right\vert {{J_x}}\left\vert  {j,m} \right\rangle = \left\langle {j,m} \right\vert {{J_x}}\left\vert  {j,m - 1} \right\rangle = \frac{\hbar }{2}\sqrt {j(j + 1) - m(m - 1)}
@@ -542,7 +545,7 @@ b = j\left( {j + 1} \right)
 <p><span id="eq-ch08-p2038"><span class="math display">\[
 \left\langle {j,m - 1} \right\vert {{J_y}}\left\vert  {j,m} \right\rangle = - \left\langle {j,m} \right\vert {{J_y}}\left\vert  {j,m - 1} \right\rangle = \frac{{i\hbar }}{2}\sqrt {j(j + 1) - m(m - 1)}
 \tag{8.53}\]</span></span></p>
-<p>For an angular-momentum operator <span class="math inline">\(\hat A\)</span> with fixed <span class="math inline">\(j\)</span>, we order the matrix elements by decreasing <span class="math inline">\(m\)</span>, so that the upper-left element is <span class="math inline">\(\langle {j,j}\vert {\hat A}\vert {j,j}\rangle\)</span>.</p>
+<p>For a fixed <span class="math inline">\(j\)</span>, we order the basis by decreasing <span class="math inline">\(m\)</span>: <span class="math inline">\(j,j-1,\ldots,-j\)</span>. The top-left element of any operator matrix is then <span class="math inline">\(\langle j,j\vert\hat A\vert j,j\rangle\)</span>.</p>
 <p>Example 1: <span class="math inline">\(j = {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}\)</span>. The matrices <span class="math inline">\({\hat S_{x,y,z}}\)</span> introduced earlier use this convention; see <a href="03-quantum-measurement.html#eq-zeqnnum931030" class="quarto-xref">Equation&nbsp;<span>3.43</span></a>.</p>
 <p>Example 2: <span class="math inline">\(j = 1\)</span>.</p>
 <p><span id="eq-ch08-p2042"><span class="math display">\[
@@ -558,11 +561,11 @@ b = j\left( {j + 1} \right)
 </section>
 <section id="orbital-angular-momentum" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="orbital-angular-momentum"><span class="header-section-number">8.2</span> Orbital Angular Momentum</h2>
-<p>Orbital angular momentum arises from a particle’s motion relative to a reference point. We generally denote it by <span class="math inline">\({\bf{L}}\)</span>, with angular-momentum quantum number <span class="math inline">\(l\)</span>. Even without knowing the general angular-momentum spectrum, we can write its eigenvalue equations as</p>
+<p>Orbital angular momentum comes from motion about a reference point. We write it as <span class="math inline">\(\mathbf L\)</span> and use <span class="math inline">\(l\)</span> for its angular-momentum quantum number. The general theory we just developed gives</p>
 <p><span id="eq-zeqnnum747222"><span class="math display">\[
 \begin{array}{l} {{{\bf{\hat L}}}^2}\left\vert  {l,m} \right\rangle = l\left( {l + 1} \right){\hbar ^2}\left\vert  {l,m} \right\rangle \\ {{\hat L}_z}\left\vert  {l,m} \right\rangle = m\hbar \left\vert  {l,m} \right\rangle \end{array}
 \tag{8.57}\]</span></span></p>
-<p>Unlike spin, orbital angular-momentum eigenstates depend on spatial position. We now seek the position wavefunction <span class="math inline">\(\left\langle {{x,y,z}} \mathrel{\left \vert  {\vphantom {{x,y,z} {l,m}}} \right. \kern-1.2pt } {{l,m}} \right\rangle \equiv {\Lambda _{l,m}}\left( {x,y,z} \right)\)</span> of <span class="math inline">\(\left\vert  {l,m} \right\rangle\)</span>. Spherical coordinates centered on the reference point are convenient. In this representation, <a href="#eq-zeqnnum747222" class="quarto-xref">Equation&nbsp;<span>8.57</span></a> becomes</p>
+<p>To describe orbital motion, we need spatial wavefunctions. Write <span class="math inline">\(\Lambda_{l,m}(x,y,z)\equiv\langle x,y,z\vert l,m\rangle\)</span>. Spherical coordinates are a natural choice because angular momentum concerns motion about an origin. In these coordinates, <a href="#eq-zeqnnum747222" class="quarto-xref">Equation&nbsp;<span>8.57</span></a> becomes</p>
 <p><span id="eq-zeqnnum921413"><span class="math display">\[
 \begin{array}{l} {{\bf{L}}^2}{\Lambda _{l,m}}\left( {r,\theta ,\phi } \right) = l\left( {l + 1} \right){\hbar ^2}{\Lambda _{l,m}}\left( {r,\theta ,\phi } \right)\\ {L_z}{\Lambda _{l,m}}\left( {r,\theta ,\phi } \right) = m\hbar {\Lambda _{l,m}}\left( {r,\theta ,\phi } \right) \end{array}
 \tag{8.58}\]</span></span></p>
@@ -582,22 +585,22 @@ b = j\left( {j + 1} \right)
 <p><span id="eq-zeqnnum657148"><span class="math display">\[
 {{\bf{\hat L}}^2} = {\hat L_x}{\hat L_x} + {\hat L_y}{\hat L_y} + {\hat L_z}{\hat L_z} \buildrel\textstyle.\over= - {\hbar ^2}\left\{ {\frac{1}{{\sin \theta }}\frac{\partial }{{\partial \theta }}\left( {\sin \theta \frac{\partial }{{\partial \theta }}} \right) + \frac{1}{{{{\sin }^2}\theta }}\frac{{{\partial ^2}}}{{\partial {\phi ^2}}}} \right\}
 \tag{8.62}\]</span></span></p>
-<p>These angular-momentum operators are independent of the distance <span class="math inline">\(r\)</span> from the origin. This suggests separating variables in the simultaneous eigenfunction <span class="math inline">\({\Lambda _{l,m}}\left( {r,\theta ,\phi } \right)\)</span> of <span class="math inline">\({{\bf{\hat L}}^2}\)</span> and <span class="math inline">\({\hat L_z}\)</span>:</p>
+<p>Notice that the operators depend on angles, not on the distance <span class="math inline">\(r\)</span>. This suggests writing the wavefunction as a radial factor times an angular factor:</p>
 <p><span id="eq-zeqnnum193092"><span class="math display">\[
 {\Lambda _{l,m}}\left( {r,\theta ,\phi } \right) = R\left( r \right){Y_{l,m}}\left( {\theta ,\phi } \right)
 \tag{8.63}\]</span></span></p>
-<p>The radial function <span class="math inline">\(R\left( r \right)\)</span> is an arbitrary function of <span class="math inline">\(r\)</span>, and <span class="math inline">\({Y_{l,m}}\left( {\theta ,\phi } \right)\)</span> is the angular function. Using <a href="#eq-zeqnnum721118" class="quarto-xref">Equation&nbsp;<span>8.61</span></a>–<a href="#eq-zeqnnum193092" class="quarto-xref">Equation&nbsp;<span>8.63</span></a>, write the eigenvalue equations <a href="#eq-zeqnnum921413" class="quarto-xref">Equation&nbsp;<span>8.58</span></a> in spherical coordinates and cancel <span class="math inline">\(R\left( r \right)\)</span>. The angular function satisfies</p>
+<p>The function <span class="math inline">\(R(r)\)</span> describes the radial part, while <span class="math inline">\(Y_{l,m}(\theta,\phi)\)</span> describes the angular part. Angular momentum alone leaves <span class="math inline">\(R(r)\)</span> undetermined. Use <a href="#eq-zeqnnum721118" class="quarto-xref">Equation&nbsp;<span>8.61</span></a>–<a href="#eq-zeqnnum193092" class="quarto-xref">Equation&nbsp;<span>8.63</span></a> in <a href="#eq-zeqnnum921413" class="quarto-xref">Equation&nbsp;<span>8.58</span></a> and cancel the common radial factor. The remaining equations are</p>
 <p><span id="eq-zeqnnum252734"><span class="math display">\[
 - i\hbar \frac{\partial }{{\partial \phi }}{Y_{l,m}}\left( {\theta ,\phi } \right) = m\hbar {Y_{l,m}}\left( {\theta ,\phi } \right)
 \tag{8.64}\]</span></span></p>
 <p><span id="eq-zeqnnum649652"><span class="math display">\[
 - {\hbar ^2}\left\{ {\frac{1}{{\sin \theta }}\frac{\partial }{{\partial \theta }}\left( {\sin \theta \frac{\partial }{{\partial \theta }}} \right) + \frac{1}{{{{\sin }^2}\theta }}\frac{{{\partial ^2}}}{{\partial {\phi ^2}}}} \right\}{Y_{l,m}}\left( {\theta ,\phi } \right) = l\left( {l + 1} \right){\hbar ^2}{Y_{l,m}}\left( {\theta ,\phi } \right)
 \tag{8.65}\]</span></span></p>
-<p>Since <span class="math inline">\({\hat L_z}\)</span> involves only <span class="math inline">\(\phi\)</span>, try separating <span class="math inline">\({Y_{l,m}}\left( {\theta ,\phi } \right)\)</span> as</p>
+<p>The operator <span class="math inline">\(\hat L_z\)</span> involves only <span class="math inline">\(\phi\)</span>. We can therefore try a second separation:</p>
 <p><span id="eq-zeqnnum129644"><span class="math display">\[
 {Y_{l,m}}\left( {\theta ,\phi } \right) = \Theta \left( \theta \right)\Phi \left( \phi \right)
 \tag{8.66}\]</span></span></p>
-<p>The eigenvalue equation <a href="#eq-zeqnnum252734" class="quarto-xref">Equation&nbsp;<span>8.64</span></a> for <span class="math inline">\({\hat L_z}\)</span> then becomes an equation involving only <span class="math inline">\(\phi\)</span>:</p>
+<p>The <span class="math inline">\(\hat L_z\)</span> <a href="#eq-zeqnnum252734" class="quarto-xref">Equation&nbsp;<span>8.64</span></a> now involves only <span class="math inline">\(\phi\)</span>:</p>
 <p><span id="eq-zeqnnum956196"><span class="math display">\[
 \frac{\partial }{{\partial \phi }}\Phi = im\Phi
 \tag{8.67}\]</span></span></p>
@@ -613,11 +616,11 @@ b = j\left( {j + 1} \right)
 <p><span id="eq-zeqnnum135231"><span class="math display">\[
 - \frac{1}{\Phi }\frac{{{\partial ^2}\Phi }}{{\partial {\phi ^2}}} = {m^2}
 \tag{8.70}\]</span></span></p>
-<p>Substituting <a href="#eq-zeqnnum135231" class="quarto-xref">Equation&nbsp;<span>8.70</span></a> into <a href="#eq-zeqnnum309925" class="quarto-xref">Equation&nbsp;<span>8.69</span></a> gives an equation for <span class="math inline">\({{\bf{\hat L}}^2}\)</span> involving only <span class="math inline">\(\theta\)</span>:</p>
+<p>Substitute <a href="#eq-zeqnnum135231" class="quarto-xref">Equation&nbsp;<span>8.70</span></a> into <a href="#eq-zeqnnum309925" class="quarto-xref">Equation&nbsp;<span>8.69</span></a>. We are left with an equation involving only <span class="math inline">\(\theta\)</span>:</p>
 <p><span id="eq-zeqnnum830038"><span class="math display">\[
 \frac{{\sin \theta }}{\Theta }\frac{\partial }{{\partial \theta }}\left( {\sin \theta \frac{{\partial \Theta }}{{\partial \theta }}} \right) + l\left( {l + 1} \right){\sin ^2}\theta = {m^2}
 \tag{8.71}\]</span></span></p>
-<p>First solve the eigenvalue equation <a href="#eq-zeqnnum956196" class="quarto-xref">Equation&nbsp;<span>8.67</span></a> for <span class="math inline">\({\hat L_z}\)</span>:</p>
+<p>Start with the simpler equation, <a href="#eq-zeqnnum956196" class="quarto-xref">Equation&nbsp;<span>8.67</span></a>. Its solution is</p>
 <p><span id="eq-zeqnnum989444"><span class="math display">\[
 {\Phi _m}\left( \phi \right) = \frac{1}{{\sqrt {2\pi } }}{e^{im\phi }}
 \tag{8.72}\]</span></span></p>
@@ -625,7 +628,7 @@ b = j\left( {j + 1} \right)
 <p><span id="eq-ch08-p2079"><span class="math display">\[
 \int_0^{2\pi } {d\phi \;\Phi _{m'}^*\left( \phi \right){\Phi _m}\left( \phi \right)} = {\delta _{m'm}}
 \tag{8.73}\]</span></span></p>
-<p>The azimuths <span class="math inline">\(\phi\)</span> and <span class="math inline">\(\phi + 2\pi\)</span> describe the same point in space, so single-valuedness requires</p>
+<p>A full turn brings us back to the same point. The wavefunction must have the same value at <span class="math inline">\(\phi\)</span> and <span class="math inline">\(\phi+2\pi\)</span>, so</p>
 <p><span id="eq-ch08-p2081"><span class="math display">\[
 {\Phi _m}\left( \phi \right) = {\Phi _m}\left( {\phi + 2\pi } \right)
 \tag{8.74}\]</span></span></p>
@@ -633,29 +636,29 @@ b = j\left( {j + 1} \right)
 <p><span id="eq-zeqnnum804907"><span class="math display">\[
 \begin{array}{c} \exp \left[ {im\phi } \right] = \exp \left[ {im(\phi + 2\pi )} \right]\\ m\phi = m(\phi + 2\pi ) + n2\pi , &amp; n \in {\rm{Integer}} \end{array}
 \tag{8.75}\]</span></span></p>
-<p>.</p>
-<p>Thus <span class="math inline">\(m\)</span> must be an integer. Substituting this result into <a href="#eq-zeqnnum830038" class="quarto-xref">Equation&nbsp;<span>8.71</span></a> and using <span class="math inline">\(\Theta (\theta ) = \Theta (\theta + 2\pi )\)</span> yields</p>
+<p>A full turn therefore restricts the allowed values of <span class="math inline">\(m\)</span>.</p>
+<p>The phase condition requires integer <span class="math inline">\(m\)</span>. Solving the remaining polar <a href="#eq-zeqnnum830038" class="quarto-xref">Equation&nbsp;<span>8.71</span></a> with regular behavior at the poles gives</p>
 <p><span id="eq-zeqnnum917846"><span class="math display">\[
 \begin{array}{c} l = 0,\;1,\;2,\; \cdots \\ m = 0,\; \pm 1,\; \cdots ,\; \pm l \end{array}
 \tag{8.76}\]</span></span></p>
-<p>The detailed derivation is lengthy and is omitted here. Alternatively, general angular-momentum theory requires <span class="math inline">\(m\)</span> to satisfy <span class="math inline">\(m = l, \cdots , - l\)</span>, which makes <span class="math inline">\(l\)</span> an integer and also leads to <a href="#eq-zeqnnum917846" class="quarto-xref">Equation&nbsp;<span>8.76</span></a>. For orbital angular momentum, both <span class="math inline">\(l\)</span> and <span class="math inline">\(m\)</span> must therefore be integers.</p>
-<p>Substituting <a href="#eq-zeqnnum917846" class="quarto-xref">Equation&nbsp;<span>8.76</span></a> into <a href="#eq-zeqnnum830038" class="quarto-xref">Equation&nbsp;<span>8.71</span></a> and carrying out a longer derivation gives</p>
+<p>We will omit the longer differential-equation calculation. We can also connect this result with the ladder argument: <span class="math inline">\(m\)</span> runs from <span class="math inline">\(-l\)</span> to <span class="math inline">\(l\)</span> in unit steps. Since orbital <span class="math inline">\(m\)</span> is integer, <span class="math inline">\(l\)</span> must be a nonnegative integer too. This gives the allowed values in <a href="#eq-zeqnnum917846" class="quarto-xref">Equation&nbsp;<span>8.76</span></a>.</p>
+<p>With these allowed values, the polar <a href="#eq-zeqnnum830038" class="quarto-xref">Equation&nbsp;<span>8.71</span></a> has solutions</p>
 <p><span id="eq-zeqnnum839509"><span class="math display">\[
 {\Theta _{l,m}}\left( \theta \right) = {N_{l,m}}P_l^m\left( {\cos \theta } \right),
 \tag{8.77}\]</span></span></p>
-<p>Here <span class="math inline">\(P_l^m\left( {\cos \theta } \right)\)</span> is a real associated Legendre function<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, and <span class="math inline">\({N_{l,m}}\)</span> is a normalization constant chosen so that</p>
+<p>Here <span class="math inline">\(P_l^m(\cos\theta)\)</span> is a real <strong>associated Legendre function</strong>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> You do not need its full formula to follow the argument. The constant <span class="math inline">\(N_{l,m}\)</span> sets the normalization:</p>
 <p><span id="eq-ch08-p2089"><span class="math display">\[
 \int_0^\pi {d\theta \sin \theta \;\Theta _{l',m}^*\left( \theta \right){\Theta _{l,m}}\left( \theta \right)} = {\delta _{l'l}}
 \tag{8.78}\]</span></span></p>
-<p>Substituting <a href="#eq-zeqnnum839509" class="quarto-xref">Equation&nbsp;<span>8.77</span></a> and <a href="#eq-zeqnnum989444" class="quarto-xref">Equation&nbsp;<span>8.72</span></a> into <a href="#eq-zeqnnum129644" class="quarto-xref">Equation&nbsp;<span>8.66</span></a> finally gives</p>
+<p>Combine <a href="#eq-zeqnnum839509" class="quarto-xref">Equation&nbsp;<span>8.77</span></a> and <a href="#eq-zeqnnum989444" class="quarto-xref">Equation&nbsp;<span>8.72</span></a> using <a href="#eq-zeqnnum129644" class="quarto-xref">Equation&nbsp;<span>8.66</span></a>. The angular functions are</p>
 <p><span id="eq-ch08-p2091"><span class="math display">\[
 {Y_{l,m}}\left( {\theta ,\phi } \right) = \frac{{{N_{l,m}}}}{{\sqrt {2\pi } }}P_l^m\left( {\cos \theta } \right){e^{im\phi }}
 \tag{8.79}\]</span></span></p>
-<p>The spherical harmonic <span class="math inline">\({Y_{l,m}}\left( {\theta ,\phi } \right)\)</span> is a simultaneous eigenfunction of <span class="math inline">\({{\bf{\hat L}}^2}\)</span> and <span class="math inline">\({\hat L_z}\)</span>:</p>
+<p>These functions are the <strong>spherical harmonics</strong>. Each has definite squared orbital angular momentum and a definite <span class="math inline">\(z\)</span> projection:</p>
 <p><span id="eq-ch08-p2093"><span class="math display">\[
 \begin{array}{l} {{{\bf{\hat L}}}^2}{Y_{l,m}}\left( {\theta ,\phi } \right) = l(l + 1)\hbar {Y_{l,m}}\left( {\theta ,\phi } \right)\\ {{\hat L}_z}{Y_{l,m}}\left( {\theta ,\phi } \right) = m\hbar {Y_{l,m}}\left( {\theta ,\phi } \right) \end{array}
 \tag{8.80}\]</span></span></p>
-<p>Below are all the spherical harmonics for <span class="math inline">\(l = 0,1,2\)</span>.</p>
+<p>Here are the spherical harmonics for <span class="math inline">\(l=0,1,2\)</span>. Notice the constant angular function at <span class="math inline">\(l=0\)</span> and the richer patterns at higher <span class="math inline">\(l\)</span>.</p>
 <p><span id="eq-zeqnnum238379"><span class="math display">\[
 \begin{array}{c} {Y_{0,0}} = \sqrt {\frac{1}{{4\pi }}} \\ Y{{\kern 1pt} _{1,0}} = \sqrt {\frac{3}{{4\pi }}} \cos \theta \\ Y{{\kern 1pt} _{1, \pm 1}} = \mp \sqrt {\frac{3}{{8\pi }}} \sin \theta \;{e^{ \pm i\phi }}\\ Y{{\kern 1pt} _{2,0}} = \sqrt {\frac{5}{{16\pi }}} \left( {3{{\cos }^2}\theta - 1} \right)\\ Y{{\kern 1pt} _{2, \pm 1}} = \mp \sqrt {\frac{{15}}{{8\pi }}} \sin \theta \cos \theta \;{e^{ \pm i\phi }}\\ Y{{\kern 1pt} _{2, \pm 2}} = \mp \sqrt {\frac{{15}}{{32\pi }}} {\sin ^2}\theta \;{e^{ \pm 2i\phi }} \end{array}
 \tag{8.81}\]</span></span></p>
@@ -663,15 +666,15 @@ b = j\left( {j + 1} \right)
 <div class="source-caption">
 <p>Figure 8.2. Angular probability-density surfaces. The radial length in direction <span class="math inline">\((\theta ,\varphi )\)</span> represents <span class="math inline">\({\left\vert  {Y_l^m\left( {\theta ,\phi } \right)} \right\vert ^2}\)</span>: a longer radius indicates a greater probability of finding the particle in that direction.</p>
 </div>
-<p>Since <span class="math inline">\({\Phi _m}\left( \phi \right)\)</span> and <span class="math inline">\({\Theta _{l,m}}\left( \theta \right)\)</span> are separately normalized, <span class="math inline">\({Y_{l,m}}\left( {\theta ,\phi } \right)\)</span> is automatically normalized:</p>
+<p>Both angular factors are normalized, so their product <span class="math inline">\(Y_{l,m}(\theta,\phi)\)</span> is normalized over solid angle:</p>
 <p><span id="eq-ch08-p2099"><span class="math display">\[
 \int_0^{2\pi } {d\phi \int_0^\pi {d\theta \;\sin \theta Y_{l',m'}^*{Y_{l,m}}} } = {\delta _{l'l}}{\delta _{m'm}}
 \tag{8.82}\]</span></span></p>
-<p>Restoring the radial factor gives the general simultaneous eigenfunctions of <span class="math inline">\({{\bf{\hat L}}^2}\)</span> and <span class="math inline">\({\hat L_z}\)</span>:</p>
+<p>Put the radial factor back to recover the spatial wavefunction:</p>
 <p><span id="eq-ch08-p2101"><span class="math display">\[
 {\Lambda _{l,m}}\left( {r,\theta ,\phi } \right) = R\left( r \right){Y_{l,m}}\left( {\theta ,\phi } \right)
 \tag{8.83}\]</span></span></p>
-<p>Since <span class="math inline">\({Y_{l,m}}\left( {\theta ,\phi } \right)\)</span> is normalized over <span class="math inline">\(\theta ,\phi\)</span>, we need only ensure that <span class="math inline">\(R\left( r \right)\)</span> is normalized over <span class="math inline">\(r\)</span>, namely</p>
+<p>The angular part already has unit normalization. We therefore only need to normalize <span class="math inline">\(R(r)\)</span> with the radial volume factor <span class="math inline">\(r^2dr\)</span>:</p>
 <p><span id="eq-ch08-p2103"><span class="math display">\[
 \int_0^\infty {{{\left\vert  {R\left( r \right)} \right\vert }^2}{r^2}dr} = 1
 \tag{8.84}\]</span></span></p>
@@ -679,18 +682,19 @@ b = j\left( {j + 1} \right)
 <p><span id="eq-ch08-p2105"><span class="math display">\[
 \iiint_V {dV{{\left\vert  {{\Lambda _{l,m}}\left( {r,\theta ,\phi } \right)} \right\vert }^2}} = \left[ {\int_0^\infty {dr\;{{\left\vert  {R\left( r \right)} \right\vert }^2}{r^2}} } \right] \cdot \left[ {\int_0^{2\pi } {d\phi } \int_0^\pi {d\theta \;\sin \theta \;{{\left\vert  {{Y_{l,m}}(\theta ,\phi )} \right\vert }^2}} } \right] = 1
 \tag{8.85}\]</span></span></p>
-<p>The orbital angular-momentum eigenvalue equations do not determine the radial distribution and therefore cannot specify the complete spatial probability density. For a particle in state <span class="math inline">\(\vert l,m\rangle\)</span>, with <span class="math inline">\({{\bf{\hat L}}^2}\)</span> and <span class="math inline">\({\hat L_z}\)</span> equal to <span class="math inline">\(l(l + 1){\hbar ^2}\)</span> and <span class="math inline">\(m\hbar\)</span>, <span class="math inline">\({\left\vert  {{Y_{l,m}}(\theta ,\phi )} \right\vert ^2}\)</span> gives the probability per unit solid angle in direction <span class="math inline">\((\theta ,\phi )\)</span>. We call this the angular probability density of the eigenstate. It is easy to show that <span class="math inline">\({\left\vert  {{Y_{l,m}}(\theta ,\phi )} \right\vert ^2}\)</span> is independent of <span class="math inline">\(\phi\)</span>, so it is rotationally symmetric about the <span class="math inline">\(z\)</span> axis.</p>
+<p>Angular momentum fixes the angular pattern, but it does not tell us how far the particle lies from the origin. We need the radial function for that.</p>
+<p>In <span class="math inline">\(\vert l,m\rangle\)</span>, the quantity <span class="math inline">\(|Y_{l,m}(\theta,\phi)|^2\)</span> gives probability per unit solid angle. We call it the <strong>angular probability density</strong>. Its magnitude is independent of <span class="math inline">\(\phi\)</span>, so the density is symmetric under rotations about <span class="math inline">\(z\)</span>. The wavefunction itself may still have a <span class="math inline">\(\phi\)</span>-dependent phase.</p>
 </section>
 <section id="rotations-and-angular-momentum" class="level2" data-number="8.3">
 <h2 data-number="8.3" class="anchored" data-anchor-id="rotations-and-angular-momentum"><span class="header-section-number">8.3</span> * Rotations and Angular Momentum</h2>
-<p>We now examine the relation between rotations and angular momentum.</p>
+<p>Momentum generates translations. Does angular momentum play a similar role for rotations? Let us find out.</p>
 <section id="the-infinitesimal-rotation-operator" class="level3" data-number="8.3.1">
 <h3 data-number="8.3.1" class="anchored" data-anchor-id="the-infinitesimal-rotation-operator"><span class="header-section-number">8.3.1</span> * The Infinitesimal Rotation Operator</h3>
-<p>Define an infinitesimal rotation operator <span class="math inline">\(\hat D\left( {{\bf{z}},d\phi } \right)\)</span> that rotates the entire system through <span class="math inline">\(d\phi\)</span> about the <span class="math inline">\(z\)</span> axis. The initial state <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> becomes a new state <span class="math inline">\(\left\vert  {\psi (d\phi )} \right\rangle\)</span>, depending on <span class="math inline">\(d\phi\)</span>:</p>
+<p>Imagine turning the whole system through a tiny angle <span class="math inline">\(d\phi\)</span> about <span class="math inline">\(z\)</span>. Define an operator <span class="math inline">\(\hat D(\mathbf z,d\phi)\)</span> for this rotation. It takes the initial state to</p>
 <p><span id="eq-ch08-p2111"><span class="math display">\[
 \hat D\left( {{\bf{z}},d\phi } \right)\left\vert  \psi \right\rangle = \left\vert  {\psi (d\phi )} \right\rangle
 \tag{8.86}\]</span></span></p>
-<p>As with translations, physical considerations impose the following conditions on <span class="math inline">\(\hat D\left( {{\bf{z}},d\phi } \right)\)</span>:</p>
+<p>As with translations, we require a zero rotation to do nothing, successive small rotations about the same axis to add, and probabilities to stay unchanged:</p>
 <p><span id="eq-ch08-p2113"><span class="math display">\[
 \begin{array}{c} \mathop {\lim }\limits_{d\phi \to 0} \hat D\left( {{\bf{z}},d\phi } \right) = \hat I\\ \hat D\left( {{\bf{z}},d{\phi _1}} \right)\hat D\left( {{\bf{z}},d{\phi _2}} \right) = \hat D\left( {{\bf{z}},d{\phi _2}} \right)\hat D\left( {{\bf{z}},d{\phi _1}} \right) = \hat D\left( {{\bf{z}},d{\phi _1} + d{\phi _2}} \right)\\ {{\hat D}^\dagger }\left( {{\bf{z}},d\phi } \right) = {{\hat D}^{ - 1}}\left( {{\bf{z}},d\phi } \right) = \hat D\left( {{\bf{z}}, - d\phi } \right) \end{array}
 \tag{8.87}\]</span></span></p>
@@ -699,15 +703,15 @@ b = j\left( {j + 1} \right)
 <p><span id="eq-zeqnnum304369"><span class="math display">\[
 \hat D\left( {{\bf{z}},d\phi } \right) = \left[ {\hat I - i\frac{{{{\hat J}_z}}}{\hbar }d\phi } \right]
 \tag{8.88}\]</span></span></p>
-<p>Here <span class="math inline">\({\hat J_z}\)</span> is Hermitian. The dimensions of <span class="math inline">\({\hat J_z}\)</span> are those of angular momentum, and experiment identifies it with the <span class="math inline">\(z\)</span> component of the system’s angular momentum. Just as momentum generates translations (<a href="07-continuous-observables.html#eq-zeqnnum333148" class="quarto-xref">Equation&nbsp;<span>7.55</span></a>), angular momentum generates rotations.</p>
+<p>The operator <span class="math inline">\(\hat J_z\)</span> is Hermitian and has units of angular momentum. Experiment identifies it with the system’s <span class="math inline">\(z\)</span> component of angular momentum. We have found the parallel we hoped for: momentum generates translations (<a href="07-continuous-observables.html#eq-zeqnnum333148" class="quarto-xref">Equation&nbsp;<span>7.55</span></a>), and angular momentum generates rotations.</p>
 </section>
 <section id="orbital-angular-momentum-1" class="level3" data-number="8.3.2">
 <h3 data-number="8.3.2" class="anchored" data-anchor-id="orbital-angular-momentum-1"><span class="header-section-number">8.3.2</span> * Orbital Angular Momentum</h3>
-<p>Applying an infinitesimal rotation to the spherical-coordinate position eigenstate <span class="math inline">\(\left\vert  {r,\theta ,\phi } \right\rangle\)</span> produces <span class="math inline">\(\left\vert  {r,\theta ,\phi + d\phi } \right\rangle\)</span>:</p>
+<p>For a position eigenstate, a small rotation about <span class="math inline">\(z\)</span> changes <span class="math inline">\(\phi\)</span> to <span class="math inline">\(\phi+d\phi\)</span>. The coordinates <span class="math inline">\(r\)</span> and <span class="math inline">\(\theta\)</span> stay the same:</p>
 <p><span id="eq-zeqnnum108507"><span class="math display">\[
 \hat D\left( {{\bf{z}},d\phi } \right)\left\vert  {r,\theta ,\phi } \right\rangle = \left\vert  {r,\theta ,\phi + d\phi } \right\rangle
 \tag{8.89}\]</span></span></p>
-<p>The angular momentum associated with a change in position is orbital angular momentum, conventionally denoted <span class="math inline">\({\hat L_z}\)</span>. Using <a href="#eq-zeqnnum304369" class="quarto-xref">Equation&nbsp;<span>8.88</span></a>, rewrite <a href="#eq-zeqnnum108507" class="quarto-xref">Equation&nbsp;<span>8.89</span></a> as</p>
+<p>This part of the rotation changes spatial position, so its generator is the orbital component <span class="math inline">\(\hat L_z\)</span>. Using <a href="#eq-zeqnnum304369" class="quarto-xref">Equation&nbsp;<span>8.88</span></a> gives</p>
 <p><span id="eq-ch08-p2122"><span class="math display">\[
 \left[ {\hat I - i\frac{{{{\hat L}_z}}}{\hbar }d\phi } \right]\left\vert  {r,\theta ,\phi } \right\rangle = \left\vert  {r,\theta ,\phi + d\phi } \right\rangle
 \tag{8.90}\]</span></span></p>
@@ -719,7 +723,7 @@ b = j\left( {j + 1} \right)
 <p><span id="eq-ch08-p2126"><span class="math display">\[
 \left\langle {r,\theta ,\phi } \right\vert \left[ {\hat I - i\frac{{{{\hat L}_z}}}{\hbar }d\phi } \right] = \left\langle {r,\theta ,\phi - d\phi } \right\vert
 \tag{8.92}\]</span></span></p>
-<p>Multiply both sides on the right by an arbitrary quantum state <span class="math inline">\(\left\vert  \psi \right\rangle\)</span>, and Taylor-expand the right-hand side:</p>
+<p>Let both sides act on any state <span class="math inline">\(\vert\psi\rangle\)</span>. Then expand the shifted wavefunction to first order in <span class="math inline">\(d\phi\)</span>:</p>
 <p><span id="eq-ch08-p2128"><span class="math display">\[
 \begin{array}{c} \left\langle {r,\theta ,\phi } \right\vert \left[ {\hat I - i\frac{{{{\hat L}_z}}}{\hbar }d\phi } \right]\left\vert  \psi \right\rangle = \left\langle {{r,\theta ,\phi - d\phi }} \mathrel{\left \vert  {\vphantom {{r,\theta ,\phi - d\phi } \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \\ \left\langle {{r,\theta ,\phi }} \mathrel{\left \vert  {\vphantom {{r,\theta ,\phi } \psi }} \right. \kern-1.2pt } {\psi } \right\rangle - i\frac{{d\phi }}{\hbar }\left\langle {r,\theta ,\phi } \right\vert {{\hat L}_z}\left\vert  \psi \right\rangle \approx \left\langle {{r,\theta ,\phi }} \mathrel{\left \vert  {\vphantom {{r,\theta ,\phi } \psi }} \right. \kern-1.2pt } {\psi } \right\rangle - d\phi \frac{\partial }{{\partial \phi }}\left\langle {{r,\theta ,\phi }} \mathrel{\left \vert  {\vphantom {{r,\theta ,\phi } \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \end{array}
 \tag{8.93}\]</span></span></p>
@@ -727,7 +731,7 @@ b = j\left( {j + 1} \right)
 <p><span id="eq-ch08-p2130"><span class="math display">\[
 \left\langle {r,\theta ,\phi } \right\vert {\hat L_z}\left\vert  \psi \right\rangle = - i\hbar \frac{\partial }{{\partial \phi }}\left\langle {{r,\theta ,\phi }} \mathrel{\left \vert  {\vphantom {{r,\theta ,\phi } \psi }} \right. \kern-1.2pt } {\psi } \right\rangle
 \tag{8.94}\]</span></span></p>
-<p>Thus, in the spherical-coordinate position representation, the orbital angular-momentum component <span class="math inline">\({\hat L_z}\)</span> is</p>
+<p>We recover the position-space rule for orbital angular momentum:</p>
 <p><span id="eq-ch08-p2132"><span class="math display">\[
 {\hat L_z} \buildrel\textstyle.\over= - i\hbar \frac{\partial }{{\partial \phi }}
 \tag{8.95}\]</span></span></p>
@@ -735,11 +739,11 @@ b = j\left( {j + 1} \right)
 </section>
 <section id="exercises" class="level2" data-number="8.4">
 <h2 data-number="8.4" class="anchored" data-anchor-id="exercises"><span class="header-section-number">8.4</span> Exercises</h2>
-<p><strong>8.1</strong> A system has definite <span class="math inline">\({{\bf{\hat J}}^2}\)</span> and <span class="math inline">\({\hat J_z}\)</span>, equal to <span class="math inline">\(j(j + 1){\hbar ^2}\)</span> and <span class="math inline">\(m\hbar\)</span>. Use symmetry to prove that, in this state,</p>
+<p><strong>8.1</strong> Consider the state <span class="math inline">\(\vert j,m\rangle\)</span>. It has <span class="math inline">\(\mathbf{\hat J}^2=j(j+1)\hbar^2\)</span> and <span class="math inline">\(\hat J_z=m\hbar\)</span>. Use symmetry to prove</p>
 <p><span id="eq-ch08-p2137"><span class="math display">\[
 \langle {\hat J_x^2}\rangle = \langle {\hat J_y^2}\rangle = \frac{{j(j + 1) - {m^2}}}{2}{\hbar ^2}
 \tag{8.96}\]</span></span></p>
-<p><strong>8.2</strong> Starting from <a href="#eq-zeqnnum904731" class="quarto-xref">Equation&nbsp;<span>8.23</span></a>, <span class="math inline">\({\hat J_ \pm }\left\vert  {j,m} \right\rangle = {C_ \pm }\left( {j,m} \right)\left\vert  {j,m \pm 1} \right\rangle\)</span>, use <a href="#eq-zeqnnum732391" class="quarto-xref">Equation&nbsp;<span>8.18</span></a> and <a href="#eq-zeqnnum324145" class="quarto-xref">Equation&nbsp;<span>8.19</span></a> to find <span class="math inline">\({\left\vert  {{C_ \pm }\left( {j,m} \right)} \right\vert ^2}\)</span>, and hence prove the preceding result.</p>
+<p><strong>8.2</strong> Start with the ladder rule <a href="#eq-zeqnnum904731" class="quarto-xref">Equation&nbsp;<span>8.23</span></a>, <span class="math inline">\(\hat J_\pm\vert j,m\rangle=C_\pm(j,m)\vert j,m\pm1\rangle\)</span>. Use <a href="#eq-zeqnnum732391" class="quarto-xref">Equation&nbsp;<span>8.18</span></a> and <a href="#eq-zeqnnum324145" class="quarto-xref">Equation&nbsp;<span>8.19</span></a> to find <span class="math inline">\(|C_\pm(j,m)|^2\)</span>. Then use the result to check the ladder coefficients derived above.</p>
 <p><strong>8.3</strong> A particle in a central field <span class="math inline">\(V = V(r)\)</span> has wavefunction</p>
 <p><span id="eq-ch08-p2141"><span class="math display">\[
 \psi ({\bf{r}}) = (x + y + 3z)f(r)
