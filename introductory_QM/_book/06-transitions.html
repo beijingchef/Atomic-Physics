@@ -264,20 +264,20 @@ window.Quarto = {
 <section id="magnetic-resonance" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="magnetic-resonance"><span class="header-section-number">6.1</span> Magnetic resonance</h2>
 <p>Start with an electron in a static field <span class="math inline">\(\mathbf B_0=B_0\hat{\mathbf z}\)</span> and prepare its spin in <span class="math inline">\(\vert U\rangle\)</span>. The states <span class="math inline">\(\vert U\rangle\)</span> and <span class="math inline">\(\vert D\rangle\)</span> have energies <span class="math inline">\(\mu_{\mathrm B}B_0\)</span> and <span class="math inline">\(-\mu_{\mathrm B}B_0\)</span>. With the static field alone, each is stationary.</p>
-<p>Now add a much weaker field <span class="math inline">\(\mathbf B'\)</span> in the transverse plane, perpendicular to <span class="math inline">\(\mathbf B_0\)</span>. Let it oscillate at angular frequency <span class="math inline">\(\omega\)</span>, with <span class="math inline">\(|\mathbf B'|\ll|\mathbf B_0|\)</span>. Think of a small, repeated push: its timing can matter as much as its strength.</p>
+<p>Now add a much weaker field <span class="math inline">\(\mathbf B'\)</span> perpendicular to <span class="math inline">\(\mathbf B_0\)</span>, in the transverse plane, we call it <strong>the drive</strong>. Let it oscillate at angular frequency <span class="math inline">\(\omega\)</span>. Although <span class="math inline">\(|\mathbf B'|\ll|\mathbf B_0|\)</span>, we will see just like a small, repeated push: its timing can matter as much as its strength.</p>
 <p>Write the transverse field in components:</p>
 <p><span id="eq-zeqnnum692846"><span class="math display">\[
 {\bf{B'}} = {B'_x}{\bf{\hat x}} + {B'_y}{\bf{\hat y}}
 \tag{6.1}\]</span></span></p>
-<p>For a first example, let <span class="math inline">\(\mathbf B'\)</span> rotate in the transverse plane while keeping a constant magnitude. Choose the same rotation sense as the electron’s precession in <span class="math inline">\(\mathbf B_0\)</span>:</p>
+<p>a first example, let <span class="math inline">\(\mathbf B'\)</span> rotate in the transverse plane in the same sense as the electron’s precession in <span class="math inline">\(\mathbf B_0\)</span>:</p>
 <p><span id="eq-zeqnnum766276"><span class="math display">\[
 {B'_x} = B'\cos \omega t; \qquad  \qquad  {B'_y} = B'\sin \omega t
 \tag{6.2}\]</span></span></p>
-<p>The interaction Hamiltonian for the total field is</p>
+<p>interaction Hamiltonian for the total field is</p>
 <p><span id="eq-zeqnnum126030"><span class="math display">\[
 \hat H = - {{\bf{\mu }}_{\rm{S}}} \cdot \left( {{{\bf{B}}_0} + {\bf{B'}}} \right) = {\hat H_0} + \hat V(t)
 \tag{6.3}\]</span></span></p>
-<p>We have split the Hamiltonian into two parts. The static field gives <span class="math inline">\(\hat H_0\)</span>, and the rotating field gives <span class="math inline">\(\hat V\)</span>. In the <span class="math inline">\(\hat\sigma_z\)</span> basis,</p>
+<p>have split the Hamiltonian into two parts. The static field gives <span class="math inline">\(\hat H_0\)</span>, and the rotating field gives <span class="math inline">\(\hat V\)</span>. In the <span class="math inline">\(\hat\sigma_z\)</span> basis,</p>
 <p><span id="eq-zeqnnum864064"><span class="math display">\[
 {\hat H_0} = - {{\bf{\mu }}_{\rm{S}}} \cdot {{\bf{B}}_0} = {\mu _{\rm{B}}}{\hat \sigma _z}{B_0} \buildrel\textstyle.\over= {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} {{B_0}}&amp;0\\ 0&amp;{ - {B_0}} \end{array}} \right) = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&amp;0\\ 0&amp;{ - {\omega _0}} \end{array}} \right)
 \tag{6.4}\]</span></span></p>
@@ -285,7 +285,7 @@ window.Quarto = {
 <p><span id="eq-zeqnnum833059"><span class="math display">\[
 \begin{array}{c} \hat V(t) = - {{\bf{\mu }}_{\rm{S}}} \cdot {\bf{B'}} = {\mu _{\rm{B}}}\left( {{{\hat \sigma }_x}{{B'}_x} + {{\hat \sigma }_y}{{B'}_y}} \right) \buildrel\textstyle.\over= {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} 0&amp;{{{B'}_x} - i{{B'}_y}}\\ {{{B'}_x} + i{{B'}_y}}&amp;0 \end{array}} \right)\\ = {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} 0&amp;{B'{e^{ - i\omega t}}}\\ {B'{e^{i\omega t}}}&amp;0 \end{array}} \right) = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&amp;{{\Omega _0}{e^{ - i\omega t}}}\\ {{\Omega _0}{e^{i\omega t}}}&amp;0 \end{array}} \right) \end{array}
 \tag{6.5}\]</span></span></p>
-<p>We call <span class="math inline">\(\Omega_0\equiv2\mu_{\mathrm B}B'/\hbar\)</span> the <strong>resonant Rabi frequency</strong>. It measures the strength of the drive in frequency units. Rabi received the 1944 Nobel Prize in Physics for his magnetic-resonance method using atomic and molecular beams.</p>
+<p>We call <span class="math inline">\(\Omega_0\equiv2\mu_{\mathrm B}B'/\hbar\)</span> the <strong>resonant Rabi frequency</strong>, which measures the strength of the drive in frequency units. (Rabi received the 1944 Nobel Prize in Physics for his magnetic-resonance method using atomic and molecular beams.)</p>
 <p>The total Hamiltonian is therefore</p>
 <p><span id="eq-zeqnnum963082"><span class="math display">\[
 \hat H \buildrel\textstyle.\over= \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&amp;{{\Omega _0}{e^{ - i\omega t}}}\\ {{\Omega _0}{e^{i\omega t}}}&amp;{ - {\omega _0}} \end{array}} \right)
@@ -298,11 +298,11 @@ window.Quarto = {
 <p><span id="eq-zeqnnum927934"><span class="math display">\[
 \left( {\begin{array}{*{20}{c}} {{{\dot c}_1}}\\ {{{\dot c}_2}} \end{array}} \right) = - \frac{i}{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&amp;{{\Omega _0}{e^{ - i\omega t}}}\\ {{\Omega _0}{e^{i\omega t}}}&amp;{ - {\omega _0}} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{c_1}}\\ {{c_2}} \end{array}} \right)
 \tag{6.8}\]</span></span></p>
-<p>The rapidly changing phase factors make these equations look more complicated than they need to. We can remove them by moving to a rotating frame:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>The rapidly changing phase factors make these equations look more complicated than they need to. We can simply them by defining</p>
 <p><span id="eq-zeqnnum414068"><span class="math display">\[
 {c_1}(t) = {d_1}(t){e^{ - {{i\omega t} \mathord{\left/ {\vphantom {{i\omega t} 2}} \right. \kern-1.2pt } 2}}}; \qquad  {c_2}(t) = {d_2}(t){e^{{{i\omega t} \mathord{\left/ {\vphantom {{i\omega t} 2}} \right. \kern-1.2pt } 2}}}.
 \tag{6.9}\]</span></span></p>
-<p>In this frame, <a href="#eq-zeqnnum927934" class="quarto-xref">Equation&nbsp;<span>6.8</span></a> becomes</p>
+<p>This is equivalent of expressing the equation in the reference frame rotating with the drive<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Then, <a href="#eq-zeqnnum927934" class="quarto-xref">Equation&nbsp;<span>6.8</span></a> becomes</p>
 <p><span id="eq-zeqnnum721542"><span class="math display">\[
 \left( {\begin{array}{*{20}{c}} {{{\dot d}_1}}\\ {{{\dot d}_2}} \end{array}} \right) = \frac{i}{2}\left( {\begin{array}{*{20}{c}} \Delta &amp;{ - {\Omega _0}}\\ { - {\Omega _0}}&amp;{ - \Delta } \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{d_1}}\\ {{d_2}} \end{array}} \right), \qquad  \left( {\begin{array}{*{20}{c}} {{d_1}(0)}\\ {{d_2}(0)} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right)
 \tag{6.10}\]</span></span></p>
@@ -318,18 +318,22 @@ window.Quarto = {
 <p>Figure 6.1 shows what changes when we vary the detuning. At <span class="math inline">\(\Delta=0\)</span>, the drive is on <strong>resonance</strong>. The probability <span class="math inline">\(P_2\)</span> swings all the way from zero to one. The oscillation is slowest here, but its range is largest.</p>
 <p>Away from resonance, the oscillations get faster and their range shrinks. <a href="#eq-zeqnnum748213" class="quarto-xref">Equation&nbsp;<span>6.12</span></a> gives the timing: at even multiples of <span class="math inline">\(\pi\)</span> in <span class="math inline">\(\Omega t\)</span>, the initial population returns, with <span class="math inline">\(P_2=0\)</span> and <span class="math inline">\(P_1=1\)</span>. At odd multiples, <span class="math inline">\(P_2\)</span> reaches its maximum for that detuning. Only on resonance does that maximum reach one, giving complete transfer to the other level.</p>
 <p>As <span class="math inline">\(P_2\)</span> grows, the electron moves toward the lower-energy state. Its mean magnetic energy decreases, and energy goes to the drive. This is <strong>stimulated emission</strong>. As <span class="math inline">\(P_2\)</span> falls, the electron takes energy from the drive. This is <strong>stimulated absorption</strong>. The same coupling produces both processes, which explains why the corresponding Einstein coefficients are equal in this two-state case.</p>
+<div class="text-center">
 <p><img src="assets/image1150.png" class="img-fluid" width="410"></p>
 <div class="source-caption">
 <p>Figure 6.1. Probability of electron spin state <span class="math inline">\(\vert D\rangle\)</span> versus time at different detunings.</p>
+</div>
 </div>
 <p>How much population can the drive transfer? By <a href="#eq-zeqnnum748213" class="quarto-xref">Equation&nbsp;<span>6.12</span></a>, the size of the oscillating part of either probability is</p>
 <p><span id="eq-zeqnnum340775"><span class="math display">\[
 {P_0}(\Delta ) = \frac{1}{2}\frac{{\Omega _0^2}}{{{\Omega ^2}}} = \frac{1}{2}\frac{{\Omega _0^2}}{{{\Delta ^2} + \Omega _0^2}}
 \tag{6.13}\]</span></span></p>
 <p>Keep the drive strength <span class="math inline">\(\Omega_0\)</span> fixed and scan its frequency. The maximum transfer <span class="math inline">\(P_0(\Delta)\)</span> traces the peak in Figure 6.2. Its half-width at half-maximum (HWHM) is <span class="math inline">\(\Omega_0\)</span>: at that detuning, the peak has fallen to half its height. A stronger drive therefore makes the resonance broader. We call this <strong>power broadening</strong>. It matters when we use magnetic resonance or spectroscopy to measure energy-level separations.</p>
+<div class="text-center">
 <p><img src="assets/image1158.png" class="img-fluid" width="379"><img src="assets/image1159.svg" class="img-fluid" width="379"></p>
 <div class="source-caption">
 <p>Figure 6.2. <span class="math inline">\({P_0}(\Delta )\)</span> peaks at <span class="math inline">\(\Delta = 0\)</span> and has HWHM <span class="math inline">\({\Omega _0}\)</span>. Zero detuning is resonance.</p>
+</div>
 </div>
 <p>We can also follow the mean spin vector by calculating <span class="math inline">\(\langle\psi(t)\vert\hat S_{x,y,z}\vert\psi(t)\rangle\)</span>:</p>
 <p><span id="eq-ch06-p1453"><span class="math display">\[

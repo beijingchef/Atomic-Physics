@@ -12,15 +12,21 @@ Write the transverse field in components:
 
 $$
 {\bf{B'}} = {B'_x}{\bf{\hat x}} + {B'_y}{\bf{\hat y}}
-$$ {#eq-zeqnnum692846} a first example, let $\mathbf B'$ rotate in the transverse plane in the same sense as the electron's precession in $\mathbf B_0$:
+$$ {#eq-zeqnnum692846}
+
+a first example, let $\mathbf B'$ rotate in the transverse plane in the same sense as the electron's precession in $\mathbf B_0$:
 
 $$
 {B'_x} = B'\cos \omega t; \qquad  \qquad  {B'_y} = B'\sin \omega t
-$$ {#eq-zeqnnum766276} interaction Hamiltonian for the total field is
+$$ {#eq-zeqnnum766276}
+
+interaction Hamiltonian for the total field is
 
 $$
 \hat H = - {{\bf{\mu }}_{\rm{S}}} \cdot \left( {{{\bf{B}}_0} + {\bf{B'}}} \right) = {\hat H_0} + \hat V(t)
-$$ {#eq-zeqnnum126030} have split the Hamiltonian into two parts. The static field gives $\hat H_0$, and the rotating field gives $\hat V$. In the $\hat\sigma_z$ basis,
+$$ {#eq-zeqnnum126030}
+
+have split the Hamiltonian into two parts. The static field gives $\hat H_0$, and the rotating field gives $\hat V$. In the $\hat\sigma_z$ basis,
 
 $$
 {\hat H_0} = - {{\bf{\mu }}_{\rm{S}}} \cdot {{\bf{B}}_0} = {\mu _{\rm{B}}}{\hat \sigma _z}{B_0} \buildrel\textstyle.\over= {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} {{B_0}}&0\\ 0&{ - {B_0}} \end{array}} \right) = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&0\\ 0&{ - {\omega _0}} \end{array}} \right)
@@ -38,11 +44,15 @@ The total Hamiltonian is therefore
 
 $$
 \hat H \buildrel\textstyle.\over= \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&{{\Omega _0}{e^{ - i\omega t}}}\\ {{\Omega _0}{e^{i\omega t}}}&{ - {\omega _0}} \end{array}} \right)
-$$ {#eq-zeqnnum963082}Expand the spin state in the $\hat\sigma_z$ basis. We also include the initial condition, which puts all the population in $\vert U\rangle$:
+$$ {#eq-zeqnnum963082}
+
+Expand the spin state in the $\hat\sigma_z$ basis. We also include the initial condition, which puts all the population in $\vert U\rangle$:
 
 $$
 \vert {\psi (t)}\rangle = {c_1}(t)\vert U\rangle + {c_2}(t)\left\vert  D \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {{c_1}(t)}\\ {{c_2}(t)} \end{array}} \right), \qquad  {\left\vert  {{c_1}} \right\vert ^2} + {\left\vert  {{c_2}} \right\vert ^2} = 1,\;\;\left( {\begin{array}{*{20}{c}} {{c_1}(0) = 1}\\ {{c_2}(0) = 0} \end{array}} \right),\;\;
-$$ {#eq-zeqnnum361616}Substituting @eq-zeqnnum963082 and @eq-zeqnnum361616 into the Schrödinger equation gives
+$$ {#eq-zeqnnum361616}
+
+Substituting @eq-zeqnnum963082 and @eq-zeqnnum361616 into the Schrödinger equation gives
 
 $$
 \left( {\begin{array}{*{20}{c}} {{{\dot c}_1}}\\ {{{\dot c}_2}} \end{array}} \right) = - \frac{i}{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&{{\Omega _0}{e^{ - i\omega t}}}\\ {{\Omega _0}{e^{i\omega t}}}&{ - {\omega _0}} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{c_1}}\\ {{c_2}} \end{array}} \right)
@@ -82,11 +92,15 @@ Away from resonance, the oscillations get faster and their range shrinks. @eq-ze
 
 As $P_2$ grows, the electron moves toward the lower-energy state. Its mean magnetic energy decreases, and energy goes to the drive. This is **stimulated emission**. As $P_2$ falls, the electron takes energy from the drive. This is **stimulated absorption**. The same coupling produces both processes, which explains why the corresponding Einstein coefficients are equal in this two-state case.
 
+:::: {.text-center}
+
 ![](assets/image1150.png){width="410px"}
 
 ::: source-caption
 Figure 6.1. Probability of electron spin state $\vert D\rangle$ versus time at different detunings.
 :::
+
+::::
 
 How much population can the drive transfer? By @eq-zeqnnum748213, the size of the oscillating part of either probability is
 
@@ -96,11 +110,15 @@ $$ {#eq-zeqnnum340775}
 
 Keep the drive strength $\Omega_0$ fixed and scan its frequency. The maximum transfer $P_0(\Delta)$ traces the peak in Figure 6.2. Its half-width at half-maximum (HWHM) is $\Omega_0$: at that detuning, the peak has fallen to half its height. A stronger drive therefore makes the resonance broader. We call this **power broadening**. It matters when we use magnetic resonance or spectroscopy to measure energy-level separations.
 
+:::: {.text-center}
+
 ![](assets/image1158.png){width="379px"}![](assets/image1159.svg){width="379px"}
 
 ::: source-caption
 Figure 6.2. ${P_0}(\Delta )$ peaks at $\Delta = 0$ and has HWHM ${\Omega _0}$. Zero detuning is resonance.
 :::
+
+::::
 
 We can also follow the mean spin vector by calculating $\langle\psi(t)\vert\hat S_{x,y,z}\vert\psi(t)\rangle$:
 
