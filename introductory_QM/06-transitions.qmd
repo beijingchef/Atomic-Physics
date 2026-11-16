@@ -305,3 +305,30 @@ Substituting ${g_ \pm }$ into @eq-zeqnnum771504 gives
 $$
 \begin{array}{c} \left( {\begin{array}{*{20}{c}} {{d_1}(t)}\\ {{d_2}(t)} \end{array}} \right) = \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {(\Omega + \Delta ){\Omega _0}}\\ {(\Omega + \Delta )(\Delta - \Omega )} \end{array}} \right){e^{{{i{\lambda _ + }t} \mathord{\left/ {\vphantom {{i{\lambda _ + }t} 2}} \right. \kern-1.2pt } 2}}} + \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {(\Omega - \Delta ){\Omega _0}}\\ {(\Omega - \Delta )(\Delta + \Omega )} \end{array}} \right){e^{{{i{\lambda _ - }t} \mathord{\left/ {\vphantom {{i{\lambda _ - }t} 2}} \right. \kern-1.2pt } 2}}}\\ = \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {(\Omega + \Delta ){\Omega _0}{e^{{{i\Omega t} \mathord{\left/ {\vphantom {{i\Omega t} 2}} \right. \kern-1.2pt } 2}}} + (\Omega - \Delta ){\Omega _0}{e^{{{ - i\Omega t} \mathord{\left/ {\vphantom {{ - i\Omega t} 2}} \right. \kern-1.2pt } 2}}}}\\ { - \Omega _0^2{e^{{{i\Omega t} \mathord{\left/ {\vphantom {{i\Omega t} 2}} \right. \kern-1.2pt } 2}}} + \Omega _0^2{e^{{{ - i\Omega t} \mathord{\left/ {\vphantom {{ - i\Omega t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right)\\ = = \left( {\begin{array}{*{20}{c}} {\cos \left( {\frac{\Omega }{2}t} \right) + \frac{{i\Delta }}{\Omega }\sin \left( {\frac{\Omega }{2}t} \right)}\\ { - \frac{{i{\Omega _0}}}{\Omega }\sin \left( {\frac{\Omega }{2}t} \right)} \end{array}} \right) \end{array}
 $$ {#eq-ch06-p1514}
+
+## Exercises
+
+Ignore relaxation in both problems. Use the circularly polarized drive from this chapter, with constant amplitude while it is on. Take $\Omega_0>0$.
+
+**6.1. Flipping a spin with a pulse.** Prepare an electron in $\vert U\rangle$. Turn on a resonant drive, so $\Delta=0$, and switch it off after a time $\tau$. This finite burst of the drive is called a **pulse**. Work in the rotating frame, using the amplitudes $d_1$ and $d_2$ defined in @eq-zeqnnum414068.
+
+(1) Find $d_1(\tau)$ and $d_2(\tau)$. What is the probability of measuring $\vert D\rangle$ immediately after the pulse?
+
+(2) Find the shortest pulse that transfers the electron completely to $\vert D\rangle$. Then find the shortest pulse that gives equal probabilities for $\vert U\rangle$ and $\vert D\rangle$. These are called a $\pi$ pulse and a $\pi/2$ pulse, respectively. For the $\pi/2$ pulse, also write the rotating-frame state and identify its relative phase. Do equal probabilities mean that the electron has lost its definite pure state?
+
+(3) Suppose $\Omega_0/(2\pi)=25\,\mathrm{kHz}$. Calculate both pulse durations in microseconds. If you double the drive amplitude $B'$, how should you change the durations to produce the same final states?
+
+Hint: use @eq-zeqnnum460032 with $\Delta=0$. Keep the complex amplitudes until you have found the state; taking their squared magnitudes too early loses the relative phase.
+
+**6.2. A faster oscillation with a smaller swing.** Prepare another electron in $\vert U\rangle$. Keep the drive strength $\Omega_0$ fixed, but allow a nonzero detuning $\Delta=\omega-\omega_0$. Let the drive remain on.
+
+(1) Starting from @eq-zeqnnum748213, show that the transition probability can be written as
+
+$$
+P_2(t)=\frac{\Omega_0^2}{\Omega_0^2+\Delta^2}
+\sin^2\!\left(\frac{\sqrt{\Omega_0^2+\Delta^2}\,t}{2}\right).
+$$ {#eq-ch06-ex-detuned-probability}
+
+(2) Set $\Delta=\Omega_0$. Find the largest possible value of $P_2$ and the earliest time when it occurs. Compare this time with the resonant $\pi$-pulse duration. Can waiting longer give complete population transfer?
+
+(3) You want at least $90\%$ of the population in $\vert D\rangle$ at some time. What range of detunings allows this? Express your answer as a bound on $|\Delta|/\Omega_0$.

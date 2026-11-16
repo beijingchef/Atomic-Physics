@@ -239,6 +239,7 @@ window.Quarto = {
   <li><a href="#transitions-in-a-general-two-level-system" id="toc-transitions-in-a-general-two-level-system" class="nav-link" data-scroll-target="#transitions-in-a-general-two-level-system"><span class="header-section-number">6.2</span> Transitions in a general two-level system</a></li>
   <li><a href="#density-matrices-and-the-bloch-vector" id="toc-density-matrices-and-the-bloch-vector" class="nav-link" data-scroll-target="#density-matrices-and-the-bloch-vector"><span class="header-section-number">6.3</span> * Density matrices and the Bloch vector</a></li>
   <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix"><span class="header-section-number">6.4</span> Appendix</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">6.5</span> Exercises</a></li>
   </ul>
 </nav>
     </div>
@@ -474,6 +475,29 @@ window.Quarto = {
 <p><span id="eq-ch06-p1514"><span class="math display">\[
 \begin{array}{c} \left( {\begin{array}{*{20}{c}} {{d_1}(t)}\\ {{d_2}(t)} \end{array}} \right) = \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {(\Omega + \Delta ){\Omega _0}}\\ {(\Omega + \Delta )(\Delta - \Omega )} \end{array}} \right){e^{{{i{\lambda _ + }t} \mathord{\left/ {\vphantom {{i{\lambda _ + }t} 2}} \right. \kern-1.2pt } 2}}} + \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {(\Omega - \Delta ){\Omega _0}}\\ {(\Omega - \Delta )(\Delta + \Omega )} \end{array}} \right){e^{{{i{\lambda _ - }t} \mathord{\left/ {\vphantom {{i{\lambda _ - }t} 2}} \right. \kern-1.2pt } 2}}}\\ = \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {(\Omega + \Delta ){\Omega _0}{e^{{{i\Omega t} \mathord{\left/ {\vphantom {{i\Omega t} 2}} \right. \kern-1.2pt } 2}}} + (\Omega - \Delta ){\Omega _0}{e^{{{ - i\Omega t} \mathord{\left/ {\vphantom {{ - i\Omega t} 2}} \right. \kern-1.2pt } 2}}}}\\ { - \Omega _0^2{e^{{{i\Omega t} \mathord{\left/ {\vphantom {{i\Omega t} 2}} \right. \kern-1.2pt } 2}}} + \Omega _0^2{e^{{{ - i\Omega t} \mathord{\left/ {\vphantom {{ - i\Omega t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right)\\ = = \left( {\begin{array}{*{20}{c}} {\cos \left( {\frac{\Omega }{2}t} \right) + \frac{{i\Delta }}{\Omega }\sin \left( {\frac{\Omega }{2}t} \right)}\\ { - \frac{{i{\Omega _0}}}{\Omega }\sin \left( {\frac{\Omega }{2}t} \right)} \end{array}} \right) \end{array}
 \tag{6.41}\]</span></span></p>
+</section>
+<section id="exercises" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="exercises"><span class="header-section-number">6.5</span> Exercises</h2>
+<p>Ignore relaxation in both problems. Use the circularly polarized drive from this chapter, with constant amplitude while it is on. Take <span class="math inline">\(\Omega_0&gt;0\)</span>.</p>
+<p><strong>6.1. Flipping a spin with a pulse.</strong> Prepare an electron in <span class="math inline">\(\vert U\rangle\)</span>. Turn on a resonant drive, so <span class="math inline">\(\Delta=0\)</span>, and switch it off after a time <span class="math inline">\(\tau\)</span>. This finite burst of the drive is called a <strong>pulse</strong>. Work in the rotating frame, using the amplitudes <span class="math inline">\(d_1\)</span> and <span class="math inline">\(d_2\)</span> defined in <a href="#eq-zeqnnum414068" class="quarto-xref">Equation&nbsp;<span>6.9</span></a>.</p>
+<ol type="1">
+<li><p>Find <span class="math inline">\(d_1(\tau)\)</span> and <span class="math inline">\(d_2(\tau)\)</span>. What is the probability of measuring <span class="math inline">\(\vert D\rangle\)</span> immediately after the pulse?</p></li>
+<li><p>Find the shortest pulse that transfers the electron completely to <span class="math inline">\(\vert D\rangle\)</span>. Then find the shortest pulse that gives equal probabilities for <span class="math inline">\(\vert U\rangle\)</span> and <span class="math inline">\(\vert D\rangle\)</span>. These are called a <span class="math inline">\(\pi\)</span> pulse and a <span class="math inline">\(\pi/2\)</span> pulse, respectively. For the <span class="math inline">\(\pi/2\)</span> pulse, also write the rotating-frame state and identify its relative phase. Do equal probabilities mean that the electron has lost its definite pure state?</p></li>
+<li><p>Suppose <span class="math inline">\(\Omega_0/(2\pi)=25\,\mathrm{kHz}\)</span>. Calculate both pulse durations in microseconds. If you double the drive amplitude <span class="math inline">\(B'\)</span>, how should you change the durations to produce the same final states?</p></li>
+</ol>
+<p>Hint: use <a href="#eq-zeqnnum460032" class="quarto-xref">Equation&nbsp;<span>6.11</span></a> with <span class="math inline">\(\Delta=0\)</span>. Keep the complex amplitudes until you have found the state; taking their squared magnitudes too early loses the relative phase.</p>
+<p><strong>6.2. A faster oscillation with a smaller swing.</strong> Prepare another electron in <span class="math inline">\(\vert U\rangle\)</span>. Keep the drive strength <span class="math inline">\(\Omega_0\)</span> fixed, but allow a nonzero detuning <span class="math inline">\(\Delta=\omega-\omega_0\)</span>. Let the drive remain on.</p>
+<ol type="1">
+<li>Starting from <a href="#eq-zeqnnum748213" class="quarto-xref">Equation&nbsp;<span>6.12</span></a>, show that the transition probability can be written as</li>
+</ol>
+<p><span id="eq-ch06-ex-detuned-probability"><span class="math display">\[
+P_2(t)=\frac{\Omega_0^2}{\Omega_0^2+\Delta^2}
+\sin^2\!\left(\frac{\sqrt{\Omega_0^2+\Delta^2}\,t}{2}\right).
+\tag{6.42}\]</span></span></p>
+<ol start="2" type="1">
+<li><p>Set <span class="math inline">\(\Delta=\Omega_0\)</span>. Find the largest possible value of <span class="math inline">\(P_2\)</span> and the earliest time when it occurs. Compare this time with the resonant <span class="math inline">\(\pi\)</span>-pulse duration. Can waiting longer give complete population transfer?</p></li>
+<li><p>You want at least <span class="math inline">\(90\%\)</span> of the population in <span class="math inline">\(\vert D\rangle\)</span> at some time. What range of detunings allows this? Express your answer as a bound on <span class="math inline">\(|\Delta|/\Omega_0\)</span>.</p></li>
+</ol>
 
 
 </section>

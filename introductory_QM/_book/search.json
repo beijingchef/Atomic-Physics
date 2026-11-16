@@ -888,5 +888,15 @@
     "crumbs": [
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Exercise Solutions</span>"
     ]
+  },
+  {
+    "objectID": "06-transitions.html#exercises",
+    "href": "06-transitions.html#exercises",
+    "title": "6  Transitions",
+    "section": "6.5 Exercises",
+    "text": "6.5 Exercises\nIgnore relaxation in both problems. Use the circularly polarized drive from this chapter, with constant amplitude while it is on. Take \\(\\Omega_0&gt;0\\).\n6.1. Flipping a spin with a pulse. Prepare an electron in \\(\\vert U\\rangle\\). Turn on a resonant drive, so \\(\\Delta=0\\), and switch it off after a time \\(\\tau\\). This finite burst of the drive is called a pulse. Work in the rotating frame, using the amplitudes \\(d_1\\) and \\(d_2\\) defined in Equation 6.9.\n\nFind \\(d_1(\\tau)\\) and \\(d_2(\\tau)\\). What is the probability of measuring \\(\\vert D\\rangle\\) immediately after the pulse?\nFind the shortest pulse that transfers the electron completely to \\(\\vert D\\rangle\\). Then find the shortest pulse that gives equal probabilities for \\(\\vert U\\rangle\\) and \\(\\vert D\\rangle\\). These are called a \\(\\pi\\) pulse and a \\(\\pi/2\\) pulse, respectively. For the \\(\\pi/2\\) pulse, also write the rotating-frame state and identify its relative phase. Do equal probabilities mean that the electron has lost its definite pure state?\nSuppose \\(\\Omega_0/(2\\pi)=25\\,\\mathrm{kHz}\\). Calculate both pulse durations in microseconds. If you double the drive amplitude \\(B'\\), how should you change the durations to produce the same final states?\n\nHint: use Equation 6.11 with \\(\\Delta=0\\). Keep the complex amplitudes until you have found the state; taking their squared magnitudes too early loses the relative phase.\n6.2. A faster oscillation with a smaller swing. Prepare another electron in \\(\\vert U\\rangle\\). Keep the drive strength \\(\\Omega_0\\) fixed, but allow a nonzero detuning \\(\\Delta=\\omega-\\omega_0\\). Let the drive remain on.\n\nStarting from Equation 6.12, show that the transition probability can be written as\n\n\\[\nP_2(t)=\\frac{\\Omega_0^2}{\\Omega_0^2+\\Delta^2}\n\\sin^2\\!\\left(\\frac{\\sqrt{\\Omega_0^2+\\Delta^2}\\,t}{2}\\right).\n\\tag{6.42}\\]\n\nSet \\(\\Delta=\\Omega_0\\). Find the largest possible value of \\(P_2\\) and the earliest time when it occurs. Compare this time with the resonant \\(\\pi\\)-pulse duration. Can waiting longer give complete population transfer?\nYou want at least \\(90\\%\\) of the population in \\(\\vert D\\rangle\\) at some time. What range of detunings allows this? Express your answer as a bound on \\(|\\Delta|/\\Omega_0\\).",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Transitions</span>"
+    ]
   }
 ]
