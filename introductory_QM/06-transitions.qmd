@@ -6,27 +6,21 @@ An energy eigenstate stays stationary under a time-independent Hamiltonian. How 
 
 Start with an electron in a static field $\mathbf B_0=B_0\hat{\mathbf z}$ and prepare its spin in $\vert U\rangle$. The states $\vert U\rangle$ and $\vert D\rangle$ have energies $\mu_{\mathrm B}B_0$ and $-\mu_{\mathrm B}B_0$. With the static field alone, each is stationary.
 
-Now add a much weaker field $\mathbf B'$ in the transverse plane, perpendicular to $\mathbf B_0$. Let it oscillate at angular frequency $\omega$, with $|\mathbf B'|\ll|\mathbf B_0|$. Think of a small, repeated push: its timing can matter as much as its strength.
+Now add a much weaker field $\mathbf B'$ perpendicular to $\mathbf B_0$, in the transverse plane, we call it **the drive**. Let it oscillate at angular frequency $\omega$. Although $|\mathbf B'|\ll|\mathbf B_0|$, we will see just like a small, repeated push: its timing can matter as much as its strength.
 
 Write the transverse field in components:
 
 $$
 {\bf{B'}} = {B'_x}{\bf{\hat x}} + {B'_y}{\bf{\hat y}}
-$$ {#eq-zeqnnum692846}
-
-For a first example, let $\mathbf B'$ rotate in the transverse plane while keeping a constant magnitude. Choose the same rotation sense as the electron's precession in $\mathbf B_0$:
+$$ {#eq-zeqnnum692846} a first example, let $\mathbf B'$ rotate in the transverse plane in the same sense as the electron's precession in $\mathbf B_0$:
 
 $$
 {B'_x} = B'\cos \omega t; \qquad  \qquad  {B'_y} = B'\sin \omega t
-$$ {#eq-zeqnnum766276}
-
-The interaction Hamiltonian for the total field is
+$$ {#eq-zeqnnum766276} interaction Hamiltonian for the total field is
 
 $$
 \hat H = - {{\bf{\mu }}_{\rm{S}}} \cdot \left( {{{\bf{B}}_0} + {\bf{B'}}} \right) = {\hat H_0} + \hat V(t)
-$$ {#eq-zeqnnum126030}
-
-We have split the Hamiltonian into two parts. The static field gives $\hat H_0$, and the rotating field gives $\hat V$. In the $\hat\sigma_z$ basis,
+$$ {#eq-zeqnnum126030} have split the Hamiltonian into two parts. The static field gives $\hat H_0$, and the rotating field gives $\hat V$. In the $\hat\sigma_z$ basis,
 
 $$
 {\hat H_0} = - {{\bf{\mu }}_{\rm{S}}} \cdot {{\bf{B}}_0} = {\mu _{\rm{B}}}{\hat \sigma _z}{B_0} \buildrel\textstyle.\over= {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} {{B_0}}&0\\ 0&{ - {B_0}} \end{array}} \right) = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&0\\ 0&{ - {\omega _0}} \end{array}} \right)
@@ -38,33 +32,31 @@ $$
 \begin{array}{c} \hat V(t) = - {{\bf{\mu }}_{\rm{S}}} \cdot {\bf{B'}} = {\mu _{\rm{B}}}\left( {{{\hat \sigma }_x}{{B'}_x} + {{\hat \sigma }_y}{{B'}_y}} \right) \buildrel\textstyle.\over= {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} 0&{{{B'}_x} - i{{B'}_y}}\\ {{{B'}_x} + i{{B'}_y}}&0 \end{array}} \right)\\ = {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} 0&{B'{e^{ - i\omega t}}}\\ {B'{e^{i\omega t}}}&0 \end{array}} \right) = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&{{\Omega _0}{e^{ - i\omega t}}}\\ {{\Omega _0}{e^{i\omega t}}}&0 \end{array}} \right) \end{array}
 $$ {#eq-zeqnnum833059}
 
-We call $\Omega_0\equiv2\mu_{\mathrm B}B'/\hbar$ the **resonant Rabi frequency**. It measures the strength of the drive in frequency units. Rabi received the 1944 Nobel Prize in Physics for his magnetic-resonance method using atomic and molecular beams.
+We call $\Omega_0\equiv2\mu_{\mathrm B}B'/\hbar$ the **resonant Rabi frequency**, which measures the strength of the drive in frequency units. (Rabi received the 1944 Nobel Prize in Physics for his magnetic-resonance method using atomic and molecular beams.)
 
 The total Hamiltonian is therefore
 
 $$
 \hat H \buildrel\textstyle.\over= \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&{{\Omega _0}{e^{ - i\omega t}}}\\ {{\Omega _0}{e^{i\omega t}}}&{ - {\omega _0}} \end{array}} \right)
-$$ {#eq-zeqnnum963082}
-
-Expand the spin state in the $\hat\sigma_z$ basis. We also include the initial condition, which puts all the population in $\vert U\rangle$:
+$$ {#eq-zeqnnum963082}Expand the spin state in the $\hat\sigma_z$ basis. We also include the initial condition, which puts all the population in $\vert U\rangle$:
 
 $$
 \vert {\psi (t)}\rangle = {c_1}(t)\vert U\rangle + {c_2}(t)\left\vert  D \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {{c_1}(t)}\\ {{c_2}(t)} \end{array}} \right), \qquad  {\left\vert  {{c_1}} \right\vert ^2} + {\left\vert  {{c_2}} \right\vert ^2} = 1,\;\;\left( {\begin{array}{*{20}{c}} {{c_1}(0) = 1}\\ {{c_2}(0) = 0} \end{array}} \right),\;\;
-$$ {#eq-zeqnnum361616}
-
-Substituting @eq-zeqnnum963082 and @eq-zeqnnum361616 into the Schrödinger equation gives
+$$ {#eq-zeqnnum361616}Substituting @eq-zeqnnum963082 and @eq-zeqnnum361616 into the Schrödinger equation gives
 
 $$
 \left( {\begin{array}{*{20}{c}} {{{\dot c}_1}}\\ {{{\dot c}_2}} \end{array}} \right) = - \frac{i}{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&{{\Omega _0}{e^{ - i\omega t}}}\\ {{\Omega _0}{e^{i\omega t}}}&{ - {\omega _0}} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{c_1}}\\ {{c_2}} \end{array}} \right)
 $$ {#eq-zeqnnum927934}
 
-The rapidly changing phase factors make these equations look more complicated than they need to. We can remove them by moving to a rotating frame:[^f4]
+The rapidly changing phase factors make these equations look more complicated than they need to. We can simply them by defining
 
 $$
 {c_1}(t) = {d_1}(t){e^{ - {{i\omega t} \mathord{\left/ {\vphantom {{i\omega t} 2}} \right. \kern-1.2pt } 2}}}; \qquad  {c_2}(t) = {d_2}(t){e^{{{i\omega t} \mathord{\left/ {\vphantom {{i\omega t} 2}} \right. \kern-1.2pt } 2}}}.
 $$ {#eq-zeqnnum414068}
 
-In this frame, @eq-zeqnnum927934 becomes
+This is equivalent of expressing the equation in the reference frame rotating with the drive[^06-transitions-1]. Then, @eq-zeqnnum927934 becomes
+
+[^06-transitions-1]: Some books use the interaction picture, setting ${c_1}(t) = {d_1}(t)\exp ( - {{i{\omega _0}t} \mathord{\left/ {\vphantom {{i{\omega _0}t} 2}} \right. \kern-1.2pt } 2}); \qquad  {c_2}(t) = {d_2}(t)\exp ({{i{\omega _0}t} \mathord{\left/ {\vphantom {{i{\omega _0}t} 2}} \right. \kern-1.2pt } 2})$. The method used here is equivalent to a rotating coordinate frame in classical mechanics and gives a shorter derivation for a two-level system.
 
 $$
 \left( {\begin{array}{*{20}{c}} {{{\dot d}_1}}\\ {{{\dot d}_2}} \end{array}} \right) = \frac{i}{2}\left( {\begin{array}{*{20}{c}} \Delta &{ - {\Omega _0}}\\ { - {\Omega _0}}&{ - \Delta } \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{d_1}}\\ {{d_2}} \end{array}} \right), \qquad  \left( {\begin{array}{*{20}{c}} {{d_1}(0)}\\ {{d_2}(0)} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right)
@@ -90,9 +82,9 @@ Away from resonance, the oscillations get faster and their range shrinks. @eq-ze
 
 As $P_2$ grows, the electron moves toward the lower-energy state. Its mean magnetic energy decreases, and energy goes to the drive. This is **stimulated emission**. As $P_2$ falls, the electron takes energy from the drive. This is **stimulated absorption**. The same coupling produces both processes, which explains why the corresponding Einstein coefficients are equal in this two-state case.
 
-![](assets/image1150.png){width=410px}
+![](assets/image1150.png){width="410px"}
 
-::: {.source-caption}
+::: source-caption
 Figure 6.1. Probability of electron spin state $\vert D\rangle$ versus time at different detunings.
 :::
 
@@ -104,9 +96,9 @@ $$ {#eq-zeqnnum340775}
 
 Keep the drive strength $\Omega_0$ fixed and scan its frequency. The maximum transfer $P_0(\Delta)$ traces the peak in Figure 6.2. Its half-width at half-maximum (HWHM) is $\Omega_0$: at that detuning, the peak has fallen to half its height. A stronger drive therefore makes the resonance broader. We call this **power broadening**. It matters when we use magnetic resonance or spectroscopy to measure energy-level separations.
 
-![](assets/image1158.png){width=379px}![](assets/image1159.svg){width=379px}
+![](assets/image1158.png){width="379px"}![](assets/image1159.svg){width="379px"}
 
-::: {.source-caption}
+::: source-caption
 Figure 6.2. ${P_0}(\Delta )$ peaks at $\Delta = 0$ and has HWHM ${\Omega _0}$. Zero detuning is resonance.
 :::
 
@@ -236,7 +228,9 @@ $$
 \frac{{d{\bf{P}}}}{{dt}} = {\bf{\Omega }} \times {\bf{P}}
 $$ {#eq-zeqnnum862867}
 
-The vector $\boldsymbol\Omega$ is constant. @eq-zeqnnum862867 therefore describes precession: $\mathbf P$ sweeps around $\boldsymbol\Omega$ at angular speed $|\boldsymbol\Omega|=\sqrt{\Omega_0^2+\Delta^2}$. This is the geometric picture behind our two-level solution.[^f5] For a linear drive, it holds within the rotating-wave approximation.
+The vector $\boldsymbol\Omega$ is constant. @eq-zeqnnum862867 therefore describes precession: $\mathbf P$ sweeps around $\boldsymbol\Omega$ at angular speed $|\boldsymbol\Omega|=\sqrt{\Omega_0^2+\Delta^2}$. This is the geometric picture behind our two-level solution.[^06-transitions-2] For a linear drive, it holds within the rotating-wave approximation.
+
+[^06-transitions-2]: Feynman, Vernon, and Hellwarth, “GEOMETRICAL REPRESENTATION OF THE SCHRODINGER EQUATION FOR SOLVING MASER PROBLEMS.”
 
 There is a deeper mathematical connection here. A unitary transformation from $\mathrm{SU}(2)$ acts on the two complex state amplitudes. It induces a rotation from $\mathrm{SO}(3)$ of the Bloch vector in real three-dimensional space.
 
@@ -289,7 +283,3 @@ Substituting ${g_ \pm }$ into @eq-zeqnnum771504 gives
 $$
 \begin{array}{c} \left( {\begin{array}{*{20}{c}} {{d_1}(t)}\\ {{d_2}(t)} \end{array}} \right) = \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {(\Omega + \Delta ){\Omega _0}}\\ {(\Omega + \Delta )(\Delta - \Omega )} \end{array}} \right){e^{{{i{\lambda _ + }t} \mathord{\left/ {\vphantom {{i{\lambda _ + }t} 2}} \right. \kern-1.2pt } 2}}} + \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {(\Omega - \Delta ){\Omega _0}}\\ {(\Omega - \Delta )(\Delta + \Omega )} \end{array}} \right){e^{{{i{\lambda _ - }t} \mathord{\left/ {\vphantom {{i{\lambda _ - }t} 2}} \right. \kern-1.2pt } 2}}}\\ = \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {(\Omega + \Delta ){\Omega _0}{e^{{{i\Omega t} \mathord{\left/ {\vphantom {{i\Omega t} 2}} \right. \kern-1.2pt } 2}}} + (\Omega - \Delta ){\Omega _0}{e^{{{ - i\Omega t} \mathord{\left/ {\vphantom {{ - i\Omega t} 2}} \right. \kern-1.2pt } 2}}}}\\ { - \Omega _0^2{e^{{{i\Omega t} \mathord{\left/ {\vphantom {{i\Omega t} 2}} \right. \kern-1.2pt } 2}}} + \Omega _0^2{e^{{{ - i\Omega t} \mathord{\left/ {\vphantom {{ - i\Omega t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right)\\ = = \left( {\begin{array}{*{20}{c}} {\cos \left( {\frac{\Omega }{2}t} \right) + \frac{{i\Delta }}{\Omega }\sin \left( {\frac{\Omega }{2}t} \right)}\\ { - \frac{{i{\Omega _0}}}{\Omega }\sin \left( {\frac{\Omega }{2}t} \right)} \end{array}} \right) \end{array}
 $$ {#eq-ch06-p1514}
-
-[^f4]: Some books use the interaction picture, setting ${c_1}(t) = {d_1}(t)\exp ( - {{i{\omega _0}t} \mathord{\left/ {\vphantom {{i{\omega _0}t} 2}} \right. \kern-1.2pt } 2}); \qquad  {c_2}(t) = {d_2}(t)\exp ({{i{\omega _0}t} \mathord{\left/ {\vphantom {{i{\omega _0}t} 2}} \right. \kern-1.2pt } 2})$. The method used here is equivalent to a rotating coordinate frame in classical mechanics and gives a shorter derivation for a two-level system.
-
-[^f5]: Feynman, Vernon, and Hellwarth, “GEOMETRICAL REPRESENTATION OF THE SCHRODINGER EQUATION FOR SOLVING MASER PROBLEMS.”
