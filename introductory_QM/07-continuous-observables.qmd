@@ -69,9 +69,9 @@ This is the **Fourier representation** of the delta function. Compare @eq-zeqnnu
 
 Let us translate our familiar discrete-basis formulas into continuous ones. For a discrete observable $\hat Q$, we label the eigenvalues $q_i$. For a continuous observable, the label itself becomes a continuous variable, $q$. We use $q'$ and $q''$ when we need additional labels.
 
-![](assets/image1257.png){width=286px}![](assets/image1258.png){width=265px}
+![](assets/image1257.png){width="286px"}![](assets/image1258.png){width="265px"}
 
-::: {.source-caption}
+::: source-caption
 Figure 7.1. Left: ${\left\vert  {\langle {{q_i}}\vert \psi\rangle } \right\vert ^2}$ is a probability in a discrete representation. Right: ${\left\vert  {\langle q\vert \psi\rangle } \right\vert ^2}$ is a probability density in a continuous representation.
 :::
 
@@ -153,13 +153,13 @@ Table 7.1 puts the two descriptions side by side. Notice how the integral replac
 
 Table 7.1. Expansions in discrete and continuous representations.
 
-|  | Discrete representation | Continuous representation |
-| --- | --- | --- |
+|   | Discrete representation | Continuous representation |
+|------------------------|------------------------|------------------------|
 | Eigenvalue equation | $\hat Q\left\vert  {{q_i}} \right\rangle = {q_i}\left\vert  {{q_i}} \right\rangle$ | $\hat Q\left\vert  q \right\rangle = q\left\vert  q \right\rangle$ |
 | Relations between basis vectors | $\left\langle {{{q_i}}} \mathrel{\left \vert  {\vphantom {{{q_i}} {{q_j}}}} \right. \kern-1.2pt } {{{q_j}}} \right\rangle = {\delta _{ij}}$ | $\left\langle {q} \mathrel{\left \vert  {\vphantom {q {q'}}} \right. \kern-1.2pt } {{q'}} \right\rangle = \delta \left( {q - q'} \right)$ |
 | State expansion | $\left\vert  \psi \right\rangle = \sum\limits_i {\left\vert  {{q_i}} \right\rangle \left\langle {{{q_i}}} \mathrel{\left \vert  {\vphantom {{{q_i}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }$ | $\left\vert  \psi \right\rangle = \int {dq\left\vert  q \right\rangle \left\langle {q} \mathrel{\left \vert  {\vphantom {q \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } = \int {dq\;\psi (q)\left\vert  q \right\rangle }$ |
 | State in the chosen basis | Column of probability amplitudes $\left( {\begin{array}{*{20}{c}} \vdots \\ {\left\langle {{{q_i}}} \mathrel{\left \vert  {\vphantom {{{q_i}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }\\ \vdots \end{array}} \right)$ | Wavefunction (probability-density amplitude) $\left\langle {q} \mathrel{\left \vert  {\vphantom {q \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \equiv \psi {\rm{(}}q)$ Single-valued, continuous, $\psi (q = \pm \infty ) = 0$ |
-| Measurement probability | ${\left\vert  {\left\langle {{{q_i}}} \mathrel{\left \vert  {\vphantom {{{q_i}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \right\vert ^2}$: probability of value ${q_i}$ | ${\left\vert  {\psi (q)} \right\vert ^2}dq$: probability of a value in $q\~q + dq$ |
+| Measurement probability | ${\left\vert  {\left\langle {{{q_i}}} \mathrel{\left \vert  {\vphantom {{{q_i}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \right\vert ^2}$: probability of value ${q_i}$ | ${\left\vert  {\psi (q)} \right\vert ^2}dq$: probability of a value in $q\sim q + dq$ |
 | Probability conservation | $\sum\limits_i {{{\left\vert  {\left\langle {{{q_i}}} \mathrel{\left \vert  {\vphantom {{{q_i}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \right\vert }^2}} = 1$ | $\int {dq\;{{\left\vert  {\left\langle {q} \mathrel{\left \vert  {\vphantom {q \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \right\vert }^2}} = \int {dq\;{{\left\vert  {\psi (q)} \right\vert }^2}} = 1$ |
 | Completeness relation | $\sum\limits_i {\left\vert  {{q_i}} \right\rangle \left\langle {{q_i}} \right\vert } = \hat I$ | $\int {dq\left\vert  q \right\rangle \left\langle q \right\vert } = \hat I$ |
 | $\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle$ | $\sum\limits_i {\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi {{q_i}}}} \right. \kern-1.2pt } {{{q_i}}} \right\rangle \left\langle {{{q_i}}} \mathrel{\left \vert  {\vphantom {{{q_i}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }$ | $\int {dq\;\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi q}} \right. \kern-1.2pt } {q} \right\rangle \left\langle {q} \mathrel{\left \vert  {\vphantom {q \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } {\rm{ = }}\int {dq\;{\phi ^*}{\rm{(}}q)\psi (q)}$ |
@@ -504,13 +504,13 @@ We can check this result directly. Use @eq-zeqnnum707152 and @eq-zeqnnum578039 t
 
 $$
 \begin{aligned}
-\hat X{{\hat P}_x}\left\vert  \psi \right\rangle &\buildrel\textstyle.\over= x\left( { - i\hbar \frac{\partial }{{\partial x}}} \right)\psi \left( x \right) = - i\hbar x\frac{\partial }{{\partial x}}\psi \left( x \right) \\
-{{\hat P}_x}\hat X\left\vert  \psi \right\rangle &\buildrel\textstyle.\over= - i\hbar \frac{\partial }{{\partial x}}x\;\psi \left( x \right) = - i\hbar \frac{\partial }{{\partial x}}\left[ {x\psi \left( x \right)} \right] = - i\hbar \left[ {\psi \left( x \right) + x\frac{\partial }{{\partial x}}\psi \left( x \right)} \right]
+\hat X{{\hat P}_x}\left\vert  \psi \right\rangle &= x\left( { - i\hbar \frac{\partial }{{\partial x}}} \right)\psi \left( x \right) = - i\hbar x\frac{\partial }{{\partial x}}\psi \left( x \right) \\
+{{\hat P}_x}\hat X\left\vert  \psi \right\rangle &= - i\hbar \frac{\partial }{{\partial x}}x\;\psi \left( x \right) = - i\hbar \frac{\partial }{{\partial x}}\left[ {x\psi \left( x \right)} \right] = - i\hbar \left[ {\psi \left( x \right) + x\frac{\partial }{{\partial x}}\psi \left( x \right)} \right]
 \end{aligned}
 $$ {#eq-ch07-p1749}
 
 $$
-\left( {\hat X{{\hat P}_x} - {{\hat P}_x}\hat X} \right)\vert \psi \rangle \buildrel\textstyle.\over= i\hbar \psi (x)
+\left( {\hat X{{\hat P}_x} - {{\hat P}_x}\hat X} \right)\vert \psi \rangle = i\hbar \psi (x)
 $$ {#eq-ch07-p1750}
 
 In three dimensions,
@@ -530,7 +530,7 @@ The indices $j,k = 1,2,3$ denote the three Cartesian directions.
 Using @eq-zeqnnum578039,
 
 $$
-{\bf{\hat P}}\left\vert  \psi \right\rangle \buildrel\textstyle.\over= - i\hbar \left( {{\bf{\hat i}}\frac{\partial }{{\partial x}} + {\bf{\hat j}}\frac{\partial }{{\partial y}} + {\bf{\hat k}}\frac{\partial }{{\partial z}}} \right)\psi (x,y,z) = - i\hbar \nabla \psi \left( {\bf{r}} \right)
+{\bf{\hat P}}\left\vert  \psi \right\rangle = - i\hbar \left( {{\bf{\hat i}}\frac{\partial }{{\partial x}} + {\bf{\hat j}}\frac{\partial }{{\partial y}} + {\bf{\hat k}}\frac{\partial }{{\partial z}}} \right)\psi (x,y,z) = - i\hbar \nabla \psi \left( {\bf{r}} \right)
 $$ {#eq-ch07-p1757}
 
 We can now derive further properties of momentum. First,
@@ -548,7 +548,7 @@ $$ {#eq-ch07-p1761}
 In three dimensions this becomes
 
 $$
-{{\bf{\hat P}}^2}\left\vert  \psi \right\rangle \buildrel\textstyle.\over= - {\hbar ^2}\left( {\frac{{{d^2}}}{{d{x^2}}} + \frac{{{d^2}}}{{d{y^2}}} + \frac{{{d^2}}}{{d{z^2}}}} \right)\psi \left( {\bf{r}} \right) = - {\hbar ^2}{\nabla ^2}\psi \left( {\bf{r}} \right)
+{{\bf{\hat P}}^2}\left\vert  \psi \right\rangle = - {\hbar ^2}\left( {\frac{{{d^2}}}{{d{x^2}}} + \frac{{{d^2}}}{{d{y^2}}} + \frac{{{d^2}}}{{d{z^2}}}} \right)\psi \left( {\bf{r}} \right) = - {\hbar ^2}{\nabla ^2}\psi \left( {\bf{r}} \right)
 $$ {#eq-ch07-p1763}
 
 ### Position wavefunctions of momentum eigenstates
@@ -633,7 +633,7 @@ $$
 \end{aligned}
 $$ {#eq-ch07-p1788}
 
-- **Position probability density in state $\vert \psi \rangle$**
+- **Position probability density in state** $\vert \psi \rangle$
 
 $$
 {\left\vert  {\psi ({\bf{r}})} \right\vert ^2}
@@ -657,7 +657,7 @@ $$
 {\left\vert  {\left\langle {\phi } \mathrel{\left \vert  {\vphantom {\phi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \right\vert ^2} = {\left\vert  {\int {{\phi ^*}({\bf{r}})\psi ({\bf{r}}){d^3}r} } \right\vert ^2}
 $$ {#eq-ch07-p1796}
 
-- **Orthonormality of eigenstates of a discrete observable $\hat A$**
+- **Orthonormality of eigenstates of a discrete observable** $\hat A$
 
 $$
 \left\langle {{{a_i}}} \mathrel{\left \vert  {\vphantom {{{a_i}} {{a_j}}}} \right. \kern-1.2pt } {{{a_j}}} \right\rangle = \int {\left\langle {{{a_i}}} \mathrel{\left \vert  {\vphantom {{{a_i}} {\bf{r}}}} \right. \kern-1.2pt } {{\bf{r}}} \right\rangle \left\langle {{\bf{r}}} \mathrel{\left \vert  {\vphantom {{\bf{r}} {{a_j}}}} \right. \kern-1.2pt } {{{a_j}}} \right\rangle {d^3}r} = \int {u_i^*({\bf{r}}){u_j}({\bf{r}}){d^3}x} = {\delta _{ij}}
@@ -807,9 +807,9 @@ $$ {#eq-ch07-p1846}
 
 Figure 7.2 shows the first three eigenfunctions and their probability densities. Notice how more oscillations fit between the walls as the energy rises.
 
-![](assets/image1572.png){width=472px}
+![](assets/image1572.png){width="472px"}
 
-::: {.source-caption}
+::: source-caption
 Figure 7.2. Energy eigenfunctions and probability densities in a one-dimensional infinite square well.
 :::
 
@@ -856,9 +856,9 @@ The energies are still discrete. But the wavefunctions now extend beyond the wal
 
 It is tempting to assign the particle a negative kinetic energy there by subtracting $V_0$ from $E$. That step treats the quantum state like a classical trajectory. The decaying tail is part of a wavefunction, and it does not represent a particle traveling along such a trajectory.
 
-![](assets/image1590.png){width=485px}
+![](assets/image1590.png){width="485px"}
 
-::: {.source-caption}
+::: source-caption
 Figure 7.3. Energy levels and eigenfunctions of one-dimensional infinite (left) and finite (right) square wells.
 :::
 
@@ -880,7 +880,7 @@ Every step has the same size, $\hbar\omega_0$. A suitable periodic drive at $\om
 
 The wavefunctions spread farther from the center as the energy rises. We will leave their formulas aside and look at their shapes below.
 
-![](assets/image1599.png){width=431px}
+![](assets/image1599.png){width="431px"}
 
 ## Exercises
 
@@ -904,9 +904,9 @@ $$
 v \equiv \frac{d}{{dt}}\left\langle {\psi \left( t \right)} \right\vert \hat X\left\vert  {\psi \left( t \right)} \right\rangle = \frac{d}{{dt}}\langle \hat X\rangle
 $$ {#eq-ch07-p1887}
 
-1) Prove that $v = {{\langle \hat P\rangle } \mathord{\left/ {\vphantom {{\langle \hat P\rangle } m}} \right. \kern-1.2pt } m}$.
+1)  Prove that $v = {{\langle \hat P\rangle } \mathord{\left/ {\vphantom {{\langle \hat P\rangle } m}} \right. \kern-1.2pt } m}$.
 
-2) Prove the following:
+2)  Prove the following:
 
 $$
 \frac{d}{{dt}}\langle \hat P\rangle = - \left\langle {\frac{{dV\left( x \right)}}{{dx}}} \right\rangle

@@ -27,7 +27,7 @@ Solution, method 1: Express $\vert {\alpha _i}\rangle$ in terms of $\vert {\beta
 Method 2: Use matrices. First write $\vert \psi \rangle$ and $\vert {\beta _i}\rangle$ in the $\alpha$ basis:
 
 $$
-\left\vert  \psi \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} 1\\ 3 \end{array}} \right), \qquad  \left\vert  {{\beta _1}} \right\rangle \buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ i \end{array}} \right), \qquad  \left\vert  {{\beta _2}} \right\rangle \buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ { - i} \end{array}} \right)
+\left\vert  \psi \right\rangle = \left( {\begin{array}{*{20}{c}} 1\\ 3 \end{array}} \right), \qquad  \left\vert  {{\beta _1}} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ i \end{array}} \right), \qquad  \left\vert  {{\beta _2}} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ { - i} \end{array}} \right)
 $$ {#eq-ch12-p2420}
 
 Use the relation between bra and ket matrices:
@@ -39,7 +39,7 @@ $$ {#eq-ch12-p2422}
 Finally, by @eq-zeqnnum935342, the matrix of $\left\vert  \psi \right\rangle$ in the $\beta$ basis is
 
 $$
-\left\vert  \psi \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {{{\beta _1}}} \mathrel{\left \vert  {\vphantom {{{\beta _1}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }\\ {\left\langle {{{\beta _2}}} \mathrel{\left \vert  {\vphantom {{{\beta _2}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \end{array}} \right){\rm{ = }}\left( {\begin{array}{*{20}{c}} {\frac{1}{{\sqrt 2 }}\left( {1, - i} \right)\left( {\begin{array}{*{20}{c}} 1\\ 3 \end{array}} \right)}\\ {\frac{1}{{\sqrt 2 }}\left( {1,i} \right)\left( {\begin{array}{*{20}{c}} 1\\ 3 \end{array}} \right)} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\frac{{1 - 3i}}{{\sqrt 2 }}}\\ {\frac{{1 + 3i}}{{\sqrt 2 }}} \end{array}} \right)
+\left\vert  \psi \right\rangle = \left( {\begin{array}{*{20}{c}} {\left\langle {{{\beta _1}}} \mathrel{\left \vert  {\vphantom {{{\beta _1}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }\\ {\left\langle {{{\beta _2}}} \mathrel{\left \vert  {\vphantom {{{\beta _2}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \end{array}} \right){\rm{ = }}\left( {\begin{array}{*{20}{c}} {\frac{1}{{\sqrt 2 }}\left( {1, - i} \right)\left( {\begin{array}{*{20}{c}} 1\\ 3 \end{array}} \right)}\\ {\frac{1}{{\sqrt 2 }}\left( {1,i} \right)\left( {\begin{array}{*{20}{c}} 1\\ 3 \end{array}} \right)} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\frac{{1 - 3i}}{{\sqrt 2 }}}\\ {\frac{{1 + 3i}}{{\sqrt 2 }}} \end{array}} \right)
 $$ {#eq-ch12-p2424}
 
 ## Exercises for Chapter 2
@@ -63,15 +63,15 @@ $$ {#eq-ch12-p2429}
 Write their matrices in this basis.
 
 $$
-\hat A \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\langle U\vert {\hat A}\vert U\rangle }&{\langle U\vert {\hat A}\vert D\rangle }\\ {\langle D\vert {\hat A}\vert U\rangle }&{\langle D\vert {\hat A}\vert D\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\langle U\vert D\rangle }&{\langle U\vert U\rangle }\\ {\langle D\vert D\rangle }&{\langle D\vert U\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0&1\\ 1&0 \end{array}} \right)
+\hat A = \left( {\begin{array}{*{20}{c}} {\langle U\vert {\hat A}\vert U\rangle }&{\langle U\vert {\hat A}\vert D\rangle }\\ {\langle D\vert {\hat A}\vert U\rangle }&{\langle D\vert {\hat A}\vert D\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\langle U\vert D\rangle }&{\langle U\vert U\rangle }\\ {\langle D\vert D\rangle }&{\langle D\vert U\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0&1\\ 1&0 \end{array}} \right)
 $$ {#eq-ch12-p2431}
 
 Similarly,
 
 $$
 \begin{aligned}
-\hat B &\buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {i\langle U\vert D\rangle }&{ - i\langle U\vert U\rangle }\\ {i\langle D\vert D\rangle }&{ - i\langle D\vert U\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0&{ - i}\\ i&0 \end{array}} \right) \\
-\hat C &\buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\langle U\vert U\rangle }&{\langle U\vert D\rangle }\\ {\langle D\vert U\rangle }&{ - \langle D\vert D\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 1&0\\ 0&{ - 1} \end{array}} \right)
+\hat B &= \left( {\begin{array}{*{20}{c}} {i\langle U\vert D\rangle }&{ - i\langle U\vert U\rangle }\\ {i\langle D\vert D\rangle }&{ - i\langle D\vert U\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0&{ - i}\\ i&0 \end{array}} \right) \\
+\hat C &= \left( {\begin{array}{*{20}{c}} {\langle U\vert U\rangle }&{\langle U\vert D\rangle }\\ {\langle D\vert U\rangle }&{ - \langle D\vert D\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 1&0\\ 0&{ - 1} \end{array}} \right)
 \end{aligned}
 $$ {#eq-ch12-p2433}
 
@@ -88,7 +88,7 @@ Solution: Seek all eigenvalues $\lambda$ and eigenvectors $\vert \lambda\rangle$
 The matrix elements of $\hat H$ are $\left\langle i \right\vert {\hat H}\left\vert  j \right\rangle$. Using $\left\langle {i} \mathrel{\left \vert  {\vphantom {i j}} \right. \kern-1.2pt } {j} \right\rangle = {\delta _{ij}}$, its matrix in the $\left\{ {\left\vert  1 \right\rangle ,\left\vert  2 \right\rangle } \right\}$ basis is
 
 $$
-\hat H \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\cos \theta }&{\sin \theta }\\ {\sin \theta }&{ - \cos \theta } \end{array}} \right)
+\hat H = \left( {\begin{array}{*{20}{c}} {\cos \theta }&{\sin \theta }\\ {\sin \theta }&{ - \cos \theta } \end{array}} \right)
 $$ {#eq-ch12-p2439}
 
 A nonzero solution exists only if the following determinant vanishes:
@@ -208,7 +208,7 @@ If we define $2{\mu }_{B}B\equiv \hbar {\omega }_{L}$, the transition frequency 
 - Write the matrix of ${\hat \sigma _n}$ in the ${\hat \sigma _z}$ representation, and show that its eigenvalues are $+ 1, - 1$, with eigenvectors
 
 $$
-\left\vert  { + 1} \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {{e^{i\phi }}\sin \frac{\theta }{2}} \end{array}} \right), \qquad  \left\vert  { - 1} \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {{e^{ - i\phi }}\sin \frac{\theta }{2}}\\ { - \cos \frac{\theta }{2}} \end{array}} \right)
+\left\vert  { + 1} \right\rangle = \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {{e^{i\phi }}\sin \frac{\theta }{2}} \end{array}} \right), \qquad  \left\vert  { - 1} \right\rangle = \left( {\begin{array}{*{20}{c}} {{e^{ - i\phi }}\sin \frac{\theta }{2}}\\ { - \cos \frac{\theta }{2}} \end{array}} \right)
 $$ {#eq-ch12-p2491}
 
 - If ${\hat \sigma _x}$ is known to equal $1$, find the probability that ${\hat \sigma _n}$ equals $-1$.
@@ -237,7 +237,8 @@ $$
 \begin{aligned}
 {{\hat \sigma }_n} &= {\bf{\hat \sigma }} \cdot {\bf{\hat n}} = \left( {{{\hat \sigma }_x}{\bf{\hat x}} + {{\hat \sigma }_y}{\bf{\hat y}} + {{\hat \sigma }_z}{\bf{\hat z}}} \right) \cdot \left( {{n_x}{\bf{\hat x}} + {n_y}{\bf{\hat y}} + {n_z}{\bf{\hat z}}} \right) = {{\hat \sigma }_x}{n_x} + {{\hat \sigma }_y}{n_y} + {{\hat \sigma }_z}{n_z} \\
  &= {{\hat \sigma }_x}\sin \theta \cos \phi + {{\hat \sigma }_y}\sin \theta \sin \phi + {{\hat \sigma }_z}\cos \theta \\
- &\buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\cos \theta }&{\sin \theta \cos \phi - i\sin \theta \sin \phi }\\ {\sin \theta \cos \phi + i\sin \theta \sin \phi }&{ - \cos \theta } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\cos \theta }&{\sin \theta {e^{ - i\phi }}}\\ {\sin \theta {e^{i\phi }}}&{ - \cos \theta } \end{array}} \right)
+ &= \left( {\begin{array}{*{20}{c}} {\cos \theta }&{\sin \theta \cos \phi - i\sin \theta \sin \phi }\\ {\sin \theta \cos \phi + i\sin \theta \sin \phi }&{ - \cos \theta } \end{array}} \right) \\
+&= \left( {\begin{array}{*{20}{c}} {\cos \theta }&{\sin \theta {e^{ - i\phi }}}\\ {\sin \theta {e^{i\phi }}}&{ - \cos \theta } \end{array}} \right)
 \end{aligned}
 $$ {#eq-ch12-p2502}
 
@@ -264,7 +265,7 @@ $$ {#eq-ch12-p2509}
 Choose $a = \cos \left( {{\theta \mathord{\left/ {\vphantom {\theta 2}} \right. \kern-1.2pt } 2}} \right),\;\;b = {e^{i\phi }}\sin \left( {{\theta \mathord{\left/ {\vphantom {\theta 2}} \right. \kern-1.2pt } 2}} \right)$. Then
 
 $$
-\left\vert  {{\lambda _ + }} \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {{e^{i\phi }}\sin \frac{\theta }{2}} \end{array}} \right),
+\left\vert  {{\lambda _ + }} \right\rangle = \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {{e^{i\phi }}\sin \frac{\theta }{2}} \end{array}} \right),
 $$ {#eq-ch12-p2511}
 
 Since $\left\langle {{{\lambda _ + }}} \mathrel{\left \vert  {\vphantom {{{\lambda _ + }} {{\lambda _ + }}}} \right. \kern-1.2pt } {{{\lambda _ + }}} \right\rangle = 1$, $\left\vert  {{\lambda _ + }} \right\rangle$ is already normalized. Otherwise every component must be divided by ${\left\vert  {\langle {{\lambda _ + }}\vert {{\lambda _ + }}\rangle } \right\vert ^2}$.
@@ -272,7 +273,7 @@ Since $\left\langle {{{\lambda _ + }}} \mathrel{\left \vert  {\vphantom {{{\lamb
 Similarly, the eigenvector $\langle {\lambda _ + }\vert {\lambda _ - }\rangle = 0$ corresponding to $\left\vert  {{\lambda _ - }} \right\rangle$ can be found. In the ${\hat \sigma _z}$ representation,
 
 $$
-\vert {\lambda _ + }\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {{e^{i\phi }}\sin \frac{\theta }{2}} \end{array}} \right), \qquad  \qquad  \vert {\lambda _ - }\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {{e^{ - i\phi }}\sin \frac{\theta }{2}}\\ { - \cos \frac{\theta }{2}} \end{array}} \right)
+\vert {\lambda _ + }\rangle = \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {{e^{i\phi }}\sin \frac{\theta }{2}} \end{array}} \right), \qquad  \qquad  \vert {\lambda _ - }\rangle = \left( {\begin{array}{*{20}{c}} {{e^{ - i\phi }}\sin \frac{\theta }{2}}\\ { - \cos \frac{\theta }{2}} \end{array}} \right)
 $$ {#eq-ch12-p2514}
 
 As a check, substitute special values of $\theta ,\varphi$ into ${\hat{\sigma }}_{n}$ and $\left\vert  {{\lambda _ \pm }} \right\rangle$ to recover ${\hat \sigma _{x,y,z}}$ and their eigenstates.
@@ -280,7 +281,7 @@ As a check, substitute special values of $\theta ,\varphi$ into ${\hat{\sigma }}
 Note: If ${\bf{\hat n}} = \left( {\theta ,\phi } \right)$, the direction opposite to ${\bf{\hat n}}$ is ${\bf{\hat n'}} = \left( {\pi - \theta ,\pi + \phi } \right)$. Physically, the eigenstate with the projection of ${\bf{\sigma }}$ along ${\bf{\hat n}}$ equal to $- 1$ should be the same as the eigenstate $\vert {{{\lambda '}_ + }}\rangle$ with the projection of ${\bf{\sigma }}$ along ${\bf{\hat n'}}$ equal to $+ 1$.
 
 $$
-\vert {\lambda '_ + }\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\cos \frac{{\pi - \theta }}{2}}\\ {{e^{i\left( {\pi + \phi } \right)}}\sin \frac{{\pi - \theta }}{2}} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\sin \frac{\theta }{2}}\\ {{e^{i\left( {\pi + \phi } \right)}}\cos \frac{\theta }{2}} \end{array}} \right) = {e^{i\phi }}\left( {\begin{array}{*{20}{c}} {{e^{ - i\phi }}\sin \frac{\theta }{2}}\\ { - \cos \frac{\theta }{2}} \end{array}} \right)
+\vert {\lambda '_ + }\rangle = \left( {\begin{array}{*{20}{c}} {\cos \frac{{\pi - \theta }}{2}}\\ {{e^{i\left( {\pi + \phi } \right)}}\sin \frac{{\pi - \theta }}{2}} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\sin \frac{\theta }{2}}\\ {{e^{i\left( {\pi + \phi } \right)}}\cos \frac{\theta }{2}} \end{array}} \right) = {e^{i\phi }}\left( {\begin{array}{*{20}{c}} {{e^{ - i\phi }}\sin \frac{\theta }{2}}\\ { - \cos \frac{\theta }{2}} \end{array}} \right)
 $$ {#eq-ch12-p2517}
 
 Thus $\vert {\lambda '_ + }\rangle$ and $\vert {\lambda _ - }\rangle$ differ only by the phase factor ${e^{i\phi }}$, and indeed represent the same physical state.
@@ -351,19 +352,20 @@ Solution: The old basis is $\left\vert  U \right\rangle ,\left\vert  D \right\ra
 Method 1: In the ${\hat \sigma _z}$ representation,
 
 $$
-\left\vert  I \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {U} \mathrel{\left \vert  {\vphantom {U I}} \right. \kern-1.2pt } {I} \right\rangle }\\ {\left\langle {D} \mathrel{\left \vert  {\vphantom {D I}} \right. \kern-1.2pt } {I} \right\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{1 \mathord{\left/ {\vphantom {1 {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}}\\ {{i \mathord{\left/ {\vphantom {i {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}} \end{array}} \right), \qquad  \qquad  \left\vert  O \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {U} \mathrel{\left \vert  {\vphantom {U O}} \right. \kern-1.2pt } {O} \right\rangle }\\ {\left\langle {D} \mathrel{\left \vert  {\vphantom {D O}} \right. \kern-1.2pt } {O} \right\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{1 \mathord{\left/ {\vphantom {1 {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}}\\ {{{ - i} \mathord{\left/ {\vphantom {{ - i} {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}} \end{array}} \right)
+\left\vert  I \right\rangle = \left( {\begin{array}{*{20}{c}} {\left\langle {U} \mathrel{\left \vert  {\vphantom {U I}} \right. \kern-1.2pt } {I} \right\rangle }\\ {\left\langle {D} \mathrel{\left \vert  {\vphantom {D I}} \right. \kern-1.2pt } {I} \right\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{1 \mathord{\left/ {\vphantom {1 {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}}\\ {{i \mathord{\left/ {\vphantom {i {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}} \end{array}} \right), \qquad  \qquad  \left\vert  O \right\rangle = \left( {\begin{array}{*{20}{c}} {\left\langle {U} \mathrel{\left \vert  {\vphantom {U O}} \right. \kern-1.2pt } {O} \right\rangle }\\ {\left\langle {D} \mathrel{\left \vert  {\vphantom {D O}} \right. \kern-1.2pt } {O} \right\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{1 \mathord{\left/ {\vphantom {1 {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}}\\ {{{ - i} \mathord{\left/ {\vphantom {{ - i} {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}} \end{array}} \right)
 $$ {#eq-ch12-p2545}
 
 Using these matrix elements and $\langle \alpha\vert \beta\rangle = {\langle \beta\vert \alpha\rangle ^*}$, we obtain, in the ${\hat \sigma _{\rm{y}}}$ representation,
 
 $$
-\left\vert  U \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {I} \mathrel{\left \vert  {\vphantom {I U}} \right. \kern-1.2pt } {U} \right\rangle }\\ {\left\langle {O} \mathrel{\left \vert  {\vphantom {O U}} \right. \kern-1.2pt } {U} \right\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{1 \mathord{\left/ {\vphantom {1 {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}}\\ {{1 \mathord{\left/ {\vphantom {1 {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}} \end{array}} \right) = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ 1 \end{array}} \right), \qquad  \left\vert  D \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {I} \mathrel{\left \vert  {\vphantom {I D}} \right. \kern-1.2pt } {D} \right\rangle }\\ {\left\langle {O} \mathrel{\left \vert  {\vphantom {O D}} \right. \kern-1.2pt } {D} \right\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{{ - i} \mathord{\left/ {\vphantom {{ - i} {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}}\\ {{i \mathord{\left/ {\vphantom {i {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}} \end{array}} \right) = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} { - i}\\ i \end{array}} \right)
+\left\vert  U \right\rangle = \left( {\begin{array}{*{20}{c}} {\left\langle {I} \mathrel{\left \vert  {\vphantom {I U}} \right. \kern-1.2pt } {U} \right\rangle }\\ {\left\langle {O} \mathrel{\left \vert  {\vphantom {O U}} \right. \kern-1.2pt } {U} \right\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{1 \mathord{\left/ {\vphantom {1 {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}}\\ {{1 \mathord{\left/ {\vphantom {1 {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}} \end{array}} \right) = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ 1 \end{array}} \right), \\
+ \left\vert D \right\rangle = \left( {\begin{array}{*{20}{c}} {\left\langle {I} \mathrel{\left \vert  {\vphantom {I D}} \right. \kern-1.2pt } {D} \right\rangle }\\ {\left\langle {O} \mathrel{\left \vert  {\vphantom {O D}} \right. \kern-1.2pt } {D} \right\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {{{ - i} \mathord{\left/ {\vphantom {{ - i} {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}}\\ {{i \mathord{\left/ {\vphantom {i {\sqrt 2 }}} \right. \kern-1.2pt } {\sqrt 2 }}} \end{array}} \right) = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} { - i}\\ i \end{array}} \right)
 $$ {#eq-ch12-p2547}
 
 Since $\left\vert  R \right\rangle = {\sqrt 2/2}\left( {\left\vert  U \right\rangle + \left\vert  D \right\rangle } \right)$, express $\left\vert  U \right\rangle$ and $\left\vert  D \right\rangle$ as columns in the ${\hat \sigma _{\rm{y}}}$ representation. Then, in the ${\hat \sigma _{\rm{y}}}$ representation,
 
 $$
-\left\vert  R \right\rangle \buildrel\textstyle.\over= \frac{{\sqrt 2 }}{2}\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ 1 \end{array}} \right) + \frac{{\sqrt 2 }}{2}\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} { - i}\\ i \end{array}} \right) = \frac{1}{2}\left( {\begin{array}{*{20}{c}} {1 - i}\\ {1 + i} \end{array}} \right)
+\left\vert  R \right\rangle = \frac{{\sqrt 2 }}{2}\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1\\ 1 \end{array}} \right) + \frac{{\sqrt 2 }}{2}\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} { - i}\\ i \end{array}} \right) = \frac{1}{2}\left( {\begin{array}{*{20}{c}} {1 - i}\\ {1 + i} \end{array}} \right)
 $$ {#eq-ch12-p2549}
 
 Likewise, since $\left\vert  L \right\rangle = {\sqrt 2/2}\left( {\left\vert  U \right\rangle - \left\vert  D \right\rangle } \right)$, in the ${\hat \sigma _{\rm{y}}}$ representation,
@@ -375,7 +377,8 @@ $$ {#eq-ch12-p2551}
 Method 2: The basis transformation $\hat U$ between ${\hat \sigma _{\rm{z}}}$ and ${\hat \sigma _y}$, and its inverse ${\hat U^\dagger }$, have the following matrices in the old ${\hat \sigma _{\rm{z}}}$ representation:
 
 $$
-\hat U \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\left\langle {U} \mathrel{\left \vert  {\vphantom {U I}} \right. \kern-1.2pt } {I} \right\rangle }&{\left\langle {U} \mathrel{\left \vert  {\vphantom {U O}} \right. \kern-1.2pt } {O} \right\rangle }\\ {\left\langle {D} \mathrel{\left \vert  {\vphantom {D I}} \right. \kern-1.2pt } {I} \right\rangle }&{\left\langle {D} \mathrel{\left \vert  {\vphantom {D O}} \right. \kern-1.2pt } {O} \right\rangle } \end{array}} \right) = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&1\\ i&{ - i} \end{array}} \right), \qquad  {\hat U^\dagger } = {\left( {{{\hat U}^T}} \right)^*} = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&{ - i}\\ 1&i \end{array}} \right)
+\hat U = \left( {\begin{array}{*{20}{c}} {\left\langle {U} \mathrel{\left \vert  {\vphantom {U I}} \right. \kern-1.2pt } {I} \right\rangle }&{\left\langle {U} \mathrel{\left \vert  {\vphantom {U O}} \right. \kern-1.2pt } {O} \right\rangle }\\ {\left\langle {D} \mathrel{\left \vert  {\vphantom {D I}} \right. \kern-1.2pt } {I} \right\rangle }&{\left\langle {D} \mathrel{\left \vert  {\vphantom {D O}} \right. \kern-1.2pt } {O} \right\rangle } \end{array}} \right) = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&1\\ i&{ - i} \end{array}} \right), \\ \\
+ {\hat U^\dagger } = {\left( {{{\hat U}^T}} \right)^*} = \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&{ - i}\\ 1&i \end{array}} \right)
 $$ {#eq-ch12-p2553}
 
 In the new ${\hat \sigma _{\rm{y}}}$ representation, @eq-zeqnnum557165 gives ${\left( {\left\vert  \psi \right\rangle } \right)_\text{new}} = {\left( {{{\hat U}^\dagger }\left\vert  \psi \right\rangle } \right)_\text{old}}$.
@@ -409,9 +412,14 @@ Thus $[\hat A,\hat B]$ is anti-Hermitian, and its expectation value is purely im
 
 - ${\left( {\Delta \hat B} \right)^\dagger } = {\left( {\hat B - \langle {\hat B}\rangle } \right)^\dagger } = {\hat B^\dagger } - \langle {\hat B}\rangle = \hat B - \langle {\hat B}\rangle = \Delta \hat B$, and similarly ${\left( {\Delta \hat A} \right)^\dagger } = \Delta \hat A$.
 
+::: {#derivation-ch12-p2564}
 $$
-{{{\rm{\{ }}\Delta \hat A,\Delta \hat B{\rm{\} }}}^\dagger } = {\left( {\Delta \hat A\Delta \hat B} \right)^\dagger } + {\left( {\Delta \hat B\Delta \hat A} \right)^\dagger } = \Delta {\hat B^\dagger }\Delta {\hat A^\dagger } + \Delta {\hat A^\dagger }\Delta {\hat B^\dagger } = \Delta \hat B\Delta \hat A + \Delta \hat A\Delta \hat B = {{\rm{\{ }}\Delta \hat A,\Delta \hat B{\rm{\} }}}
-$$ {#eq-ch12-p2564}
+\begin{aligned}
+{{{\rm{\{ }}\Delta \hat A,\Delta \hat B{\rm{\} }}}^\dagger } &= {\left( {\Delta \hat A\Delta \hat B} \right)^\dagger } + {\left( {\Delta \hat B\Delta \hat A} \right)^\dagger } = \Delta {\hat B^\dagger }\Delta {\hat A^\dagger } + \Delta {\hat A^\dagger }\Delta {\hat B^\dagger } \\
+&= \Delta \hat B\Delta \hat A + \Delta \hat A\Delta \hat B = {{\rm{\{ }}\Delta \hat A,\Delta \hat B{\rm{\} }}}
+\end{aligned}
+$$
+:::
 
 Thus ${{\rm{\{ }}\Delta \hat A,\Delta \hat B{\rm{\} }}}$ is Hermitian. Since a Hermitian operator has real expectation values, $\langle {{\rm{\{ }}\Delta \hat A,\Delta \hat B{\rm{\} }}}\rangle$ is real.
 
@@ -450,13 +458,13 @@ Multiplication by an overall phase does not change the physical state. Thus this
 2)  The projection of the electron spin ${\bf{S}}$ along ${\bf{\hat n}}$ is $\hbar /2$; that is, ${\hat \sigma _n}$ equals $+1$. From the preceding chapter's exercises,
 
 $$
-\left\vert  {{\lambda _ + }} \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {{e^{i\phi }}\sin \frac{\theta }{2}} \end{array}} \right),
+\left\vert  {{\lambda _ + }} \right\rangle = \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {{e^{i\phi }}\sin \frac{\theta }{2}} \end{array}} \right),
 $$ {#eq-ch12-p2581}
 
 Since ${\bf{\hat n}}$ lies in the x–z plane, $\phi = 0$. The initial state is therefore
 
 $$
-\left\vert  {\psi \left( 0 \right)} \right\rangle = \left\vert  {{\lambda _ + }(\phi = 0)} \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {\sin \frac{\theta }{2}} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\left\langle {U} \mathrel{\left \vert  {\vphantom {U {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle }\\ {\left\langle {D} \mathrel{\left \vert  {\vphantom {D {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle } \end{array}} \right)
+\left\vert  {\psi \left( 0 \right)} \right\rangle = \left\vert  {{\lambda _ + }(\phi = 0)} \right\rangle = \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {\sin \frac{\theta }{2}} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\left\langle {U} \mathrel{\left \vert  {\vphantom {U {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle }\\ {\left\langle {D} \mathrel{\left \vert  {\vphantom {D {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle } \end{array}} \right)
 $$ {#eq-ch12-p2583}
 
 $$
@@ -466,35 +474,214 @@ $$ {#eq-ch12-p2584}
 Notice that the magnetic field points along z, so $\hat H = {\mu _B}B{\hat \sigma _z}$, and the energy eigenstates are $\vert U\rangle$ and $\vert D\rangle$.
 
 $$
-\left\vert  {\psi \left( t \right)} \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {\langle U\vert {\psi (t)}\rangle }\\ {\langle D\vert {\psi (t)}\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}{e^{{{ - i{\omega _L}t} \mathord{\left/ {\vphantom {{ - i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}}\\ {\sin \frac{\theta }{2}{e^{{{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right)
+\left\vert  {\psi \left( t \right)} \right\rangle = \left( {\begin{array}{*{20}{c}} {\langle U\vert {\psi (t)}\rangle }\\ {\langle D\vert {\psi (t)}\rangle } \end{array}} \right) = \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}{e^{{{ - i{\omega _L}t} \mathord{\left/ {\vphantom {{ - i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}}\\ {\sin \frac{\theta }{2}{e^{{{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right)
 $$ {#eq-ch12-p2586}
 
+::: {#derivation-ch12-p2587}
 $$
 \begin{aligned}
 \left\langle {{{\hat S}_x}\left( t \right)} \right\rangle &= \left\langle {\psi (t)} \right\vert {{{\hat S}_x}}\left\vert  {\psi (t)} \right\rangle \\
- &= \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}{e^{{{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}},}&{\sin \frac{\theta }{2}{e^{{{ - i{\omega _L}t} \mathord{\left/ {\vphantom {{ - i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right)\frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&1\\ 1&0 \end{array}} \right)\left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}{e^{ - {{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}}\\ {\sin \frac{\theta }{2}{e^{{{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right) = \frac{\hbar }{2}\sin \theta \cos {\omega _L}t
+ &= \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}{e^{{{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}},}&{\sin \frac{\theta }{2}{e^{{{ - i{\omega _L}t} \mathord{\left/ {\vphantom {{ - i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right)\frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&1\\ 1&0 \end{array}} \right)\left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}{e^{ - {{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}}\\ {\sin \frac{\theta }{2}{e^{{{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right) \\
+&= \frac{\hbar }{2}\sin \theta \cos {\omega _L}t
 \end{aligned}
-$$ {#eq-ch12-p2587}
-
 $$
-\left\langle {{{\hat S}_y}\left( t \right)} \right\rangle = \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}{e^{{{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}},}&{\sin \frac{\theta }{2}{e^{ - {{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right)\frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&{ - i}\\ i&0 \end{array}} \right)\left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}{e^{{{ - i{\omega _L}t} \mathord{\left/ {\vphantom {{ - i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}}\\ {\sin \frac{\theta }{2}{e^{{{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right) = \frac{\hbar }{2}\sin \theta \sin {\omega _L}t\qquad \left\langle {{{\hat S}_z}\left( t \right)} \right\rangle = \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}{e^{{{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}},}&{\sin \frac{\theta }{2}{e^{ - {{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right)\frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 1&0\\ 0&{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}{e^{ - {{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}}\\ {\sin \frac{\theta }{2}{e^{{{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right) = \frac{\hbar }{2}\cos \theta
-$$ {#eq-ch12-p2588}
+:::
+
+::: {#derivation-ch12-p2588}
+$$
+\begin{aligned}
+\left\langle {{{\hat S}_y}\left( t \right)} \right\rangle &= \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}{e^{{{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}},}&{\sin \frac{\theta }{2}{e^{ - {{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right)\frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&{ - i}\\ i&0 \end{array}} \right)\left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}{e^{{{ - i{\omega _L}t} \mathord{\left/ {\vphantom {{ - i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}}\\ {\sin \frac{\theta }{2}{e^{{{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right) \\
+&= \frac{\hbar }{2}\sin \theta \sin {\omega _L}t \\
+\left\langle {{{\hat S}_z}\left( t \right)} \right\rangle &= \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}{e^{{{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}},}&{\sin \frac{\theta }{2}{e^{ - {{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right)\frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 1&0\\ 0&{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}{e^{ - {{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}}\\ {\sin \frac{\theta }{2}{e^{{{i{\omega _L}t} \mathord{\left/ {\vphantom {{i{\omega _L}t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right) \\
+&= \frac{\hbar }{2}\cos \theta
+\end{aligned}
+$$
+:::
 
 Define $\langle {\bf{S}}\rangle \equiv \left( {\langle {{{\hat S}_y}(t)}\rangle ,\langle {{{\hat S}_y}(t)}\rangle ,\langle {{{\hat S}_z}(t)}\rangle } \right)$. As the figure shows, it is a vector of length $\hbar /2$ precessing about the field direction (the z axis) at frequency ${\omega _L}$. This Larmor precession is characteristic of particles with spin magnetic moments in a magnetic field.
 
+::: text-center
 ![](assets/image2447.png){width="243px"}
+:::
 
 *An interesting feature:* $\langle {{\bf{S}}(t)}\rangle$ has period $T = {{2\pi } \mathord{\left/ {\vphantom {{2\pi } {{\omega _L}}}} \right. \kern-1.2pt } {{\omega _L}}}$, whereas the state vector $\left\vert  {\psi \left( t \right)} \right\rangle$ has period ${{4\pi } \mathord{\left/ {\vphantom {{4\pi } {{\omega _L}}}} \right. \kern-1.2pt } {{\omega _L}}}$.
 
 After one revolution of $\langle {{\bf{S}}(t)}\rangle$, the state vector changes sign rather than returning to its initial value:
 
 $$
-\left\vert  {\psi \left( {t = T} \right)} \right\rangle \buildrel\textstyle.\over= - \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {\sin \frac{\theta }{2}} \end{array}} \right) = - \left\vert  {\psi \left( 0 \right)} \right\rangle
+\left\vert  {\psi \left( {t = T} \right)} \right\rangle = - \left( {\begin{array}{*{20}{c}} {\cos \frac{\theta }{2}}\\ {\sin \frac{\theta }{2}} \end{array}} \right) = - \left\vert  {\psi \left( 0 \right)} \right\rangle
 $$ {#eq-ch12-p2594}
 
 Only after two revolutions of $\langle {{\bf{S}}(t)}\rangle$ does $\left\vert  {\psi \left( {t = 2T} \right)} \right\rangle = \left\vert  {\psi \left( 0 \right)} \right\rangle$ return to its original value.
 
+::: {#solution-exercise-5-2}
+**5.2. Conservation of the full probability distribution.**
+
+Suppose $\hat A$ is conserved and has a discrete spectrum. Show that its entire measurement probability distribution stays constant.
+
+Hint: let $\hat P_j$ project onto the eigenspace with eigenvalue $a_j$. First show that $\hat P_j$ is conserved. Then use its expectation value to find the probability of measuring $a_j$.
+
+**Solution.** Since $\hat A$ is conserved, it has no explicit time dependence and $[\hat A,\hat H]=0$. We need to show that the probability of each possible result stays constant. A constant expectation value alone would not establish this: different probability distributions can have the same mean.
+
+Let $\vert a_j,\alpha\rangle$ be an orthonormal eigenbasis of $\hat A$. Here $a_j$ labels a distinct eigenvalue, and $\alpha$ labels the states within its eigenspace if that eigenvalue is degenerate. The projector onto this eigenspace is
+
+$$
+\hat P_j=\sum_\alpha\vert a_j,\alpha\rangle\langle a_j,\alpha\vert.
+$$
+
+First, show that $\hat P_j$ commutes with the Hamiltonian. For any eigenstate $\vert a_k,\alpha\rangle$, we have
+
+$$
+\begin{aligned}
+\hat A\hat H\vert a_k,\alpha\rangle
+&=\hat H\hat A\vert a_k,\alpha\rangle \\
+&=a_k\hat H\vert a_k,\alpha\rangle.
+\end{aligned}
+$$
+
+Thus, $\hat H$ keeps the vector within the same $a_k$ eigenspace. Projecting before or after applying $\hat H$ therefore gives the same result:
+
+$$
+\begin{aligned}
+\hat P_j\hat H\vert a_k,\alpha\rangle
+&=\delta_{jk}\hat H\vert a_k,\alpha\rangle \\
+&=\hat H\hat P_j\vert a_k,\alpha\rangle.
+\end{aligned}
+$$
+
+This holds on a complete basis, so $[\hat P_j,\hat H]=0$. Also, $\hat P_j$ has no explicit time dependence because the eigenspace of $\hat A$ is fixed. Hence $\hat P_j$ is conserved.
+
+Now use the Born rule. The probability of measuring $a_j$ is
+
+$$
+\begin{aligned}
+p_j(t)&=\langle\psi(t)\vert\hat P_j\vert\psi(t)\rangle \\
+&=\sum_\alpha\bigl|\langle a_j,\alpha\vert\psi(t)\rangle\bigr|^2.
+\end{aligned}
+$$
+
+Apply the expectation-value equation of motion, @eq-zeqnnum848461, to $\hat P_j$:
+
+$$
+\begin{aligned}
+i\hbar\frac{dp_j}{dt}
+&=\langle\psi(t)\vert[\hat P_j,\hat H]\vert\psi(t)\rangle \\
+&=0.
+\end{aligned}
+$$
+
+Therefore,
+
+$$
+\boxed{p_j(t)=p_j(0)\quad\text{for every }j.}
+$$
+
+Every outcome keeps its original probability, so the whole measurement distribution stays constant. The state can still evolve within a degenerate eigenspace, but that motion cannot change the probability assigned to its eigenvalue. In particular, if the initial state has a definite value $a_j$, then $p_j(0)=1$, and that value remains definite at all later times.
+:::
+
 ## Exercises for Chapter 6
+
+**6.1. Flipping a spin with a pulse.**
+
+**(1) Amplitudes and probability.** On resonance, $\Delta=0$ and $\Omega=\Omega_0$. Substitute these values into @eq-zeqnnum460032:
+
+$$
+\begin{aligned}
+d_1(\tau) &= \cos\!\left(\frac{\Omega_0\tau}{2}\right), \\
+d_2(\tau) &= -i\sin\!\left(\frac{\Omega_0\tau}{2}\right).
+\end{aligned}
+$$ {#eq-ch12-sol06-resonant-amplitudes}
+
+The phase factor $-i$ matters for the state, but it disappears when we calculate the probability. Thus,
+
+$$
+P_D(\tau)=|d_2(\tau)|^2
+=\sin^2\!\left(\frac{\Omega_0\tau}{2}\right).
+$$ {#eq-ch12-sol06-pulse-probability}
+
+**(2) The two pulse durations.** Complete transfer first occurs when $\Omega_0\tau/2=\pi/2$. Equal probabilities first occur when $\Omega_0\tau/2=\pi/4$. The required durations are therefore
+
+$$
+\begin{aligned}
+\tau_{\pi} &= \frac{\pi}{\Omega_0}, \\
+\tau_{\pi/2} &= \frac{\pi}{2\Omega_0}.
+\end{aligned}
+$$ {#eq-ch12-sol06-pulse-durations}
+
+A $\pi$ pulse gives the rotating-frame state $-i\vert D\rangle$. Its overall phase does not affect the measurement outcome. A $\pi/2$ pulse gives
+
+$$
+\vert\psi_{\mathrm{rot}}(\tau_{\pi/2})\rangle
+=\frac{\vert U\rangle-i\vert D\rangle}{\sqrt{2}}.
+$$ {#eq-ch12-sol06-half-pulse-state}
+
+The amplitude of $\vert D\rangle$ has phase $-\pi/2$ relative to that of $\vert U\rangle$. The state is still a known pure state. Equal probabilities for these two measurement outcomes do not erase the relative phase or turn the state into a statistical mixture.
+
+**(3) Numerical values and drive strength.** The given frequency means $\Omega_0=2\pi\times25\times10^3\,\mathrm{s}^{-1}$. Hence,
+
+$$
+\begin{aligned}
+\tau_{\pi} &= \frac{\pi}{2\pi\times25\times10^3\,\mathrm{s}^{-1}}
+=20\,\mu\mathrm{s}, \\
+\tau_{\pi/2} &= \frac{\tau_{\pi}}{2}
+=10\,\mu\mathrm{s}.
+\end{aligned}
+$$ {#eq-ch12-sol06-pulse-times}
+
+Since $\Omega_0=2\mu_{\mathrm B}B'/\hbar$, doubling $B'$ doubles $\Omega_0$. To keep the same final rotating-frame states, keep $\Omega_0\tau$ fixed: halve both durations. The new durations are $10\,\mu\mathrm{s}$ for a $\pi$ pulse and $5\,\mu\mathrm{s}$ for a $\pi/2$ pulse.
+
+**6.2. A faster oscillation with a smaller swing.**
+
+**(1) Rewriting the probability.** Let $\Omega=\sqrt{\Omega_0^2+\Delta^2}$. Use @eq-zeqnnum748213 and the identity $1-\cos x=2\sin^2(x/2)$:
+
+$$
+\begin{aligned}
+P_2(t) &= \frac{\Omega_0^2}{2\Omega^2}\bigl(1-\cos\Omega t\bigr) \\
+&=\frac{\Omega_0^2}{\Omega^2}\sin^2\!\left(\frac{\Omega t}{2}\right) \\
+&=\frac{\Omega_0^2}{\Omega_0^2+\Delta^2}
+\sin^2\!\left(\frac{\sqrt{\Omega_0^2+\Delta^2}\,t}{2}\right).
+\end{aligned}
+$$ {#eq-ch12-sol06-detuned-probability}
+
+**(2) Detuning by** $\Omega_0$. With $\Delta=\Omega_0$, the generalized Rabi frequency is $\Omega=\sqrt{2}\,\Omega_0$. The probability becomes
+
+$$
+P_2(t)=\frac{1}{2}\sin^2\!\left(\frac{\sqrt{2}\,\Omega_0t}{2}\right).
+$$ {#eq-ch12-sol06-equal-detuning}
+
+The sine squared can reach one, so the largest probability is $P_{2,\max}=1/2$. Its first maximum occurs when $\sqrt{2}\,\Omega_0t/2=\pi/2$, giving
+
+$$
+t_{\max}=\frac{\pi}{\sqrt{2}\,\Omega_0}
+=\frac{\tau_{\pi}}{\sqrt{2}}.
+$$ {#eq-ch12-sol06-first-maximum}
+
+The first maximum arrives sooner than the resonant spin flip, but only half the population reaches $\vert D\rangle$. Waiting longer cannot give complete transfer: $P_2(t)$ never exceeds $1/2$.
+
+**(3) Reaching at least** $90\%$. For any fixed detuning, the largest possible transition probability is
+
+$$
+P_{2,\max}=\frac{\Omega_0^2}{\Omega_0^2+\Delta^2}
+=\frac{1}{1+(\Delta/\Omega_0)^2}.
+$$ {#eq-ch12-sol06-maximum-transfer}
+
+We need this maximum to be at least $0.90$. Solving the inequality gives
+
+$$
+\begin{aligned}
+\frac{1}{1+(\Delta/\Omega_0)^2} &\ge \frac{9}{10}, \\
+1+\left(\frac{\Delta}{\Omega_0}\right)^2 &\le \frac{10}{9}, \\
+\left(\frac{\Delta}{\Omega_0}\right)^2 &\le \frac{1}{9}.
+\end{aligned}
+$$ {#eq-ch12-sol06-detuning-bound}
+
+Therefore,
+
+$$
+\boxed{\frac{|\Delta|}{\Omega_0}\le\frac{1}{3}}.
+$$ {#eq-ch12-sol06-ninety-percent}
+
+The first maximum occurs at $t=\pi/\Omega$. At either boundary, $|\Delta|=\Omega_0/3$, that maximum is exactly $90\%$. Within the interval, the maximum is larger.
 
 ## Exercises for Chapter 7
 
@@ -504,13 +691,15 @@ Unless stated otherwise, the wavefunctions below are position wavefunctions.
 
 Solution:
 
+::: {#derivation-ch12-p2604}
 $$
 \begin{aligned}
 \int_0^L {dx\;\sin \left( {\frac{{n\pi x}}{L}} \right)\sin \left( {\frac{{m\pi x}}{L}} \right)} &\propto \int_0^L {dx\;\left[ {\cos \left( {\frac{{n - m}}{L}\pi x} \right) - \cos \left( {\frac{{n + m}}{L}\pi x} \right)} \right]{\text{ }}} \\
  &=\int\limits_0^L {dx\;\cos \left( {\frac{{n - m}}{L}\pi x} \right)} - \int\limits_0^L {dx\;\cos \left( {\frac{{n + m}}{L}\pi x} \right)} \\
  &= 0 + 0 \qquad  \qquad  \text{for }n \ne m
 \end{aligned}
-$$ {#eq-ch12-p2604}
+$$
+:::
 
 **7.2** A particle is in a one-dimensional infinite square well spanning $\left( {0,d} \right)$, with wavefunction
 
@@ -524,12 +713,16 @@ Hint: How is this wavefunction related to the well's energy eigenfunctions?
 
 Solution: Expand the wavefunction in energy eigenfunctions: ${u_n}\left( x \right) \propto \sin \left( {{(n\pi x)/d}} \right),n = 1,2,3 \cdots$.
 
+::: {#derivation-ch12-p2611}
 $$
 \begin{aligned}
-A{\cos ^3}\left( {\frac{{\pi x}}{{2d}}} \right)\sin \left( {\frac{{\pi x}}{{2d}}} \right) &= \frac{A}{2}{\cos ^2}\left( {\frac{{\pi x}}{{2d}}} \right)\sin \left( {\frac{{\pi x}}{d}} \right) = \frac{A}{2}\frac{{1 + \cos \left( {\frac{{\pi x}}{d}} \right)}}{2}\sin \left( {\frac{{\pi x}}{d}} \right) \\
- &= \frac{A}{4}\left[ {\sin \left( {\frac{{\pi x}}{d}} \right) + \frac{1}{2}\sin \left( {\frac{{2\pi x}}{d}} \right)} \right] \propto {u_1}\left( x \right) + \frac{1}{2}{u_2}\left( x \right)
+A{\cos ^3}\left( {\frac{{\pi x}}{{2d}}} \right)\sin \left( {\frac{{\pi x}}{{2d}}} \right) &= \frac{A}{2}{\cos ^2}\left( {\frac{{\pi x}}{{2d}}} \right)\sin \left( {\frac{{\pi x}}{d}} \right) \\
+&= \frac{A}{2}\frac{{1 + \cos \left( {\frac{{\pi x}}{d}} \right)}}{2}\sin \left( {\frac{{\pi x}}{d}} \right) \\
+ &= \frac{A}{4}\left[ {\sin \left( {\frac{{\pi x}}{d}} \right) + \frac{1}{2}\sin \left( {\frac{{2\pi x}}{d}} \right)} \right] \\
+&\propto {u_1}\left( x \right) + \frac{1}{2}{u_2}\left( x \right)
 \end{aligned}
-$$ {#eq-ch12-p2611}
+$$
+:::
 
 The probability of energy ${E_1}$ is ${4 \mathord{\left/ {\vphantom {4 5}} \right. \kern-1.2pt } 5}$, and that of energy ${E_2}$ is ${1 \mathord{\left/ {\vphantom {1 5}} \right. \kern-1.2pt } 5}$.
 
@@ -570,11 +763,10 @@ $$ {#eq-ch12-p2625}
 $$
 \begin{aligned}
 [\hat P,\hat V(x)]\psi (x) &= \left( {\hat P\hat V(x) - \hat V(x)\hat P} \right)\psi (x) \\
- &= - i\hbar \left( {\frac{\partial }{{\partial x}}V(x)\psi (x) - V(x)\frac{\partial }{{\partial x}}\psi (x)} \right) = - i\hbar \left( {\frac{{\partial V(x)}}{{\partial x}}} \right)\psi (x)
+ &= - i\hbar \left( {\frac{\partial }{{\partial x}}V(x)\psi (x) - V(x)\frac{\partial }{{\partial x}}\psi (x)} \right) \\
+ &= - i\hbar \left( {\frac{{\partial V(x)}}{{\partial x}}} \right)\psi (x)
 \end{aligned}
-$$ {#eq-ch12-p2626}
-
-$$
+$$ $$
 \therefore \qquad  [\hat P,\hat V(x)] = - i\hbar \frac{{\partial V(x)}}{{\partial x}}
 $$ {#eq-ch12-p2627}
 
@@ -590,7 +782,8 @@ Solution: Definite values $j(j + 1){\hbar ^2}$ and $m\hbar$ of ${{\bf{\hat J}}^2
 
 $$
 \begin{aligned}
-\left\langle {j,m} \right\vert {\hat J_x^2}\left\vert  {j,m} \right\rangle + \left\langle {j,m} \right\vert {\hat J_y^2}\left\vert  {j,m} \right\rangle &= \langle j,m{\rm{\vert }}{\hat J_x^2 + \hat J_y^2}\vert j,m\rangle = \langle j,m{\rm{\vert }}{{{\bf{\hat J}}}^2} - \hat J_z^2\vert j,m\rangle \\
+\left\langle {j,m} \right\vert {\hat J_x^2}\left\vert  {j,m} \right\rangle + \left\langle {j,m} \right\vert {\hat J_y^2}\left\vert  {j,m} \right\rangle &= \langle j,m{\rm{\vert }}{\hat J_x^2 + \hat J_y^2}\vert j,m\rangle \\
+&= \langle j,m{\rm{\vert }}{{{\bf{\hat J}}}^2} - \hat J_z^2\vert j,m\rangle \\
  &= j(j + 1){\hbar ^2} - m{\hbar ^2}
 \end{aligned}
 $$ {#eq-ch12-p2633}
@@ -721,9 +914,9 @@ Using
 
 $$
 \begin{aligned}
-\langle 1,0\vert {0,0}\rangle &= 0 \\
-\Rightarrow \frac{1}{{\sqrt 2 }}{d_1} + \frac{1}{{\sqrt 2 }}{d_2} &= 0 \\
-\Rightarrow {d_1} &= - {d_2} = \frac{1}{{\sqrt 2 }}
+&\langle 1,0\vert {0,0}\rangle = 0 \\
+&\Rightarrow \frac{1}{{\sqrt 2 }}{d_1} + \frac{1}{{\sqrt 2 }}{d_2} = 0 \\
+&\Rightarrow {d_1} = - {d_2} = \frac{1}{{\sqrt 2 }}
 \end{aligned}
 $$ {#eq-ch12-p2675}
 

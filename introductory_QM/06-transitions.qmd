@@ -31,14 +31,15 @@ $$ {#eq-zeqnnum126030}
 have split the Hamiltonian into two parts. The static field gives $\hat H_0$, and the rotating field gives $\hat V$. In the $\hat\sigma_z$ basis,
 
 $$
-{\hat H_0} = - {{\bf{\mu }}_{\rm{S}}} \cdot {{\bf{B}}_0} = {\mu _{\rm{B}}}{\hat \sigma _z}{B_0} \buildrel\textstyle.\over= {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} {{B_0}}&0\\ 0&{ - {B_0}} \end{array}} \right) = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&0\\ 0&{ - {\omega _0}} \end{array}} \right)
+{\hat H_0} = - {{\bf{\mu }}_{\rm{S}}} \cdot {{\bf{B}}_0} = {\mu _{\rm{B}}}{\hat \sigma _z}{B_0} = {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} {{B_0}}&0\\ 0&{ - {B_0}} \end{array}} \right) = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&0\\ 0&{ - {\omega _0}} \end{array}} \right)
 $$ {#eq-zeqnnum864064}
 
 Here $\omega_0\equiv(E_1-E_2)/\hbar=2\mu_{\mathrm B}B_0/\hbar$ is the **Larmor frequency** in the static field. It sets the natural angular frequency against which we compare the drive.
 
 $$
 \begin{aligned}
-\hat V(t) &= - {{\bf{\mu }}_{\rm{S}}} \cdot {\bf{B'}} = {\mu _{\rm{B}}}\left( {{{\hat \sigma }_x}{{B'}_x} + {{\hat \sigma }_y}{{B'}_y}} \right) \buildrel\textstyle.\over= {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} 0&{{{B'}_x} - i{{B'}_y}}\\ {{{B'}_x} + i{{B'}_y}}&0 \end{array}} \right) \\
+\hat V(t) &= - {{\bf{\mu }}_{\rm{S}}} \cdot {\bf{B'}} = {\mu _{\rm{B}}}\left( {{{\hat \sigma }_x}{{B'}_x} + {{\hat \sigma }_y}{{B'}_y}} \right) \\
+ &= {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} 0&{{{B'}_x} - i{{B'}_y}}\\ {{{B'}_x} + i{{B'}_y}}&0 \end{array}} \right) \\
  &= {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} 0&{B'{e^{ - i\omega t}}}\\ {B'{e^{i\omega t}}}&0 \end{array}} \right) = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&{{\Omega _0}{e^{ - i\omega t}}}\\ {{\Omega _0}{e^{i\omega t}}}&0 \end{array}} \right)
 \end{aligned}
 $$ {#eq-zeqnnum833059}
@@ -48,13 +49,13 @@ We call $\Omega_0\equiv2\mu_{\mathrm B}B'/\hbar$ the **resonant Rabi frequency**
 The total Hamiltonian is therefore
 
 $$
-\hat H \buildrel\textstyle.\over= \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&{{\Omega _0}{e^{ - i\omega t}}}\\ {{\Omega _0}{e^{i\omega t}}}&{ - {\omega _0}} \end{array}} \right)
+\hat H = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&{{\Omega _0}{e^{ - i\omega t}}}\\ {{\Omega _0}{e^{i\omega t}}}&{ - {\omega _0}} \end{array}} \right)
 $$ {#eq-zeqnnum963082}
 
 Expand the spin state in the $\hat\sigma_z$ basis. We also include the initial condition, which puts all the population in $\vert U\rangle$:
 
 $$
-\vert {\psi (t)}\rangle = {c_1}(t)\vert U\rangle + {c_2}(t)\left\vert  D \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {{c_1}(t)}\\ {{c_2}(t)} \end{array}} \right), \qquad  {\left\vert  {{c_1}} \right\vert ^2} + {\left\vert  {{c_2}} \right\vert ^2} = 1,\;\;\left( {\begin{array}{*{20}{c}} {{c_1}(0) = 1}\\ {{c_2}(0) = 0} \end{array}} \right),\;\;
+\vert {\psi (t)}\rangle = {c_1}(t)\vert U\rangle + {c_2}(t)\left\vert  D \right\rangle = \left( {\begin{array}{*{20}{c}} {{c_1}(t)}\\ {{c_2}(t)} \end{array}} \right), \qquad  {\left\vert  {{c_1}} \right\vert ^2} + {\left\vert  {{c_2}} \right\vert ^2} = 1,\;\;\left( {\begin{array}{*{20}{c}} {{c_1}(0) = 1}\\ {{c_2}(0) = 0} \end{array}} \right),\;\;
 $$ {#eq-zeqnnum361616}
 
 Substituting @eq-zeqnnum963082 and @eq-zeqnnum361616 into the Schrödinger equation gives

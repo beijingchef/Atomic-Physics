@@ -286,23 +286,24 @@ window.Quarto = {
 \tag{6.3}\]</span></span></p>
 <p>have split the Hamiltonian into two parts. The static field gives <span class="math inline">\(\hat H_0\)</span>, and the rotating field gives <span class="math inline">\(\hat V\)</span>. In the <span class="math inline">\(\hat\sigma_z\)</span> basis,</p>
 <p><span id="eq-zeqnnum864064"><span class="math display">\[
-{\hat H_0} = - {{\bf{\mu }}_{\rm{S}}} \cdot {{\bf{B}}_0} = {\mu _{\rm{B}}}{\hat \sigma _z}{B_0} \buildrel\textstyle.\over= {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} {{B_0}}&amp;0\\ 0&amp;{ - {B_0}} \end{array}} \right) = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&amp;0\\ 0&amp;{ - {\omega _0}} \end{array}} \right)
+{\hat H_0} = - {{\bf{\mu }}_{\rm{S}}} \cdot {{\bf{B}}_0} = {\mu _{\rm{B}}}{\hat \sigma _z}{B_0} = {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} {{B_0}}&amp;0\\ 0&amp;{ - {B_0}} \end{array}} \right) = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&amp;0\\ 0&amp;{ - {\omega _0}} \end{array}} \right)
 \tag{6.4}\]</span></span></p>
 <p>Here <span class="math inline">\(\omega_0\equiv(E_1-E_2)/\hbar=2\mu_{\mathrm B}B_0/\hbar\)</span> is the <strong>Larmor frequency</strong> in the static field. It sets the natural angular frequency against which we compare the drive.</p>
 <p><span id="eq-zeqnnum833059"><span class="math display">\[
 \begin{aligned}
-\hat V(t) &amp;= - {{\bf{\mu }}_{\rm{S}}} \cdot {\bf{B'}} = {\mu _{\rm{B}}}\left( {{{\hat \sigma }_x}{{B'}_x} + {{\hat \sigma }_y}{{B'}_y}} \right) \buildrel\textstyle.\over= {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} 0&amp;{{{B'}_x} - i{{B'}_y}}\\ {{{B'}_x} + i{{B'}_y}}&amp;0 \end{array}} \right) \\
+\hat V(t) &amp;= - {{\bf{\mu }}_{\rm{S}}} \cdot {\bf{B'}} = {\mu _{\rm{B}}}\left( {{{\hat \sigma }_x}{{B'}_x} + {{\hat \sigma }_y}{{B'}_y}} \right) \\
+&amp;= {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} 0&amp;{{{B'}_x} - i{{B'}_y}}\\ {{{B'}_x} + i{{B'}_y}}&amp;0 \end{array}} \right) \\
 &amp;= {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} 0&amp;{B'{e^{ - i\omega t}}}\\ {B'{e^{i\omega t}}}&amp;0 \end{array}} \right) = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&amp;{{\Omega _0}{e^{ - i\omega t}}}\\ {{\Omega _0}{e^{i\omega t}}}&amp;0 \end{array}} \right)
 \end{aligned}
 \tag{6.5}\]</span></span></p>
 <p>We call <span class="math inline">\(\Omega_0\equiv2\mu_{\mathrm B}B'/\hbar\)</span> the <strong>resonant Rabi frequency</strong>, which measures the strength of the drive in frequency units. (Rabi received the 1944 Nobel Prize in Physics for his magnetic-resonance method using atomic and molecular beams.)</p>
 <p>The total Hamiltonian is therefore</p>
 <p><span id="eq-zeqnnum963082"><span class="math display">\[
-\hat H \buildrel\textstyle.\over= \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&amp;{{\Omega _0}{e^{ - i\omega t}}}\\ {{\Omega _0}{e^{i\omega t}}}&amp;{ - {\omega _0}} \end{array}} \right)
+\hat H = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {{\omega _0}}&amp;{{\Omega _0}{e^{ - i\omega t}}}\\ {{\Omega _0}{e^{i\omega t}}}&amp;{ - {\omega _0}} \end{array}} \right)
 \tag{6.6}\]</span></span></p>
 <p>Expand the spin state in the <span class="math inline">\(\hat\sigma_z\)</span> basis. We also include the initial condition, which puts all the population in <span class="math inline">\(\vert U\rangle\)</span>:</p>
 <p><span id="eq-zeqnnum361616"><span class="math display">\[
-\vert {\psi (t)}\rangle = {c_1}(t)\vert U\rangle + {c_2}(t)\left\vert  D \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} {{c_1}(t)}\\ {{c_2}(t)} \end{array}} \right), \qquad  {\left\vert  {{c_1}} \right\vert ^2} + {\left\vert  {{c_2}} \right\vert ^2} = 1,\;\;\left( {\begin{array}{*{20}{c}} {{c_1}(0) = 1}\\ {{c_2}(0) = 0} \end{array}} \right),\;\;
+\vert {\psi (t)}\rangle = {c_1}(t)\vert U\rangle + {c_2}(t)\left\vert  D \right\rangle = \left( {\begin{array}{*{20}{c}} {{c_1}(t)}\\ {{c_2}(t)} \end{array}} \right), \qquad  {\left\vert  {{c_1}} \right\vert ^2} + {\left\vert  {{c_2}} \right\vert ^2} = 1,\;\;\left( {\begin{array}{*{20}{c}} {{c_1}(0) = 1}\\ {{c_2}(0) = 0} \end{array}} \right),\;\;
 \tag{6.7}\]</span></span></p>
 <p>Substituting <a href="#eq-zeqnnum963082" class="quarto-xref">Equation&nbsp;<span>6.6</span></a> and <a href="#eq-zeqnnum361616" class="quarto-xref">Equation&nbsp;<span>6.7</span></a> into the Schrödinger equation gives</p>
 <p><span id="eq-zeqnnum927934"><span class="math display">\[

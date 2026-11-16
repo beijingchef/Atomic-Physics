@@ -14,9 +14,9 @@ The three component operators in the position representation are
 
 $$
 \begin{aligned}
-{{\hat L}_x} &= \hat Y{{\hat P}_z} - \hat Z{{\hat P}_y} \buildrel\textstyle.\over= - i\hbar \left( {y\frac{\partial }{{\partial z}} - z\frac{\partial }{{\partial y}}} \right) \\
-{{\hat L}_y} &= \hat Z{{\hat P}_x} - \hat X{{\hat P}_z} \buildrel\textstyle.\over= - i\hbar \left( {z\frac{\partial }{{\partial x}} - x\frac{\partial }{{\partial z}}} \right)\;\; \\
-{{\hat L}_z} &= \hat X{{\hat P}_y} - \hat Y{{\hat P}_x} \buildrel\textstyle.\over= - i\hbar \left( {x\frac{\partial }{{\partial y}} - y\frac{\partial }{{\partial x}}} \right)
+{{\hat L}_x} &= \hat Y{{\hat P}_z} - \hat Z{{\hat P}_y} = - i\hbar \left( {y\frac{\partial }{{\partial z}} - z\frac{\partial }{{\partial y}}} \right) \\
+{{\hat L}_y} &= \hat Z{{\hat P}_x} - \hat X{{\hat P}_z} = - i\hbar \left( {z\frac{\partial }{{\partial x}} - x\frac{\partial }{{\partial z}}} \right)\;\; \\
+{{\hat L}_z} &= \hat X{{\hat P}_y} - \hat Y{{\hat P}_x} = - i\hbar \left( {x\frac{\partial }{{\partial y}} - y\frac{\partial }{{\partial x}}} \right)
 \end{aligned}
 $$ {#eq-zeqnnum826605}
 
@@ -414,16 +414,16 @@ we convert the Cartesian expression @eq-zeqnnum826605 for ${\hat L_{x,y,z}}$ int
 
 $$
 \begin{aligned}
-{{\hat L}_x} &\buildrel\textstyle.\over= - i\hbar \left( {y\frac{\partial }{{\partial z}} - z\frac{\partial }{{\partial y}}} \right) = - i\hbar \left( { - \sin \phi \frac{\partial }{{\partial \theta }} - \cot \theta \cos \phi \frac{\partial }{{\partial \phi }}} \right) \\
-{{\hat L}_y} &\buildrel\textstyle.\over= - i\hbar \left( {z\frac{\partial }{{\partial x}} - x\frac{\partial }{{\partial z}}} \right) = - i\hbar \left( {\cos \phi \frac{\partial }{{\partial \theta }} - \cot \theta \sin \phi \frac{\partial }{{\partial \phi }}} \right) \\
-{{\hat L}_z} &\buildrel\textstyle.\over= - i\hbar \left( {x\frac{\partial }{{\partial y}} - y\frac{\partial }{{\partial x}}} \right) = - i\hbar \frac{\partial }{{\partial \phi }}
+{{\hat L}_x} &= - i\hbar \left( {y\frac{\partial }{{\partial z}} - z\frac{\partial }{{\partial y}}} \right) = - i\hbar \left( { - \sin \phi \frac{\partial }{{\partial \theta }} - \cot \theta \cos \phi \frac{\partial }{{\partial \phi }}} \right) \\
+{{\hat L}_y} &= - i\hbar \left( {z\frac{\partial }{{\partial x}} - x\frac{\partial }{{\partial z}}} \right) = - i\hbar \left( {\cos \phi \frac{\partial }{{\partial \theta }} - \cot \theta \sin \phi \frac{\partial }{{\partial \phi }}} \right) \\
+{{\hat L}_z} &= - i\hbar \left( {x\frac{\partial }{{\partial y}} - y\frac{\partial }{{\partial x}}} \right) = - i\hbar \frac{\partial }{{\partial \phi }}
 \end{aligned}
 $$ {#eq-zeqnnum721118}
 
 and obtain the spherical-coordinate expression for ${{\bf{\hat L}}^2}$:
 
 $$
-{{\bf{\hat L}}^2} = {\hat L_x}{\hat L_x} + {\hat L_y}{\hat L_y} + {\hat L_z}{\hat L_z} \buildrel\textstyle.\over= - {\hbar ^2}\left\{ {\frac{1}{{\sin \theta }}\frac{\partial }{{\partial \theta }}\left( {\sin \theta \frac{\partial }{{\partial \theta }}} \right) + \frac{1}{{{{\sin }^2}\theta }}\frac{{{\partial ^2}}}{{\partial {\phi ^2}}}} \right\}
+{{\bf{\hat L}}^2} = {\hat L_x}{\hat L_x} + {\hat L_y}{\hat L_y} + {\hat L_z}{\hat L_z} = - {\hbar ^2}\left\{ {\frac{1}{{\sin \theta }}\frac{\partial }{{\partial \theta }}\left( {\sin \theta \frac{\partial }{{\partial \theta }}} \right) + \frac{1}{{{{\sin }^2}\theta }}\frac{{{\partial ^2}}}{{\partial {\phi ^2}}}} \right\}
 $$ {#eq-zeqnnum657148}
 
 Notice that the operators depend on angles, not on the distance $r$. This suggests writing the wavefunction as a radial factor times an angular factor:
@@ -670,7 +670,7 @@ $$ {#eq-ch08-p2130}
 We recover the position-space rule for orbital angular momentum:
 
 $$
-{\hat L_z} \buildrel\textstyle.\over= - i\hbar \frac{\partial }{{\partial \phi }}
+{\hat L_z} = - i\hbar \frac{\partial }{{\partial \phi }}
 $$ {#eq-ch08-p2132}
 
 ## Exercises

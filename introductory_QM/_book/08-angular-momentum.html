@@ -280,9 +280,9 @@ window.Quarto = {
 <p>The three component operators in the position representation are</p>
 <p><span id="eq-zeqnnum826605"><span class="math display">\[
 \begin{aligned}
-{{\hat L}_x} &amp;= \hat Y{{\hat P}_z} - \hat Z{{\hat P}_y} \buildrel\textstyle.\over= - i\hbar \left( {y\frac{\partial }{{\partial z}} - z\frac{\partial }{{\partial y}}} \right) \\
-{{\hat L}_y} &amp;= \hat Z{{\hat P}_x} - \hat X{{\hat P}_z} \buildrel\textstyle.\over= - i\hbar \left( {z\frac{\partial }{{\partial x}} - x\frac{\partial }{{\partial z}}} \right)\;\; \\
-{{\hat L}_z} &amp;= \hat X{{\hat P}_y} - \hat Y{{\hat P}_x} \buildrel\textstyle.\over= - i\hbar \left( {x\frac{\partial }{{\partial y}} - y\frac{\partial }{{\partial x}}} \right)
+{{\hat L}_x} &amp;= \hat Y{{\hat P}_z} - \hat Z{{\hat P}_y} = - i\hbar \left( {y\frac{\partial }{{\partial z}} - z\frac{\partial }{{\partial y}}} \right) \\
+{{\hat L}_y} &amp;= \hat Z{{\hat P}_x} - \hat X{{\hat P}_z} = - i\hbar \left( {z\frac{\partial }{{\partial x}} - x\frac{\partial }{{\partial z}}} \right)\;\; \\
+{{\hat L}_z} &amp;= \hat X{{\hat P}_y} - \hat Y{{\hat P}_x} = - i\hbar \left( {x\frac{\partial }{{\partial y}} - y\frac{\partial }{{\partial x}}} \right)
 \end{aligned}
 \tag{8.2}\]</span></span></p>
 <p>Let these operators act on a test wavefunction <span class="math inline">\(\psi(x,y,z)\)</span>. Alternatively, use the position–momentum commutator <a href="07-continuous-observables.html#eq-zeqnnum944007" class="quarto-xref">Equation&nbsp;<span>7.73</span></a>. Either route gives</p>
@@ -598,14 +598,14 @@ b = j\left( {j + 1} \right)
 <p>we convert the Cartesian expression <a href="#eq-zeqnnum826605" class="quarto-xref">Equation&nbsp;<span>8.2</span></a> for <span class="math inline">\({\hat L_{x,y,z}}\)</span> into</p>
 <p><span id="eq-zeqnnum721118"><span class="math display">\[
 \begin{aligned}
-{{\hat L}_x} &amp;\buildrel\textstyle.\over= - i\hbar \left( {y\frac{\partial }{{\partial z}} - z\frac{\partial }{{\partial y}}} \right) = - i\hbar \left( { - \sin \phi \frac{\partial }{{\partial \theta }} - \cot \theta \cos \phi \frac{\partial }{{\partial \phi }}} \right) \\
-{{\hat L}_y} &amp;\buildrel\textstyle.\over= - i\hbar \left( {z\frac{\partial }{{\partial x}} - x\frac{\partial }{{\partial z}}} \right) = - i\hbar \left( {\cos \phi \frac{\partial }{{\partial \theta }} - \cot \theta \sin \phi \frac{\partial }{{\partial \phi }}} \right) \\
-{{\hat L}_z} &amp;\buildrel\textstyle.\over= - i\hbar \left( {x\frac{\partial }{{\partial y}} - y\frac{\partial }{{\partial x}}} \right) = - i\hbar \frac{\partial }{{\partial \phi }}
+{{\hat L}_x} &amp;= - i\hbar \left( {y\frac{\partial }{{\partial z}} - z\frac{\partial }{{\partial y}}} \right) = - i\hbar \left( { - \sin \phi \frac{\partial }{{\partial \theta }} - \cot \theta \cos \phi \frac{\partial }{{\partial \phi }}} \right) \\
+{{\hat L}_y} &amp;= - i\hbar \left( {z\frac{\partial }{{\partial x}} - x\frac{\partial }{{\partial z}}} \right) = - i\hbar \left( {\cos \phi \frac{\partial }{{\partial \theta }} - \cot \theta \sin \phi \frac{\partial }{{\partial \phi }}} \right) \\
+{{\hat L}_z} &amp;= - i\hbar \left( {x\frac{\partial }{{\partial y}} - y\frac{\partial }{{\partial x}}} \right) = - i\hbar \frac{\partial }{{\partial \phi }}
 \end{aligned}
 \tag{8.61}\]</span></span></p>
 <p>and obtain the spherical-coordinate expression for <span class="math inline">\({{\bf{\hat L}}^2}\)</span>:</p>
 <p><span id="eq-zeqnnum657148"><span class="math display">\[
-{{\bf{\hat L}}^2} = {\hat L_x}{\hat L_x} + {\hat L_y}{\hat L_y} + {\hat L_z}{\hat L_z} \buildrel\textstyle.\over= - {\hbar ^2}\left\{ {\frac{1}{{\sin \theta }}\frac{\partial }{{\partial \theta }}\left( {\sin \theta \frac{\partial }{{\partial \theta }}} \right) + \frac{1}{{{{\sin }^2}\theta }}\frac{{{\partial ^2}}}{{\partial {\phi ^2}}}} \right\}
+{{\bf{\hat L}}^2} = {\hat L_x}{\hat L_x} + {\hat L_y}{\hat L_y} + {\hat L_z}{\hat L_z} = - {\hbar ^2}\left\{ {\frac{1}{{\sin \theta }}\frac{\partial }{{\partial \theta }}\left( {\sin \theta \frac{\partial }{{\partial \theta }}} \right) + \frac{1}{{{{\sin }^2}\theta }}\frac{{{\partial ^2}}}{{\partial {\phi ^2}}}} \right\}
 \tag{8.62}\]</span></span></p>
 <p>Notice that the operators depend on angles, not on the distance <span class="math inline">\(r\)</span>. This suggests writing the wavefunction as a radial factor times an angular factor:</p>
 <p><span id="eq-zeqnnum193092"><span class="math display">\[
@@ -778,7 +778,7 @@ Y{{\kern 1pt} _{2, \pm 2}} &amp;= \mp \sqrt {\frac{{15}}{{32\pi }}} {\sin ^2}\th
 \tag{8.94}\]</span></span></p>
 <p>We recover the position-space rule for orbital angular momentum:</p>
 <p><span id="eq-ch08-p2132"><span class="math display">\[
-{\hat L_z} \buildrel\textstyle.\over= - i\hbar \frac{\partial }{{\partial \phi }}
+{\hat L_z} = - i\hbar \frac{\partial }{{\partial \phi }}
 \tag{8.95}\]</span></span></p>
 </section>
 </section>
