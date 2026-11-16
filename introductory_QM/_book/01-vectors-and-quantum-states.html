@@ -182,7 +182,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06-transitions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Transitions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -388,7 +388,10 @@ c_1|\alpha\rangle+c_2|\beta\rangle
 <p>We can now express the defining properties of the inner product in bra–ket notation.</p>
 <p><strong>Linearity in the ket and in the bra:</strong></p>
 <p><span id="eq-zeqnnum320588"><span class="math display">\[
-\begin{array}{l} \langle \gamma\vert \left( {{c_1}\vert \alpha\rangle + {c_2}\vert \beta\rangle } \right) = {c_1}\langle \gamma|\alpha\rangle + {c_2}\langle \gamma|\beta\rangle ,\\ \left( {{c_1}\langle \gamma\vert {\rm{ + }}{c_2}\langle \beta\vert } \right)\vert \alpha\rangle = {c_1}\langle \gamma|\alpha\rangle + {c_2}\langle \beta|\alpha\rangle \end{array}
+\begin{aligned}
+\langle \gamma\vert \left( {{c_1}\vert \alpha\rangle + {c_2}\vert \beta\rangle } \right) &amp;= {c_1}\langle \gamma|\alpha\rangle + {c_2}\langle \gamma|\beta\rangle , \\
+\left( {{c_1}\langle \gamma\vert {\rm{ + }}{c_2}\langle \beta\vert } \right)\vert \alpha\rangle &amp;= {c_1}\langle \gamma|\alpha\rangle + {c_2}\langle \beta|\alpha\rangle
+\end{aligned}
 \tag{1.8}\]</span></span></p>
 <p><strong>Conjugate symmetry:</strong></p>
 <p><span id="eq-zeqnnum921664"><span class="math display">\[
@@ -407,7 +410,10 @@ c_1|\alpha\rangle+c_2|\beta\rangle
 <p>Let us put the bra–ket notation to work with column vectors. Here we can see every step of the calculation.</p>
 <p><strong>Example: inner products of column vectors.</strong> Complex column vectors form a complex vector space. Their standard inner product is obtained by multiplying the conjugate transpose of the first column by the second column. Thus, if a column represents a ket, its conjugate-transpose row represents the corresponding bra. For example,</p>
 <p><span id="eq-ch01-p0197"><span class="math display">\[
-\begin{array}{l} |\phi\rangle = \left( {\begin{array}{*{20}{c}} {{a_1}}\\ {{a_2}} \end{array}} \right) \leftrightarrow \langle \phi|  = \left( {\begin{array}{*{20}{c}} {a_1^*}&amp;{a_2^*} \end{array}} \right)\\ |\psi\rangle = \left( {\begin{array}{*{20}{c}} {{b_1}}\\ {{b_2}} \end{array}} \right) \leftrightarrow \langle \psi|  = \left( {\begin{array}{*{20}{c}} {b_1^*}&amp;{b_2^*} \end{array}} \right) \end{array}
+\begin{aligned}
+|\phi\rangle &amp;= \left( {\begin{array}{*{20}{c}} {{a_1}}\\ {{a_2}} \end{array}} \right) \leftrightarrow \langle \phi|  = \left( {\begin{array}{*{20}{c}} {a_1^*}&amp;{a_2^*} \end{array}} \right) \\
+|\psi\rangle &amp;= \left( {\begin{array}{*{20}{c}} {{b_1}}\\ {{b_2}} \end{array}} \right) \leftrightarrow \langle \psi|  = \left( {\begin{array}{*{20}{c}} {b_1^*}&amp;{b_2^*} \end{array}} \right)
+\end{aligned}
 \tag{1.13}\]</span></span> inner product <span class="math inline">\(\langle \phi|\psi\rangle\)</span> can then be defined by ordinary matrix multiplication:</p>
 <p><span id="eq-zeqnnum248635"><span class="math display">\[
 \langle \phi|\psi\rangle = \left( {\begin{array}{*{20}{c}} {a_1^*}&amp;{a_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{b_1}}\\ {{b_2}} \end{array}} \right) = a_1^*{b_1} + a_2^*{b_2}

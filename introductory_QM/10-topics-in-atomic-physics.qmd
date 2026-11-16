@@ -23,7 +23,10 @@ $$ {#eq-ch10-p2323}
 The total quantum number is $j=l\pm1/2$ when $l>0$. Substitution gives the two branches below. For $l=0$, the spin–orbit shift is zero:
 
 $$
-\begin{array}{c} {E_{{\rm{SO}}}}(j) = \frac{{j(j + 1) - l(l + 1) - {3 \mathord{\left/ {\vphantom {3 4}} \right. \kern-1.2pt } 4}}}{2}{\beta _{nl}}\\ = \left\{ {\begin{array}{*{20}{c}} 0&{,\;l = 0}\\ {\left\{ {\begin{array}{*{20}{c}} {\frac{l}{2}{\beta _{nl}},\;\;\;\;\;\;\;\;\;j = l + \frac{1}{2}}\\ { - \frac{{l + 1}}{2}{\beta _{nl}},\;\;j = l - \frac{1}{2}} \end{array}} \right.}&{,\;l > 0} \end{array}} \right. \end{array}
+\begin{aligned}
+{E_{{\rm{SO}}}}(j) &= \frac{{j(j + 1) - l(l + 1) - {3 \mathord{\left/ {\vphantom {3 4}} \right. \kern-1.2pt } 4}}}{2}{\beta _{nl}} \\
+ &= \left\{ {\begin{array}{*{20}{c}} 0&{,\;l = 0}\\ {\left\{ {\begin{array}{*{20}{c}} {\frac{l}{2}{\beta _{nl}},\;\;\;\;\;\;\;\;\;j = l + \frac{1}{2}}\\ { - \frac{{l + 1}}{2}{\beta _{nl}},\;\;j = l - \frac{1}{2}} \end{array}} \right.}&{,\;l > 0} \end{array}} \right.
+\end{aligned}
 $$ {#eq-ch10-p2325}
 
 There is a tempting algebraic observation. In the $j=l+1/2$ branch, a factor of $l$ cancels between the prefactor and $\beta_{nl}$. If we then formally set $l=0$, we obtain the expression below. But remember the restriction: the formula for $\beta_{nl}$ was derived for $l>0$. This substitution is not a valid derivation at $l=0$.
@@ -59,7 +62,11 @@ $$ {#eq-ch10-p2336}
 The nuclear magnetic moment interacts with this field. Its energy gives the Fermi contact Hamiltonian:
 
 $$
-\begin{array}{c} {{\hat H}_{{\rm{NS}}}}(l = 0) = - {{{\bf{\hat \mu }}}_I} \cdot {{{\bf{\hat B}}}_{\rm{e}}} = {g_I}{\mu _{\rm{B}}}\frac{{{\bf{\hat I}}}}{\hbar } \cdot \left[ { - \frac{2}{3}{\mu _0}{g_S}{\mu _B}\frac{{{\bf{\hat S}}}}{\hbar }\frac{1}{\pi }{{\left( {\frac{Z}{{n{a_0}}}} \right)}^3}} \right]\\ = {g_I}\mu _{\rm{B}}^2\frac{{4{\mu _0}}}{{3\pi }}{\left( {\frac{Z}{{{a_0}n}}} \right)^3}\frac{{{\bf{\hat I}} \cdot {\bf{\hat S}}}}{{{\hbar ^2}}}\\ = \frac{{8{g_I}{Z^3}{\alpha ^2}}}{{3{n^3}}}{E_{\rm{H}}}\frac{{{\bf{\hat I}} \cdot {\bf{\hat S}}}}{{{\hbar ^2}}} \end{array}
+\begin{aligned}
+{{\hat H}_{{\rm{NS}}}}(l &= 0) = - {{{\bf{\hat \mu }}}_I} \cdot {{{\bf{\hat B}}}_{\rm{e}}} = {g_I}{\mu _{\rm{B}}}\frac{{{\bf{\hat I}}}}{\hbar } \cdot \left[ { - \frac{2}{3}{\mu _0}{g_S}{\mu _B}\frac{{{\bf{\hat S}}}}{\hbar }\frac{1}{\pi }{{\left( {\frac{Z}{{n{a_0}}}} \right)}^3}} \right] \\
+ &= {g_I}\mu _{\rm{B}}^2\frac{{4{\mu _0}}}{{3\pi }}{\left( {\frac{Z}{{{a_0}n}}} \right)^3}\frac{{{\bf{\hat I}} \cdot {\bf{\hat S}}}}{{{\hbar ^2}}} \\
+ &= \frac{{8{g_I}{Z^3}{\alpha ^2}}}{{3{n^3}}}{E_{\rm{H}}}\frac{{{\bf{\hat I}} \cdot {\bf{\hat S}}}}{{{\hbar ^2}}}
+\end{aligned}
 $$ {#eq-zeqnnum480315}
 
 **An unfinished argument: why the magnetic analogy fails.** The source notes next try to obtain the Darwin term from the electron's own magnetic field. That argument is incorrect, and its final expression also lacks a factor of $Z$ compared with the Darwin correction. The Darwin term comes from the relativistic treatment of the Coulomb potential. Keep this limitation in mind as you read the retained steps below.
@@ -67,13 +74,20 @@ $$ {#eq-zeqnnum480315}
 The attempted analogy replaces the nuclear moment $\mathbf{\hat\mu}_I$ in @eq-zeqnnum480315 with the electron moment $\mathbf{\hat\mu}_S$. It would assign the electron the following energy in its own field:
 
 $$
-\begin{array}{c} {{\hat H}_{{\rm{SS}}}}(l = 0) = - {{{\bf{\hat \mu }}}_S} \cdot {{{\bf{\hat B}}}_{\rm{e}}} = - {{{\bf{\hat \mu }}}_S} \cdot \frac{2}{3}{\mu _0}{\bf{M}}\\ = - \frac{2}{3}{\mu _0}{\bf{\mu }}_S^2{\left\vert  {{\psi _{n,l = 0}}(r = 0)} \right\vert ^2} = - \frac{{8{g_S}{Z^3}{\alpha ^2}}}{{3{n^3}}}{E_{\rm{H}}}\frac{{{{{\bf{\hat S}}}^2}}}{{{\hbar ^2}}}\\ = - \frac{{4{Z^3}{\alpha ^2}}}{{{n^3}}}{E_{\rm{H}}} \end{array}
+\begin{aligned}
+{{\hat H}_{{\rm{SS}}}}(l &= 0) = - {{{\bf{\hat \mu }}}_S} \cdot {{{\bf{\hat B}}}_{\rm{e}}} = - {{{\bf{\hat \mu }}}_S} \cdot \frac{2}{3}{\mu _0}{\bf{M}} \\
+ &= - \frac{2}{3}{\mu _0}{\bf{\mu }}_S^2{\left\vert  {{\psi _{n,l = 0}}(r = 0)} \right\vert ^2} = - \frac{{8{g_S}{Z^3}{\alpha ^2}}}{{3{n^3}}}{E_{\rm{H}}}\frac{{{{{\bf{\hat S}}}^2}}}{{{\hbar ^2}}} \\
+ &= - \frac{{4{Z^3}{\alpha ^2}}}{{{n^3}}}{E_{\rm{H}}}
+\end{aligned}
 $$ {#eq-ch10-p2341}
 
 There is already a mismatch in this picture. The moment $\mathbf{\hat\mu}_S$ represents a point electron, while $\mathbf{\hat B}_{\mathrm e}$ comes from a spatially distributed magnetization. The notes then try a classical self-energy calculation for a uniformly magnetized sphere instead:
 
 $$
-\begin{array}{c} {H_{SS}} = \frac{{{\mu _{0}}}}{6}{{\bf{M}}^2}V = \frac{2}{3}{\mu _0}{\bf{M}} \cdot \frac{1}{4}{\bf{M}}V = = \frac{2}{3}{\mu _0}{\bf{M}} \cdot \frac{{{{\bf{\mu }}_S}}}{4}\\ = \frac{{{Z^3}{\alpha ^2}}}{{{n^3}}}{E_{\rm{H}}} = \frac{{Z{\alpha ^2}}}{n}\left\vert  {E_n^{(0)}} \right\vert  \end{array}
+\begin{aligned}
+{H_{SS}} &= \frac{{{\mu _{0}}}}{6}{{\bf{M}}^2}V = \frac{2}{3}{\mu _0}{\bf{M}} \cdot \frac{1}{4}{\bf{M}}V = = \frac{2}{3}{\mu _0}{\bf{M}} \cdot \frac{{{{\bf{\mu }}_S}}}{4} \\
+ &= \frac{{{Z^3}{\alpha ^2}}}{{{n^3}}}{E_{\rm{H}}} = \frac{{Z{\alpha ^2}}}{n}\left\vert  {E_n^{(0)}} \right\vert
+\end{aligned}
 $$ {#eq-ch10-p2343}
 
 This result does not establish the Darwin term. In particular, its $Z$ dependence differs from the correction discussed above. The retained calculation shows where the analogy leads, but a derivation of the Darwin term needs the relativistic Coulomb treatment.

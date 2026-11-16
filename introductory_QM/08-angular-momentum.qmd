@@ -13,7 +13,11 @@ $$ {#eq-ch08-p1897}
 The three component operators in the position representation are
 
 $$
-\begin{array}{l} {{\hat L}_x} = \hat Y{{\hat P}_z} - \hat Z{{\hat P}_y} \buildrel\textstyle.\over= - i\hbar \left( {y\frac{\partial }{{\partial z}} - z\frac{\partial }{{\partial y}}} \right)\\ {{\hat L}_y} = \hat Z{{\hat P}_x} - \hat X{{\hat P}_z} \buildrel\textstyle.\over= - i\hbar \left( {z\frac{\partial }{{\partial x}} - x\frac{\partial }{{\partial z}}} \right)\;\;\\ {{\hat L}_z} = \hat X{{\hat P}_y} - \hat Y{{\hat P}_x} \buildrel\textstyle.\over= - i\hbar \left( {x\frac{\partial }{{\partial y}} - y\frac{\partial }{{\partial x}}} \right) \end{array}
+\begin{aligned}
+{{\hat L}_x} &= \hat Y{{\hat P}_z} - \hat Z{{\hat P}_y} \buildrel\textstyle.\over= - i\hbar \left( {y\frac{\partial }{{\partial z}} - z\frac{\partial }{{\partial y}}} \right) \\
+{{\hat L}_y} &= \hat Z{{\hat P}_x} - \hat X{{\hat P}_z} \buildrel\textstyle.\over= - i\hbar \left( {z\frac{\partial }{{\partial x}} - x\frac{\partial }{{\partial z}}} \right)\;\; \\
+{{\hat L}_z} &= \hat X{{\hat P}_y} - \hat Y{{\hat P}_x} \buildrel\textstyle.\over= - i\hbar \left( {x\frac{\partial }{{\partial y}} - y\frac{\partial }{{\partial x}}} \right)
+\end{aligned}
 $$ {#eq-zeqnnum826605}
 
 Let these operators act on a test wavefunction $\psi(x,y,z)$. Alternatively, use the position–momentum commutator @eq-zeqnnum944007. Either route gives
@@ -165,7 +169,10 @@ $$ {#eq-zeqnnum714513}
 Each step changes $m$ by one, so $n$ is a nonnegative integer. At the two endpoints, @eq-zeqnnum732391 and @eq-zeqnnum324145 give
 
 $$
-\begin{array}{l} b\vert b,{m_{\max }}\rangle = (m_{\max }^2 + {m_{\max }})\vert b,{m_{\max }}\rangle \\ b\vert b,{m_{\min }}\rangle = (m_{\min }^2 - {m_{\min }})\vert b,{m_{\min }}\rangle \end{array}
+\begin{aligned}
+b\vert b,{m_{\max }}\rangle &= (m_{\max }^2 + {m_{\max }})\vert b,{m_{\max }}\rangle \\
+b\vert b,{m_{\min }}\rangle &= (m_{\min }^2 - {m_{\min }})\vert b,{m_{\min }}\rangle
+\end{aligned}
 $$ {#eq-ch08-p1946}
 
 It follows that
@@ -295,7 +302,12 @@ $$ {#eq-zeqnnum141497}
 Now use $\hat J_+^\dagger=\hat J_-$ and the identity $\hat J_-\hat J_+=\mathbf{\hat J}^2-\hat J_z^2-\hbar\hat J_z$ from @eq-zeqnnum732391:
 
 $$
-\begin{array}{c} \left\langle {j,m} \right\vert \hat J_ + ^\dagger {{\hat J}_ + }\left\vert  {j,m} \right\rangle = \left\langle {j,m} \right\vert {{\hat J}_ - }{{\hat J}_ + }\left\vert  {j,m} \right\rangle \\ = \left\langle {j,m} \right\vert {{{\bf{\hat J}}}^2} - \hat J_z^2 - \hbar {{\hat J}_z}\left\vert  {j,m} \right\rangle \\ = j\left( {j + 1} \right){\hbar ^2} - {m^2}{\hbar ^2} - m{\hbar ^2}\\ = {\hbar ^2}\left[ {j\left( {j + 1} \right) - m\left( {m + 1} \right)} \right] \end{array}
+\begin{aligned}
+\left\langle {j,m} \right\vert \hat J_ + ^\dagger {{\hat J}_ + }\left\vert  {j,m} \right\rangle &= \left\langle {j,m} \right\vert {{\hat J}_ - }{{\hat J}_ + }\left\vert  {j,m} \right\rangle \\
+ &= \left\langle {j,m} \right\vert {{{\bf{\hat J}}}^2} - \hat J_z^2 - \hbar {{\hat J}_z}\left\vert  {j,m} \right\rangle \\
+ &= j\left( {j + 1} \right){\hbar ^2} - {m^2}{\hbar ^2} - m{\hbar ^2} \\
+ &= {\hbar ^2}\left[ {j\left( {j + 1} \right) - m\left( {m + 1} \right)} \right]
+\end{aligned}
 $$ {#eq-zeqnnum904686}
 
 Combining @eq-zeqnnum141497 and @eq-zeqnnum904686, we obtain
@@ -371,13 +383,19 @@ $$ {#eq-ch08-p2044}
 Orbital angular momentum comes from motion about a reference point. We write it as $\mathbf L$ and use $l$ for its angular-momentum quantum number. The general theory we just developed gives
 
 $$
-\begin{array}{l} {{{\bf{\hat L}}}^2}\left\vert  {l,m} \right\rangle = l\left( {l + 1} \right){\hbar ^2}\left\vert  {l,m} \right\rangle \\ {{\hat L}_z}\left\vert  {l,m} \right\rangle = m\hbar \left\vert  {l,m} \right\rangle \end{array}
+\begin{aligned}
+{{{\bf{\hat L}}}^2}\left\vert  {l,m} \right\rangle &= l\left( {l + 1} \right){\hbar ^2}\left\vert  {l,m} \right\rangle \\
+{{\hat L}_z}\left\vert  {l,m} \right\rangle &= m\hbar \left\vert  {l,m} \right\rangle
+\end{aligned}
 $$ {#eq-zeqnnum747222}
 
 To describe orbital motion, we need spatial wavefunctions. Write $\Lambda_{l,m}(x,y,z)\equiv\langle x,y,z\vert l,m\rangle$. Spherical coordinates are a natural choice because angular momentum concerns motion about an origin. In these coordinates, @eq-zeqnnum747222 becomes
 
 $$
-\begin{array}{l} {{\bf{L}}^2}{\Lambda _{l,m}}\left( {r,\theta ,\phi } \right) = l\left( {l + 1} \right){\hbar ^2}{\Lambda _{l,m}}\left( {r,\theta ,\phi } \right)\\ {L_z}{\Lambda _{l,m}}\left( {r,\theta ,\phi } \right) = m\hbar {\Lambda _{l,m}}\left( {r,\theta ,\phi } \right) \end{array}
+\begin{aligned}
+{{\bf{L}}^2}{\Lambda _{l,m}}\left( {r,\theta ,\phi } \right) &= l\left( {l + 1} \right){\hbar ^2}{\Lambda _{l,m}}\left( {r,\theta ,\phi } \right) \\
+{L_z}{\Lambda _{l,m}}\left( {r,\theta ,\phi } \right) &= m\hbar {\Lambda _{l,m}}\left( {r,\theta ,\phi } \right)
+\end{aligned}
 $$ {#eq-zeqnnum921413}
 
 ![](assets/image1796.png){width="212px"}
@@ -395,7 +413,11 @@ $$ {#eq-ch08-p2054}
 we convert the Cartesian expression @eq-zeqnnum826605 for ${\hat L_{x,y,z}}$ into
 
 $$
-\begin{array}{l} {{\hat L}_x} \buildrel\textstyle.\over= - i\hbar \left( {y\frac{\partial }{{\partial z}} - z\frac{\partial }{{\partial y}}} \right) = - i\hbar \left( { - \sin \phi \frac{\partial }{{\partial \theta }} - \cot \theta \cos \phi \frac{\partial }{{\partial \phi }}} \right)\\ {{\hat L}_y} \buildrel\textstyle.\over= - i\hbar \left( {z\frac{\partial }{{\partial x}} - x\frac{\partial }{{\partial z}}} \right) = - i\hbar \left( {\cos \phi \frac{\partial }{{\partial \theta }} - \cot \theta \sin \phi \frac{\partial }{{\partial \phi }}} \right)\\ {{\hat L}_z} \buildrel\textstyle.\over= - i\hbar \left( {x\frac{\partial }{{\partial y}} - y\frac{\partial }{{\partial x}}} \right) = - i\hbar \frac{\partial }{{\partial \phi }} \end{array}
+\begin{aligned}
+{{\hat L}_x} &\buildrel\textstyle.\over= - i\hbar \left( {y\frac{\partial }{{\partial z}} - z\frac{\partial }{{\partial y}}} \right) = - i\hbar \left( { - \sin \phi \frac{\partial }{{\partial \theta }} - \cot \theta \cos \phi \frac{\partial }{{\partial \phi }}} \right) \\
+{{\hat L}_y} &\buildrel\textstyle.\over= - i\hbar \left( {z\frac{\partial }{{\partial x}} - x\frac{\partial }{{\partial z}}} \right) = - i\hbar \left( {\cos \phi \frac{\partial }{{\partial \theta }} - \cot \theta \sin \phi \frac{\partial }{{\partial \phi }}} \right) \\
+{{\hat L}_z} &\buildrel\textstyle.\over= - i\hbar \left( {x\frac{\partial }{{\partial y}} - y\frac{\partial }{{\partial x}}} \right) = - i\hbar \frac{\partial }{{\partial \phi }}
+\end{aligned}
 $$ {#eq-zeqnnum721118}
 
 and obtain the spherical-coordinate expression for ${{\bf{\hat L}}^2}$:
@@ -477,7 +499,10 @@ $$ {#eq-ch08-p2081}
 That is,
 
 $$
-\begin{array}{c} \exp \left[ {im\phi } \right] = \exp \left[ {im(\phi + 2\pi )} \right]\\ m\phi = m(\phi + 2\pi ) + n2\pi , & n \in {\rm{Integer}} \end{array}
+\begin{aligned}
+\exp \left[ {im\phi } \right] &= \exp \left[ {im(\phi + 2\pi )} \right] \\
+m\phi &= m(\phi + 2\pi ) + n2\pi , && n \in {\rm{Integer}}
+\end{aligned}
 $$ {#eq-zeqnnum804907}
 
 A full turn therefore restricts the allowed values of $m$.
@@ -485,7 +510,10 @@ A full turn therefore restricts the allowed values of $m$.
 The phase condition requires integer $m$. Solving the remaining polar @eq-zeqnnum830038 with regular behavior at the poles gives
 
 $$
-\begin{array}{c} l = 0,\;1,\;2,\; \cdots \\ m = 0,\; \pm 1,\; \cdots ,\; \pm l \end{array}
+\begin{aligned}
+l &= 0,\;1,\;2,\; \cdots \\
+m &= 0,\; \pm 1,\; \cdots ,\; \pm l
+\end{aligned}
 $$ {#eq-zeqnnum917846}
 
 We will omit the longer differential-equation calculation. We can also connect this result with the ladder argument: $m$ runs from $-l$ to $l$ in unit steps. Since orbital $m$ is integer, $l$ must be a nonnegative integer too. This gives the allowed values in @eq-zeqnnum917846.
@@ -513,13 +541,23 @@ $$ {#eq-ch08-p2091}
 These functions are the **spherical harmonics**. Each has definite squared orbital angular momentum and a definite $z$ projection:
 
 $$
-\begin{array}{l} {{{\bf{\hat L}}}^2}{Y_{l,m}}\left( {\theta ,\phi } \right) = l(l + 1)\hbar {Y_{l,m}}\left( {\theta ,\phi } \right)\\ {{\hat L}_z}{Y_{l,m}}\left( {\theta ,\phi } \right) = m\hbar {Y_{l,m}}\left( {\theta ,\phi } \right) \end{array}
+\begin{aligned}
+{{{\bf{\hat L}}}^2}{Y_{l,m}}\left( {\theta ,\phi } \right) &= l(l + 1)\hbar {Y_{l,m}}\left( {\theta ,\phi } \right) \\
+{{\hat L}_z}{Y_{l,m}}\left( {\theta ,\phi } \right) &= m\hbar {Y_{l,m}}\left( {\theta ,\phi } \right)
+\end{aligned}
 $$ {#eq-ch08-p2093}
 
 Here are the spherical harmonics for $l=0,1,2$. Notice the constant angular function at $l=0$ and the richer patterns at higher $l$.
 
 $$
-\begin{array}{c} {Y_{0,0}} = \sqrt {\frac{1}{{4\pi }}} \\ Y{{\kern 1pt} _{1,0}} = \sqrt {\frac{3}{{4\pi }}} \cos \theta \\ Y{{\kern 1pt} _{1, \pm 1}} = \mp \sqrt {\frac{3}{{8\pi }}} \sin \theta \;{e^{ \pm i\phi }}\\ Y{{\kern 1pt} _{2,0}} = \sqrt {\frac{5}{{16\pi }}} \left( {3{{\cos }^2}\theta - 1} \right)\\ Y{{\kern 1pt} _{2, \pm 1}} = \mp \sqrt {\frac{{15}}{{8\pi }}} \sin \theta \cos \theta \;{e^{ \pm i\phi }}\\ Y{{\kern 1pt} _{2, \pm 2}} = \mp \sqrt {\frac{{15}}{{32\pi }}} {\sin ^2}\theta \;{e^{ \pm 2i\phi }} \end{array}
+\begin{aligned}
+{Y_{0,0}} &= \sqrt {\frac{1}{{4\pi }}} \\
+Y{{\kern 1pt} _{1,0}} &= \sqrt {\frac{3}{{4\pi }}} \cos \theta \\
+Y{{\kern 1pt} _{1, \pm 1}} &= \mp \sqrt {\frac{3}{{8\pi }}} \sin \theta \;{e^{ \pm i\phi }} \\
+Y{{\kern 1pt} _{2,0}} &= \sqrt {\frac{5}{{16\pi }}} \left( {3{{\cos }^2}\theta - 1} \right) \\
+Y{{\kern 1pt} _{2, \pm 1}} &= \mp \sqrt {\frac{{15}}{{8\pi }}} \sin \theta \cos \theta \;{e^{ \pm i\phi }} \\
+Y{{\kern 1pt} _{2, \pm 2}} &= \mp \sqrt {\frac{{15}}{{32\pi }}} {\sin ^2}\theta \;{e^{ \pm 2i\phi }}
+\end{aligned}
 $$ {#eq-zeqnnum238379}
 
 ![](assets/image1855.gif){width="289px"}
@@ -571,7 +609,11 @@ $$ {#eq-ch08-p2111}
 As with translations, we require a zero rotation to do nothing, successive small rotations about the same axis to add, and probabilities to stay unchanged:
 
 $$
-\begin{array}{c} \mathop {\lim }\limits_{d\phi \to 0} \hat D\left( {{\bf{z}},d\phi } \right) = \hat I\\ \hat D\left( {{\bf{z}},d{\phi _1}} \right)\hat D\left( {{\bf{z}},d{\phi _2}} \right) = \hat D\left( {{\bf{z}},d{\phi _2}} \right)\hat D\left( {{\bf{z}},d{\phi _1}} \right) = \hat D\left( {{\bf{z}},d{\phi _1} + d{\phi _2}} \right)\\ {{\hat D}^\dagger }\left( {{\bf{z}},d\phi } \right) = {{\hat D}^{ - 1}}\left( {{\bf{z}},d\phi } \right) = \hat D\left( {{\bf{z}}, - d\phi } \right) \end{array}
+\begin{aligned}
+\mathop {\lim }\limits_{d\phi \to 0} \hat D\left( {{\bf{z}},d\phi } \right) &= \hat I \\
+\hat D\left( {{\bf{z}},d{\phi _1}} \right)\hat D\left( {{\bf{z}},d{\phi _2}} \right) &= \hat D\left( {{\bf{z}},d{\phi _2}} \right)\hat D\left( {{\bf{z}},d{\phi _1}} \right) = \hat D\left( {{\bf{z}},d{\phi _1} + d{\phi _2}} \right) \\
+{{\hat D}^\dagger }\left( {{\bf{z}},d\phi } \right) &= {{\hat D}^{ - 1}}\left( {{\bf{z}},d\phi } \right) = \hat D\left( {{\bf{z}}, - d\phi } \right)
+\end{aligned}
 $$ {#eq-ch08-p2113}
 
 The final condition requires the rotation operator to be unitary.
@@ -613,7 +655,10 @@ $$ {#eq-ch08-p2126}
 Let both sides act on any state $\vert\psi\rangle$. Then expand the shifted wavefunction to first order in $d\phi$:
 
 $$
-\begin{array}{c} \left\langle {r,\theta ,\phi } \right\vert \left[ {\hat I - i\frac{{{{\hat L}_z}}}{\hbar }d\phi } \right]\left\vert  \psi \right\rangle = \left\langle {{r,\theta ,\phi - d\phi }} \mathrel{\left \vert  {\vphantom {{r,\theta ,\phi - d\phi } \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \\ \left\langle {{r,\theta ,\phi }} \mathrel{\left \vert  {\vphantom {{r,\theta ,\phi } \psi }} \right. \kern-1.2pt } {\psi } \right\rangle - i\frac{{d\phi }}{\hbar }\left\langle {r,\theta ,\phi } \right\vert {{\hat L}_z}\left\vert  \psi \right\rangle \approx \left\langle {{r,\theta ,\phi }} \mathrel{\left \vert  {\vphantom {{r,\theta ,\phi } \psi }} \right. \kern-1.2pt } {\psi } \right\rangle - d\phi \frac{\partial }{{\partial \phi }}\left\langle {{r,\theta ,\phi }} \mathrel{\left \vert  {\vphantom {{r,\theta ,\phi } \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \end{array}
+\begin{aligned}
+\left\langle {r,\theta ,\phi } \right\vert \left[ {\hat I - i\frac{{{{\hat L}_z}}}{\hbar }d\phi } \right]\left\vert  \psi \right\rangle &= \left\langle {{r,\theta ,\phi - d\phi }} \mathrel{\left \vert  {\vphantom {{r,\theta ,\phi - d\phi } \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \\
+\left\langle {{r,\theta ,\phi }} \mathrel{\left \vert  {\vphantom {{r,\theta ,\phi } \psi }} \right. \kern-1.2pt } {\psi } \right\rangle - i\frac{{d\phi }}{\hbar }\left\langle {r,\theta ,\phi } \right\vert {{\hat L}_z}\left\vert  \psi \right\rangle &\approx \left\langle {{r,\theta ,\phi }} \mathrel{\left \vert  {\vphantom {{r,\theta ,\phi } \psi }} \right. \kern-1.2pt } {\psi } \right\rangle - d\phi \frac{\partial }{{\partial \phi }}\left\langle {{r,\theta ,\phi }} \mathrel{\left \vert  {\vphantom {{r,\theta ,\phi } \psi }} \right. \kern-1.2pt } {\psi } \right\rangle
+\end{aligned}
 $$ {#eq-ch08-p2128}
 
 Finally,

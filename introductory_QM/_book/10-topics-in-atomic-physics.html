@@ -182,7 +182,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06-transitions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Transitions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -279,7 +279,10 @@ window.Quarto = {
 \tag{10.2}\]</span></span></p>
 <p>The total quantum number is <span class="math inline">\(j=l\pm1/2\)</span> when <span class="math inline">\(l&gt;0\)</span>. Substitution gives the two branches below. For <span class="math inline">\(l=0\)</span>, the spin–orbit shift is zero:</p>
 <p><span id="eq-ch10-p2325"><span class="math display">\[
-\begin{array}{c} {E_{{\rm{SO}}}}(j) = \frac{{j(j + 1) - l(l + 1) - {3 \mathord{\left/ {\vphantom {3 4}} \right. \kern-1.2pt } 4}}}{2}{\beta _{nl}}\\ = \left\{ {\begin{array}{*{20}{c}} 0&amp;{,\;l = 0}\\ {\left\{ {\begin{array}{*{20}{c}} {\frac{l}{2}{\beta _{nl}},\;\;\;\;\;\;\;\;\;j = l + \frac{1}{2}}\\ { - \frac{{l + 1}}{2}{\beta _{nl}},\;\;j = l - \frac{1}{2}} \end{array}} \right.}&amp;{,\;l &gt; 0} \end{array}} \right. \end{array}
+\begin{aligned}
+{E_{{\rm{SO}}}}(j) &amp;= \frac{{j(j + 1) - l(l + 1) - {3 \mathord{\left/ {\vphantom {3 4}} \right. \kern-1.2pt } 4}}}{2}{\beta _{nl}} \\
+&amp;= \left\{ {\begin{array}{*{20}{c}} 0&amp;{,\;l = 0}\\ {\left\{ {\begin{array}{*{20}{c}} {\frac{l}{2}{\beta _{nl}},\;\;\;\;\;\;\;\;\;j = l + \frac{1}{2}}\\ { - \frac{{l + 1}}{2}{\beta _{nl}},\;\;j = l - \frac{1}{2}} \end{array}} \right.}&amp;{,\;l &gt; 0} \end{array}} \right.
+\end{aligned}
 \tag{10.3}\]</span></span></p>
 <p>There is a tempting algebraic observation. In the <span class="math inline">\(j=l+1/2\)</span> branch, a factor of <span class="math inline">\(l\)</span> cancels between the prefactor and <span class="math inline">\(\beta_{nl}\)</span>. If we then formally set <span class="math inline">\(l=0\)</span>, we obtain the expression below. But remember the restriction: the formula for <span class="math inline">\(\beta_{nl}\)</span> was derived for <span class="math inline">\(l&gt;0\)</span>. This substitution is not a valid derivation at <span class="math inline">\(l=0\)</span>.</p>
 <p><span id="eq-ch10-p2327"><span class="math display">\[
@@ -304,16 +307,27 @@ window.Quarto = {
 \tag{10.7}\]</span></span></p>
 <p>The nuclear magnetic moment interacts with this field. Its energy gives the Fermi contact Hamiltonian:</p>
 <p><span id="eq-zeqnnum480315"><span class="math display">\[
-\begin{array}{c} {{\hat H}_{{\rm{NS}}}}(l = 0) = - {{{\bf{\hat \mu }}}_I} \cdot {{{\bf{\hat B}}}_{\rm{e}}} = {g_I}{\mu _{\rm{B}}}\frac{{{\bf{\hat I}}}}{\hbar } \cdot \left[ { - \frac{2}{3}{\mu _0}{g_S}{\mu _B}\frac{{{\bf{\hat S}}}}{\hbar }\frac{1}{\pi }{{\left( {\frac{Z}{{n{a_0}}}} \right)}^3}} \right]\\ = {g_I}\mu _{\rm{B}}^2\frac{{4{\mu _0}}}{{3\pi }}{\left( {\frac{Z}{{{a_0}n}}} \right)^3}\frac{{{\bf{\hat I}} \cdot {\bf{\hat S}}}}{{{\hbar ^2}}}\\ = \frac{{8{g_I}{Z^3}{\alpha ^2}}}{{3{n^3}}}{E_{\rm{H}}}\frac{{{\bf{\hat I}} \cdot {\bf{\hat S}}}}{{{\hbar ^2}}} \end{array}
+\begin{aligned}
+{{\hat H}_{{\rm{NS}}}}(l &amp;= 0) = - {{{\bf{\hat \mu }}}_I} \cdot {{{\bf{\hat B}}}_{\rm{e}}} = {g_I}{\mu _{\rm{B}}}\frac{{{\bf{\hat I}}}}{\hbar } \cdot \left[ { - \frac{2}{3}{\mu _0}{g_S}{\mu _B}\frac{{{\bf{\hat S}}}}{\hbar }\frac{1}{\pi }{{\left( {\frac{Z}{{n{a_0}}}} \right)}^3}} \right] \\
+&amp;= {g_I}\mu _{\rm{B}}^2\frac{{4{\mu _0}}}{{3\pi }}{\left( {\frac{Z}{{{a_0}n}}} \right)^3}\frac{{{\bf{\hat I}} \cdot {\bf{\hat S}}}}{{{\hbar ^2}}} \\
+&amp;= \frac{{8{g_I}{Z^3}{\alpha ^2}}}{{3{n^3}}}{E_{\rm{H}}}\frac{{{\bf{\hat I}} \cdot {\bf{\hat S}}}}{{{\hbar ^2}}}
+\end{aligned}
 \tag{10.8}\]</span></span></p>
 <p><strong>An unfinished argument: why the magnetic analogy fails.</strong> The source notes next try to obtain the Darwin term from the electron’s own magnetic field. That argument is incorrect, and its final expression also lacks a factor of <span class="math inline">\(Z\)</span> compared with the Darwin correction. The Darwin term comes from the relativistic treatment of the Coulomb potential. Keep this limitation in mind as you read the retained steps below.</p>
 <p>The attempted analogy replaces the nuclear moment <span class="math inline">\(\mathbf{\hat\mu}_I\)</span> in <a href="#eq-zeqnnum480315" class="quarto-xref">Equation&nbsp;<span>10.8</span></a> with the electron moment <span class="math inline">\(\mathbf{\hat\mu}_S\)</span>. It would assign the electron the following energy in its own field:</p>
 <p><span id="eq-ch10-p2341"><span class="math display">\[
-\begin{array}{c} {{\hat H}_{{\rm{SS}}}}(l = 0) = - {{{\bf{\hat \mu }}}_S} \cdot {{{\bf{\hat B}}}_{\rm{e}}} = - {{{\bf{\hat \mu }}}_S} \cdot \frac{2}{3}{\mu _0}{\bf{M}}\\ = - \frac{2}{3}{\mu _0}{\bf{\mu }}_S^2{\left\vert  {{\psi _{n,l = 0}}(r = 0)} \right\vert ^2} = - \frac{{8{g_S}{Z^3}{\alpha ^2}}}{{3{n^3}}}{E_{\rm{H}}}\frac{{{{{\bf{\hat S}}}^2}}}{{{\hbar ^2}}}\\ = - \frac{{4{Z^3}{\alpha ^2}}}{{{n^3}}}{E_{\rm{H}}} \end{array}
+\begin{aligned}
+{{\hat H}_{{\rm{SS}}}}(l &amp;= 0) = - {{{\bf{\hat \mu }}}_S} \cdot {{{\bf{\hat B}}}_{\rm{e}}} = - {{{\bf{\hat \mu }}}_S} \cdot \frac{2}{3}{\mu _0}{\bf{M}} \\
+&amp;= - \frac{2}{3}{\mu _0}{\bf{\mu }}_S^2{\left\vert  {{\psi _{n,l = 0}}(r = 0)} \right\vert ^2} = - \frac{{8{g_S}{Z^3}{\alpha ^2}}}{{3{n^3}}}{E_{\rm{H}}}\frac{{{{{\bf{\hat S}}}^2}}}{{{\hbar ^2}}} \\
+&amp;= - \frac{{4{Z^3}{\alpha ^2}}}{{{n^3}}}{E_{\rm{H}}}
+\end{aligned}
 \tag{10.9}\]</span></span></p>
 <p>There is already a mismatch in this picture. The moment <span class="math inline">\(\mathbf{\hat\mu}_S\)</span> represents a point electron, while <span class="math inline">\(\mathbf{\hat B}_{\mathrm e}\)</span> comes from a spatially distributed magnetization. The notes then try a classical self-energy calculation for a uniformly magnetized sphere instead:</p>
 <p><span id="eq-ch10-p2343"><span class="math display">\[
-\begin{array}{c} {H_{SS}} = \frac{{{\mu _{0}}}}{6}{{\bf{M}}^2}V = \frac{2}{3}{\mu _0}{\bf{M}} \cdot \frac{1}{4}{\bf{M}}V = = \frac{2}{3}{\mu _0}{\bf{M}} \cdot \frac{{{{\bf{\mu }}_S}}}{4}\\ = \frac{{{Z^3}{\alpha ^2}}}{{{n^3}}}{E_{\rm{H}}} = \frac{{Z{\alpha ^2}}}{n}\left\vert  {E_n^{(0)}} \right\vert  \end{array}
+\begin{aligned}
+{H_{SS}} &amp;= \frac{{{\mu _{0}}}}{6}{{\bf{M}}^2}V = \frac{2}{3}{\mu _0}{\bf{M}} \cdot \frac{1}{4}{\bf{M}}V = = \frac{2}{3}{\mu _0}{\bf{M}} \cdot \frac{{{{\bf{\mu }}_S}}}{4} \\
+&amp;= \frac{{{Z^3}{\alpha ^2}}}{{{n^3}}}{E_{\rm{H}}} = \frac{{Z{\alpha ^2}}}{n}\left\vert  {E_n^{(0)}} \right\vert
+\end{aligned}
 \tag{10.10}\]</span></span></p>
 <p>This result does not establish the Darwin term. In particular, its <span class="math inline">\(Z\)</span> dependence differs from the correction discussed above. The retained calculation shows where the analogy leads, but a derivation of the Darwin term needs the relativistic Coulomb treatment.</p>
 

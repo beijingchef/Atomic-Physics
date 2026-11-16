@@ -45,7 +45,12 @@ $$ {#eq-zeqnnum971789}
 We call $F(x)$ and $\widetilde F(k)$ a Fourier-transform pair. Substitute @eq-zeqnnum971789 into @eq-zeqnnum712670:
 
 $$
-\begin{array}{c} F\left( {x'} \right) = \frac{1}{{\sqrt {2\pi } }}\int {dk\;\widetilde F\left( k \right)\exp \left( {ikx'} \right)} \\ = \frac{1}{{\sqrt {2\pi } }}\int {dk\;\left[ {\frac{1}{{\sqrt {2\pi } }}\int\limits_{{\rm{ - }}\infty }^\infty {dx\;F\left( x \right)\exp \left( { - ikx} \right)} } \right]\exp \left( {ikx'} \right)} \\ = \int {dx\left\{ {\frac{1}{{2\pi }}\int {dk\exp \left[ {ik\left( {x' - x} \right)} \right]} } \right\}F\left( x \right)} \\ = \int {dx\left\{ {\frac{1}{{2\pi }}\int {dk\exp \left[ {ik\left( {x - x'} \right)} \right]} } \right\}F\left( x \right)} \end{array}
+\begin{aligned}
+F\left( {x'} \right) &= \frac{1}{{\sqrt {2\pi } }}\int {dk\;\widetilde F\left( k \right)\exp \left( {ikx'} \right)} \\
+ &= \frac{1}{{\sqrt {2\pi } }}\int {dk\;\left[ {\frac{1}{{\sqrt {2\pi } }}\int\limits_{{\rm{ - }}\infty }^\infty {dx\;F\left( x \right)\exp \left( { - ikx} \right)} } \right]\exp \left( {ikx'} \right)} \\
+ &= \int {dx\left\{ {\frac{1}{{2\pi }}\int {dk\exp \left[ {ik\left( {x' - x} \right)} \right]} } \right\}F\left( x \right)} \\
+ &= \int {dx\left\{ {\frac{1}{{2\pi }}\int {dk\exp \left[ {ik\left( {x - x'} \right)} \right]} } \right\}F\left( x \right)}
+\end{aligned}
 $$ {#eq-zeqnnum832633}
 
 The expression in braces must pick out $F(x')$. Compare it with @eq-zeqnnum269859 to identify
@@ -230,7 +235,11 @@ $$ {#eq-ch07-p1654}
 Therefore,
 
 $$
-\begin{array}{c} V(\hat X)\left\vert  x \right\rangle = V\left( 0 \right)\hat I\left\vert  x \right\rangle + V'\left( 0 \right)\hat X\left\vert  x \right\rangle + \frac{{V''\left( 0 \right)}}{{2!}}{{\hat X}^2}\left\vert  x \right\rangle + \cdots \\ = \left\{ {V\left( 0 \right) + V'\left( 0 \right)x + \frac{{V''\left( 0 \right)}}{{2!}}{x^2} + \cdots } \right\}\left\vert  x \right\rangle \\ = V(x)\left\vert  x \right\rangle \end{array}
+\begin{aligned}
+V(\hat X)\left\vert  x \right\rangle &= V\left( 0 \right)\hat I\left\vert  x \right\rangle + V'\left( 0 \right)\hat X\left\vert  x \right\rangle + \frac{{V''\left( 0 \right)}}{{2!}}{{\hat X}^2}\left\vert  x \right\rangle + \cdots \\
+ &= \left\{ {V\left( 0 \right) + V'\left( 0 \right)x + \frac{{V''\left( 0 \right)}}{{2!}}{x^2} + \cdots } \right\}\left\vert  x \right\rangle \\
+ &= V(x)\left\vert  x \right\rangle
+\end{aligned}
 $$ {#eq-ch07-p1656}
 
 Keep track of the distinction: $V(\hat X)$ is an operator, while $V(x)$ is its numerical eigenvalue in the state $\vert x\rangle$.
@@ -494,7 +503,10 @@ We can check this result directly. Use @eq-zeqnnum707152 and @eq-zeqnnum578039 t
 **Proof.** Choose any wavefunction $\psi(x)$ and let the commutator act on it:
 
 $$
-\begin{array}{c} \hat X{{\hat P}_x}\left\vert  \psi \right\rangle \buildrel\textstyle.\over= x\left( { - i\hbar \frac{\partial }{{\partial x}}} \right)\psi \left( x \right) = - i\hbar x\frac{\partial }{{\partial x}}\psi \left( x \right)\\ {{\hat P}_x}\hat X\left\vert  \psi \right\rangle \buildrel\textstyle.\over= - i\hbar \frac{\partial }{{\partial x}}x\;\psi \left( x \right) = - i\hbar \frac{\partial }{{\partial x}}\left[ {x\psi \left( x \right)} \right] = - i\hbar \left[ {\psi \left( x \right) + x\frac{\partial }{{\partial x}}\psi \left( x \right)} \right] \end{array}
+\begin{aligned}
+\hat X{{\hat P}_x}\left\vert  \psi \right\rangle &\buildrel\textstyle.\over= x\left( { - i\hbar \frac{\partial }{{\partial x}}} \right)\psi \left( x \right) = - i\hbar x\frac{\partial }{{\partial x}}\psi \left( x \right) \\
+{{\hat P}_x}\hat X\left\vert  \psi \right\rangle &\buildrel\textstyle.\over= - i\hbar \frac{\partial }{{\partial x}}x\;\psi \left( x \right) = - i\hbar \frac{\partial }{{\partial x}}\left[ {x\psi \left( x \right)} \right] = - i\hbar \left[ {\psi \left( x \right) + x\frac{\partial }{{\partial x}}\psi \left( x \right)} \right]
+\end{aligned}
 $$ {#eq-ch07-p1749}
 
 $$
@@ -568,13 +580,19 @@ This density is the same everywhere. Its integral over all space diverges, so we
 We now have the link between the two bases. To turn a momentum wavefunction into a position wavefunction, insert the momentum completeness relation. To go the other way, insert the position relation:
 
 $$
-\begin{array}{l} \psi (x) \equiv \left\langle {x} \mathrel{\left \vert  {\vphantom {x \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \int {dp\left\langle {x} \mathrel{\left \vert  {\vphantom {x p}} \right. \kern-1.2pt } {p} \right\rangle \left\langle {p} \mathrel{\left \vert  {\vphantom {p \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \\ \tilde \psi (p) \equiv \left\langle {p} \mathrel{\left \vert  {\vphantom {p \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \int {dx\left\langle {p} \mathrel{\left \vert  {\vphantom {p x}} \right. \kern-1.2pt } {x} \right\rangle \left\langle {x} \mathrel{\left \vert  {\vphantom {x \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \end{array}
+\begin{aligned}
+\psi (x) \equiv \left\langle {x} \mathrel{\left \vert  {\vphantom {x \psi }} \right. \kern-1.2pt } {\psi } \right\rangle &= \int {dp\left\langle {x} \mathrel{\left \vert  {\vphantom {x p}} \right. \kern-1.2pt } {p} \right\rangle \left\langle {p} \mathrel{\left \vert  {\vphantom {p \psi }} \right. \kern-1.2pt } {\psi } \right\rangle } \\
+\tilde \psi (p) \equiv \left\langle {p} \mathrel{\left \vert  {\vphantom {p \psi }} \right. \kern-1.2pt } {\psi } \right\rangle &= \int {dx\left\langle {p} \mathrel{\left \vert  {\vphantom {p x}} \right. \kern-1.2pt } {x} \right\rangle \left\langle {x} \mathrel{\left \vert  {\vphantom {x \psi }} \right. \kern-1.2pt } {\psi } \right\rangle }
+\end{aligned}
 $$ {#eq-ch07-p1775}
 
 Substitute @eq-zeqnnum192350:
 
 $$
-\begin{array}{l} \psi \left( x \right) = \frac{1}{N}\int {dp\exp \left( {\frac{{ipx}}{\hbar }} \right)\widetilde \psi \left( p \right)} \\ \widetilde \psi \left( p \right) = \frac{1}{N}\int {dx\exp \left( { - \frac{{ipx}}{\hbar }} \right)\psi \left( x \right)} \end{array}
+\begin{aligned}
+\psi \left( x \right) &= \frac{1}{N}\int {dp\exp \left( {\frac{{ipx}}{\hbar }} \right)\widetilde \psi \left( p \right)} \\
+\widetilde \psi \left( p \right) &= \frac{1}{N}\int {dx\exp \left( { - \frac{{ipx}}{\hbar }} \right)\psi \left( x \right)}
+\end{aligned}
 $$ {#eq-zeqnnum128349}
 
 The two wavefunctions form a **Fourier-transform pair**. One describes the distribution of positions; the other describes the distribution of momenta in the same state.
@@ -582,7 +600,12 @@ The two wavefunctions form a **Fourier-transform pair**. One describes the distr
 Using @eq-zeqnnum128349, we also obtain the momentum-space form of position:
 
 $$
-\begin{array}{c} \left\langle p \right\vert \hat X\left\vert  \psi \right\rangle = \int {dx\langle p\vert x\rangle \langle x\vert {\hat X}\vert \psi\rangle } \\ = \frac{1}{N}\int {dx\exp \left( { - i\frac{{px}}{\hbar }} \right)x\psi (x)} \\ = i\hbar \frac{\partial }{{\partial p}}\left[ {\frac{1}{N}\int {dx\exp \left( { - i\frac{{px}}{\hbar }} \right)\psi (x)} } \right]\\ = i\hbar \frac{\partial }{{\partial p}}\widetilde \psi \left( p \right) \end{array}
+\begin{aligned}
+\left\langle p \right\vert \hat X\left\vert  \psi \right\rangle &= \int {dx\langle p\vert x\rangle \langle x\vert {\hat X}\vert \psi\rangle } \\
+ &= \frac{1}{N}\int {dx\exp \left( { - i\frac{{px}}{\hbar }} \right)x\psi (x)} \\
+ &= i\hbar \frac{\partial }{{\partial p}}\left[ {\frac{1}{N}\int {dx\exp \left( { - i\frac{{px}}{\hbar }} \right)\psi (x)} } \right] \\
+ &= i\hbar \frac{\partial }{{\partial p}}\widetilde \psi \left( p \right)
+\end{aligned}
 $$ {#eq-ch07-p1780}
 
 Thus the position operator in momentum space is
@@ -604,7 +627,10 @@ $$ {#eq-ch07-p1786}
 - **Position wavefunction**
 
 $$
-\begin{gathered} \vert \psi\rangle \xrightarrow{{\text{position representation}}}\left\langle {{\mathbf{r}}} \mathrel{\left \vert  {\vphantom {{\mathbf{r}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \equiv \left\langle {{x,y,z}} \mathrel{\left \vert  {\vphantom {{x,y,z} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \equiv \psi \left( {x,y,z} \right) \equiv \psi ({\mathbf{r}})  \\ \langle \psi\vert \xrightarrow{{\text{position representation}}}\left\langle {\psi } \mathrel{\left \vert  {\vphantom {\psi {\mathbf{r}}}} \right. \kern-1.2pt } {{\mathbf{r}}} \right\rangle = {\left\langle {{\mathbf{r}}} \mathrel{\left \vert  {\vphantom {{\mathbf{r}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle ^*} = {\psi ^*}({\mathbf{r}})  \\ \end{gathered}
+\begin{aligned}
+\vert \psi\rangle &\xrightarrow{{\text{position representation}}}\left\langle {{\mathbf{r}}} \mathrel{\left \vert  {\vphantom {{\mathbf{r}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \equiv \left\langle {{x,y,z}} \mathrel{\left \vert  {\vphantom {{x,y,z} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \equiv \psi \left( {x,y,z} \right) \equiv \psi ({\mathbf{r}}) \\
+\langle \psi\vert \xrightarrow{{\text{position representation}}}\left\langle {\psi } \mathrel{\left \vert  {\vphantom {\psi {\mathbf{r}}}} \right. \kern-1.2pt } {{\mathbf{r}}} \right\rangle &= {\left\langle {{\mathbf{r}}} \mathrel{\left \vert  {\vphantom {{\mathbf{r}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle ^*} = {\psi ^*}({\mathbf{r}})
+\end{aligned}
 $$ {#eq-ch07-p1788}
 
 - **Position probability density in state $\vert \psi \rangle$**
@@ -672,7 +698,10 @@ $$ {#eq-ch07-p1809}
 - **Hermiticity of an observable:** $\left\langle \phi \right\vert {\hat A}\left\vert  \psi \right\rangle = \left\langle \psi \right\vert {\hat A}{\left\vert  \phi \right\rangle ^*}$
 
 $$
-\begin{array}{c} \left\langle \phi \right\vert {\hat A}\left\vert  \psi \right\rangle = \int {d{r^3}\;{\phi ^*}{\rm{(}}{\bf{r}})\hat A\psi ({\bf{r}})} \\ \left\langle \psi \right\vert {\hat A}{\left\vert  \phi \right\rangle ^*} = {\left( {\int {d{r^3}\;{\psi ^{\rm{*}}}({\bf{r}})\hat A\phi {\rm{(}}{\bf{r}})} } \right)^{\rm{*}}} = \int {d{r^3}\psi ({\bf{r}})} \;{[\hat A\phi {\rm{(}}{\bf{r}})]^*} = \int {d{r^3}\;{{[\hat A\phi {\rm{(}}{\bf{r}})]}^*}\psi ({\bf{r}})} \end{array}
+\begin{aligned}
+\left\langle \phi \right\vert {\hat A}\left\vert  \psi \right\rangle &= \int {d{r^3}\;{\phi ^*}{\rm{(}}{\bf{r}})\hat A\psi ({\bf{r}})} \\
+\left\langle \psi \right\vert {\hat A}{\left\vert  \phi \right\rangle ^*} &= {\left( {\int {d{r^3}\;{\psi ^{\rm{*}}}({\bf{r}})\hat A\phi {\rm{(}}{\bf{r}})} } \right)^{\rm{*}}} = \int {d{r^3}\psi ({\bf{r}})} \;{[\hat A\phi {\rm{(}}{\bf{r}})]^*} = \int {d{r^3}\;{{[\hat A\phi {\rm{(}}{\bf{r}})]}^*}\psi ({\bf{r}})}
+\end{aligned}
 $$ {#eq-ch07-p1811}
 
 Therefore,
@@ -740,7 +769,10 @@ $$ {#eq-ch07-p1834}
 The walls fix $A$ and $B$. The wavefunction must vanish at both ends, so $\psi(0)=\psi(L)=0$:
 
 $$
-\begin{array}{l} \psi (0) = A\sin (0) + B\cos (0) = 0\\ \psi (L) = A\sin (kL) + B\cos (kL) = 0 \end{array}
+\begin{aligned}
+\psi (0) &= A\sin (0) + B\cos (0) = 0 \\
+\psi (L) &= A\sin (kL) + B\cos (kL) = 0
+\end{aligned}
 $$ {#eq-ch07-p1836}
 
 Therefore $B = 0$ and $\sin \left( {kL} \right) = 0$. The allowed values of $k$ are
@@ -812,7 +844,10 @@ $$ {#eq-ch07-p1862}
 The basic solutions are $e^{Kx}$ and $e^{-Kx}$. On each side, keep only the one that decays as we move away from the well:
 
 $$
-\begin{array}{l} \psi (x) = F\exp ( - Kx), & x \ge {L \mathord{\left/ {\vphantom {L 2}} \right. \kern-1.2pt } 2}\\ \psi (x) = G\exp (Kx), & x \le - {L \mathord{\left/ {\vphantom {L 2}} \right. \kern-1.2pt } 2} \end{array}
+\begin{aligned}
+\psi (x) &= F\exp ( - Kx), && x \ge {L \mathord{\left/ {\vphantom {L 2}} \right. \kern-1.2pt } 2} \\
+\psi (x) &= G\exp (Kx), && x \le - {L \mathord{\left/ {\vphantom {L 2}} \right. \kern-1.2pt } 2}
+\end{aligned}
 $$ {#eq-zeqnnum599486}
 
 At $x=\pm L/2$, match the interior solution @eq-zeqnnum258584 to the exterior solution @eq-zeqnnum599486. Both the wavefunction and its first derivative must join continuously. We will skip the algebra and focus on Figure 7.3.

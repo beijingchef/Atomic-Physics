@@ -149,7 +149,10 @@ $$ {#eq-zeqnnum925440}
 This solves the problem for a time-independent Hamiltonian. The rule is simple: expand the initial state in energy eigenstates, then multiply each component by its own phase factor. Compare the two expansions:
 
 $$
-\begin{array}{c} \left\vert  {\psi \left( 0 \right)} \right\rangle = \sum\limits_j {\left\vert  {{E_j}} \right\rangle \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle } \\ \left\vert  {\psi \left( t \right)} \right\rangle = \sum\limits_j {\left\vert  {{E_j}} \right\rangle \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle {e^{ - {{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}} \end{array}
+\begin{aligned}
+\left\vert  {\psi \left( 0 \right)} \right\rangle &= \sum\limits_j {\left\vert  {{E_j}} \right\rangle \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle } \\
+\left\vert  {\psi \left( t \right)} \right\rangle &= \sum\limits_j {\left\vert  {{E_j}} \right\rangle \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle {e^{ - {{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}}
+\end{aligned}
 $$ {#eq-zeqnnum160654}
 
 ### Stationary states
@@ -163,7 +166,10 @@ $$ {#eq-ch05-p1380}
 Then @eq-zeqnnum925440 becomes
 
 $$
-\begin{array}{c} \left\vert  {\psi (t)} \right\rangle = \sum\limits_j {\left\vert  {{E_j}} \right\rangle {\delta _{jm}}{e^{ - {{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}} = \left\vert  {{E_m}} \right\rangle {e^{ - {{i{E_m}t} \mathord{\left/ {\vphantom {{i{E_m}t} \hbar }} \right. \kern-1.2pt } \hbar }}}\\ = {e^{ - {{i{E_m}t} \mathord{\left/ {\vphantom {{i{E_m}t} \hbar }} \right. \kern-1.2pt } \hbar }}}\left\vert  {\psi (0)} \right\rangle \end{array}
+\begin{aligned}
+\left\vert  {\psi (t)} \right\rangle &= \sum\limits_j {\left\vert  {{E_j}} \right\rangle {\delta _{jm}}{e^{ - {{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}} = \left\vert  {{E_m}} \right\rangle {e^{ - {{i{E_m}t} \mathord{\left/ {\vphantom {{i{E_m}t} \hbar }} \right. \kern-1.2pt } \hbar }}} \\
+ &= {e^{ - {{i{E_m}t} \mathord{\left/ {\vphantom {{i{E_m}t} \hbar }} \right. \kern-1.2pt } \hbar }}}\left\vert  {\psi (0)} \right\rangle
+\end{aligned}
 $$ {#eq-ch05-p1382}
 
 Only an overall phase has changed. As we learned earlier, that phase does not change the physical state. We call an energy eigenstate of a time-independent Hamiltonian a **stationary state**. Its measurement probabilities stay the same, even though its ket acquires a time-dependent phase.
@@ -175,7 +181,10 @@ Once we know the state, we can calculate an observable's expectation value. For 
 Using @eq-zeqnnum739477 and @eq-zeqnnum160654, we get
 
 $$
-\begin{array}{c} \left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle = \sum\limits_{j,k} {{e^{{{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}\left\langle {{\psi (0)}} \mathrel{\left \vert  {\vphantom {{\psi (0)} {{E_j}}}} \right. \kern-1.2pt } {{{E_j}}} \right\rangle \left\langle {{E_j}} \right\vert \hat A\left\vert  {{E_k}} \right\rangle \left\langle {{{E_k}}} \mathrel{\left \vert  {\vphantom {{{E_k}} {\psi (0)}}} \right. \kern-1.2pt } {{\psi (0)}} \right\rangle {e^{{{ - i{E_k}t} \mathord{\left/ {\vphantom {{ - i{E_k}t} \hbar }} \right. \kern-1.2pt } \hbar }}}} \\ = \sum\limits_{j,k} {\left\langle {{\psi (0)}} \mathrel{\left \vert  {\vphantom {{\psi (0)} {{E_j}}}} \right. \kern-1.2pt } {{{E_j}}} \right\rangle \left\langle {{{E_k}}} \mathrel{\left \vert  {\vphantom {{{E_k}} {\psi (0)}}} \right. \kern-1.2pt } {{\psi (0)}} \right\rangle \left\langle {{E_j}} \right\vert \hat A\left\vert  {{E_k}} \right\rangle {e^{{{i\left( {{E_j} - {E_k}} \right)t} \mathord{\left/ {\vphantom {{i\left( {{E_j} - {E_k}} \right)t} \hbar }} \right. \kern-1.2pt } \hbar }}}} \end{array}
+\begin{aligned}
+\left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle &= \sum\limits_{j,k} {{e^{{{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}\left\langle {{\psi (0)}} \mathrel{\left \vert  {\vphantom {{\psi (0)} {{E_j}}}} \right. \kern-1.2pt } {{{E_j}}} \right\rangle \left\langle {{E_j}} \right\vert \hat A\left\vert  {{E_k}} \right\rangle \left\langle {{{E_k}}} \mathrel{\left \vert  {\vphantom {{{E_k}} {\psi (0)}}} \right. \kern-1.2pt } {{\psi (0)}} \right\rangle {e^{{{ - i{E_k}t} \mathord{\left/ {\vphantom {{ - i{E_k}t} \hbar }} \right. \kern-1.2pt } \hbar }}}} \\
+ &= \sum\limits_{j,k} {\left\langle {{\psi (0)}} \mathrel{\left \vert  {\vphantom {{\psi (0)} {{E_j}}}} \right. \kern-1.2pt } {{{E_j}}} \right\rangle \left\langle {{{E_k}}} \mathrel{\left \vert  {\vphantom {{{E_k}} {\psi (0)}}} \right. \kern-1.2pt } {{\psi (0)}} \right\rangle \left\langle {{E_j}} \right\vert \hat A\left\vert  {{E_k}} \right\rangle {e^{{{i\left( {{E_j} - {E_k}} \right)t} \mathord{\left/ {\vphantom {{i\left( {{E_j} - {E_k}} \right)t} \hbar }} \right. \kern-1.2pt } \hbar }}}}
+\end{aligned}
 $$ {#eq-zeqnnum188299}
 
 Look at the phase factor at the end of each term. At $t=0$, it is one, and the expression gives the initial expectation value. As time passes, components with different energies acquire different phases. These relative phases can make the expectation value oscillate.
@@ -199,7 +208,10 @@ $$ {#eq-ch05-p1393}
 Therefore,
 
 $$
-\begin{array}{c} \frac{\partial }{{\partial t}}\left(\left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle\right) = \left( {\frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right\vert } \right)\hat A\left\vert  {\psi \left( t \right)} \right\rangle + \left\langle {\psi \left( t \right)} \right\vert \hat A \left(\frac{\partial }{{\partial t}}\left\vert  {\psi \left( t \right)} \right\rangle \right) \\ = \frac{{ - 1}}{{i\hbar }}\left\langle {\psi \left( t \right)} \right\vert \hat H\hat A\left\vert  {\psi \left( t \right)} \right\rangle + \frac{1}{{i\hbar }}\left\langle {\psi \left( t \right)} \right\vert \hat A\hat H\left\vert  {\psi \left( t \right)} \right\rangle \end{array}
+\begin{aligned}
+\frac{\partial }{{\partial t}}\left(\left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle\right) &= \left( {\frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right\vert } \right)\hat A\left\vert  {\psi \left( t \right)} \right\rangle + \left\langle {\psi \left( t \right)} \right\vert \hat A \left(\frac{\partial }{{\partial t}}\left\vert  {\psi \left( t \right)} \right\rangle \right) \\
+ &= \frac{{ - 1}}{{i\hbar }}\left\langle {\psi \left( t \right)} \right\vert \hat H\hat A\left\vert  {\psi \left( t \right)} \right\rangle + \frac{1}{{i\hbar }}\left\langle {\psi \left( t \right)} \right\vert \hat A\hat H\left\vert  {\psi \left( t \right)} \right\rangle
+\end{aligned}
 $$ {#eq-zeqnnum471083}
 
 Multiply by $i\hbar$ to obtain

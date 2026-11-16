@@ -182,7 +182,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06-transitions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Transitions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -265,15 +265,27 @@ window.Quarto = {
 <h2 data-number="11.1" class="anchored" data-anchor-id="comparing-three-infinitesimal-operators-time-evolution-translation-and-rotation"><span class="header-section-number">11.1</span> Comparing Three Infinitesimal Operators: Time Evolution, Translation, and Rotation</h2>
 <p>Infinitesimal time evolution and energy: energy (interactions) generates time evolution.</p>
 <p><span id="eq-zeqnnum507946"><span class="math display">\[
-\begin{array}{l} \hat U\left( {dt} \right) = \hat I - i\frac{{\hat H}}{\hbar }dt\\ \hat U\left( {dt} \right)\left\vert  {\psi \left( t \right)} \right\rangle = \left\vert  {\psi \left( {t + dt} \right)} \right\rangle \\ \hat H\left\vert  {\psi \left( t \right)} \right\rangle = i\hbar \frac{\partial }{{\partial t}}\left\vert  {\psi \left( t \right)} \right\rangle \end{array}
+\begin{aligned}
+\hat U\left( {dt} \right) &amp;= \hat I - i\frac{{\hat H}}{\hbar }dt \\
+\hat U\left( {dt} \right)\left\vert  {\psi \left( t \right)} \right\rangle &amp;= \left\vert  {\psi \left( {t + dt} \right)} \right\rangle \\
+\hat H\left\vert  {\psi \left( t \right)} \right\rangle &amp;= i\hbar \frac{\partial }{{\partial t}}\left\vert  {\psi \left( t \right)} \right\rangle
+\end{aligned}
 \tag{11.1}\]</span></span></p>
 <p>Infinitesimal spatial translation and momentum: momentum generates translations.</p>
 <p><span id="eq-zeqnnum118491"><span class="math display">\[
-\begin{array}{l} \hat \Gamma \left( {dx} \right) = \hat I - i\frac{{\hat P}}{\hbar }dx\\ \hat \Gamma \left( {dx} \right)\left\vert  x \right\rangle = \left\vert  {x + dx} \right\rangle \\ \left\langle x \right\vert \hat P\left\vert  \psi \right\rangle = - i\hbar \frac{\partial }{{\partial x}}\left\langle {x} \mathrel{\left \vert  {\vphantom {x \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \end{array}
+\begin{aligned}
+\hat \Gamma \left( {dx} \right) &amp;= \hat I - i\frac{{\hat P}}{\hbar }dx \\
+\hat \Gamma \left( {dx} \right)\left\vert  x \right\rangle &amp;= \left\vert  {x + dx} \right\rangle \\
+\left\langle x \right\vert \hat P\left\vert  \psi \right\rangle &amp;= - i\hbar \frac{\partial }{{\partial x}}\left\langle {x} \mathrel{\left \vert  {\vphantom {x \psi }} \right. \kern-1.2pt } {\psi } \right\rangle
+\end{aligned}
 \tag{11.2}\]</span></span></p>
 <p>Infinitesimal spatial rotation and orbital angular momentum: angular momentum generates rotations.</p>
 <p><span id="eq-zeqnnum858885"><span class="math display">\[
-\begin{array}{l} \hat D\left( {{\bf{z}},d\phi } \right) = \hat I - i\frac{{{{\hat L}_z}}}{\hbar }d\phi \\ \hat D\left( {{\bf{z}},d\phi } \right)\left\vert  {r,\theta ,\phi } \right\rangle = \left\vert  {r,\theta ,\phi + d\phi } \right\rangle \\ \left\langle {\bf{x}} \right\vert {{\hat L}_z}\left\vert  \psi \right\rangle = - i\hbar \frac{\partial }{{\partial \phi }}\left\langle {{\bf{x}}} \mathrel{\left \vert  {\vphantom {{\bf{x}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \end{array}
+\begin{aligned}
+\hat D\left( {{\bf{z}},d\phi } \right) &amp;= \hat I - i\frac{{{{\hat L}_z}}}{\hbar }d\phi \\
+\hat D\left( {{\bf{z}},d\phi } \right)\left\vert  {r,\theta ,\phi } \right\rangle &amp;= \left\vert  {r,\theta ,\phi + d\phi } \right\rangle \\
+\left\langle {\bf{x}} \right\vert {{\hat L}_z}\left\vert  \psi \right\rangle &amp;= - i\hbar \frac{\partial }{{\partial \phi }}\left\langle {{\bf{x}}} \mathrel{\left \vert  {\vphantom {{\bf{x}} \psi }} \right. \kern-1.2pt } {\psi } \right\rangle
+\end{aligned}
 \tag{11.3}\]</span></span></p>
 <p>Here <span class="math inline">\(\left\vert  {\bf{x}} \right\rangle \equiv \left\vert  {x,y,z} \right\rangle \equiv \left\vert  {r,\theta ,\phi } \right\rangle\)</span>.</p>
 <p>The derivations are similar. Why does <span class="math inline">\(i\hbar\)</span> have a positive sign in the energy expression, while <span class="math inline">\(i\hbar\)</span> has a negative sign in the momentum and angular-momentum expressions?</p>
@@ -284,14 +296,20 @@ window.Quarto = {
 <p>Two examples illustrate qualitatively how matrices in a discrete representation become operators and wavefunctions in a continuous representation.</p>
 <p>Formally, we may write a quantum state <span class="math inline">\(\left\vert  \psi \right\rangle\)</span> as a column matrix in the continuous position representation:</p>
 <p><span id="eq-ch11-p2366"><span class="math display">\[
-\begin{array}{c} \left\vert  \psi \right\rangle \buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} \vdots \\ {\psi (x - \delta x)}\\ {\psi (x)}\\ {\psi (x + \delta x)}\\ \vdots \end{array}} \right)\sqrt {\delta x} {\rm{,}} &amp; \\ \left\langle \psi \right\vert  \buildrel\textstyle.\over= \sqrt {\delta x} \left( {\begin{array}{*{20}{c}} \cdots &amp;{{\psi ^*}(x - \delta x)}&amp;{{\psi ^*}(x)}&amp;{{\psi ^*}(x + \delta x)}&amp; \cdots \end{array}} \right) \end{array}
+\begin{aligned}
+\left\vert  \psi \right\rangle &amp;\buildrel\textstyle.\over= \left( {\begin{array}{*{20}{c}} \vdots \\ {\psi (x - \delta x)}\\ {\psi (x)}\\ {\psi (x + \delta x)}\\ \vdots \end{array}} \right)\sqrt {\delta x} {\rm{,}} \\
+\left\langle \psi \right\vert &amp;\buildrel\textstyle.\over= \sqrt {\delta x} \left( {\begin{array}{*{20}{c}} \cdots &amp;{{\psi ^*}(x - \delta x)}&amp;{{\psi ^*}(x)}&amp;{{\psi ^*}(x + \delta x)}&amp; \cdots \end{array}} \right)
+\end{aligned}
 \tag{11.4}\]</span></span></p>
 <p><span id="eq-ch11-p2367"><span class="math display">\[
 \left\langle {\psi } \mathrel{\left \vert  {\vphantom {\psi \psi }} \right. \kern-1.2pt } {\psi } \right\rangle = \mathop {\lim }\limits_{\delta x \to 0} \sum\limits_{n = - \infty }^\infty {{{\left\vert  {\psi (x + n\delta x)} \right\vert }^2}\delta x} = \int\limits_{ - \infty }^\infty {{{\left\vert  {\psi (x)} \right\vert }^2}dx} = 1
 \tag{11.5}\]</span></span></p>
 <p>We can also express momentum as an infinite-dimensional continuous matrix:</p>
 <p><span id="eq-ch11-p2369"><span class="math display">\[
-\begin{array}{c} - i\hbar \left( {\begin{array}{*{20}{c}} {}&amp;{}&amp;{}&amp;{}&amp;{}&amp;{}\\ {}&amp; \ddots &amp;{}&amp;{}&amp;{}&amp;{}\\ \cdots &amp;{ - \frac{1}{{2\delta x}}}&amp;0&amp;{\frac{1}{{2\delta x}}}&amp;0&amp; \cdots \\ \cdots &amp;0&amp;{ - \frac{1}{{2\delta x}}}&amp;0&amp;{\frac{1}{{2\delta x}}}&amp; \cdots \\ {}&amp;{}&amp;{}&amp;{}&amp; \ddots &amp;{}\\ {}&amp;{}&amp;{}&amp;{}&amp;{}&amp;{} \end{array}} \right)\left( {\begin{array}{*{20}{c}} \vdots \\ {\psi (x - \delta x)}\\ {\psi (x)}\\ {\psi (x + \delta x)}\\ {\psi (x + 2\delta x)}\\ \vdots \end{array}} \right)\\ = - i\hbar \left( {\begin{array}{*{20}{c}} \vdots \\ {\frac{{\psi (x + \delta x) - \psi (x - \delta x)}}{{2\delta x}}}\\ {\frac{{\psi (x + 2\delta x) - \psi (x)}}{{2\delta x}}}\\ \vdots \end{array}} \right) = - i\hbar \left( {\begin{array}{*{20}{c}} \vdots \\ {{{\left. {\frac{{d\psi }}{{dx}}} \right\vert }_x}}\\ {{{\left. {\frac{{d\psi }}{{dx}}} \right\vert }_{x + \delta x}}}\\ \vdots \end{array}} \right) = - i\hbar \frac{d}{{dx}}\psi (x) \end{array}
+\begin{aligned}
+&amp;- i\hbar \left( {\begin{array}{*{20}{c}} {}&amp;{}&amp;{}&amp;{}&amp;{}&amp;{}\\ {}&amp; \ddots &amp;{}&amp;{}&amp;{}&amp;{}\\ \cdots &amp;{ - \frac{1}{{2\delta x}}}&amp;0&amp;{\frac{1}{{2\delta x}}}&amp;0&amp; \cdots \\ \cdots &amp;0&amp;{ - \frac{1}{{2\delta x}}}&amp;0&amp;{\frac{1}{{2\delta x}}}&amp; \cdots \\ {}&amp;{}&amp;{}&amp;{}&amp; \ddots &amp;{}\\ {}&amp;{}&amp;{}&amp;{}&amp;{}&amp;{} \end{array}} \right)\left( {\begin{array}{*{20}{c}} \vdots \\ {\psi (x - \delta x)}\\ {\psi (x)}\\ {\psi (x + \delta x)}\\ {\psi (x + 2\delta x)}\\ \vdots \end{array}} \right) \\
+&amp;= - i\hbar \left( {\begin{array}{*{20}{c}} \vdots \\ {\frac{{\psi (x + \delta x) - \psi (x - \delta x)}}{{2\delta x}}}\\ {\frac{{\psi (x + 2\delta x) - \psi (x)}}{{2\delta x}}}\\ \vdots \end{array}} \right) = - i\hbar \left( {\begin{array}{*{20}{c}} \vdots \\ {{{\left. {\frac{{d\psi }}{{dx}}} \right\vert }_x}}\\ {{{\left. {\frac{{d\psi }}{{dx}}} \right\vert }_{x + \delta x}}}\\ \vdots \end{array}} \right) = - i\hbar \frac{d}{{dx}}\psi (x)
+\end{aligned}
 \tag{11.6}\]</span></span></p>
 </section>
 <section id="properties-of-pauli-operators" class="level2" data-number="11.3">
@@ -350,7 +368,10 @@ window.Quarto = {
 \frac{d}{{dt}}{\hat A_{\rm{H}}} = \frac{1}{{i\hbar }}[{\hat A_{\rm{H}}},\hat H]
 \tag{11.18}\]</span></span></p>
 <p><span id="eq-ch11-p2398"><span class="math display">\[
-\begin{array}{c} \left\langle {{E_j}} \right\vert {{{\hat A}_{\rm{H}}}}(t)\left\vert  {{E_k}} \right\rangle = \left\langle {{E_j}} \right\vert {{U^\dagger }(t){{\hat A}_{\rm{S}}}U(t)}\left\vert  {{E_k}} \right\rangle \\ = \exp \left[ {\frac{{i({E_j} - {E_k})}}{\hbar }} \right]\left\langle {{E_j}} \right\vert {{{\hat A}_{\rm{H}}}(0)}\left\vert  {{E_k}} \right\rangle \end{array}
+\begin{aligned}
+\left\langle {{E_j}} \right\vert {{{\hat A}_{\rm{H}}}}(t)\left\vert  {{E_k}} \right\rangle &amp;= \left\langle {{E_j}} \right\vert {{U^\dagger }(t){{\hat A}_{\rm{S}}}U(t)}\left\vert  {{E_k}} \right\rangle \\
+&amp;= \exp \left[ {\frac{{i({E_j} - {E_k})}}{\hbar }} \right]\left\langle {{E_j}} \right\vert {{{\hat A}_{\rm{H}}}(0)}\left\vert  {{E_k}} \right\rangle
+\end{aligned}
 \tag{11.19}\]</span></span></p>
 
 

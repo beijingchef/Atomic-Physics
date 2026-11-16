@@ -182,7 +182,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06-transitions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Transitions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -279,7 +279,11 @@ window.Quarto = {
 \tag{8.1}\]</span></span></p>
 <p>The three component operators in the position representation are</p>
 <p><span id="eq-zeqnnum826605"><span class="math display">\[
-\begin{array}{l} {{\hat L}_x} = \hat Y{{\hat P}_z} - \hat Z{{\hat P}_y} \buildrel\textstyle.\over= - i\hbar \left( {y\frac{\partial }{{\partial z}} - z\frac{\partial }{{\partial y}}} \right)\\ {{\hat L}_y} = \hat Z{{\hat P}_x} - \hat X{{\hat P}_z} \buildrel\textstyle.\over= - i\hbar \left( {z\frac{\partial }{{\partial x}} - x\frac{\partial }{{\partial z}}} \right)\;\;\\ {{\hat L}_z} = \hat X{{\hat P}_y} - \hat Y{{\hat P}_x} \buildrel\textstyle.\over= - i\hbar \left( {x\frac{\partial }{{\partial y}} - y\frac{\partial }{{\partial x}}} \right) \end{array}
+\begin{aligned}
+{{\hat L}_x} &amp;= \hat Y{{\hat P}_z} - \hat Z{{\hat P}_y} \buildrel\textstyle.\over= - i\hbar \left( {y\frac{\partial }{{\partial z}} - z\frac{\partial }{{\partial y}}} \right) \\
+{{\hat L}_y} &amp;= \hat Z{{\hat P}_x} - \hat X{{\hat P}_z} \buildrel\textstyle.\over= - i\hbar \left( {z\frac{\partial }{{\partial x}} - x\frac{\partial }{{\partial z}}} \right)\;\; \\
+{{\hat L}_z} &amp;= \hat X{{\hat P}_y} - \hat Y{{\hat P}_x} \buildrel\textstyle.\over= - i\hbar \left( {x\frac{\partial }{{\partial y}} - y\frac{\partial }{{\partial x}}} \right)
+\end{aligned}
 \tag{8.2}\]</span></span></p>
 <p>Let these operators act on a test wavefunction <span class="math inline">\(\psi(x,y,z)\)</span>. Alternatively, use the position–momentum commutator <a href="07-continuous-observables.html#eq-zeqnnum944007" class="quarto-xref">Equation&nbsp;<span>7.73</span></a>. Either route gives</p>
 <p><span id="eq-ch08-p1901"><span class="math display">\[
@@ -382,7 +386,10 @@ b{\hbar ^2} = {m^2}{\hbar ^2} + \frac{1}{2}\left\langle {b,m} \right\vert {\hat 
 \tag{8.27}\]</span></span></p>
 <p>Each step changes <span class="math inline">\(m\)</span> by one, so <span class="math inline">\(n\)</span> is a nonnegative integer. At the two endpoints, <a href="#eq-zeqnnum732391" class="quarto-xref">Equation&nbsp;<span>8.18</span></a> and <a href="#eq-zeqnnum324145" class="quarto-xref">Equation&nbsp;<span>8.19</span></a> give</p>
 <p><span id="eq-ch08-p1946"><span class="math display">\[
-\begin{array}{l} b\vert b,{m_{\max }}\rangle = (m_{\max }^2 + {m_{\max }})\vert b,{m_{\max }}\rangle \\ b\vert b,{m_{\min }}\rangle = (m_{\min }^2 - {m_{\min }})\vert b,{m_{\min }}\rangle \end{array}
+\begin{aligned}
+b\vert b,{m_{\max }}\rangle &amp;= (m_{\max }^2 + {m_{\max }})\vert b,{m_{\max }}\rangle \\
+b\vert b,{m_{\min }}\rangle &amp;= (m_{\min }^2 - {m_{\min }})\vert b,{m_{\min }}\rangle
+\end{aligned}
 \tag{8.28}\]</span></span></p>
 <p>It follows that</p>
 <p><span id="eq-zeqnnum714689"><span class="math display">\[
@@ -507,7 +514,12 @@ b = j\left( {j + 1} \right)
 \tag{8.43}\]</span></span></p>
 <p>Now use <span class="math inline">\(\hat J_+^\dagger=\hat J_-\)</span> and the identity <span class="math inline">\(\hat J_-\hat J_+=\mathbf{\hat J}^2-\hat J_z^2-\hbar\hat J_z\)</span> from <a href="#eq-zeqnnum732391" class="quarto-xref">Equation&nbsp;<span>8.18</span></a>:</p>
 <p><span id="eq-zeqnnum904686"><span class="math display">\[
-\begin{array}{c} \left\langle {j,m} \right\vert \hat J_ + ^\dagger {{\hat J}_ + }\left\vert  {j,m} \right\rangle = \left\langle {j,m} \right\vert {{\hat J}_ - }{{\hat J}_ + }\left\vert  {j,m} \right\rangle \\ = \left\langle {j,m} \right\vert {{{\bf{\hat J}}}^2} - \hat J_z^2 - \hbar {{\hat J}_z}\left\vert  {j,m} \right\rangle \\ = j\left( {j + 1} \right){\hbar ^2} - {m^2}{\hbar ^2} - m{\hbar ^2}\\ = {\hbar ^2}\left[ {j\left( {j + 1} \right) - m\left( {m + 1} \right)} \right] \end{array}
+\begin{aligned}
+\left\langle {j,m} \right\vert \hat J_ + ^\dagger {{\hat J}_ + }\left\vert  {j,m} \right\rangle &amp;= \left\langle {j,m} \right\vert {{\hat J}_ - }{{\hat J}_ + }\left\vert  {j,m} \right\rangle \\
+&amp;= \left\langle {j,m} \right\vert {{{\bf{\hat J}}}^2} - \hat J_z^2 - \hbar {{\hat J}_z}\left\vert  {j,m} \right\rangle \\
+&amp;= j\left( {j + 1} \right){\hbar ^2} - {m^2}{\hbar ^2} - m{\hbar ^2} \\
+&amp;= {\hbar ^2}\left[ {j\left( {j + 1} \right) - m\left( {m + 1} \right)} \right]
+\end{aligned}
 \tag{8.44}\]</span></span></p>
 <p>Combining <a href="#eq-zeqnnum141497" class="quarto-xref">Equation&nbsp;<span>8.43</span></a> and <a href="#eq-zeqnnum904686" class="quarto-xref">Equation&nbsp;<span>8.44</span></a>, we obtain</p>
 <p><span id="eq-ch08-p2024"><span class="math display">\[
@@ -563,11 +575,17 @@ b = j\left( {j + 1} \right)
 <h2 data-number="8.2" class="anchored" data-anchor-id="orbital-angular-momentum"><span class="header-section-number">8.2</span> Orbital Angular Momentum</h2>
 <p>Orbital angular momentum comes from motion about a reference point. We write it as <span class="math inline">\(\mathbf L\)</span> and use <span class="math inline">\(l\)</span> for its angular-momentum quantum number. The general theory we just developed gives</p>
 <p><span id="eq-zeqnnum747222"><span class="math display">\[
-\begin{array}{l} {{{\bf{\hat L}}}^2}\left\vert  {l,m} \right\rangle = l\left( {l + 1} \right){\hbar ^2}\left\vert  {l,m} \right\rangle \\ {{\hat L}_z}\left\vert  {l,m} \right\rangle = m\hbar \left\vert  {l,m} \right\rangle \end{array}
+\begin{aligned}
+{{{\bf{\hat L}}}^2}\left\vert  {l,m} \right\rangle &amp;= l\left( {l + 1} \right){\hbar ^2}\left\vert  {l,m} \right\rangle \\
+{{\hat L}_z}\left\vert  {l,m} \right\rangle &amp;= m\hbar \left\vert  {l,m} \right\rangle
+\end{aligned}
 \tag{8.57}\]</span></span></p>
 <p>To describe orbital motion, we need spatial wavefunctions. Write <span class="math inline">\(\Lambda_{l,m}(x,y,z)\equiv\langle x,y,z\vert l,m\rangle\)</span>. Spherical coordinates are a natural choice because angular momentum concerns motion about an origin. In these coordinates, <a href="#eq-zeqnnum747222" class="quarto-xref">Equation&nbsp;<span>8.57</span></a> becomes</p>
 <p><span id="eq-zeqnnum921413"><span class="math display">\[
-\begin{array}{l} {{\bf{L}}^2}{\Lambda _{l,m}}\left( {r,\theta ,\phi } \right) = l\left( {l + 1} \right){\hbar ^2}{\Lambda _{l,m}}\left( {r,\theta ,\phi } \right)\\ {L_z}{\Lambda _{l,m}}\left( {r,\theta ,\phi } \right) = m\hbar {\Lambda _{l,m}}\left( {r,\theta ,\phi } \right) \end{array}
+\begin{aligned}
+{{\bf{L}}^2}{\Lambda _{l,m}}\left( {r,\theta ,\phi } \right) &amp;= l\left( {l + 1} \right){\hbar ^2}{\Lambda _{l,m}}\left( {r,\theta ,\phi } \right) \\
+{L_z}{\Lambda _{l,m}}\left( {r,\theta ,\phi } \right) &amp;= m\hbar {\Lambda _{l,m}}\left( {r,\theta ,\phi } \right)
+\end{aligned}
 \tag{8.58}\]</span></span></p>
 <p><img src="assets/image1796.png" class="img-fluid" width="212"></p>
 <p>We also need the operators in spherical coordinates. Using the coordinate transformations</p>
@@ -579,7 +597,11 @@ b = j\left( {j + 1} \right)
 \tag{8.60}\]</span></span></p>
 <p>we convert the Cartesian expression <a href="#eq-zeqnnum826605" class="quarto-xref">Equation&nbsp;<span>8.2</span></a> for <span class="math inline">\({\hat L_{x,y,z}}\)</span> into</p>
 <p><span id="eq-zeqnnum721118"><span class="math display">\[
-\begin{array}{l} {{\hat L}_x} \buildrel\textstyle.\over= - i\hbar \left( {y\frac{\partial }{{\partial z}} - z\frac{\partial }{{\partial y}}} \right) = - i\hbar \left( { - \sin \phi \frac{\partial }{{\partial \theta }} - \cot \theta \cos \phi \frac{\partial }{{\partial \phi }}} \right)\\ {{\hat L}_y} \buildrel\textstyle.\over= - i\hbar \left( {z\frac{\partial }{{\partial x}} - x\frac{\partial }{{\partial z}}} \right) = - i\hbar \left( {\cos \phi \frac{\partial }{{\partial \theta }} - \cot \theta \sin \phi \frac{\partial }{{\partial \phi }}} \right)\\ {{\hat L}_z} \buildrel\textstyle.\over= - i\hbar \left( {x\frac{\partial }{{\partial y}} - y\frac{\partial }{{\partial x}}} \right) = - i\hbar \frac{\partial }{{\partial \phi }} \end{array}
+\begin{aligned}
+{{\hat L}_x} &amp;\buildrel\textstyle.\over= - i\hbar \left( {y\frac{\partial }{{\partial z}} - z\frac{\partial }{{\partial y}}} \right) = - i\hbar \left( { - \sin \phi \frac{\partial }{{\partial \theta }} - \cot \theta \cos \phi \frac{\partial }{{\partial \phi }}} \right) \\
+{{\hat L}_y} &amp;\buildrel\textstyle.\over= - i\hbar \left( {z\frac{\partial }{{\partial x}} - x\frac{\partial }{{\partial z}}} \right) = - i\hbar \left( {\cos \phi \frac{\partial }{{\partial \theta }} - \cot \theta \sin \phi \frac{\partial }{{\partial \phi }}} \right) \\
+{{\hat L}_z} &amp;\buildrel\textstyle.\over= - i\hbar \left( {x\frac{\partial }{{\partial y}} - y\frac{\partial }{{\partial x}}} \right) = - i\hbar \frac{\partial }{{\partial \phi }}
+\end{aligned}
 \tag{8.61}\]</span></span></p>
 <p>and obtain the spherical-coordinate expression for <span class="math inline">\({{\bf{\hat L}}^2}\)</span>:</p>
 <p><span id="eq-zeqnnum657148"><span class="math display">\[
@@ -634,12 +656,18 @@ b = j\left( {j + 1} \right)
 \tag{8.74}\]</span></span></p>
 <p>That is,</p>
 <p><span id="eq-zeqnnum804907"><span class="math display">\[
-\begin{array}{c} \exp \left[ {im\phi } \right] = \exp \left[ {im(\phi + 2\pi )} \right]\\ m\phi = m(\phi + 2\pi ) + n2\pi , &amp; n \in {\rm{Integer}} \end{array}
+\begin{aligned}
+\exp \left[ {im\phi } \right] &amp;= \exp \left[ {im(\phi + 2\pi )} \right] \\
+m\phi &amp;= m(\phi + 2\pi ) + n2\pi , &amp;&amp; n \in {\rm{Integer}}
+\end{aligned}
 \tag{8.75}\]</span></span></p>
 <p>A full turn therefore restricts the allowed values of <span class="math inline">\(m\)</span>.</p>
 <p>The phase condition requires integer <span class="math inline">\(m\)</span>. Solving the remaining polar <a href="#eq-zeqnnum830038" class="quarto-xref">Equation&nbsp;<span>8.71</span></a> with regular behavior at the poles gives</p>
 <p><span id="eq-zeqnnum917846"><span class="math display">\[
-\begin{array}{c} l = 0,\;1,\;2,\; \cdots \\ m = 0,\; \pm 1,\; \cdots ,\; \pm l \end{array}
+\begin{aligned}
+l &amp;= 0,\;1,\;2,\; \cdots \\
+m &amp;= 0,\; \pm 1,\; \cdots ,\; \pm l
+\end{aligned}
 \tag{8.76}\]</span></span></p>
 <p>We will omit the longer differential-equation calculation. We can also connect this result with the ladder argument: <span class="math inline">\(m\)</span> runs from <span class="math inline">\(-l\)</span> to <span class="math inline">\(l\)</span> in unit steps. Since orbital <span class="math inline">\(m\)</span> is integer, <span class="math inline">\(l\)</span> must be a nonnegative integer too. This gives the allowed values in <a href="#eq-zeqnnum917846" class="quarto-xref">Equation&nbsp;<span>8.76</span></a>.</p>
 <p>With these allowed values, the polar <a href="#eq-zeqnnum830038" class="quarto-xref">Equation&nbsp;<span>8.71</span></a> has solutions</p>
@@ -656,11 +684,21 @@ b = j\left( {j + 1} \right)
 \tag{8.79}\]</span></span></p>
 <p>These functions are the <strong>spherical harmonics</strong>. Each has definite squared orbital angular momentum and a definite <span class="math inline">\(z\)</span> projection:</p>
 <p><span id="eq-ch08-p2093"><span class="math display">\[
-\begin{array}{l} {{{\bf{\hat L}}}^2}{Y_{l,m}}\left( {\theta ,\phi } \right) = l(l + 1)\hbar {Y_{l,m}}\left( {\theta ,\phi } \right)\\ {{\hat L}_z}{Y_{l,m}}\left( {\theta ,\phi } \right) = m\hbar {Y_{l,m}}\left( {\theta ,\phi } \right) \end{array}
+\begin{aligned}
+{{{\bf{\hat L}}}^2}{Y_{l,m}}\left( {\theta ,\phi } \right) &amp;= l(l + 1)\hbar {Y_{l,m}}\left( {\theta ,\phi } \right) \\
+{{\hat L}_z}{Y_{l,m}}\left( {\theta ,\phi } \right) &amp;= m\hbar {Y_{l,m}}\left( {\theta ,\phi } \right)
+\end{aligned}
 \tag{8.80}\]</span></span></p>
 <p>Here are the spherical harmonics for <span class="math inline">\(l=0,1,2\)</span>. Notice the constant angular function at <span class="math inline">\(l=0\)</span> and the richer patterns at higher <span class="math inline">\(l\)</span>.</p>
 <p><span id="eq-zeqnnum238379"><span class="math display">\[
-\begin{array}{c} {Y_{0,0}} = \sqrt {\frac{1}{{4\pi }}} \\ Y{{\kern 1pt} _{1,0}} = \sqrt {\frac{3}{{4\pi }}} \cos \theta \\ Y{{\kern 1pt} _{1, \pm 1}} = \mp \sqrt {\frac{3}{{8\pi }}} \sin \theta \;{e^{ \pm i\phi }}\\ Y{{\kern 1pt} _{2,0}} = \sqrt {\frac{5}{{16\pi }}} \left( {3{{\cos }^2}\theta - 1} \right)\\ Y{{\kern 1pt} _{2, \pm 1}} = \mp \sqrt {\frac{{15}}{{8\pi }}} \sin \theta \cos \theta \;{e^{ \pm i\phi }}\\ Y{{\kern 1pt} _{2, \pm 2}} = \mp \sqrt {\frac{{15}}{{32\pi }}} {\sin ^2}\theta \;{e^{ \pm 2i\phi }} \end{array}
+\begin{aligned}
+{Y_{0,0}} &amp;= \sqrt {\frac{1}{{4\pi }}} \\
+Y{{\kern 1pt} _{1,0}} &amp;= \sqrt {\frac{3}{{4\pi }}} \cos \theta \\
+Y{{\kern 1pt} _{1, \pm 1}} &amp;= \mp \sqrt {\frac{3}{{8\pi }}} \sin \theta \;{e^{ \pm i\phi }} \\
+Y{{\kern 1pt} _{2,0}} &amp;= \sqrt {\frac{5}{{16\pi }}} \left( {3{{\cos }^2}\theta - 1} \right) \\
+Y{{\kern 1pt} _{2, \pm 1}} &amp;= \mp \sqrt {\frac{{15}}{{8\pi }}} \sin \theta \cos \theta \;{e^{ \pm i\phi }} \\
+Y{{\kern 1pt} _{2, \pm 2}} &amp;= \mp \sqrt {\frac{{15}}{{32\pi }}} {\sin ^2}\theta \;{e^{ \pm 2i\phi }}
+\end{aligned}
 \tag{8.81}\]</span></span></p>
 <p><img src="assets/image1855.gif" class="img-fluid" width="289"></p>
 <div class="source-caption">
@@ -696,7 +734,11 @@ b = j\left( {j + 1} \right)
 \tag{8.86}\]</span></span></p>
 <p>As with translations, we require a zero rotation to do nothing, successive small rotations about the same axis to add, and probabilities to stay unchanged:</p>
 <p><span id="eq-ch08-p2113"><span class="math display">\[
-\begin{array}{c} \mathop {\lim }\limits_{d\phi \to 0} \hat D\left( {{\bf{z}},d\phi } \right) = \hat I\\ \hat D\left( {{\bf{z}},d{\phi _1}} \right)\hat D\left( {{\bf{z}},d{\phi _2}} \right) = \hat D\left( {{\bf{z}},d{\phi _2}} \right)\hat D\left( {{\bf{z}},d{\phi _1}} \right) = \hat D\left( {{\bf{z}},d{\phi _1} + d{\phi _2}} \right)\\ {{\hat D}^\dagger }\left( {{\bf{z}},d\phi } \right) = {{\hat D}^{ - 1}}\left( {{\bf{z}},d\phi } \right) = \hat D\left( {{\bf{z}}, - d\phi } \right) \end{array}
+\begin{aligned}
+\mathop {\lim }\limits_{d\phi \to 0} \hat D\left( {{\bf{z}},d\phi } \right) &amp;= \hat I \\
+\hat D\left( {{\bf{z}},d{\phi _1}} \right)\hat D\left( {{\bf{z}},d{\phi _2}} \right) &amp;= \hat D\left( {{\bf{z}},d{\phi _2}} \right)\hat D\left( {{\bf{z}},d{\phi _1}} \right) = \hat D\left( {{\bf{z}},d{\phi _1} + d{\phi _2}} \right) \\
+{{\hat D}^\dagger }\left( {{\bf{z}},d\phi } \right) &amp;= {{\hat D}^{ - 1}}\left( {{\bf{z}},d\phi } \right) = \hat D\left( {{\bf{z}}, - d\phi } \right)
+\end{aligned}
 \tag{8.87}\]</span></span></p>
 <p>The final condition requires the rotation operator to be unitary.</p>
 <p>We can construct <span class="math inline">\(\hat D\left( {{\bf{z}},d\phi } \right)\)</span> as</p>
@@ -725,7 +767,10 @@ b = j\left( {j + 1} \right)
 \tag{8.92}\]</span></span></p>
 <p>Let both sides act on any state <span class="math inline">\(\vert\psi\rangle\)</span>. Then expand the shifted wavefunction to first order in <span class="math inline">\(d\phi\)</span>:</p>
 <p><span id="eq-ch08-p2128"><span class="math display">\[
-\begin{array}{c} \left\langle {r,\theta ,\phi } \right\vert \left[ {\hat I - i\frac{{{{\hat L}_z}}}{\hbar }d\phi } \right]\left\vert  \psi \right\rangle = \left\langle {{r,\theta ,\phi - d\phi }} \mathrel{\left \vert  {\vphantom {{r,\theta ,\phi - d\phi } \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \\ \left\langle {{r,\theta ,\phi }} \mathrel{\left \vert  {\vphantom {{r,\theta ,\phi } \psi }} \right. \kern-1.2pt } {\psi } \right\rangle - i\frac{{d\phi }}{\hbar }\left\langle {r,\theta ,\phi } \right\vert {{\hat L}_z}\left\vert  \psi \right\rangle \approx \left\langle {{r,\theta ,\phi }} \mathrel{\left \vert  {\vphantom {{r,\theta ,\phi } \psi }} \right. \kern-1.2pt } {\psi } \right\rangle - d\phi \frac{\partial }{{\partial \phi }}\left\langle {{r,\theta ,\phi }} \mathrel{\left \vert  {\vphantom {{r,\theta ,\phi } \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \end{array}
+\begin{aligned}
+\left\langle {r,\theta ,\phi } \right\vert \left[ {\hat I - i\frac{{{{\hat L}_z}}}{\hbar }d\phi } \right]\left\vert  \psi \right\rangle &amp;= \left\langle {{r,\theta ,\phi - d\phi }} \mathrel{\left \vert  {\vphantom {{r,\theta ,\phi - d\phi } \psi }} \right. \kern-1.2pt } {\psi } \right\rangle \\
+\left\langle {{r,\theta ,\phi }} \mathrel{\left \vert  {\vphantom {{r,\theta ,\phi } \psi }} \right. \kern-1.2pt } {\psi } \right\rangle - i\frac{{d\phi }}{\hbar }\left\langle {r,\theta ,\phi } \right\vert {{\hat L}_z}\left\vert  \psi \right\rangle &amp;\approx \left\langle {{r,\theta ,\phi }} \mathrel{\left \vert  {\vphantom {{r,\theta ,\phi } \psi }} \right. \kern-1.2pt } {\psi } \right\rangle - d\phi \frac{\partial }{{\partial \phi }}\left\langle {{r,\theta ,\phi }} \mathrel{\left \vert  {\vphantom {{r,\theta ,\phi } \psi }} \right. \kern-1.2pt } {\psi } \right\rangle
+\end{aligned}
 \tag{8.93}\]</span></span></p>
 <p>Finally,</p>
 <p><span id="eq-ch08-p2130"><span class="math display">\[

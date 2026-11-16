@@ -182,7 +182,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06-transitions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Transitions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -291,10 +291,16 @@ window.Quarto = {
 <p>We call a pure state <strong>entangled</strong> when this factorization is impossible. The pair has a pure state, but neither subsystem has a pure state of its own. For two spin-1/2 particles, an example is the normalized superposition <span class="math inline">\((\vert U\rangle_1\vert D\rangle_2+\vert D\rangle_1\vert U\rangle_2)/\sqrt2\)</span>. The correlations belong to the pair.</p>
 <p>Let <span class="math inline">\(\hat A_1\)</span> act on subsystem 1 and <span class="math inline">\(\hat A_2\)</span> act on subsystem 2. Each operator affects only its own factor in a product state. For example,</p>
 <p><span id="eq-zeqnnum356609"><span class="math display">\[
-\begin{array}{c} \hat J_1^2{{\hat J}_{2z}}\vert {j_1}{m_1};{j_2}{m_2}\rangle \equiv \hat J_1^2{{\hat J}_{2z}}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle = \left( {\hat J_1^2\left\vert  {{j_1},{m_1}} \right\rangle } \right)\left( {{{\hat J}_{2z}}\left\vert  {{j_2},{m_2}} \right\rangle } \right)\\ = {j_1}({j_1} + 1){m_2}{\hbar ^3}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle \end{array}
+\begin{aligned}
+\hat J_1^2{{\hat J}_{2z}}\vert {j_1}{m_1};{j_2}{m_2}\rangle \equiv \hat J_1^2{{\hat J}_{2z}}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle &amp;= \left( {\hat J_1^2\left\vert  {{j_1},{m_1}} \right\rangle } \right)\left( {{{\hat J}_{2z}}\left\vert  {{j_2},{m_2}} \right\rangle } \right) \\
+&amp;= {j_1}({j_1} + 1){m_2}{\hbar ^3}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle
+\end{aligned}
 \tag{9.4}\]</span></span></p>
 <p><span id="eq-zeqnnum297307"><span class="math display">\[
-\begin{array}{c} \left( {\hat J_1^2 + \hat J_{2z}^2} \right)\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle = \left( {\hat J_1^2\left\vert  {{j_1},{m_1}} \right\rangle } \right)\left\vert  {{j_2},{m_2}} \right\rangle + \left\vert  {{j_1},{m_1}} \right\rangle \left( {\hat J_{2z}^2\left\vert  {{j_2},{m_2}} \right\rangle } \right)\\ = \left[ {{j_1}({j_1} + 1) + m_2^2} \right]{\hbar ^2}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle \end{array}
+\begin{aligned}
+\left( {\hat J_1^2 + \hat J_{2z}^2} \right)\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle &amp;= \left( {\hat J_1^2\left\vert  {{j_1},{m_1}} \right\rangle } \right)\left\vert  {{j_2},{m_2}} \right\rangle + \left\vert  {{j_1},{m_1}} \right\rangle \left( {\hat J_{2z}^2\left\vert  {{j_2},{m_2}} \right\rangle } \right) \\
+&amp;= \left[ {{j_1}({j_1} + 1) + m_2^2} \right]{\hbar ^2}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle
+\end{aligned}
 \tag{9.5}\]</span></span></p>
 <p>Keep the subsystem labels attached to the kets. They tell us which angular momentum each state describes. We sometimes rearrange labeled factors as a shorthand, but a tensor-product calculation uses a fixed factor order. Reordering the written labels does not mean physically exchanging the particles.</p>
 </section>
@@ -321,7 +327,11 @@ window.Quarto = {
 <p><strong>Sum, <span class="math inline">\(\hat A_1+\hat A_2\)</span>.</strong> Each operator must first be extended to act on the full composite space.</p>
 <p>We cannot simply add the original matrices entry by entry. They describe different spaces, which may even have different dimensions. Instead, use an identity operator on the factor that is left alone:</p>
 <p><span id="eq-ch09-p2175"><span class="math display">\[
-\begin{array}{c} {{\hat A}_1} + {{\hat A}_2} \equiv {{\hat A}_1} \otimes {{\hat I}_2} + {{\hat I}_1} \otimes {{\hat A}_2}\\ {\rm{ = }}\left( {\begin{array}{*{20}{c}} {{a_1}}&amp;0&amp;{{b_1}}&amp;0\\ 0&amp;{{a_1}}&amp;0&amp;{{b_1}}\\ {{c_1}}&amp;0&amp;{{d_1}}&amp;0\\ 0&amp;{{c_1}}&amp;0&amp;{{d_1}} \end{array}} \right) + \left( {\begin{array}{*{20}{c}} {{a_2}}&amp;0&amp;{{b_2}}&amp;0\\ 0&amp;{{a_2}}&amp;0&amp;{{b_2}}\\ {{c_2}}&amp;0&amp;{{d_2}}&amp;0\\ 0&amp;{{c_2}}&amp;0&amp;{{d_2}} \end{array}} \right)\\ = \left( {\begin{array}{*{20}{c}} {{a_1} + {a_2}}&amp;0&amp;{{b_1} + {b_2}}&amp;0\\ 0&amp;{{a_1} + {a_2}}&amp;0&amp;{{b_1} + {b_2}}\\ {{c_1} + {c_2}}&amp;0&amp;{{d_1} + {d_2}}&amp;0\\ 0&amp;{{c_1} + {c_2}}&amp;0&amp;{{d_1} + {d_2}} \end{array}} \right) \end{array}
+\begin{aligned}
+{{\hat A}_1} + {{\hat A}_2} &amp;\equiv {{\hat A}_1} \otimes {{\hat I}_2} + {{\hat I}_1} \otimes {{\hat A}_2} \\
+&amp;=\left( {\begin{array}{*{20}{c}} {{a_1}}&amp;0&amp;{{b_1}}&amp;0\\ 0&amp;{{a_1}}&amp;0&amp;{{b_1}}\\ {{c_1}}&amp;0&amp;{{d_1}}&amp;0\\ 0&amp;{{c_1}}&amp;0&amp;{{d_1}} \end{array}} \right) + \left( {\begin{array}{*{20}{c}} {{a_2}}&amp;0&amp;{{b_2}}&amp;0\\ 0&amp;{{a_2}}&amp;0&amp;{{b_2}}\\ {{c_2}}&amp;0&amp;{{d_2}}&amp;0\\ 0&amp;{{c_2}}&amp;0&amp;{{d_2}} \end{array}} \right) \\
+&amp;= \left( {\begin{array}{*{20}{c}} {{a_1} + {a_2}}&amp;0&amp;{{b_1} + {b_2}}&amp;0\\ 0&amp;{{a_1} + {a_2}}&amp;0&amp;{{b_1} + {b_2}}\\ {{c_1} + {c_2}}&amp;0&amp;{{d_1} + {d_2}}&amp;0\\ 0&amp;{{c_1} + {c_2}}&amp;0&amp;{{d_1} + {d_2}} \end{array}} \right)
+\end{aligned}
 \tag{9.10}\]</span></span></p>
 <p>Our example uses two equal-sized spaces, but the same rules work when the subsystem dimensions differ.</p>
 <p>Use these matrix rules to check</p>
@@ -329,7 +339,12 @@ window.Quarto = {
 \left( {{{\hat A}_1} \otimes {{\hat A}_2}} \right)\left( {\left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle } \right) = \left( {{{\hat A}_1}\left\vert  {{\psi _1}} \right\rangle } \right) \otimes \left( {{{\hat A}_2}\left\vert  {{\psi _2}} \right\rangle } \right)
 \tag{9.11}\]</span></span></p>
 <p><span id="eq-ch09-p2179"><span class="math display">\[
-\begin{array}{c} \left( {{{\hat A}_1} + {{\hat A}_2}} \right)\left( {\left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle } \right) = \left( {{{\hat A}_1} \otimes {{\hat I}_2} + {{\hat I}_1} \otimes {{\hat A}_2}} \right)\left( {\left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle } \right)\\ = \left( {{{\hat A}_1} \otimes {{\hat I}_2}} \right)\left( {\left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle } \right) + \left( {{{\hat I}_1} \otimes {{\hat A}_2}} \right)\left( {\left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle } \right)\\ = {{\hat A}_1}\left\vert  {{\psi _1}} \right\rangle \otimes {{\hat I}_2}\left\vert  {{\psi _2}} \right\rangle + {{\hat I}_1}\left\vert  {{\psi _1}} \right\rangle \otimes {{\hat A}_2}\left\vert  {{\psi _2}} \right\rangle \\ = {{\hat A}_1}\left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle + \left\vert  {{\psi _1}} \right\rangle \otimes {{\hat A}_2}\left\vert  {{\psi _2}} \right\rangle \end{array}
+\begin{aligned}
+\left( {{{\hat A}_1} + {{\hat A}_2}} \right)\left( {\left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle } \right) &amp;= \left( {{{\hat A}_1} \otimes {{\hat I}_2} + {{\hat I}_1} \otimes {{\hat A}_2}} \right)\left( {\left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle } \right) \\
+&amp;= \left( {{{\hat A}_1} \otimes {{\hat I}_2}} \right)\left( {\left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle } \right) + \left( {{{\hat I}_1} \otimes {{\hat A}_2}} \right)\left( {\left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle } \right) \\
+&amp;= {{\hat A}_1}\left\vert  {{\psi _1}} \right\rangle \otimes {{\hat I}_2}\left\vert  {{\psi _2}} \right\rangle + {{\hat I}_1}\left\vert  {{\psi _1}} \right\rangle \otimes {{\hat A}_2}\left\vert  {{\psi _2}} \right\rangle \\
+&amp;= {{\hat A}_1}\left\vert  {{\psi _1}} \right\rangle \otimes \left\vert  {{\psi _2}} \right\rangle + \left\vert  {{\psi _1}} \right\rangle \otimes {{\hat A}_2}\left\vert  {{\psi _2}} \right\rangle
+\end{aligned}
 \tag{9.12}\]</span></span></p>
 <p>We omitted the symbol <span class="math inline">\(\otimes\)</span> in <a href="#eq-zeqnnum356609" class="quarto-xref">Equation&nbsp;<span>9.4</span></a>. Written out explicitly, the operation is</p>
 <p><span id="eq-ch09-p2181"><span class="math display">\[
@@ -349,7 +364,12 @@ window.Quarto = {
 \tag{9.15}\]</span></span></p>
 <p>Their common eigenstates form the <strong>uncoupled basis</strong>. Each state specifies the two individual projections, <span class="math inline">\(m_1\)</span> and <span class="math inline">\(m_2\)</span>. We may write it as <span class="math inline">\(\vert j_1,m_1\rangle\vert j_2,m_2\rangle\)</span>, as <span class="math inline">\(\vert j_1j_2m_1m_2\rangle\)</span>, or simply as <span class="math inline">\(\vert m_1,m_2\rangle\)</span> when <span class="math inline">\(j_1,j_2\)</span> are understood.</p>
 <p><span id="eq-ch09-p2189"><span class="math display">\[
-\begin{array}{l} {\bf{\hat J}}_1^2\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle = {j_1}({j_1} + 1){\hbar ^2}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle \\ {\bf{\hat J}}_2^2\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle = {j_2}({j_2} + 1){\hbar ^2}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle \\ {{\hat J}_{1z}}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle = {m_1}\hbar \left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle , &amp; {m_1} = {j_1},{j_1} - 1, \cdots , - {j_1}\\ {{\hat J}_{2z}}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle = {m_2}\hbar \left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle , &amp; {m_2} = {j_2},{j_2} - 1, \cdots , - {j_2} \end{array}
+\begin{aligned}
+{\bf{\hat J}}_1^2\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle &amp;= {j_1}({j_1} + 1){\hbar ^2}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle \\
+{\bf{\hat J}}_2^2\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle &amp;= {j_2}({j_2} + 1){\hbar ^2}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle \\
+{{\hat J}_{1z}}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle &amp;= {m_1}\hbar \left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle , &amp;&amp; {m_1} = {j_1},{j_1} - 1, \cdots , - {j_1} \\
+{{\hat J}_{2z}}\left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle &amp;= {m_2}\hbar \left\vert  {{j_1},{m_1}} \right\rangle \left\vert  {{j_2},{m_2}} \right\rangle , &amp;&amp; {m_2} = {j_2},{j_2} - 1, \cdots , - {j_2}
+\end{aligned}
 \tag{9.16}\]</span></span></p>
 </section>
 <section id="the-coupled-basis" class="level2" data-number="9.4">
@@ -381,7 +401,12 @@ window.Quarto = {
 \tag{9.22}\]</span></span></p>
 <p>Their common eigenstates form the coupled basis. The labels <span class="math inline">\(j\)</span> and <span class="math inline">\(m\)</span> specify the total magnitude and total projection. We write these states as <span class="math inline">\(\vert j_1j_2jm\rangle\)</span>, or as <span class="math inline">\(\vert j,m\rangle\)</span> when the individual magnitudes are understood.</p>
 <p><span id="eq-ch09-p2205"><span class="math display">\[
-\begin{array}{l} {\bf{\hat J}}_1^2\left\vert  {{j_1}{j_2}jm} \right\rangle = {j_1}({j_1} + 1){\hbar ^2}\left\vert  {{j_1}{j_2}jm} \right\rangle \\ {\bf{\hat J}}_2^2\left\vert  {{j_1}{j_2}jm} \right\rangle = {j_2}({j_2} + 1){\hbar ^2}\left\vert  {{j_1}{j_2}jm} \right\rangle \\ {{{\bf{\hat J}}}^2}\left\vert  {{j_1}{j_2}jm} \right\rangle = j(j + 1){\hbar ^2}\left\vert  {{j_1}{j_2}jm} \right\rangle \\ {{\hat J}_z}\left\vert  {{j_1}{j_2}jm} \right\rangle = m\hbar \left\vert  {{j_1}{j_2}jm} \right\rangle \end{array}
+\begin{aligned}
+{\bf{\hat J}}_1^2\left\vert  {{j_1}{j_2}jm} \right\rangle &amp;= {j_1}({j_1} + 1){\hbar ^2}\left\vert  {{j_1}{j_2}jm} \right\rangle \\
+{\bf{\hat J}}_2^2\left\vert  {{j_1}{j_2}jm} \right\rangle &amp;= {j_2}({j_2} + 1){\hbar ^2}\left\vert  {{j_1}{j_2}jm} \right\rangle \\
+{{{\bf{\hat J}}}^2}\left\vert  {{j_1}{j_2}jm} \right\rangle &amp;= j(j + 1){\hbar ^2}\left\vert  {{j_1}{j_2}jm} \right\rangle \\
+{{\hat J}_z}\left\vert  {{j_1}{j_2}jm} \right\rangle &amp;= m\hbar \left\vert  {{j_1}{j_2}jm} \right\rangle
+\end{aligned}
 \tag{9.23}\]</span></span></p>
 <p>Which total values of <span class="math inline">\(j\)</span> can occur? We will outline the result rather than give the full proof. First recall the possible projections of the individual angular momenta:</p>
 <p><span id="eq-ch09-p2207"><span class="math display">\[
@@ -433,7 +458,11 @@ window.Quarto = {
 <li>Proof: Since <span class="math inline">\(({\hat J_z} - {\hat J_{1z}} - {\hat J_{2z}})\left\vert  {{j_1}{j_2}jm} \right\rangle = \lvert\mathrm{null}\rangle\)</span>,</li>
 </ul>
 <p><span id="eq-ch09-p2233"><span class="math display">\[
-\begin{array}{c} \left\langle {{j_1}{m_1};{j_2}{m_2}} \right\vert \left( {{{\hat J}_z} - {{\hat J}_{1z}} - {{\hat J}_{2z}}} \right)\left\vert  {{j_1}{j_2}jm} \right\rangle = 0\\ \left\langle {{j_1}{m_1};{j_2}{m_2}} \right\vert {{\hat J}_z}\left\vert  {{j_1}{j_2}jm} \right\rangle - \left\langle {{j_1}{m_1};{j_2}{m_2}} \right\vert {{\hat J}_1}\left\vert  {{j_1}{j_2}jm} \right\rangle - \left\langle {{j_1}{m_1};{j_2}{m_2}} \right\vert {{\hat J}_2}\left\vert  {{j_1}{j_2}jm} \right\rangle = 0\\ \left( {m - {m_1} - {m_2}} \right)\left\langle {{{j_1}{m_1};{j_2}{m_2}}} \mathrel{\left \vert  {\vphantom {{{j_1}{m_1};{j_2}{m_2}} {{j_1}{j_2}jm}}} \right. \kern-1.2pt } {{{j_1}{j_2}jm}} \right\rangle = 0 \end{array}
+\begin{aligned}
+\left\langle {{j_1}{m_1};{j_2}{m_2}} \right\vert \left( {{{\hat J}_z} - {{\hat J}_{1z}} - {{\hat J}_{2z}}} \right)\left\vert  {{j_1}{j_2}jm} \right\rangle &amp;= 0 \\
+\left\langle {{j_1}{m_1};{j_2}{m_2}} \right\vert {{\hat J}_z}\left\vert  {{j_1}{j_2}jm} \right\rangle - \left\langle {{j_1}{m_1};{j_2}{m_2}} \right\vert {{\hat J}_1}\left\vert  {{j_1}{j_2}jm} \right\rangle - \left\langle {{j_1}{m_1};{j_2}{m_2}} \right\vert {{\hat J}_2}\left\vert  {{j_1}{j_2}jm} \right\rangle &amp;= 0 \\
+\left( {m - {m_1} - {m_2}} \right)\left\langle {{{j_1}{m_1};{j_2}{m_2}}} \mathrel{\left \vert  {\vphantom {{{j_1}{m_1};{j_2}{m_2}} {{j_1}{j_2}jm}}} \right. \kern-1.2pt } {{{j_1}{j_2}jm}} \right\rangle &amp;= 0
+\end{aligned}
 \tag{9.32}\]</span></span></p>
 <p>Thus <span class="math inline">\(\left\langle {{{j_1}{m_1};{j_2}{m_2}}} \mathrel{\left \vert  {\vphantom {{{j_1}{m_1};{j_2}{m_2}} {{j_1}{j_2}jm}}} \right. \kern-1.2pt } {{{j_1}{j_2}jm}} \right\rangle\)</span> can be nonzero only when <span class="math inline">\(m = {m_1} + {m_2}\)</span>.</p>
 <p>Once we choose <span class="math inline">\(m_1\)</span>, the condition fixes <span class="math inline">\(m_2=m-m_1\)</span>. The double sum in <a href="#eq-zeqnnum358642" class="quarto-xref">Equation&nbsp;<span>9.30</span></a> therefore reduces to a single sum:</p>
@@ -458,13 +487,21 @@ window.Quarto = {
 \tag{9.36}\]</span></span></p>
 <p>The three <span class="math inline">\(j=1\)</span> states form a <strong>triplet</strong>. The single <span class="math inline">\(j=0\)</span> state is a <strong>singlet</strong>. Using <a href="#eq-zeqnnum358642" class="quarto-xref">Equation&nbsp;<span>9.30</span></a> and the CG coefficients derived below gives</p>
 <p><span id="eq-zeqnnum909689"><span class="math display">\[
-\begin{array}{c} \left\vert  {j,m} \right\rangle = \sum\nolimits_{{m_1},{m_2}} {\left\vert  {{m_1};{m_2}} \right\rangle \left\langle {{{m_1};{m_2}}} \mathrel{\left \vert  {\vphantom {{{m_1};{m_2}} {j,m}}} \right. \kern-1.2pt } {{j,m}} \right\rangle } \\ \begin{array}{*{20}{l}} \begin{array}{c} \left\vert  {1,1} \right\rangle = \left\vert  {\frac{1}{2};\frac{1}{2}} \right\rangle \\ \left\vert  {1,0} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle + \;\left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle } \right)\;,\;\;\;\\ \left\vert  {1, - 1} \right\rangle = \left\vert  { - \frac{1}{2}; - \frac{1}{2}} \right\rangle \; \end{array}&amp;{\left\vert  {0,0} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle - \left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle } \right)} \end{array} \end{array}
+\begin{array}{c} \left\vert  {j,m} \right\rangle = \sum\nolimits_{{m_1},{m_2}} {\left\vert  {{m_1};{m_2}} \right\rangle \left\langle {{{m_1};{m_2}}} \mathrel{\left \vert  {\vphantom {{{m_1};{m_2}} {j,m}}} \right. \kern-1.2pt } {{j,m}} \right\rangle } \\ \begin{array}{*{20}{l}} \begin{aligned}
+\left\vert  {1,1} \right\rangle &amp;= \left\vert  {\frac{1}{2};\frac{1}{2}} \right\rangle \\
+\left\vert  {1,0} \right\rangle &amp;= \frac{1}{{\sqrt 2 }}\left( {\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle + \;\left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle } \right)\;,\;\;\; \\
+\left\vert  {1, - 1} \right\rangle &amp;= \left\vert  { - \frac{1}{2}; - \frac{1}{2}} \right\rangle \;
+\end{aligned}&amp;{\left\vert  {0,0} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle - \left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle } \right)} \end{array} \end{array}
 \tag{9.37}\]</span></span></p>
 <p>The extreme states are easy to understand. To get <span class="math inline">\(m=1\)</span>, both spins must have projection <span class="math inline">\(+1/2\)</span>. To get <span class="math inline">\(m=-1\)</span>, both must have projection <span class="math inline">\(-1/2\)</span>.</p>
 <p>The two <span class="math inline">\(m=0\)</span> states are more interesting. Each combines one up spin and one down spin, but their relative signs differ. If we measure the two individual <span class="math inline">\(z\)</span> components, either state gives opposite results with equal probabilities. A measurement of total <span class="math inline">\(J_z\)</span> alone gives zero; it does not distinguish those two individual arrangements.</p>
 <p>So how can the triplet state <span class="math inline">\(\vert1,0\rangle\)</span> differ from the singlet <span class="math inline">\(\vert0,0\rangle\)</span>? The relative sign changes correlations along other axes. To see this, expand the states in the product basis for the individual <span class="math inline">\(x\)</span> components:</p>
 <p><span id="eq-zeqnnum419967"><span class="math display">\[
-\begin{array}{c} \left\vert  {1,0} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle + \;\left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle } \right) \equiv \frac{1}{{\sqrt 2 }}\left( {\left\vert  U \right\rangle \left\vert  D \right\rangle + \left\vert  D \right\rangle \;\left\vert  U \right\rangle } \right)\\ = \frac{1}{{\sqrt 2 }}\left[ {\frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle + \left\vert  L \right\rangle } \right)\frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle - \left\vert  L \right\rangle } \right) + \frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle - \left\vert  L \right\rangle } \right)\frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle + \left\vert  L \right\rangle } \right)} \right]\\ = \frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle \left\vert  R \right\rangle - \left\vert  L \right\rangle \left\vert  L \right\rangle } \right) \end{array}
+\begin{aligned}
+\left\vert  {1,0} \right\rangle &amp;= \frac{1}{{\sqrt 2 }}\left( {\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle + \;\left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle } \right) \equiv \frac{1}{{\sqrt 2 }}\left( {\left\vert  U \right\rangle \left\vert  D \right\rangle + \left\vert  D \right\rangle \;\left\vert  U \right\rangle } \right) \\
+&amp;= \frac{1}{{\sqrt 2 }}\left[ {\frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle + \left\vert  L \right\rangle } \right)\frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle - \left\vert  L \right\rangle } \right) + \frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle - \left\vert  L \right\rangle } \right)\frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle + \left\vert  L \right\rangle } \right)} \right] \\
+&amp;= \frac{1}{{\sqrt 2 }}\left( {\left\vert  R \right\rangle \left\vert  R \right\rangle - \left\vert  L \right\rangle \left\vert  L \right\rangle } \right)
+\end{aligned}
 \tag{9.38}\]</span></span></p>
 <p>Keep the two ket factors in a fixed order. <a href="#eq-zeqnnum419967" class="quarto-xref">Equation&nbsp;<span>9.38</span></a> says that, in <span class="math inline">\(\vert1,0\rangle\)</span>, measurements of the individual <span class="math inline">\(x\)</span> components give <span class="math inline">\(\vert R\rangle\vert R\rangle\)</span> or <span class="math inline">\(\vert L\rangle\vert L\rangle\)</span>, each with probability <span class="math inline">\(50\%\)</span>. The total <span class="math inline">\(J_x\)</span> is therefore <span class="math inline">\(+\hbar\)</span> or <span class="math inline">\(-\hbar\)</span>. The same holds along <span class="math inline">\(y\)</span>. In this state, the two spins give opposite projections along <span class="math inline">\(z\)</span>, but matching projections along <span class="math inline">\(x\)</span> or <span class="math inline">\(y\)</span>.</p>
 <p>Now try the singlet. Its expansion in the same <span class="math inline">\(x\)</span> basis is</p>
@@ -523,13 +560,19 @@ j = l \pm \frac{1}{2}
 \tag{9.43}\]</span></span></p>
 <p>Apply the lowering operator <span class="math inline">\({\hat J_ - } = {\hat J_{1 - }} + {\hat J_{2 - }}\)</span> to both sides and use <a href="08-angular-momentum.html#eq-zeqnnum592417" class="quarto-xref">Equation&nbsp;<span>8.49</span></a>:</p>
 <p><span id="eq-ch09-p2267"><span class="math display">\[
-\begin{array}{c} {{\hat J}_ - }\left\vert  {{j_{\max }},{j_{\max }}} \right\rangle = {{\hat J}_{1 - }}\left\vert  {{j_1};{j_2}} \right\rangle + {{\hat J}_{2 - }}\left\vert  {{j_1};{j_2}} \right\rangle \\ \sqrt {2{j_{\max }}} \left\vert  {{j_{\max }},{j_{\max }} - 1} \right\rangle = \sqrt {2{j_1}} \left\vert  {{j_1} - 1;{j_2}} \right\rangle + \sqrt {2{j_2}} \left\vert  {{j_1};{j_2} - 1} \right\rangle \end{array}
+\begin{aligned}
+{{\hat J}_ - }\left\vert  {{j_{\max }},{j_{\max }}} \right\rangle &amp;= {{\hat J}_{1 - }}\left\vert  {{j_1};{j_2}} \right\rangle + {{\hat J}_{2 - }}\left\vert  {{j_1};{j_2}} \right\rangle \\
+\sqrt {2{j_{\max }}} \left\vert  {{j_{\max }},{j_{\max }} - 1} \right\rangle &amp;= \sqrt {2{j_1}} \left\vert  {{j_1} - 1;{j_2}} \right\rangle + \sqrt {2{j_2}} \left\vert  {{j_1};{j_2} - 1} \right\rangle
+\end{aligned}
 \tag{9.44}\]</span></span></p>
 <p>This gives the expansion of the next state down, <span class="math inline">\(\vert j_{\max},j_{\max}-1\rangle\)</span>. Keep lowering to build the whole <span class="math inline">\(j_{\max}\)</span> ladder.</p>
 <p><strong>Step 2: build the states with <span class="math inline">\(j=j_{\max}-1\)</span>.</strong></p>
 <p>Start at the top of this new ladder, where <span class="math inline">\(m=j_{\max}-1\)</span>. The projection-sum rule leaves two possible uncoupled terms:</p>
 <p><span id="eq-ch09-p2271"><span class="math display">\[
-\begin{array}{c} \left\vert  {{j_{\max }} - 1,{j_{\max }} - 1} \right\rangle = {c_1}\left\vert  {{j_1} - 1;{j_2}} \right\rangle + {c_2}\left\vert  {{j_1};{j_2} - 1} \right\rangle \\ c_1^2 + c_2^2 = 1 \end{array}
+\begin{aligned}
+\left\vert  {{j_{\max }} - 1,{j_{\max }} - 1} \right\rangle &amp;= {c_1}\left\vert  {{j_1} - 1;{j_2}} \right\rangle + {c_2}\left\vert  {{j_1};{j_2} - 1} \right\rangle \\
+c_1^2 + c_2^2 &amp;= 1
+\end{aligned}
 \tag{9.45}\]</span></span></p>
 <p>The new state must be orthogonal to the state with the same <span class="math inline">\(m\)</span> from step 1. It must also be normalized:</p>
 <p><span id="eq-ch09-p2273"><span class="math display">\[
@@ -539,11 +582,17 @@ j = l \pm \frac{1}{2}
 <p><strong>Step 3: build the states with <span class="math inline">\(j=j_{\max}-2\)</span>.</strong></p>
 <p>Again start at the top. This time, three uncoupled terms can contribute:</p>
 <p><span id="eq-ch09-p2277"><span class="math display">\[
-\begin{array}{c} \left\vert  {{j_{\max }} - 2,{j_{\max }} - 2} \right\rangle = {d_1}\left\vert  {{j_1} - 2;{j_2}} \right\rangle + {d_2}\left\vert  {{j_1} - 1;{j_2} - 1} \right\rangle + {d_3}\left\vert  {{j_1};{j_2} - 2} \right\rangle \\ d_1^2 + d_2^2 + d_3^2 = 1 \end{array}
+\begin{aligned}
+\left\vert  {{j_{\max }} - 2,{j_{\max }} - 2} \right\rangle &amp;= {d_1}\left\vert  {{j_1} - 2;{j_2}} \right\rangle + {d_2}\left\vert  {{j_1} - 1;{j_2} - 1} \right\rangle + {d_3}\left\vert  {{j_1};{j_2} - 2} \right\rangle \\
+d_1^2 + d_2^2 + d_3^2 &amp;= 1
+\end{aligned}
 \tag{9.47}\]</span></span></p>
 <p>Require normalization and orthogonality to the two states already found at this <span class="math inline">\(m\)</span>:</p>
 <p><span id="eq-ch09-p2279"><span class="math display">\[
-\begin{array}{c} \left\langle {{{j_{\max }} - 1,{j_{\max }} - 2}} \mathrel{\left \vert  {\vphantom {{{j_{\max }} - 1,{j_{\max }} - 2} {{j_{\max }} - 2,{j_{\max }} - 2}}} \right. \kern-1.2pt } {{{j_{\max }} - 2,{j_{\max }} - 2}} \right\rangle = 0\\ \left\langle {{{j_{\max }},{j_{\max }} - 2}} \mathrel{\left \vert  {\vphantom {{{j_{\max }},{j_{\max }} - 2} {{j_{\max }} - 2,{j_{\max }} - 2}}} \right. \kern-1.2pt } {{{j_{\max }} - 2,{j_{\max }} - 2}} \right\rangle = 0 \end{array}
+\begin{aligned}
+\left\langle {{{j_{\max }} - 1,{j_{\max }} - 2}} \mathrel{\left \vert  {\vphantom {{{j_{\max }} - 1,{j_{\max }} - 2} {{j_{\max }} - 2,{j_{\max }} - 2}}} \right. \kern-1.2pt } {{{j_{\max }} - 2,{j_{\max }} - 2}} \right\rangle &amp;= 0 \\
+\left\langle {{{j_{\max }},{j_{\max }} - 2}} \mathrel{\left \vert  {\vphantom {{{j_{\max }},{j_{\max }} - 2} {{j_{\max }} - 2,{j_{\max }} - 2}}} \right. \kern-1.2pt } {{{j_{\max }} - 2,{j_{\max }} - 2}} \right\rangle &amp;= 0
+\end{aligned}
 \tag{9.48}\]</span></span></p>
 <p>These conditions fix <span class="math inline">\(d_1,d_2,d_3\)</span>, up to an overall phase. Then lower again. Continue the pattern until every allowed <span class="math inline">\(j\)</span> has its own ladder.</p>
 <p>The pattern makes a useful recursive algorithm: find a new top state by orthogonality, then lower through its ladder. For numerical work, Mathematica also provides <span class="math inline">\(ClebschGordan[\{j_1,m_1\},\{j_2,m_2\},\{j,m\}]\)</span>.</p>
@@ -555,13 +604,27 @@ j = l \pm \frac{1}{2}
 {j_1} = {j_2} = {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2}
 \tag{9.50}\]</span></span></p>
 <p><span id="eq-ch09-p2285"><span class="math display">\[
-\begin{array}{*{20}{l}} \begin{array}{l} \left\vert  {1,1} \right\rangle = \left\vert  {\frac{1}{2};\frac{1}{2}} \right\rangle \\ \left\vert  {1,0} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle + \;\left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle } \right)\;,\;\;\;\\ \left\vert  {1, - 1} \right\rangle = \left\vert  { - \frac{1}{2}; - \frac{1}{2}} \right\rangle \; \end{array}&amp;{\left\vert  {0,0} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle - \left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle } \right)} \end{array}
+\begin{array}{*{20}{l}} \begin{aligned}
+\left\vert  {1,1} \right\rangle &amp;= \left\vert  {\frac{1}{2};\frac{1}{2}} \right\rangle \\
+\left\vert  {1,0} \right\rangle &amp;= \frac{1}{{\sqrt 2 }}\left( {\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle + \;\left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle } \right)\;,\;\;\; \\
+\left\vert  {1, - 1} \right\rangle &amp;= \left\vert  { - \frac{1}{2}; - \frac{1}{2}} \right\rangle \;
+\end{aligned}&amp;{\left\vert  {0,0} \right\rangle = \frac{1}{{\sqrt 2 }}\left( {\left\vert  {\frac{1}{2}; - \frac{1}{2}} \right\rangle - \left\vert  { - \frac{1}{2};\frac{1}{2}} \right\rangle } \right)} \end{array}
 \tag{9.51}\]</span></span></p>
 <p><span id="eq-ch09-p2286"><span class="math display">\[
 {j_1} = {j_2} = 1
 \tag{9.52}\]</span></span></p>
 <p><span id="eq-ch09-p2287"><span class="math display">\[
-\begin{array}{*{20}{c}} \begin{array}{l} \left\vert  {2,2} \right\rangle = \left\vert  {1;1} \right\rangle \\ \left\vert  {2,1} \right\rangle = \frac{{\left\vert  {1;0} \right\rangle + \left\vert  {0;1} \right\rangle }}{{\sqrt 2 }}\\ \left\vert  {2,0} \right\rangle = \frac{{\left\vert  { - 1;1} \right\rangle + 2\left\vert  {0;0} \right\rangle + \left\vert  {1; - 1} \right\rangle }}{{\sqrt 6 }},\;\;\\ \left\vert  {2, - 1} \right\rangle = \frac{{\left\vert  {0; - 1} \right\rangle + \left\vert  { - 1;0} \right\rangle }}{{\sqrt 2 }}\\ \left\vert  {2, - 2} \right\rangle = \left\vert  { - 1; - 1} \right\rangle \end{array}&amp;\begin{array}{l} \left\vert  {1,1} \right\rangle = \frac{{\left\vert  {1;0} \right\rangle - \left\vert  {0;1} \right\rangle }}{{\sqrt 2 }}\\ \left\vert  {1,0} \right\rangle = \frac{{\left\vert  {1; - 1} \right\rangle - \left\vert  { - 1;1} \right\rangle }}{{\sqrt 2 }}\;,\\ \left\vert  {1, - 1} \right\rangle = \frac{{\left\vert  {0; - 1} \right\rangle - \left\vert  { - 1;0} \right\rangle }}{{\sqrt 2 }}\;\; \end{array}&amp;{\left\vert  {0,0} \right\rangle = \frac{{\left\vert  {1; - 1} \right\rangle - \left\vert  {0;0} \right\rangle + \left\vert  { - 1;1} \right\rangle }}{{\sqrt 3 }}} \end{array}
+\begin{array}{*{20}{c}} \begin{aligned}
+\left\vert  {2,2} \right\rangle &amp;= \left\vert  {1;1} \right\rangle \\
+\left\vert  {2,1} \right\rangle &amp;= \frac{{\left\vert  {1;0} \right\rangle + \left\vert  {0;1} \right\rangle }}{{\sqrt 2 }} \\
+\left\vert  {2,0} \right\rangle &amp;= \frac{{\left\vert  { - 1;1} \right\rangle + 2\left\vert  {0;0} \right\rangle + \left\vert  {1; - 1} \right\rangle }}{{\sqrt 6 }},\;\; \\
+\left\vert  {2, - 1} \right\rangle &amp;= \frac{{\left\vert  {0; - 1} \right\rangle + \left\vert  { - 1;0} \right\rangle }}{{\sqrt 2 }} \\
+\left\vert  {2, - 2} \right\rangle &amp;= \left\vert  { - 1; - 1} \right\rangle
+\end{aligned}&amp;\begin{aligned}
+\left\vert  {1,1} \right\rangle &amp;= \frac{{\left\vert  {1;0} \right\rangle - \left\vert  {0;1} \right\rangle }}{{\sqrt 2 }} \\
+\left\vert  {1,0} \right\rangle &amp;= \frac{{\left\vert  {1; - 1} \right\rangle - \left\vert  { - 1;1} \right\rangle }}{{\sqrt 2 }}\;, \\
+\left\vert  {1, - 1} \right\rangle &amp;= \frac{{\left\vert  {0; - 1} \right\rangle - \left\vert  { - 1;0} \right\rangle }}{{\sqrt 2 }}\;\;
+\end{aligned}&amp;{\left\vert  {0,0} \right\rangle = \frac{{\left\vert  {1; - 1} \right\rangle - \left\vert  {0;0} \right\rangle + \left\vert  { - 1;1} \right\rangle }}{{\sqrt 3 }}} \end{array}
 \tag{9.53}\]</span></span></p>
 </section>
 <section id="exchange-symmetry-of-cg-coefficients" class="level2" data-number="9.7">
@@ -583,12 +646,20 @@ j = l \pm \frac{1}{2}
 \tag{9.56}\]</span></span></p>
 <p>For two equivalent electrons,</p>
 <p><span id="eq-ch09-p2299"><span class="math display">\[
-\begin{array}{l} {l_1} = {l_2} = l \to {l_1} + {l_2} = 2l,\;\left\vert  {{l_1} - {l_2}} \right\vert  = 0\\ {s_1} = {s_2} = {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2} \to {s_1} + {s_2} = 1,\;\left\vert  {{s_1} - {s_2}} \right\vert  = 0 \end{array}
+\begin{aligned}
+{l_1} &amp;= {l_2} = l \to {l_1} + {l_2} = 2l,\;\left\vert  {{l_1} - {l_2}} \right\vert  = 0 \\
+{s_1} &amp;= {s_2} = {1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-1.2pt } 2} \to {s_1} + {s_2} = 1,\;\left\vert  {{s_1} - {s_2}} \right\vert  = 0
+\end{aligned}
 \tag{9.57}\]</span></span></p>
 <p>Before imposing exchange symmetry, the addition rules allow <span class="math inline">\(L=2l,2l-1,\ldots,0\)</span> and <span class="math inline">\(S=1,0\)</span>.</p>
 <p>Let <span class="math inline">\(\hat X\)</span> be the electron-exchange operator. Using the CG identity <a href="#eq-zeqnnum431426" class="quarto-xref">Equation&nbsp;<span>9.54</span></a> gives</p>
 <p><span id="eq-zeqnnum405893"><span class="math display">\[
-\begin{array}{c} \hat X\left\vert  {L{M_L}} \right\rangle = \hat X\sum\limits_{{m_1},{m_2}} {\left\vert  {l{m_1};l{m_2}} \right\rangle \left\langle {{l{m_1};l{m_2}}} \mathrel{\left \vert  {\vphantom {{l{m_1};l{m_2}} {L{M_L}}}} \right. \kern-1.2pt } {{L{M_L}}} \right\rangle } \\ = \sum\limits_{{m_1},{m_2}} {\left\vert  {l{m_2};l{m_1}} \right\rangle \left\langle {{l{m_1};l{m_2}}} \mathrel{\left \vert  {\vphantom {{l{m_1};l{m_2}} {L{M_L}}}} \right. \kern-1.2pt } {{L{M_L}}} \right\rangle } \\ = {( - 1)^{2l - L}}\sum\limits_{{m_1},{m_2}} {\left\vert  {l{m_1};l{m_2}} \right\rangle \left\langle {{l{m_1};l{m_2}}} \mathrel{\left \vert  {\vphantom {{l{m_1};l{m_2}} {L{M_L}}}} \right. \kern-1.2pt } {{L{M_L}}} \right\rangle } \\ = {( - 1)^{2l - L}}\left\vert  {L{M_L}} \right\rangle \end{array}
+\begin{aligned}
+\hat X\left\vert  {L{M_L}} \right\rangle &amp;= \hat X\sum\limits_{{m_1},{m_2}} {\left\vert  {l{m_1};l{m_2}} \right\rangle \left\langle {{l{m_1};l{m_2}}} \mathrel{\left \vert  {\vphantom {{l{m_1};l{m_2}} {L{M_L}}}} \right. \kern-1.2pt } {{L{M_L}}} \right\rangle } \\
+&amp;= \sum\limits_{{m_1},{m_2}} {\left\vert  {l{m_2};l{m_1}} \right\rangle \left\langle {{l{m_1};l{m_2}}} \mathrel{\left \vert  {\vphantom {{l{m_1};l{m_2}} {L{M_L}}}} \right. \kern-1.2pt } {{L{M_L}}} \right\rangle } \\
+&amp;= {( - 1)^{2l - L}}\sum\limits_{{m_1},{m_2}} {\left\vert  {l{m_1};l{m_2}} \right\rangle \left\langle {{l{m_1};l{m_2}}} \mathrel{\left \vert  {\vphantom {{l{m_1};l{m_2}} {L{M_L}}}} \right. \kern-1.2pt } {{L{M_L}}} \right\rangle } \\
+&amp;= {( - 1)^{2l - L}}\left\vert  {L{M_L}} \right\rangle
+\end{aligned}
 \tag{9.58}\]</span></span></p>
 <p>Similarly,</p>
 <p><span id="eq-ch09-p2304"><span class="math display">\[

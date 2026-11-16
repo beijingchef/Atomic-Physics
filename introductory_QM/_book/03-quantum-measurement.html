@@ -182,7 +182,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06-transitions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Transitions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -371,7 +371,10 @@ a_j &amp; \lvert a_j\rangle &amp; \lvert\langle a_j\vert\psi\rangle\rvert^2 \\
 <h3 data-number="3.3.2" class="anchored" data-anchor-id="states-for-measurements-along-x"><span class="header-section-number">3.3.2</span> States for measurements along <span class="math inline">\(x\)</span></h3>
 <p>To express <span class="math inline">\(\left\vert  R \right\rangle\)</span> and <span class="math inline">\(\left\vert  L \right\rangle\)</span> in basis <span class="math inline">\(\left\{ {\left\vert  U \right\rangle ,\left\vert  D \right\rangle } \right\}\)</span>, use <a href="#eq-zeqnnum905994" class="quarto-xref">Equation&nbsp;<span>3.11</span></a>:</p>
 <p><span id="eq-ch03-p0481"><span class="math display">\[
-\begin{array}{l} \left\vert  R \right\rangle = \left\vert  U \right\rangle \left\langle {U} \mathrel{\left \vert  {\vphantom {U R}} \right. \kern-1.2pt } {R} \right\rangle + \left\vert  D \right\rangle \left\langle {D} \mathrel{\left \vert  {\vphantom {D R}} \right. \kern-1.2pt } {R} \right\rangle \\ \left\vert  L \right\rangle = \left\vert  U \right\rangle \left\langle {U} \mathrel{\left \vert  {\vphantom {U L}} \right. \kern-1.2pt } {L} \right\rangle + \left\vert  D \right\rangle \left\langle {D} \mathrel{\left \vert  {\vphantom {D L}} \right. \kern-1.2pt } {L} \right\rangle \end{array}
+\begin{aligned}
+\left\vert  R \right\rangle &amp;= \left\vert  U \right\rangle \left\langle {U} \mathrel{\left \vert  {\vphantom {U R}} \right. \kern-1.2pt } {R} \right\rangle + \left\vert  D \right\rangle \left\langle {D} \mathrel{\left \vert  {\vphantom {D R}} \right. \kern-1.2pt } {R} \right\rangle \\
+\left\vert  L \right\rangle &amp;= \left\vert  U \right\rangle \left\langle {U} \mathrel{\left \vert  {\vphantom {U L}} \right. \kern-1.2pt } {L} \right\rangle + \left\vert  D \right\rangle \left\langle {D} \mathrel{\left \vert  {\vphantom {D L}} \right. \kern-1.2pt } {L} \right\rangle
+\end{aligned}
 \tag{3.12}\]</span></span> In a Stern–Gerlach (SG) experiment, a system prepared in <span class="math inline">\(\lvert R\rangle\)</span> has the definite value <span class="math inline">\(\sigma_x=+1\)</span>. Bu measuring <span class="math inline">\({\hat\sigma}_z\)</span> in this state gives <span class="math inline">\(+1\)</span> or <span class="math inline">\(-1\)</span> with probability <span class="math inline">\(1/2\)</span> each. Therefore,</p>
 <p><span id="eq-zeqnnum248257"><span class="math display">\[\begin{equation}
 {\left\vert  {\left\langle {U} \mathrel{\left \vert  {\vphantom {U R}} \right. \kern-1.2pt } {R} \right\rangle } \right\vert ^2} = {\left\vert  {\left\langle {D} \mathrel{\left \vert  {\vphantom {D R}} \right. \kern-1.2pt } {R} \right\rangle } \right\vert ^2} = 1/2
@@ -463,7 +466,10 @@ a_j &amp; \lvert a_j\rangle &amp; \lvert\langle a_j\vert\psi\rangle\rvert^2 \\
 <p>Next find the matrix of <span class="math inline">\({\hat \sigma _x}\)</span> in the <span class="math inline">\({\hat \sigma _z}\)</span> representation.</p>
 <p><strong>Method 1.</strong> Using the state expansions above and <a href="#eq-zeqnnum903599" class="quarto-xref">Equation&nbsp;<span>3.8</span></a>,</p>
 <p><span id="eq-ch03-p0534"><span class="math display">\[
-\begin{array}{l} {{\hat \sigma }_x}\vert U\rangle = \frac{1}{{\sqrt 2 }}{{\hat \sigma }_x}\left( {\vert R\rangle + \vert L\rangle } \right) = \frac{1}{{\sqrt 2 }}\left( {\vert R\rangle - \vert L\rangle } \right) = \vert D\rangle \\ {{\hat \sigma }_x}\vert D\rangle = \frac{1}{{\sqrt 2 }}{{\hat \sigma }_x}\left( {\vert R\rangle - \vert L\rangle } \right) = \frac{1}{{\sqrt 2 }}\left( {\vert R\rangle + \vert L\rangle } \right) = \vert U\rangle \end{array}
+\begin{aligned}
+{{\hat \sigma }_x}\vert U\rangle &amp;= \frac{1}{{\sqrt 2 }}{{\hat \sigma }_x}\left( {\vert R\rangle + \vert L\rangle } \right) = \frac{1}{{\sqrt 2 }}\left( {\vert R\rangle - \vert L\rangle } \right) = \vert D\rangle \\
+{{\hat \sigma }_x}\vert D\rangle &amp;= \frac{1}{{\sqrt 2 }}{{\hat \sigma }_x}\left( {\vert R\rangle - \vert L\rangle } \right) = \frac{1}{{\sqrt 2 }}\left( {\vert R\rangle + \vert L\rangle } \right) = \vert U\rangle
+\end{aligned}
 \tag{3.35}\]</span></span> Thus <span class="math inline">\({\hat \sigma _x}\)</span> has the following matrix in the <span class="math inline">\({\hat \sigma _z}\)</span> representation:</p>
 <p><span id="eq-ch03-p0536"><span class="math display">\[
 \hat\sigma_x

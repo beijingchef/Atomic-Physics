@@ -120,7 +120,10 @@ $$ {#eq-zeqnnum905994}
 To express $\left\vert  R \right\rangle$ and $\left\vert  L \right\rangle$ in basis $\left\{ {\left\vert  U \right\rangle ,\left\vert  D \right\rangle } \right\}$, use @eq-zeqnnum905994:
 
 $$
-\begin{array}{l} \left\vert  R \right\rangle = \left\vert  U \right\rangle \left\langle {U} \mathrel{\left \vert  {\vphantom {U R}} \right. \kern-1.2pt } {R} \right\rangle + \left\vert  D \right\rangle \left\langle {D} \mathrel{\left \vert  {\vphantom {D R}} \right. \kern-1.2pt } {R} \right\rangle \\ \left\vert  L \right\rangle = \left\vert  U \right\rangle \left\langle {U} \mathrel{\left \vert  {\vphantom {U L}} \right. \kern-1.2pt } {L} \right\rangle + \left\vert  D \right\rangle \left\langle {D} \mathrel{\left \vert  {\vphantom {D L}} \right. \kern-1.2pt } {L} \right\rangle \end{array}
+\begin{aligned}
+\left\vert  R \right\rangle &= \left\vert  U \right\rangle \left\langle {U} \mathrel{\left \vert  {\vphantom {U R}} \right. \kern-1.2pt } {R} \right\rangle + \left\vert  D \right\rangle \left\langle {D} \mathrel{\left \vert  {\vphantom {D R}} \right. \kern-1.2pt } {R} \right\rangle \\
+\left\vert  L \right\rangle &= \left\vert  U \right\rangle \left\langle {U} \mathrel{\left \vert  {\vphantom {U L}} \right. \kern-1.2pt } {L} \right\rangle + \left\vert  D \right\rangle \left\langle {D} \mathrel{\left \vert  {\vphantom {D L}} \right. \kern-1.2pt } {L} \right\rangle
+\end{aligned}
 $$ {#eq-ch03-p0481} In a Stern–Gerlach (SG) experiment, a system prepared in $\lvert R\rangle$ has the definite value $\sigma_x=+1$. Bu measuring ${\hat\sigma}_z$ in this state gives $+1$ or $-1$ with probability $1/2$ each. Therefore,
 
 $$\begin{equation}
@@ -241,7 +244,10 @@ Next find the matrix of ${\hat \sigma _x}$ in the ${\hat \sigma _z}$ representat
 **Method 1.** Using the state expansions above and @eq-zeqnnum903599,
 
 $$
-\begin{array}{l} {{\hat \sigma }_x}\vert U\rangle = \frac{1}{{\sqrt 2 }}{{\hat \sigma }_x}\left( {\vert R\rangle + \vert L\rangle } \right) = \frac{1}{{\sqrt 2 }}\left( {\vert R\rangle - \vert L\rangle } \right) = \vert D\rangle \\ {{\hat \sigma }_x}\vert D\rangle = \frac{1}{{\sqrt 2 }}{{\hat \sigma }_x}\left( {\vert R\rangle - \vert L\rangle } \right) = \frac{1}{{\sqrt 2 }}\left( {\vert R\rangle + \vert L\rangle } \right) = \vert U\rangle \end{array}
+\begin{aligned}
+{{\hat \sigma }_x}\vert U\rangle &= \frac{1}{{\sqrt 2 }}{{\hat \sigma }_x}\left( {\vert R\rangle + \vert L\rangle } \right) = \frac{1}{{\sqrt 2 }}\left( {\vert R\rangle - \vert L\rangle } \right) = \vert D\rangle \\
+{{\hat \sigma }_x}\vert D\rangle &= \frac{1}{{\sqrt 2 }}{{\hat \sigma }_x}\left( {\vert R\rangle - \vert L\rangle } \right) = \frac{1}{{\sqrt 2 }}\left( {\vert R\rangle + \vert L\rangle } \right) = \vert U\rangle
+\end{aligned}
 $$ {#eq-ch03-p0534} Thus ${\hat \sigma _x}$ has the following matrix in the ${\hat \sigma _z}$ representation:
 
 $$

@@ -290,7 +290,10 @@ window.Quarto = {
 \tag{6.4}\]</span></span></p>
 <p>Here <span class="math inline">\(\omega_0\equiv(E_1-E_2)/\hbar=2\mu_{\mathrm B}B_0/\hbar\)</span> is the <strong>Larmor frequency</strong> in the static field. It sets the natural angular frequency against which we compare the drive.</p>
 <p><span id="eq-zeqnnum833059"><span class="math display">\[
-\begin{array}{c} \hat V(t) = - {{\bf{\mu }}_{\rm{S}}} \cdot {\bf{B'}} = {\mu _{\rm{B}}}\left( {{{\hat \sigma }_x}{{B'}_x} + {{\hat \sigma }_y}{{B'}_y}} \right) \buildrel\textstyle.\over= {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} 0&amp;{{{B'}_x} - i{{B'}_y}}\\ {{{B'}_x} + i{{B'}_y}}&amp;0 \end{array}} \right)\\ = {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} 0&amp;{B'{e^{ - i\omega t}}}\\ {B'{e^{i\omega t}}}&amp;0 \end{array}} \right) = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&amp;{{\Omega _0}{e^{ - i\omega t}}}\\ {{\Omega _0}{e^{i\omega t}}}&amp;0 \end{array}} \right) \end{array}
+\begin{aligned}
+\hat V(t) &amp;= - {{\bf{\mu }}_{\rm{S}}} \cdot {\bf{B'}} = {\mu _{\rm{B}}}\left( {{{\hat \sigma }_x}{{B'}_x} + {{\hat \sigma }_y}{{B'}_y}} \right) \buildrel\textstyle.\over= {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} 0&amp;{{{B'}_x} - i{{B'}_y}}\\ {{{B'}_x} + i{{B'}_y}}&amp;0 \end{array}} \right) \\
+&amp;= {\mu _{\rm{B}}}\left( {\begin{array}{*{20}{c}} 0&amp;{B'{e^{ - i\omega t}}}\\ {B'{e^{i\omega t}}}&amp;0 \end{array}} \right) = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&amp;{{\Omega _0}{e^{ - i\omega t}}}\\ {{\Omega _0}{e^{i\omega t}}}&amp;0 \end{array}} \right)
+\end{aligned}
 \tag{6.5}\]</span></span></p>
 <p>We call <span class="math inline">\(\Omega_0\equiv2\mu_{\mathrm B}B'/\hbar\)</span> the <strong>resonant Rabi frequency</strong>, which measures the strength of the drive in frequency units. (Rabi received the 1944 Nobel Prize in Physics for his magnetic-resonance method using atomic and molecular beams.)</p>
 <p>The total Hamiltonian is therefore</p>
@@ -315,11 +318,18 @@ window.Quarto = {
 \tag{6.10}\]</span></span></p>
 <p>The difference <span class="math inline">\(\Delta\equiv\omega-\omega_0\)</span> is the <strong>detuning</strong>. It tells us how far the drive is from the natural transition frequency. The solution of <a href="#eq-zeqnnum721542" class="quarto-xref">Equation&nbsp;<span>6.10</span></a> is below; you can follow its derivation in the appendix.</p>
 <p><span id="eq-zeqnnum460032"><span class="math display">\[
-\begin{array}{l} {d_1}(t) = \cos \frac{{\Omega t}}{2} + i\frac{\Delta }{\Omega }\sin \frac{{\Omega t}}{2}\\ {d_2}(t) = - i\frac{{{\Omega _0}}}{\Omega }\sin \frac{{\Omega t}}{2} \end{array}
+\begin{aligned}
+{d_1}(t) &amp;= \cos \frac{{\Omega t}}{2} + i\frac{\Delta }{\Omega }\sin \frac{{\Omega t}}{2} \\
+{d_2}(t) &amp;= - i\frac{{{\Omega _0}}}{\Omega }\sin \frac{{\Omega t}}{2}
+\end{aligned}
 \tag{6.11}\]</span></span></p>
 <p>Here <span class="math inline">\(\Omega\equiv\sqrt{\Delta^2+\Omega_0^2}\)</span> is the <strong>generalized Rabi frequency</strong>. To recover <span class="math inline">\(\vert\psi(t)\rangle\)</span>, substitute <a href="#eq-zeqnnum460032" class="quarto-xref">Equation&nbsp;<span>6.11</span></a> into <a href="#eq-zeqnnum414068" class="quarto-xref">Equation&nbsp;<span>6.9</span></a> and then into <a href="#eq-zeqnnum361616" class="quarto-xref">Equation&nbsp;<span>6.7</span></a>. The probabilities for the two spin states are</p>
 <p><span id="eq-zeqnnum748213"><span class="math display">\[
-\begin{gathered} {P_1}(t) \equiv {\left\vert  {{c_1}(t)} \right\vert ^2} = \frac{1}{2}\left( {1 + \frac{{{\Delta ^2}}}{{{\Omega ^2}}}} \right) + \frac{1}{2}\frac{{\Omega _0^2}}{{{\Omega ^2}}}\cos \Omega t\xrightarrow{{\Delta = 0}}\frac{1}{2}\left( {1 + \cos {\Omega _0}t} \right)  \\ {P_2}(t) \equiv {\left\vert  {{c_2}(t)} \right\vert ^2} = \frac{1}{2}\frac{{\Omega _0^2}}{{{\Omega ^2}}}\left( {1 - \cos \Omega t} \right)\xrightarrow{{\Delta = 0}}\frac{1}{2}\left( {1 - \cos {\Omega _0}t} \right)  \\ \Delta \equiv \omega - {\omega _0},\, \qquad  {\Omega _0} \equiv {{2{\mu _{\text{B}}}B'} \mathord{\left/ {\vphantom {{2{\mu _{\text{B}}}B'} \hbar }} \right. \kern-1.2pt } \hbar }, \qquad  \;\;\;\;\;\;\Omega \equiv \sqrt {{\Delta ^2} + \Omega _0^2} ,  \\ \end{gathered}
+\begin{aligned}
+{P_1}(t) \equiv {\left\vert  {{c_1}(t)} \right\vert ^2} &amp;= \frac{1}{2}\left( {1 + \frac{{{\Delta ^2}}}{{{\Omega ^2}}}} \right) + \frac{1}{2}\frac{{\Omega _0^2}}{{{\Omega ^2}}}\cos \Omega t\xrightarrow{{\Delta = 0}}\frac{1}{2}\left( {1 + \cos {\Omega _0}t} \right) \\
+{P_2}(t) \equiv {\left\vert  {{c_2}(t)} \right\vert ^2} &amp;= \frac{1}{2}\frac{{\Omega _0^2}}{{{\Omega ^2}}}\left( {1 - \cos \Omega t} \right)\xrightarrow{{\Delta = 0}}\frac{1}{2}\left( {1 - \cos {\Omega _0}t} \right) \\
+\Delta &amp;\equiv \omega - {\omega _0},\, \qquad  {\Omega _0} \equiv {{2{\mu _{\text{B}}}B'} \mathord{\left/ {\vphantom {{2{\mu _{\text{B}}}B'} \hbar }} \right. \kern-1.2pt } \hbar }, \qquad  \;\;\;\;\;\;\Omega \equiv \sqrt {{\Delta ^2} + \Omega _0^2} ,
+\end{aligned}
 \tag{6.12}\]</span></span></p>
 <p>The probabilities <span class="math inline">\(P_1\)</span> and <span class="math inline">\(P_2\)</span> oscillate at angular frequency <span class="math inline">\(\Omega\)</span>. Population flows from one level to the other and then back again. We call this motion <strong>Rabi oscillation</strong>.</p>
 <p>Figure 6.1 shows how <span class="math inline">\(P_2(t)\)</span> changes when we vary the detuning. At <span class="math inline">\(\Delta=0\)</span>, the drive is on <strong>resonance</strong>. The probability <span class="math inline">\(P_2\)</span> swings all the way from zero to one. The oscillation is slowest here, but its range is largest. Away from resonance, the oscillations get faster and their range shrinks.</p>
@@ -344,13 +354,24 @@ window.Quarto = {
 </div>
 <p>We can also follow the mean spin vector by calculating <span class="math inline">\(\langle\psi(t)\vert\hat S_{x,y,z}\vert\psi(t)\rangle\)</span>:</p>
 <p><span id="eq-ch06-p1453"><span class="math display">\[
-\begin{gathered} \langle {{{\hat S}_z}}(t)\rangle = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {c_1^*,}&amp;{c_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 1&amp;0 \\ 0&amp;{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{c_1}} \\ {{c_2}} \end{array}} \right) = \frac{\hbar }{2}\left( {{{\left\vert  {{c_1}} \right\vert }^2} - {{\left\vert  {{c_2}} \right\vert }^2}} \right) \\ = \frac{\hbar }{2}\left[ {\left( {1 - \frac{{\Omega _0^2}}{{{\Omega ^2}}}} \right) + \frac{{\Omega _0^2}}{{{\Omega ^2}}}\cos \Omega t} \right]\xrightarrow{{\Delta = 0}}\frac{\hbar }{2}\cos {\Omega _0}t \\ \end{gathered}
+\begin{aligned}
+\langle {{{\hat S}_z}}(t)\rangle &amp;= \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {c_1^*,}&amp;{c_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 1&amp;0 \\ 0&amp;{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{c_1}} \\ {{c_2}} \end{array}} \right) = \frac{\hbar }{2}\left( {{{\left\vert  {{c_1}} \right\vert }^2} - {{\left\vert  {{c_2}} \right\vert }^2}} \right) \\
+&amp;= \frac{\hbar }{2}\left[ {\left( {1 - \frac{{\Omega _0^2}}{{{\Omega ^2}}}} \right) + \frac{{\Omega _0^2}}{{{\Omega ^2}}}\cos \Omega t} \right]\xrightarrow{{\Delta = 0}}\frac{\hbar }{2}\cos {\Omega _0}t
+\end{aligned}
 \tag{6.14}\]</span></span></p>
 <p><span id="eq-ch06-p1454"><span class="math display">\[
-\begin{gathered} \langle {{{\hat S}_x}(t)}\rangle = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {c_1^*,}&amp;{c_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&amp;1 \\ 1&amp;0 \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{c_1}} \\ {{c_2}} \end{array}} \right) = \frac{\hbar }{2}\left( {{c_1}c_2^* + c_1^*{c_2}} \right) \\ = \frac{\hbar }{2}\frac{{{\Omega _0}}}{{{\Omega ^2}}}\left[ {\Omega \sin \Omega t\sin \omega t - \Delta (1 - \cos \Omega t)\cos \omega t} \right] \\ \xrightarrow{{\Delta = 0}}\frac{\hbar }{2}\sin {\Omega _0}t\sin {\omega _0}t \\ \end{gathered}
+\begin{aligned}
+\langle {{{\hat S}_x}(t)}\rangle &amp;= \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {c_1^*,}&amp;{c_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&amp;1 \\ 1&amp;0 \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{c_1}} \\ {{c_2}} \end{array}} \right) = \frac{\hbar }{2}\left( {{c_1}c_2^* + c_1^*{c_2}} \right) \\
+&amp;= \frac{\hbar }{2}\frac{{{\Omega _0}}}{{{\Omega ^2}}}\left[ {\Omega \sin \Omega t\sin \omega t - \Delta (1 - \cos \Omega t)\cos \omega t} \right] \\
+&amp;\xrightarrow{{\Delta = 0}}\frac{\hbar }{2}\sin {\Omega _0}t\sin {\omega _0}t
+\end{aligned}
 \tag{6.15}\]</span></span></p>
 <p><span id="eq-ch06-p1455"><span class="math display">\[
-\begin{gathered} \langle {{{\hat S}_y}(t)}\rangle = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {c_1^*,}&amp;{c_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&amp;{ - i} \\ i&amp;0 \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{c_1}} \\ {{c_2}} \end{array}} \right) = \frac{{i\hbar }}{2}\left( {{c_1}c_2^* - c_1^*{c_2}} \right) \\ = - \frac{\hbar }{2}\frac{{{\Omega _0}}}{{{\Omega ^2}}}\left[ {\Omega \sin \Omega t\cos \omega t + \Delta (1 - \cos \Omega t)\sin \omega t} \right] \\ \xrightarrow{{\Delta = 0}} - \frac{\hbar }{2}\sin {\Omega _0}t\cos {\omega _0}t \\ \end{gathered}
+\begin{aligned}
+\langle {{{\hat S}_y}(t)}\rangle &amp;= \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} {c_1^*,}&amp;{c_2^*} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&amp;{ - i} \\ i&amp;0 \end{array}} \right)\left( {\begin{array}{*{20}{c}} {{c_1}} \\ {{c_2}} \end{array}} \right) = \frac{{i\hbar }}{2}\left( {{c_1}c_2^* - c_1^*{c_2}} \right) \\
+&amp;= - \frac{\hbar }{2}\frac{{{\Omega _0}}}{{{\Omega ^2}}}\left[ {\Omega \sin \Omega t\cos \omega t + \Delta (1 - \cos \Omega t)\sin \omega t} \right] \\
+&amp;\xrightarrow{{\Delta = 0}} - \frac{\hbar }{2}\sin {\Omega _0}t\cos {\omega _0}t
+\end{aligned}
 \tag{6.16}\]</span></span></p>
 </section>
 <section id="linearly-polarized-drive" class="level3" data-number="6.1.2">
@@ -361,7 +382,10 @@ window.Quarto = {
 \tag{6.17}\]</span></span></p>
 <p>Its interaction with the electron’s magnetic moment gives</p>
 <p><span id="eq-zeqnnum472633"><span class="math display">\[
-\begin{array}{c} \hat V(t) = 2{\mu _{\rm{B}}}B'\cos \omega t\left( {\begin{array}{*{20}{c}} 0&amp;1\\ 1&amp;0 \end{array}} \right) = \hbar \left( {\begin{array}{*{20}{c}} 0&amp;{{\Omega _0}\cos \omega t}\\ {{\Omega _0}\cos \omega t}&amp;0 \end{array}} \right)\\ = \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&amp;{{\Omega _0}({e^{i\omega t}} + {e^{ - i\omega t}})}\\ {{\Omega _0}({e^{i\omega t}} + {e^{ - i\omega t}})}&amp;0 \end{array}} \right) \end{array}
+\begin{aligned}
+\hat V(t) &amp;= 2{\mu _{\rm{B}}}B'\cos \omega t\left( {\begin{array}{*{20}{c}} 0&amp;1\\ 1&amp;0 \end{array}} \right) = \hbar \left( {\begin{array}{*{20}{c}} 0&amp;{{\Omega _0}\cos \omega t}\\ {{\Omega _0}\cos \omega t}&amp;0 \end{array}} \right) \\
+&amp;= \frac{\hbar }{2}\left( {\begin{array}{*{20}{c}} 0&amp;{{\Omega _0}({e^{i\omega t}} + {e^{ - i\omega t}})}\\ {{\Omega _0}({e^{i\omega t}} + {e^{ - i\omega t}})}&amp;0 \end{array}} \right)
+\end{aligned}
 \tag{6.18}\]</span></span></p>
 <p>Following <a href="#eq-zeqnnum833059" class="quarto-xref">Equation&nbsp;<span>6.5</span></a> through <a href="#eq-zeqnnum927934" class="quarto-xref">Equation&nbsp;<span>6.8</span></a>, the Schrödinger equation becomes</p>
 <p><span id="eq-ch06-p1461"><span class="math display">\[
@@ -369,7 +393,10 @@ window.Quarto = {
 \tag{6.19}\]</span></span></p>
 <p>Using the definitions and method following <a href="#eq-zeqnnum414068" class="quarto-xref">Equation&nbsp;<span>6.9</span></a> gives</p>
 <p><span id="eq-zeqnnum877206"><span class="math display">\[
-\begin{array}{c} {{\dot d}_1} = \frac{i}{2}\left[ {\Delta {d_1} - {\Omega _0}({e^{2i\omega t}} + 1){d_2}} \right],\\ {{\dot d}_2} = \frac{i}{2}\left[ { - {\Omega _0}(1 + {e^{ - 2i\omega t}}){d_1} - \Delta {d_2}} \right], \end{array}
+\begin{aligned}
+{{\dot d}_1} &amp;= \frac{i}{2}\left[ {\Delta {d_1} - {\Omega _0}({e^{2i\omega t}} + 1){d_2}} \right], \\
+{{\dot d}_2} &amp;= \frac{i}{2}\left[ { - {\Omega _0}(1 + {e^{ - 2i\omega t}}){d_1} - \Delta {d_2}} \right],
+\end{aligned}
 \tag{6.20}\]</span></span></p>
 <p>Now assume the weak drive is close to resonance: <span class="math inline">\(B'\ll B_0\)</span> and <span class="math inline">\(\Omega_0,|\Delta|\ll\omega_0,\omega\)</span>. In <a href="#eq-zeqnnum877206" class="quarto-xref">Equation&nbsp;<span>6.20</span></a>, the factors <span class="math inline">\(e^{\pm2i\omega t}\)</span> then cycle much faster than <span class="math inline">\(d_1\)</span> and <span class="math inline">\(d_2\)</span> change. Their effects largely average out. Dropping these fast oscillating terms is called the <strong>rotating-wave approximation</strong>. Then the equation reduces to <a href="#eq-zeqnnum721542" class="quarto-xref">Equation&nbsp;<span>6.10</span></a>, so we can reuse the solution we already have.</p>
 <p>Therefore, near resonance, a weak linear drive acts approximately like a circular drive with half its amplitude.</p>
@@ -379,7 +406,10 @@ window.Quarto = {
 <h2 data-number="6.2" class="anchored" data-anchor-id="transitions-in-a-general-two-level-system"><span class="header-section-number">6.2</span> Transitions in a general two-level system</h2>
 <p>The same mathematics works far beyond electron spin. Consider any two-level system with energy separation <span class="math inline">\(\hbar\omega_0\)</span>. We can choose the zero of energy halfway between the levels and write</p>
 <p><span id="eq-ch06-p1468"><span class="math display">\[
-\begin{array}{l} {{\hat H}_0}\vert 1\rangle = \hbar \frac{{{\omega _0}}}{2}\vert 1\rangle \\ {{\hat H}_0}\vert 2\rangle = - \hbar \frac{{{\omega _0}}}{2}\vert 2\rangle \end{array}
+\begin{aligned}
+{{\hat H}_0}\vert 1\rangle &amp;= \hbar \frac{{{\omega _0}}}{2}\vert 1\rangle \\
+{{\hat H}_0}\vert 2\rangle &amp;= - \hbar \frac{{{\omega _0}}}{2}\vert 2\rangle
+\end{aligned}
 \tag{6.21}\]</span></span></p>
 <p>Here <span class="math inline">\(\vert 1\rangle\)</span> is the excited state and <span class="math inline">\(\vert 2\rangle\)</span> is the ground state. In this energy basis,</p>
 <p><span id="eq-zeqnnum616848"><span class="math display">\[
@@ -410,18 +440,31 @@ window.Quarto = {
 \tag{6.25}\]</span></span></p>
 <p>Define a real vector <span class="math inline">\(\mathbf P=\{u,v,w\}\)</span>, called the <strong>Bloch vector</strong>:</p>
 <p><span id="eq-zeqnnum365247"><span class="math display">\[
-\begin{array}{l} u = {\rho _{12}} + {\rho _{21}}\\ v = i({\rho _{12}} - {\rho _{21}})\\ \omega = {\rho _{11}} - {\rho _{22}} \end{array}
+\begin{aligned}
+u &amp;= {\rho _{12}} + {\rho _{21}} \\
+v &amp;= i({\rho _{12}} - {\rho _{21}}) \\
+\omega &amp;= {\rho _{11}} - {\rho _{22}}
+\end{aligned}
 \tag{6.26}\]</span></span></p>
 <p>where</p>
 <p><span id="eq-zeqnnum448235"><span class="math display">\[
 {\rho _{ij}} \equiv {d_i}d_j^*
 \tag{6.27}\]</span></span></p>
 <p><span id="eq-ch06-p1484"><span class="math display">\[
-\begin{array}{l} {\rho _{12}} = \frac{1}{2}{e^{ - i\phi }}\sin \theta \\ {\rho _{21}} = \frac{1}{2}{e^{i\phi }}\sin \theta \\ {\rho _{11}} = \frac{{1 + \cos \theta }}{2}\\ {\rho _{22}} = \frac{{1 - \cos \theta }}{2} \end{array}
+\begin{aligned}
+{\rho _{12}} &amp;= \frac{1}{2}{e^{ - i\phi }}\sin \theta \\
+{\rho _{21}} &amp;= \frac{1}{2}{e^{i\phi }}\sin \theta \\
+{\rho _{11}} &amp;= \frac{{1 + \cos \theta }}{2} \\
+{\rho _{22}} &amp;= \frac{{1 - \cos \theta }}{2}
+\end{aligned}
 \tag{6.28}\]</span></span></p>
 <p>By <a href="#eq-zeqnnum365247" class="quarto-xref">Equation&nbsp;<span>6.26</span></a>,</p>
 <p><span id="eq-ch06-p1486"><span class="math display">\[
-\begin{array}{l} u = {\rho _{12}} + {\rho _{21}} = \sin \theta \cos \phi \\ v = i({\rho _{12}} - {\rho _{21}}) = \sin \theta \sin \phi \\ \omega = {\rho _{11}} - {\rho _{22}} = \cos \theta \end{array}
+\begin{aligned}
+u &amp;= {\rho _{12}} + {\rho _{21}} = \sin \theta \cos \phi \\
+v &amp;= i({\rho _{12}} - {\rho _{21}}) = \sin \theta \sin \phi \\
+\omega &amp;= {\rho _{11}} - {\rho _{22}} = \cos \theta
+\end{aligned}
 \tag{6.29}\]</span></span></p>
 <p>Check that <span class="math inline">\(u^2+v^2+w^2=1\)</span>. The Bloch vector has unit length, and <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\phi\)</span> give its direction. Its tip lies on the <strong>Bloch sphere</strong>. Each point on this surface represents a pure state. For example,</p>
 <p><span id="eq-ch06-p1488"><span class="math display">\[
@@ -429,11 +472,20 @@ window.Quarto = {
 \tag{6.30}\]</span></span></p>
 <p>To see how the vector moves, differentiate its components. <a href="#eq-zeqnnum721542" class="quarto-xref">Equation&nbsp;<span>6.10</span></a> and <a href="#eq-zeqnnum448235" class="quarto-xref">Equation&nbsp;<span>6.27</span></a> give</p>
 <p><span id="eq-zeqnnum821674"><span class="math display">\[
-\begin{array}{l} {{\dot \rho }_{12}} = i\Delta {\rho _{12}} + i\frac{{{\Omega _0}}}{2}\left( {{\rho _{11}} - {\rho _{22}}} \right)\\ {{\dot \rho }_{21}} = - i\Delta {\rho _{21}} - i\frac{{{\Omega _0}}}{2}\left( {{\rho _{11}} - {\rho _{22}}} \right)\\ {{\dot \rho }_{11}} = i\frac{{{\Omega _0}}}{2}\left( {{\rho _{12}} - {\rho _{21}}} \right)\\ {{\dot \rho }_{22}} = - i\frac{{{\Omega _0}}}{2}\left( {{\rho _{12}} - {\rho _{21}}} \right) \end{array}
+\begin{aligned}
+{{\dot \rho }_{12}} &amp;= i\Delta {\rho _{12}} + i\frac{{{\Omega _0}}}{2}\left( {{\rho _{11}} - {\rho _{22}}} \right) \\
+{{\dot \rho }_{21}} &amp;= - i\Delta {\rho _{21}} - i\frac{{{\Omega _0}}}{2}\left( {{\rho _{11}} - {\rho _{22}}} \right) \\
+{{\dot \rho }_{11}} &amp;= i\frac{{{\Omega _0}}}{2}\left( {{\rho _{12}} - {\rho _{21}}} \right) \\
+{{\dot \rho }_{22}} &amp;= - i\frac{{{\Omega _0}}}{2}\left( {{\rho _{12}} - {\rho _{21}}} \right)
+\end{aligned}
 \tag{6.31}\]</span></span></p>
 <p>Using <a href="#eq-zeqnnum821674" class="quarto-xref">Equation&nbsp;<span>6.31</span></a> and <a href="#eq-zeqnnum365247" class="quarto-xref">Equation&nbsp;<span>6.26</span></a>,</p>
 <p><span id="eq-zeqnnum729193"><span class="math display">\[
-\begin{array}{l} \frac{{du}}{{dt}} = \Delta v\\ \frac{{dv}}{{dt}} = - \Delta u - {\Omega _0}w\\ \frac{{dw}}{{dt}} = {\Omega _0}v \end{array}
+\begin{aligned}
+\frac{{du}}{{dt}} &amp;= \Delta v \\
+\frac{{dv}}{{dt}} &amp;= - \Delta u - {\Omega _0}w \\
+\frac{{dw}}{{dt}} &amp;= {\Omega _0}v
+\end{aligned}
 \tag{6.32}\]</span></span></p>
 <p>Now define <span class="math inline">\(\boldsymbol\Omega=\{\Omega_0,0,-\Delta\}\)</span>. We can gather the three equations in <a href="#eq-zeqnnum729193" class="quarto-xref">Equation&nbsp;<span>6.32</span></a> into one vector equation:</p>
 <p><span id="eq-zeqnnum862867"><span class="math display">\[
@@ -473,7 +525,11 @@ window.Quarto = {
 \tag{6.40}\]</span></span></p>
 <p>Substituting <span class="math inline">\({g_ \pm }\)</span> into <a href="#eq-zeqnnum771504" class="quarto-xref">Equation&nbsp;<span>6.38</span></a> gives</p>
 <p><span id="eq-ch06-p1514"><span class="math display">\[
-\begin{array}{c} \left( {\begin{array}{*{20}{c}} {{d_1}(t)}\\ {{d_2}(t)} \end{array}} \right) = \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {(\Omega + \Delta ){\Omega _0}}\\ {(\Omega + \Delta )(\Delta - \Omega )} \end{array}} \right){e^{{{i{\lambda _ + }t} \mathord{\left/ {\vphantom {{i{\lambda _ + }t} 2}} \right. \kern-1.2pt } 2}}} + \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {(\Omega - \Delta ){\Omega _0}}\\ {(\Omega - \Delta )(\Delta + \Omega )} \end{array}} \right){e^{{{i{\lambda _ - }t} \mathord{\left/ {\vphantom {{i{\lambda _ - }t} 2}} \right. \kern-1.2pt } 2}}}\\ = \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {(\Omega + \Delta ){\Omega _0}{e^{{{i\Omega t} \mathord{\left/ {\vphantom {{i\Omega t} 2}} \right. \kern-1.2pt } 2}}} + (\Omega - \Delta ){\Omega _0}{e^{{{ - i\Omega t} \mathord{\left/ {\vphantom {{ - i\Omega t} 2}} \right. \kern-1.2pt } 2}}}}\\ { - \Omega _0^2{e^{{{i\Omega t} \mathord{\left/ {\vphantom {{i\Omega t} 2}} \right. \kern-1.2pt } 2}}} + \Omega _0^2{e^{{{ - i\Omega t} \mathord{\left/ {\vphantom {{ - i\Omega t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right)\\ = = \left( {\begin{array}{*{20}{c}} {\cos \left( {\frac{\Omega }{2}t} \right) + \frac{{i\Delta }}{\Omega }\sin \left( {\frac{\Omega }{2}t} \right)}\\ { - \frac{{i{\Omega _0}}}{\Omega }\sin \left( {\frac{\Omega }{2}t} \right)} \end{array}} \right) \end{array}
+\begin{aligned}
+\left( {\begin{array}{*{20}{c}} {{d_1}(t)}\\ {{d_2}(t)} \end{array}} \right) &amp;= \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {(\Omega + \Delta ){\Omega _0}}\\ {(\Omega + \Delta )(\Delta - \Omega )} \end{array}} \right){e^{{{i{\lambda _ + }t} \mathord{\left/ {\vphantom {{i{\lambda _ + }t} 2}} \right. \kern-1.2pt } 2}}} + \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {(\Omega - \Delta ){\Omega _0}}\\ {(\Omega - \Delta )(\Delta + \Omega )} \end{array}} \right){e^{{{i{\lambda _ - }t} \mathord{\left/ {\vphantom {{i{\lambda _ - }t} 2}} \right. \kern-1.2pt } 2}}}\\
+&amp;= \frac{1}{{2{\Omega _0}\Omega }}\left( {\begin{array}{*{20}{c}} {(\Omega + \Delta ){\Omega _0}{e^{{{i\Omega t} \mathord{\left/ {\vphantom {{i\Omega t} 2}} \right. \kern-1.2pt } 2}}} + (\Omega - \Delta ){\Omega _0}{e^{{{ - i\Omega t} \mathord{\left/ {\vphantom {{ - i\Omega t} 2}} \right. \kern-1.2pt } 2}}}}\\ { - \Omega _0^2{e^{{{i\Omega t} \mathord{\left/ {\vphantom {{i\Omega t} 2}} \right. \kern-1.2pt } 2}}} + \Omega _0^2{e^{{{ - i\Omega t} \mathord{\left/ {\vphantom {{ - i\Omega t} 2}} \right. \kern-1.2pt } 2}}}} \end{array}} \right)\\
+&amp;= \left( {\begin{array}{*{20}{c}} {\cos \left( {\frac{\Omega }{2}t} \right) + \frac{{i\Delta }}{\Omega }\sin \left( {\frac{\Omega }{2}t} \right)}\\ { - \frac{{i{\Omega _0}}}{\Omega }\sin \left( {\frac{\Omega }{2}t} \right)} \end{array}} \right)
+\end{aligned}
 \tag{6.41}\]</span></span></p>
 </section>
 <section id="exercises" class="level2" data-number="6.5">

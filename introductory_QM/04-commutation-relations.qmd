@@ -154,7 +154,10 @@ $$ {#eq-ch04-p0668}
 This is the eigenvalue equation for $\hat B$. So $\lvert a_j\rangle$ is an eigenstate of both operators, and $b_j$ is real because $\hat B$ is Hermitian. We can make both definite values visible by writing the same ket as $\lvert a_j,b_j\rangle$:
 
 $$
-\begin{array}{l} \hat A\left\vert  {{a_j},{b_j}} \right\rangle = {a_j}\left\vert  {{a_j},{b_j}} \right\rangle \\ \hat B\left\vert  {{a_j},{b_j}} \right\rangle = {b_j}\left\vert  {{a_j},{b_j}} \right\rangle \end{array}
+\begin{aligned}
+\hat A\left\vert  {{a_j},{b_j}} \right\rangle &= {a_j}\left\vert  {{a_j},{b_j}} \right\rangle \\
+\hat B\left\vert  {{a_j},{b_j}} \right\rangle &= {b_j}\left\vert  {{a_j},{b_j}} \right\rangle
+\end{aligned}
 $$ {#eq-zeqnnum348929}
 
 What changes if an eigenvalue of $\hat A$ is degenerate? Now several independent states share the same value, so $\hat B$ can turn one of them into a combination of the others. Equation @eq-zeqnnum209049 still tells us that it stays within that eigenspace. We can choose an eigenbasis of $\hat B$ inside each such space; all those states remain eigenstates of $\hat A$ as well. Putting these bases together gives a complete common eigenbasis. Thus, in finite dimensions, **two Hermitian operators commute if and only if they have a complete common eigenbasis**.
@@ -206,7 +209,10 @@ Figure 4.3. Resolving degeneracy with a second observable.
 **Example: orbital angular momentum.** We can label angular momentum states using the squared orbital angular momentum, $\mathbf{\hat L}^2$, and one component, $\hat L_z$. These operators commute. Their common eigenstates are written $\lvert l,m\rangle$, with
 
 $$
-\begin{array}{l} {{{\bf{\hat L}}}^2}\left\vert  {l,m} \right\rangle = l(l + 1){\hbar ^2}\left\vert  {l,m} \right\rangle , & & l = 0,1,2 \cdots \\ {{\hat L}_z}\left\vert  {l,m} \right\rangle = m\hbar \left\vert  {l,m} \right\rangle , & & m = - l, - l + 1, \cdots ,l & & \end{array}
+\begin{aligned}
+{{{\bf{\hat L}}}^2}\left\vert  {l,m} \right\rangle &= l(l + 1){\hbar ^2}\left\vert  {l,m} \right\rangle , && l = 0,1,2 \cdots \\
+{{\hat L}_z}\left\vert  {l,m} \right\rangle &= m\hbar \left\vert  {l,m} \right\rangle , && m = - l, - l + 1, \cdots ,l
+\end{aligned}
 $$ {#eq-ch04-p0890}
 
 {{< include _tables/_ch04-orbital-angular-momentum.qmd >}}
@@ -420,7 +426,10 @@ Compare @eq-zeqnnum557165 with @eq-ch04-p1233, we see that the state representat
 
 As the representatin of a state changes in the new basis, an operator's matrix must change too, so that its action on a state is independent of the basis we use to describe that state. In the $B$ basis, the matrix elements of an operator $\hat X$ are:
 $$
-\begin{array}{c} \left\langle {{b_i}} \right\vert \hat X\left\vert  {{b_j}} \right\rangle = \sum\limits_{l,m} {\left\langle {{{b_i}}} \mathrel{\left \vert  {\vphantom {{{b_i}} {{a_l}}}} \right. \kern-1.2pt } {{{a_l}}} \right\rangle } \left\langle {{a_l}} \right\vert \hat X\left\vert  {{a_m}} \right\rangle \left\langle {{{a_m}}} \mathrel{\left \vert  {\vphantom {{{a_m}} {{b_j}}}} \right. \kern-1.2pt } {{{b_j}}} \right\rangle \\ = \sum\limits_{l,m} {\left\langle {{a_i}} \right\vert {{\hat U}^\dagger }\left\vert  {{a_l}} \right\rangle } \left\langle {{a_l}} \right\vert \hat X\left\vert  {{a_m}} \right\rangle \left\langle {{a_m}} \right\vert \hat U\left\vert  {{a_j}} \right\rangle \end{array}
+\begin{aligned}
+\left\langle {{b_i}} \right\vert \hat X\left\vert  {{b_j}} \right\rangle &= \sum\limits_{l,m} {\left\langle {{{b_i}}} \mathrel{\left \vert  {\vphantom {{{b_i}} {{a_l}}}} \right. \kern-1.2pt } {{{a_l}}} \right\rangle } \left\langle {{a_l}} \right\vert \hat X\left\vert  {{a_m}} \right\rangle \left\langle {{{a_m}}} \mathrel{\left \vert  {\vphantom {{{a_m}} {{b_j}}}} \right. \kern-1.2pt } {{{b_j}}} \right\rangle \\
+ &= \sum\limits_{l,m} {\left\langle {{a_i}} \right\vert {{\hat U}^\dagger }\left\vert  {{a_l}} \right\rangle } \left\langle {{a_l}} \right\vert \hat X\left\vert  {{a_m}} \right\rangle \left\langle {{a_m}} \right\vert \hat U\left\vert  {{a_j}} \right\rangle
+\end{aligned}
 $$ {#eq-zeqnnum132759}
 The left side is a matrix element of $\hat X$ in the $B$ basis. The three factors on the right are matrix elements of $\hat U^\dagger$, $X_A$, and $\hat U$ in the $\hat A$ basis. In matrix notation,
 
@@ -443,7 +452,11 @@ $$ {#eq-ch04-p1260}
 
 Now apply @eq-zeqnnum834377 to each Pauli matrix. In the $\hat\sigma_x$ basis, the results are
 $$
-\begin{array}{l} {{\hat \sigma }_x} \buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&1\\ 1&{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&1\\ 1&0 \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&1\\ 1&{ - 1} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 1&0\\ 0&{ - 1} \end{array}} \right)\\ {{\hat \sigma }_y} \buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&1\\ 1&{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&{ - i}\\ i&0 \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&1\\ 1&{ - 1} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0&i\\ { - i}&0 \end{array}} \right)\\ {{\hat \sigma }_z} \buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&1\\ 1&{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 1&0\\ 0&{ - 1} \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&1\\ 1&{ - 1} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0&1\\ 1&0 \end{array}} \right) \end{array}
+\begin{aligned}
+{{\hat \sigma }_x} &\buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&1\\ 1&{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&1\\ 1&0 \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&1\\ 1&{ - 1} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 1&0\\ 0&{ - 1} \end{array}} \right) \\
+{{\hat \sigma }_y} &\buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&1\\ 1&{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&{ - i}\\ i&0 \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&1\\ 1&{ - 1} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0&i\\ { - i}&0 \end{array}} \right) \\
+{{\hat \sigma }_z} &\buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&1\\ 1&{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 1&0\\ 0&{ - 1} \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&1\\ 1&{ - 1} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0&1\\ 1&0 \end{array}} \right)
+\end{aligned}
 $$ {#eq-ch04-p1262}
 
 One useful check on a basis change is the **trace**, the sum of a matrix's diagonal elements. The individual elements may change, but their sum stays the same.
@@ -490,7 +503,10 @@ Here are the rules to keep nearby when doing calculations. We define the basis-t
 The basis-transformation operator has the same matrices in the two bases it connects, and the same is true of its adjoint:
 
 $$
-\begin{array}{l} \langle {{a_l}}\vert {\hat U}\vert {{a_m}}\rangle = \langle {{b_l}}\vert {\hat U}\vert {{b_m}}\rangle = \langle {{a_l}}\vert {{b_m}}\rangle \\ \langle {{a_l}}\vert {{{\hat U}^\dagger }}\vert {{a_m}}\rangle = \langle {{b_l}}\vert {{\hat U}^\dagger }\vert {{b_m}}\rangle = \langle {b_l}\vert {{a_m}}\rangle \end{array}
+\begin{aligned}
+\langle {{a_l}}\vert {\hat U}\vert {{a_m}}\rangle &= \langle {{b_l}}\vert {\hat U}\vert {{b_m}}\rangle = \langle {{a_l}}\vert {{b_m}}\rangle \\
+\langle {{a_l}}\vert {{{\hat U}^\dagger }}\vert {{a_m}}\rangle &= \langle {{b_l}}\vert {{\hat U}^\dagger }\vert {{b_m}}\rangle = \langle {b_l}\vert {{a_m}}\rangle
+\end{aligned}
 $$ {#eq-ch04-p1279}
 
 ## \* The Heisenberg uncertainty principle

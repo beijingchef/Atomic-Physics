@@ -182,7 +182,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06-transitions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Transitions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -363,7 +363,10 @@ i\hbar \frac{\partial }{{\partial t}}\left\langle {{{E_j}}} \mathrel{\left \vert
 \tag{5.20}\]</span></span></p>
 <p>This solves the problem for a time-independent Hamiltonian. The rule is simple: expand the initial state in energy eigenstates, then multiply each component by its own phase factor. Compare the two expansions:</p>
 <p><span id="eq-zeqnnum160654"><span class="math display">\[
-\begin{array}{c} \left\vert  {\psi \left( 0 \right)} \right\rangle = \sum\limits_j {\left\vert  {{E_j}} \right\rangle \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle } \\ \left\vert  {\psi \left( t \right)} \right\rangle = \sum\limits_j {\left\vert  {{E_j}} \right\rangle \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle {e^{ - {{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}} \end{array}
+\begin{aligned}
+\left\vert  {\psi \left( 0 \right)} \right\rangle &amp;= \sum\limits_j {\left\vert  {{E_j}} \right\rangle \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle } \\
+\left\vert  {\psi \left( t \right)} \right\rangle &amp;= \sum\limits_j {\left\vert  {{E_j}} \right\rangle \left\langle {{{E_j}}} \mathrel{\left \vert  {\vphantom {{{E_j}} {\psi \left( 0 \right)}}} \right. \kern-1.2pt } {{\psi \left( 0 \right)}} \right\rangle {e^{ - {{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}}
+\end{aligned}
 \tag{5.21}\]</span></span></p>
 <section id="stationary-states" class="level3" data-number="5.2.1">
 <h3 data-number="5.2.1" class="anchored" data-anchor-id="stationary-states"><span class="header-section-number">5.2.1</span> Stationary states</h3>
@@ -373,7 +376,10 @@ i\hbar \frac{\partial }{{\partial t}}\left\langle {{{E_j}}} \mathrel{\left \vert
 \tag{5.22}\]</span></span></p>
 <p>Then <a href="#eq-zeqnnum925440" class="quarto-xref">Equation&nbsp;<span>5.20</span></a> becomes</p>
 <p><span id="eq-ch05-p1382"><span class="math display">\[
-\begin{array}{c} \left\vert  {\psi (t)} \right\rangle = \sum\limits_j {\left\vert  {{E_j}} \right\rangle {\delta _{jm}}{e^{ - {{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}} = \left\vert  {{E_m}} \right\rangle {e^{ - {{i{E_m}t} \mathord{\left/ {\vphantom {{i{E_m}t} \hbar }} \right. \kern-1.2pt } \hbar }}}\\ = {e^{ - {{i{E_m}t} \mathord{\left/ {\vphantom {{i{E_m}t} \hbar }} \right. \kern-1.2pt } \hbar }}}\left\vert  {\psi (0)} \right\rangle \end{array}
+\begin{aligned}
+\left\vert  {\psi (t)} \right\rangle &amp;= \sum\limits_j {\left\vert  {{E_j}} \right\rangle {\delta _{jm}}{e^{ - {{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}} = \left\vert  {{E_m}} \right\rangle {e^{ - {{i{E_m}t} \mathord{\left/ {\vphantom {{i{E_m}t} \hbar }} \right. \kern-1.2pt } \hbar }}} \\
+&amp;= {e^{ - {{i{E_m}t} \mathord{\left/ {\vphantom {{i{E_m}t} \hbar }} \right. \kern-1.2pt } \hbar }}}\left\vert  {\psi (0)} \right\rangle
+\end{aligned}
 \tag{5.23}\]</span></span></p>
 <p>Only an overall phase has changed. As we learned earlier, that phase does not change the physical state. We call an energy eigenstate of a time-independent Hamiltonian a <strong>stationary state</strong>. Its measurement probabilities stay the same, even though its ket acquires a time-dependent phase.</p>
 </section>
@@ -383,7 +389,10 @@ i\hbar \frac{\partial }{{\partial t}}\left\langle {{{E_j}}} \mathrel{\left \vert
 <p>Once we know the state, we can calculate an observable’s expectation value. For <span class="math inline">\(\hat A\)</span>, it is <span class="math inline">\(\langle\hat A(t)\rangle\equiv\langle\psi(t)\vert\hat A\vert\psi(t)\rangle\)</span>. Use <a href="#eq-zeqnnum160654" class="quarto-xref">Equation&nbsp;<span>5.21</span></a> to evolve the ket, take its adjoint to get the bra, and place <span class="math inline">\(\hat A\)</span> between them.</p>
 <p>Using <a href="03-quantum-measurement.html#eq-zeqnnum739477" class="quarto-xref">Equation&nbsp;<span>3.5</span></a> and <a href="#eq-zeqnnum160654" class="quarto-xref">Equation&nbsp;<span>5.21</span></a>, we get</p>
 <p><span id="eq-zeqnnum188299"><span class="math display">\[
-\begin{array}{c} \left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle = \sum\limits_{j,k} {{e^{{{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}\left\langle {{\psi (0)}} \mathrel{\left \vert  {\vphantom {{\psi (0)} {{E_j}}}} \right. \kern-1.2pt } {{{E_j}}} \right\rangle \left\langle {{E_j}} \right\vert \hat A\left\vert  {{E_k}} \right\rangle \left\langle {{{E_k}}} \mathrel{\left \vert  {\vphantom {{{E_k}} {\psi (0)}}} \right. \kern-1.2pt } {{\psi (0)}} \right\rangle {e^{{{ - i{E_k}t} \mathord{\left/ {\vphantom {{ - i{E_k}t} \hbar }} \right. \kern-1.2pt } \hbar }}}} \\ = \sum\limits_{j,k} {\left\langle {{\psi (0)}} \mathrel{\left \vert  {\vphantom {{\psi (0)} {{E_j}}}} \right. \kern-1.2pt } {{{E_j}}} \right\rangle \left\langle {{{E_k}}} \mathrel{\left \vert  {\vphantom {{{E_k}} {\psi (0)}}} \right. \kern-1.2pt } {{\psi (0)}} \right\rangle \left\langle {{E_j}} \right\vert \hat A\left\vert  {{E_k}} \right\rangle {e^{{{i\left( {{E_j} - {E_k}} \right)t} \mathord{\left/ {\vphantom {{i\left( {{E_j} - {E_k}} \right)t} \hbar }} \right. \kern-1.2pt } \hbar }}}} \end{array}
+\begin{aligned}
+\left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle &amp;= \sum\limits_{j,k} {{e^{{{i{E_j}t} \mathord{\left/ {\vphantom {{i{E_j}t} \hbar }} \right. \kern-1.2pt } \hbar }}}\left\langle {{\psi (0)}} \mathrel{\left \vert  {\vphantom {{\psi (0)} {{E_j}}}} \right. \kern-1.2pt } {{{E_j}}} \right\rangle \left\langle {{E_j}} \right\vert \hat A\left\vert  {{E_k}} \right\rangle \left\langle {{{E_k}}} \mathrel{\left \vert  {\vphantom {{{E_k}} {\psi (0)}}} \right. \kern-1.2pt } {{\psi (0)}} \right\rangle {e^{{{ - i{E_k}t} \mathord{\left/ {\vphantom {{ - i{E_k}t} \hbar }} \right. \kern-1.2pt } \hbar }}}} \\
+&amp;= \sum\limits_{j,k} {\left\langle {{\psi (0)}} \mathrel{\left \vert  {\vphantom {{\psi (0)} {{E_j}}}} \right. \kern-1.2pt } {{{E_j}}} \right\rangle \left\langle {{{E_k}}} \mathrel{\left \vert  {\vphantom {{{E_k}} {\psi (0)}}} \right. \kern-1.2pt } {{\psi (0)}} \right\rangle \left\langle {{E_j}} \right\vert \hat A\left\vert  {{E_k}} \right\rangle {e^{{{i\left( {{E_j} - {E_k}} \right)t} \mathord{\left/ {\vphantom {{i\left( {{E_j} - {E_k}} \right)t} \hbar }} \right. \kern-1.2pt } \hbar }}}}
+\end{aligned}
 \tag{5.24}\]</span></span></p>
 <p>Look at the phase factor at the end of each term. At <span class="math inline">\(t=0\)</span>, it is one, and the expression gives the initial expectation value. As time passes, components with different energies acquire different phases. These relative phases can make the expectation value oscillate.</p>
 <p>For a particular pair of energy states, both initial amplitudes must be nonzero. The matrix element <span class="math inline">\(A_{jk}\equiv\langle E_j\vert\hat A\vert E_k\rangle\)</span> must also be nonzero. That pair then contributes a term with angular frequency <span class="math inline">\(\omega_{jk}=(E_j-E_k)/\hbar\)</span>.</p>
@@ -398,7 +407,10 @@ i\hbar \frac{\partial }{{\partial t}}\left\langle {{{E_j}}} \mathrel{\left \vert
 \tag{5.26}\]</span></span></p>
 <p>Therefore,</p>
 <p><span id="eq-zeqnnum471083"><span class="math display">\[
-\begin{array}{c} \frac{\partial }{{\partial t}}\left(\left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle\right) = \left( {\frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right\vert } \right)\hat A\left\vert  {\psi \left( t \right)} \right\rangle + \left\langle {\psi \left( t \right)} \right\vert \hat A \left(\frac{\partial }{{\partial t}}\left\vert  {\psi \left( t \right)} \right\rangle \right) \\ = \frac{{ - 1}}{{i\hbar }}\left\langle {\psi \left( t \right)} \right\vert \hat H\hat A\left\vert  {\psi \left( t \right)} \right\rangle + \frac{1}{{i\hbar }}\left\langle {\psi \left( t \right)} \right\vert \hat A\hat H\left\vert  {\psi \left( t \right)} \right\rangle \end{array}
+\begin{aligned}
+\frac{\partial }{{\partial t}}\left(\left\langle {\psi \left( t \right)} \right\vert \hat A\left\vert  {\psi \left( t \right)} \right\rangle\right) &amp;= \left( {\frac{\partial }{{\partial t}}\left\langle {\psi \left( t \right)} \right\vert } \right)\hat A\left\vert  {\psi \left( t \right)} \right\rangle + \left\langle {\psi \left( t \right)} \right\vert \hat A \left(\frac{\partial }{{\partial t}}\left\vert  {\psi \left( t \right)} \right\rangle \right) \\
+&amp;= \frac{{ - 1}}{{i\hbar }}\left\langle {\psi \left( t \right)} \right\vert \hat H\hat A\left\vert  {\psi \left( t \right)} \right\rangle + \frac{1}{{i\hbar }}\left\langle {\psi \left( t \right)} \right\vert \hat A\hat H\left\vert  {\psi \left( t \right)} \right\rangle
+\end{aligned}
 \tag{5.27}\]</span></span></p>
 <p>Multiply by <span class="math inline">\(i\hbar\)</span> to obtain</p>
 <p><span id="eq-zeqnnum848461"><span class="math display">\[
@@ -839,8 +851,8 @@ i\hbar \frac{\partial }{{\partial t}}\langle \hat A(t)\rangle = \langle [\hat A,
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./06-transitions.html" class="pagination-link" aria-label="\* Transitions">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./06-transitions.html" class="pagination-link" aria-label="Transitions">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Transitions</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -182,7 +182,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06-transitions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Transitions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -390,7 +390,10 @@ window.Quarto = {
 \tag{4.19}\]</span></span></p>
 <p>This is the eigenvalue equation for <span class="math inline">\(\hat B\)</span>. So <span class="math inline">\(\lvert a_j\rangle\)</span> is an eigenstate of both operators, and <span class="math inline">\(b_j\)</span> is real because <span class="math inline">\(\hat B\)</span> is Hermitian. We can make both definite values visible by writing the same ket as <span class="math inline">\(\lvert a_j,b_j\rangle\)</span>:</p>
 <p><span id="eq-zeqnnum348929"><span class="math display">\[
-\begin{array}{l} \hat A\left\vert  {{a_j},{b_j}} \right\rangle = {a_j}\left\vert  {{a_j},{b_j}} \right\rangle \\ \hat B\left\vert  {{a_j},{b_j}} \right\rangle = {b_j}\left\vert  {{a_j},{b_j}} \right\rangle \end{array}
+\begin{aligned}
+\hat A\left\vert  {{a_j},{b_j}} \right\rangle &amp;= {a_j}\left\vert  {{a_j},{b_j}} \right\rangle \\
+\hat B\left\vert  {{a_j},{b_j}} \right\rangle &amp;= {b_j}\left\vert  {{a_j},{b_j}} \right\rangle
+\end{aligned}
 \tag{4.20}\]</span></span></p>
 <p>What changes if an eigenvalue of <span class="math inline">\(\hat A\)</span> is degenerate? Now several independent states share the same value, so <span class="math inline">\(\hat B\)</span> can turn one of them into a combination of the others. Equation <a href="#eq-zeqnnum209049" class="quarto-xref">Equation&nbsp;<span>4.18</span></a> still tells us that it stays within that eigenspace. We can choose an eigenbasis of <span class="math inline">\(\hat B\)</span> inside each such space; all those states remain eigenstates of <span class="math inline">\(\hat A\)</span> as well. Putting these bases together gives a complete common eigenbasis. Thus, in finite dimensions, <strong>two Hermitian operators commute if and only if they have a complete common eigenbasis</strong>.</p>
 </section>
@@ -595,7 +598,10 @@ window.Quarto = {
 </div>
 <p><strong>Example: orbital angular momentum.</strong> We can label angular momentum states using the squared orbital angular momentum, <span class="math inline">\(\mathbf{\hat L}^2\)</span>, and one component, <span class="math inline">\(\hat L_z\)</span>. These operators commute. Their common eigenstates are written <span class="math inline">\(\lvert l,m\rangle\)</span>, with</p>
 <p><span id="eq-ch04-p0890"><span class="math display">\[
-\begin{array}{l} {{{\bf{\hat L}}}^2}\left\vert  {l,m} \right\rangle = l(l + 1){\hbar ^2}\left\vert  {l,m} \right\rangle , &amp; &amp; l = 0,1,2 \cdots \\ {{\hat L}_z}\left\vert  {l,m} \right\rangle = m\hbar \left\vert  {l,m} \right\rangle , &amp; &amp; m = - l, - l + 1, \cdots ,l &amp; &amp; \end{array}
+\begin{aligned}
+{{{\bf{\hat L}}}^2}\left\vert  {l,m} \right\rangle &amp;= l(l + 1){\hbar ^2}\left\vert  {l,m} \right\rangle , &amp;&amp; l = 0,1,2 \cdots \\
+{{\hat L}_z}\left\vert  {l,m} \right\rangle &amp;= m\hbar \left\vert  {l,m} \right\rangle , &amp;&amp; m = - l, - l + 1, \cdots ,l
+\end{aligned}
 \tag{4.22}\]</span></span></p>
 <!-- Edit this merged-cell table in source mode. -->
 <div class="eigenstate-table">
@@ -967,7 +973,10 @@ window.Quarto = {
 \tag{4.46}\]</span></span> Compare <a href="#eq-zeqnnum557165" class="quarto-xref">Equation&nbsp;<span>4.46</span></a> with <a href="#eq-ch04-p1233" class="quarto-xref">Equation&nbsp;<span>4.38</span></a>, we see that the state representation transforms in the opsite way as the basis kets.</p>
 <p><strong>Transformation of operator representation</strong></p>
 <p>As the representatin of a state changes in the new basis, an operator’s matrix must change too, so that its action on a state is independent of the basis we use to describe that state. In the <span class="math inline">\(B\)</span> basis, the matrix elements of an operator <span class="math inline">\(\hat X\)</span> are: <span id="eq-zeqnnum132759"><span class="math display">\[
-\begin{array}{c} \left\langle {{b_i}} \right\vert \hat X\left\vert  {{b_j}} \right\rangle = \sum\limits_{l,m} {\left\langle {{{b_i}}} \mathrel{\left \vert  {\vphantom {{{b_i}} {{a_l}}}} \right. \kern-1.2pt } {{{a_l}}} \right\rangle } \left\langle {{a_l}} \right\vert \hat X\left\vert  {{a_m}} \right\rangle \left\langle {{{a_m}}} \mathrel{\left \vert  {\vphantom {{{a_m}} {{b_j}}}} \right. \kern-1.2pt } {{{b_j}}} \right\rangle \\ = \sum\limits_{l,m} {\left\langle {{a_i}} \right\vert {{\hat U}^\dagger }\left\vert  {{a_l}} \right\rangle } \left\langle {{a_l}} \right\vert \hat X\left\vert  {{a_m}} \right\rangle \left\langle {{a_m}} \right\vert \hat U\left\vert  {{a_j}} \right\rangle \end{array}
+\begin{aligned}
+\left\langle {{b_i}} \right\vert \hat X\left\vert  {{b_j}} \right\rangle &amp;= \sum\limits_{l,m} {\left\langle {{{b_i}}} \mathrel{\left \vert  {\vphantom {{{b_i}} {{a_l}}}} \right. \kern-1.2pt } {{{a_l}}} \right\rangle } \left\langle {{a_l}} \right\vert \hat X\left\vert  {{a_m}} \right\rangle \left\langle {{{a_m}}} \mathrel{\left \vert  {\vphantom {{{a_m}} {{b_j}}}} \right. \kern-1.2pt } {{{b_j}}} \right\rangle \\
+&amp;= \sum\limits_{l,m} {\left\langle {{a_i}} \right\vert {{\hat U}^\dagger }\left\vert  {{a_l}} \right\rangle } \left\langle {{a_l}} \right\vert \hat X\left\vert  {{a_m}} \right\rangle \left\langle {{a_m}} \right\vert \hat U\left\vert  {{a_j}} \right\rangle
+\end{aligned}
 \tag{4.47}\]</span></span> The left side is a matrix element of <span class="math inline">\(\hat X\)</span> in the <span class="math inline">\(B\)</span> basis. The three factors on the right are matrix elements of <span class="math inline">\(\hat U^\dagger\)</span>, <span class="math inline">\(X_A\)</span>, and <span class="math inline">\(\hat U\)</span> in the <span class="math inline">\(\hat A\)</span> basis. In matrix notation,</p>
 <p><span id="eq-zeqnnum834377"><span class="math display">\[
 {\hat X_B} = {\hat U^\dagger }{\hat X_A}\hat U
@@ -980,7 +989,11 @@ window.Quarto = {
 {\hat U^\dagger } \buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ 1&amp;{ - 1} \end{array}} \right)
 \tag{4.50}\]</span></span></p>
 <p>Now apply <a href="#eq-zeqnnum834377" class="quarto-xref">Equation&nbsp;<span>4.48</span></a> to each Pauli matrix. In the <span class="math inline">\(\hat\sigma_x\)</span> basis, the results are <span id="eq-ch04-p1262"><span class="math display">\[
-\begin{array}{l} {{\hat \sigma }_x} \buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ 1&amp;{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&amp;1\\ 1&amp;0 \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ 1&amp;{ - 1} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 1&amp;0\\ 0&amp;{ - 1} \end{array}} \right)\\ {{\hat \sigma }_y} \buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ 1&amp;{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&amp;{ - i}\\ i&amp;0 \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ 1&amp;{ - 1} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0&amp;i\\ { - i}&amp;0 \end{array}} \right)\\ {{\hat \sigma }_z} \buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ 1&amp;{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 1&amp;0\\ 0&amp;{ - 1} \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ 1&amp;{ - 1} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0&amp;1\\ 1&amp;0 \end{array}} \right) \end{array}
+\begin{aligned}
+{{\hat \sigma }_x} &amp;\buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ 1&amp;{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&amp;1\\ 1&amp;0 \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ 1&amp;{ - 1} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 1&amp;0\\ 0&amp;{ - 1} \end{array}} \right) \\
+{{\hat \sigma }_y} &amp;\buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ 1&amp;{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 0&amp;{ - i}\\ i&amp;0 \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ 1&amp;{ - 1} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0&amp;i\\ { - i}&amp;0 \end{array}} \right) \\
+{{\hat \sigma }_z} &amp;\buildrel\textstyle.\over= \frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ 1&amp;{ - 1} \end{array}} \right)\left( {\begin{array}{*{20}{c}} 1&amp;0\\ 0&amp;{ - 1} \end{array}} \right)\frac{1}{{\sqrt 2 }}\left( {\begin{array}{*{20}{c}} 1&amp;1\\ 1&amp;{ - 1} \end{array}} \right) = \left( {\begin{array}{*{20}{c}} 0&amp;1\\ 1&amp;0 \end{array}} \right)
+\end{aligned}
 \tag{4.51}\]</span></span></p>
 <p>One useful check on a basis change is the <strong>trace</strong>, the sum of a matrix’s diagonal elements. The individual elements may change, but their sum stays the same.</p>
 <p><strong>Theorem 4.3.</strong> An observable’s matrix has the same trace in every basis. The trace equals the sum of its eigenvalues, counting each eigenvalue as many times as its degeneracy.</p>
@@ -1014,7 +1027,10 @@ window.Quarto = {
 </ul>
 <p>The basis-transformation operator has the same matrices in the two bases it connects, and the same is true of its adjoint:</p>
 <p><span id="eq-ch04-p1279"><span class="math display">\[
-\begin{array}{l} \langle {{a_l}}\vert {\hat U}\vert {{a_m}}\rangle = \langle {{b_l}}\vert {\hat U}\vert {{b_m}}\rangle = \langle {{a_l}}\vert {{b_m}}\rangle \\ \langle {{a_l}}\vert {{{\hat U}^\dagger }}\vert {{a_m}}\rangle = \langle {{b_l}}\vert {{\hat U}^\dagger }\vert {{b_m}}\rangle = \langle {b_l}\vert {{a_m}}\rangle \end{array}
+\begin{aligned}
+\langle {{a_l}}\vert {\hat U}\vert {{a_m}}\rangle &amp;= \langle {{b_l}}\vert {\hat U}\vert {{b_m}}\rangle = \langle {{a_l}}\vert {{b_m}}\rangle \\
+\langle {{a_l}}\vert {{{\hat U}^\dagger }}\vert {{a_m}}\rangle &amp;= \langle {{b_l}}\vert {{\hat U}^\dagger }\vert {{b_m}}\rangle = \langle {b_l}\vert {{a_m}}\rangle
+\end{aligned}
 \tag{4.55}\]</span></span></p>
 </section>
 </section>

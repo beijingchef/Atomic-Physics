@@ -67,7 +67,13 @@ $$ {#eq-ch02-p0280}
 What makes an operator **linear**? It acts on each term of a superposition separately, and numerical coefficients pass through unchanged. In particular, $\hat X(c_\alpha|\psi_\alpha\rangle+c_\beta|\psi_\beta\rangle)=c_\alpha\hat X|\psi_\alpha\rangle+c_\beta\hat X|\psi_\beta\rangle$. The first two rules below express linearity; the remaining rules describe operator addition.
 
 $$
-\begin{gathered} \hat X\left( {c\left\vert  \psi \right\rangle } \right) = c\hat X\left\vert  \psi \right\rangle , \\ \hat X\left( {\left\vert  {{\psi _\alpha }} \right\rangle + \left\vert  {{\psi _\beta }} \right\rangle } \right) = \hat X\left\vert  {{\psi _\alpha }} \right\rangle + \hat X\left\vert  {{\psi _\beta }} \right\rangle , \\ \left( {\hat X + \hat Y} \right)\left\vert  \psi \right\rangle = \hat X\left\vert  \psi \right\rangle + \hat Y\left\vert  \psi \right\rangle \\ \hat X + \hat Y = \hat Y + \hat X, \\ \hat X + (\hat Y + \hat Z) = (\hat X + \hat Y) + \hat Z \\ \end{gathered}
+\begin{aligned}
+\hat X\left( {c\left\vert  \psi \right\rangle } \right) &= c\hat X\left\vert  \psi \right\rangle , \\
+\hat X\left( {\left\vert  {{\psi _\alpha }} \right\rangle + \left\vert  {{\psi _\beta }} \right\rangle } \right) &= \hat X\left\vert  {{\psi _\alpha }} \right\rangle + \hat X\left\vert  {{\psi _\beta }} \right\rangle , \\
+\left( {\hat X + \hat Y} \right)\left\vert  \psi \right\rangle &= \hat X\left\vert  \psi \right\rangle + \hat Y\left\vert  \psi \right\rangle \\
+\hat X + \hat Y &= \hat Y + \hat X, \\
+\hat X + (\hat Y + \hat Z) &= (\hat X + \hat Y) + \hat Z
+\end{aligned}
 $$ {#eq-zeqnnum324323}
 
 The third property in @eq-zeqnnum324323, together with the properties of the inner product, gives
@@ -203,13 +209,19 @@ This is the **completeness relation**: splitting a vector into all its basis com
 For example, inserting it on both sides of $\hat M$ gives
 
 $$
-\begin{array}{c} \hat M = \left( {\sum\limits_i {\left\vert  i \right\rangle \left\langle i \right\vert } } \right)\hat M\left( {\sum\limits_j {\left\vert  j \right\rangle \left\langle j \right\vert } } \right) = \sum\limits_{i,j} {\left\vert  i \right\rangle \left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\langle j \right\vert } \\ = \sum\limits_{i,j} {\left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{M_{ij}}\left\vert  i \right\rangle \left\langle j \right\vert } \end{array}
+\begin{aligned}
+\hat M &= \left( {\sum\limits_i {\left\vert  i \right\rangle \left\langle i \right\vert } } \right)\hat M\left( {\sum\limits_j {\left\vert  j \right\rangle \left\langle j \right\vert } } \right) = \sum\limits_{i,j} {\left\vert  i \right\rangle \left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\langle j \right\vert } \\
+ &= \sum\limits_{i,j} {\left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{M_{ij}}\left\vert  i \right\rangle \left\langle j \right\vert }
+\end{aligned}
 $$ {#eq-ch02-p0329}
 
 If the orthonormal basis consists of eigenvectors satisfying $\hat M|j\rangle=m_j|j\rangle$, the expression simplifies. Each projector selects one component, and the corresponding eigenvalue tells us how much $\hat M$ multiplies that component:
 
 $$
-\begin{array}{c} \hat M = \sum\limits_{i,j} {\left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{m_j}\langle i\vert j\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{m_j}{\delta _{ij}}\left\vert  i \right\rangle \left\langle j \right\vert } \\ = \sum\limits_j {{m_j}\left\vert  j \right\rangle \left\langle j \right\vert } \end{array}
+\begin{aligned}
+\hat M &= \sum\limits_{i,j} {\left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{m_j}\langle i\vert j\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{m_j}{\delta _{ij}}\left\vert  i \right\rangle \left\langle j \right\vert } \\
+ &= \sum\limits_j {{m_j}\left\vert  j \right\rangle \left\langle j \right\vert }
+\end{aligned}
 $$ {#eq-zeqnnum298708}
 
 ## Hermitian conjugates of operators
@@ -235,7 +247,10 @@ $$ {#eq-zeqnnum665376}
 **Proof.** Apply the bra–ket duality rules @eq-zeqnnum136783 and @eq-zeqnnum326007:
 
 $$
-\begin{array}{c} \left( {\hat X + \hat Y} \right)\left\vert  \psi \right\rangle \leftrightarrow \left\langle \psi \right\vert {\left( {\hat X + \hat Y} \right)^\dagger }\\ \left( {\hat X + \hat Y} \right)\left\vert  \psi \right\rangle = \hat X\left\vert  \psi \right\rangle + \hat Y\left\vert  \psi \right\rangle \leftrightarrow \left\langle \psi \right\vert {{\hat X}^\dagger } + \left\langle \psi \right\vert {{\hat Y}^\dagger } = \left\langle \psi \right\vert ({{\hat X}^\dagger } + {{\hat Y}^\dagger }) \end{array}
+\begin{aligned}
+\left( {\hat X + \hat Y} \right)\left\vert  \psi \right\rangle &\leftrightarrow \left\langle \psi \right\vert {\left( {\hat X + \hat Y} \right)^\dagger } \\
+\left( {\hat X + \hat Y} \right)\left\vert  \psi \right\rangle &= \hat X\left\vert  \psi \right\rangle + \hat Y\left\vert  \psi \right\rangle \leftrightarrow \left\langle \psi \right\vert {{\hat X}^\dagger } + \left\langle \psi \right\vert {{\hat Y}^\dagger } = \left\langle \psi \right\vert ({{\hat X}^\dagger } + {{\hat Y}^\dagger })
+\end{aligned}
 $$ {#eq-ch02-p0339}
 
 **Theorem 2.3.** Taking the adjoint of a product reverses the order of its factors.
@@ -247,7 +262,10 @@ $$ {#eq-zeqnnum908109}
 **Proof.**
 
 $$
-\begin{array}{c} \left( {\hat X\hat Y} \right)\left\vert  \psi \right\rangle \leftrightarrow \left\langle \psi \right\vert {\left( {\hat X\hat Y} \right)^\dagger }\\ \left( {\hat X\hat Y} \right)\left\vert  \psi \right\rangle = \hat X\left( {\hat Y\left\vert  \psi \right\rangle } \right) \leftrightarrow \left( {\left\langle \psi \right\vert {{\hat Y}^\dagger }} \right){{\hat X}^\dagger } = \left\langle \psi \right\vert {{\hat Y}^\dagger }{{\hat X}^\dagger } \end{array}
+\begin{aligned}
+\left( {\hat X\hat Y} \right)\left\vert  \psi \right\rangle &\leftrightarrow \left\langle \psi \right\vert {\left( {\hat X\hat Y} \right)^\dagger } \\
+\left( {\hat X\hat Y} \right)\left\vert  \psi \right\rangle &= \hat X\left( {\hat Y\left\vert  \psi \right\rangle } \right) \leftrightarrow \left( {\left\langle \psi \right\vert {{\hat Y}^\dagger }} \right){{\hat X}^\dagger } = \left\langle \psi \right\vert {{\hat Y}^\dagger }{{\hat X}^\dagger }
+\end{aligned}
 $$ {#eq-ch02-p0343}
 
 **Theorem 2.4.** For any two vectors $\vert \alpha\rangle ,\vert \beta\rangle$, $$
@@ -333,7 +351,10 @@ An operator $\hat A$ is **Hermitian**, or **self-adjoint** if it equals its own 
 **Proof.** If $\hat A\left\vert  a \right\rangle = a\left\vert  a \right\rangle$, duality gives $\left\langle a \right\vert {\hat A^\dagger } = \left\langle a \right\vert {a^*}$ and $\hat A = {\hat A^\dagger }$, hence $\left\langle a \right\vert \hat A = \left\langle a \right\vert {a^*}$. We can therefore evaluate $\left\langle a \right\vert \hat A\left\vert  a \right\rangle$ in two ways:
 
 $$
-\begin{array}{c} \left\langle a \right\vert \hat A\left\vert  a \right\rangle = \left\langle a \right\vert \left( {\hat A\left\vert  a \right\rangle } \right) = a\left\langle {a} \mathrel{\left \vert  {\vphantom {a a}} \right. \kern-1.2pt } {a} \right\rangle \\ \left\langle a \right\vert \hat A\left\vert  a \right\rangle = \left( {\left\langle a \right\vert \hat A} \right)\left\vert  a \right\rangle = {a^*}\left\langle {a} \mathrel{\left \vert  {\vphantom {a a}} \right. \kern-1.2pt } {a} \right\rangle \end{array}
+\begin{aligned}
+\left\langle a \right\vert \hat A\left\vert  a \right\rangle &= \left\langle a \right\vert \left( {\hat A\left\vert  a \right\rangle } \right) = a\left\langle {a} \mathrel{\left \vert  {\vphantom {a a}} \right. \kern-1.2pt } {a} \right\rangle \\
+\left\langle a \right\vert \hat A\left\vert  a \right\rangle &= \left( {\left\langle a \right\vert \hat A} \right)\left\vert  a \right\rangle = {a^*}\left\langle {a} \mathrel{\left \vert  {\vphantom {a a}} \right. \kern-1.2pt } {a} \right\rangle
+\end{aligned}
 $$ {#eq-ch02-p0381}
 
 Since $\langle a|a\rangle>0$, we have $a=a^*$, so $a$ is real.
@@ -371,7 +392,10 @@ This gives a quick visual check: the diagonal elements must be real, and each el
 **Proof.** Let ${a_i}$ and ${a_j}$ be eigenvalues of the Hermitian operator $\hat A$, with corresponding eigenvectors $\vert {a_i}\rangle ,\vert {a_j}\rangle$:
 
 $$
-\begin{array}{c} \hat A\left\vert  {{a_i}} \right\rangle = {a_i}\left\vert  {{a_i}} \right\rangle \\ \hat A\left\vert  {{a_j}} \right\rangle = {a_j}\left\vert  {{a_j}} \right\rangle \end{array}
+\begin{aligned}
+\hat A\left\vert  {{a_i}} \right\rangle &= {a_i}\left\vert  {{a_i}} \right\rangle \\
+\hat A\left\vert  {{a_j}} \right\rangle &= {a_j}\left\vert  {{a_j}} \right\rangle
+\end{aligned}
 $$ {#eq-ch02-p0393}
 
 Duality gives
@@ -439,7 +463,11 @@ $$ {#eq-ch02-p0416}
 Three operators $\hat A,\hat B,\hat C$ in this space have the following properties:
 
 $$
-\begin{array}{l} \hat A\vert U\rangle = \vert D\rangle , & \hat A\vert D\rangle = \vert U\rangle \\ \hat B\vert U\rangle = i\vert D\rangle , & \hat B\vert D\rangle = - i\vert U\rangle \\ \hat C\vert U\rangle = \vert U\rangle , & \hat C\vert D\rangle = \vert D\rangle \end{array}
+\begin{aligned}
+\hat A\vert U\rangle &= \vert D\rangle , & \hat A\vert D\rangle &= \vert U\rangle \\
+\hat B\vert U\rangle &= i\vert D\rangle , & \hat B\vert D\rangle &= - i\vert U\rangle \\
+\hat C\vert U\rangle &= \vert U\rangle , & \hat C\vert D\rangle &= \vert D\rangle
+\end{aligned}
 $$ {#eq-ch02-p0418}
 
 Write the matrix of each operator in this basis. Hint: column 1 contains the components of the output for $|U\rangle$, and column 2 contains the components of the output for $|D\rangle$.

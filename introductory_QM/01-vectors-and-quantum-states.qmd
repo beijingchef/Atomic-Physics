@@ -164,7 +164,10 @@ We can now express the defining properties of the inner product in bra–ket not
 **Linearity in the ket and in the bra:**
 
 $$
-\begin{array}{l} \langle \gamma\vert \left( {{c_1}\vert \alpha\rangle + {c_2}\vert \beta\rangle } \right) = {c_1}\langle \gamma|\alpha\rangle + {c_2}\langle \gamma|\beta\rangle ,\\ \left( {{c_1}\langle \gamma\vert {\rm{ + }}{c_2}\langle \beta\vert } \right)\vert \alpha\rangle = {c_1}\langle \gamma|\alpha\rangle + {c_2}\langle \beta|\alpha\rangle \end{array}
+\begin{aligned}
+\langle \gamma\vert \left( {{c_1}\vert \alpha\rangle + {c_2}\vert \beta\rangle } \right) &= {c_1}\langle \gamma|\alpha\rangle + {c_2}\langle \gamma|\beta\rangle , \\
+\left( {{c_1}\langle \gamma\vert {\rm{ + }}{c_2}\langle \beta\vert } \right)\vert \alpha\rangle &= {c_1}\langle \gamma|\alpha\rangle + {c_2}\langle \beta|\alpha\rangle
+\end{aligned}
 $$ {#eq-zeqnnum320588}
 
 **Conjugate symmetry:**
@@ -192,7 +195,10 @@ Let us put the bra–ket notation to work with column vectors. Here we can see e
 **Example: inner products of column vectors.** Complex column vectors form a complex vector space. Their standard inner product is obtained by multiplying the conjugate transpose of the first column by the second column. Thus, if a column represents a ket, its conjugate-transpose row represents the corresponding bra. For example,
 
 $$
-\begin{array}{l} |\phi\rangle = \left( {\begin{array}{*{20}{c}} {{a_1}}\\ {{a_2}} \end{array}} \right) \leftrightarrow \langle \phi|  = \left( {\begin{array}{*{20}{c}} {a_1^*}&{a_2^*} \end{array}} \right)\\ |\psi\rangle = \left( {\begin{array}{*{20}{c}} {{b_1}}\\ {{b_2}} \end{array}} \right) \leftrightarrow \langle \psi|  = \left( {\begin{array}{*{20}{c}} {b_1^*}&{b_2^*} \end{array}} \right) \end{array}
+\begin{aligned}
+|\phi\rangle &= \left( {\begin{array}{*{20}{c}} {{a_1}}\\ {{a_2}} \end{array}} \right) \leftrightarrow \langle \phi|  = \left( {\begin{array}{*{20}{c}} {a_1^*}&{a_2^*} \end{array}} \right) \\
+|\psi\rangle &= \left( {\begin{array}{*{20}{c}} {{b_1}}\\ {{b_2}} \end{array}} \right) \leftrightarrow \langle \psi|  = \left( {\begin{array}{*{20}{c}} {b_1^*}&{b_2^*} \end{array}} \right)
+\end{aligned}
 $$ {#eq-ch01-p0197} inner product $\langle \phi|\psi\rangle$ can then be defined by ordinary matrix multiplication:
 
 $$

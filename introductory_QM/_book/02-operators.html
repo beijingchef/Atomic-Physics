@@ -182,7 +182,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06-transitions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">* Transitions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Transitions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -319,7 +319,13 @@ window.Quarto = {
 \tag{2.9}\]</span></span></p>
 <p>What makes an operator <strong>linear</strong>? It acts on each term of a superposition separately, and numerical coefficients pass through unchanged. In particular, <span class="math inline">\(\hat X(c_\alpha|\psi_\alpha\rangle+c_\beta|\psi_\beta\rangle)=c_\alpha\hat X|\psi_\alpha\rangle+c_\beta\hat X|\psi_\beta\rangle\)</span>. The first two rules below express linearity; the remaining rules describe operator addition.</p>
 <p><span id="eq-zeqnnum324323"><span class="math display">\[
-\begin{gathered} \hat X\left( {c\left\vert  \psi \right\rangle } \right) = c\hat X\left\vert  \psi \right\rangle , \\ \hat X\left( {\left\vert  {{\psi _\alpha }} \right\rangle + \left\vert  {{\psi _\beta }} \right\rangle } \right) = \hat X\left\vert  {{\psi _\alpha }} \right\rangle + \hat X\left\vert  {{\psi _\beta }} \right\rangle , \\ \left( {\hat X + \hat Y} \right)\left\vert  \psi \right\rangle = \hat X\left\vert  \psi \right\rangle + \hat Y\left\vert  \psi \right\rangle \\ \hat X + \hat Y = \hat Y + \hat X, \\ \hat X + (\hat Y + \hat Z) = (\hat X + \hat Y) + \hat Z \\ \end{gathered}
+\begin{aligned}
+\hat X\left( {c\left\vert  \psi \right\rangle } \right) &amp;= c\hat X\left\vert  \psi \right\rangle , \\
+\hat X\left( {\left\vert  {{\psi _\alpha }} \right\rangle + \left\vert  {{\psi _\beta }} \right\rangle } \right) &amp;= \hat X\left\vert  {{\psi _\alpha }} \right\rangle + \hat X\left\vert  {{\psi _\beta }} \right\rangle , \\
+\left( {\hat X + \hat Y} \right)\left\vert  \psi \right\rangle &amp;= \hat X\left\vert  \psi \right\rangle + \hat Y\left\vert  \psi \right\rangle \\
+\hat X + \hat Y &amp;= \hat Y + \hat X, \\
+\hat X + (\hat Y + \hat Z) &amp;= (\hat X + \hat Y) + \hat Z
+\end{aligned}
 \tag{2.10}\]</span></span></p>
 <p>The third property in <a href="#eq-zeqnnum324323" class="quarto-xref">Equation&nbsp;<span>2.10</span></a>, together with the properties of the inner product, gives</p>
 <p><span id="eq-ch02-p0282"><span class="math display">\[
@@ -413,11 +419,17 @@ window.Quarto = {
 <p>This is the <strong>completeness relation</strong>: splitting a vector into all its basis components and reassembling them recovers the original vector. We can insert this form of the identity anywhere an operator is allowed, without changing the expression. This is a very useful method.</p>
 <p>For example, inserting it on both sides of <span class="math inline">\(\hat M\)</span> gives</p>
 <p><span id="eq-ch02-p0329"><span class="math display">\[
-\begin{array}{c} \hat M = \left( {\sum\limits_i {\left\vert  i \right\rangle \left\langle i \right\vert } } \right)\hat M\left( {\sum\limits_j {\left\vert  j \right\rangle \left\langle j \right\vert } } \right) = \sum\limits_{i,j} {\left\vert  i \right\rangle \left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\langle j \right\vert } \\ = \sum\limits_{i,j} {\left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{M_{ij}}\left\vert  i \right\rangle \left\langle j \right\vert } \end{array}
+\begin{aligned}
+\hat M &amp;= \left( {\sum\limits_i {\left\vert  i \right\rangle \left\langle i \right\vert } } \right)\hat M\left( {\sum\limits_j {\left\vert  j \right\rangle \left\langle j \right\vert } } \right) = \sum\limits_{i,j} {\left\vert  i \right\rangle \left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\langle j \right\vert } \\
+&amp;= \sum\limits_{i,j} {\left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{M_{ij}}\left\vert  i \right\rangle \left\langle j \right\vert }
+\end{aligned}
 \tag{2.27}\]</span></span></p>
 <p>If the orthonormal basis consists of eigenvectors satisfying <span class="math inline">\(\hat M|j\rangle=m_j|j\rangle\)</span>, the expression simplifies. Each projector selects one component, and the corresponding eigenvalue tells us how much <span class="math inline">\(\hat M\)</span> multiplies that component:</p>
 <p><span id="eq-zeqnnum298708"><span class="math display">\[
-\begin{array}{c} \hat M = \sum\limits_{i,j} {\left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{m_j}\langle i\vert j\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{m_j}{\delta _{ij}}\left\vert  i \right\rangle \left\langle j \right\vert } \\ = \sum\limits_j {{m_j}\left\vert  j \right\rangle \left\langle j \right\vert } \end{array}
+\begin{aligned}
+\hat M &amp;= \sum\limits_{i,j} {\left\langle i \right\vert \hat M\left\vert  j \right\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{m_j}\langle i\vert j\rangle \left\vert  i \right\rangle \left\langle j \right\vert } = \sum\limits_{i,j} {{m_j}{\delta _{ij}}\left\vert  i \right\rangle \left\langle j \right\vert } \\
+&amp;= \sum\limits_j {{m_j}\left\vert  j \right\rangle \left\langle j \right\vert }
+\end{aligned}
 \tag{2.28}\]</span></span></p>
 </section>
 </section>
@@ -437,7 +449,10 @@ window.Quarto = {
 \tag{2.30}\]</span></span></p>
 <p><strong>Proof.</strong> Apply the bra–ket duality rules <a href="01-vectors-and-quantum-states.html#eq-zeqnnum136783" class="quarto-xref">Equation&nbsp;<span>1.7</span></a> and <a href="#eq-zeqnnum326007" class="quarto-xref">Equation&nbsp;<span>2.29</span></a>:</p>
 <p><span id="eq-ch02-p0339"><span class="math display">\[
-\begin{array}{c} \left( {\hat X + \hat Y} \right)\left\vert  \psi \right\rangle \leftrightarrow \left\langle \psi \right\vert {\left( {\hat X + \hat Y} \right)^\dagger }\\ \left( {\hat X + \hat Y} \right)\left\vert  \psi \right\rangle = \hat X\left\vert  \psi \right\rangle + \hat Y\left\vert  \psi \right\rangle \leftrightarrow \left\langle \psi \right\vert {{\hat X}^\dagger } + \left\langle \psi \right\vert {{\hat Y}^\dagger } = \left\langle \psi \right\vert ({{\hat X}^\dagger } + {{\hat Y}^\dagger }) \end{array}
+\begin{aligned}
+\left( {\hat X + \hat Y} \right)\left\vert  \psi \right\rangle &amp;\leftrightarrow \left\langle \psi \right\vert {\left( {\hat X + \hat Y} \right)^\dagger } \\
+\left( {\hat X + \hat Y} \right)\left\vert  \psi \right\rangle &amp;= \hat X\left\vert  \psi \right\rangle + \hat Y\left\vert  \psi \right\rangle \leftrightarrow \left\langle \psi \right\vert {{\hat X}^\dagger } + \left\langle \psi \right\vert {{\hat Y}^\dagger } = \left\langle \psi \right\vert ({{\hat X}^\dagger } + {{\hat Y}^\dagger })
+\end{aligned}
 \tag{2.31}\]</span></span></p>
 <p><strong>Theorem 2.3.</strong> Taking the adjoint of a product reverses the order of its factors.</p>
 <p><span id="eq-zeqnnum908109"><span class="math display">\[
@@ -445,7 +460,10 @@ window.Quarto = {
 \tag{2.32}\]</span></span></p>
 <p><strong>Proof.</strong></p>
 <p><span id="eq-ch02-p0343"><span class="math display">\[
-\begin{array}{c} \left( {\hat X\hat Y} \right)\left\vert  \psi \right\rangle \leftrightarrow \left\langle \psi \right\vert {\left( {\hat X\hat Y} \right)^\dagger }\\ \left( {\hat X\hat Y} \right)\left\vert  \psi \right\rangle = \hat X\left( {\hat Y\left\vert  \psi \right\rangle } \right) \leftrightarrow \left( {\left\langle \psi \right\vert {{\hat Y}^\dagger }} \right){{\hat X}^\dagger } = \left\langle \psi \right\vert {{\hat Y}^\dagger }{{\hat X}^\dagger } \end{array}
+\begin{aligned}
+\left( {\hat X\hat Y} \right)\left\vert  \psi \right\rangle &amp;\leftrightarrow \left\langle \psi \right\vert {\left( {\hat X\hat Y} \right)^\dagger } \\
+\left( {\hat X\hat Y} \right)\left\vert  \psi \right\rangle &amp;= \hat X\left( {\hat Y\left\vert  \psi \right\rangle } \right) \leftrightarrow \left( {\left\langle \psi \right\vert {{\hat Y}^\dagger }} \right){{\hat X}^\dagger } = \left\langle \psi \right\vert {{\hat Y}^\dagger }{{\hat X}^\dagger }
+\end{aligned}
 \tag{2.33}\]</span></span></p>
 <p><strong>Theorem 2.4.</strong> For any two vectors <span class="math inline">\(\vert \alpha\rangle ,\vert \beta\rangle\)</span>, <span id="eq-zeqnnum961324"><span class="math display">\[
 \langle\alpha|\hat M^{\dagger}|\beta\rangle=\bigl(\langle\beta|\hat M|\alpha\rangle\bigr)^*
@@ -507,7 +525,10 @@ window.Quarto = {
 <p><strong>Theorem 2.7.</strong> The eigenvalues of a Hermitian operator are real.</p>
 <p><strong>Proof.</strong> If <span class="math inline">\(\hat A\left\vert  a \right\rangle = a\left\vert  a \right\rangle\)</span>, duality gives <span class="math inline">\(\left\langle a \right\vert {\hat A^\dagger } = \left\langle a \right\vert {a^*}\)</span> and <span class="math inline">\(\hat A = {\hat A^\dagger }\)</span>, hence <span class="math inline">\(\left\langle a \right\vert \hat A = \left\langle a \right\vert {a^*}\)</span>. We can therefore evaluate <span class="math inline">\(\left\langle a \right\vert \hat A\left\vert  a \right\rangle\)</span> in two ways:</p>
 <p><span id="eq-ch02-p0381"><span class="math display">\[
-\begin{array}{c} \left\langle a \right\vert \hat A\left\vert  a \right\rangle = \left\langle a \right\vert \left( {\hat A\left\vert  a \right\rangle } \right) = a\left\langle {a} \mathrel{\left \vert  {\vphantom {a a}} \right. \kern-1.2pt } {a} \right\rangle \\ \left\langle a \right\vert \hat A\left\vert  a \right\rangle = \left( {\left\langle a \right\vert \hat A} \right)\left\vert  a \right\rangle = {a^*}\left\langle {a} \mathrel{\left \vert  {\vphantom {a a}} \right. \kern-1.2pt } {a} \right\rangle \end{array}
+\begin{aligned}
+\left\langle a \right\vert \hat A\left\vert  a \right\rangle &amp;= \left\langle a \right\vert \left( {\hat A\left\vert  a \right\rangle } \right) = a\left\langle {a} \mathrel{\left \vert  {\vphantom {a a}} \right. \kern-1.2pt } {a} \right\rangle \\
+\left\langle a \right\vert \hat A\left\vert  a \right\rangle &amp;= \left( {\left\langle a \right\vert \hat A} \right)\left\vert  a \right\rangle = {a^*}\left\langle {a} \mathrel{\left \vert  {\vphantom {a a}} \right. \kern-1.2pt } {a} \right\rangle
+\end{aligned}
 \tag{2.44}\]</span></span></p>
 <p>Since <span class="math inline">\(\langle a|a\rangle&gt;0\)</span>, we have <span class="math inline">\(a=a^*\)</span>, so <span class="math inline">\(a\)</span> is real.</p>
 <p>Physically, this ensures that measured values of observables are real.</p>
@@ -530,7 +551,10 @@ window.Quarto = {
 <p><strong>Theorem 2.9.</strong> Eigenvectors of a Hermitian operator belonging to different eigenvalues are orthogonal.</p>
 <p><strong>Proof.</strong> Let <span class="math inline">\({a_i}\)</span> and <span class="math inline">\({a_j}\)</span> be eigenvalues of the Hermitian operator <span class="math inline">\(\hat A\)</span>, with corresponding eigenvectors <span class="math inline">\(\vert {a_i}\rangle ,\vert {a_j}\rangle\)</span>:</p>
 <p><span id="eq-ch02-p0393"><span class="math display">\[
-\begin{array}{c} \hat A\left\vert  {{a_i}} \right\rangle = {a_i}\left\vert  {{a_i}} \right\rangle \\ \hat A\left\vert  {{a_j}} \right\rangle = {a_j}\left\vert  {{a_j}} \right\rangle \end{array}
+\begin{aligned}
+\hat A\left\vert  {{a_i}} \right\rangle &amp;= {a_i}\left\vert  {{a_i}} \right\rangle \\
+\hat A\left\vert  {{a_j}} \right\rangle &amp;= {a_j}\left\vert  {{a_j}} \right\rangle
+\end{aligned}
 \tag{2.48}\]</span></span></p>
 <p>Duality gives</p>
 <p><span id="eq-ch02-p0395"><span class="math display">\[
@@ -585,7 +609,11 @@ window.Quarto = {
 \tag{2.56}\]</span></span></p>
 <p>Three operators <span class="math inline">\(\hat A,\hat B,\hat C\)</span> in this space have the following properties:</p>
 <p><span id="eq-ch02-p0418"><span class="math display">\[
-\begin{array}{l} \hat A\vert U\rangle = \vert D\rangle , &amp; \hat A\vert D\rangle = \vert U\rangle \\ \hat B\vert U\rangle = i\vert D\rangle , &amp; \hat B\vert D\rangle = - i\vert U\rangle \\ \hat C\vert U\rangle = \vert U\rangle , &amp; \hat C\vert D\rangle = \vert D\rangle \end{array}
+\begin{aligned}
+\hat A\vert U\rangle &amp;= \vert D\rangle , &amp; \hat A\vert D\rangle &amp;= \vert U\rangle \\
+\hat B\vert U\rangle &amp;= i\vert D\rangle , &amp; \hat B\vert D\rangle &amp;= - i\vert U\rangle \\
+\hat C\vert U\rangle &amp;= \vert U\rangle , &amp; \hat C\vert D\rangle &amp;= \vert D\rangle
+\end{aligned}
 \tag{2.57}\]</span></span></p>
 <p>Write the matrix of each operator in this basis. Hint: column 1 contains the components of the output for <span class="math inline">\(|U\rangle\)</span>, and column 2 contains the components of the output for <span class="math inline">\(|D\rangle\)</span>.</p>
 <p><strong>2.2.</strong> Let <span class="math inline">\(\left\vert  1 \right\rangle ,\left\vert  2 \right\rangle\)</span> be an orthonormal basis of a two-dimensional space, with operator <span class="math inline">\(\hat H\)</span> given by</p>
