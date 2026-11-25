@@ -90,6 +90,8 @@ $$
 \hat M\left\vert  \psi \right\rangle = \left\vert  \phi \right\rangle
 $$ {#eq-zeqnnum246664}
 
+We would like to know how the new vector $|\psi\rangle$ is related to the old vector $|\phi\rangle$ in the chosen basis by the Operator $\hat M$. The $i$ th component of $|\phi\rangle$ is $\langle i|\phi\rangle$. Using @eq-zeqnnum246664, we can write
+
 Multiply both sides from the left by $\langle i|$, we have both sides equal to the $i$ th component of $|\phi\rangle$
 
 $$

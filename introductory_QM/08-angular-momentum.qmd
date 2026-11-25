@@ -1,16 +1,16 @@
 # Angular Momentum
 
-Why does angular momentum appear so often in atomic physics? First, the Coulomb force pulls an electron toward the nucleus. In a central-field description, this force conserves the electron's orbital angular momentum. Second, angular momentum is tied to magnetic moment. It therefore helps us understand both magnetic interactions inside an atom and the atom's response to an applied field. Let us build the rules one step at a time.
+Why does angular momentum appear so often in atomic physics? First, the Coulomb force is a central force. In a central-field description, this force conserves the electron's orbital angular momentum. Second, an charged particle with angular momentum gives rise to its magnetic moment. It therefore helps us understand both magnetic interactions inside an atom and the atom's response to an external magnetic field.
 
 ## General Angular Momentum
 
-Start with the classical idea. About a chosen origin, a particle has orbital angular momentum $\mathbf L=\mathbf r\times\mathbf p$. In Cartesian components,
+Start with the classical description. About a chosen origin, a particle has orbital angular momentum $\mathbf L=\mathbf r\times\mathbf p$. In Cartesian components,
 
 $$
 {\bf{L}} = {\bf{r}} \times {\bf{p}} = \left\vert  {\begin{array}{*{20}{c}} {\bf{i}}&{\bf{j}}&{\bf{k}}\\ x&y&z\\ {{p_x}}&{{p_y}}&{{p_z}} \end{array}} \right\vert
 $$ {#eq-ch08-p1897}
 
-The three component operators in the position representation are
+In quantum mechanics the three components become operators, and their position representations are
 
 $$
 \begin{aligned}
@@ -20,7 +20,7 @@ $$
 \end{aligned}
 $$ {#eq-zeqnnum826605}
 
-Let these operators act on a test wavefunction $\psi(x,y,z)$. Alternatively, use the position–momentum commutator @eq-zeqnnum944007. Either route gives
+Using the position–momentum commutator @eq-zeqnnum944007, we have
 
 $$
 \left[ {{{\hat L}_x},{{\hat L}_y}} \right] = i\hbar {\hat L_z},\;\;\;\;\;\left[ {{{\hat L}_y},{{\hat L}_z}} \right] = i\hbar {\hat L_x},\;\;\;\;\;\left[ {{{\hat L}_z},{{\hat L}_x}} \right] = i\hbar {\hat L_y}
@@ -32,7 +32,7 @@ $$
 \left[ {{{\hat L}_i},{{\hat L}_j}} \right] = i\hbar {\varepsilon _{ijk}}{\hat L_k} \qquad  {\rm{or}} \qquad  {\bf{L}} \times {\bf{L}} = i\hbar {\bf{L}}
 $$ {#eq-ch08-p1903}
 
-These relations should look familiar. Spin obeys the same rules:
+These relations should look familiar. The electron spin obeys the same rules:
 
 $$
 \left[ {{{\hat S}_i},{{\hat S}_j}} \right] = i\hbar {\varepsilon _{ijk}}{\hat S_k}
@@ -76,7 +76,7 @@ $$
 {\hat J_z}\left\vert  {b,m} \right\rangle = m\hbar \left\vert  {b,m} \right\rangle
 $$ {#eq-zeqnnum784176}
 
-We do not yet know the allowed real numbers $b$ and $m$. They label a state with $\mathbf{\hat J}^2=b\hbar^2$ and $\hat J_z=m\hbar$. To find them, introduce two **ladder operators**. The raising operator $\hat J_+$ moves us up the ladder of $m$ values; the lowering operator $\hat J_-$ moves us down:
+We do not yet know the allowed real numbers $b$ and $m$. They label a state with $\mathbf{J}^2=b\hbar^2$ and $J_z=m\hbar$. To find them, introduce two **ladder operators**. We will see that the raising operator $\hat J_+$ moves us up the ladder of $m$ values; the lowering operator $\hat J_-$ moves us down:
 
 $$
 {\hat J_ + } \equiv {\hat J_x} + i{\hat J_y}, \qquad  \qquad  {\hat J_ - } \equiv {\hat J_x} - i{\hat J_y}
@@ -88,7 +88,7 @@ $$
 {\hat J_x} = \frac{1}{2}\left( {{{\hat J}_ + } + {{\hat J}_ - }} \right), \qquad  \qquad  {\hat J_y} = \frac{1}{{2i}}\left( {{{\hat J}_ + } - {{\hat J}_ - }} \right)
 $$ {#eq-zeqnnum857737}
 
-Before climbing the ladder, work out a few identities from these definitions:
+We can first work out a few identities from these definitions:
 
 $$
 \hat J_ + ^\dagger = {\hat J_ - }, \qquad  \qquad  \hat J_ - ^\dagger = {\hat J_ + }
@@ -130,7 +130,7 @@ $$
 {\hat J_z}\left( {{{\hat J}_ \pm }\left\vert  {b,m} \right\rangle } \right) = \left( {{{\hat J}_z}{{\hat J}_ \pm }} \right)\left\vert  {b,m} \right\rangle = \left( { \pm \hbar {{\hat J}_ \pm } + {{\hat J}_ \pm }{{\hat J}_z}} \right)\left\vert  {b,m} \right\rangle = \left( {m \pm 1} \right)\hbar \left( {{{\hat J}_ \pm }\left\vert  {b,m} \right\rangle } \right)
 $$ {#eq-zeqnnum643676}
 
-Compare @eq-zeqnnum973611 with @eq-zeqnnum643676. Unless the result is the zero vector, $\hat J_\pm\vert b,m\rangle$ is another simultaneous eigenstate. Its squared magnitude stays at $b\hbar^2$, but its $z$ component changes by one step, $\pm\hbar$. This is why we call the operators raising and lowering operators. The new state is proportional to $\vert b,m\pm1\rangle$:
+Compare @eq-zeqnnum973611 with @eq-zeqnnum643676. Unless the result is the zero vector, $\hat J_\pm\vert b,m\rangle$ is another simultaneous eigenstate of $\mathbf{\hat J}^2$ and $\hat J_z$. Its squared magnitude stays at $b\hbar^2$, but its $z$ component changes by one step, $\pm\hbar$. This is why we call the operators raising and lowering operators. Thus, the new state is proportional to $\vert b,m\pm1\rangle$:
 
 $$
 {\hat J_ \pm }\left\vert  {b,m} \right\rangle = {C_ \pm }\left( {b,m} \right)\left\vert  {b,m \pm 1} \right\rangle
@@ -138,7 +138,7 @@ $$ {#eq-zeqnnum904731}
 
 The coefficient $C_\pm(b,m)$ sets the length and phase of the resulting vector.
 
-Can we keep raising $m$ forever? A fixed angular-momentum magnitude should limit its projection. To find the limit, take the expectation value of @eq-zeqnnum867638 in $\vert b,m\rangle$ and use @eq-zeqnnum223798:
+Can the raising operator keep raising $m$ forever? Since it does not change $b$, a fixed angular-momentum magnitude should limit its projection. To find the limit, take the expectation value of @eq-zeqnnum867638 in $\vert b,m\rangle$ and use @eq-zeqnnum223798:
 
 $$
 b{\hbar ^2} = {m^2}{\hbar ^2} + \frac{1}{2}\left\langle {b,m} \right\vert {\hat J_ - ^\dagger {{\hat J}_ - }}\;\left\vert  {b,m} \right\rangle + \frac{1}{2}\left\langle {b,m} \right\vert \hat J_ + ^\dagger {\hat J_ + }\left\vert  {b,m} \right\rangle
@@ -178,7 +178,7 @@ $$ {#eq-ch08-p1946}
 It follows that
 
 $$
-b = m_{\max }^2 + {m_{\max }} = m_{\min }^2 - {m_{\min }}
+m_{\max }^2 + {m_{\max }} = m_{\min }^2 - {m_{\min }}
 $$ {#eq-zeqnnum714689}
 
 Hence
@@ -193,7 +193,7 @@ $$
 {m_{\min }} = - {m_{\max }}
 $$ {#eq-zeqnnum434099}
 
-The allowed projections are symmetric about zero. This makes sense: reversing our choice of the positive $z$ direction should not change the physics. Using @eq-zeqnnum714513 and @eq-zeqnnum434099, we obtain
+The allowed projections are symmetric about zero. This makes sense: since the sign of $m$ depends on which direction we chose as the positive $z$ direction. Reversing our choice of the positive $z$ direction should not change the physics. Using @eq-zeqnnum714513 and @eq-zeqnnum434099, we obtain
 
 $$
 {m_{\max }} = {n \mathord{\left/ {\vphantom {n {2 = j}}} \right. \kern-1.2pt } {2 = j}}, \qquad  {m_{\min }} = - {n \mathord{\left/ {\vphantom {n 2}} \right. \kern-1.2pt } 2} = - j
@@ -205,7 +205,7 @@ $$
 j = 0,\frac{1}{2},1,\frac{3}{2},2,\frac{5}{2}, \ldots
 $$ {#eq-ch08-p1956}
 
-For each $j$, the ladder has $2j+1$ rungs. Its $m$ values are
+For each $j$, there can be only $2j+1$ different $m$ values:
 
 $$
 m = j,j - 1,j - 2, \cdots , - j
@@ -217,11 +217,11 @@ $$
 b = j\left( {j + 1} \right)
 $$ {#eq-ch08-p1960}
 
-From now on, use $j$ instead of $b$ to label the squared magnitude. We write the same eigenstate as $\vert j,m\rangle$.
-
 ### Results for General Angular Momentum
 
-Let us collect the results. Any angular momentum with the algebra above obeys
+From now on, use $j$ instead of $b$ to label the squared magnitude. We write the same eigenstate as $\vert j,m\rangle$.
+
+Any angular momentum obeys
 
 $$
 {{\bf{\hat J}}^2}\left\vert  {j,m} \right\rangle = j\left( {j + 1} \right){\hbar ^2}\left\vert  {j,m} \right\rangle , \qquad  j = 0,\frac{1}{2},1,\frac{3}{2},2,\frac{5}{2}, \ldots
@@ -231,11 +231,11 @@ $$
 {\hat J_z}\left\vert  {j,m} \right\rangle = m\hbar \left\vert  {j,m} \right\rangle , \qquad  m = \underbrace {j,j - 1, \cdots - j + 1, - j}_{2j + 1\text{ terms}}
 $$ {#eq-ch08-p1965}
 
-The number $j$ sets the magnitude. The number $m$ sets the measured projection along our chosen axis, so we call it the **magnetic quantum number** or **projection quantum number**. For spin, $j$ is the spin quantum number.
+The number $j$ sets the magnitude. The number $m$ sets the measured projection along our chosen axis, it is often called the **magnetic quantum number** or **projection quantum number**. If the angular momentum is a spin, $j$ is called the spin quantum number.
 
 If $j$ is an integer, the ladder includes $m=0$. If $j$ is a half-integer, the ladder skips zero. These discrete possibilities follow from the commutation relations alone. They are a striking example of how a little operator algebra leads to testable predictions.
 
-We will soon see that orbital angular momentum allows only integer $l$, starting at zero. Spin can be integer or half-integer. Each particle species has its own spin quantum number, just as it has its own mass and charge.
+We will soon see that orbital angular momentum allows only integer $j$, starting at zero. Spin can be integer or half-integer. Each particle species has its own spin quantum number, just as it has its own mass and charge.
 
 | Particle    | Spin quantum number |
 |-------------|---------------------|
@@ -247,7 +247,7 @@ We will soon see that orbital angular momentum allows only integer $l$, starting
 | Graviton    | 2                   |
 | Higgs boson | 0                   |
 
-We call particles with half-integer spin **fermions** and those with integer spin **bosons**. Identical bosons can share a state, while identical fermions obey the Pauli exclusion principle. These rules come from quantum indistinguishability. They do not mean that the particles simply attract or repel one another.
+We call particles with half-integer spin **fermions** and those with integer spin **bosons**. We will see that identical bosons can share a state, while identical fermions can't. These rules come from quantum indistinguishability of identical particles. They do not mean that the particles simply attract or repel one another.
 
 ### The Vector Model of Angular-Momentum Eigenstates
 
@@ -283,7 +283,7 @@ Figure 8.1. The vector model of angular momentum. Source: http://hyperphysics.ph
 
 We now know how the angular-momentum operators act on $\vert j,m\rangle$. Let us turn those rules into matrices in this basis.
 
-1)  **$\mathbf{\hat J}^2$ and $\hat J_z$.** The basis states are eigenstates of both operators, so both matrices are diagonal:
+1)  $\mathbf{\hat J}^2$ and $\hat J_z$. The basis states are eigenstates of both operators, so both matrices are diagonal:
 
 $$
 \left\langle {j',m'} \right\vert {\hat J^2}\left\vert  {j,m} \right\rangle = {\delta _{j'j}}{\delta _{m'm}}j\left( {j + 1} \right){\hbar ^2}
@@ -293,7 +293,7 @@ $$
 \left\langle {j',m'} \right\vert {\hat J_z}\left\vert  {j,m} \right\rangle = {\delta _{j'j}}{\delta _{m'm}}m\hbar
 $$ {#eq-ch08-p2018}
 
-2)  **The ladder operators $\hat J_\pm$.** @eq-zeqnnum904731 tells us that each operator connects neighboring $m$ values. To find the coefficient's magnitude, take the squared norm:
+2)  **The ladder operators** $\hat J_\pm$. @eq-zeqnnum904731 tells us that each operator connects neighboring $m$ values. To find the coefficient's magnitude, take the squared norm:
 
 $$
 \left\langle {j,m} \right\vert \hat J_ + ^\dagger {\hat J_ + }\left\vert  {j,m} \right\rangle = {\left\vert  {{C_ + }\left( {j,m} \right)} \right\vert ^2}
@@ -350,7 +350,7 @@ $$
 \left\langle {j,m - 1} \right\vert {\hat J_ - }\left\vert  {j,m} \right\rangle = \left\langle {j,m} \right\vert {\hat J_ + }\left\vert  {j,m - 1} \right\rangle = \hbar \sqrt {j\left( {j + 1} \right) - m\left( {m - 1} \right)}
 $$ {#eq-zeqnnum713322}
 
-3)  **$\hat J_x$ and $\hat J_y$.** Express them in terms of the ladder operators. Using @eq-zeqnnum857737 and @eq-zeqnnum713322 gives their nonzero matrix elements:
+3)  $\hat J_x$ and $\hat J_y$. Express them in terms of the ladder operators. Using @eq-zeqnnum857737 and @eq-zeqnnum713322 gives their nonzero matrix elements:
 
 $$
 \left\langle {j,m - 1} \right\vert {{J_x}}\left\vert  {j,m} \right\rangle = \left\langle {j,m} \right\vert {{J_x}}\left\vert  {j,m - 1} \right\rangle = \frac{\hbar }{2}\sqrt {j(j + 1) - m(m - 1)}
@@ -380,7 +380,7 @@ $$ {#eq-ch08-p2044}
 
 ## Orbital Angular Momentum
 
-Orbital angular momentum comes from motion about a reference point. We write it as $\mathbf L$ and use $l$ for its angular-momentum quantum number. The general theory we just developed gives
+Orbital angular momentum comes from motion about a reference point. We normally write it as $\mathbf L$ and use $l$ for its angular-momentum quantum number. The general theory we just developed gives
 
 $$
 \begin{aligned}
@@ -396,19 +396,17 @@ $$
 {{\bf{L}}^2}{\Lambda _{l,m}}\left( {r,\theta ,\phi } \right) &= l\left( {l + 1} \right){\hbar ^2}{\Lambda _{l,m}}\left( {r,\theta ,\phi } \right) \\
 {L_z}{\Lambda _{l,m}}\left( {r,\theta ,\phi } \right) &= m\hbar {\Lambda _{l,m}}\left( {r,\theta ,\phi } \right)
 \end{aligned}
-$$ {#eq-zeqnnum921413}
+$$ {#eq-zeqnnum921413}where the operators are represented in spherical coordinates.
+
+Using the coordinate transformations
+
+$$
+ \left\{ {\begin{array}{*{20}{c}} {x = r\sin \theta \cos\phi }\\ {y = r\sin\theta \sin\phi }\\ {z = r\cos\theta } \end{array}} \right., \qquad  \qquad  \left\{ {\begin{array}{*{20}{c}} {r = \sqrt {{x^2} + {y^2} + {z^2}} }\\ {\theta = {{\tan }^{ - 1}}\left( {{{\sqrt {{x^2} + {y^2}} } \mathord{\left/ {\vphantom {{\sqrt {{x^2} + {y^2}} } z}} \right. \kern-1.2pt } z}} \right)}\\ {\phi = {{\tan }^{ - 1}}\left( {{y \mathord{\left/ {\vphantom {y x}} \right. \kern-1.2pt } x}} \right)} \end{array}} \right.
+$$
+
+$$ \frac{\partial }{{\partial x}} = \frac{{\partial r}}{{\partial x}}\frac{\partial }{{\partial r}} + \frac{{\partial \theta }}{{\partial x}}\frac{\partial }{{\partial \theta }} + \frac{{\partial \phi }}{{\partial x}}\frac{\partial }{{\partial \phi }} $$
 
 ![](assets/image1796.png){width="212px"}
-
-We also need the operators in spherical coordinates. Using the coordinate transformations
-
-$$
-\left\{ {\begin{array}{*{20}{c}} {x = r\sin \theta cos\phi }\\ {y = rsin\theta sin\phi }\\ {z = rcos\theta } \end{array}} \right., \qquad  \qquad  \left\{ {\begin{array}{*{20}{c}} {r = \sqrt {{x^2} + {y^2} + {z^2}} }\\ {\theta = {{\tan }^{ - 1}}\left( {{{\sqrt {{x^2} + {y^2}} } \mathord{\left/ {\vphantom {{\sqrt {{x^2} + {y^2}} } z}} \right. \kern-1.2pt } z}} \right)}\\ {\phi = {{\tan }^{ - 1}}\left( {{y \mathord{\left/ {\vphantom {y x}} \right. \kern-1.2pt } x}} \right)} \end{array}} \right.
-$$ {#eq-zeqnnum736187}
-
-$$
-\frac{\partial }{{\partial x}} = \frac{{\partial r}}{{\partial x}}\frac{\partial }{{\partial r}} + \frac{{\partial \theta }}{{\partial x}}\frac{\partial }{{\partial \theta }} + \frac{{\partial \phi }}{{\partial x}}\frac{\partial }{{\partial \phi }}
-$$ {#eq-ch08-p2054}
 
 we convert the Cartesian expression @eq-zeqnnum826605 for ${\hat L_{x,y,z}}$ into
 
@@ -426,7 +424,7 @@ $$
 {{\bf{\hat L}}^2} = {\hat L_x}{\hat L_x} + {\hat L_y}{\hat L_y} + {\hat L_z}{\hat L_z} = - {\hbar ^2}\left\{ {\frac{1}{{\sin \theta }}\frac{\partial }{{\partial \theta }}\left( {\sin \theta \frac{\partial }{{\partial \theta }}} \right) + \frac{1}{{{{\sin }^2}\theta }}\frac{{{\partial ^2}}}{{\partial {\phi ^2}}}} \right\}
 $$ {#eq-zeqnnum657148}
 
-Notice that the operators depend on angles, not on the distance $r$. This suggests writing the wavefunction as a radial factor times an angular factor:
+Notice that all of the angular momentum operators depend on angles, not on the distance $r$. This suggests us writing the wavefunction as a radial factor times an angular factor:
 
 $$
 {\Lambda _{l,m}}\left( {r,\theta ,\phi } \right) = R\left( r \right){Y_{l,m}}\left( {\theta ,\phi } \right)
@@ -442,13 +440,13 @@ $$
 - {\hbar ^2}\left\{ {\frac{1}{{\sin \theta }}\frac{\partial }{{\partial \theta }}\left( {\sin \theta \frac{\partial }{{\partial \theta }}} \right) + \frac{1}{{{{\sin }^2}\theta }}\frac{{{\partial ^2}}}{{\partial {\phi ^2}}}} \right\}{Y_{l,m}}\left( {\theta ,\phi } \right) = l\left( {l + 1} \right){\hbar ^2}{Y_{l,m}}\left( {\theta ,\phi } \right)
 $$ {#eq-zeqnnum649652}
 
-The operator $\hat L_z$ involves only $\phi$. We can therefore try a second separation:
+Since the operator $\hat L_z$ involves only $\phi$, we can try a second separation:
 
 $$
 {Y_{l,m}}\left( {\theta ,\phi } \right) = \Theta \left( \theta \right)\Phi \left( \phi \right)
 $$ {#eq-zeqnnum129644}
 
-The $\hat L_z$ @eq-zeqnnum252734 now involves only $\phi$:
+The $\hat L_z$ @eq-zeqnnum252734 now becomes an azimuthal equation involves only $\phi$:
 
 $$
 \frac{\partial }{{\partial \phi }}\Phi = im\Phi
@@ -472,7 +470,7 @@ $$
 - \frac{1}{\Phi }\frac{{{\partial ^2}\Phi }}{{\partial {\phi ^2}}} = {m^2}
 $$ {#eq-zeqnnum135231}
 
-Substitute @eq-zeqnnum135231 into @eq-zeqnnum309925. We are left with an equation involving only $\theta$:
+Substitute @eq-zeqnnum135231 into @eq-zeqnnum309925. We are left with a polar equation involving only $\theta$:
 
 $$
 \frac{{\sin \theta }}{\Theta }\frac{\partial }{{\partial \theta }}\left( {\sin \theta \frac{{\partial \Theta }}{{\partial \theta }}} \right) + l\left( {l + 1} \right){\sin ^2}\theta = {m^2}
@@ -490,7 +488,7 @@ $$
 \int_0^{2\pi } {d\phi \;\Phi _{m'}^*\left( \phi \right){\Phi _m}\left( \phi \right)} = {\delta _{m'm}}
 $$ {#eq-ch08-p2079}
 
-A full turn brings us back to the same point. The wavefunction must have the same value at $\phi$ and $\phi+2\pi$, so
+A full turn of $\phi$ brings us back to the same spatial point. The wavefunction must have the same value at $\phi$ and $\phi+2\pi$, so
 
 $$
 {\Phi _m}\left( \phi \right) = {\Phi _m}\left( {\phi + 2\pi } \right)
@@ -507,7 +505,7 @@ $$ {#eq-zeqnnum804907}
 
 A full turn therefore restricts the allowed values of $m$.
 
-The phase condition requires integer $m$. Solving the remaining polar @eq-zeqnnum830038 with regular behavior at the poles gives
+The phase condition requires integer $m$. Solving the remaining polar @eq-zeqnnum830038 gives
 
 $$
 \begin{aligned}
@@ -516,7 +514,7 @@ m &= 0,\; \pm 1,\; \cdots ,\; \pm l
 \end{aligned}
 $$ {#eq-zeqnnum917846}
 
-We will omit the longer differential-equation calculation. We can also connect this result with the ladder argument: $m$ runs from $-l$ to $l$ in unit steps. Since orbital $m$ is integer, $l$ must be a nonnegative integer too. This gives the allowed values in @eq-zeqnnum917846.
+We will omit the longer differential-equation calculation. Note: although we have borrow the form of general angular momentum theory to write the eigenvalue equation for the orbital angular momentum. The final solution does not need any assumption about the possible values of $l$ and $m$ that was required by the general angular momentum theory. The two differential equations of @eq-zeqnnum649652 , by themselves, are sufficient to solve the eigenvalues @eq-zeqnnum917846 .
 
 With these allowed values, the polar @eq-zeqnnum830038 has solutions
 
